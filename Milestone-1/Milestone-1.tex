@@ -1,0 +1,72 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage[margin=0.8in]{geometry}
+
+\newcounter{functionalcode}
+\setcounter{functionalcode}{0}
+\newcommand{\FReqId}{%
+\addtocounter{functionalcode}{1}%
+\arabic{functionalcode}}
+
+\newcounter{nonfunctionalcode}
+\setcounter{functionalcode}{0}
+\newcommand{\NFReqId}{%
+\addtocounter{nonfunctionalcode}{1}%
+\arabic{nonfunctionalcode}}
+
+\author{
+  Adam Barrell\\
+  \and
+  Christopher Lewis\\
+  \and
+  Tomas Milner\\
+  \and
+  Lewis Hancock
+}
+\title{Milestone 1}
+
+\begin{document}
+
+\maketitle
+
+
+\section{System Requirements}
+
+\subsection{Functional Requirements}
+
+\renewcommand{\arraystretch}{1.5}% Wider
+
+\subsubsection{Category 1}
+
+\begin{longtable}{p{1.7cm}p{13cm}}
+
+\textbf{\large Code} & \textbf{\large Requirement} \\
+
+\hline FREQ\FReqId & The application should allow users to be amazing.
+\end{longtable}
+
+\subsubsection{Category 2}
+
+\begin{longtable}{p{1.7cm}p{13cm}}
+
+\textbf{\large Code} & \textbf{\large Requirement} \\
+
+\hline FREQ\FReqId & The application should be amazing.
+\end{longtable}
+
+
+\subsection{Non-Functional Requirements}
+
+\renewcommand{\arraystretch}{1.5}% Wider
+\begin{longtable}{p{1.7cm}p{13cm}}
+\textbf{\large Code} & \textbf{\large Requirement} \\
+\hline NFREQ\NFReqId & My first non-functional requirement. \\
+\hline 
+\end{longtable} 
+
+\end{document}
