@@ -27,8 +27,11 @@
 
 \input{./Title-Page.tex}
 
+\newpage 
+
 \tableofcontents
 
+\newpage
 \section{Introduction}
 \subsection{Purpose}
 \label{sec:purpose}
@@ -91,10 +94,11 @@ Human-Computer Interaction is the study of the interaction between people and co
 \subsubsection{UX}
 User Experience is a subset of HCI, looking at a person's behaviour and emotions when using a product.
 
+\subsubsection{API}
+Application Programming Interface. Defines how multiple pieces of software shall interact with each other.
+
 \subsection{Overview}
 The latter sections of this document contains the project requirements, specifications, methodology to be used and any identified risks. To begin, the document looks at the team's structure during the project; this may be seen in section~\ref{sec:team-structure}. In section~\ref{sec:gen-desc}. the Digital Trails project is examined at a high level, providing an overview of the system and any constraints upon it. Section~\ref{sec:requirements} contains the requirements of the project whilst section~\ref{sec:specifications} details the specifications. In section~\ref{sec:methodologies} the project's methodology has been described, first examining possible methodologies before stating which one the team will follow. The project's risks have been identified and analysed in section~\ref{sec:risk-analysis}. A timetable for the project can be seen in section~\ref{sec:project-plan}. Finally, the initial work completed on the project is discussed in section~\ref{sec:initial-work}.
-
-
 
 \section{Team Structure}
 \label{sec:team-structure}
@@ -114,7 +118,7 @@ Adam Barrell & Chris Lewis \\ \hline
 \end{center}
 \end{table}%
 
-The two groups will not work independently, instead they will be co-operating through out the design and development process to ensure that the mobile app and website meet the same requirements and design choices. 
+The two groups will not work independently, instead they will be co-operating through out the design and development process to ensure that the mobile application and website meet the same requirements and design choices. 
 
 On top of the team allocations each members of the project has been assigned an individual role:
 
@@ -171,7 +175,6 @@ The most common user of Digital Trails is going to be familiar with the Android 
 \label{sec:constraints}
 As this project has been undertaken as an MEng group project there are multiple teams developing similar applications. The White Rock team have requested that all teams use the same database, the structure of which is to be decided upon between the groups.
 
-
 \subsection{Assumptions and Dependencies}
 \label{sec:assumptions-dependencies}
 The assumptions of the project are as follows:
@@ -224,7 +227,6 @@ WEBREQ17 & The web portal should notify registered users of waypoint addition re
 WEBREQ18 & The web portal should allow registered users to accept or reject requested waypoint additions. \\ \hline
 WEBREQ19 & The web portal should allow registered users to report bugs and errors. \\ \hline
 WEBREQ20 & The web portal should contain an FAQ and user guide. \\ \hline
-
 \end{longtable}
 
 \subsubsection{Android Application}
@@ -558,7 +560,7 @@ This section is a modified version of the work found in ``A RESTful Document Arc
   \item Obtain the approval of stakeholders and their commitment to the next cycle. 
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[scale=2.5]{spiral.jpeg}
 \label{img:spiral}
@@ -588,8 +590,16 @@ A prototype is in one of two dimensions:
 \end{description}
 
 There are many types of prototyping:
-TODO: FINISH
+\begin{description}
+\item[Throwaway] The creation of a temporary prototype, which will be thrown away, used to demonstrate how requirements might look when implemented into the final system. This allows for quick feedback from the user. Once the requirements have been finalised via prototyping, a set of final requirements are written and development of the final product begins.
+\item[Evolutionary] Entails the creation of a robust prototype which will be constantly improved. The prototype is the heart of the system upon which new features can be added. The philosophy behind this approach is that a product is never done, but ``always maturing as the usage environment changes''~\cite{spcPrototyping}.
+\item[Incremental] Requirements are developed as separate prototypes before being combined as the final design.
+\item[Extreme] Especially used in web development. It is not discussed here as it is not applicable to the majority of the project.
+\end{description}
 
+The key benefits of prototyping as a methodology are a reduction in time and costs as changes to the prototypes are cheap in comparison to attempting to change the end product. There is also an increase in involvement between the development team and the user, allowing for faster feedback which will lead to a product the customer is satisfied with.
+
+The disadvantages involve insufficient analysis, where developers spend too much time focusing on limited prototypes to see the bigger picture of the final application, often seeing developers overlook better solutions. Developers may also become attached to a prototype, over-estimate the ease at which a prototype may be implemented and develop the prototype excessively instead of moving on to the next stage.
 
 \subsubsection{Extreme Programming}
 This section has been taken, verbatim, from ``FormulaVis: System Requirements Specification''~\cite{formulaVis}. Extreme Programming is an agile development model aimed at improving the software quality by ensuring a fast and efficient response to changing requirements.
@@ -599,20 +609,20 @@ This model advocates frequent releases, similar to sprints in the SCRUM model, w
 Development cycles begin with a Planning Game, a meeting that occurs at the begin of each cycle. This is divided into two tasks, release planning which determines the requirements to be included in this cycle and when the cycle should end. This phase includes the customer. The second phase is the iteration planning phase, in this phase the requirements are translated into tasks and assigned to programmers. These are then completed before the end of the cycle.
 
 During implementation programmers usually work in pairs and unit tests should be programmed first, then code made to ensure those unit tests pass. This initial code may be inelegant and should be optimised at a later date. If code does not pass the unit tests
-then it may not be released. A diagram of the process can be seen in figure~\ref{xp}.
+then it may not be released. A diagram of the process can be seen in figure~\ref{fig:xp}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width = 140mm]{circles.jpg}
-\caption{Extreme Programming Model}
+\caption{Extreme Programming Model~\cite{xpCircles}}
 \label{fig:xp}
 \end{figure}
 
 Critics argue that this practice suffers from unstable requirements and a lack of documentation. The addition of a customer representative as part of the development team can also create feature creep, resulting in a project which runs out of time and
 money. The customer representative can also become a point of stress for the team, or a single point of failure for the entire project. Change-control boards are created to prevent this, a sign that there can be conflicts in project objectives. Many more criticisms can be found in Extreme Programming Refactored~\cite{xpRefactored}.
 
-
 \subsubsection{Crystal Clear}
+
 
 \subsubsection{SCRUM}
 

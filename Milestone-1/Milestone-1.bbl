@@ -1,16 +1,24 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{git}
 Git.
 \newblock Git website.
+\newblock \url{http://git-scm.com/about}.
+
+\bibitem{github}
+GitHub.
+\newblock Github website.
+\newblock \url{http://www.github.com}.
 
 \bibitem{android}
 Google.
 \newblock Android website.
+\newblock \url{http://www.google.com/mobile/android/}.
 
 \bibitem{googleAPI}
 Google.
 \newblock Google maps api.
+\newblock \url{https://developers.google.com/maps/}.
 
 \bibitem{formulaVis}
 Lewis Hancock.
@@ -23,11 +31,26 @@ Thomas Milner.
 \bibitem{OSM}
 OpenStreetMap.
 \newblock Openstreetmap website.
+\newblock \url{http://www.openstreetmap.org/about}.
+
+\bibitem{spcPrototyping}
+{Software Productivity Consortium}.
+\newblock Evolutionary rapid development.
+
+\bibitem{xpRefactored}
+Matthew Stephens and Doug Rosenberg.
+\newblock {\em Extreme Programming Refactored: The Case Against XP}.
+\newblock APress L. P., 2003.
 
 \bibitem{spiral}
 Max Wideman.
 \newblock The spiral model approach.
 \newblock \url{http://www.maxwideman.com/papers/linearity/spiral.htm}, December
   2013.
+
+\bibitem{xpCircles}
+XProgramming.
+\newblock Xp practices.
+\newblock \url{http://xprogramming.com/images/circles.jpg}.
 
 \end{thebibliography}
