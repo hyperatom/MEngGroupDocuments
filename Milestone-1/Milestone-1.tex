@@ -547,34 +547,24 @@ This model helps to solve several of the issues present in the waterfall model. 
 \subsubsection{Prototyping}
 
 \subsubsection{Extreme Programming}
-This section has been taken, verbatim, from ``FormulaVis: System Requirements Specification''~\cite{formulaVis}. Extreme Programming is an agile development model aimed at improving the software
-quality by ensuring a fast and efficient response to changing requirements.
-This model advocates frequent releases, similar to sprints in the SCRUM model,
-which improve productivity and create checkpoints where requirements can be reviewed
-and adapted. Other elements include pair programming, code reviews and unit testing
-of all code. Features should not be developed, in this model, until they are needed.
-Development cycles begin with a Planning Game, a meeting that occurs at the begin
-of each cycle. This is divided into two tasks, release planning which determines the
-requirements to be included in this cycle and when the cycle should end. This phase
-includes the customer. The second phase is the iteration planning phase, in this phase
-the requirements are translated into tasks and assigned to programmers. These are then
-completed before the end of the cycle.
-During implementation programmers usually work in pairs and unit tests should be
-programmed rst, then code made to ensure those unit tests pass. This initial code may
-be inelegant and should be optimised at a later date. If code does not pass the unit tests
-then it may not be released.
-A diagram of the process can be seen in gure 3.
-Figure 3: Extreme Programming Model [8]
-13
-FormulaVis SRS Lewis Hancock (646113)
-Critics argue that this practice suers from unstable requirements and a lack of
-documentation. The addition of a customer representative as part of the development
-team can also create feature creep, resulting in a project which runs out of time and
-money. The customer representative can also become a point of stress for the team,
-or a single point of failure for the entire project. Change-control boards are created
-to prevent this, a sign that there can be con
-icts in project objectives. Many more
-criticisms can be found in Extreme Programming Refactored.
+This section has been taken, verbatim, from ``FormulaVis: System Requirements Specification''~\cite{formulaVis}. Extreme Programming is an agile development model aimed at improving the software quality by ensuring a fast and efficient response to changing requirements.
+
+This model advocates frequent releases, similar to sprints in the SCRUM model, which improve productivity and create checkpoints where requirements can be reviewed and adapted. Other elements include pair programming, code reviews and unit testing of all code. Features should not be developed, in this model, until they are needed.
+
+Development cycles begin with a Planning Game, a meeting that occurs at the begin of each cycle. This is divided into two tasks, release planning which determines the requirements to be included in this cycle and when the cycle should end. This phase includes the customer. The second phase is the iteration planning phase, in this phase the requirements are translated into tasks and assigned to programmers. These are then completed before the end of the cycle.
+
+During implementation programmers usually work in pairs and unit tests should be programmed first, then code made to ensure those unit tests pass. This initial code may be inelegant and should be optimised at a later date. If code does not pass the unit tests
+then it may not be released. A diagram of the process can be seen in figure~\ref{xp}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 140mm]{circles.jpg}
+\caption{Extreme Programming Model}
+\label{fig:xp}
+\end{figure}
+
+Critics argue that this practice suffers from unstable requirements and a lack of documentation. The addition of a customer representative as part of the development team can also create feature creep, resulting in a project which runs out of time and
+money. The customer representative can also become a point of stress for the team, or a single point of failure for the entire project. Change-control boards are created to prevent this, a sign that there can be conflicts in project objectives. Many more criticisms can be found in Extreme Programming Refactored~\cite{xpRefactored}.
 
 
 \subsubsection{Crystal Clear}
