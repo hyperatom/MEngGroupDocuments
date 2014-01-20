@@ -36,11 +36,11 @@
 \contentsline {section}{\numberline {8}Risk Analysis}{12}{section.8}
 \contentsline {subsection}{\numberline {8.1}Risk Matrix}{12}{subsection.8.1}
 \contentsline {subsection}{\numberline {8.2}Technical Risks}{12}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Personal Risks}{12}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.3}Personal Risks}{13}{subsection.8.3}
 \contentsline {section}{\numberline {9}Project Plan}{13}{section.9}
 \contentsline {subsection}{\numberline {9.1}Milestones}{13}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Software Development}{13}{subsection.9.2}
-\contentsline {section}{\numberline {10}Initial Work}{13}{section.10}
-\contentsline {subsection}{\numberline {10.1}Minutes of Meetings}{13}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}User Interface Wire Frames}{13}{subsection.10.2}
-\contentsline {subsection}{\numberline {10.3}Future Work}{13}{subsection.10.3}
+\contentsline {subsection}{\numberline {9.2}Software Development}{14}{subsection.9.2}
+\contentsline {section}{\numberline {10}Initial Work}{14}{section.10}
+\contentsline {subsection}{\numberline {10.1}Minutes of Meetings}{14}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}User Interface Wire Frames}{14}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Future Work}{14}{subsection.10.3}
