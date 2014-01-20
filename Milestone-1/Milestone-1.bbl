@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{git}
+Git.
+\newblock Git website.
+
+\bibitem{android}
+Google.
+\newblock Android website.
+
+\bibitem{googleAPI}
+Google.
+\newblock Google maps api.
+
+\bibitem{formulaVis}
+Lewis Hancock.
+\newblock Formulavis: System requirements specification.
+
+\bibitem{restWeb}
+Thomas Milner.
+\newblock A restful document archival system.
+
+\bibitem{OSM}
+OpenStreetMap.
+\newblock Openstreetmap website.
+
+\bibitem{spiral}
+Max Wideman.
+\newblock The spiral model approach.
+\newblock \url{http://www.maxwideman.com/papers/linearity/spiral.htm}, December
+  2013.
+
+\end{thebibliography}

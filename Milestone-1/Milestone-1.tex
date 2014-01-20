@@ -13,6 +13,10 @@
 \usepackage{etoolbox}
 \usepackage{morefloats}
 \usepackage[hidelinks]{hyperref}
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+
+
+\graphicspath{{img/}}
 
 \patchcmd{\thebibliography}{\section*}{\subsection}{}{}
 
@@ -524,25 +528,28 @@ NTHSPEC5 & Allow users to link their accounts to their Facebook accounts. \\ \hl
 \subsection{Considered Methodologies}
 
 \subsubsection{Spiral}
-The spiral methodology is a risk based system, which works iteratively towards a final working project. The process derives its name from the pattern with which its process follows. There are 4 basic activities which must occur in each loop of the spiral\ref{img:spiral}. These are:
+This section is a modified version of the work found in ``A RESTful Document Archival System''~\cite{restWeb}. The spiral methodology is a risk based system, which works iteratively towards a final working project. The process derives its name from the pattern with which its process follows. There are 4 basic activities which must occur in cycle loop of the spiral\ref{img:spiral}. These are:
 
 \begin{enumerate}
-  \item Planning
-  \item Risk Analysis
-  \item Implementation
-  \item Evaluation
+  \item Consider all success-critical win conditions.
+  \item Identify and evaluate alternative methods for meeting win conditions.
+  \item Identify and resolve risks caused by the methods for meeting win conditions. 
+  \item Obtain the approval of stakeholders and their commitment to the next cycle. 
 \end{enumerate}
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[scale=2]{spiral.jpg}
+\includegraphics[scale=2.5]{spiral.jpeg}
 \label{img:spiral}
 \caption{The spiral model \cite{spiral}}
 \end{center}
 \end{figure}
 
+By identifying risks at each cycle the model allows the developers to decide on the best approach for that cycle and minimise the chance of failure through correct mitigation of those risks. 
 
-This model helps to solve several of the issues present in the waterfall model. Primarily it repeats upon its self, to allow for iterative development and improvement to existing implementations and requirements. It also heavily relies on risk analysis which helps minimise risk throughout the project. One of the downfalls of this system is that it requires a complete product to be developed before it can be iterated through again to refine it. In this way it is better suited to large on-going projects which expect to have multiple versions.
+This model requires the use of iterative development techniques. This helps force developers to make improvements to previous implementations and requirements, but the exact nature of the iterations are down to interpretation based upon the risks of the project.
+
+Over all spiral is provides a good way of minimising risks in a project but it also has its down sides. It is possible that it it could be executed as simple cycle of waterfall development, this is not the intended use of the the project and is rarely the correct thing to do for the given risks of a project. It could also create an overly complex development strategy which becomes confusing to the development team. This complexity is one of the main arguments against the Spiral model and is addressed by other more agile methods. 
 
 \subsubsection{Prototyping}
 
@@ -632,7 +639,7 @@ User Study
 \renewcommand{\arraystretch}{1.5}
 \newcommand*{\tableIndent}{\hspace*{0.4cm}}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \begin{tabular}{|l|l|l|}
 \hline \textbf{Task} & \textbf{Start Date} & \textbf{End Date} \\ 
@@ -667,7 +674,7 @@ User Study
 
 \renewcommand{\arraystretch}{1.5}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \begin{tabular}{|l|l|l|}
 \hline \textbf{Task} & \textbf{Start Date} & \textbf{End Date} \\ 
