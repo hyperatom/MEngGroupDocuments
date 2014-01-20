@@ -73,7 +73,7 @@ Data which describes data.
 A distributed version control system which allows the development team to share files and keep track of changes~\cite{git}.
 
 \subsubsection{GitHub}
-TODO: write this.
+A web-based hosting service using the Git version control system~\cite{github}.
 
 \subsubsection{Android}
 A mobile operating system developed by Google~\cite{android}. 
@@ -97,7 +97,7 @@ The latter sections of this document contains the project requirements, specific
 This section will outline our teams structure, detailing which member will be responsible for each aspect and how they will work together. 
 
 \subsection{Roles and Responsibilities}
-This project has two major parts, the Mobile App and the Website. This structure lends its self to division of the team into two development groups. The Mobile group will deal with the development and design of the Android App and the Web group will create the web portal and backend web services. The groups will be organised like so;  
+This project has two major parts, the Mobile App and the Website. This structure lends its self to division of the team into two development groups. The Mobile group will deal with the development and design of the Android App and the Web group will create the web portal and back-end web services. The groups will be organised like so;  
 \begin{table}[h]
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -128,7 +128,7 @@ Web Guru & Thomas Milner \\\hline
 \end{center}
 \end{table}%
 
-These roles are designed around each members expertise and skills. The Project Overlord is responsible for the general overview and control of the project; scheduling meetings, organising work days, ensuring deadlines are met and liaising with the client (John at White Rock). The HCI \& UX Tzar is in charge of the design process. Their main role is to ensure good UX design through out the project (See section \ref{sec:terms} for definitions of UX and HCI.). The Android Genie will lead the android team and is responsible for the development of the android application. They should ensure the use of good design practices during the development. Finally the Web Guru is responsible for the web team and is in charge of developing the website. The Guru should again ensure the use of good design practices and that the website correctly interacts with the existing framework of the android app. 
+These roles are designed around each members expertise and skills. The Project Overlord is responsible for the general overview and control of the project; scheduling meetings, organising work days, ensuring deadlines are met and liaising with the client (John at White Rock). The HCI \& UX Tzar is in charge of the design process. Their main role is to ensure good UX design through out the project (See section \ref{sec:terms} for definitions of UX and HCI.). The Android Genie will lead the android team and is responsible for the development of the android application. They should ensure the use of good design practices during the development. Finally the Web Guru is responsible for the web team and is in charge of developing the website. The Guru should again ensure the use of good design practices and that the website correctly interacts with the existing framework of the android application. 
 
 \subsection{Communication Strategy}
 
@@ -152,7 +152,8 @@ Digital Trails is both an Android application and a web service allowing for the
 
 \subsection{Project Overview}
 \label{sec:project-overview}
-
+TODO: Black-box input / output.
+TODO: Data Flow Diagram.
 
 \subsection{Product Functions}
 \label{sec:product-functions}
@@ -160,14 +161,33 @@ Digital Trails is both an Android application and a web service allowing for the
 
 \subsection{User Characteristics}
 \label{sec:user-characteristics}
-
+The most common user of Digital Trails is going to be familiar with the Android operating system and enjoy walking. There is also a smaller user-base to be found within primary schools where the familiarity with Android may be lower.  
 
 \subsection{Constraints}
 \label{sec:constraints}
+As this project has been undertaken as an MEng group project there are multiple teams developing similar applications. The White Rock team have requested that all teams use the same database, the structure of which is to be decided upon between the groups.
 
 
 \subsection{Assumptions and Dependencies}
 \label{sec:assumptions-dependencies}
+The assumptions of the project are as follows:
+
+\begin{itemize}
+\item Development machines will be available.
+\item An Android tablet will be provided for development by White Rock.
+\item A server with suitable hardware shall be available for the web portal.
+\item Users are available for participation in user studies.
+\item Third party libraries have been fully tested.
+\item The code-base the team has received from White Rock is of a high enough quality to continue development.
+\item All associated costs with web hosting and Google APIs will be covered by White Rock.
+\end{itemize}
+
+The dependencies of the project are as follows:
+\begin{itemize}
+\item The GPS on the tablet is accurate enough to alert users when they are near an item of interest.
+\item The GPS is accurate enough to provide directions on time.
+\item The database structure is decided upon between teams early into development.
+\end{itemize}
 
 \section{Requirements}
 \label{sec:requirements}
@@ -520,9 +540,10 @@ NTHSPEC5 & Allow users to link their accounts to their Facebook accounts. \\ \hl
 
 \section{Methodology}
 \label{sec:methodologies}
+The chosen methodology must be suited to a small team working closely with the client. As the application is to be used by a wide array of people with varying levels of technical competency regular, high quality feedback will be necessary to ensure a positive user experience. From this it can be seen that an agile development methodology is likely to be most appropriate. In section~\ref{sec:considered-methods} the range of methodologies considered can be seen. In section~\ref{sec:chosen-method} the chosen methodology can be seen.
 
 \subsection{Considered Methodologies}
-
+\label{sec:considered-methods}
 \subsubsection{Spiral}
 The spiral methodology is a risk based system, which works iteratively towards a final working project. The process derives its name from the pattern with which its process follows. There are 4 basic activities which must occur in each loop of the spiral\ref{img:spiral}. These are:
 
@@ -545,6 +566,23 @@ The spiral methodology is a risk based system, which works iteratively towards a
 This model helps to solve several of the issues present in the waterfall model. Primarily it repeats upon its self, to allow for iterative development and improvement to existing implementations and requirements. It also heavily relies on risk analysis which helps minimise risk throughout the project. One of the downfalls of this system is that it requires a complete product to be developed before it can be iterated through again to refine it. In this way it is better suited to large on-going projects which expect to have multiple versions.
 
 \subsubsection{Prototyping}
+The prototyping methodology attempts to improve the flaws found in traditional software development models in which the product is not tested to see if it meets requirements until the end of the project. The prototyping process has four steps:
+\begin{enumerate}
+\item Identify basic requirements.
+\item Develop initial prototype.
+\item Review.
+\item Revise and Enhance the prototype.
+\end{enumerate}
+
+A prototype is in one of two dimensions:
+\begin{description}
+\item[Horizontal] A user interface prototype which provides a broad view of the system from a user interface perspective. 
+\item[Vertical] A complete prototype of a single subsystem or function.
+\end{description}
+
+There are many types of prototyping:
+TODO: FINISH
+
 
 \subsubsection{Extreme Programming}
 This section has been taken, verbatim, from ``FormulaVis: System Requirements Specification''~\cite{formulaVis}. Extreme Programming is an agile development model aimed at improving the software quality by ensuring a fast and efficient response to changing requirements.
@@ -572,6 +610,7 @@ money. The customer representative can also become a point of stress for the tea
 \subsubsection{SCRUM}
 
 \subsection{Chosen Development Methodology}
+\label{sec:chosen-method}
 TODO: Why we chose scrum
 
 \subsection{Software Testing}
