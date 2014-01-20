@@ -60,7 +60,7 @@ This project has two major parts, the Mobile App and the Website. This structure
 \hline
 \textbf{Web Group} & \textbf{Mobile Group} \\
 \hline
-Thomas Milner & Lewis Hancock \\\hline
+Thomas Milner & Lewis Hancock \\
 Adam Barrell & Chris Lewis \\ \hline
 \end{tabular}
 \end{center}
@@ -130,16 +130,16 @@ WEBREQ3 & The web portal should allow registered users to log out. \\ \hline
 WEBREQ4 & The web portal should allow registered users to modify their account details. \\ \hline
 WEBREQ5 & The web portal interface should feature distinctive White Rock branding. \\ \hline
 WEBREQ6 & The web portal should allow registered users to add sub-branding to created walks. \\ \hline
-WEBREQ7 & The web portal should display a registered user?s own walks and contributions when logged in. \\ \hline
+WEBREQ7 & The web portal should display a registered user's own walks and contributions when logged in. \\ \hline
 WEBREQ8 & The web portal should allow registered users to create, edit and delete their own walks. \\ \hline
 WEBREQ9 & The web portal should allow registered users to create, edit and delete their own waypoints. \\ \hline
 WEBREQ10 & The web portal should allow registered users to add GPS waypoints to a walk. \\ \hline
 WEBREQ11 & The web portal should allow registered users to modify the order each waypoint should be visited. \\ \hline
 WEBREQ12 & The web portal should allow registered users to upload, edit and delete waypoint data such as images, text, audio and video. \\ \hline
 WEBREQ13 & The web portal should allow registered users to provide English and Welsh translation for text. \\ \hline
-WEBREQ14 & The web portal should display download statistics for each of the user?s walks. \\ \hline
-WEBREQ15 & The web portal should display reviews for each of the user?s walks. \\ \hline
-WEBREQ16 & The web portal should display an average rating for each of the user?s walks. \\ \hline
+WEBREQ14 & The web portal should display download statistics for each of the user's walks. \\ \hline
+WEBREQ15 & The web portal should display reviews for each of the user's walks. \\ \hline
+WEBREQ16 & The web portal should display an average rating for each of the user's walks. \\ \hline
 WEBREQ17 & The web portal should notify registered users of waypoint addition requests. \\ \hline
 WEBREQ18 & The web portal should allow registered users to accept or reject requested waypoint additions. \\ \hline
 WEBREQ19 & The web portal should allow registered users to report bugs and errors. \\ \hline
@@ -166,7 +166,7 @@ APPREQ10 & The application should download data from a remote database. \\ \hlin
 APPREQ11 & The application should synchronise data whilst the host device is connected to WiFi. \\ \hline
 APPREQ12 & The application should give users the option to synchronise data over cellular networks. \\ \hline
 APPREQ13 & The application should give users the option to store data on an SD card if available. \\ \hline
-APPREQ14 & The application should detect a user?s GPS location consistently between devices. \\ \hline
+APPREQ14 & The application should detect a user's GPS location consistently between devices. \\ \hline
 APPREQ15 & The application should display the prefered order to visit waypoints in a walk. \\ \hline
 APPREQ16 & The application should display waypoint information even if it has already been visited. \\ \hline
 APPREQ17 & The application should allow registered users to create, edit and delete their own walks. \\ \hline
@@ -175,11 +175,11 @@ APPREQ19 & The application should track the order GPS waypoints were tagged in a
 APPREQ20 & The application should allow registered users to upload audio, images and video to a waypoint. \\ \hline
 APPREQ21 & The application interface should separate audio, images, text and video waypoint data. \\ \hline
 APPREQ22 & The application interface should feature distinctive White Rock branding. \\ \hline
-APPREQ23 & The application should allow registered users to contribute waypoints to other user?s walks by request. \\ \hline
+APPREQ23 & The application should allow registered users to contribute waypoints to other user's walks by request. \\ \hline
 APPREQ24 & The application should allow users to leave reviews on walks. \\ \hline
 APPREQ25 & The application should allow users to rate walks they have completed. \\ \hline
 APPREQ26 & The application should allow users to report bugs and errors. \\ \hline
-APPREQ27 & The application should provide links to the app?s Twitter and Facebook channels. \\ \hline
+APPREQ27 & The application should provide links to the app's Twitter and Facebook channels. \\ \hline
 APPREQ28 & The application should provide English and Welsh translations for text. \\ \hline
 APPREQ29 & The application should allow users to report inappropriate content to an administrator. \\ \hline
 
@@ -202,7 +202,7 @@ NFREQ6 & The application should run efficiently on lower end GPS-enabled android
 NFREQ7 & The application should run efficiently on android smartphones. \\ \hline
 NFREQ8 & The application should be compatible with typical tablet screen sizes. \\ \hline
 NFREQ9 & The application should be compatible with typical smartphone screen sizes. \\ \hline
-NFREQ10 & The application should be battery efficient by sampling GPS locations based on the user?s mode of transport. \\ \hline
+NFREQ10 & The application should be battery efficient by sampling GPS locations based on the user's mode of transport. \\ \hline
 NFREQ11 & The application should be bandwidth efficient. \\ \hline
 \end{longtable}
 
@@ -233,62 +233,72 @@ NTHREQ4 & The application should allow users to advertise their current walk on 
 \textbf{Code} & \textbf{Requirement} \\
 
 \hline
-WEBSPEC1 & The web portal will feature an ?Edit Account? button. \\ \hline
-WEBSPEC2 & Clicking the ?Edit Account? will display a view that allows the user to edit their ?full name, email and password?, a ?cancel? button and a ?save? button. \\ \hline
-WEBSPEC3 & Clicking the ?Save? button will validate the full name, email and password text boxes. If successful, a notification will inform the user that changes were made to their details. \\ \hline
-WEBSPEC4 & Clicking the ?Cancel? button will cancel current changes made to the user?s details. \\ \hline
-WEBSPEC5 & All web portal views will feature the company logo and use a house colour scheme. \\ \hline
-WEBSPEC6 & The ?user account settings? view will feature a company branding tab, allowing the user to attach their company logo to a walk. \\ \hline
-WEBSPEC7 & The company branding tab will feature a ?Browse? button, allowing the user to browse their computer for a particular image and will feature a ?Save? button, allowing the user to upload their image. \\ \hline
-WEBSPEC8 & Successfully logging in will take the user to a ?Homepage? view featuring their own walks and contributions. \\ \hline
-WEBSPEC9 & The web portal will feature a ?Walk? button on its side bar. \\ \hline
-WEBSPEC10 & Clicking the ?Walk? button will navigate the user to a view featuring a list of walks and an ?Add walk? button. \\ \hline
-WEBSPEC11 & Clicking the ?Add walk? button will display a view featuring ?Walk name, description? textboxes, ?Cancel? and ?Create? button. \\ \hline
-WEBSPEC12 & The ?Walk name? and ?Description? text boxes will include a profanity filter, preventing inappropriate words being used. \\ \hline
-WEBSPEC13 & Clicking the ?Cancel? button will navigate the user back to the ?Homepage? view. \\ \hline
-WEBSPEC15 & Clicking the ?Create? button will create a new walk. \\ \hline
-WEBSPEC16 & The walk list view will feature an ?Edit? button and ?Delete? button adjacent to each walk. \\ \hline
-WEBSPEC17 & Clicking the ?Edit? button will navigate to a view where the user can edit the ?Walk name, description? text boxes. \\ \hline
-WEBSPEC18 & Clicking the ?Delete? button will display a view, asking the user to confirm they wish to delete the walk. \\ \hline
-WEBSPEC19 & When in user-walk list view, clicking on a walk will display a view featuring a list of walk waypoints and an ?Add waypoint? button. \\ \hline
-WEBSPEC20 & Clicking the ?Add waypoint? button will display a view featuring ?Waypoint name?, ?Waypoint description? text boxes, ?Location Map?, ?Add image?, ?Add video? and ?Add audio?. \\ \hline
-WEBSPEC21 & Clicking the ?Add image? button will display a ?Browse?, ?Add? and ?Cancel? button. \\ \hline
-WEBSPEC22 & Clicking the ?Browse? button will allow the user to browse their computer for a suitable image of the waypoint. \\ \hline
-WEBSPEC23 & Clicking the ?Save? button will upload the image to the waypoint. \\ \hline
-WEBSPEC24 & Clicking the ?Cancel? button will navigate the user back to the waypoint view. \\ \hline
-WEBSPEC25 & Clicking the ?Add video? button will display a ?Browse?, ?Add? and ?Cancel? button. \\ \hline
-WEBSPEC26 & Clicking the ?Browse? button will allow the user to browse their computer for a suitable video of the waypoint. \\ \hline
-WEBSPEC27 & Clicking the ?Save? button will upload the video to the waypoint. \\ \hline
-WEBSPEC28 & Clicking a specific point on the ?Location map? of the walk will place a waypoint based on its geological location. \\ \hline
-WEBSPEC29 & The longitude and latitude co-ordinates must be accepted in the following formats: ?British Grid?, ?Decimal degrees?, ?Degrees minutes and seconds? and ?Degrees and decimal minutes?. \\ \hline
-WEBSPEC30 & The waypoint list view will feature an ?Edit? button and a ?Delete? button adjacent to each waypoint. \\ \hline
-WEBSPEC31 & Clicking the ?Edit waypoint? button will navigate to a view where the user can edit the ?Waypoint name, description? textboxes, waypoint image, waypoint video, waypoint audio and waypoint geological location. \\ \hline
-WEBSPEC32 & Each feature of a waypoint shall include a delete button adjacent to the feature. \\ \hline
-WEBSPEC33 & Clicking the ?Delete? button of a waypoint feature will display a view asking the user if they wish to delete it. For example, clicking the delete button adjacent to the waypoint video will ask the user if they wish to delete the video. \\ \hline
-WEBSPEC34 & Clicking the ?Delete waypoint? will display a view, asking the user to confirm they wish to delete the waypoint. \\ \hline
-WEBSPEC35 & The waypoints view will feature a ?Change order? button. \\ \hline
-WEBSPEC36 & Clicking the ?Change order? button will display a list view of the waypoints, an ?Up? button and a ?Down? button. \\ \hline
-WEBSPEC37 & When a waypoint is selected, clicking the ?Up? button will move the waypoint up the list order, clicking the ?Down? button will move the waypoint down the list order. \\ \hline
-WEBSPEC38 & The web portal side bar will feature a ?Translate? button that will display a view featuring ?Welsh? and ?English? buttons. \\ \hline
-WEBSPEC39 & Clicking the ?Welsh? button will translate the text into English. \\ \hline
-WEBSPEC40 & Clicking the ?English? button will translate the text into Welsh. \\ \hline
-WEBSPEC41 & The web portal side bar will feature a ?Statistics? button, a ?Ratings? button, a ?Review? button, a ?Requests? and a ?Report? button. \\ \hline
-WEBSPEC42 & Clicking the ?Statistics? button navigates the user to a statistics view, displaying each of the user?s walks and their download history. \\ \hline
-WEBSPEC43 & Clicking the ?Ratings? button navigates the user to a ratings view, displaying each of the user?s walks and average ratings. \\ \hline
-WEBSPEC44 & Clicking the ?Reviews? button navigates the user to a review view, displaying each of the user?s walks a list of reviews. \\ \hline
-WEBSPEC45 & Clicking on the ?Request? button navigates the user to a request view, displaying pending waypoints to be added to one of their walks. \\ \hline
-WEBSPEC46 & Clicking on a pending waypoint will display a view featuring an ?Accept? or ?Reject? button. \\ \hline
-WEBSPEC47 & Clicking the ?Accept? button will add the waypoint to the walk. \\ \hline
-WEBSPEC48 & Clicking the ?Reject? button will delete the waypoint request. \\ \hline
-WEBSPEC49 & Clicking the ?Report? button will display a report view, featuring a report/bug ?Name?, ?Description? textboxes, ?Send? button and ?Cancel? button. \\ \hline
-WEBSPEC50 & Clicking the ?Send? button will file a report to the White Rock maintenance team. \\ \hline
-WEBSPEC51 & Clicking the ?Cancel? button will navigate the user to the homepage. \\ \hline
-WEBSPEC52 & Clicking the ?FAQ? button will navigate to the FAQ. \\ \hline
-WEBSPEC53 & The FAQ page shall contain two panels, one for links to question, on the left, and one for answers, on the right. \\ \hline
-WEBSPEC54 & The web portal shall have a ?Guide? button which links to the User Guide. \\ \hline
-WEBSPEC55 & The User Guide page shall contain two panels, one for the contents page, on the left, and one for the guide, on the right. \\ \hline
-WEBSPEC56 & The User Guide page will update the guide when the user clicks a link in the contents panel.  \\ \hline
-WEBSPEC57 & The User Guide guide panel will contain a back and next button to change the content in the panel. \\ \hline
+WEBSPEC1 & The web portal will have a `Register' button for users which are not logged in. \\ \hline
+WEBSPEC2 & Clicking `Register' will display a view with `Name', `Email Address', `Password', `Password Confirmation' text fields and `Register' and `Cancel' buttons.\\ \hline
+WEBSPEC3 & Clicking `Cancel' will return the user to the index page.\\ \hline
+WEBSPEC4 & Clicking `Register' will create a user, log them in and email them a confirmation. \\ \hline
+WEBSPEC5 & There will be a `Login' link on for users that are not logged in.\\ \hline
+WEBSPEC6 & Clicking `Login' will present a pop up with `Username' and `Password' fields and `Login' and `Cancel' buttons. \\ \hline
+WEBSPEC7 & Clicking `Login' will create an authenticated session for the user stored in a temporary cookie.\\ \hline
+WEBSPEC8 & Clicking `Cancel' will dismiss the popup. \\ \hline
+WEBSPEC9 & When users are logged in they will be presented with a `Logout' link\\ \hline
+WEBSPEC10 & Clicking `Logout' will delete the session cookie and return them to the index page as guest. \\ \hline
+WEBSPEC11 & The web portal will feature an `Edit Account' button. \\ \hline
+WEBSPEC12 & Clicking the `Edit Account' will display a view that allows the user to edit their `full name, email and password', a `cancel' button and a `save' button. \\ \hline
+WEBSPEC13 & Clicking the `Save' button will validate the full name, email and password text boxes. If successful, a notification will inform the user that changes were made to their details. \\ \hline
+WEBSPEC14 & Clicking the `Cancel' button will cancel current changes made to the user`s details. \\ \hline
+WEBSPEC15 & All web portal views will feature the company logo and use a house colour scheme. \\ \hline
+WEBSPEC16 & The `user account settings' view will feature a company branding tab, allowing the user to attach their company logo to a walk. \\ \hline
+WEBSPEC17 & The company branding tab will feature a `Browse' button, allowing the user to browse their computer for a particular image and will feature a `Save' button, allowing the user to upload their image. \\ \hline
+WEBSPEC18 & Successfully logging in will take the user to a `Homepage' view featuring their own walks and contributions. \\ \hline
+WEBSPEC19 & The web portal will feature a `Walk' button on its side bar. \\ \hline
+WEBSPEC20 & Clicking the `Walk' button will navigate the user to a view featuring a list of walks and an `Add walk' button. \\ \hline
+WEBSPEC21 & Clicking the `Add walk' button will display a view featuring `Walk name, description' textboxes, `Cancel' and `Create' button. \\ \hline
+WEBSPEC22 & The `Walk name' and `Description' text boxes will include a profanity filter, preventing inappropriate words being used. \\ \hline
+WEBSPEC23 & Clicking the `Cancel' button will navigate the user back to the `Homepage' view. \\ \hline
+WEBSPEC24 & Clicking the `Create' button will create a new walk. \\ \hline
+WEBSPEC25 & The walk list view will feature an `Edit' button and `Delete' button adjacent to each walk. \\ \hline
+WEBSPEC26 & Clicking the `Edit' button will navigate to a view where the user can edit the `Walk name, description' text boxes. \\ \hline
+WEBSPEC27 & Clicking the `Delete' button will display a view, asking the user to confirm they wish to delete the walk. \\ \hline
+WEBSPEC28 & When in user-walk list view, clicking on a walk will display a view featuring a list of walk waypoints and an `Add waypoint' button. \\ \hline
+WEBSPEC29 & Clicking the `Add waypoint' button will display a view featuring `Waypoint name', `Waypoint description' text boxes, `Location Map', `Add image', `Add video' and `Add audio'. \\ \hline
+WEBSPEC30 & Clicking the `Add image' button will display a `Browse', `Add' and `Cancel' button. \\ \hline
+WEBSPEC31 & Clicking the `Browse' button will allow the user to browse their computer for a suitable image of the waypoint. \\ \hline
+WEBSPEC32 & Clicking the `Save' button will upload the image to the waypoint. \\ \hline
+WEBSPEC33 & Clicking the `Cancel' button will navigate the user back to the waypoint view. \\ \hline
+WEBSPEC34 & Clicking the `Add video' button will display a `Browse', `Add' and `Cancel' button. \\ \hline
+WEBSPEC35 & Clicking the `Browse' button will allow the user to browse their computer for a suitable video of the waypoint. \\ \hline
+WEBSPEC36 & Clicking the `Save' button will upload the video to the waypoint. \\ \hline
+WEBSPEC37 & Clicking a specific point on the `Location map' of the walk will place a waypoint based on its geological location. \\ \hline
+WEBSPEC38 & The longitude and latitude co-ordinates must be accepted in the following formats: `British Grid', `Decimal degrees', `Degrees minutes and seconds' and `Degrees and decimal minutes'. \\ \hline
+WEBSPEC39 & The waypoint list view will feature an `Edit' button and a `Delete' button adjacent to each waypoint. \\ \hline
+WEBSPEC40 & Clicking the `Edit waypoint' button will navigate to a view where the user can edit the `Waypoint name, description' textboxes, waypoint image, waypoint video, waypoint audio and waypoint geological location. \\ \hline
+WEBSPEC41 & Each feature of a waypoint shall include a delete button adjacent to the feature. \\ \hline
+WEBSPEC42 & Clicking the `Delete' button of a waypoint feature will display a view asking the user if they wish to delete it. For example, clicking the delete button adjacent to the waypoint video will ask the user if they wish to delete the video. \\ \hline
+WEBSPEC43 & Clicking the `Delete waypoint' will display a view, asking the user to confirm they wish to delete the waypoint. \\ \hline
+WEBSPEC44 & The waypoints view will feature a `Change order' button. \\ \hline
+WEBSPEC45 & Clicking the `Change order' button will display a list view of the waypoints, an `Up' button and a `Down' button. \\ \hline
+WEBSPEC46 & When a waypoint is selected, clicking the `Up' button will move the waypoint up the list order, clicking the `Down' button will move the waypoint down the list order. \\ \hline
+WEBSPEC47 & The web portal side bar will feature a `Translate' button that will display a view featuring `Welsh' and `English' buttons. \\ \hline
+WEBSPEC48 & Clicking the `Welsh' button will translate the text into English. \\ \hline
+WEBSPEC49 & Clicking the `English' button will translate the text into Welsh. \\ \hline
+WEBSPEC50 & The web portal side bar will feature a `Statistics' button, a `Ratings' button, a `Review' button, a `Requests' and a `Report' button. \\ \hline
+WEBSPEC51 & Clicking the `Statistics' button navigates the user to a statistics view, displaying each of the user's walks and their download history. \\ \hline
+WEBSPEC52 & Clicking the `Ratings' button navigates the user to a ratings view, displaying each of the user's walks and average ratings. \\ \hline
+WEBSPEC53 & Clicking the `Reviews' button navigates the user to a review view, displaying each of the user's walks a list of reviews. \\ \hline
+WEBSPEC54 & Clicking on the `Request' button navigates the user to a request view, displaying pending waypoints to be added to one of their walks. \\ \hline
+WEBSPEC55 & Clicking on a pending waypoint will display a view featuring an `Accept' or `Reject' button. \\ \hline
+WEBSPEC56 & Clicking the `Accept' button will add the waypoint to the walk. \\ \hline
+WEBSPEC57 & Clicking the `Reject' button will delete the waypoint request. \\ \hline
+WEBSPEC58 & Clicking the `Report' button will display a report view, featuring a report/bug `Name', `Description' textboxes, `Send' button and `Cancel' button. \\ \hline
+WEBSPEC59 & Clicking the `Send' button will file a report to the White Rock maintenance team. \\ \hline
+WEBSPEC60 & Clicking the `Cancel' button will navigate the user to the homepage. \\ \hline
+WEBSPEC61 & Clicking the `FAQ' button will navigate to the FAQ. \\ \hline
+WEBSPEC62 & The FAQ page shall contain two panels, one for links to question, on the left, and one for answers, on the right. \\ \hline
+WEBSPEC63 & The web portal shall have a `Guide' button which links to the User Guide. \\ \hline
+WEBSPEC64 & The User Guide page shall contain two panels, one for the contents page, on the left, and one for the guide, on the right. \\ \hline
+WEBSPEC65 & The User Guide page will update the guide when the user clicks a link in the contents panel.  \\ \hline
+WEBSPEC66 & The User Guide guide panel will contain a back and next button to change the content in the panel. \\ \hline
 \end{longtable}
 
 \subsubsection{Android Application}
@@ -298,44 +308,74 @@ WEBSPEC57 & The User Guide guide panel will contain a back and next button to ch
 \textbf{Code} & \textbf{Requirement} \\
 
 \hline
-APPSPEC1 & The app?s login view will feature a `Register? button. \\ \hline
-APPSPEC2 & Clicking the `Register? button will display a view featuring full name, email and password text boxes, `Register? and `Cancel? buttons. \\ \hline
-APPSPEC3 & Clicking the `Register? button will validate the full name, email and password text boxes. If successful, the account will be created, user logged in and navigate the user to a personal home view. \\ \hline
-APPSPEC4 & Clicking the `Cancel? button will cancel the registration process and navigate the user back to the launch view. \\ \hline
-APPSPEC5 & The app?s launch view will feature a `Login? button. \\ \hline
-APPSPEC6 & Clicking the `Login? button will display a login view featuring email and password text boxes, `Sign In? and `Cancel? buttons. \\ \hline
-APPSPEC7 & Clicking the `Sign In? button will validate the email and password text boxes, log the user in and navigate to a personal home view if successful. \\ \hline
-APPSPEC8 & Clicking the `Cancel? button will cancel the sign in process and navigate the user back to the launch view. \\ \hline
-APPSPEC9 & The personal home view and options menu will feature a `Log Out? button. \\ \hline
-APPSPEC10 & Clicking the `Log Out? button will log the user out of the app and navigate to the launch view. \\ \hline
-APPSPEC11 & The personal home view and options menu will feature an `Account? button. \\ \hline
-APPSPEC12 & Clicking the `Account? button will navigate the user to a view featuring full name, email, password text boxes and `Save?, `Cancel? buttons. \\ \hline
-APPSPEC13 & Clicking the `Save? button will validate the full name, email, password text boxes and save any changes to the user?s account if successful. A notification will be displayed to inform the user of success or failure. \\ \hline
-APPSPEC14 & Clicking the `Cancel? button will cancel the process of account modification and navigate the user to the personal home view. \\ \hline
-APPSPEC15 & The launch view will feature a `Search? button which is enabled only when the app detects a WiFi connection. \\ \hline
-APPSPEC16 & Clicking the `Search? button will navigate the user to a view containing a search text box, `Go? button and list of walks. \\ \hline
-APPSPEC17 & Clicking the `Go? button will filter the walk list to display only the walk names with a full or partial match to the search text. \\ \hline
-APPSPEC18 & Walk list items will display the walk name, author, partial description, user rating, downloads and `Download? button. \\ \hline
-APPSPEC19 & Clicking the `Download? button will download the walk to the user?s device and replace the button with a `tick? icon. \\ \hline
+APPSPEC1 & The app's login view will feature a `Register' button. \\ \hline
+APPSPEC2 & Clicking the `Register' button will display a view featuring full name, email and password text boxes, `Register' and `Cancel' buttons. \\ \hline
+APPSPEC3 & Clicking the `Register' button will validate the full name, email and password text boxes. If successful, the account will be created, user logged in and navigate the user to a personal home view. \\ \hline
+APPSPEC4 & Clicking the `Cancel' button will cancel the registration process and navigate the user back to the launch view. \\ \hline
+APPSPEC5 & The app's launch view will feature a `Login' button. \\ \hline
+APPSPEC6 & Clicking the `Login' button will display a login view featuring email and password text boxes, `Sign In' and `Cancel' buttons. \\ \hline
+APPSPEC7 & Clicking the `Sign In' button will validate the email and password text boxes, log the user in and navigate to a personal home view if successful. \\ \hline
+APPSPEC8 & Clicking the `Cancel' button will cancel the sign in process and navigate the user back to the launch view. \\ \hline
+APPSPEC9 & The personal home view and options menu will feature a `Log Out' button. \\ \hline
+APPSPEC10 & Clicking the `Log Out' button will log the user out of the app and navigate to the launch view. \\ \hline
+APPSPEC11 & The personal home view and options menu will feature an `Account' button. \\ \hline
+APPSPEC12 & Clicking the `Account' button will navigate the user to a view featuring full name, email, password text boxes and `Save', `Cancel' buttons. \\ \hline
+APPSPEC13 & Clicking the `Save' button will validate the full name, email, password text boxes and save any changes to the user's account if successful. A notification will be displayed to inform the user of success or failure. \\ \hline
+APPSPEC14 & Clicking the `Cancel' button will cancel the process of account modification and navigate the user to the personal home view. \\ \hline
+APPSPEC15 & The launch view will feature a `Search' button which is enabled only when the app detects a WiFi connection. \\ \hline
+APPSPEC16 & Clicking the `Search' button will navigate the user to a view containing a search text box, `Go' button and list of walks. \\ \hline
+APPSPEC17 & Clicking the `Go' button will filter the walk list to display only the walk names with a full or partial match to the search text. \\ \hline
+APPSPEC18 & Walk list items will display the walk name, author, partial description, user rating, downloads and `Download' button. \\ \hline
+APPSPEC19 & Clicking the `Download' button will download the walk to the user's device and replace the button with a `tick' icon. \\ \hline
 APPSPEC20 & The app will group walk list items which are close in proximity together in a sublist with a heading name of the common local area. \\ \hline
 APPSPEC21 & Walk list items grouped by local area will be displayed in descending order based on closest proximity to the app user. \\ \hline
-APPSPEC22 & An options menu will feature `Google Earth? and `Google Street? buttons which will be accessible whilst viewing a walk. \\ \hline
-APPSPEC23 & Clicking the `Google Earth? button will change the current walk?s map to the Google Earth view. \\ \hline
-APPSPEC24 & Clicking the `Google Street? button will change the current walk?s map to the Google Street view. \\ \hline
-APPSPEC25 & Walk edit and add views will feature a default map drop down box containing the options `Google Earth? and `Google Street?. \\ \hline
+APPSPEC22 & An options menu will feature `Google Earth' and `Google Street' buttons which will be accessible whilst viewing a walk. \\ \hline
+APPSPEC23 & Clicking the `Google Earth' button will change the current walk's map to the Google Earth view. \\ \hline
+APPSPEC24 & Clicking the `Google Street' button will change the current walk's map to the Google Street view. \\ \hline
+APPSPEC25 & Walk edit and add views will feature a default map drop down box containing the options `Google Earth' and `Google Street'. \\ \hline
 APPSPEC26 & App data will be downloaded through a web API interfacing a remote database which will be hosted on a Linux server.  \\ \hline
 APPSPEC27 & App data will be synchronised with a remote database when the app is launched and the device is connected to WiFi. \\ \hline
 APPSPEC28 & The app will display a loading view whilst synchronising app data. \\ \hline
 APPSPEC29 & The app will feature a settings view containing a toggle button to enable data download over the cellular data network. \\ \hline
 APPSPEC30 & Clicking the toggle button will change its state to on or off accordingly and the setting will be saved. \\ \hline
-APPSPEC31 & The settings view will feature a drop down box containing the storage options `Internal? and `SD Card?. \\ \hline
+APPSPEC31 & The settings view will feature a drop down box containing the storage options `Internal' and `SD Card'. \\ \hline
 APPSPEC32 & Selecting an option from the storage drop down box will save the setting and move data to the chosen location if it has changed. \\ \hline
 APPSPEC33 & The app will display a loading view whilst moving app data to a different location. \\ \hline
 APPSPEC34 & A location strategy will be re-implemented using the Android location services API. \\ \hline
-APPSPEC35 & The app?s GPS accuracy will be tested on the target Hudle tablet and a low end Android 2.2 mobile device to ensure consistency. \\ \hline
-APPSPEC36 & The walk view will place a graphic over each waypoint on the map containing a number to represent it?s preferred visit order. \\ \hline
+APPSPEC35 & The app's GPS accuracy will be tested on the target Hudl tablet and a low end Android 2.2 mobile device to ensure consistency. \\ \hline
+APPSPEC36 & The walk view will place a graphic over each waypoint on the map containing a number to represent it's preferred visit order. \\ \hline
 APPSPEC37 & The walk view will highlight the next waypoint to visit using a different graphic colour. \\ \hline
 APPSPEC38 & Waypoint information will be displayed to the user even if the waypoint has previously been visited since the walk view was opened. \\ \hline
+APPSPEC39 & The app will feature a `Walk Options' button.\\ \hline
+APPSPEC40 & Clicking on the `Walk Options' button will display a view with `Create Walk' button and a list of walks owned by the user. \\ \hline
+APPSPEC41 & Each walk in the list will have an `Edit' and `Delete' button.\\ \hline
+APPSPEC42 & Clicking the `Create Walk? button will display a view with `walk name, description' text boxes and `Add waypoints', `Create' and `Cancel' buttons.\\ \hline
+APPSPEC43 & Pressing an `Edit' button on a walk will bring up the `Edit Walks' view where the user can edit the `Walk name' and `Description' text fields. There will be an `Add waypoint', `Edit Waypoints', `Create' and `Cancel' buttons. \\ \hline
+APPSPEC44 & Pressing the `Delete' button will display a model asking the user to confirm the deletion. \\ \hline
+APPSPEC45 & Pressing an `Add waypoints' button will bring up a map view where the users can zoom in and move around. Waypoints are positioned by pressing on a location for a couple of seconds. \\ \hline
+APPSPEC46 & Waypoints are automatically assigned the order in which they were created. \\ \hline
+APPSPEC47 & Once a location has been assigned the `Edit Waypoint' view is displayed.\\ \hline
+APPSPEC48 & Pressing the `Edit Waypoints' button will display a list of current waypoints. Each waypoint will have a `Edit' and `Delete' button. \\ \hline
+APPSPEC49 & Pressing the `Edit' button will display an `Edit Waypoint' view. \\ \hline
+APPSPEC50 & Pressing the `Delete' button will display a model asking the user to confirm the deletion of the waypoint. \\ \hline
+APPSPEC51 & The `Edit Waypoints' view displays a map thumbnail of the location, `Name' and `Description' text boxes, an `Upload' button to add images, audio and video, and a gallery of uploaded media. \\ \hline
+APPSPEC52 & Pressing on an item in the gallery of uploaded media will show a pop-up model with a `Delete' button. Clicking `Delete' will present another model asking the user to confirm the deletion. \\ \hline
+APPSPEC53 & Pressing the map thumbnail will allow the user to change the position of the waypoint. It will show a map with a movable point and `Confirm' and `Cancel' buttons. \\ \hline
+APPSPEC54 & The application will feature White Rock branding and designs where appropriate to build the brand image. \\ \hline
+APPSPEC55 & When a registered user is viewing a walk there will be an `Edit' button \\ \hline
+APPSPEC56 & Pressing the `Edit' button will display the `Edit Walks' view. The `walk name' and `description' fields will be greyed out to prevent editing.\\ \hline
+APPSPEC57 & Any edits to walks created by people other than owner will require them to be confirmed by the owner before being published. \\ \hline
+APPSPEC58 & When a user has visited every waypoint on a walk a model will appear asking the user if they have finished. It will have `Finished' and `Carry on' buttons. \\ \hline
+APPSPEC59 & A user can force a walk to finish by pressing a `Finish' button in the options menu. \\ \hline
+APPSPEC60 & Pressing `Finish' displays a view with a `Review' text box, `Submit review' button, 5 star rating system and `Report a bug' button. \\ \hline
+APPSPEC61 & Submitting a review submits the data in the `Review' text box and displays it on the walks information page.\\ \hline
+APPSPEC62 & Filling in the 5 star rating system will automatically send the result to the server.\\ \hline
+APPSPEC63 & Pressing `Report a Bug' will launch the email client. \\ \hline
+APPSPEC64 & The `to? address will be set as the email address of the owner, the `subject? field will be set in the format ``BUG REPORT - WALK `NAME' ''.\\ \hline
+APPSPEC65 & The app will link to the White Rocks Twitter and Facebook page from the main page.\\ \hline
+APPSPEC66 & The application provide an option in the settings view to display welsh text where available. \\ \hline
+APPSPEC67 & On each waypoint and walk there will be a `Report' button which will flag the content as inappropriate. \\ \hline
+APPSPEC68 & And content which has been flagged as inappropriate will appear to administrators, who can modify or delete it. \\ \hline
 \end{longtable}
 
 
@@ -428,6 +468,28 @@ NTHSPEC5 & Allow users to link their accounts to their Facebook accounts. \\ \hl
 
 \subsection{Development Methodology}
 \subsection{Alternative Methodologies}
+
+\subsubsection{Spiral}
+
+The spiral methodology is a risk based system, which works iteratively towards a final working project. The process derives its name from the pattern with which its process follows. There are 4 basic activities which must occur in each loop of the spiral\ref{img:spiral}. These are:
+
+\begin{enumerate}
+  \item Planning
+  \item Risk Analysis
+  \item Implementation
+  \item Evaluation
+\end{enumerate}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=2]{spiral.jpg}
+\label{img:spiral}
+\caption{The spiral model \cite{spiral}}
+\end{center}
+\end{figure}
+
+
+This model helps to solve several of the issues present in the waterfall model. Primarily it repeats upon its self, to allow for iterative development and improvement to existing implementations and requirements. It also heavily relies on risk analysis which helps minimise risk throughout the project. One of the downfalls of this system is that it requires a complete product to be developed before it can be iterated through again to refine it. In this way it is better suited to large on-going projects which expect to have multiple versions.
 \subsection{Software Testing}
 
 
