@@ -1,8 +1,17 @@
 \begin{thebibliography}{1}
 
+\bibitem{Cockburn}
+Alistair Cockburn.
+\newblock {\em Crystal Clear a Human-powered Methodology for Small Teams}.
+\newblock Addison-Wesley Professional, first edition, 2004.
+
 \bibitem{git}
 Git.
 \newblock Git website.
+
+\bibitem{github}
+GitHub.
+\newblock Github website.
 
 \bibitem{android}
 Google.
