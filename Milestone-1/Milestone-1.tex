@@ -39,9 +39,7 @@ The purpose of this document is to explain in great detail the requirements and 
 
 \subsection{Client Background}
 \label{sec:client-background}
-White Rock Trails is a recent initiative in the Swansea area to create self-guided digital trails in Swansea's former industrial areas of White Rock and Hafod. 
-
-TODO: wait for reply from John.
+White Rock Trails~\cite{whiterock} is a recent initiative in the Swansea area to create self-guided digital trails in Swansea's former industrial areas of White Rock and Hafod. Connected Communities funding for the White Rock project was won by the Historical Association Swansea Branch. The project has begun to gain traction within the heritage site community, seeing interest from other cities in the United Kingdom such as Sheffield.
 
 \subsection{Scope}
 \label{sec:scope}
@@ -51,7 +49,7 @@ These modifications include, but are not limited to:
 \begin{itemize}
 \item Replace OpenStreetMap with Google Maps.
 \item Improving the usability of the application.
-\item Allow real-time collection of GPS waypoints.
+\item Allow real-time collection of GPS way points.
 \item Allow real-time collection of geotagged photographs and other media.
 \item Expand compatibility to a wide range of android tablets.
 \item Enable social-media interactions within the application.
@@ -105,7 +103,7 @@ The latter sections of this document contains the project requirements, specific
 This section will outline our teams structure, detailing which member will be responsible for each aspect and how they will work together. 
 
 \subsection{Roles and Responsibilities}
-This project has two major parts, the mobile application and the website. This structure lends its self to division of the team into two development groups. The Mobile group will deal with the development and design of the Android application and the Web group will create the web portal and back-end web services. The groups will be organised like so;  
+This project has two major parts, the mobile application and the website. This structure lends its self to division of the team into two development groups. The Mobile group will deal with the development and design of the Android application and the Web group will create the web portal and back-end web services. The groups will be organised like so:  
 \begin{table}[h]
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -116,13 +114,13 @@ Thomas Milner & Lewis Hancock \\
 Adam Barrell & Chris Lewis \\ \hline
 \end{tabular}
 \end{center}
-\end{table}%
+\end{table}
 
 The two groups will not work independently, instead they will be co-operating through out the design and development process to ensure that the mobile application and website meet the same requirements and design choices. 
 
 On top of the team allocations each members of the project has been assigned an individual role:
 
-\begin{table}[h]
+\begin{table}[H]
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
@@ -134,13 +132,13 @@ Android Genie & Lewis Hancock \\\hline
 Web Guru & Thomas Milner \\\hline
 \end{tabular}
 \end{center}
-\end{table}%
+\end{table}
 
 These roles are designed around each members expertise and skills. The Project Overlord is responsible for the general overview and control of the project; scheduling meetings, organising work days, ensuring deadlines are met and liaising with the client (John at White Rock). The HCI \& UX Tzar is in charge of the design process. Their main role is to ensure good UX design through out the project (See section \ref{sec:terms} for definitions of UX and HCI.). The Android Genie will lead the android team and is responsible for the development of the android application. They should ensure the use of good design practices during the development. Finally the Web Guru is responsible for the web team and is in charge of developing the website. The Guru should again ensure the use of good design practices and that the website correctly interacts with the existing framework of the android application. 
 
 \subsection{Communication Strategy}
 
-Communication is an important part of any project. The team will be using several different mediums to communicate with each other, the client and with 3rd parties. The first important medium is Social Media. 
+Communication is an important part of any project. The team will be using several different mediums to communicate with each other, the client and with third parties. The first important medium is Social Media. 
 
 We will be making extensive use of Social media for group communication. This will mainly take place through the Facebook platform, using the Chat system and a private group. This will allow us to talk as a group at any opportunity and to share documents and news. It can be used by the Project Overlord to publish details of meetings and keep us update with important news from the Client and other important parties. 
 
@@ -149,27 +147,30 @@ The second medium is formal meetings. They will be held by the Project Overlord 
 Emails will be the another important communication strategy, they will mainly be used for communication with the client and other 3rd parties such as lecturers who cannot be reached via social media and are not generally accessible for face to face communication. 
 
 Lastly, as the team generally see each other regularly out side of the project, face-to-face communication will commonly be used for less formal discussion between members. 
-%%\subsection{Development Strategy}
 
 \section{General Description}
 \label{sec:gen-desc}
 
 \subsection{Product Perspective}
 \label{sec:product-perspective}
-Digital Trails is both an Android application and a web service allowing for the creation, modification and exploration of self-guided digital trails. The application will be capable of running across a range of Android based tablets and is for the use of the general public.
+Digital Trails is an Android application  allowing for the creation, modification and exploration of self-guided digital trails. A web portal will also be available for the creation and modification of trails. A web service will be set up containing a database to synchronise locally created trails and those stored on the server. The application will be capable of running across a range of Android based tablets and is for the use of the general public.
 
-\subsection{Project Overview}
-\label{sec:project-overview}
+\subsection{Product Overview}
+\label{sec:product-overview}
 TODO: Black-box input / output.
 TODO: Data Flow Diagram.
 
-\subsection{Product Functions}
-\label{sec:product-functions}
-
-
 \subsection{User Characteristics}
 \label{sec:user-characteristics}
-The most common user of Digital Trails is going to be familiar with the Android operating system and enjoy walking. There is also a smaller user-base to be found within primary schools where the familiarity with Android may be lower.  
+
+The team has identified multiple types of users for the system:
+\begin{description}
+\item[Keen Walkers:] The most obvious user. They will likely have some familiarity with the Android operating system as they are capable of installing the application and will be excited to explore trails of varying difficulties.
+\item[Primary Schools:] These users are likely to be regular customers with different groups of children. They will be led by a qualified adult, thus reducing the need for the whole group to be Android savvy.
+\item[Heritage Site Admin:] The type of user who will be creating walks for other user to enjoy. The system must be intuitive and, where possible, complete the task of creating a walk in as short a time as possible to help this user.
+\end{description}
+
+For all users it is expected that they can read and understand English, they are familiar with the Android operating system and no further familiarity with computer technology shall be assumed.
 
 \subsection{Constraints}
 \label{sec:constraints}
@@ -275,7 +276,7 @@ APPREQ11 & The application should synchronise data whilst the host device is con
 APPREQ12 & The application should give users the option to synchronise data over cellular networks. \\ \hline
 APPREQ13 & The application should give users the option to store data on an SD card if available. \\ \hline
 APPREQ14 & The application should detect a user's GPS location consistently between devices. \\ \hline
-APPREQ15 & The application should display the prefered order to visit waypoints in a walk. \\ \hline
+APPREQ15 & The application should display the preferred order to visit waypoints in a walk. \\ \hline
 APPREQ16 & The application should display waypoint information even if it has already been visited. \\ \hline
 APPREQ17 & The application should allow registered users to create, edit and delete their own walks. \\ \hline
 APPREQ18 & The application should allow registered users to tag GPS waypoints in their own walks. \\ \hline
@@ -290,7 +291,6 @@ APPREQ26 & The application should allow users to report bugs and errors. \\ \hli
 APPREQ27 & The application should provide links to the application's Twitter and Facebook channels. \\ \hline
 APPREQ28 & The application should provide English and Welsh translations for text. \\ \hline
 APPREQ29 & The application should allow users to report inappropriate content to an administrator. \\ \hline
-
 \end{longtable}
 
 \subsubsection{Database Requirements}
@@ -509,7 +509,7 @@ APPSPEC38 & Waypoint information will be displayed to the user even if the waypo
 APPSPEC39 & The application will feature a `Walk Options' button.\\ \hline
 APPSPEC40 & Clicking on the `Walk Options' button will display a view with `Create Walk' button and a list of walks owned by the user. \\ \hline
 APPSPEC41 & Each walk in the list will have an `Edit' and `Delete' button.\\ \hline
-APPSPEC42 & Clicking the `Create Walk? button will display a view with `walk name, description' text boxes and `Add waypoints', `Create' and `Cancel' buttons.\\ \hline
+APPSPEC42 & Clicking the `Create Walk' button will display a view with `walk name, description' text boxes and `Add waypoints', `Create' and `Cancel' buttons.\\ \hline
 APPSPEC43 & Pressing an `Edit' button on a walk will bring up the `Edit Walks' view where the user can edit the `Walk name' and `Description' text fields. There will be an `Add waypoint', `Edit Waypoints', `Create' and `Cancel' buttons. \\ \hline
 APPSPEC44 & Pressing the `Delete' button will display a model asking the user to confirm the deletion. \\ \hline
 APPSPEC45 & Pressing an `Add waypoints' button will bring up a map view where the users can zoom in and move around. Waypoints are positioned by pressing on a location for a couple of seconds. \\ \hline
@@ -760,7 +760,7 @@ Each member of the crystal family has been given a colour which is assigned to a
 
 Clear is designed for projects with a rating of around C6 or D6, with other colours aimed at more complex projects (Such as Red for the E80, D80 and C80 categories). 
 
-Each methodology follows a set of common traits;
+Each methodology follows a set of common traits:
 
 \begin{itemize}
 \item Follows the Agile principles. 
@@ -788,20 +788,18 @@ After the cyclic delivery is complete the project is wrapped up, the product is 
 
 Generally Crystal clear is seen as good iterative-incremental process powered by planning and reviewing. It allows for continuous integration and is flexible and configurable to a users needs. How ever it only has limited scalability and does not share a common process with other crystal methods. It is also limited by its unsuitability for highly critical and over-dependence on inter-human communication. It also depends on a more day to day and continuous development period, which would make it difficult to apply to our project. 
 
-
 \subsubsection{Scrum}
-
 Scrum is an iterative and incremental type of Agile software development that focuses on the ability of a team to work together to complete the project. It encourages co-location of all members of the team and verbal communication. 
 
 One of the key aspects of scrum is its ability to recognise that the client may change their mind about what they need, called a requirements churn, and that unpredicted challenges are difficult to plan for and address in an traditional manor. Its because of this that scrum adopts an empirical approach. This means the team should accept that a problem cannot be fully understood or controlled and instead should focus on their ability to work quickly and respond to any newly emerging requirements. 
 
-SCRUM defines 3 core roles to any team;
+SCRUM defines 3 core roles to any team:
 
 \begin{description}
 \item[Product Owner] The product owner is the stakeholder and voice of the client. They are responsible for producing a valuable product and writing customer-centric items for the project backlog. This role is usually combined with the role of Project Manager, but should not be merged with the role of Scrum Master. 
 \item[Development Team] The development team are responsible for delivering a working product (A Potentially Shippable Increment (PSI)) at the end of each sprint cycle. The team is usually between 3 and 9 members who carryout the analysis, planning, development, testing, etc on the project. The team is usually self-organised.
 \item[Scrum Master] The scrum master is in charge of ensuring the development team can complete a sprint quickly and without impediment from external influences. They enforce the rules of SCRUM, chair key meetings and challenge the team to improve. Unlike a traditional Project Manager the Scrum Master doesn't have to deal with the management of people, only ensure the project is progressing and following the Scrum rules. 
-\end{description}% \hfill \\
+\end{description}
 
 One of the key aspects of SCRUM are the sprint development iterations. A sprint is a basic development iteration and is often has a fixed length. The length is often set before the sprint begins and varies between 1 week and a month. Sprints begin with a Planning meeting where the tasks are identified and an estimation of the commitment to that sprint is made. They end with a  review and retrospective meeting where the progress made is reviewed and any possible lessons from the sprint are documents for later sprints. Each meeting has a time limit, varying from 3 hours to 8 hours. At the end of each sprint the software should be fully integrated, tested and working. It should be in a 'Potentially Shippable' state. During a spring there are daily scrums which are short 15 minute meetings for the whole team to discuss the previous days work and what should be done that day. 
 
@@ -829,18 +827,58 @@ Lewis Hancock & Development Team Member \\ \hline
 \label{tab:scrumRoles}
 \end{table}
 
-As the project leader Adam Barrell is to be Product Owner, Thomas Milner offered to act as Scrum Master and chair Scrum meetings. The remaining positions are development team members, filled in by Lewis Hancock and Chris Lewis. The initial sprint backlog can be found in section~\ref{sec:project-plan}.
+As the project leader Adam Barrell is to be Product Owner, Thomas Milner offered to act as Scrum Master and chair Scrum meetings. The remaining positions are development team members, filled in by Lewis Hancock and Chris Lewis. 
+
+For version control the team shall be using Git (defined in section~\ref{sec:terms}), to help keep track of our backlog and what is currently in development the team shall also be using a Scrum project management tool.
+
+The initial sprint backlog can be found in section~\ref{sec:project-plan}.
 
 \subsection{Software Testing}
-Unit Testing
-	regression
-	Black Box
-Compatibility Testing
-Acceptance Testing
-User Study
+\begin{itemize}
+\item Unit Testing
+	\begin{itemize}
+	\item regression
+	\item Black Box
+	\end{itemize}
+
+\item Compatibility Testing
+\item Acceptance Testing
+\item User Study
+\end{itemize}
 
 \section{Project Plan}
 \label{sec:project-plan}
+
+\subsection{Sprint Backlogs}
+TODO: Someone look at this and figure it out I can't think any more.
+\subsubsection{Application Backlog}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|}
+\hline
+Integrate Google Maps API. \\ \hline
+Create and populate Database. \\ \hline
+Display maps. \\ \hline
+Populate maps with waypoints. \\ \hline
+ \\ \hline
+ \\ \hline
+\end{tabular}
+\caption{Application Backlog}
+\label{tab:appBacklog}
+\end{table}
+
+\subsubsection{Website Backlog}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|}
+\hline
+Create Trail Database. \\ \hline
+Create User Database. \\ \hline
+Create user login system. \\ \hline
+\end{tabular}
+\caption{Website Backlog}
+\label{tab:webBacklog}
+\end{table}
 
 \subsection{Milestones}
 \label{sec:plan-milestones}
@@ -925,7 +963,7 @@ Sections \ref{sec:tech-risks} and \ref{sec:personal-risks} analyse the technical
 
 This section presents the risks associated with this project in a risk matrix diagram shown in figure \ref{fig:RiskMatrix}. The risk matrix provides an overview of project risks which allow for easy identification of risk severity. The most severe risks are shown in red and tend towards the top right of the matrix which indicates a high risk rating.
 
-Risk \texttt{TECRSK4} is shown to be the most severe, therefore it poses the highest threat as it is highly likely to occur and will severely impact the project. Risk \texttt{TECRSK4}  addresses the possible limitations of GPS hardware in the target device, the Tesco Hudle. If the GPS hardware was found to be severely limited, this would greatly impact the project as the app's location tracking would not work correctly. In addition, the project is dependent on the suitability of the Tesco Hudle as it will be the likely device used by the target audience. Risks such as these will require careful monitoring throughout the project. 
+Risk \texttt{TECRSK4} is shown to be the most severe, therefore it poses the highest threat as it is highly likely to occur and will severely impact the project. Risk \texttt{TECRSK4}  addresses the possible limitations of GPS hardware in the target device, the Tesco Hudle. If the GPS hardware was found to be severely limited, this would greatly impact the project as the app's location tracking would not work correctly. In addition, the project is dependent on the suitability of the Tesco Hudl as it will be the likely device used by the target audience. Risks such as these will require careful monitoring throughout the project. 
 
 Risks tending towards the bottom left shown in green, are rated with less severity and thus do not require as careful monitoring. \texttt{PERRSK12} for example has the lowest overall risk rating and is therefore the lowest threat to the project. This risk addresses the absence of code documentation when the source is transferred from the previous development team. This risk is relatively unlikely to occur as it is standard practice for programmers to document code as it is written. If the documentation were to be absent, it would also not require a lot of time to create. Therefore, this risk has a low overall risk rating as its impact and likelihood is low.
 
@@ -1173,11 +1211,12 @@ This section explores the personal risks associated with the project. These risk
 \label{sec:initial-work}
 
 \subsection{Minutes of Meetings}
+In Appendix A
 \subsection{User Interface Wire Frames}
 \subsection{Future Work}
 \label{sec:future-work}
 
-\section{Appendix}
+\section{Appendix A}
 TODO: things like interview questions here. 
 
 %References as subsection
