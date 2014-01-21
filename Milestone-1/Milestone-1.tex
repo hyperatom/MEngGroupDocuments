@@ -198,10 +198,29 @@ The dependencies of the project are as follows:
 
 \section{Requirements}
 \label{sec:requirements}
+
+This section will define the requirements of the software that is to be produced.
+Each requirement will be listed with a unique code to allow for easier identification.
+These requirements are defined at the request of the client and serve as a binding contract for the delivery of the final product.
+The final product must satisfy all requirements listed in this section to fulfil the requirements of the client.
+Section \ref{sec:func-reqs} will define the functional requirements of the software, these are requirements that have a specific behaviour or function in the software. 
+Section \ref{sec:non-func-reqs} defines the non-functional requirements which specify a criteria which is used to judge the operation of the software.
+These can be based on properties such as efficiency, usability and security.
+Finally, section \ref{sec:nice-to-have} defines a set of optional features which will be `nice to have'.
+These features are not essential to the core functionality of the final product but will add value if they are implemented.
+Therefore, these features will be developed if all functional and non-functional requirements have been satisfied and time permits.
+
 \subsection{Functional}
 \label{sec:func-reqs}
+
+This section will define the functional requirements for the web portal, android application and database in sections \ref{sec:req-reg-login}, \ref{sec:app-reqs} and \ref{sec:db-reqs} respectively.
+
 \subsubsection{Web Portal}
 \label{sec:req-reg-login}
+
+This section defines the requirements of the web portal. 
+The web portal will allow users to manage their account, manage created walks and collaborate on other walks.
+The web portal will be accessible through a standard web browser where users can log into their personalised account using registered credentials.
 
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
@@ -230,6 +249,13 @@ WEBREQ20 & The web portal should contain an FAQ and user guide. \\ \hline
 \end{longtable}
 
 \subsubsection{Android Application}
+\label{sec:app-reqs}
+
+This section defines the requirements for the Android application.
+Users will download and run the Android application on any Android device.
+The Android Application will allow users to explore, rate and comment on user created walks and add way points to their own walks.
+Way points will allow users to tag GPS locations and upload associated text, images, video and audio.
+User created walks can be downloaded by other users who will be able to access the data associated with each way point in the walk.
 
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
@@ -268,6 +294,7 @@ APPREQ29 & The application should allow users to report inappropriate content to
 \end{longtable}
 
 \subsubsection{Database Requirements}
+\label{sec:db-reqs}
 
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
@@ -299,6 +326,7 @@ NFREQ11 & The application should be bandwidth efficient. \\ \hline
 \end{longtable}
 
 \subsection{Nice To Have}
+\label{sec:nice-to-have}
 
 
 \begin{longtable}{|p{2.5cm}p{13cm}|}
