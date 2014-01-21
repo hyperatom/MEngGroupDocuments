@@ -198,10 +198,29 @@ The dependencies of the project are as follows:
 
 \section{Requirements}
 \label{sec:requirements}
+
+This section will define the requirements of the software that is to be produced.
+Each requirement will be listed with a unique code to allow for easier identification.
+These requirements are defined at the request of the client and serve as a binding contract for the delivery of the final product.
+The final product must satisfy all requirements listed in this section to fulfil the requirements of the client.
+Section \ref{sec:func-reqs} will define the functional requirements of the software, these are requirements that have a specific behaviour or function in the software. 
+Section \ref{sec:non-func-reqs} defines the non-functional requirements which specify a criteria which is used to judge the operation of the software.
+These can be based on properties such as efficiency, usability and security.
+Finally, section \ref{sec:nice-to-have} defines a set of optional features which will be `nice to have'.
+These features are not essential to the core functionality of the final product but will add value if they are implemented.
+Therefore, these features will be developed if all functional and non-functional requirements have been satisfied and time permits.
+
 \subsection{Functional}
 \label{sec:func-reqs}
+
+This section will define the functional requirements for the web portal, android application and database in sections \ref{sec:req-reg-login}, \ref{sec:app-reqs} and \ref{sec:db-reqs} respectively.
+
 \subsubsection{Web Portal}
 \label{sec:req-reg-login}
+
+This section defines the requirements of the web portal. 
+The web portal will allow users to manage their account, manage created walks and collaborate on other walks.
+The web portal will be accessible through a standard web browser where users can log into their personalised account using registered credentials.
 
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
@@ -230,6 +249,13 @@ WEBREQ20 & The web portal should contain an FAQ and user guide. \\ \hline
 \end{longtable}
 
 \subsubsection{Android Application}
+\label{sec:app-reqs}
+
+This section defines the requirements for the Android application.
+Users will download and run the Android application on any Android device.
+The Android Application will allow users to explore, rate and comment on user created walks and add way points to their own walks.
+Way points will allow users to tag GPS locations and upload associated text, images, video and audio.
+User created walks can be downloaded by other users who will be able to access the data associated with each way point in the walk.
 
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
@@ -268,6 +294,12 @@ APPREQ29 & The application should allow users to report inappropriate content to
 \end{longtable}
 
 \subsubsection{Database Requirements}
+\label{sec:db-reqs}
+
+This section defines the requirements for the digital trails database.
+The database will store data associated with walks, user accounts and way points.
+A local database will reside on user's devices which will mirror a database stored on a remote server.
+Only a subset of data from the remote database will be stored on user devices based on the walks that have been downloaded.
 
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
@@ -298,6 +330,10 @@ DBREQ19 & The audio should store the location of the audio file in the file syst
 \subsection{Non-Functional}
 \label{sec:non-func-reqs}
 
+This section defines the non-functional requirements of the software.
+These requirements state the properties which are desired of the software.
+Such properties include compatibility with different screen sizes; battery and GPS efficiency and that software is usable by colour blind users.
+
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
 \textbf{Code} & \textbf{Requirement} \\
@@ -305,7 +341,7 @@ DBREQ19 & The audio should store the location of the audio file in the file syst
 \hline
 NFREQ1 & The web portal must share the same database as the second development group. \\ \hline
 NFREQ2 & The application should be intuitive to users with little technology experience. \\ \hline
-NFREQ3 & The application should be usable by colour blind and deaf users. \\ \hline
+NFREQ3 & The application should be usable by colour blind users. \\ \hline
 NFREQ4 & The application code should be maintainable for future developers. \\ \hline
 NFREQ5 & The application code should be fully documented. \\ \hline
 NFREQ6 & The application should run efficiently on lower end GPS-enabled android tablets. \\ \hline
@@ -317,7 +353,10 @@ NFREQ11 & The application should be bandwidth efficient. \\ \hline
 \end{longtable}
 
 \subsection{Nice To Have}
+\label{sec:nice-to-have}
 
+This section defines the features which are optional and `nice to have'.
+Such features include the integration of Twitter and Facebook channels within the Android application.
 
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
@@ -332,6 +371,11 @@ NTHREQ4 & The application should allow users to advertise their current walk on 
 
 \section{Specifications}
 \label{sec:specifications}
+
+This section defines the specifications for the functional, non-function and `nice to have' features in sections \ref{sec:func-reqs}, \ref{sec:non-func-specs} and \ref{sec:nice-to-have-specs} respectively.
+These specifications describe how the requirements from section \ref{sec:requirements} will be achieved at a high level.
+Each software requirement maps to one or more specifications as there may be multiple items needed to achieve a given specification.
+Therefore, the specifications will serve as a high level strategy for the implementation of each requirement.
 
 \subsection{Functional}
 \label{sec:func-specs}
@@ -553,6 +597,7 @@ NFSPEC21 & Sample GPS based on mode of transport the user has input. (update whe
 \end{longtable}
 
 \subsection{Nice To Have}
+\label{sec:nice-to-have-specs}
 
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
