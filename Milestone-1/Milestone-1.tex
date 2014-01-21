@@ -267,6 +267,16 @@ APPREQ28 & The application should provide English and Welsh translations for tex
 APPREQ29 & The application should allow users to report inappropriate content to an administrator. \\ \hline
 \end{longtable}
 
+\subsubsection{Database Requirements}
+
+\begin{longtable}{|p{2.5cm}p{13cm}|}
+\hline
+\textbf{Code} & \textbf{Requirement} \\
+\hline
+DBREQ1 & The database should  \\ \hline
+
+\end{longtable}
+
 \subsection{Non-Functional}
 \label{sec:non-func-reqs}
 
@@ -717,47 +727,6 @@ User Study
 \section{Project Plan}
 \label{sec:project-plan}
 
-\section{Risk Analysis}
-\label{sec:risk-analysis}
-
-\subsection{Risk Matrix}
-
-\subsection{Technical Risks}
-\label{sec:tech-risks}
-
-\renewcommand{\arraystretch}{1.2}
-
-\noindent\begin{tabular}{@{}p{3.5cm}p{4cm}p{13cm}@{}}
-\textbf{Code:} TECRSK1 & \textbf{Likelihood:} High & \textbf{Impact:} Medium \\ 
-\multicolumn{3}{@{}p{17cm}|@{}}{\textbf{Risk:} This is a test risk.} \\ 
-\multicolumn{3}{@{}p{17cm}@{}}{\textbf{Mitigation:} This is a test risk. } \\ 
-\end{tabular} 
-
-\vspace{0.5 cm}
-
-\noindent\begin{tabular}{@{}p{3.5cm}p{4cm}p{13cm}@{}}
-\textbf{Code:} TECRSK1 & \textbf{Likelihood:} High & \textbf{Impact:} Medium \\ 
-\multicolumn{3}{@{}p{17cm}|@{}}{\textbf{Risk:} This is a test risk.} \\ 
-\multicolumn{3}{@{}p{17cm}@{}}{\textbf{Mitigation:} This is a test risk. } \\ 
-\end{tabular} 
-
-\subsection{Personal Risks}
-\label{sec:personal-risks}
-
-\noindent\begin{tabular}{@{}p{3.5cm}p{4cm}p{13cm}@{}}
-\textbf{Code:} PERRSK1 & \textbf{Likelihood:} 4 & \textbf{Impact:} 7 \\ 
-\multicolumn{3}{@{}p{17cm}|@{}}{\textbf{Risk:} A member of the team is absent for a substantial amount of time and is therefore not able to contribute to project work. This will cause the work rate to slow and may impact the delivery dates set out in the project timetable.} \\ 
-\multicolumn{3}{@{}p{17cm}@{}}{\textbf{Mitigation:} Extra time will be allocated to complete project tasks so delivery dates are not severely impacted if one team member is absent. } \\ 
-\end{tabular} 
-
-\vspace{0.5 cm}
-
-\noindent\begin{tabular}{@{}p{3.5cm}p{4cm}p{13cm}@{}}
-\textbf{Code:} TECRSK1 & \textbf{Likelihood:} High & \textbf{Impact:} Medium \\ 
-\multicolumn{3}{@{}p{17cm}|@{}}{\textbf{Risk:} This is a test risk.} \\ 
-\multicolumn{3}{@{}p{17cm}@{}}{\textbf{Mitigation:} This is a test risk. } \\ 
-\end{tabular} 
-
 \subsection{Milestones}
 \label{sec:plan-milestones}
 
@@ -828,6 +797,262 @@ User Study
 \end{tabular}
 \caption{Software development time table.\label{fig:software-dev-table}}
 \end{figure}
+
+\section{Risk Analysis}
+\label{sec:risk-analysis}
+
+This section will explore the risks associated with this project. An overview of these risks is presented using a risk matrix diagram in section \ref{sec:risk-matrix}. Sections \ref{sec:tech-risks} and \ref{sec:personal-risks} discuss technical and personal risks respectively. This risk analysis will ensure project risks are foreseen and appropriate mitigation strategies are in place should any materialise.
+
+Sections \ref{sec:tech-risks} and \ref{sec:personal-risks} analyse the technical and personal project risks respectively. Each risk is given a subjective likelihood and impact rating from the range 1 to 10, where 1 is the lowest possible likelihood/impact and 10 is the highest likelihood/impact. An overall risk rating is also assigned by calculating the result of likelihood multiplied by impact. Risks are described on the basis of how they impact the project should they occur. Finally, a mitigation strategy is discussed which aims to reduce the likelihood of the risk occurring.
+
+\subsection{Risk Matrix}
+\label{sec:risk-matrix}
+
+This section presents the risks associated with this project in a risk matrix diagram shown in figure \ref{fig:RiskMatrix}. The risk matrix provides an overview of project risks which allow for easy identification of risk severity. The most severe risks are shown in red and tend towards the top right of the matrix which indicates a high risk rating.
+
+Risk \texttt{TECRSK4} is shown to be the most severe, therefore it poses the highest threat as it is highly likely to occur and will severely impact the project. Risk \texttt{TECRSK4}  addresses the possible limitations of GPS hardware in the target device, the Tesco Hudle. If the GPS hardware was found to be severely limited, this would greatly impact the project as the app's location tracking would not work correctly. In addition, the project is dependent on the suitability of the Tesco Hudle as it will be the likely device used by the target audience. Risks such as these will require careful monitoring throughout the project. 
+
+Risks tending towards the bottom left shown in green, are rated with less severity and thus do not require as careful monitoring. \texttt{PERRSK12} for example has the lowest overall risk rating and is therefore the lowest threat to the project. This risk addresses the absence of code documentation when the source is transferred from the previous development team. This risk is relatively unlikely to occur as it is standard practice for programmers to document code as it is written. If the documentation were to be absent, it would also not require a lot of time to create. Therefore, this risk has a low overall risk rating as its impact and likelihood is low.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{./img/RiskMatrix}
+\caption{Risk matrix of personal and technical project risks.}
+\label{fig:RiskMatrix}
+\end{figure}
+
+
+\subsection{Technical Risks}
+\label{sec:tech-risks}
+
+This section explores the technical risks associated with the project. These risks are associated with the technologies which the project is dependent upon. Such risks include data loss, hardware failure, licensing issues and API limitations.
+
+\renewcommand{\arraystretch}{1.2}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} TECRSK1 & \textbf{Likelihood:} 1 & \textbf{Impact:} 7 & \textbf{Rating:} 7\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The target tablet device, the Tesco Hudle fails and is irrecoverable to its factory state. This will prevent software testing on the target device and demonstrations to the client.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} Non target devices owned by members of the development team will be used to test the software and demonstrate it to the client should the target device fail.} \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} TECRSK2 & \textbf{Likelihood:} 2 & \textbf{Impact:} 3 & \textbf{Rating:} 6\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The personal computers used for software development by members of the team fail and are irrecoverable to an operational state.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} University lab computers with pre-installed IDE's (Integrated Development Environments) will be used to develop the software should team member's personal computers fail.} \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} TECRSK3 & \textbf{Likelihood:} 2 & \textbf{Impact:} 10 & \textbf{Rating:} 20\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} Data associated with project documents and source code becomes corrupt or lost and cannot be recovered. Extra work will be required to rewrite source code and documents which will severely delay the final delivery.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} GIT (see terms) will be used as a version control system which will synchronise and back up source code to a remote GitHub (see terms) repository. This will ensure code is recoverable to a previous state if it becomes corrupted or lost on a single development computer.} \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} TECRSK4 & \textbf{Likelihood:} 7 & \textbf{Impact:} 9 & \textbf{Rating:} 63\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The GPS hardware on the target tablet device is not strong enough to maintain a consistent satellite signal whilst moving. This will limit the accuracy of a user's current location whilst using a walk on the app.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} The GPS hardware of the target device, the Tesco Hudle will be researched to ensure its capabilities are fully known. A GPS polling strategy will also be devised to ensure the app locates the user accurately, regardless of transportation.} \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} TECRSK5 & \textbf{Likelihood:} 2 & \textbf{Impact:} 3 & \textbf{Rating:} 6\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} Licensing issues prevent the usage of external libraries or content for the purposes of the software that will be created. This may prevent certain resources being used in the software.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} The licences of potential code libraries or content will be examined before a decision is made to use them.} \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} TECRSK6 & \textbf{Likelihood:} 1 & \textbf{Impact:} 8 & \textbf{Rating:} 8\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The target tablet device, the Tesco Hudle has limited hardware which is not capable of running the developed app software responsively.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} Alternative tablet devices will be researched to ensure backup options are available if the Tesco Hudle is not suitable.} \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} TECRSK7 & \textbf{Likelihood:} 2 & \textbf{Impact:} 7 & \textbf{Rating:} 14\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The Google Android API is too limited to provide the functionality that is required by the app. This will result in features being excluded from the final app which cannot be developed using the standard API.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} Third party libraries will be researched if the standard Google Android API cannot provide the functionality required by the app.} \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} TECRSK8 & \textbf{Likelihood:} 2 & \textbf{Impact:} 6 & \textbf{Rating:} 12\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The web server used to host the web API and web portal is not of a high enough specification. This will introduce performance or compatibility issues with server side code. } \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} A suitable specification of server will be researched prior to hosting the server side code. This will be based on the volume of expected users which interact with the system at any one time.} \\
+\end{tabular}
+
+\subsection{Personal Risks}
+\label{sec:personal-risks}
+
+This section explores the personal risks associated with the project. These risks are associated with the human aspects of the project. Such risks include team member absence, feature creep, poor time management and external work.
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK1 & \textbf{Likelihood:} 4 & \textbf{Impact:} 7 & \textbf{Rating:} 28 \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} A member of the team is absent for a substantial amount of time and is therefore not able to contribute to project work. This will cause the work rate to slow and may impact the delivery dates set out in the project timetable.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} Extra time will be allocated to complete project tasks so delivery dates are not severely impacted if one team member is absent. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK2 & \textbf{Likelihood:} 8 & \textbf{Impact:} 5 & \textbf{Rating:} 40\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} New software features are continually requested by the client after the initial requirements have been agreed. Unforeseen features will need to be allocated development time thus delaying subsequent project tasks.} \\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} An initial set of requirements will be agreed with the client and serve as a contract. Extra feature requests will be developed if they do not impact subsequent tasks.} \\ 
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK3 & \textbf{Likelihood:} 5 & \textbf{Impact:} 9 & \textbf{Rating:} 45\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The client requests the change of a feature which has already been developed. If this is a large feature such as the maps engine, a large amount of time will be required to change it, thus delaying the project timetable.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} Features will be prototyped and shown to the client prior to implementation. This will ensure the client agrees with the features at a user interface level.} \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK4 & \textbf{Likelihood:} 3 & \textbf{Impact:} 3 & \textbf{Rating:} 9\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The user interface design of the web portal or app is poor causing users to struggle when using basic functions.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} The best practices of mobile interaction design will be adopted to ensure the app's user interface is intuitive. Neilson's design heuristics will also be applied to the web portal user interface to ensure it is also intuitive. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK5 & \textbf{Likelihood:} 7 & \textbf{Impact:} 3 & \textbf{Rating:} 21\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} Major or minor software bugs are present in the app or web portal which inhibit the desired functionality. This will have a negative impact on the user experience and require extra development time to fix. } \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} Blackbox testing methods such as unit and regression testing will be used at the end of each sprint to ensure modules are free from bugs. Acceptance and compatibility tests will also ensure the software is free from user interface and hardware specific bugs. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK6 & \textbf{Likelihood:} 8 & \textbf{Impact:} 2 & \textbf{Rating:} 16\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The work completed by the previous development team is substandard and has left the app in an unmaintainable state. A large amount of time will be required to rewrite source code to a maintainable state. } \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} Time will be allocated for the rewriting of source code to account for previous substandard work. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK7 & \textbf{Likelihood:} 2 & \textbf{Impact:} 4 & \textbf{Rating:} 8\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The team suffers from a communication breakdown where members of the team cannot be contacted or information does not circulate correctly. } \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} A communication channel will be created on a social media website which is used regularly by members of the team. This will ensure team members are always contactable and information can be distributed in one place. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK8 & \textbf{Likelihood:} 10 & \textbf{Impact:} 5 & \textbf{Rating:} 50\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} Team members have coursework deadlines and exam revision overlapping with project work which leaves less time to spend on development. } \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} A project timetable will be created to schedule project tasks around coursework and revision. This will ensure that sufficient time is allocated to the project. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK9 & \textbf{Likelihood:} 1 & \textbf{Impact:} 7 & \textbf{Rating:} 7\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} Features may be missing from the final software after it has been delivered to the client. Therefore, the client will not have the system which was specified and agreed at the start of the project. } \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} Features will be grouped and developed in multiple sprints in accordance with the Scrum development methodology. The software will also be regularly demonstrated to the client to ensure features are not missing. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK10 & \textbf{Likelihood:} 3 & \textbf{Impact:} 6 & \textbf{Rating:} 18\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} Software testing is not thorough enough which causes bugs to be overlooked, thus producing unintended behaviour in the software. } \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} A broad range of testing methods will be adopted such as black box, acceptance and compatibility testing to ensure unintended software behaviour is not overlooked. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK11 & \textbf{Likelihood:} 2 & \textbf{Impact:} 8 & \textbf{Rating:} 16\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The developed software is slow responding to users interactions which has a negative impact on the user experience. } \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} The web portal and app will be tested on target devices to test responsiveness. Software which is not responsive enough will be redeveloped to improve its efficiency. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK12 & \textbf{Likelihood:} 1 & \textbf{Impact:} 1 & \textbf{Rating:} 1\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The code documentation provided by the previous development team is substandard. This will require extra time to be invested in understanding the code and writing code documentation. } \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} Time will be allocated at the start of the project to re-factoring existing code and writing missing documentation. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK13 & \textbf{Likelihood:} 1 & \textbf{Impact:} 10 & \textbf{Rating:} 10\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The software requirements defined at the start of the project are not met when the final software is delivered. Therefore, the client will not receive the software that was agreed. } \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} The client's requirements of the software will be declared in this requirements document and serve as a contract and reference. A set of specifications will also be created for each requirement to ensure tasks are set which describe how each will be achieved. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK14 & \textbf{Likelihood:} 1 & \textbf{Impact:} 4 & \textbf{Rating:} 4\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The code provided by the previous development team is over engineered causing a reduction in performance and difficulties to maintain.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} Time will be allocated at the start of development to simplifying over engineered source code. This will ensure the code is easy to maintain and develop new features required by the client. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK15 & \textbf{Likelihood:} 3 & \textbf{Impact:} 9 & \textbf{Rating:} 27\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The project plan and timetable is not robust enough to account for tasks overrunning or external factors which may delay them. This will cause an avalanche effect and disrupt the timetable.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} The expected time required to complete each task will be estimated with the addition of extra time incurred by predicted delays. This will ensure there is a sufficient amount of time allocated to account for task overrun.  } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK16 & \textbf{Likelihood:} 4 & \textbf{Impact:} 4 & \textbf{Rating:} 16\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The importance of features are over or under estimated causing more work to be spent on the less important features and less work spent on the more important features.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} All software features will be assigned an estimated completion time and priority which denotes the order in which they should be developed when grouped into sprints. This will ensure the correct amount of time is spent on developing tasks, starting with the most important. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK17 & \textbf{Likelihood:} 2 & \textbf{Impact:} 5 & \textbf{Rating:} 10\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} Members of the development team take a vacation break during project development. This leaves the rest of the team to pick up where they left off and continue their work.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} Members of the team who are going on a vacation break will notify the rest of the team in advance of their departure. Partially complete code will also be completed to a working state and pushed to the GitHub repository. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK18 & \textbf{Likelihood:} 7 & \textbf{Impact:} 4 & \textbf{Rating:} 28\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} Compatibility issues with the current code prevent the app from working correctly on the target tablet device, the Tesco Hudle. This will require more time to be spent redeveloping the code to ensure the app is compatible with the target hardware.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} Time will be allocated at the start of development to allow any compatibility issues to be resolved for the target tablet device. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK19 & \textbf{Likelihood:} 3 & \textbf{Impact:} 7 & \textbf{Rating:} 21\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} Communication with the client breaks down during the development of the software. This will prevent essential feedback from being gathered from the client, thus the final product may not be exactly as desired.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} An agreement with the client will be made to ensure regular contact is maintained and to inform each party of the times when they will not be contactable. } \\
+\end{tabular}
+
+\vspace{0.5 cm}
+
+\noindent\begin{tabular}{@{}p{3.5cm}p{3cm}p{2.5cm}p{3cm}@{}}
+\textbf{Code:} PERRSK20 & \textbf{Likelihood:} 1 & \textbf{Impact:} 9 & \textbf{Rating:} 9\\ 
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Risk:} The client no longer requires the software that will be developed in this project and looses interest.} \\
+\multicolumn{4}{@{}p{17cm}@{}}{\textbf{Mitigation:} Regular meetings will be held with the client where the development progress will be demonstrated. Contact with the White Rock team will also be maintained to ensure their interest in the project. } \\
+\end{tabular}
 
 \section{Initial Work}
 \label{sec:initial-work}
