@@ -296,6 +296,11 @@ APPREQ29 & The application should allow users to report inappropriate content to
 \subsubsection{Database Requirements}
 \label{sec:db-reqs}
 
+This section defines the requirements for the digital trails database.
+The database will store data associated with walks, user accounts and way points.
+A local database will reside on user's devices which will mirror a database stored on a remote server.
+Only a subset of data from the remote database will be stored on user devices based on the walks that have been downloaded.
+
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
 \textbf{Code} & \textbf{Requirement} \\
@@ -307,6 +312,10 @@ DBREQ1 & The database should  \\ \hline
 \subsection{Non-Functional}
 \label{sec:non-func-reqs}
 
+This section defines the non-functional requirements of the software.
+These requirements state the properties which are desired of the software.
+Such properties include compatibility with different screen sizes; battery and GPS efficiency and that software is usable by colour blind users.
+
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
 \textbf{Code} & \textbf{Requirement} \\
@@ -314,7 +323,7 @@ DBREQ1 & The database should  \\ \hline
 \hline
 NFREQ1 & The web portal must share the same database as the second development group. \\ \hline
 NFREQ2 & The application should be intuitive to users with little technology experience. \\ \hline
-NFREQ3 & The application should be usable by colour blind and deaf users. \\ \hline
+NFREQ3 & The application should be usable by colour blind users. \\ \hline
 NFREQ4 & The application code should be maintainable for future developers. \\ \hline
 NFREQ5 & The application code should be fully documented. \\ \hline
 NFREQ6 & The application should run efficiently on lower end GPS-enabled android tablets. \\ \hline
@@ -328,6 +337,7 @@ NFREQ11 & The application should be bandwidth efficient. \\ \hline
 \subsection{Nice To Have}
 \label{sec:nice-to-have}
 
+This section defines the features which are 
 
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
