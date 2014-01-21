@@ -39,9 +39,7 @@ The purpose of this document is to explain in great detail the requirements and 
 
 \subsection{Client Background}
 \label{sec:client-background}
-White Rock Trails is a recent initiative in the Swansea area to create self-guided digital trails in Swansea's former industrial areas of White Rock and Hafod. 
-
-TODO: wait for reply from John.
+White Rock Trails~\cite{whiterock} is a recent initiative in the Swansea area to create self-guided digital trails in Swansea's former industrial areas of White Rock and Hafod. Connected Communities funding for the White Rock project was won by the Historical Association Swansea Branch, \url{www.haswansea.org.uk}. The project has begun to gain traction within the heritage site community, seeing interest from other cities in the United Kingdom such as Sheffield.
 
 \subsection{Scope}
 \label{sec:scope}
@@ -122,7 +120,7 @@ The two groups will not work independently, instead they will be co-operating th
 
 On top of the team allocations each members of the project has been assigned an individual role:
 
-\begin{table}[h]
+\begin{table}[H]
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
@@ -134,7 +132,7 @@ Android Genie & Lewis Hancock \\\hline
 Web Guru & Thomas Milner \\\hline
 \end{tabular}
 \end{center}
-\end{table}%
+\end{table}
 
 These roles are designed around each members expertise and skills. The Project Overlord is responsible for the general overview and control of the project; scheduling meetings, organising work days, ensuring deadlines are met and liaising with the client (John at White Rock). The HCI \& UX Tzar is in charge of the design process. Their main role is to ensure good UX design through out the project (See section \ref{sec:terms} for definitions of UX and HCI.). The Android Genie will lead the android team and is responsible for the development of the android application. They should ensure the use of good design practices during the development. Finally the Web Guru is responsible for the web team and is in charge of developing the website. The Guru should again ensure the use of good design practices and that the website correctly interacts with the existing framework of the android application. 
 
@@ -149,7 +147,6 @@ The second medium is formal meetings. They will be held by the Project Overlord 
 Emails will be the another important communication strategy, they will mainly be used for communication with the client and other 3rd parties such as lecturers who cannot be reached via social media and are not generally accessible for face to face communication. 
 
 Lastly, as the team generally see each other regularly out side of the project, face-to-face communication will commonly be used for less formal discussion between members. 
-%%\subsection{Development Strategy}
 
 \section{General Description}
 \label{sec:gen-desc}
@@ -165,7 +162,15 @@ TODO: Data Flow Diagram.
 
 \subsection{User Characteristics}
 \label{sec:user-characteristics}
-The most common user of Digital Trails is going to be familiar with the Android operating system and enjoy walking. There is also a smaller user-base to be found within primary schools where the familiarity with Android may be lower.  
+
+The team has identified multiple types of users for the system:
+\begin{description}
+\item[Keen Walkers:] The most obvious user. They will likely have some familiarity with the Android operating system as they are capable of installing the application and will be excited to explore trails of varying difficulties.
+\item[Primary Schools:] These users are likely to be regular customers with different groups of children. They will be led by a qualified adult, thus reducing the need for the whole group to be Android savvy.
+\item[Heritage Site Admin:] The type of user who will be creating walks for other user to enjoy. The system must be intuitive and, where possible, complete the task of creating a walk in as short a time as possible to help this user.
+\end{description}
+
+For all users it is expected that they can read and understand English, they are familiar with the Android operating system and no further familiarity with computer technology shall be assumed.
 
 \subsection{Constraints}
 \label{sec:constraints}
@@ -260,7 +265,6 @@ APPREQ26 & The application should allow users to report bugs and errors. \\ \hli
 APPREQ27 & The application should provide links to the application's Twitter and Facebook channels. \\ \hline
 APPREQ28 & The application should provide English and Welsh translations for text. \\ \hline
 APPREQ29 & The application should allow users to report inappropriate content to an administrator. \\ \hline
-
 \end{longtable}
 
 \subsection{Non-Functional}
@@ -449,7 +453,7 @@ APPSPEC60 & Pressing `Finish' displays a view with a `Review' text box, `Submit 
 APPSPEC61 & Submitting a review submits the data in the `Review' text box and displays it on the walks information page.\\ \hline
 APPSPEC62 & Filling in the 5 star rating system will automatically send the result to the server.\\ \hline
 APPSPEC63 & Pressing `Report a Bug' will launch the email client. \\ \hline
-APPSPEC64 & The `to? address will be set as the email address of the owner, the `subject? field will be set in the format ``BUG REPORT - WALK `NAME' ''.\\ \hline
+APPSPEC64 & The `to' address will be set as the email address of the owner, the `subject' field will be set in the format ``BUG REPORT - WALK `NAME' ''.\\ \hline
 APPSPEC65 & The application will link to the White Rocks Twitter and Facebook page from the main page.\\ \hline
 APPSPEC66 & The application provide an option in the settings view to display welsh text where available. \\ \hline
 APPSPEC67 & On each waypoint and walk there will be a `Report' button which will flag the content as inappropriate. \\ \hline
@@ -829,11 +833,12 @@ User Study
 \label{sec:initial-work}
 
 \subsection{Minutes of Meetings}
+In Appendix A
 \subsection{User Interface Wire Frames}
 \subsection{Future Work}
 \label{sec:future-work}
 
-\section{Appendix}
+\section{Appendix A}
 TODO: things like interview questions here. 
 
 %References as subsection
