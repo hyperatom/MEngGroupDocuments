@@ -324,6 +324,10 @@ DBREQ16 & The videos should store the location of the video file in the file sys
 DBREQ17 & The database should have the ability to store audio. \\ \hline
 DBREQ18 & The database should have the ability to link audio to places and walks.\\ \hline
 DBREQ19 & The audio should store the location of the audio file in the file system.\\ \hline
+DBREQ20 & The database should have the ability to store Users. \\ \hline
+DBREQ21 & The users should have a `Username`, an `Email' and a `Password'\\ \hline
+DBREQ22 & The users should be linked to Walks, Places, Photos, Videos and Audio they add. \\ \hline
+DBREQ23 & The users should store related settings. \\ \hline 
 
 \end{longtable}
 
@@ -543,25 +547,36 @@ DBSPEC1 & The database will have have a Walks table\\ \hline
 DBSPEC2 & Every table will have have an `ID' field as its primary key.\\ \hline
 DBSPEC3 & The walks table will have have a `DescriptionID' field to relate to a row in a description table. \\ \hline
 DBSPEC4 & The walks table will have have `Difficultly',  `Duration' and `Distance' field. \\ \hline
-DBSPEC5 & The database will have have a Place table to store locations on a walk.\\ \hline
-DBSPEC6 & The places table will have have a `WalkID' field to relate to a row in the walks table.\\ \hline
-DBSPEC7 & The places table will have have `Latitude' and `Longitude'  fields to store the position. \\ \hline
-DBSPEC8 & The places table will have have a `DescriptionID' field to relate to a row in a description table. \\ \hline
-DBSPEC9 & The database will have have a Description table for each supported language. \\ \hline
-DBSPEC10 & The description tables will have be replicas of each other, but in the correct language. \\ \hline
-DBSPEC11 & The description tables will have have `Title', `Short Description' and `Description' fields.\\ \hline
-DBSPEC12 & The database will have have a Photos table.\\ \hline
-DBSPEC13 & The photos table will have have a `placeID' field to relate to a row in the Places table. \\ \hline
-DBSPEC14 & The photos table will have have a `walkID' field to relate to a row in the walks table.\\ \hline
-DBSPEC15 & The photos table will have have a `Location' field to store the location of the photo file in the file system.\\ \hline
-DBSPEC16 & The database will have have a Videos table. \\ \hline
-DBSPEC17 & The videos table will have have a `placeID' field to relate to a row in the Places table. \\ \hline
-DBSPEC18 & The videos table will have have a `walkID' field to relate to a row in the walks table.\\ \hline
-DBSPEC19 & The videos table will have have a `Location' field to store the location of the video file in the file system.\\ \hline
-DBSPEC20 & The database will have have a Audio table. \\ \hline
-DBSPEC21 & The audio table will have have a `placeID' field to relate to a row in the Places table. \\ \hline
-DBSPEC22 & The audio table will have have a `walkID' field to relate to a row in the walks table.\\ \hline
-DBSPEC23 & The audio table will have have a `Location' field to store the location of the audio file in the file system.\\ \hline
+DBSPEC5 & The walks table will have a `UserID' field to relate to the specific user who created it. \\ \hline
+DBSPEC6 & The database will have have a Place table to store locations on a walk.\\ \hline
+DBSPEC7 & The places table will have have a `WalkID' field to relate to a row in the walks table.\\ \hline
+DBSPEC8 & The places table will have have `Latitude' and `Longitude'  fields to store the position. \\ \hline
+DBSPEC9 & The places table will have have a `DescriptionID' field to relate to a row in a description table. \\ \hline
+DBSPEC10 & The places table will have a `UserID' field to relate to a specific user who created it. \\\hline
+DBSPEC11 & The database will have have a Description table for each supported language. \\ \hline
+DBSPEC12 & The description tables will have be replicas of each other, but in the correct language. \\ \hline
+DBSPEC13 & The description tables will have have `Title', `Short Description' and `Description' fields.\\ \hline
+DBSPEC14 & The description tables will have a `UserID' field to relate to a specific user who created it. \\\hline
+DBSPEC15 & The database will have have a Photos table.\\ \hline
+DBSPEC16 & The photos table will have have a `placeID' field to relate to a row in the Places table. \\ \hline
+DBSPEC17 & The photos table will have have a `walkID' field to relate to a row in the walks table.\\ \hline
+DBSPEC18 & The photos table will have have a `Location' field to store the location of the photo file in the file system.\\ \hline
+DBSPEC19 & The photos table will have a `UserID' field to relate to a specific user who created it. \\\hline
+DBSPEC20 & The database will have have a Videos table. \\ \hline
+DBSPEC21 & The videos table will have have a `placeID' field to relate to a row in the Places table. \\ \hline
+DBSPEC22 & The videos table will have have a `walkID' field to relate to a row in the walks table.\\ \hline
+DBSPEC23 & The videos table will have have a `Location' field to store the location of the video file in the file system.\\ \hline
+DBSPEC24 & The videos table will have a `UserID' field to relate to a specific user who created it. \\\hline
+DBSPEC25 & The database will have have a Audio table. \\ \hline
+DBSPEC26 & The audio table will have have a `placeID' field to relate to a row in the Places table. \\ \hline
+DBSPEC27 & The audio table will have have a `walkID' field to relate to a row in the walks table.\\ \hline
+DBSPEC28 & The audio table will have have a `Location' field to store the location of the audio file in the file system.\\ \hline
+DBSPEC29 & The audio table will have a `UserID' field to relate to a specific user who created it. \\\hline
+DBSPEC30 & The database will have a  Users table \\ \hline
+DBSPEC31 & The users table will have `Username', `Email' and `Password' fields.\\ \hline
+DBSPEC32 & The users table will have fields to store adequate user settings. \\ \hline
+
+
 
 \end{longtable}
 
@@ -816,17 +831,28 @@ For version control the team shall be using Git (defined in section~\ref{sec:ter
 The initial sprint backlog can be found in section~\ref{sec:project-plan}.
 
 \subsection{Software Testing}
+Software testing is an important part of the development life-cycle. It is carried out in order to detect software failure. Identifying failure allows us to discover and amend software defects. Therefore, testing techniques will be used throughout the software's development. This will ensure:- 
 \begin{itemize}
-\item Unit Testing
-	\begin{itemize}
-	\item regression
-	\item Black Box
-	\end{itemize}
-
-\item Compatibility Testing
-\item Acceptance Testing
-\item User Study
+\item The software does exactly what the customer requires and meets the agreed specification. 
+\item High quality software is produced.
+\item The number of software bugs is significantly reduced.
 \end{itemize}
+
+For this project, several testing techniques will be employed; Unit, Regression, Functionality and Acceptance testing.
+
+\subsubsection{Unit Testing} 
+The purpose of unit testing is to examine the inner-workings of a software program. An internal outlook on the system is used in order to create test cases to run against the system. Test cases are generally formulated to cover branches, statements and paths within a unit. The term unit refers to a method of a class and therefore, unit testing will be performed on all classes of the program. This will ensure that every method produces the correct output. If a test fails, it will be comparatively easy to locate the error and then amend the code. Unit testing will be applied to classes when they are deemed complete. Each method of the class will undergo testing, hopefully ensuring 100\% coverage of the code. If a class passes all unit tests then we can be confident that the class components are correct and reliable. Performing unit tests will ensure that the code produced is correct, but it doesn't necessarily mean that the functionality provided by the software is correct. To overcome this issue, it will be necessary to perform functionality tests.
+
+\subsubsection{Black-box Testing}
+Functionality testing is essential to this project as users are constantly pressing buttons (input) in order to receive results (output). It will be carried out using ``Black-box'' testing. The purpose of black-box testing is to prevent the test engineer from viewing the implementation of the software. As its name suggests, its sole interest is the functionality of the system and, therefore, the test engineer is restricted to what a potential user would see. This allows the tester to assess the behaviour of the input/output functionality. \\
+
+As no code will be made visible, the tester will create test cases based on the functional requirements and specification. These test cases will determine whether the software works together in the correct manner rather than testing parts of the system as individual units. This will ensure that the system does exactly what it is intended to do. When a new interface view has been developed, functionality tests will be applied. This will typically occur towards the end of every sprint cycle and will ensure that the functionality of the software complies with the requirements set at the beginning of the project. Functionality testing will also be applied towards the end of the project to ensure the entire system works smoothly and in the correct manner. The only issue with black-box testing is the fact that it is difficult to locate where in the code errors occur. However, this issue is reduced as errors in the code should have already been identified through unit testing.
+
+\subsubsection{Regression Testing}
+The third type of software testing that will be used is regression testing. This method of testing is used in order to uncover new software bugs that may be created due to alterations or enhancements being made to the system and can also be used to track the quality of the software's output. The purpose of regression testing is to ensure these issues don't introduce new software faults. Regression testing helps identify whether or not a change in one area of the software will affect any other areas. Regression testing will be employed by running completed tests that were previously carried out. If the behaviour of the software changes or if previous faults re-emerge, then the code can be re-examined and corrected. 
+
+\subsubsection{Acceptance Testing}
+The fourth and final testing method to be used will be acceptance testing. The general approach is to conduct tests, ensuring the software meets the requirements and specifications set out by the client. For this project, acceptance testing will be carried out by providing the client with the software after every relatively important feature has been designed and implemented. This will ensure the client approves of the product throughout the project. If the client has any issues or concerns with parts of the software then adjustments can be easily made. Monthly meeting with other members of the White Rock Trails company will also mean further software approval can take place. Both acceptance procedures will certify that the product created meets the client's requirements and also to a high quality standard.
 
 \section{Project Plan}
 \label{sec:project-plan}
