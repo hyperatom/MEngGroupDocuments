@@ -384,7 +384,11 @@ Therefore, the specifications will serve as a high level strategy for the implem
 \subsection{Functional}
 \label{sec:func-specs}
 
+This section will describe the specifications for the functional requirements defined in section \ref{sec:func-reqs}.
+
 \subsubsection{Web Portal}
+
+The following set of specifications describe how the web portal functional requirements will be achieved.
 
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
@@ -460,6 +464,8 @@ WEBSPEC66 & The User Guide guide panel will contain a back and next button to ch
 \end{longtable}
 
 \subsubsection{Android Application}
+
+The following set of specifications describe how the Android application functional requirements will be achieved.
 
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
@@ -583,6 +589,8 @@ DBSPEC32 & The users table will have fields to store adequate user settings. \\ 
 \subsection{Non-Functional}
 \label{sec:non-func-specs}
 
+This section will describe the specifications for the non-functional requirements defined in section \ref{sec:non-func-reqs}.
+
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
 \textbf{Code} & \textbf{Specification} \\
@@ -614,6 +622,8 @@ NFSPEC21 & Sample GPS based on mode of transport the user has input. (update whe
 \subsection{Nice To Have}
 \label{sec:nice-to-have-specs}
 
+This section will describe the specifications for the `nice to have' requirements defined in section \ref{sec:nice-to-have}.
+
 \begin{longtable}{|p{2.5cm}p{13cm}|}
 \hline
 \textbf{Code} & \textbf{Specification} \\
@@ -630,7 +640,13 @@ NTHSPEC5 & Allow users to link their accounts to their Facebook accounts. \\ \hl
 \section{Cross References}
 \label{sec:cross-refs}
 
+This section will cross reference each requirement to one or more specifications which describe how they will be achieved.
+Requirements are mapped to specifications by their assigned unique identification codes.
+A requirement can be considered to be satisfied when each of its corresponding specifications have been implemented.
+
 \subsection{Functional}
+
+This section will define cross reference mappings from the web portal and android application function requirements to corresponding sets of specifications.
 
 \subsubsection{Web Portal}
 
@@ -638,8 +654,49 @@ NTHSPEC5 & Allow users to link their accounts to their Facebook accounts. \\ \hl
 \hline
 \textbf{Requirement Code} & \textbf{Specification Code} \\
 
-\hline \hline RALFREQ1 & RALSPEC1, RALSPEC2, RALSPEC3  \\
-\hline 
+\hline
+{WEBREQ1} &
+{WEBSPEC1, WEBSPEC2, WEBSPEC3, WEBSPEC4}\\\hline
+{WEBREQ2} &
+{WEBSPEC5, WEBSPEC6, WEBSPEC7, WEBSPEC8}\\\hline
+{WEBREQ3} &
+{WEBSPEC9, WEBSPEC10}\\\hline
+{WEBREQ4} &
+{WEBSPEC11, WEBSPEC12, WEBSPEC13, WEBSPEC14}\\\hline
+{WEBREQ5} &
+{WEBSPEC15}\\\hline
+{WEBREQ6} &
+{WEBSPEC16, WEBSPEC17}\\\hline
+{WEBREQ7} &
+{WEBSPEC18, WEBSPEC19}\\\hline
+{WEBREQ8} &
+{WEBSPEC20, WEBSPEC21, WEBSPEC22, WEBSPEC23, WEBSPEC24, WEBSPEC25, WEBSPEC26, WEBSPEC27,
+WEBSPEC28}\\\hline
+{WEBREQ9} &
+{WEBSPEC29, WEBSPEC30, WEBSPEC31, WEBSPEC32, WEBSPEC33, WEBSPEC34, WEBSPEC35, WEBSPEC36, WEBSPEC37,
+WEBSPEC38, WEBSPEC39, WEBSPEC40, WEBSPEC44}\\\hline
+{WEBREQ10} &
+{WEBSPEC38, WEBSPEC39, WEBSPEC41}\\\hline
+{WEBREQ11} &
+{WEBSPEC45, WEBSPEC46, WEBSPEC47}\\\hline
+{WEBREQ12} &
+{WEBSPEC41, WEBSPEC42, WEBSPEC43}\\\hline
+{WEBREQ13} &
+{WEBSPEC48, WEBSPEC49, WEBSPEC50}\\\hline
+{WEBREQ14} &
+{WEBSPEC51, WEBSPEC52}\\\hline
+{WEBREQ15} &
+{WEBSPEC53}\\\hline
+{WEBREQ16} &
+{WEBSPEC54}\\\hline
+{WEBREQ17} &
+{WEBSPEC55}\\\hline
+{WEBREQ18} &
+{WEBSPEC56, WEBSPEC57, WEBSPEC58}\\\hline
+{WEBREQ19} &
+{WEBSPEC59, WEBSPEC60, WEBSPEC61}\\\hline
+{WEBREQ20} &
+{WEBSPEC62, WEBSPEC63, WEBSPEC64, WEBSPEC65, WEBSPEC66, WEBSPEC67}\\\hline 
 \end{longtable}
 
 
@@ -648,20 +705,118 @@ NTHSPEC5 & Allow users to link their accounts to their Facebook accounts. \\ \hl
 \begin{longtable}{|p{2.7cm}|p{10cm}|}
 \hline
 \textbf{Requirement Code} & \textbf{Specification Code} \\
-
-\hline \hline AFAFREQ1 & AFASPEC1, AFASPEC2, AFASPEC3, AFASPEC4, AFASPEC5  \\
-\hline 
+\hline
+{APPREQ1} &
+{APPSPEC1, APPSPEC2, APPSPEC3, APPSPEC4}\\\hline
+{APPREQ2} &
+{APPSPEC5, APPSPEC6, APPSPEC7, APPSPEC8}\\\hline
+{APPREQ3} &
+{APPSPEC9, APPSPEC10}\\\hline
+{APPREQ4} &
+{APPSPEC11, APPSPEC12, APPSPEC13, APPSPEC14}\\\hline
+{APPREQ5} &
+{APPSPEC15, APPSPEC16, APPSPEC17, APPSPEC18, APPSPEC19, }\\\hline
+{APPREQ6} &
+{APPSPEC20}\\\hline
+{APPREQ7} &
+{APPSPEC21}\\\hline
+{APPREQ8} &
+{APPSPEC22, APPSPEC23, APPSPEC24}\\\hline
+{APPREQ9} &
+{APPSPEC25}\\\hline
+{APPREQ10} &
+{APPSPEC26}\\\hline
+{APPREQ11} &
+{APPSPEC27, APPSPEC28}\\\hline
+{APPREQ12} &
+{APPSPEC29, APPSPEC30}\\\hline
+{APPREQ13} &
+{APPSPEC31, APPSPEC32, APPSPEC33}\\\hline
+{APPREQ14} &
+{APPSPEC34, APPSPEC35}\\\hline
+{APPREQ15} &
+{APPSPEC36, APPSPEC37}\\\hline
+{APPREQ16} &
+{APPSPEC38}\\\hline
+{APPREQ17} &
+{APPSPEC39, APPSPEC40, APPSPEC41, APPSPEC42, APPSPEC43, APPSPEC44, APPSPEC45}\\\hline
+{APPREQ18} &
+{APPSPEC45, APPSPEC47, APPSPEC48, APPSPEC49, APPSPEC50, APPSPEC54}\\\hline
+{APPREQ19} &
+{APPSPEC46}\\\hline
+{APPREQ20} &
+{APPSPEC51, APPSPEC52}\\\hline
+{APPREQ21} &
+{APPSPEC53}\\\hline
+{APPREQ22} &
+{APPSPEC55}\\\hline
+{APPREQ23} &
+{APPSPEC56, APPSPEC57, APPSPEC58}\\\hline
+{APPREQ24} &
+{APPSPEC59, APPSPEC60, APPSPEC61, APPSPEC62}\\\hline
+{APPREQ25} &
+{APPSPEC61, APPSPEC63}\\\hline
+{APPREQ26} &
+{APPSPEC61, APPSPEC64, APPSPEC65}\\\hline
+{APPREQ27} &
+{APPSPEC66}\\\hline
+{APPREQ28} &
+{APPSPEC67}\\\hline
+{APPREQ29} &
+{APPSPEC68, APPSPEC69}\\\hline
 \end{longtable}
 
 
 \subsection{Non-Functional}
 
+This section will define cross reference mappings from non-function requirements to a set of satisfying specifications.
+
 \begin{longtable}{|p{2.7cm}|p{10cm}|}
 \hline
 \textbf{Requirement Code} & \textbf{Specification Code} \\
 
-\hline \hline NFREQ1 & NFSPEC1\\
 \hline 
+{NFREQ1} &
+{NFSPEC1, NFSPEC2}\\\hline
+{NFREQ2} &
+{NFSPEC3, NFSPEC4, NFSPEC5, NFSPEC6, NFSPEC7}\\\hline
+{NFREQ3} &
+{NFSPEC8, NFSPEC9, NFSPEC10, NFSPEC11, NFSPEC12, NFSPEC13}\\\hline
+{NFREQ4} &
+{NFSPEC14, NFSPEC15, NFSPEC16, NFSPEC17}\\\hline
+{NFREQ5} &
+{NFSPEC16, NFSPEC17}\\\hline
+{NFREQ6} &
+{NFSPEC18, NFSPEC19}\\\hline
+{NFREQ7} &
+{NFSPEC18, NFSPEC19}\\\hline
+{NFREQ8} &
+{NFSPEC20}\\\hline
+{NFREQ9} &
+{NFSPEC20}\\\hline
+{NFREQ10} &
+{NFSPEC21}\\\hline
+{NFREQ11} &
+{NFSPEC21}\\\hline
+\end{longtable}
+
+\subsection{Nice To Have}
+
+This section will define cross reference mappings from nice-to-have requirements to a set of satisfying specifications.
+
+\begin{longtable}{|p{2.7cm}|p{10cm}|}
+\hline
+\textbf{Requirement Code} & \textbf{Specification Code} \\
+
+\hline 
+{NTHREQ1} &
+{NTHSPEC1}\\\hline
+{NTHREQ2} &
+{NTHSPEC2}\\\hline
+{NTHREQ3} &
+{NTHSPEC3}\\\hline
+{NTHREQ4} &
+{NTHSPEC4, NTHSPEC5}\\\hline
 \end{longtable}
 
 \section{Methodology}
