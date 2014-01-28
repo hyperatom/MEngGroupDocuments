@@ -1,8 +1,8 @@
-*.aux
-*.pdf
-*.synctex.gz
-*.toc
-*.out
-*.DS_Store
-*.log
-*.synctex.gz(busy)
+*/*.aux
+*/*.synctex.gz
+*/*.toc
+*/*.out
+*/*.DS_Store
+*/*.log
+*/*.synctex.gz(busy)
+*/*.dvi
