@@ -6,3 +6,4 @@
 */*.log
 */*.synctex.gz(busy)
 */*.dvi
+**/Thumbs.db
