@@ -15,17 +15,17 @@ Q: Who will be editing data through the web portal? (App Users/Historians)
 Q: Are app users allowed to create and modify their own walks/waypoints?
 	A: Yes.
 	
-Q: What do you mean by ‘Improve usability of the trails engine’? are you referring to the backend (database/code) or the user interface? 
+Q: What do you mean by `Improve usability of the trails engine'? are you referring to the backend (database/code) or the user interface? 
 	A: He means the user interface.
 	
-Q: What do you mean by “create a separate app to collect data including GPS waypoints etc.?” isn’t this the responsibility of the web portal?
+Q: What do you mean by `create a separate app to collect data including GPS waypoints etc.?' isn't this the responsibility of the web portal?
 
 	A: Separate app is a bad idea, waypoints should be tagged through the main app and edited through the web portal where more information can be added.
 	
-Q: Perhaps the digital trails app allows users to quickly tag a GPS location and give it a name, but must edit the info later through the portal? I don’t like the idea of having a separate app to collect this type of data, users might find it awkward to keep switching apps.
+Q: Perhaps the digital trails app allows users to quickly tag a GPS location and give it a name, but must edit the info later through the portal? I don't like the idea of having a separate app to collect this type of data, users might find it awkward to keep switching apps.
 	A: Yes John agrees and likes this idea.
 	
-Q: What kind of ‘distinctive branding’ for the user interface have you got in mind?
+Q: What kind of `distinctive branding' for the user interface have you got in mind?
 	A: Companies who create their own walks may feature their logo on their walk pages but John will provide White Rock logos for the main app interface.
 	
 Q: The web portal itself needs way more in terms of requirements. i.e. how do we want this data inputted, in what format etc. We should also wireframe it ASAP.
@@ -38,7 +38,7 @@ Q: What are our specific, separate requirements from the other group?
 Q: Are we getting a designer to do the UI assets? It would look a lot more professional than our terrible paint skills.
 	A: No but we are capable of creating a consistent and usable design which is the main thing.
 	
-Q: Currently has to compile using android 5.0 or higher, isn’t this asking a bit much? Not everyone can get or will get Android updates.
+Q: Currently has to compile using android 5.0 or higher, isn't this asking a bit much? Not everyone can get or will get Android updates.
 	A: Yes we should look into this and make the application compatible with at least Android 2.2.
 
 
