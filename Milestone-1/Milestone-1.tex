@@ -14,7 +14,8 @@
 \usepackage{morefloats}
 \usepackage[hidelinks]{hyperref}
 \usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
-
+\usepackage{verbatim}
+\usepackage{listings}
 
 \graphicspath{{img/}}
 
@@ -1013,7 +1014,7 @@ There are several artefacts related to SCRUM, Firstly there is a Product backlog
 
 As well as the Product backlog there is a Sprint Backlog which details the work the development team must complete in the next sprint. This is created by picking items from the top of the product backlog until the development team feel they have enough work to fill the sprint. Each item is broken down into tasks, which developers can sign up to work on. The sign up processes encourages the developers to be involved in the project. Once a sprint backlog is committed only the team can add to it.
 
-The sprint method ensure that the product is regularly updated and in a working state. This can drastically decrease the time till completion for a project. The review process at the end of each sprint works to improve further sprints and improve the project as it progresses. It is actively anticipating requirement changes and is able to adapt to changing circumstances quickly and easily. Most importantly the method seeks to keep the developers involved in the project and forces them to take an interest in all stages. However the potential regular changed to requirements can result in a hectic and complicated work schedule. The frequent meetings and reviews also require a large amount of time which could potentially be spent developing the product further. 
+The sprint method ensure that the product is regularly updated and in a working state. This can drastically decrease the time till completion for a project. The review process at the end of each sprint works to improve further sprints and improve the project as it progresses. It is actively anticipating requirement changes and is able to adapt to changing circumstances quickly and easily. Most importantly the method seeks to keep the developers involved in the project and forces them to take an interest in all stages. However the potential regular changes to requirements can result in a hectic and complicated work schedule. The frequent meetings and reviews also require a large amount of time which could potentially be spent developing the product further. 
 
 \subsection{Chosen Development Methodology}
 \label{sec:chosen-method}
@@ -1035,7 +1036,7 @@ Lewis Hancock & Development Team Member \\ \hline
 
 As the project leader Adam Barrell is to be Product Owner, Thomas Milner offered to act as Scrum Master and chair Scrum meetings. The remaining positions are development team members, filled in by Lewis Hancock and Chris Lewis. 
 
-For version control the team shall be using Git (defined in section~\ref{sec:terms}), to help keep track of our backlog and what is currently in development the team shall also be using a Scrum project management tool.
+For version control the team shall be using Git (defined in section~\ref{sec:terms}). The team shall also be using a Scrum project management tool.
 
 The initial sprint backlog can be found in section~\ref{sec:project-plan}.
 
@@ -1067,35 +1068,7 @@ The fourth and final testing method to be used will be acceptance testing. The g
 \label{sec:project-plan}
 
 \subsection{Sprint Backlogs}
-TODO: Someone look at this and figure it out I can't think any more.
-\subsubsection{Android Application Backlog}
-\begin{table}[H]
-\centering
-\begin{tabular}{|l|}
-\hline
-Integrate Google Maps API. \\ \hline
-Create and populate Database. \\ \hline
-Display maps. \\ \hline
-Populate maps with waypoints. \\ \hline
- \\ \hline
- \\ \hline
-\end{tabular}
-\caption{Application Backlog}
-\label{tab:appBacklog}
-\end{table}
-
-\subsubsection{Website Backlog}
-\begin{table}[H]
-\centering
-\begin{tabular}{|l|}
-\hline
-Create Trail Database. \\ \hline
-Create User Database. \\ \hline
-Create user login system. \\ \hline
-\end{tabular}
-\caption{Website Backlog}
-\label{tab:webBacklog}
-\end{table}
+TODO: Screenshot the website and show the backlog. Simple!
 
 \subsection{Milestones}
 \label{sec:plan-milestones}
@@ -1419,13 +1392,90 @@ This section explores the personal risks associated with the project. These risk
 
 \section{Initial Work}
 \label{sec:initial-work}
-
+In this section meetings with the client and the initial Scrum meeting have been detailed.
 \subsection{Minutes of Meetings}
-In Appendix A
+Two meetings took place with the client, minutes of these meetings can be seen in Appendix A. The team has also had an initial Scrum meeting to define our backlog, the results of which can be seen in section~\ref{sec:project-plan}. 
 \subsection{User Interface Wire Frames}
+A set of wire-frame designs were made to help solicit feedback from the client with visual cues, thus helping clarify the requirements, these can be seen in Appendix B.
 
 \section{Appendix A}
-TODO: things like interview questions here. 
+
+\lstset{basicstyle=\small, captionpos=b}
+
+\lstinputlisting[frame=single, breaklines=true, caption=Initial Proposed Requirements]{./misc/initial-requirements.txt}
+
+\lstinputlisting[frame=single, breaklines=true, caption=Meeting 1: 25-10-13]{./misc/25-10-13-Minutes.txt}
+
+\lstinputlisting[frame=single, breaklines=true, caption=Meeting 2: 15-11-13]{./misc/15-11-13-Minutes.txt}
+
+\lstinputlisting[frame=single, breaklines=true, caption=Meeting 3: 14-01-14]{./misc/14-01-14-Minutes.txt}
+
+\section{Appendix B}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{account.png}
+\label{fig:accountView}
+\caption{The Account View}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{HomeView.png}
+\label{fig:homeView}
+\caption{The Home View}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{LaunchView.png}
+\label{fig:launchView}
+\caption{The Launch View}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{ChooseAWalk.png}
+\label{fig:chooseWalkView}
+\caption{The Choose a Walk View}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{LogIn.png}
+\label{fig:loginView}
+\caption{The Login View}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{SplashScreen.png}
+\label{fig:splashView}
+\caption{The Splash View}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Register.png}
+\label{fig:registerView}
+\caption{The Account Registration View}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{WalkView.png}
+\label{fig:walkView}
+\caption{The Walk View}
+\end{center}
+\end{figure}
+
 
 %References as subsection
 \newpage

@@ -1,0 +1,45 @@
+White Rock Digital Trails Requirements
+
+
+John Ashley	27 October 2013
+
+The Swansea Branch of the Historical Association is running a Connected Communities project focusing on the lives of the people who worked and lived around the White Rock area of Swansea. The project is funded by the Heritage Lottery Fund. www.whiterocktrails.org .
+The rich and largely unresearched archives of oral histories of the area are being explored by volunteers and history students, and made available on the site as a digitally-supported heritage walk to tell the story of the site.
+There is an opportunity for computer science students to work on the smartphone app. The basic app is functional and now need imaginative work to make it truly useful.
+
+A Digital Trails app has been developed for Android smartphones. The original development work was done in Aberystwyth University. Content is provided by team members. The app uses location services to guide the visitor round the White Rock site. It detects when it has reached a point of interest and presents interpretation as images, text, audio or video. This is backed up with QR codes at the points of interest, and traditional paper based interpretation.
+An iPhone Digital Trails app has also been developed by Aberystwyth, but has not so far been used by the White Rock project.
+The Digital Trails app is database-driven. It can be adapted for any location without programming. We are talking to a number of other groups and organisations who want to use it in their areas. These groups will populate the database with GPS waypoints and local information.
+An iPad e-magazine app has also been developed using Adobe InDesign Digital Publishing Suite. This complements the Digital Trails app but is outside the scope of the MEng project, though we are open to ideas for increasing synergy.
+
+The app is functional and now requires further development:
+1. Improve usability of the trails engine.
+2. Create a user-friendly portal to build and upload databases to the Digital Trails app.
+3. Create an app to collect and download GPS waypoints and geo-tagged photographs for the database.
+4. Enable feedback and contributions from visitors via social media and other channels.
+5. Port the app to a range of Android tablets.
+6. Carry out similar development for the iPhone app.
+Creative design ideas will be welcomed and as far as possible worked into the project.
+
+MEng Groups
+Following initial discussions with the two groups, this is a list of requirements to open discussions. I expect it to be modified and added to as the detailed requirements are elicited.
+
+The app is to run on Android smartphones and low-end GPS tablets used by schools.
+
+Database
+Separate the database from the app to enable walks to be created and uploaded independently. This will enable us to develop a community of users and a library of walks.
+Create a portal or database application (with user documentation) to enable users to document and upload their walks.
+Create a separate app for collecting data including GPS waypoints, photographs, video and other data on site.
+
+GPS
+Investigate and devise a strategy to deal with variations in GPS accuracy and repeatability between different devices. Devise a strategy to trade-off between GPS sample rate and battery life.
+
+Product Packaging
+Crate distinctive branding and user interface consistent with app good practice.
+
+User Feedback
+Create mechanisms for users to feedback errors, additions to walks, and comments directly and via social media.
+
+Maintenance
+The app and related products will continue development and maintenance after the MEng is finished. A handover strategy to permanent developers is required.
+
