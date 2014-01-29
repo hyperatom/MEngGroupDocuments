@@ -1,0 +1,15 @@
+Meeting Date: 25/10/2013
+Meeting Location: Swansea University, Faraday Board Room
+
+Present: Adam Barrell, Lewis Hancock, Chris Lewis, Thomas Milner, John Ashley
+
+Discussed background of the White Rock team and the Swansea Historical Association.
+
+Discussed the initial requirements of the project and what the team thought was achievable.
+
+John was very keen on the inclusion of google maps.
+
+Both teams were to use the same database structure as only one would be going on the server.
+
+Both teams would have slightly differing requirements to be discussed at a later date based on the team members expertise.
+

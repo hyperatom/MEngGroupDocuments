@@ -1,8 +1,13 @@
-*.aux
-*.pdf
-*.synctex.gz
-*.toc
-*.out
-*.DS_Store
-*.log
-*.synctex.gz(busy)
+# Latex
+*/*.aux
+*/*.synctex.gz
+*/*.toc
+*/*.out
+*/*.DS_Store
+*/*.log
+*/*.synctex.gz(busy)
+*/*.dvi
+
+# Thumbnails
+*/Thumbs.db
+*/*/Thumbs.db
