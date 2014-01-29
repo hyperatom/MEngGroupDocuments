@@ -159,8 +159,36 @@ Digital Trails is an Android application  allowing for the creation, modificatio
 
 \subsection{Product Overview}
 \label{sec:product-overview}
-TODO: Black-box input / output.
-TODO: Data Flow Diagram.
+An overview of the product functionality can be seen here in the form of Data Flow Diagrams, these provide a high level look at how the application should function. Figure~\ref{fig:walkDFD} represents the flow of data when the user is using the Android application to go on a trail.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.65]{walkDFD.png}
+\caption{Data Flow Diagram for Loading and Running Trails on the Application}
+\label{fig:walkDFD}
+\end{center}
+\end{figure}
+
+Figure~\ref{fig:userLoginDFD} shows the flow of data when a user is attempting to login, create a new account or bypass account registration in the Android application.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.65]{userLoginDFD.png}
+\caption{Data Flow Diagram for Logging In and Creating User Accounts}
+\label{fig:userLoginDFD}
+\end{center}
+\end{figure}
+
+Figure~\ref{fig:createTrailDFD} shows the flow of data when a user creates a new trail in the Android application.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.65]{createTrailDFD.png}
+\caption{Data Flow Diagram for Creating a New Trail}
+\label{fig:createTrailDFD}
+\end{center}
+\end{figure}
+
 
 \subsection{User Characteristics}
 \label{sec:user-characteristics}
@@ -168,7 +196,7 @@ TODO: Data Flow Diagram.
 The team has identified multiple types of users for the system:
 \begin{description}
 \item[Keen Walkers:] The most obvious user. They will likely have some familiarity with the Android operating system as they are capable of installing the application and will be excited to explore trails of varying difficulties.
-\item[Primary Schools:] These users are likely to be regular customers with different groups of children. They will be led by a qualified adult, thus reducing the need for the whole group to be Android savvy.
+\item[Primary Schools:] These users are likely to be regular customers with different groups of children. They will be led by a qualified adult, thus reducing the need for the whole group to be well acquainted with the Android operating system.
 \item[Heritage Site Admin:] The type of user who will be creating walks for other user to enjoy. The system must be intuitive and, where possible, complete the task of creating a walk in as short a time as possible to help this user.
 \end{description}
 
@@ -191,7 +219,6 @@ The assumptions of the project are as follows:
 \item The code-base the team has received from White Rock is of a high enough quality to continue development.
 \item All associated costs with web hosting and Google APIs will be covered by White Rock.
 \end{itemize}
-
 The dependencies of the project are as follows:
 \begin{itemize}
 \item The GPS on the tablet is accurate enough to alert users when they are near an item of interest.
@@ -882,7 +909,7 @@ The chosen methodology must be suited to a small team working closely with the c
 \subsection{Considered Methodologies}
 \label{sec:considered-methods}
 \subsubsection{Spiral}
-This section is a modified version of the work found in ``A RESTful Document Archival System''~\cite{restWeb}. The spiral methodology is a risk based system, which works iteratively towards a final working project. The process derives its name from the pattern with which its process follows. There are 4 basic activities which must occur in cycle loop of the spiral\ref{img:spiral}. These are:
+This section is a modified version of the work found in ``A RESTful Document Archival System''~\cite{restWeb}. The spiral methodology is a risk based system, which works iteratively towards a final working project. The process derives its name from the pattern with which its process follows. There are 4 basic activities which must occur in cycle loop of the spiral~\ref{fig:spiral}. These are:
 
 \begin{enumerate}
   \item Consider all success-critical win conditions.
@@ -894,7 +921,7 @@ This section is a modified version of the work found in ``A RESTful Document Arc
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=2.5]{spiral.jpeg}
-\label{img:spiral}
+\label{fig:spiral}
 \caption{The spiral model \cite{spiral}}
 \end{center}
 \end{figure}
