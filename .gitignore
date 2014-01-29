@@ -5,9 +5,11 @@
 */*.out
 */*.DS_Store
 */*.log
+*/*/*.log
 */*.synctex.gz(busy)
 */*.dvi
 
 # Thumbnails
 */Thumbs.db
 */*/Thumbs.db
+*/*/*/Thumbs.db
