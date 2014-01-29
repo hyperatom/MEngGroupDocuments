@@ -12,6 +12,7 @@
 \usepackage[toc,page]{appendix}
 \usepackage{etoolbox}
 \usepackage{morefloats}
+\usepackage{multirow}
 \usepackage[hidelinks]{hyperref}
 \usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
 
@@ -1100,7 +1101,7 @@ Create user login system. \\ \hline
 \subsection{Milestones}
 \label{sec:plan-milestones}
 
-This section will outline a timetable for the work to be completed on the formal documents of this project. Figure \ref{fig:milestones-table} shows three milestones which appear in bold font and define a set of deliverables which are to be submitted by the specified \emph{end date}. Levels of indentation within the table represents that a deliverable is a child component of the higher level. For example, \emph{Design}, \emph{Testing}, \emph{User Manual}, \emph{Reflective Account} and \emph{Draft Review} are part of the \emph{Final Report} which is separate from the \emph{Project Poster} but are all deliverables for milestone 1. Milestone 1 has been planned with a higher granularity compared to milestones 2 and 3 due to the knowledge gained from the current state of development. Sections for milestones 2 and 3 cannot be planned in advance as details of future work are not fully known.
+This section will outline a timetable for the work to be completed on the formal documents of this project. Figure \ref{fig:milestones-table} shows three milestones which appear in bold font and define a set of deliverables which are to be submitted by the specified \emph{end date}. Tasks are time boxed and must be completed within the specified start and end dates if the project is to be delivered on time. Levels of indentation within the table represents that a deliverable is a child component of the higher level. For example, \emph{Design}, \emph{Testing}, \emph{User Manual}, \emph{Reflective Account} and \emph{Draft Review} are part of the \emph{Final Report} which is separate from the \emph{Project Poster} but are all deliverables for milestone 1. Milestone 1 has been planned with a higher granularity compared to milestones 2 and 3 due to the knowledge gained from the current state of development. Sections for milestones 2 and 3 cannot be planned in advance as details of future work are not fully known.
 
 \renewcommand{\arraystretch}{1.5}
 \newcommand*{\tableIndent}{\hspace*{0.4cm}}
@@ -1141,21 +1142,27 @@ This section will outline a timetable for the work to be completed on the formal
 \subsection{Software Development}
 \label{sec:plan-software-dev}
 
+This section presents the timetable that will be used for the development of the Digital Trails software. As in section \ref{sec:plan-milestones}, tasks are time boxed and given a start and end date for which they must be completed in for the project to deliver on time. However, due to the dynamic nature of sprints when using the Scrum methodology, the exact dates of each sprint cannot be defined. Therefore, as the development team are using 1-2 week sprints based on the amount of work that needs to be done, we define an abstract time box for each sprint activity. Sprints will run from the start date until the end date by which time the final software should be delivered.
+
+Client meetings are included in this timetable because they are essential to the software development process. Important feedback is gained when the development team meets with the client to discuss and demonstrate progress. The initial three client meetings shown in Figure \ref{fig:software-dev-table} represent the sessions needed to confirm initial requirements with the client prior to development. This activity is then replaced by the \emph{client feedback} phase near the end of each sprint.
+
 \renewcommand{\arraystretch}{1.5}
 
 \begin{figure}[H]
 \centering
 \begin{tabular}{|l|l|l|}
 \hline \textbf{Task} & \textbf{Start Date} & \textbf{End Date} \\ 
-\hline\hline{Client Meeting 1} & 01 Oct 2013 & 11 Oct 2013 \\ 
-\hline{Client Meeting 2} & 01 Oct 2013 & 11 Oct 2013 \\
-\hline{Backlog Refinement} & 01 Oct 2013 & 11 Oct 2013 \\
-\hline{\textbf{Sprints}} & 01 Oct 2013 & 11 Oct 2013 \\
-\hline\tableIndent{Analyse} & 01 Oct 2013 & 11 Oct 2013 \\
-\hline\tableIndent{Develop} & 01 Oct 2013 & 11 Oct 2013 \\
-\hline\tableIndent{Test} & 01 Oct 2013 & 11 Oct 2013 \\
-\hline\tableIndent{Integrate} & 01 Oct 2013 & 11 Oct 2013 \\
-\hline\tableIndent{Deploy} & 01 Oct 2013 & 11 Oct 2013 \\
+\hline\hline{Client Meeting 1} & \multicolumn{2}{c|}{25 Oct 2013} \\ 
+\hline{Client Meeting 2} & \multicolumn{2}{c|}{15 Nov 2013} \\
+\hline{Client Meeting 3} & \multicolumn{2}{c|}{14 Jan 2014} \\
+\hline \multirow{2}{*}{\textbf{Sprints}} & \multicolumn{2}{c|}{1-2 Week Iterations} \\ \cline{2-3}
+ & 22 Jan 2014 & 09 May 2014 \\
+\hline\tableIndent{Backlog Refinement} & \multicolumn{2}{c|}{4 Hours} \\
+\hline\tableIndent{Analyse} & \multicolumn{2}{c|}{4 Hours - 1 Day} \\
+\hline\tableIndent{Develop} & \multicolumn{2}{c|}{3-9 Days} \\
+\hline\tableIndent{Test} & \multicolumn{2}{c|}{1-2 Days} \\
+\hline\tableIndent{Client Feedback} & \multicolumn{2}{c|}{4 Hours - 1 Day} \\
+\hline\tableIndent{Deploy} & \multicolumn{2}{c|}{2-4 Hours} \\
 \hline 
 \end{tabular}
 \caption{Software development time table.\label{fig:software-dev-table}}
