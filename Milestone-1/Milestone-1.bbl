@@ -15,10 +15,6 @@ GitHub.
 \newblock Github website.
 \newblock \url{http://www.github.com}.
 
-\bibitem{github}
-GitHub.
-\newblock Github website.
-
 \bibitem{android}
 Google.
 \newblock Android website.
@@ -50,6 +46,11 @@ OpenStreetMap.
 Matthew Stephens and Doug Rosenberg.
 \newblock {\em Extreme Programming Refactored: The Case Against XP}.
 \newblock APress L. P., 2003.
+
+\bibitem{whiterock}
+White~Rock Swansea.
+\newblock White rock org website.
+\newblock \url{http://www.whiterocktrails.org}.
 
 \bibitem{spiral}
 Max Wideman.
