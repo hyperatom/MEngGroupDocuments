@@ -1,0 +1,100 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[toc,page]{appendix}
+\usepackage{etoolbox}
+\usepackage{morefloats}
+\usepackage{multirow}
+\usepackage[hidelinks]{hyperref}
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{verbatim}
+\usepackage{listings}
+
+\graphicspath{{img/}}
+
+\patchcmd{\thebibliography}{\section*}{\subsection}{}{}
+
+% Table padding
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+
+\input{./Title-Page.tex}
+
+\newpage 
+
+\tableofcontents
+
+\newpage
+\section{Introduction}
+%- Purpose of Document (who it's for, outline Digital Trails briefly again).
+%- Outline of Document (what we cover in the document).
+
+\section{Technology Choices}
+%- What APIs, Libraries, IDEs etc we are using, compared with other options we had. Argue our choices.
+
+\section{Project Progress}
+%- THIS IS THE OVERVIEW SECTION
+%- Show the subsystem designs and explain the current structure of the project. 
+%- Possible to move the risk management and schedule sections up here if people feel it reads better. Depends how big those sections get.
+
+\subsection{Database}
+%- Database schema diagram & description
+
+\subsection{User Interfaces}
+%- Heuristic Evaluations on similar products
+%-- Explain how we are doing the evaluation blahblah nielsen etc.
+%-- List of tasks for evaluators to complete (we should really ALL be involved in doing the evaluations).
+%-- Problems found when completing each task
+%- Our prototype UI 1
+%-- show how it meets reqs, how heuristics helped design.
+%-- Heuristics on this etc.
+%- Our prototype UI 2
+%-- show it meets reqs, how heuristics helped design.
+%-- Heuristics
+%- repeat as necessary.
+
+\subsection{Android Application}
+%- ContentProvider
+%- Authorisation
+%- Google Maps
+%- Current design to sync with server
+%- Chris can chuck in his Fragments here, so he has some code to show.
+
+\subsection{Web Portal}
+%- API
+%- Portal
+
+\section{Programming Guidelines}
+%- I'll write android guidelines.
+%- Adam/Tom get on the web guidelines.
+
+\section{Risk Analysis Review}
+%- Explain risks we dealt with, cross reference to our initial table.
+%- Add new risks that arose (Poor work environment, lab computers suck, hudl broken, hudl missing USB driver - not supported as a dev. device).
+
+\section{Project Schedule Review}
+%- What sprints we have completed.
+%- What reqs / specifications are completed Chris Lewis' favourite job!).
+%- Are we ahead or behind schedule? (hard for us to answer)
+%- Did we have to modify any requirements / specs to get this far? Did we add any or drop any?
+%- Create new gantt chart and compare it with the initial one.
+%- Update online sprint software, make it look like we completed sprints on time.
+%- Client feedback so far, previous client meetings, planned meetings, launch event we attended etc.
+
+\section{Summary}
+%- What we have planned next, I guess.
+
+%References as subsection
+\newpage
+\bibliographystyle{plain}
+\bibliography{bibliography}
+\end{document}
