@@ -2,6 +2,12 @@
 \usepackage[latin1]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{pifont}
+\usepackage{ifsym}
+\usepackage{booktabs}
+\usepackage{listings}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{longtable}
@@ -17,6 +23,8 @@
 \usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
 \usepackage{verbatim}
 \usepackage{listings}
+
+\usepackage{fullpage}
 
 \graphicspath{{img/}}
 
@@ -40,6 +48,38 @@
 
 \section{Technology Choices}
 %- What APIs, Libraries, IDEs etc we are using, compared with other options we had. Argue our choices.
+
+\subsection{The API}
+To keep the Application and the website in sync, and allow for future developements such as aditional applications, an RESTful API (Application Programming Interface) was created.
+
+\begin{description}
+\item[API] Application Programming Interface, In general an API is a method of interaction between two software components through code. This often take the form of a Library, although a web API generally takes the form of several remote calls which are exposed to the user of the API. 
+
+\item[REST] Representational State Transfer, is a architecture style which was used to design HTTP/1.1 (Hyper Text Transfer Protocol Version 1.1) and the URI (Universal Resource Identifier) standards. It consists of a set of constraints on components, data and there connections. The primary constraint is a Client-Sever separation, with the server being responsible for data storage, and the client responsible for the user interface and user state. The server is also required to be stateless which means no client context can be stored on the server.
+\end{description}
+
+For the API the Slim Framework\cite{slim} was chosen. This framework is designed for creating lightweight restful API's and websites and provides a versatile and well tested bases for the work. There were several other choises for this framework, but Slim was chosen becouse it was the most popular and well documented option. The Paris ORM(Object Relation Mapper) Framework\cite{paris} was also chosen to assist in database access. The ORM uses simple database models to reduce the steps in the process of interacting with the database. This framework makes it very easy to work with databases, drastically cutting the code needed to retrieve data and process it into objects. For example, if you had a simple database with just Documents and Users it would be possible to model this using just the code below. There are two model definitions and then 2 very basic lines of code which return a user object in the variable \lstinline{$user}. The second line then queries \lstinline{$user} to get all the documents associated with that user. \cite{TomMilestone2} 
+
+\begin{lstlisting}
+class User extends Model {
+	public function documents(){
+		return $this->has_many('Document');
+	}
+}
+
+class Document extends Model{
+	public function user(){
+		return $this->belongs_to('User');
+	}
+}
+
+$user = Model::factory('User')->find_one($id); 
+$documents = $user->documents()->find_many();
+\end{lstlisting}
+
+\subsection{The Server}
+The project is currently hosted on an Amazon EC2 server owned by a group member. Having a private server like this has allowed us to configure it as we require. The server is currently running Ubuntu Linux with Apache webserver, PHP and MySQL database installed. Git is used to push documents up to the server which are then automatically coppied into the correct folder for the webserver. Each part of the project can then be given a unique subdomain for testing purposes. Currently the API is hosted at \url{http://whiterockapi.tmilner.co.uk/} and the Web Portal is at \url{http://whiterock.tmilner.co.uk}.
+
 
 \section{Project Progress}
 %- THIS IS THE OVERVIEW SECTION
@@ -89,11 +129,39 @@ A table has been created for each entity or concept that requires persistent sto
 %- Current design to sync with server
 %- Chris can chuck in his Fragments here, so he has some code to show.
 
+
+\subsection{API}
+
+There are several important parts to the API, first it must have a coherent set of routes/urls for acces to all if its functionality, secondly it must provide a method of authenticating users and finaly it must adhear to to principles of REST as closely as possible. 
+
+\subsubsection{Routes}
+
+The API is called through a series of routes, it was important to make these routes as simple and coherant as possible.
+
+\begin{longtable}{p{0.45\textwidth}|p{0.35\textwidth}|p{0.1\textwidth}}\hline
+    \textbf{Route} & \textbf{Return value} & \textbf{Methods} \\\hline
+    /walks & All walks & GET, POST\\ \hline
+    /walks/\$id & The walks with the ID \$id. & GET PUT DELETE\\ \hline
+    /walks/\$id/waypoints & All the waypoints for the walk with the ID \$id. & GET POST\\ \hline
+    /walks/\$id/waypoints/\$wid & The waypoint with the ID \$wid. & GET PUT DELETE \\ \hline
+    /walks/\$id/waypoints/\$wid/images & The images for the waypoint with the ID \$wid. & GET POST \\ \hline
+    /walks/\$id/waypoints/\$wid/images/\$iid & The image with the ID \$iid. & GET PUT DELETE \\ \hline
+    /walks/\$id/waypoints/\$wid/audio & The audio files for the waypoint with the ID \$wid. & GET POST \\ \hline
+    /walks/\$id/waypoints/\$wid/audio/\$aid & The audio file with the ID \$aid. & GET PUT DELETE \\ \hline
+    /walks/\$id/waypoints/\$wid/videos & The videos for the waypoint with the ID \$wid. & GET POST \\ \hline
+    /walks/\$id/waypoints/\$wid/videos/\$vid & The video with the ID \$vid. & GET PUT DELETE \\ \hline
+    /users & All users. & GET POST \\\hline
+    /users/\$id & The user with the ID \$id. & GET PUT DELETE \\\hline
+    /session & A request to authenticate. & GET\\\hline
+    /session/salt & Returns a random salt for registering a user. & GET\\\hline
+    /session/salt/\$username & Get the a salt for a specific user with the username \$username. & GET\\\hline
+    \caption {The routes for the API}
+    \label{routes}
+\end{longtable}
+
 \subsection{Web Portal}
 
-\subsubsection{API}
 \subsubsection{Web Application}
-\subsubsection{Object Relation Mapper}
 
 \section{Programming Guidelines}
 %- I'll write android guidelines.
