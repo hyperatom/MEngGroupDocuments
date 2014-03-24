@@ -117,8 +117,19 @@ $user = Model::factory('User')->find_one($id);
 $documents = $user->documents()->find_many();
 \end{lstlisting}
 
+The API will use JSON objects to respond to requests, it will also expect these objects when data is passed to the server. This format is well supported and is built into most web browsers allowing for easy processing of the data.
+
+\begin{description}
+\item[JSON] JavaScript Object Notation. A way of describing a JavaScript object in plain text. The language has now been expanded to work in multiple languages not just JavaScript and it allows for easy parseing of objects. 
+\end{description}
+
 \subsection{The Server}
+<<<<<<< HEAD
+\label{sec:techServer}
+The project is currently hosted on an Amazon EC2 server owned by a group member. Having a private server like this has allowed us to configure it as we require. The server is currently running Ubuntu Linux Server Edition with Apache Webserver, PHP and MySQL database installed. Git is used to push documents up to the server which are then automatically coppied into the correct folder for the webserver. Each part of the project can then be given a unique subdomain for testing purposes. Currently the API is hosted at \url{http://whiterockapi.tmilner.co.uk/} and the Web Portal is at \url{http://whiterock.tmilner.co.uk}.
+=======
 The project is currently hosted on an Amazon EC2 server owned by a group member. Having a private server like this has allowed us to configure it as we require. The server is currently running Ubuntu Linux Server Edition with Apache Webserver, PHP and MySQL database installed. Git is used to push documents up to the server which are then automatically copied into the correct folder for the webserver. Each part of the project can then be given a unique subdomain for testing purposes. Currently the API is hosted at \url{http://whiterockapi.tmilner.co.uk/} and the Web Portal is at \url{http://whiterock.tmilner.co.uk}.
+>>>>>>> 3cf77282593fb25b98c8814aa8a6eee2ae2e01e2
 
 \begin{description}
 \item[Ubuntu Linux Server Edition] An open source operating system based upon the Linux kernel. Free to use and modify, and developed specifically for use of servers. 
@@ -157,7 +168,7 @@ For example, the \emph{EnglishWalkDescription} table has an \emph{Id}, \emph{Tit
 The Visual Studio entity designer was able to generate an SQL script to create the database from the design shown in Figure \ref{fig:DatabaseSchema}. This script was executed on the MySQL server which in turn created the tables designed in the entity designer.
 
 %- How will the database be exposed if not directly?
-The White Rock Trails database is not publicly exposed and can only be interfaced through a public facing API (see section XXXXX). 
+The White Rock Trails database is not publicly exposed and can only be interfaced through a public facing API (see section \ref{sec:techAPI}). 
 This will ensure the robustness of the database as additional business logic from the API protects the underlying database from erroneous data and unauthorized access.
 
 %- What applications will consume data from this database?
@@ -573,7 +584,7 @@ A RESTful API has been created using the technologies discused in section \ref{s
 
 The API is called through a series of routes, it was important to make these routes as simple and coherant as possible.
 
-\begin{longtable}{m{0.45\textwidth}|m{0.35\textwidth}|C{0.11\textwidth}}\hline
+\begin{longtable}{m{0.45\textwidth}|m{0.35\textwidth}|C{0.11\textwidth}}
     \textbf{Route} & \textbf{Return value} & \textbf{Methods} \\\hline
     /walks & All walks & GET POST\\ \hline
     /walks/\$id & The walks with the ID \$id. & GET PUT DELETE\\ \hline
@@ -590,14 +601,22 @@ The API is called through a series of routes, it was important to make these rou
     /users/\$id/settings & A users settings. & GET PUT \\\hline
     /session & A request to authenticate. & GET\\\hline
     /session/salt & Returns a random salt for registering a user. & GET\\\hline
-    /session/salt/\$username & Get the a salt for a specific user with the username \$username. & GET\\\hline
+    /session/salt/\$username & Get the a salt for a specific user with the username \$username. & GET\\
     \caption {The routes for the API}
     \label{routes}
 \end{longtable}
 
 The routes are structured in such a way that they help the user find the data they are looking for. They are structured similar to the database structure with waypoints belonging to walks and images, audio and videos belonging to waypoints. 
 
-To reduce load on the server any request will also return all the data that belongs to it, this means when a walk is requested it will contain all of its waypoints along with the media for each waypoint. This ensures the server is not overloaded with requests and will increase the speed of applications using the API as fewer requests are required. 
+To reduce load on the server any request will also return all the data that belongs to it, this means when a walk is requested it will contain all of its waypoints along with the media for each waypoint. This ensures the server is not overloaded with requests and will increase the speed of applications using the API as fewer requests are required.
+
+Every request will respond with a JSON version of the object that the route points too. POST and PUT methods require data to be passed to the server, the API has been configured so that all request data should come in the form of a JSON object. 
+
+One issue we faced while developing the API was CORS complience. CORS is Cross-Origin Resource Sharing and limits AJAX requests, the kind that will be used to access the API, to the same domain only. As the API is on a seperate sub-domain the CORS settings of a web browser would not allow requests to be sent. To fix this a special OPTIONS route had to be added. The route will respond to any url where the method is OPTIONS. It respons with a set of headers which specify which domains should be able to access the API, what methods they can use and what headers they can pass. Thease headers need to be passed with every request after the OPTIONS as well so they were initalised before the routes are processed meaning all requets will provide them. The API was then complient with CORS and requests are allowed from any domain if they provide the correct headers. 
+
+\subsubsection{Authentication}
+
+As RESTful API's are meant to be stateless, authentication must be handled in an unusual mannor. The method for this was based upon the system in use at Amazon Web Services\cite{auth}. Users have a unique private key, automatically generated from their password, 
 
 
 \subsection{Web Portal}
