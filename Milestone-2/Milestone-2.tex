@@ -53,6 +53,38 @@ The document aims to inform the reader of all progress made on the project since
 %- Outline of Document (what we cover in the document).
 
 \section{Technology Choices}
+\subsection{Android}
+As the project includes an Android application, it has been important to choose effective software and technology for development, this ranges from the Integrated Development Environment (IDE) used by the development team to the hardware devices used for testing.
+
+\subsubsection{IDE}
+There were three potential IDE choices for Android development, Eclipse, Android Studio and NVIDIA Nsight Tegra, a Visual Studio plugin for Android.
+
+For this project the choice was straightforward, the team has experience with Android and it has been around the longest, providing a stable and familiar programming environment helping keep efficiency levels high. Whilst Android Studio is now the supported IDE by Google, it is still relatively new software and offers a big change compared to Eclipse. NVIDIA Nsight Tegra, whilst a powerful IDE, would have provided a drastic change in environment for developers without Visual Studio familiarity. It is also more likely to take valuable development hours away to configure for every developer.
+
+\subsubsection{Devices}
+A number of devices are being used during development of the application. They range in size, power and operating system to ensure that we have a reasonable set of possible configurations to test our application.
+
+\begin{longtable}{|c|p{8cm}|}\hline
+\textbf{Device} & \textbf{Specification} \\ \hline
+Tesco Hudl & \begin{itemize}
+\item 7 Inch IPS LCD.
+\item 1440 x 900 Resolution.
+\item 10-point multi-touch screen.
+\item 1.5GHz A9 Quad-core processor.
+\item 1GB RAM.
+\item Mali 400 Quad-core GPU.
+\item Dual-band Wi-Fi.
+\item Bluetooth 4.0.
+\item GPS.
+\end{itemize} \\ \hline
+Other Device & spec \\ \hline
+Other Device 2 & spec \\ \hline
+
+\end{longtable}
+
+\subsubsection{Minimum Supported OS}
+To ensure the widest user base possible can access the application, the application will support Android devices running on Android 2.3 or higher. This is over 90\% of all Android phones https://developer.android.com/about/dashboards/index.html TODO: ADD TO BIB.
+
 \subsection{The API}
 \label{sec:techAPI}
 To keep the Application and the website in sync, and allow for future developments such as additional applications, an RESTful API (Application Programming Interface) was created.
@@ -63,9 +95,9 @@ To keep the Application and the website in sync, and allow for future developmen
 \item[REST] Representational State Transfer, is a architecture style which was used to design HTTP/1.1 (Hyper Text Transfer Protocol Version 1.1) and the URI (Universal Resource Identifier) standards. It consists of a set of constraints on components, data and there connections. The primary constraint is a Client-Sever separation, with the server being responsible for data storage, and the client responsible for the user interface and user state. The server is also required to be stateless which means no client context can be stored on the server.
 \end{description}
 
-For the API the Slim Framework\cite{slim} was chosen. This framework is designed for creating lightweight restful API's and websites and provides a versatile and well tested bases for the work. There were several other choices for this framework, but Slim was chosen because it was the most popular and well documented option. The Paris ORM(Object Relation Mapper) Framework\cite{paris} was also chosen to assist in database access. The ORM uses simple database models to reduce the steps in the process of interacting with the database. This framework makes it very easy to work with databases, drastically cutting the code needed to retrieve data and process it into objects. Paris was the only ORM of this type we could find for PHP and  For example, if you had a simple database with just Documents and Users it would be possible to model this using just the code below. There are two model definitions and then 2 very basic lines of code which return a user object in the variable \lstinline{$user}. The second line then queries \lstinline{$user} to get all the documents associated with that user~\cite{TomMilestone2}. 
+For the API the Slim Framework\cite{slim} was chosen. This framework is designed for creating lightweight restful API's and websites and provides a versatile and well tested bases for the work. There were several other choices for this framework, but Slim was chosen because it was the most popular and well documented option. The Paris ORM(Object Relation Mapper) Framework\cite{paris} was also chosen to assist in database access. The ORM uses simple database models to reduce the steps in the process of interacting with the database. This framework makes it very easy to work with databases, drastically cutting the code needed to retrieve data and process it into objects. Paris was the only ORM of this type we could find for PHP and  For example, if you had a simple database with just Documents and Users it would be possible to model this using just the code below, in Listing~\ref{lst:model}. There are two model definitions and then 2 very basic lines of code which return a user object in the variable \lstinline{$user}. The second line then queries \lstinline{$user} to get all the documents associated with that user~\cite{TomMilestone2}. 
 
-\begin{lstlisting}
+\begin{lstlisting}[captionpos=b, caption=Model Snippet, label=lst:model, frame=single]
 class User extends Model {
 	public function documents(){
 		return $this->has_many('Document');
@@ -104,7 +136,7 @@ The project is currently hosted on an Amazon EC2 server owned by a group member.
 %- Possible to move the risk management and schedule sections up here if people feel it reads better. Depends how big those sections get.
 %- Mention Amazon EC2 for testing purposes
 
-\subsection{Database}
+\section{Database}
 
 %- Why do we need a database, what data will it store?
 A relational database has been created to store persistent data for the web portal and Android application.
@@ -154,7 +186,7 @@ For example, the \emph{Walk} entity can have many \emph{WalkReviews}, one \emph{
 \end{figure}
 
 
-\subsection{User Interfaces}
+\section{User Interface Design}
 %- Heuristic Evaluations on similar products
 %-- Explain how we are doing the evaluation blahblah nielsen etc.
 %-- List of tasks for evaluators to complete (we should really ALL be involved in doing the evaluations).
@@ -202,6 +234,7 @@ The DbSchema class is an interface which is strictly used for referencing consta
 			+"logo_file_name TEXT,"
 			+"walk_id INT"
 			+")";
+			
 \end{lstlisting}
 
 \subsubsection{DatabaseHandler}
@@ -560,8 +593,39 @@ To reduce load on the server any request will also return all the data that belo
 
 \subsubsection{Web Application}
 
-\section{Programming Guidelines}
-%- I'll write android guidelines.
+\section{Coding Guidelines}
+A set of coding guidelines have been created for both the Android and Web applications. This will ensure that developers can quickly adapt to and understand the code of team members, reducing unnecessary downtime and interruptions. The main rule of the guidelines is to practice a consistent coding style, which is to say that code which a developer writes should be consistent with other code that is being modified as well as consistent when looked at alone.
+\subsection{Android}
+TODO: Say adapted from Lewis' document.
+\begin{itemize}
+\item \textbf{Declaring Variables}
+	\begin{enumerate}
+	\item All non-static, non-public member variables begin with a lower case m (e.g. mMyVariable).
+	\item All static variables begin with a lower case s (e.g. sStaticClass).
+	\item All class member variables are private.
+	\item Variable names begin with a lower case letter, then each consecutive word in the variable's name begins with an upper-case letter.
+	\item Each variable will be declared on a separate line.
+	\item A variable should be declared only when needed.
+	\item Variable names should be as descriptive as possible, avoid unnecessary abbreviations.
+	\item Classes always begin with an upper-case letter.
+	\item File names always match class names.
+	\item Constant variables are defined in upper-case, with an underscore between words.
+	\end{enumerate}
+\item \textbf{Whitespace}
+	\begin{enumerate}
+	\item Always use a single space after a keyword and before a curly brace.
+	\end{enumerate}
+\item \textbf{Braces}
+	\begin{enumerate}
+	\item The opening brace goes on the same line as the statement, as is traditional in Java.
+	\item Always use curly braces for conditional statements, even if it only contains one line.
+	\end{enumerate}
+\item \textbf{Documentation}
+	\begin{enumerate}
+	\item All methods and variables are to be documented with Doxygen, using standard Javadoc style comments.
+	\end{enumerate}
+\end{itemize}
+
 %- Adam/Tom get on the web guidelines.
 
 \section{Risk Analysis Review}
