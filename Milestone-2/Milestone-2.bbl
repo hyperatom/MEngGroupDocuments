@@ -10,6 +10,13 @@ Slim framework.
 \newblock \url{http://www.slimframework.com}.
 \newblock Accessed: 29-01-2014.
 
+\bibitem{auth}
+Riyad Kalla.
+\newblock Designing a secure rest (web) api without oauth.
+\newblock
+  \url{http://www.thebuzzmedia.com/designing-a-secure-rest-api-without-oauth-authentication/}.
+\newblock Accessed: 22-02-2014.
+
 \bibitem{TomMilestone2}
 Thomas Milner.
 \newblock Milestone 2.
