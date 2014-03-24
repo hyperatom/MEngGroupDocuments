@@ -194,6 +194,55 @@ For example, the \emph{Walk} entity can have many \emph{WalkReviews}, one \emph{
 \label{fig:DatabaseSchema}
 \end{figure}
 
+\section{API Progress}
+
+A RESTful API has been created using the technologies discused in section \ref{sec:techAPI}. There are several important parts to the API, first it must have a coherent set of routes/urls for acces to all if its functionality, secondly it must provide a method of authenticating users and finaly it must adhear to to principles of REST as closely as possible. 
+
+\subsection{Routes}
+
+The API is called through a series of routes, it was important to make these routes as simple and coherant as possible.
+
+\begin{longtable}{m{0.45\textwidth}|m{0.35\textwidth}|C{0.11\textwidth}}
+    \textbf{Route} & \textbf{Return value} & \textbf{Methods} \\\hline
+    /walks & All walks & GET POST\\ \hline
+    /walks/\$id & The walks with the ID \$id. & GET PUT DELETE\\ \hline
+    /walks/\$id/waypoints & All the waypoints for the walk with the ID \$id. & GET POST\\ \hline
+    /walks/\$id/waypoints/\$wid & The waypoint with the ID \$wid. & GET PUT DELETE \\ \hline
+    /walks/\$id/waypoints/\$wid/images & The images for the waypoint with the ID \$wid. & GET POST \\ \hline
+    /walks/\$id/waypoints/\$wid/images/\$iid & The image with the ID \$iid. & GET PUT DELETE \\ \hline
+    /walks/\$id/waypoints/\$wid/audio & The audio files for the waypoint with the ID \$wid. & GET POST \\ \hline
+    /walks/\$id/waypoints/\$wid/audio/\$aid & The audio file with the ID \$aid. & GET PUT DELETE \\ \hline
+    /walks/\$id/waypoints/\$wid/videos & The videos for the waypoint with the ID \$wid. & GET POST \\ \hline
+    /walks/\$id/waypoints/\$wid/videos/\$vid & The video with the ID \$vid. & GET PUT DELETE \\ \hline
+    /users & All users. & GET POST \\\hline
+    /users/\$id & The user with the ID \$id. & GET PUT DELETE \\\hline
+    /users/\$id/settings & A users settings. & GET PUT \\\hline
+    /session & A request to authenticate. & GET\\\hline
+    /session/salt & Returns a random salt for registering a user. & GET\\\hline
+    /session/salt/\$username & Get the a salt for a specific user with the username \$username. & GET\\
+    \caption {The routes for the API}
+    \label{routes}
+\end{longtable}
+
+The routes are structured in such a way that they help the user find the data they are looking for. They are structured similar to the database structure with waypoints belonging to walks and images, audio and videos belonging to waypoints. 
+
+To reduce load on the server any request will also return all the data that belongs to it, this means when a walk is requested it will contain all of its waypoints along with the media for each waypoint. This ensures the server is not overloaded with requests and will increase the speed of applications using the API as fewer requests are required.
+
+Every request will respond with a JSON version of the object that the route points too. POST and PUT methods require data to be passed to the server, the API has been configured so that all request data should come in the form of a JSON object. 
+
+\subsubsection{CORS}
+CORS, Cross-Origin Resource Sharing, limits requests to extenal domians unless the explicitly allow it to the same domain only. As the API is on a seperate sub-domain the CORS settings of a web browser would not allow requests to be sent. To fix this a special OPTIONS route had to be added. It respons with a set of headers which specify which domains should be able to access the API, what methods they can use and what headers they can pass. Thease headers need to be passed with every request as well as the OPTIONS so they were initalised before the routes are processed meaning all requets will provide them. The API has been configured with all CORS headers and requests are allowed from any domain during the testing process. 
+
+\subsection{Authentication}
+
+As RESTful API's are meant to be stateless, authentication must be handled in an unusual mannor. The method for this was based upon the system in use at Amazon Web Services\cite{auth}. Users have a unique private key, automatically generated from their password. This private key is used to generate a signature of the data they are sending to the server. There are two compulsary headers, X-TIMESTAMP and X-USERNAME, which are used ensure there is some data to hash. The signature is sent in the header X-HASH and is then recomputed on the server using the stored private key for the user. If the two match it can be assumed that the user has the correct password and is authenticated with the apropriate permisions. This system is simpler than alternatives like OAuth which are complicated and cumbersome to implement. 
+
+The signature is generated using a keyed-hash message authentication code (HMAC) which takes the private key and the message to send (The data) and generates a hash using a specific algorithm. For the HASH we chose to use SHA1 which stands for 'Secure Hashing Algorithm'. It generates a 160 bit hash which has is faily secure but is much faster than longer alternatives such as SHA-256 or SHA-512. As the timestamp is used to validate that the request is not only correct but also recent it is highly unlikely to get two hashes which are valid at the same time even with such a small key length. 
+
+To generate the Private Key the PBKDF2 (Password-Based Key Derivation Function 2) algorithm is used. This takes in the users password and a salt which is retrieved form the database. It then preforms 1000 iterations of the SHA1 algorithm to generate a Private Key. This creates a very secure private key and makes calculating the password impossible. 
+
+
+
 
 \section{User Interface Design}
 %- Heuristic Evaluations on similar products
@@ -554,6 +603,9 @@ Future development includes creating a custom InfoWindowAdapter for the InfoWind
 
 \subsection{Authentication}
 \label{sec:authorisation}
+The application needs to interface with the API using the correct authentication method. To achive this a secureHTTP utility class was created. This classes provides a static method which will take the logged in users account as an object and the http request that needs to be sent. It will then process the request to generate the signature of the data and append the correct headers. The request can then be sent as normal. This utility class also provides the methods for generating the users Private key based upon the password they have entered and for calling the session method on the API to ensure the password is correct without calling any methods which may alter data. 
+
+This class uses several cryptography libraries to ensure that it correctly mimics the action of the web portal and works with the API. The methods are provided as static so they can be used throughout the project where ever a secure API method is needed. 
 
 \subsection{Fragments}
 \label{sec:fragments}
@@ -570,53 +622,6 @@ Whilst not currently implemented, the ContentProvider and Authentication systems
 
 Further information can be found at \url{http://developer.android.com/training/sync-adapters/index.html}.
 
-
-\section{API Progress}
-
-A RESTful API has been created using the technologies discused in section \ref{sec:techAPI}. There are several important parts to the API, first it must have a coherent set of routes/urls for acces to all if its functionality, secondly it must provide a method of authenticating users and finaly it must adhear to to principles of REST as closely as possible. 
-
-\subsection{Routes}
-
-The API is called through a series of routes, it was important to make these routes as simple and coherant as possible.
-
-\begin{longtable}{m{0.45\textwidth}|m{0.35\textwidth}|C{0.11\textwidth}}
-    \textbf{Route} & \textbf{Return value} & \textbf{Methods} \\\hline
-    /walks & All walks & GET POST\\ \hline
-    /walks/\$id & The walks with the ID \$id. & GET PUT DELETE\\ \hline
-    /walks/\$id/waypoints & All the waypoints for the walk with the ID \$id. & GET POST\\ \hline
-    /walks/\$id/waypoints/\$wid & The waypoint with the ID \$wid. & GET PUT DELETE \\ \hline
-    /walks/\$id/waypoints/\$wid/images & The images for the waypoint with the ID \$wid. & GET POST \\ \hline
-    /walks/\$id/waypoints/\$wid/images/\$iid & The image with the ID \$iid. & GET PUT DELETE \\ \hline
-    /walks/\$id/waypoints/\$wid/audio & The audio files for the waypoint with the ID \$wid. & GET POST \\ \hline
-    /walks/\$id/waypoints/\$wid/audio/\$aid & The audio file with the ID \$aid. & GET PUT DELETE \\ \hline
-    /walks/\$id/waypoints/\$wid/videos & The videos for the waypoint with the ID \$wid. & GET POST \\ \hline
-    /walks/\$id/waypoints/\$wid/videos/\$vid & The video with the ID \$vid. & GET PUT DELETE \\ \hline
-    /users & All users. & GET POST \\\hline
-    /users/\$id & The user with the ID \$id. & GET PUT DELETE \\\hline
-    /users/\$id/settings & A users settings. & GET PUT \\\hline
-    /session & A request to authenticate. & GET\\\hline
-    /session/salt & Returns a random salt for registering a user. & GET\\\hline
-    /session/salt/\$username & Get the a salt for a specific user with the username \$username. & GET\\
-    \caption {The routes for the API}
-    \label{routes}
-\end{longtable}
-
-The routes are structured in such a way that they help the user find the data they are looking for. They are structured similar to the database structure with waypoints belonging to walks and images, audio and videos belonging to waypoints. 
-
-To reduce load on the server any request will also return all the data that belongs to it, this means when a walk is requested it will contain all of its waypoints along with the media for each waypoint. This ensures the server is not overloaded with requests and will increase the speed of applications using the API as fewer requests are required.
-
-Every request will respond with a JSON version of the object that the route points too. POST and PUT methods require data to be passed to the server, the API has been configured so that all request data should come in the form of a JSON object. 
-
-\subsubsection{CORS}
-CORS, Cross-Origin Resource Sharing, limits requests to extenal domians unless the explicitly allow it to the same domain only. As the API is on a seperate sub-domain the CORS settings of a web browser would not allow requests to be sent. To fix this a special OPTIONS route had to be added. It respons with a set of headers which specify which domains should be able to access the API, what methods they can use and what headers they can pass. Thease headers need to be passed with every request as well as the OPTIONS so they were initalised before the routes are processed meaning all requets will provide them. The API has been configured with all CORS headers and requests are allowed from any domain during the testing process. 
-
-\subsection{Authentication}
-
-As RESTful API's are meant to be stateless, authentication must be handled in an unusual mannor. The method for this was based upon the system in use at Amazon Web Services\cite{auth}. Users have a unique private key, automatically generated from their password. This private key is used to generate a signature of the data they are sending to the server. There are two compulsary headers, X-TIMESTAMP and X-USERNAME, which are used ensure there is some data to hash. The signature is sent in the header X-HASH and is then recomputed on the server using the stored private key for the user. If the two match it can be assumed that the user has the correct password and is authenticated with the apropriate permisions. This system is simpler than alternatives like OAuth which are complicated and cumbersome to implement. 
-
-The signature is generated using a keyed-hash message authentication code (HMAC) which takes the private key and the message to send (The data) and generates a hash using a specific algorithm. For the HASH we chose to use SHA1 which stands for 'Secure Hashing Algorithm'. It generates a 160 bit hash which has is faily secure but is much faster than longer alternatives such as SHA-256 or SHA-512. As the timestamp is used to validate that the request is not only correct but also recent it is highly unlikely to get two hashes which are valid at the same time even with such a small key length. 
-
-To generate the Private Key the PBKDF2 (Password-Based Key Derivation Function 2) algorithm is used. This takes in the users password and a salt which is retrieved form the database. It then preforms 1000 iterations of the SHA1 algorithm to generate a Private Key. This creates a very secure private key and makes calculating the password impossible. 
 
 \section{Web Portal}
 
