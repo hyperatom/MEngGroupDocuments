@@ -41,10 +41,13 @@
 \input{./Title-Page.tex}
 
 \newpage 
-
+\setcounter{page}{1}
+\pagenumbering{roman}
 \tableofcontents
 
 \newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
 \section{Introduction}
 This document, White Rock Digital Trails: Interim Document, shall guide the reader through the current state of the project. This includes the design of user interfaces, implementation of features and project management tasks such as a schedule update and analysis of any risks the project has encountered.
 \subsection{Purpose}
@@ -201,13 +204,13 @@ For example, the \emph{Walk} entity can have many \emph{WalkReviews}, one \emph{
 
 \section{Android Application Progress}
 \lstset{language=Java,
-keywordstyle=\color{red},
+keywordstyle=\color{Maroon},
 commentstyle=\color{OliveGreen},
-showstringspaces=false}
-The development of the Android application is progressing well and has been unaffected by risks, both expected and unexpected. To achieve the goals of the project, the application has to be capable of saving and loading data to and from a local database, which will then synchronise with the remote database - this is achieved via a content provider, seen in Section~\ref{sec:contentprovier}; the client also requested Google Maps be implemented, the progress of which can be seen in Section~\ref{sec:googlemaps}; as the application allows users to log-in and personalise their experience an authentication system has been created, seen in Section~\ref{sec:authorisation}. Finally, fragments and activities have been created to control the flow of the program, along with relevant layouts and graphics, which can be seen in Section~\ref{sec:fragments}. All of these systems, when completed, will meet the requirements shown in Section 4.1.2 of the Milestone 1 document. %TODO: Cite
-\subsection{Content Provider}
+showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyle=\color{Blue}}
+The development of the Android application is progressing well and has been unaffected by risks, both expected and unexpected. To achieve the goals of the project, the application has to be capable of saving and loading data to and from a local database, which will then synchronise with the remote database - this is achieved via a ContentProvider, seen in Section~\ref{sec:contentprovier}; the client also requested Google Maps be implemented, the progress of which can be seen in Section~\ref{sec:googlemaps}; as the application allows users to log-in and personalise their experience an authentication system has been created, seen in Section~\ref{sec:authorisation}. Finally, fragments and activities have been created to control the flow of the program, along with relevant layouts and graphics, which can be seen in Section~\ref{sec:fragments}. All of these systems, when completed, will meet the requirements shown in Section 4.1.2 of the Milestone 1 document. %TODO: Cite
+\subsection{ContentProvider}
 \label{sec:contentprovier}
-The content provider provides valuable functionality when synchronising with the server and allowing for other applications to, potentially, access the application's database. It consists of four components. Firstly, there is the DbSchema class, this interface class contains all of the SQL used to create the table and constants such as table names. Next comes the DatabaseHandler class, an extension of the Android SQLiteOpenHelper class, which creates the database and contains the strategy for deleting and upgrading the database; it is also responsible for opening and closing connections to the database. The WhiteRockContract class provides an API for foreign applications to access available data, without this the content provider does not achieve anything. Finally, there is the WhiteRockContentProvider class itself, this class is responsible for inserting, deleting, updating and querying the database.
+The ContentProvider provides valuable functionality when synchronising with the server and allowing for other applications to, potentially, access the application's database. It consists of four components. Firstly, there is the DbSchema class, this interface class contains all of the SQL used to create the table and constants such as table names. Next comes the DatabaseHandler class, an extension of the Android SQLiteOpenHelper class, which creates the database and contains the strategy for deleting and upgrading the database; it is also responsible for opening and closing connections to the database. The WhiteRockContract class provides an API for foreign applications to access available data, without this the ContentProvider does not achieve anything. Finally, there is the WhiteRockContentProvider class itself, this class is responsible for inserting, deleting, updating and querying the database.
 
 \subsubsection{Database Schema}
 The DbSchema class is an interface which is strictly used for referencing constants, such as table names, and strings containing the SQL used to create each table in the database. Example code can be seen in Listing~\ref{lst:dbSchema}.
@@ -275,7 +278,7 @@ Listing~\ref{lst:dbHandler} provides a snippet of the code used during the creat
 \end{lstlisting}
 
 \subsubsection{WhiteRockContract}
-The WhiteRockContract class is the API which all applications, including this one, must use to access the ContentProvider. The class itself is relatively simple, providing constant values for the Authority and Content URI's required to access the data. The content provider accesses data from the database by being passed a URI in the format content://authority//path\_to\_type. In this implementation the authority is ``uk.ac.swan.digitaltrails'' the path\_to\_type variable points to a table name, such as ``walk''. An example of this, for the ``bug\_report'' table, can be seen in Listing~\ref{lst:contract}.
+The WhiteRockContract class is the API which all applications, including this one, must use to access the ContentProvider. The class itself is relatively simple, providing constant values for the Authority and Content URI's required to access the data. The ContentProvider accesses data from the database by being passed a URI in the format content://authority//path\_to\_type. In this implementation the authority is ``uk.ac.swan.digitaltrails'' the path\_to\_type variable points to a table name, such as ``walk''. An example of this, for the ``bug\_report'' table, can be seen in Listing~\ref{lst:contract}.
 
 \begin{lstlisting}[captionpos=b, caption=WhiteRockContract Snippet, label=lst:contract, frame=single]
 public class WhiteRockContract {
@@ -310,7 +313,7 @@ public class WhiteRockContract {
 
 
 \subsubsection{WhiteRockContentProvider}
-The WhiteRockContentProvider class is where all of the components come together. A URIMatcher is created to ensure that the correct data is accessed, according to the content URI passed. Based on the call to the content provider (insert, update, delete, query), the URI passed is matched via the URIMatcher and the operation carried out on the correct data in the correct table. Examples of each operation can be seen in Listing~\ref{lst:contentprovider}.
+The WhiteRockContentProvider class is where all of the components come together. A URIMatcher is created to ensure that the correct data is accessed, according to the content URI passed. Based on the call to the ContentProvider (insert, update, delete, query), the URI passed is matched via the URIMatcher and the operation carried out on the correct data in the correct table. Examples of each operation can be seen in Listing~\ref{lst:contentprovider}.
 
 \begin{lstlisting}[captionpos=b, caption=WhiteRockContentProvider Snippet, label=lst:contentprovider, frame=single]
 	private static UriMatcher buildUriMatcher() {
@@ -435,8 +438,8 @@ The WhiteRockContentProvider class is where all of the components come together.
 	
 \end{lstlisting}
 
-\subsubsection{Using the Content Provider}
-The content provider is currently being used, in conjunction with a CursorLoader, to query the database for walk names to choose a walk and, when a walk has been chosen, the waypoint details of that walk. The CursorLoader is an asynchronous loader, allowing data to be loaded in a different thread than the User Interface thread. This is great for loading the user interface whilst the data is loading. All the relevant code for loading data, in this example the titles of each walk and their details, can be seen in Listing~\ref{lst:walkListFragment}.
+\subsubsection{Using the ContentProvider}
+The ContentProvider is currently being used, in conjunction with a CursorLoader, to query the database for walk names to choose a walk and, when a walk has been chosen, the waypoint details of that walk. The CursorLoader is an asynchronous loader, allowing data to be loaded in a different thread than the User Interface thread. This is great for loading the user interface whilst the data is loading. All the relevant code for loading data, in this example the titles of each walk and their details, can be seen in Listing~\ref{lst:walkListFragment}.
 
 \begin{lstlisting}[captionpos=b, caption=WalkListFragment Snippet, label=lst:walkListFragment, frame=single]
 
@@ -543,15 +546,23 @@ Users may also change the style of the map to ``Normal'', ``Hybrid'' or ``Satell
 Future development includes creating a custom InfoWindowAdapter for the InfoWindow, allowing for more customisable data to be displayed. The next waypoint to visit shall be displayed in a different colour than the other waypoints, whilst previously visited waypoints will also change colour. 
 
 
-\subsection{Authorisation}
+\subsection{Authentication}
 \label{sec:authorisation}
 
 \subsection{Fragments}
 \label{sec:fragments}
-%- Authorisation
-%- Google Maps
-%- Current design to sync with server
-%- Chris can chuck in his Fragments here, so he has some code to show.
+
+\subsection{SyncAdapter}
+\label{sec:syncAdapter}
+Whilst not currently implemented, the ContentProvider and Authentication systems are a vital part of this system and it is the foremost reason the ContentProvider was created. The SyncAdapter handles background synchronisation of data from the Android application to the tablet and vice-versa. It is triggered when needed, scheduled or requested. It is the preferred system compared to using Services and IntentServices as it provides an implementation which is:
+\begin{itemize}
+\item \textbf{Battery Efficient} By being scheduled to run when other synchronisations run, the application is conserving battery power by leaving the device sleeping for as long as possible.
+\item \textbf{User Friendly} The SyncAdapter may be accessed by the user from the Android Settings screen, allowing for customisation of the SyncAdapter's settings and even the ability to disable it.
+\item \textbf{Content Aware} The ContentProvider which has been written will allow the SyncAdapter to monitor the data and only synchronise with the remote server when the data has been updated.
+\item \textbf{Capable of Retrying} The implementation of a SyncAdapter provides it with a retry mechanism, allowing for data to be synchronised as soon as possible.
+\end{itemize}
+
+Further information can be found at \url{http://developer.android.com/training/sync-adapters/index.html}.
 
 
 \subsection{API}
@@ -629,8 +640,23 @@ TODO: Say adapted from Lewis' document.
 %- Adam/Tom get on the web guidelines.
 
 \section{Risk Analysis Review}
-%- Explain risks we dealt with, cross reference to our initial table.
-%- Add new risks that arose (Poor work environment, lab computers suck, hudl broken, hudl missing USB driver - not supported as a dev. device).
+The project has encountered a selection of the risks outlined in the initial document. These risks are:
+\begin{itemize}
+\item\textbf{TECRSK2} Personal computers used for software development fail. This has occurred to Adam Barrell on at least one occasion. Thomas Milner has also had his server break, requiring it to be fully reconfigured. This cost us a day of development on the authentication system.
+\item\textbf{TECRSK1} Tesco Hudl fails. The Hudl has began to experience a fault which causes part of the screen to become unresponsive to user input.
+\item\textbf{TECRSK7} The Google Android API is too limited. This is true of the Google Maps API, it does not let the developer extend the Marker class, which would make development easier, nor does it allow for caching of map data for offline use, preventing a serious issue for trails which are in a location that does not receive a mobile data connection. There is, currently, a potential solution which lets us store cached data for a short period of time.
+\end{itemize}
+The team has also encountered unforeseen risks, detailed below:
+\begin{itemize}
+\item\textbf{Hudl Support} The Hudl is not seen as a developer device by Tesco, as a result they do not provide a USB driver. A workaround was discovered by forcing the development machine to install the generic Google USB driver to the device.
+\item\textbf{Work Environment} The Swansea University Project Lab has been in a contentious state since the beginning of this academic year, with some staff claiming it is a common room whilst other claim it is for group project work. This left developers without a peaceful place to work, as a group, whilst on campus. This has, hopefully, since been rectified after the status of the room was confirmed with members of staff as a room to be used as a working environment. 
+\item\textbf{Bugs in Libraries} The validation library being used for the website (Bootstrap Validator (TODO:CITE)) contained a number of bugs, delaying development of the website by a number of days whilst a bug report was processed by the library developer.
+\item\textbf{AJAX Cross Origin Resource Sharing} TODO: Tom, write about this.
+\item\textbf{Git User Error} Whilst not a risk which has yet caused a fatal incident, there have been times where user error has caused a delay whilst the local and remote Git repositories are restored to a working state.
+\item\textbf{Lab Computers Have Restrictive Permissions} As the lab computers are so restrictive, the development team has not been able to implement the previously mentioned workaround for the Hudl device on one of the Swansea University computers. This prevents developers from using these systems for development. It is also not possible to install new software as required, which includes libraries, thus further increasing the difficulty in which these machines can be used.
+\item\textbf{Communication Between Server and Android} This feature has shown itself to require more time than initially expected, to be efficient in both battery and data usage a ContentProvider and SyncAdapter have to be implemented. This adds extra layers of abstraction between the database and the application.
+\item\textbf{Initial Code} The initial code the team was given to build upon was not sufficient to continue development, all the data had been hard-coded and strongly died to the OpenStreetMaps implementation. After analysing, commenting and reviewing the code it was deemed faster to begin with a new codebase, capable of using a ContentProvider and SyncAdapter to handle data.
+\end{itemize}
 
 \section{Project Schedule Review}
 %- What sprints we have completed.
