@@ -189,7 +189,103 @@ The API is called through a series of routes, it was important to make these rou
 
 \subsection{Web Portal}
 
-\subsubsection{Web Application}
+%- What progress has been made on the web portal?
+This section discusses the progress which has been towards development of the web portal. The web portal will allow users of the Android application, full control over the management of their walks. This includes the addition and modification of walks, contributions to other user's walks and the attachment of media such as video, images and audio to specific way points. The web portal aims to provide users with a more intuitive interface to manage walks since the modification of data can be difficult through mobile devices with small screens. 
+
+%- Currently what does the portal allow users to do?
+A number of features have been developed thus far, including login, registration, responsive layouts, form validation and walk views. Figure \ref{fig:home} shows the first web pages that users will be greeted with upon visiting the web portal. As shown in the diagram, the web portal features distinct White Rock Trails branding which has been designed specifically for this project. This is also a requirement of the software as requested by the client. The visual theme and layout of the web portal has been designed to imitate that of the Android application. This will make the web portal more intuitive to users and its learning curve will be significantly reduced.
+
+%- What tools have been used to create it?
+An IDE (Integrated Development Environment) called Brackets was used to develop the web portal. This software features automatic code completion for JavaScript and GIT integration. The former greatly enhanced development productivity while the latter allowed for easy code collaboration between the programming team. The web portal is currently hosted on a public Amazon EC2 server. This allows the client to interact with the latest web portal version and suggested improvements or alterations.
+
+\subsubsection{Welcome View}
+
+The welcome view shown in Figure \ref{fig:home} provides visitors with a link to download the Android application and instructs them to login or register account in order to use the portal. A footer has also been added to provide users with navigation links to important resources such as the Android application and \emph{About} page.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/webportal/home}
+\caption{Home view of the web portal.}
+\label{fig:home}
+\end{figure}
+
+\subsubsection{Responsive View}
+
+Figure \ref{fig:home-responsive} demonstrates a responsive review of the web portal. This is the view that users will see when visiting the web portal on mobile devices such as smart phones and tablets. The responsive design minimizes the menu bar which can be expanded by clicking the button shown in the top right of the figure. In addition, web page content reduces in width and elements become stacked allowing for easier scrolling on mobile devices. The responsive design of the web portal is facilitated by the Bootstrap (see section XXXXXX) CSS and JavaScript library.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/webportal/home-responsive}
+\caption{Web portal responsive menu view.}
+\label{fig:home-responsive}
+\end{figure}
+
+\subsubsection{Login View}
+
+Figure \ref{fig:login} shows the login view that users will see when they click on the \emph{Login} button in the top navigation bar. The login view displays as a modal in front of the web page. This will ensure that users do not have to navigate between pages in order to log in, thus enhancing usability. The login view requires users to input their email address and password followed by clicking the \emph{Login} button. The \emph{Login} button will display a spinner icon whilst the fields are validated to ensure the user is aware that the page is loading. An external validation library is used to validate the fields and display an error or success status. The library uses pre-defined validators to validate the structure of the email address and that the email and password pair is valid when checked against the White Rock Trails API. The validator changes the display of erroneous fields to feature red or green borders and tick or cross icons for invalid and valid fields respectively. A specific error message will also be displayed underneath erroneous fields to inform the reason for the error and allow users to amend it. When users successfully log in, the modal will close and the \emph{Login} and \emph{Registration} buttons shown in the top navigation bar are replaced with the user's full name.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/webportal/login}
+\caption{Web portal login modal demonstrating validation.}
+\label{fig:login}
+\end{figure}
+
+\subsubsection{Registration View}
+
+Figure \ref{fig:registration} shows the registration view that users will see when the \emph{Register} button is clicked in the top navigation bar. This view is also implemented as a modal for the same reasons as the login view and to maintain consistency throughout the application. The same validator is also used to validate the registration fields. However, inputs such as \emph{Email Address} and the two password fields require different validators. The former uses a validator that checks whether the provided email address has already been registered by another user. The latter checks whether the two passwords are identical. This will prevent users from registering using a mistyped password and subsequently not being able to log in. Clicking the \emph{Register} button will display a loading spinner inside as described for the login view. When users successfully register, they will be presented with a new confirmation modal instructing them to log in with their new account.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/webportal/registration}
+\caption{Web portal registration modal demonstrating validation.}
+\label{fig:registration}
+\end{figure}
+
+\subsubsection{All Walks View}
+
+Figure \ref{fig:all-walks} shows the view users will see when they click on the \emph{Walks} button in the top menu bar and select the \emph{All Walks} option. This view displays a list of tiles, each representing a walk in the database. The background of each tile is an image selected from the collection of each walks way point images. Clicking a tile will navigate the user to a walk information view as presented in Figure \ref{fig:walk-info}. The \emph{Add Walk} button and search bar are currently non-functional as those features have not yet been implemented.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/webportal/all-walks}
+\caption{All walks view of the web portal.}
+\label{fig:all-walks}
+\end{figure}
+
+\subsubsection{Walk Information View}
+
+Figure \ref{fig:walk-info} shows the view users will see when they click on a walk tile from the \emph{All Walks} view. As shown in the figure, walk information will be displayed in this view such a title, description, duration, distance, difficulty rating and author. Navigation tabs above this information allow users to navigate between the \emph{Waypoints}, \emph{Reviews} and \emph{Walk} views. Walk data is asynchronously loaded from the database through the API. The Google Maps API is used to display the map shown in the right of the figure. The Google Maps API allows markers to be placed at specific GPS locations contained within the walk data. The map allows users to scroll and zoom around the walk area to gain an understanding of its location.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/webportal/walk-info}
+\caption{Walk information view of the web portal.}
+\label{fig:walk-info}
+\end{figure}
+
+\subsubsection{Walk Way Points View}
+
+Figure \ref{fig:walk-waypoints} shows the view that users will see when they click on the \emph{Waypoints} tab of the walk information view. The view shows the list of way points that are represented by markers on the map. Clicking a list item or its corresponding map marker will display a modal containing media uploaded to the way point such as images, videos and audio. However, this feature is still in progress and is not shown in this document.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/webportal/walk-waypoints}
+\caption{Walk way points view of the web portal.}
+\label{fig:walk-waypoints}
+\end{figure}
+
+\subsubsection{Walk Reviews View}
+
+Figure \ref{fig:walk-reviews} shows the view that users will see when they click the \emph{Reviews} tab from the navigation tabs bar. This view loads user reviews from the walk data and displays them in a list view as shown in the figure. A library called \emph{Raty} was used to generate the star rating system seen below the title of the review. It takes a review rating integer between 1-5 and generates a star representation.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/webportal/walk-reviews}
+\caption{Walk reviews view of the web portal.}
+\label{fig:walk-reviews}
+\end{figure}
+
 
 \section{Programming Guidelines}
 %- I'll write android guidelines.
