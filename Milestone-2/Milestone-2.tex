@@ -85,21 +85,49 @@ The project is currently hosted on an Amazon EC2 server owned by a group member.
 %- THIS IS THE OVERVIEW SECTION
 %- Show the subsystem designs and explain the current structure of the project. 
 %- Possible to move the risk management and schedule sections up here if people feel it reads better. Depends how big those sections get.
+%- Mention Amazon EC2 for testing purposes
 
 \subsection{Database}
 
 %- Why do we need a database, what data will it store?
 A relational database has been created to store persistent data for the web portal and Android application.
-The database will store data relating to entities such as walks, way points, users and media locations.
+The database stores data relating to entities such as walks, way points, users and media locations.
+The database is currently hosted by an Amazon EC2 server (see technology choices) using MySQL.
 
 %- How was the database designed?
-A table has been created for each entity or concept that requires persistent storage.
+The database schema was designed using Visual Studio's entity designer which allows developers visually develop databases.
+This tool allows tables to be created on a canvas where relationships and attributes can be modified.
+A table was created for each entity or concept that required persistent storage as shown in Figure \ref{fig:DatabaseSchema}.
+Columns were then added to each table to represent the attributes of each entity.
+For example, the \emph{EnglishWalkDescription} table has an \emph{Id}, \emph{Title}, \emph{ShortDescription} and \emph{LongDescription}. The column \emph{Id} is mandatory for standalone entities as the rest of their properties are identified by this unique key. 
+
 %- How was the database be generated from this model?
+The Visual Studio entity designer was able to generate an SQL script to create the database from the design shown in Figure \ref{fig:DatabaseSchema}. This script was executed on the MySQL server which in turn created the tables designed in the entity designer.
+
 %- How will the database be exposed if not directly?
-%- Where will the database be hosted?
+The White Rock Trails database is not publicly exposed and can only be interfaced through a public facing API (see section XXXXX). 
+This will ensure the robustness of the database as additional business logic from the API protects the underlying database from erroneous data and unauthorized access.
+
 %- What applications will consume data from this database?
+The web portal and Android application will both consume data from this database through the public API. 
+The web portal will consume data with every request made by users from their web browser. 
+In contrast, the Android application will synchronise a local copy of the database through the API. 
+This ensures that the application can be used offline as many walks will not be in range of an internet access point.
+
 %- How does it's design conform to the requirements?
+The database design conforms to the requirements required by the client which are defined in the Initial Document. 
+More specifically, the design shown in Figure \ref{fig:DatabaseSchema} is based on the initial schema design provided by the client. 
+The initial schema contained tables that did not have a high normal form. 
+English and Welsh translations were present in the same tables for both the walk and way point descriptions. 
+These tables were normalised as shown in Figure \ref{fig:DatabaseSchema} by moving the English and Welsh descriptions into separate tables.
+In addition, the media locations for each way point were also present in the same table.
+This was normalised by moving different media types such as images, audio and video into tables \emph{WaypointImage}, \emph{WaypointAudio} and \emph{WaypointVideo} respectively.
+
 %- Describe the relationships (one-one) (one-many) (many-many)
+Relationships were defined between tables using Visual Studio's entity designer. 
+The designer supports a range of associativities such as one-one (1-1), one-many (1-*) and many-many (*-*). 
+Some of these associativities were used in the White Rock Trails schema as shown in Figure \ref{fig:DatabaseSchema}.
+For example, the \emph{Walk} entity can have many \emph{WalkReviews}, one \emph{User} who created it, many \emph{Waypoints}, one \emph{EnglishWalkDescription} and one \emph{WelshWalkDescription}.
 
 \begin{figure}[h!]
 \centering
