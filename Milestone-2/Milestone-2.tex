@@ -47,7 +47,27 @@
 %- Possible to move the risk management and schedule sections up here if people feel it reads better. Depends how big those sections get.
 
 \subsection{Database}
-%- Database schema diagram & description
+
+%- Why do we need a database, what data will it store?
+A relational database has been created to store persistent data for the web portal and Android application.
+The database will store data relating to entities such as walks, way points, users and media locations.
+
+%- How was the database designed?
+A table has been created for each entity or concept that requires persistent storage.
+%- How was the database be generated from this model?
+%- How will the database be exposed if not directly?
+%- Where will the database be hosted?
+%- What applications will consume data from this database?
+%- How does it's design conform to the requirements?
+%- Describe the relationships (one-one) (one-many) (many-many)
+
+\begin{figure}[h!]
+\centering
+\includegraphics[angle=90, width=1\linewidth]{./img/DatabaseSchema}
+\caption{Schema of the White Rock Trails relational database.}
+\label{fig:DatabaseSchema}
+\end{figure}
+
 
 \subsection{User Interfaces}
 %- Heuristic Evaluations on similar products
@@ -70,8 +90,10 @@
 %- Chris can chuck in his Fragments here, so he has some code to show.
 
 \subsection{Web Portal}
-%- API
-%- Portal
+
+\subsubsection{API}
+\subsubsection{Web Application}
+\subsubsection{Object Relation Mapper}
 
 \section{Programming Guidelines}
 %- I'll write android guidelines.
