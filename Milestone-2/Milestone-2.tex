@@ -67,7 +67,7 @@ For this project the choice was straightforward, the team has experience with An
 \subsubsection{Devices}
 A number of devices are being used during development of the application. They range in size, power and operating system to ensure that we have a reasonable set of possible configurations to test our application.
 
-\begin{longtable}{|c|p{8cm}|}\hline
+\begin{longtable}{c|p{8cm}}
 \textbf{Device} & \textbf{Specification} \\ \hline
 Tesco Hudl & \begin{itemize}
 \item 7 Inch IPS LCD.
@@ -100,6 +100,11 @@ To keep the Application and the website in sync, and allow for future developmen
 
 For the API the Slim Framework\cite{slim} was chosen. This framework is designed for creating lightweight restful API's and websites and provides a versatile and well tested bases for the work. There were several other choices for this framework, but Slim was chosen because it was the most popular and well documented option. The Paris ORM(Object Relation Mapper) Framework\cite{paris} was also chosen to assist in database access. The ORM uses simple database models to reduce the steps in the process of interacting with the database. This framework makes it very easy to work with databases, drastically cutting the code needed to retrieve data and process it into objects. Paris was the only ORM of this type we could find for PHP and  For example, if you had a simple database with just Documents and Users it would be possible to model this using just the code below, in Listing~\ref{lst:model}. There are two model definitions and then 2 very basic lines of code which return a user object in the variable \lstinline{$user}. The second line then queries \lstinline{$user} to get all the documents associated with that user~\cite{TomMilestone2}. 
 
+\lstset{language=PHP,
+keywordstyle=\color{Maroon},
+commentstyle=\color{OliveGreen},
+showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyle=\color{Blue}}
+
 \begin{lstlisting}[captionpos=b, caption=Model Snippet, label=lst:model, frame=single]
 class User extends Model {
 	public function documents(){
@@ -124,12 +129,8 @@ The API will use JSON objects to respond to requests, it will also expect these 
 \end{description}
 
 \subsection{The Server}
-<<<<<<< HEAD
 \label{sec:techServer}
-The project is currently hosted on an Amazon EC2 server owned by a group member. Having a private server like this has allowed us to configure it as we require. The server is currently running Ubuntu Linux Server Edition with Apache Webserver, PHP and MySQL database installed. Git is used to push documents up to the server which are then automatically coppied into the correct folder for the webserver. Each part of the project can then be given a unique subdomain for testing purposes. Currently the API is hosted at \url{http://whiterockapi.tmilner.co.uk/} and the Web Portal is at \url{http://whiterock.tmilner.co.uk}.
-=======
 The project is currently hosted on an Amazon EC2 server owned by a group member. Having a private server like this has allowed us to configure it as we require. The server is currently running Ubuntu Linux Server Edition with Apache Webserver, PHP and MySQL database installed. Git is used to push documents up to the server which are then automatically copied into the correct folder for the webserver. Each part of the project can then be given a unique subdomain for testing purposes. Currently the API is hosted at \url{http://whiterockapi.tmilner.co.uk/} and the Web Portal is at \url{http://whiterock.tmilner.co.uk}.
->>>>>>> 3cf77282593fb25b98c8814aa8a6eee2ae2e01e2
 
 \begin{description}
 \item[Ubuntu Linux Server Edition] An open source operating system based upon the Linux kernel. Free to use and modify, and developed specifically for use of servers. 
@@ -144,13 +145,7 @@ The project is currently hosted on an Amazon EC2 server owned by a group member.
 \end{description}
 
 
-\section{Project Progress}
-%- THIS IS THE OVERVIEW SECTION
-%- Show the subsystem designs and explain the current structure of the project. 
-%- Possible to move the risk management and schedule sections up here if people feel it reads better. Depends how big those sections get.
-%- Mention Amazon EC2 for testing purposes
-
-\section{Database}
+\section{Database Progress}
 
 %- Why do we need a database, what data will it store?
 A relational database has been created to store persistent data for the web portal and Android application.
@@ -576,11 +571,11 @@ Whilst not currently implemented, the ContentProvider and Authentication systems
 Further information can be found at \url{http://developer.android.com/training/sync-adapters/index.html}.
 
 
-\subsection{API}
+\section{API Progress}
 
 A RESTful API has been created using the technologies discussed in section \ref{sec:techAPI}. There are several important parts to the API, first it must have a coherent set of routes/urls for access to all if its functionality, secondly it must provide a method of authenticating users and finally it must adhere to to principles of REST as closely as possible. 
 
-\subsubsection{Routes}
+\subsection{Routes}
 
 The API is called through a series of routes, it was important to make these routes as simple and coherant as possible.
 
@@ -612,14 +607,18 @@ To reduce load on the server any request will also return all the data that belo
 
 Every request will respond with a JSON version of the object that the route points too. POST and PUT methods require data to be passed to the server, the API has been configured so that all request data should come in the form of a JSON object. 
 
-One issue we faced while developing the API was CORS complience. CORS is Cross-Origin Resource Sharing and limits AJAX requests, the kind that will be used to access the API, to the same domain only. As the API is on a seperate sub-domain the CORS settings of a web browser would not allow requests to be sent. To fix this a special OPTIONS route had to be added. The route will respond to any url where the method is OPTIONS. It respons with a set of headers which specify which domains should be able to access the API, what methods they can use and what headers they can pass. Thease headers need to be passed with every request after the OPTIONS as well so they were initalised before the routes are processed meaning all requets will provide them. The API was then complient with CORS and requests are allowed from any domain if they provide the correct headers. 
+\subsubsection{CORS}
+CORS, Cross-Origin Resource Sharing, limits requests to extenal domians unless the explicitly allow it to the same domain only. As the API is on a seperate sub-domain the CORS settings of a web browser would not allow requests to be sent. To fix this a special OPTIONS route had to be added. It respons with a set of headers which specify which domains should be able to access the API, what methods they can use and what headers they can pass. Thease headers need to be passed with every request as well as the OPTIONS so they were initalised before the routes are processed meaning all requets will provide them. The API has been configured with all CORS headers and requests are allowed from any domain during the testing process. 
 
-\subsubsection{Authentication}
+\subsection{Authentication}
 
-As RESTful API's are meant to be stateless, authentication must be handled in an unusual mannor. The method for this was based upon the system in use at Amazon Web Services\cite{auth}. Users have a unique private key, automatically generated from their password, 
+As RESTful API's are meant to be stateless, authentication must be handled in an unusual mannor. The method for this was based upon the system in use at Amazon Web Services\cite{auth}. Users have a unique private key, automatically generated from their password. This private key is used to generate a signature of the data they are sending to the server. There are two compulsary headers, X-TIMESTAMP and X-USERNAME, which are used ensure there is some data to hash. The signature is sent in the header X-HASH and is then recomputed on the server using the stored private key for the user. If the two match it can be assumed that the user has the correct password and is authenticated with the apropriate permisions. This system is simpler than alternatives like OAuth which are complicated and cumbersome to implement. 
 
+The signature is generated using a keyed-hash message authentication code (HMAC) which takes the private key and the message to send (The data) and generates a hash using a specific algorithm. For the HASH we chose to use SHA1 which stands for 'Secure Hashing Algorithm'. It generates a 160 bit hash which has is faily secure but is much faster than longer alternatives such as SHA-256 or SHA-512. As the timestamp is used to validate that the request is not only correct but also recent it is highly unlikely to get two hashes which are valid at the same time even with such a small key length. 
 
-\subsection{Web Portal}
+To generate the Private Key the PBKDF2 (Password-Based Key Derivation Function 2) algorithm is used. This takes in the users password and a salt which is retrieved form the database. It then preforms 1000 iterations of the SHA1 algorithm to generate a Private Key. This creates a very secure private key and makes calculating the password impossible. 
+
+\section{Web Portal}
 
 \subsubsection{Web Application}
 
