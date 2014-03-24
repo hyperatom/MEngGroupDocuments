@@ -67,7 +67,7 @@ For this project the choice was straightforward, the team has experience with An
 \subsubsection{Devices}
 A number of devices are being used during development of the application. They range in size, power and operating system to ensure that we have a reasonable set of possible configurations to test our application.
 
-\begin{longtable}{|c|p{8cm}|}\hline
+\begin{longtable}{c|p{8cm}}
 \textbf{Device} & \textbf{Specification} \\ \hline
 Tesco Hudl & \begin{itemize}
 \item 7 Inch IPS LCD.
@@ -99,6 +99,11 @@ To keep the Application and the website in sync, and allow for future developmen
 \end{description}
 
 For the API the Slim Framework\cite{slim} was chosen. This framework is designed for creating lightweight restful API's and websites and provides a versatile and well tested bases for the work. There were several other choices for this framework, but Slim was chosen because it was the most popular and well documented option. The Paris ORM(Object Relation Mapper) Framework\cite{paris} was also chosen to assist in database access. The ORM uses simple database models to reduce the steps in the process of interacting with the database. This framework makes it very easy to work with databases, drastically cutting the code needed to retrieve data and process it into objects. Paris was the only ORM of this type we could find for PHP and  For example, if you had a simple database with just Documents and Users it would be possible to model this using just the code below, in Listing~\ref{lst:model}. There are two model definitions and then 2 very basic lines of code which return a user object in the variable \lstinline{$user}. The second line then queries \lstinline{$user} to get all the documents associated with that user~\cite{TomMilestone2}. 
+
+\lstset{language=PHP,
+keywordstyle=\color{Maroon},
+commentstyle=\color{OliveGreen},
+showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyle=\color{Blue}}
 
 \begin{lstlisting}[captionpos=b, caption=Model Snippet, label=lst:model, frame=single]
 class User extends Model {
@@ -602,7 +607,8 @@ To reduce load on the server any request will also return all the data that belo
 
 Every request will respond with a JSON version of the object that the route points too. POST and PUT methods require data to be passed to the server, the API has been configured so that all request data should come in the form of a JSON object. 
 
-One issue we faced while developing the API was CORS complience. CORS is Cross-Origin Resource Sharing and limits AJAX requests, the kind that will be used to access the API, to the same domain only. As the API is on a seperate sub-domain the CORS settings of a web browser would not allow requests to be sent. To fix this a special OPTIONS route had to be added. The route will respond to any url where the method is OPTIONS. It respons with a set of headers which specify which domains should be able to access the API, what methods they can use and what headers they can pass. Thease headers need to be passed with every request after the OPTIONS as well so they were initalised before the routes are processed meaning all requets will provide them. The API was then complient with CORS and requests are allowed from any domain if they provide the correct headers. 
+\subsubsection{CORS}
+CORS, Cross-Origin Resource Sharing, limits requests to extenal domians unless the explicitly allow it to the same domain only. As the API is on a seperate sub-domain the CORS settings of a web browser would not allow requests to be sent. To fix this a special OPTIONS route had to be added. It respons with a set of headers which specify which domains should be able to access the API, what methods they can use and what headers they can pass. Thease headers need to be passed with every request as well as the OPTIONS so they were initalised before the routes are processed meaning all requets will provide them. The API has been configured with all CORS headers and requests are allowed from any domain during the testing process. 
 
 \subsection{Authentication}
 
