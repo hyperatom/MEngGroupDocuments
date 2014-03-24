@@ -30,6 +30,8 @@
 
 \patchcmd{\thebibliography}{\section*}{\subsection}{}{}
 
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
 % Table padding
 \renewcommand{\arraystretch}{1.5}
 
@@ -47,9 +49,11 @@
 %- Outline of Document (what we cover in the document).
 
 \section{Technology Choices}
+\label{sec:techChoice}
 %- What APIs, Libraries, IDEs etc we are using, compared with other options we had. Argue our choices.
 
 \subsection{The API}
+\label{sec:techAPI}
 To keep the Application and the website in sync, and allow for future developements such as aditional applications, an RESTful API (Application Programming Interface) was created.
 
 \begin{description}
@@ -58,7 +62,7 @@ To keep the Application and the website in sync, and allow for future developeme
 \item[REST] Representational State Transfer, is a architecture style which was used to design HTTP/1.1 (Hyper Text Transfer Protocol Version 1.1) and the URI (Universal Resource Identifier) standards. It consists of a set of constraints on components, data and there connections. The primary constraint is a Client-Sever separation, with the server being responsible for data storage, and the client responsible for the user interface and user state. The server is also required to be stateless which means no client context can be stored on the server.
 \end{description}
 
-For the API the Slim Framework\cite{slim} was chosen. This framework is designed for creating lightweight restful API's and websites and provides a versatile and well tested bases for the work. There were several other choises for this framework, but Slim was chosen becouse it was the most popular and well documented option. The Paris ORM(Object Relation Mapper) Framework\cite{paris} was also chosen to assist in database access. The ORM uses simple database models to reduce the steps in the process of interacting with the database. This framework makes it very easy to work with databases, drastically cutting the code needed to retrieve data and process it into objects. For example, if you had a simple database with just Documents and Users it would be possible to model this using just the code below. There are two model definitions and then 2 very basic lines of code which return a user object in the variable \lstinline{$user}. The second line then queries \lstinline{$user} to get all the documents associated with that user. \cite{TomMilestone2} 
+For the API the Slim Framework\cite{slim} was chosen. This framework is designed for creating lightweight restful API's and websites and provides a versatile and well tested bases for the work. There were several other choises for this framework, but Slim was chosen becouse it was the most popular and well documented option. The Paris ORM(Object Relation Mapper) Framework\cite{paris} was also chosen to assist in database access. The ORM uses simple database models to reduce the steps in the process of interacting with the database. This framework makes it very easy to work with databases, drastically cutting the code needed to retrieve data and process it into objects. Paris was the only ORM of this type we could find for PHP and  For example, if you had a simple database with just Documents and Users it would be possible to model this using just the code below. There are two model definitions and then 2 very basic lines of code which return a user object in the variable \lstinline{$user}. The second line then queries \lstinline{$user} to get all the documents associated with that user. \cite{TomMilestone2} 
 
 \begin{lstlisting}
 class User extends Model {
@@ -78,7 +82,19 @@ $documents = $user->documents()->find_many();
 \end{lstlisting}
 
 \subsection{The Server}
-The project is currently hosted on an Amazon EC2 server owned by a group member. Having a private server like this has allowed us to configure it as we require. The server is currently running Ubuntu Linux with Apache webserver, PHP and MySQL database installed. Git is used to push documents up to the server which are then automatically coppied into the correct folder for the webserver. Each part of the project can then be given a unique subdomain for testing purposes. Currently the API is hosted at \url{http://whiterockapi.tmilner.co.uk/} and the Web Portal is at \url{http://whiterock.tmilner.co.uk}.
+The project is currently hosted on an Amazon EC2 server owned by a group member. Having a private server like this has allowed us to configure it as we require. The server is currently running Ubuntu Linux Server Edition with Apache Webserver, PHP and MySQL database installed. Git is used to push documents up to the server which are then automatically coppied into the correct folder for the webserver. Each part of the project can then be given a unique subdomain for testing purposes. Currently the API is hosted at \url{http://whiterockapi.tmilner.co.uk/} and the Web Portal is at \url{http://whiterock.tmilner.co.uk}.
+
+\begin{description}
+\item[Ubuntu Linux Server Edition] An open source operataing system based upon the Linux kernal. Free to use and modify, and developed specifically for use of servers. 
+
+\item[Apache Webserver] An highly popular open source web server. Free to use and installed as default in Ubuntu Linux Server Edition.
+
+\item[PHP] The programming language that is being used to develop the web service. It requires a runtime which is installed as an addon to Apache Webserver. 
+
+\item[MySQL] A popular SQL (Structured Query Language) database system. Developed by Sun Enterprises and free to use. 
+
+\item[Git] A distributed source control system. Used to track changed to code and share changed between developers in a systematic way. 
+\end{description}
 
 
 \section{Project Progress}
@@ -129,7 +145,7 @@ The designer supports a range of associativities such as one-one (1-1), one-many
 Some of these associativities were used in the White Rock Trails schema as shown in Figure \ref{fig:DatabaseSchema}.
 For example, the \emph{Walk} entity can have many \emph{WalkReviews}, one \emph{User} who created it, many \emph{Waypoints}, one \emph{EnglishWalkDescription} and one \emph{WelshWalkDescription}.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[angle=90, width=1\linewidth]{./img/DatabaseSchema}
 \caption{Schema of the White Rock Trails relational database.}
@@ -160,15 +176,15 @@ For example, the \emph{Walk} entity can have many \emph{WalkReviews}, one \emph{
 
 \subsection{API}
 
-There are several important parts to the API, first it must have a coherent set of routes/urls for acces to all if its functionality, secondly it must provide a method of authenticating users and finaly it must adhear to to principles of REST as closely as possible. 
+A RESTful API has been created using the technologies discused in section \ref{sec:techAPI}. There are several important parts to the API, first it must have a coherent set of routes/urls for acces to all if its functionality, secondly it must provide a method of authenticating users and finaly it must adhear to to principles of REST as closely as possible. 
 
 \subsubsection{Routes}
 
 The API is called through a series of routes, it was important to make these routes as simple and coherant as possible.
 
-\begin{longtable}{p{0.45\textwidth}|p{0.35\textwidth}|p{0.1\textwidth}}\hline
+\begin{longtable}{m{0.45\textwidth}|m{0.35\textwidth}|C{0.11\textwidth}}\hline
     \textbf{Route} & \textbf{Return value} & \textbf{Methods} \\\hline
-    /walks & All walks & GET, POST\\ \hline
+    /walks & All walks & GET POST\\ \hline
     /walks/\$id & The walks with the ID \$id. & GET PUT DELETE\\ \hline
     /walks/\$id/waypoints & All the waypoints for the walk with the ID \$id. & GET POST\\ \hline
     /walks/\$id/waypoints/\$wid & The waypoint with the ID \$wid. & GET PUT DELETE \\ \hline
@@ -180,12 +196,18 @@ The API is called through a series of routes, it was important to make these rou
     /walks/\$id/waypoints/\$wid/videos/\$vid & The video with the ID \$vid. & GET PUT DELETE \\ \hline
     /users & All users. & GET POST \\\hline
     /users/\$id & The user with the ID \$id. & GET PUT DELETE \\\hline
+    /users/\$id/settings & A users settings. & GET PUT \\\hline
     /session & A request to authenticate. & GET\\\hline
     /session/salt & Returns a random salt for registering a user. & GET\\\hline
     /session/salt/\$username & Get the a salt for a specific user with the username \$username. & GET\\\hline
     \caption {The routes for the API}
     \label{routes}
 \end{longtable}
+
+The routes are structured in such a way that they help the user find the data they are looking for. They are structred similar to the database structure with waypoints belonging to walks and images, audio and videos belonging to waypoints. 
+
+To reduce load on the server any request will also return all the data that belongs to it, this means when a walk is requested it will contain all of its waypoints along with the media for each waypoint. This ensures the server is not overloaded with requests and will increase the speed of applications using the API as fewer requests are required. 
+
 
 \subsection{Web Portal}
 
