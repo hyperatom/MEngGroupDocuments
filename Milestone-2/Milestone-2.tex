@@ -242,7 +242,7 @@ For example, the \emph{Walk} entity can have many \emph{WalkReviews}, one \emph{
 
 \begin{figure}[H]
 \centering
-\includegraphics[angle=90, width=1\linewidth]{./img/DatabaseSchema}
+\includegraphics[angle=90, width=1\textwidth]{./img/DatabaseSchema}
 \caption{Schema of the White Rock Trails relational database.}
 \label{fig:DatabaseSchema}
 \end{figure}
@@ -320,17 +320,129 @@ To generate the Private Key the PBKDF2 (Password-Based Key Derivation Function 2
 
 
 \section{User Interface Design}
-%- Heuristic Evaluations on similar products
+
+\subsubsection{Heuristic Evaluation}
 %-- Explain how we are doing the evaluation blahblah nielsen etc.
-%-- List of tasks for evaluators to complete (we should really ALL be involved in doing the evaluations).
-%-- Problems found when completing each task
-%- Our prototype UI 1
-%-- show how it meets reqs, how heuristics helped design.
-%-- Heuristics on this etc.
-%- Our prototype UI 2
-%-- show it meets reqs, how heuristics helped design.
-%-- Heuristics
-%- repeat as necessary.
+
+A heuristic evaluation can be thought of as an inspection upon a product's user interface. Inspectors act as potential users, carrying out typical, everyday tasks on the product, documenting any problem they expect a user will have. Performing systematic inspections can uncover numerous issues with a product's user interface. Detecting these issues allows developers to evaluate and then make improvements to their product. A small set of evaluators carry out the inspection, judging how well the user interface meets a set of heuristic design rules. An initial set of heuristics were proposed by Neilsen and Molich in 1990 CITE!!!!. These heuristics were then refined by Neilsen and are as follows:
+
+\begin{itemize}
+  \item \textbf{Visibility of system feedback}\\ The system should always keep users informed about what is going on, through
+  appropriate feedback within reasonable time.
+  \item \textbf{Complexity of application}\\ The system should always keep users informed about what is going on, through  appropriate feedback within reasonable time.
+  \item \textbf{Task navigation and user controls}\\ Users often choose system functions by mistake and will need a clearly marked
+  ``emergency exit'' to leave the unwanted state without having to go through an extended dialogue. Support undo and redo.
+  \item \textbf{Consistency and standards}\\ Users should not have to wonder whether different words, situations, or actions mean the same thing. Follow platform conventions.
+  \item \textbf{Error prevention}\\ Even better than good error messages is a careful design which prevents a problem from occurring in the first place. Either eliminate error-prone conditions or check for them and present users with a confirmation option before they commit to the action.
+  \item \textbf{Recognition rather than recall}\\ Minimize the user's memory load by making objects, actions, and options visible. The user should not have to remember information from one part of the dialogue to another. Instructions for use of the system should be visible or easily retrievable whenever appropriate.
+  \item \textbf{Efficient to use}\\ Accelerators - unseen by the novice user -- may often speed up the interaction for the expert user such that the system can cater to both inexperienced and experienced users. Allow users to tailor frequent actions.
+  \item \textbf{Simplicity and appeal}\\ Dialogues should not contain information which is irrelevant or rarely needed. Every extra unit of information in a dialogue competes with the relevant units of information and diminishes their relative visibility.
+  \item \textbf{Be tolerant and reduce cost of errors}\\ Error messages should be expressed in plain language (no codes), precisely indicate the problem, and constructively suggest a solution.
+  \item \textbf{Help Support}\\ Even though it is better if the system can be used without documentation, it may be necessary to provide help and documentation. Any such information should be easy to search, focused on the user's task, list concrete steps to be carried out, and not be too large.
+  
+\end{itemize}
+
+\subsubsection{List of tasks}
+
+Below is a list of ten tasks a typical user of the application may wish to carry out. The below tasks are to be completed during the heuristic evaluation:\\
+
+\begin{enumerate}
+  \item Log in using a verified account
+  \item Log out of an account
+  \item Create a walk
+  \item Search a walk
+  \item Download a walk
+  \item Delete a walk
+  \item Add a way-point to am existing walk
+  \item Edit description of an existing walk
+  \item Edit way-point location of an existing walk
+  \item Edit account details
+\end{enumerate}
+
+\subsubsection{Similar Products}
+As part of the heuristic evaluation, two similar products were analysed and tested. The first product being TimbleOutdoors CITE!!! and the second ViewRanger GPS CITE!!!
+
+\subsubsection{TimbleOutdoors}
+
+This section documents the usability problems discovered during the TimbleOutdoors evaluation. 
+
+\begin{itemize}
+	\item\textbf{Usability problem:}\\
+	
+	\item\textbf{Task attempted when problem occurred?}\\
+	
+	\item\textbf{Where did the problem occur?}\\
+	
+	\item\textbf{What suitable solution will solve the problem?}\\
+\end{itemize}
+
+\subsubsection{ViewRanger GPS}
+
+This section documents the usability problems discovered during the ViewRanger GPS evaluation. 
+
+\begin{itemize}
+	\item\textbf{Usability problem:}\\
+	
+	\item\textbf{Task attempted when problem occurred?}\\
+	
+	\item\textbf{Where did the problem occur?}\\
+	
+	\item\textbf{What suitable solution will solve the problem?}\\
+\end{itemize}
+
+\subsubsection{Prototype Designs}
+
+Prototyping is an important aspect of software development. Creating prototype designs allows developers to produce a simplified version of a potential product. This means feedback can be gathered from users early in the project. It also allows developers to assess their prototype product, ensuring it meets the requirements set out by a client. This section of the document will analyse two prototype stages. First, a low level design that includes basic application layout and simple features. The second prototype design shows the application during the development stage and includes additional features.
+
+\subsubsection{Prototype 1}
+
+The first prototype began as a series hand drawn template designs. These basic mock-ups were adapted to create a more impressive prototype design using Evolus Pencil, an open source user interface design tool that allows for professional prototype designs to be produced. (CITEEEE!!!!!!!!)\\
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=10cm]{./img/hand_drawn.jpg}
+\caption{Walk View - Hand drawn Design} 
+\end{center}
+\end{figure}
+
+Figure x illustrates an original mock-up design for a typical walk interface. The majority of the interface is made up of a map, displaying the user's current location. A side view will include a menu option and a list of way-points relevant to a specific walk trail. A footer bar will include information about distance and time expected to next point of interest. This simple design was used to create the second stage of prototype 1.\\
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=12cm]{./img/pencil_proto1.jpg}
+\caption{Walk View - Evolus Pencil Design} 
+\end{center}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=12cm]{./img/pencil_choose_walk.jpg}
+\caption{Choose A Walk View - Evolus Pencil Design} 
+\end{center}
+\end{figure}
+
+
+Similar to ``Walk View``, the ``Choose A Walk View''(figure x) includes of a side bar, header bar. This interface view allows the user to scroll through a list of walks and be presented with information about each walk, such as walk name, description, map location, length of walk and the number of walk points of interests (way-points). This interface view also includes a button, allowing the user to begin a chosen walk. For additional prototype 1 designs, see Appendix x. 
+
+\subsubsection{Prototype 2}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=12cm]{./img/app_choose_walk.png}
+\caption{Choose A Walk View - Android Application Design} 
+\end{center}
+\end{figure}
+
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=12cm]{./img/app_walk_view.png}
+\caption{Walk View - Android Application Design} 
+\end{center}
+\end{figure}
+
+Prototype 2 was created using Eclipse ADT CITE!!!!!!!!. Through the use of XML CITE!!!, a series of application interface designs were produced. Figure x and y are both improvements of interfaces described in section X, prototype 1. Alterations were made, ensuring the issues that arose during the heuristic evaluation of prototype 1 were overcome. STATE ISSUES THAT WERE OVERCOME
+
 
 \section{Android Application Progress}
 \lstset{language=Java,
