@@ -201,9 +201,14 @@ The project is currently hosted on an Amazon EC2 server owned by a group member.
 \section{Database Progress}
 
 %- Why do we need a database, what data will it store?
+This section will discuss the progress made towards the development of the White Rock Digital Trails database.
+Overall, a substantial amount of progress has been made.
+The database is mostly completed and is able to provide data to the web portal and Android application.
 A relational database has been created to store persistent data for the web portal and Android application.
 The database stores data relating to entities such as walks, way points, users and media locations.
 The database is currently hosted by an Amazon EC2 server (see technology choices) using MySQL.
+
+\subsection{Design Process}
 
 %- How was the database designed?
 The database schema was designed using Visual Studio's entity designer which allows developers visually develop databases.
@@ -212,18 +217,23 @@ A table was created for each entity or concept that required persistent storage 
 Columns were then added to each table to represent the attributes of each entity.
 For example, the \emph{EnglishWalkDescription} table has an \emph{Id}, \emph{Title}, \emph{ShortDescription} and \emph{LongDescription}. The column \emph{Id} is mandatory for standalone entities as the rest of their properties are identified by this unique key. 
 
+\subsection{SQL Generation}
+
 %- How was the database be generated from this model?
 The Visual Studio entity designer was able to generate an SQL script to create the database from the design shown in Figure \ref{fig:DatabaseSchema}. This script was executed on the MySQL server which in turn created the tables designed in the entity designer.
+
+\subsection{Exposing Data}
 
 %- How will the database be exposed if not directly?
 The White Rock Trails database is not publicly exposed and can only be interfaced through a public facing API (see section \ref{sec:techAPI}). 
 This will ensure the robustness of the database as additional business logic from the API protects the underlying database from erroneous data and unauthorized access.
-
 %- What applications will consume data from this database?
 The web portal and Android application will both consume data from this database through the public API. 
 The web portal will consume data with every request made by users from their web browser. 
 In contrast, the Android application will synchronise a local copy of the database through the API. 
 This ensures that the application can be used offline as many walks will not be in range of an internet access point.
+
+\subsection{Requirements Confirmation}
 
 %- How does it's design conform to the requirements?
 The database design conforms to the requirements required by the client which are defined in the Initial Document. 
@@ -233,6 +243,8 @@ English and Welsh translations were present in the same tables for both the walk
 These tables were normalised as shown in Figure \ref{fig:DatabaseSchema} by moving the English and Welsh descriptions into separate tables.
 In addition, the media locations for each way point were also present in the same table.
 This was normalised by moving different media types such as images, audio and video into tables \emph{WaypointImage}, \emph{WaypointAudio} and \emph{WaypointVideo} respectively.
+
+\subsection{Associativities}
 
 %- Describe the relationships (one-one) (one-many) (many-many)
 Relationships were defined between tables using Visual Studio's entity designer. 
@@ -1072,12 +1084,63 @@ The team has also encountered unforeseen risks, detailed below:
 \section{Project Schedule Review}
 
 %Introduce section
-This section will review the project schedule outlined in the initial document of this project. Currently, it is too difficult to assess precisely whether the project is on schedule. The user interfaces and business logic of the Android application are being developed in parallel by two different developers. At the time of writing, the merging process of these two subsystems has only recently begun. Therefore, a time frame is too difficult to predict as the complexity of this process is not yet known. In addition, the complexity of a synchronisation solution for the database and Android application is yet to be completed and forms a major milestone in the development process. Progress on the web portal however, is on schedule and is discussed in section \ref{sec:web-portal}.
+This section will review the project schedule outlined in the initial document of this project. Currently, it is too difficult to assess precisely whether the project is on schedule. The user interfaces and business logic of the Android application are being developed in parallel by two different developers. At the time of writing, the merging process of these two subsystems has only recently begun. Therefore, a time frame is too difficult to predict as the complexity of this process is not yet known. In addition, the complexity of a synchronisation solution for the database and Android application is yet to be completed and forms a major milestone in the development process. Progress on the web portal however, is on schedule and is discussed in section \ref{sec:web-portal}. 
 
-%- What sprints we have completed.
+%- Client feedback so far, previous client meetings, planned meetings, launch event we attended etc.
+The client met in person with the development team on the 26th of February and reviewed the progress that had been achieved. The client was satisfied with the amount of progress made on both the Android application and web portal.  He also brought three target devices (Tesco Hudle) to install the application on for demonstration to the White Rock Trails committee.
+
+The development team attended a White Rock Digital Trails Celebration Event which was held on Saturday 1st of February 2014 at the Swansea Museum Collection Centre in Landore. The event featured some short talks and speeches from the White Rock team followed by a buffet lunch. The development team was present at this event to demonstrate the Android application and web portal to guests of the event. A Tesco Hudle and smart phone was used to demonstrate that the application could be run on a variety of different Android devices. All four team members discussed the software with guests and highlighted their responsibilities within the project.
+
+A future meeting will be planned with the client so more complete versions of the Android application and web portal can be demonstrated. This will allow more accurate feedback to be generated as the client will be able to interact with fully functional prototypes. The feedback from this meeting will be used to revise and enhance the prototype to ensure the software meets the client's requirements and expectations.
+
+%- What user storys have been completed
+Figure \ref{fig:UserStoryProgress} demonstrates the progress made developing the user stories of the White Rock Digital Trails software. The figure is a screen capture of the Scrum software that the team is using to manage the delegation and tracking of development tasks. The leftmost column contains user stories that have not yet been developed. The centre column shows those that are currently in progress and being developed. Finally, the rightmost column contains user stories that are fully complete and tested.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{./img/UserStoryProgress}
+\caption{Software development user story progress.}
+\label{fig:UserStoryProgress}
+\end{figure}
+
+
+\subsubsection{Software Development Timetable}
+\label{sec:plan-software-dev}
+
+This section presents a revised timetable that will be used for the development of the Digital Trails software. This timetable remains for the majority, the same as that outlined in the initial document of this project with the addition of more client meetings and a demonstration event. Tasks are time boxed and given a start and end date for which they must be completed in for the project to deliver on time. As the development team are using 1-2 week sprints based on the amount of work that needs to be done, an abstract time box is defined for each sprint activity. Sprints will run from the start date until the end date by which time the final software should be delivered \cite{initialDoc}.
+
+The revised timetable presented in Figure \ref{fig:software-dev-table} reflects the addition of two tasks, namely the \emph{White Rock Demonstration} and \emph{Client Meeting 4}. The former required the development team to demonstrate progress made on the Android application and web portal to members of the White Rock team at a celebration event. The latter involved a brief meeting to demonstrate further progress to the client where the team received feedback on the current state of the software.
+
+\renewcommand{\arraystretch}{1.5}
+\newcommand*{\tableIndent}{\hspace*{0.4cm}}
+
+\begin{figure}[H]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline \textbf{Task} & \textbf{Start Date} & \textbf{End Date} \\ 
+\hline\hline{Client Meeting 1} & \multicolumn{2}{c|}{25 Oct 2013} \\ 
+\hline{Client Meeting 2} & \multicolumn{2}{c|}{15 Nov 2013} \\
+\hline{Client Meeting 3} & \multicolumn{2}{c|}{14 Jan 2014} \\
+\hline{White Rock Demonstration} & \multicolumn{2}{c|}{1 Feb 2014} \\
+\hline{Client Meeting 4} & \multicolumn{2}{c|}{25 Feb 2014} \\
+\hline \multirow{2}{*}{\textbf{Sprints}} & \multicolumn{2}{c|}{1-2 Week Iterations} \\ \cline{2-3}
+ & 22 Jan 2014 & 09 May 2014 \\
+\hline\tableIndent{Backlog Refinement} & \multicolumn{2}{c|}{4 Hours} \\
+\hline\tableIndent{Analyse} & \multicolumn{2}{c|}{4 Hours - 1 Day} \\
+\hline\tableIndent{Develop} & \multicolumn{2}{c|}{3-9 Days} \\
+\hline\tableIndent{Test} & \multicolumn{2}{c|}{1-2 Days} \\
+\hline\tableIndent{Client Feedback} & \multicolumn{2}{c|}{4 Hours - 1 Day} \\
+\hline\tableIndent{Deploy} & \multicolumn{2}{c|}{2-4 Hours} \\
+\hline 
+\end{tabular}
+\caption{Software development time table.\label{fig:software-dev-table}}
+\end{figure}
+
+\subsection{Requirements Progress}
+
+This section outlines the progress made towards completion of each requirement defined in the initial document\cite{initialDoc}. All requirements have remained the same as those defined in the initial document as the client has not requested any changes during development.
 
 %- What reqs are completed Chris Lewis' favourite job!).
-
 \subsubsection{Web Portal}
 
 \begin{longtable}{ p{0.14\textwidth}|p{0.2\textwidth}|p{0.58\textwidth} }
@@ -1126,12 +1189,12 @@ APPREQ12 & Not Implemented & The application does not give users the option to s
 APPREQ13 & Not Implemented & The application does not give users the option to store data on a SD card if available. \\ \hline
 APPREQ14 & Completed &  The application detects a user's GPS location consistently between devices. \\ \hline
 APPREQ15 & Not Implemented & The application does not display the preferred order to visit waypoints in a walk. \\ \hline
-APPREQ16 & Not Implemented & The application does not automatically display waypoint information when re-visited. \\ \hline
+APPREQ16 & Not Implemented & The application does not automatically display waypoint information when a waypoint is re-visited. \\ \hline
 APPREQ17 & Not Implemented & The application does not allow registered users to create, edit and delete their own walks. \\ \hline
 APPREQ18 & Not Implemented & The application does not allow registered users to tag GPS waypoints in their own walks. \\ \hline
 APPREQ19 & Not Implemented & The application does not track the order that GPS waypoints were tagged in a created walk. \\ \hline
 APPREQ20 & Not Implemented & The application does not allow registered users to upload audio, images and video to a waypoint. \\ \hline
-APPREQ21 & Not Implemented & The application does not separate audio, images, text and video waypoint data. \\ \hline
+APPREQ21 & Completed & The application does separate audio, images, text and video waypoint data. \\ \hline
 APPREQ22 & Completed & The application interface features distinctive White Rock branding. \\ \hline
 APPREQ23 & Not Implemented & The application does not allow registered users to contribute waypoints to other user's walks by request. \\ \hline
 APPREQ24 & Not Implemented & The application does not allow users to leave reviews of walks. \\ \hline
@@ -1142,7 +1205,7 @@ APPREQ28 & In Progress & English and Welsh translations for text is currently in
 APPREQ29 & Not Implemented & The application does not allow users to report inappropriate content to an administrator. \\ \hline
 \end{longtable}
 
-\subsubsection{Database Requirements}
+\subsubsection{Database}
 \label{sec:db-reqs}
 
 \begin{longtable}{ p{0.14\textwidth}|p{0.2\textwidth}|p{0.58\textwidth} }
@@ -1174,7 +1237,7 @@ DBREQ23 & Completed & The users store related settings. \\ \hline
 
 \end{longtable}
 
-\subsection{Non-Functional}
+\subsubsection{Non-Functional}
 \label{sec:non-func-reqs}
 
 \begin{longtable}{ p{0.14\textwidth}|p{0.2\textwidth}|p{0.58\textwidth} }
@@ -1194,16 +1257,9 @@ NFREQ10 & In Progress & The application is being developed to be battery efficie
 NFREQ11 & In Progress & The application is being developed to be bandwidth efficient. \\ \hline
 \end{longtable}
 
-%- Did we have to modify any requirements / specs to get this far? Did we add any or drop any?
-%- Create new gantt chart and compare it with the initial one.
-%- Update online sprint software, make it look like we completed sprints on time.
-
-%- Client feedback so far, previous client meetings, planned meetings, launch event we attended etc.
-The client met in person with the development team on the 26th of February and reviewed the progress that had been achieved. The client was satisfied with the amount of progress made on both the Android application and web portal.  He also brought three target devices (Tesco Hudle) to install the application on for demonstration to the White Rock Trails committee.
-
-The development team attended a White Rock Digital Trails Celebration Event which was held on Saturday 1st of February 2014 at the Swansea Museum Collection Centre in Landore. The event featured some short talks and speeches from the White Rock team followed by a buffet lunch. The development team was present at this event to demonstrate the Android application and web portal to guests of the event. A Tesco Hudle and smart phone was used to demonstrate that the application could be run on a variety of different Android devices. All four team members discussed the software with guests and highlighted their responsibilities within the project.
-
-A future meeting will be planned with the client so more complete versions of the Android application and web portal can be demonstrated. This will allow more accurate feedback to be generated as the client will be able to interact with fully functional prototypes. The feedback from this meeting will be used to revise and enhance the prototype to ensure the software meets the client's requirements and expectations.
+%TODO: What sprints we have completed?
+%TODO: Create new gantt chart and compare it with the initial one.
+%TODO: Update online sprint software, make it look like we completed sprints on time.
 
 \section{Summary}
 %- What we have planned next, I guess.
