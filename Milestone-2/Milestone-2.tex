@@ -13,6 +13,7 @@
 \usepackage{longtable}
 \usepackage{tabularx}
 \usepackage{enumitem}
+\usepackage{xcolor}
 \usepackage{url}
 \usepackage[margin=0.8in]{geometry}
 \usepackage[toc,page]{appendix}
@@ -23,7 +24,6 @@
 \usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
 \usepackage{verbatim}
 \usepackage{listings}
-\usepackage[usenames,dvipsnames]{color}
 
 \usepackage{fullpage}
 
@@ -32,6 +32,43 @@
 \patchcmd{\thebibliography}{\section*}{\subsection}{}{}
 
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\definecolor{Blue}{HTML}{1589FF}
+\definecolor{OliveGreen}{HTML}{6CC417}
+\definecolor{Maroon}{HTML}{810541}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
 
 % Table padding
 \renewcommand{\arraystretch}{1.5}
@@ -230,8 +267,30 @@ To reduce load on the server any request will also return all the data that belo
 
 Every request will respond with a JSON version of the object that the route points too. POST and PUT methods require data to be passed to the server, the API has been configured so that all request data should come in the form of a JSON object. 
 
+\lstset{language=json,
+keywordstyle=\color{Maroon},
+commentstyle=\color{OliveGreen},
+showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyle=\color{Blue}}
+
+\begin{lstlisting}[captionpos=b, caption=JSON Return data from /walks/1, label=lst:model, frame=single]
+{
+"brand":{},
+"difficulty_rating":"10",
+"distance_miles":"11.32",
+"download_count":"54",
+"duration_minutes":"35",
+"english_description":{},
+"id":"1",
+"review":[],
+"user":{},
+"user_id":"1",
+"waypoints":[],
+"welsh_description":{}
+}
+\end{lstlisting}
+
 \subsubsection{CORS}
-CORS, Cross-Origin Resource Sharing, limits requests to extenal domians unless the explicitly allow it to the same domain only. As the API is on a seperate sub-domain the CORS settings of a web browser would not allow requests to be sent. To fix this a special OPTIONS route had to be added. It respons with a set of headers which specify which domains should be able to access the API, what methods they can use and what headers they can pass. Thease headers need to be passed with every request as well as the OPTIONS so they were initalised before the routes are processed meaning all requets will provide them. The API has been configured with all CORS headers and requests are allowed from any domain during the testing process. 
+CORS, Cross-Origin Resource Sharing, limits requests to extenal domians unless the explicitly allow it to the same domain only. As the API is on a seperate sub-domain the CORS settings of a web browser will block requests from being sent. To fix this a special OPTIONS route had to be added. It respons with a set of headers which specify which domains should be able to access the API, what methods they can use and what headers they can pass. Thease headers need to be passed with every request as well as the OPTIONS so they were initalised before the routes are processed meaning all requets will provide them. The API has been configured with all CORS headers and requests are allowed from any domain during the testing process. 
 
 \subsection{Authentication}
 
@@ -633,7 +692,7 @@ A number of features have been developed thus far, including login, registration
 %- What tools have been used to create it?
 An IDE (Integrated Development Environment) called Brackets was used to develop the web portal. This software features automatic code completion for JavaScript and GIT integration. The former greatly enhanced development productivity while the latter allowed for easy code collaboration between the programming team. The web portal is currently hosted on a public Amazon EC2 server. This allows the client to interact with the latest web portal version and suggested improvements or alterations.
 
-\subsubsection{Welcome View}
+\subsection{Welcome View}
 
 The welcome view shown in Figure \ref{fig:home} provides visitors with a link to download the Android application and instructs them to login or register account in order to use the portal. A footer has also been added to provide users with navigation links to important resources such as the Android application and \emph{About} page.
 
@@ -644,7 +703,7 @@ The welcome view shown in Figure \ref{fig:home} provides visitors with a link to
 \label{fig:home}
 \end{figure}
 
-\subsubsection{Responsive View}
+\subsection{Responsive View}
 
 Figure \ref{fig:home-responsive} demonstrates a responsive review of the web portal. This is the view that users will see when visiting the web portal on mobile devices such as smart phones and tablets. The responsive design minimizes the menu bar which can be expanded by clicking the button shown in the top right of the figure. In addition, web page content reduces in width and elements become stacked allowing for easier scrolling on mobile devices. The responsive design of the web portal is facilitated by the Bootstrap (see section XXXXXX) CSS and JavaScript library.
 
@@ -655,7 +714,7 @@ Figure \ref{fig:home-responsive} demonstrates a responsive review of the web por
 \label{fig:home-responsive}
 \end{figure}
 
-\subsubsection{Login View}
+\subsection{Login View}
 
 Figure \ref{fig:login} shows the login view that users will see when they click on the \emph{Login} button in the top navigation bar. The login view displays as a modal in front of the web page. This will ensure that users do not have to navigate between pages in order to log in, thus enhancing usability. The login view requires users to input their email address and password followed by clicking the \emph{Login} button. The \emph{Login} button will display a spinner icon whilst the fields are validated to ensure the user is aware that the page is loading. An external validation library is used to validate the fields and display an error or success status. The library uses pre-defined validators to validate the structure of the email address and that the email and password pair is valid when checked against the White Rock Trails API. The validator changes the display of erroneous fields to feature red or green borders and tick or cross icons for invalid and valid fields respectively. A specific error message will also be displayed underneath erroneous fields to inform the reason for the error and allow users to amend it. When users successfully log in, the modal will close and the \emph{Login} and \emph{Registration} buttons shown in the top navigation bar are replaced with the user's full name.
 
@@ -666,7 +725,7 @@ Figure \ref{fig:login} shows the login view that users will see when they click 
 \label{fig:login}
 \end{figure}
 
-\subsubsection{Registration View}
+\subsection{Registration View}
 
 Figure \ref{fig:registration} shows the registration view that users will see when the \emph{Register} button is clicked in the top navigation bar. This view is also implemented as a modal for the same reasons as the login view and to maintain consistency throughout the application. The same validator is also used to validate the registration fields. However, inputs such as \emph{Email Address} and the two password fields require different validators. The former uses a validator that checks whether the provided email address has already been registered by another user. The latter checks whether the two passwords are identical. This will prevent users from registering using a mistyped password and subsequently not being able to log in. Clicking the \emph{Register} button will display a loading spinner inside as described for the login view. When users successfully register, they will be presented with a new confirmation modal instructing them to log in with their new account.
 
@@ -677,7 +736,7 @@ Figure \ref{fig:registration} shows the registration view that users will see wh
 \label{fig:registration}
 \end{figure}
 
-\subsubsection{All Walks View}
+\subsection{All Walks View}
 
 Figure \ref{fig:all-walks} shows the view users will see when they click on the \emph{Walks} button in the top menu bar and select the \emph{All Walks} option. This view displays a list of tiles, each representing a walk in the database. The background of each tile is an image selected from the collection of each walks way point images. Clicking a tile will navigate the user to a walk information view as presented in Figure \ref{fig:walk-info}. The \emph{Add Walk} button and search bar are currently non-functional as those features have not yet been implemented.
 
@@ -688,7 +747,7 @@ Figure \ref{fig:all-walks} shows the view users will see when they click on the 
 \label{fig:all-walks}
 \end{figure}
 
-\subsubsection{Walk Information View}
+\subsection{Walk Information View}
 
 Figure \ref{fig:walk-info} shows the view users will see when they click on a walk tile from the \emph{All Walks} view. As shown in the figure, walk information will be displayed in this view such a title, description, duration, distance, difficulty rating and author. Navigation tabs above this information allow users to navigate between the \emph{Waypoints}, \emph{Reviews} and \emph{Walk} views. Walk data is asynchronously loaded from the database through the API. The Google Maps API is used to display the map shown in the right of the figure. The Google Maps API allows markers to be placed at specific GPS locations contained within the walk data. The map allows users to scroll and zoom around the walk area to gain an understanding of its location.
 
@@ -699,7 +758,7 @@ Figure \ref{fig:walk-info} shows the view users will see when they click on a wa
 \label{fig:walk-info}
 \end{figure}
 
-\subsubsection{Walk Way Points View}
+\subsection{Walk Way Points View}
 
 Figure \ref{fig:walk-waypoints} shows the view that users will see when they click on the \emph{Waypoints} tab of the walk information view. The view shows the list of way points that are represented by markers on the map. Clicking a list item or its corresponding map marker will display a modal containing media uploaded to the way point such as images, videos and audio. However, this feature is still in progress and is not shown in this document.
 
@@ -710,7 +769,7 @@ Figure \ref{fig:walk-waypoints} shows the view that users will see when they cli
 \label{fig:walk-waypoints}
 \end{figure}
 
-\subsubsection{Walk Reviews View}
+\subsection{Walk Reviews View}
 
 Figure \ref{fig:walk-reviews} shows the view that users will see when they click the \emph{Reviews} tab from the navigation tabs bar. This view loads user reviews from the walk data and displays them in a list view as shown in the figure. A library called \emph{Raty} was used to generate the star rating system seen below the title of the review. It takes a review rating integer between 1-5 and generates a star representation.
 
@@ -755,7 +814,50 @@ TODO: Say adapted from Lewis' document.
 	\end{enumerate}
 \end{itemize}
 
-%- Adam/Tom get on the web guidelines.
+\subsection{Web Languages}
+
+\subsubsection{HTML} 
+%Adam
+
+\subsubsection{CSS}
+%Adam
+
+\subsubsection{JavaScript}
+%Adam
+
+\subsubsection{PHP}
+%Tom
+\begin{itemize}
+\item \textbf{Declaring Variables}
+	\begin{enumerate}
+	\item All non-static, non-public member variables begin with a lower case m (e.g. mMyVariable).
+	\item All static variables begin with a lower case s (e.g. sStaticClass).
+    \item All constants are defined in upper-case, with an underscore between words (e.g. CONSTANT\_VAR).
+	\item Variable names begin with a lower case letter, then each consecutive word in the variable's name begins with an upper-case letter (cammelCase).
+	\item Each variable will be declared on a separate line.
+	\item A variable should be declared only when needed.
+	\item Variable names should be as descriptive as possible, avoid unnecessary abbreviations.
+	\item Classes always begin with an upper-case letter.
+	\item File names always match class names.
+	\end{enumerate}
+\item \textbf{Whitespace}
+	\begin{enumerate}
+	\item Always use a single space after a keyword and before a curly brace.
+    \item Always use a single tab for each level of indentation.
+    \item A space should always be used between function parameters.
+    \item A maximum of 2 lines bettwen functions and other code blocks.
+	\end{enumerate}
+\item \textbf{Braces}
+	\begin{enumerate}
+	\item The opening brace goes on the same line as the statement.
+	\item Always use curly braces for conditional statements, even if it only contains one line.
+	\end{enumerate}
+\item \textbf{Documentation}
+	\begin{enumerate}
+	\item All methods and variables are to be documented with Doxygen.
+	\end{enumerate}
+\end{itemize}
+
 
 \section{Risk Analysis Review}
 The project has encountered a selection of the risks outlined in the initial document. These risks are:
