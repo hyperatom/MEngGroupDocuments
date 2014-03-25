@@ -623,6 +623,7 @@ Whilst not currently implemented, the ContentProvider and Authentication systems
 Further information can be found at \url{http://developer.android.com/training/sync-adapters/index.html}.
 
 \section{Web Portal}
+\label{sec:web-portal}
 
 %- What progress has been made on the web portal?
 This section discusses the progress which has been towards development of the web portal. The web portal will allow users of the Android application, full control over the management of their walks. This includes the addition and modification of walks, contributions to other user's walks and the attachment of media such as video, images and audio to specific way points. The web portal aims to provide users with a more intuitive interface to manage walks since the modification of data can be difficult through mobile devices with small screens. 
@@ -777,13 +778,143 @@ The team has also encountered unforeseen risks, detailed below:
 \end{itemize}
 
 \section{Project Schedule Review}
+
+%Introduce section
+This section will review the project schedule outlined in the initial document of this project. Currently, it is too difficult to assess precisely whether the project is on schedule. The user interfaces and business logic of the Android application are being developed in parallel by two different developers. At the time of writing, the merging process of these two subsystems has only recently begun. Therefore, a time frame is too difficult to predict as the complexity of this process is not yet known. In addition, the complexity of a synchronisation solution for the database and Android application is yet to be completed and forms a major milestone in the development process. Progress on the web portal however, is on schedule and is discussed in section \ref{sec:web-portal}.
+
 %- What sprints we have completed.
 %- What reqs / specifications are completed Chris Lewis' favourite job!).
-%- Are we ahead or behind schedule? (hard for us to answer)
+
+\subsubsection{Web Portal}
+
+\begin{longtable}{|p{2.5cm}|p{2.5cm}|p{10cm}|}
+\hline
+\textbf{Code} & \textbf{Status} & \textbf{Comment} \\
+\hline
+WEBREQ1 & Complete & The web portal allows users to register a new account. \\ \hline
+WEBREQ2 & Complete & The web portal allows registered users to log in. \\ \hline
+WEBREQ3 & Complete & The web portal allows registered users to log out. \\ \hline
+WEBREQ4 & Not Implemented & The web portal does not allow registered users to modify their account details. \\ \hline
+WEBREQ5 & Complete & The web portal interface features distinctive White Rock branding. \\ \hline
+WEBREQ6 & Not Implemented & The web portal does not allow registered users to add sub-branding to created walks. \\ \hline
+WEBREQ7 & In Progress & The web portal navigation bar contains a link to the users walk contributions page, however the page has not been created yet. \\ \hline
+WEBREQ8 & Not Implemented & The web portal does not allow registered users to create, edit and delete their own walks. \\ \hline
+WEBREQ9 & Not Implemented & The web portal does not allow registered users to create, edit and delete their own waypoints. \\ \hline
+WEBREQ10 & Not Implemented & The web portal does not allow registered users to add GPS waypoints to a walk. \\ \hline
+WEBREQ11 & Not Implemented & The web portal does not allow registered users to modify the order each waypoint should be visited. \\ \hline
+WEBREQ12 & Not Implemented & The web portal does not allow registered users to upload, edit and delete waypoint data such as images, text, audio and video. \\ \hline
+WEBREQ13 & Not Implemented & The web portal should allow registered users to provide English and Welsh translation for text. \\ \hline
+WEBREQ14 & Completed & The web portal displays download statistics for each of the user's walks. \\ \hline
+WEBREQ15 & Completed & The web portal displays reviews for each of the user's walks. \\ \hline
+WEBREQ16 & Not Implemented & The web portal does not display an average rating for each of the user's walks. \\ \hline
+WEBREQ17 & Not Implemented & The web portal does not notify registered users of waypoint addition requests. \\ \hline
+WEBREQ18 & Not Implemented & The web portal does not allow registered users to accept or reject requested waypoint additions. \\ \hline
+WEBREQ19 & Not Implemented & The web portal does not allow registered users to report bugs and errors. \\ \hline
+WEBREQ20 & Not Implemented & The web portal does not contain a FAQ and user guide. \\ \hline
+\end{longtable}
+
+\subsubsection{Android Application}
+\label{sec:app-reqs}
+
+\begin{longtable}{|p{2.5cm}|p{2.5cm}|p{10cm}|}
+\hline
+\textbf{Code} & \textbf{Status} & \textbf{Comment} \\
+\hline
+APPREQ1 & Completed & The application allows users to register user accounts. \\ \hline
+APPREQ2 & Completed & The application allows registered users to log in. \\ \hline
+APPREQ3 & Completed & The application allows registered users to log out. \\ \hline
+APPREQ4 & Not Implemented & The application should allow registered users to modify their account details. \\ \hline
+APPREQ5 & In Progress & Non functional views have been developed that will allow users to download walks created by registered users. \\ \hline
+APPREQ6 & Not Implemented & The application does not group walks by local area. \\ \hline
+APPREQ7 & Not Implemented & The application does not sort grouped walks by current proximity to the user. \\ \hline
+APPREQ8 & Completed & The application allows users to use Google earth and street maps interchangeably while viewing a walk. \\ \hline
+APPREQ9 & Not Implemented & The application does not allow registered users to choose a default map view for a created walk. \\ \hline
+APPREQ10 & Not Implemented & The application does not download data from a remote database. \\ \hline
+APPREQ11 & Not Implemented & The application does not synchronise data whilst the host device is connected to WiFi. \\ \hline
+APPREQ12 & Not Implemented & The application does not give users the option to synchronise data over cellular networks. \\ \hline
+APPREQ13 & Not Implemented & The application does not give users the option to store data on a SD card if available. \\ \hline
+APPREQ14 & Completed &  The application detects a user's GPS location consistently between devices. \\ \hline
+APPREQ15 & Not Implemented & The application does not display the preferred order to visit waypoints in a walk. \\ \hline
+APPREQ16 & Not Implemented & The application does not display waypoint information even if it has already been visited. \\ \hline
+APPREQ17 & Not Implemented & The application does not allow registered users to create, edit and delete their own walks. \\ \hline
+APPREQ18 & Not Implemented & The application does not allow registered users to tag GPS waypoints in their own walks. \\ \hline
+APPREQ19 & Not Implemented & The application does not track the order that GPS waypoints were tagged in a created walk. \\ \hline
+APPREQ20 & Not Implemented & The application does not allow registered users to upload audio, images and video to a waypoint. \\ \hline
+APPREQ21 & Not Implemented & The application does not separate audio, images, text and video waypoint data. \\ \hline
+APPREQ22 & Completed & The application interface features distinctive White Rock branding. \\ \hline
+APPREQ23 & Not Implemented & The application does not allow registered users to contribute waypoints to other user's walks by request. \\ \hline
+APPREQ24 & Not Implemented & The application does not allow users to leave reviews of walks. \\ \hline
+APPREQ25 & Not Implemented & The application does not allow users to rate walks they have completed. \\ \hline
+APPREQ26 & Not Implemented & The application does not allow users to report bugs and errors. \\ \hline
+APPREQ27 & Not Implemented & The application does not provide links to the application's Twitter and Facebook channels. \\ \hline
+APPREQ28 & Not Implemented & The application does not provide English and Welsh translations for text. \\ \hline
+APPREQ29 & Not Implemented & The application does not allow users to report inappropriate content to an administrator. \\ \hline
+\end{longtable}
+
+\subsubsection{Database Requirements}
+\label{sec:db-reqs}
+
+\begin{longtable}{|p{2.5cm}|p{2.5cm}|p{10cm}|}
+\hline
+\textbf{Code} & \textbf{Requirement} \\
+\hline
+DBREQ1 & Completed & The database has the ability to store a walk.\\ \hline
+DBREQ2 & Completed & Each walk links to a description.  \\ \hline
+DBREQ3 & Completed & The walks table has `Difficultly', `Duration' and `Distance'. \\ \hline
+DBREQ4 & Completed & The database has the ability to store a place, which is a location on a walk.\\ \hline
+DBREQ5 & Completed & The places table links to a walk.\\ \hline
+DBREQ6 & Completed & The places table contains a `Latitude' and `Longitude' to store the position. \\ \hline
+DBREQ7 & Completed & The places table links to a description. \\ \hline
+DBREQ8 & Completed & The database has the ability to store a description for each supported language. \\ \hline
+DBREQ9 & Completed & The descriptions are replicas of each other, but in the correct language. \\ \hline
+DBREQ10 & Completed & The descriptions include a `Title', a `Short Description' and a `Description'.\\ \hline
+DBREQ11 & Completed & The database has the ability to store photos. \\ \hline
+DBREQ12 & Completed & The database has the ability to link photos to places and walks.\\ \hline
+DBREQ13 & Completed & The photos store the location of the photo file in the file system.\\ \hline
+DBREQ14 & Completed & The database has the ability to store videos. \\ \hline
+DBREQ15 & Completed & The database has the ability to link videos to places and walks.\\ \hline
+DBREQ16 & Completed & The videos store the location of the video file in the file system.\\ \hline
+DBREQ17 & Completed & The database has the ability to store audio. \\ \hline
+DBREQ18 & Completed & The database has the ability to link audio to places and walks.\\ \hline
+DBREQ19 & Completed & The audio stores the location of the audio file in the file system.\\ \hline
+DBREQ20 & Completed & The database has the ability to store Users. \\ \hline
+DBREQ21 & Completed & The users have a `Username`, an `Email' and a `Password'.\\ \hline
+DBREQ22 & Completed & The users link to Walks, Places, Photos, Videos and Audio they add. \\ \hline
+DBREQ23 & Completed & The users store related settings. \\ \hline 
+
+\end{longtable}
+
+\subsection{Non-Functional}
+\label{sec:non-func-reqs}
+
+\begin{longtable}{|p{2.5cm}|p{2.5cm}|p{10cm}|}
+\hline
+\textbf{Code} & \textbf{Status} & \textbf{Comment} \\
+
+\hline
+NFREQ1 & In Progress & An agreement with the other development team and client is being discussed with regards to database sharing. \\ \hline
+NFREQ2 & Completed & The user interfaces have been designed to be intuitive to users with little technology experience. \\ \hline
+NFREQ3 & In Progress & The application is being designed to be usable for visually impaired (colour blind) users. \\ \hline
+NFREQ4 & In Progress & The application code is being written to be maintainable for future developers. \\ \hline
+NFREQ5 & In Progress & The application code is being fully documented as it is written. \\ \hline
+NFREQ6 & Completed & The application currently runs efficiently on lower end GPS-enabled android tablets. \\ \hline
+NFREQ7 & Completed & The application currently runs efficiently on android smartphones. \\ \hline
+NFREQ8 & Completed & The application is compatible with typical tablet screen sizes. \\ \hline
+NFREQ9 & Completed & The application scales well when using typical smart phone screen sizes. \\ \hline
+NFREQ10 & In Progress & The application is being developed to be battery efficient by sampling GPS locations based on the user's mode of transport. \\ \hline
+NFREQ11 & In Progress & The application is being developed to be bandwidth efficient. \\ \hline
+\end{longtable}
+
 %- Did we have to modify any requirements / specs to get this far? Did we add any or drop any?
 %- Create new gantt chart and compare it with the initial one.
 %- Update online sprint software, make it look like we completed sprints on time.
+
 %- Client feedback so far, previous client meetings, planned meetings, launch event we attended etc.
+The client met in person with the development team on the 26th of February and reviewed the progress that had been achieved. The client was satisfied with the amount of progress made on both the Android application and web portal.  He also brought three target devices (Tesco Hudle) to install the application on for demonstration to the White Rock Trails committee.
+
+The development team attended a White Rock Digital Trails Celebration Event which was held on Saturday 1st of February 2014 at the Swansea Museum Collection Centre in Landore. The event featured some short talks and speeches from the White Rock team followed by a buffet lunch. The development team was present at this event to demonstrate the Android application and web portal to guests of the event. A Tesco Hudle and smart phone was used to demonstrate that the application could be run on a variety of different Android devices. All four team members discussed the software with guests and highlighted their responsibilities within the project.
+
+A future meeting will be planned with the client so more complete versions of the Android application and web portal can be demonstrated. This will allow more accurate feedback to be generated as the client will be able to interact with fully functional prototypes. The feedback from this meeting will be used to revise and enhance the prototype to ensure the software meets the client's requirements and expectations.
 
 \section{Summary}
 %- What we have planned next, I guess.
