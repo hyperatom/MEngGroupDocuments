@@ -1,0 +1,40 @@
+\begin{thebibliography}{1}
+
+\bibitem{bootstrap}
+Bootstrap css framework.
+\newblock \url{http://getbootstrap.com/}.
+\newblock Accessed: 25-03-2014.
+
+\bibitem{foundation}
+Foundation css framework.
+\newblock \url{http://foundation.zurb.com}.
+\newblock Accessed: 25-03-2014.
+
+\bibitem{paris}
+Paris orm.
+\newblock \url{http://j4mie.github.io/idiormandparis/}.
+\newblock Accessed: 29-01-2014.
+
+\bibitem{slim}
+Slim framework.
+\newblock \url{http://www.slimframework.com}.
+\newblock Accessed: 29-01-2014.
+
+\bibitem{zimit}
+Zimit css framework.
+\newblock \url{http://firezenk.github.io/zimit/}.
+\newblock Accessed: 25-03-2014.
+
+\bibitem{auth}
+Riyad Kalla.
+\newblock Designing a secure rest (web) api without oauth.
+\newblock
+  \url{http://www.thebuzzmedia.com/designing-a-secure-rest-api-without-oauth-authentication/}.
+\newblock Accessed: 22-02-2014.
+
+\bibitem{TomMilestone2}
+Thomas Milner.
+\newblock Milestone 2.
+\newblock Technical report, Swansea University, Febuary 2014.
+
+\end{thebibliography}
