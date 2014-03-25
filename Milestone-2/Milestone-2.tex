@@ -41,8 +41,8 @@
 \definecolor{Maroon}{HTML}{810541}
 \colorlet{numb}{magenta!60!black}
 
-\lstdefinelanguage{json}{
-    basicstyle=\normalfont\ttfamily,
+\lstset{ %
+	basicstyle=\normalfont\ttfamily,
     numbers=left,
     numberstyle=\scriptsize,
     stepnumber=1,
@@ -50,7 +50,10 @@
     showstringspaces=false,
     breaklines=true,
     frame=lines,
-    backgroundcolor=\color{background},
+    backgroundcolor=\color{background}
+}
+
+\lstdefinelanguage{json}{
     literate=
      *{0}{{{\color{numb}0}}}{1}
       {1}{{{\color{numb}1}}}{1}
@@ -104,7 +107,8 @@ For this project the choice was straightforward, the team has experience with An
 \subsubsection{Devices}
 A number of devices are being used during development of the application. They range in size, power and operating system to ensure that we have a reasonable set of possible configurations to test our application.
 
-\begin{longtable}{c|p{8cm}}
+\begin{center}
+\begin{tabular}{c|p{8cm}}
 \textbf{Device} & \textbf{Specification} \\ \hline
 Tesco Hudl & \begin{itemize}
 \item 7 Inch IPS LCD.
@@ -120,7 +124,8 @@ Tesco Hudl & \begin{itemize}
 Other Device & spec \\ \hline
 Other Device 2 & spec \\ \hline
 
-\end{longtable}
+\end{tabular}
+\end{center}
 
 \subsubsection{Minimum Supported OS}
 To ensure the widest user base possible can access the application, the application will support Android devices running on Android 2.3 or higher. This is over 90\% of all Android phones https://developer.android.com/about/dashboards/index.html TODO: ADD TO BIB.
@@ -137,7 +142,7 @@ To keep the Application and the website in sync, and allow for future developmen
 
 For the API the Slim Framework\cite{slim} was chosen. This framework is designed for creating lightweight restful API's and websites and provides a versatile and well tested bases for the work. There were several other choices for this framework, but Slim was chosen because it was the most popular and well documented option. The Paris ORM(Object Relation Mapper) Framework\cite{paris} was also chosen to assist in database access. The ORM uses simple database models to reduce the steps in the process of interacting with the database. This framework makes it very easy to work with databases, drastically cutting the code needed to retrieve data and process it into objects. Paris was the only ORM of this type we could find for PHP and  For example, if you had a simple database with just Documents and Users it would be possible to model this using just the code below, in Listing~\ref{lst:model}. There are two model definitions and then 2 very basic lines of code which return a user object in the variable \lstinline{$user}. The second line then queries \lstinline{$user} to get all the documents associated with that user~\cite{TomMilestone2}. 
 
-\lstset{language=PHP,
+\lstset{language=php,
 keywordstyle=\color{Maroon},
 commentstyle=\color{OliveGreen},
 showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyle=\color{Blue}}
@@ -274,18 +279,18 @@ showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyl
 
 \begin{lstlisting}[captionpos=b, caption=JSON Return data from /walks/1, label=lst:model, frame=single]
 {
-"brand":{},
-"difficulty_rating":"10",
-"distance_miles":"11.32",
-"download_count":"54",
-"duration_minutes":"35",
-"english_description":{},
-"id":"1",
-"review":[],
-"user":{},
-"user_id":"1",
-"waypoints":[],
-"welsh_description":{}
+	"brand":{},
+	"difficulty_rating":"10",
+	"distance_miles":"11.32",
+	"download_count":"54",
+	"duration_minutes":"35",
+	"english_description":{},
+	"id":"1",
+	"review":[],
+	"user":{},
+	"user_id":"1",
+	"waypoints":[],
+	"welsh_description":{}
 }
 \end{lstlisting}
 
