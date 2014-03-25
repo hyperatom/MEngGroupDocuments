@@ -1,4 +1,29 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{angular}
+Angularjs.
+\newblock \url{http://angularjs.org}.
+\newblock Accessed: 25-03-2014.
+
+\bibitem{backbone}
+Backbone js.
+\newblock \url{http://backbonejs.org}.
+\newblock Accessed: 25-03-2014.
+
+\bibitem{bootstrap}
+Bootstrap css framework.
+\newblock \url{http://getbootstrap.com/}.
+\newblock Accessed: 25-03-2014.
+
+\bibitem{ember}
+Emberjs.
+\newblock \url{http://emberjs.com}.
+\newblock Accessed: 25-03-2014.
+
+\bibitem{foundation}
+Foundation css framework.
+\newblock \url{http://foundation.zurb.com}.
+\newblock Accessed: 25-03-2014.
 
 \bibitem{paris}
 Paris orm.
@@ -9,6 +34,11 @@ Paris orm.
 Slim framework.
 \newblock \url{http://www.slimframework.com}.
 \newblock Accessed: 29-01-2014.
+
+\bibitem{zimit}
+Zimit css framework.
+\newblock \url{http://firezenk.github.io/zimit/}.
+\newblock Accessed: 25-03-2014.
 
 \bibitem{auth}
 Riyad Kalla.
