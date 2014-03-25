@@ -335,27 +335,27 @@ The ContentProvider provides valuable functionality when synchronising with the 
 The DbSchema class is an interface which is strictly used for referencing constants, such as table names, and strings containing the SQL used to create each table in the database. Example code can be seen in Listing~\ref{lst:dbSchema}.
 
 \begin{lstlisting}[captionpos=b, caption=DbSchema Snippet, label=lst:dbSchema, frame=single]
-	// Example code snippet from DbSchema.java
+// Example code snippet from DbSchema.java
+
+String VIEW_WAYPOINT_WITH_ENGLISH_DESCR = "waypoint_and_english";
+
+String CREATE_TABLE_WALK = 
+		"CREATE TABLE `walk` (" 
+		+"_id INTEGER PRIMARY KEY AUTOINCREMENT ,"
+		+"duration_minutes INT,"
+		+"distance_miles REAL,"
+		+"download_count INT,"	
+        +"difficulty_rating INT,"
+		+"user_id INT"
+		+")";
 	
-	String VIEW_WAYPOINT_WITH_ENGLISH_DESCR = "waypoint_and_english";
-	
-	String CREATE_TABLE_WALK = 
-			"CREATE TABLE `walk` (" 
-			+"_id INTEGER PRIMARY KEY AUTOINCREMENT ,"
-			+"duration_minutes INT,"
-			+"distance_miles REAL,"
-			+"download_count INT,"
-			+"difficulty_rating INT,"
-			+"user_id INT"
-			+")";
-	
-	String CREATE_TABLE_WALK_BRAND = 
-			"CREATE TABLE `walk_brand` ("
-			+"_id INTEGER PRIMARY KEY AUTOINCREMENT ,"
-			+"name TEXT,"
-			+"logo_file_name TEXT,"
-			+"walk_id INT"
-			+")";
+String CREATE_TABLE_WALK_BRAND = 
+		"CREATE TABLE `walk_brand` ("
+		+"_id INTEGER PRIMARY KEY AUTOINCREMENT ,"
+		+"name TEXT,"
+		+"logo_file_name TEXT,"
+        +"walk_id INT"
+		+")";
 			
 \end{lstlisting}
 
@@ -365,35 +365,35 @@ Responsible for creating, deleting and upgrading the database, as well as openin
 Listing~\ref{lst:dbHandler} provides a snippet of the code used during the creation of a DatabaseHandler instance and how it uses the DbSchema to create the database.
 
 \begin{lstlisting}[captionpos=b, caption=DatabaseHandler Snippet, label=lst:dbHandler, frame=single]
-	public DatabaseHandler(Context context) {
-		super(context, DB_NAME, null, DB_VERSION);
-		
-		// Find the correct path based on Android version.
-		if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-			DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
-		} else {
-			DB_PATH = "/data/data/" + context.getPackageName() + "/databases/";
-		}
-		Log.d(TAG,"DB Path is: " + DB_PATH+DB_NAME);
-		Log.d(TAG, "Version Number: " + android.os.Build.VERSION.SDK_INT);
-		this.mContext = context;
-	}
+public DatabaseHandler(Context context) {
+	super(context, DB_NAME, null, DB_VERSION);
 
-	@Override
-	public void onCreate(SQLiteDatabase db) {
-		Log.d(TAG, "CREATING");
-		// create User tables
-		db.execSQL(DbSchema.CREATE_TABLE_USER);
-		db.execSQL(DbSchema.CREATE_TABLE_SETTING_TYPE);
-		db.execSQL(DbSchema.CREATE_TABLE_USER_SETTINGS);
-		
-		// Create Walk Tables
-		db.execSQL(DbSchema.CREATE_TABLE_WALK);
-		db.execSQL(DbSchema.CREATE_TABLE_WALK_BRAND);
-		db.execSQL(DbSchema.CREATE_TABLE_WALK_REVIEW);
-		db.execSQL(DbSchema.CREATE_TABLE_ENGLISH_WALK_DESCR);
-		db.execSQL(DbSchema.CREATE_TABLE_WELSH_WALK_DESCR);
-	}
+    // Find the correct path based on Android version.
+    if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+        DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
+    } else {
+        DB_PATH = "/data/data/" + context.getPackageName() + "/databases/";
+    }
+    Log.d(TAG,"DB Path is: " + DB_PATH+DB_NAME);
+    Log.d(TAG, "Version Number: " + android.os.Build.VERSION.SDK_INT);
+    this.mContext = context;
+}
+
+@Override
+public void onCreate(SQLiteDatabase db) {
+    Log.d(TAG, "CREATING");
+    // create User tables
+    db.execSQL(DbSchema.CREATE_TABLE_USER);
+    db.execSQL(DbSchema.CREATE_TABLE_SETTING_TYPE);
+    db.execSQL(DbSchema.CREATE_TABLE_USER_SETTINGS);
+
+    // Create Walk Tables
+    db.execSQL(DbSchema.CREATE_TABLE_WALK);
+    db.execSQL(DbSchema.CREATE_TABLE_WALK_BRAND);
+    db.execSQL(DbSchema.CREATE_TABLE_WALK_REVIEW);
+    db.execSQL(DbSchema.CREATE_TABLE_ENGLISH_WALK_DESCR);
+    db.execSQL(DbSchema.CREATE_TABLE_WELSH_WALK_DESCR);
+}
 \end{lstlisting}
 
 \subsubsection{WhiteRockContract}
@@ -435,125 +435,125 @@ public class WhiteRockContract {
 The WhiteRockContentProvider class is where all of the components come together. A URIMatcher is created to ensure that the correct data is accessed, according to the content URI passed. Based on the call to the ContentProvider (insert, update, delete, query), the URI passed is matched via the URIMatcher and the operation carried out on the correct data in the correct table. Examples of each operation can be seen in Listing~\ref{lst:contentprovider}.
 
 \begin{lstlisting}[captionpos=b, caption=WhiteRockContentProvider Snippet, label=lst:contentprovider, frame=single]
-	private static UriMatcher buildUriMatcher() {
-		final UriMatcher matcher = new UriMatcher(UriMatcher.NO_MATCH);
-		final String authority = WhiteRockContract.AUTHORITY;
-		matcher.addURI(authority, "walk", WALK_LIST);
-		matcher.addURI(authority, "walk/#", WALK_ID);
-		matcher.addURI(authority, "english_walk_description", ENGLISH_WALK_DESCR_LIST);
-		matcher.addURI(authority, "english_walk_description/#", ENGLISH_WALK_DESCR_ID);
-		matcher.addURI(authority, "welsh_walk_description", WELSH_WALK_DESCR_LIST);
-		matcher.addURI(authority, "welsh_walk_description/#", WELSH_WALK_DESCR_ID);
-	}
-	
-		@Override
-		public boolean onCreate() {
-			Context context = getContext();
-			mDbHandler = new DatabaseHandler(context);
-			return true;
-		}
-		
-		@Override
-		public int delete(Uri uri, String selection, String[] selectionArgs) {
-			SQLiteDatabase db = mDbHandler.getWritableDatabase();
-			int deleteCount = 0;
-			String idStr;
-			String where;
-			
-			switch (URI_MATCHER.match(uri)) {
-			case WALK_LIST:
-				deleteCount = db.delete(DbSchema.TABLE_WALK, selection, selectionArgs);
-				break;
-			case WALK_ID:
-				idStr = uri.getLastPathSegment();
-				where = WhiteRockContract.Walk._ID + " = " + idStr;
-				if (!TextUtils.isEmpty(selection)) {
-					where += " AND " + selection;
-				}
-				deleteCount = db.delete(DbSchema.TABLE_WALK, where, selectionArgs);
-				break;
-				// Rest of code omitted.
-			}
-			return deleteCount;
-		}
-		
-		@Override
-		public Uri insert(Uri uri, ContentValues values) {
-			SQLiteDatabase db = mDbHandler.getWritableDatabase();
-			long id = 0;
-			switch (URI_MATCHER.match(uri)) {
-			case WALK_LIST:
-				id = db.insert(DbSchema.TABLE_WALK,
-							  null,
-						      values);
-				db.close();
-				return getUriForId(id, uri);
-			case WAYPOINT_LIST:
-				id = db.insert(DbSchema.TABLE_WAYPOINT,
-							  null,
-							  values);
-				db.close();
-				Log.d(TAG, "Attempting insert into waypoint table");
-				return getUriForId(id, uri);
-				
-				// Rest of code omitted
-			}
-		}
-		
-		@Override
-		public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs,
-				String sortOrder) {
-			SQLiteDatabase db = mDbHandler.getReadableDatabase();
-			SQLiteQueryBuilder builder = new SQLiteQueryBuilder();
-			String queryString;
-			boolean useAuthorityUri = false;
-			switch (URI_MATCHER.match(uri)) {
-			case WALK_LIST:
-				builder.setTables(DbSchema.TABLE_WALK);
-				if (TextUtils.isEmpty(sortOrder)) {
-					sortOrder = WhiteRockContract.Walk.SORT_ORDER_DEFAULT;
-				}
-				break;
-			case WALK_ID:
-				builder.setTables(DbSchema.TABLE_WALK);
-				builder.appendWhere(WhiteRockContract.Walk._ID + " = " + uri.getLastPathSegment());
-				break;
-				// rest of code omitted
-			}
-			Log.d(TAG, builder.getTables());
-			Cursor cursor = builder.query(db, projection, selection, selectionArgs, null, null, sortOrder);
-			if (useAuthorityUri) {
-				cursor.setNotificationUri(getContext().getContentResolver(), WhiteRockContract.CONTENT_URI);
-			} else {
-				cursor.setNotificationUri(getContext().getContentResolver(), uri);
-			}
-			return cursor;
-		}
-		
-		@Override
-		public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
-	
-			SQLiteDatabase db = mDbHandler.getWritableDatabase();
-			int updateCount = 0;
-			String idStr;
-			String where;
-	
-			switch(URI_MATCHER.match(uri)) {
-			case WALK_LIST:
-				updateCount = db.update(DbSchema.TABLE_WALK, values, selection, selectionArgs);
-				break;
-			case WALK_ID:
-				idStr = uri.getLastPathSegment();
-				where = WhiteRockContract.Walk._ID + " = " + idStr;
-				if (!TextUtils.isEmpty(selection)) {
-					where += " AND " + selection;
-				}
-				updateCount = db.update(DbSchema.TABLE_WALK, values, where, selectionArgs);
-				break;
-				// rest of code omitted.
-			}
-			return updateCount;
-		}
+private static UriMatcher buildUriMatcher() {
+    final UriMatcher matcher = new UriMatcher(UriMatcher.NO_MATCH);
+    final String authority = WhiteRockContract.AUTHORITY;
+    matcher.addURI(authority, "walk", WALK_LIST);
+    matcher.addURI(authority, "walk/#", WALK_ID);
+    matcher.addURI(authority, "english_walk_description", ENGLISH_WALK_DESCR_LIST);
+    matcher.addURI(authority, "english_walk_description/#", ENGLISH_WALK_DESCR_ID);
+    matcher.addURI(authority, "welsh_walk_description", WELSH_WALK_DESCR_LIST);
+    matcher.addURI(authority, "welsh_walk_description/#", WELSH_WALK_DESCR_ID);
+}
+
+@Override
+public boolean onCreate() {
+    Context context = getContext();
+    mDbHandler = new DatabaseHandler(context);
+    return true;
+}
+
+@Override
+public int delete(Uri uri, String selection, String[] selectionArgs) {
+    SQLiteDatabase db = mDbHandler.getWritableDatabase();
+    int deleteCount = 0;
+    String idStr;
+    String where;
+
+    switch (URI_MATCHER.match(uri)) {
+    case WALK_LIST:
+        deleteCount = db.delete(DbSchema.TABLE_WALK, selection, selectionArgs);
+        break;
+    case WALK_ID:
+        idStr = uri.getLastPathSegment();
+        where = WhiteRockContract.Walk._ID + " = " + idStr;
+        if (!TextUtils.isEmpty(selection)) {
+            where += " AND " + selection;
+        }
+        deleteCount = db.delete(DbSchema.TABLE_WALK, where, selectionArgs);
+        break;
+        // Rest of code omitted.
+    }
+    return deleteCount;
+}
+
+@Override
+public Uri insert(Uri uri, ContentValues values) {
+    SQLiteDatabase db = mDbHandler.getWritableDatabase();
+    long id = 0;
+    switch (URI_MATCHER.match(uri)) {
+    case WALK_LIST:
+        id = db.insert(DbSchema.TABLE_WALK,
+                      null,
+                      values);
+        db.close();
+        return getUriForId(id, uri);
+    case WAYPOINT_LIST:
+        id = db.insert(DbSchema.TABLE_WAYPOINT,
+                      null,
+                      values);
+        db.close();
+        Log.d(TAG, "Attempting insert into waypoint table");
+        return getUriForId(id, uri);
+
+        // Rest of code omitted
+    }
+}
+
+@Override
+public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs,
+        String sortOrder) {
+    SQLiteDatabase db = mDbHandler.getReadableDatabase();
+    SQLiteQueryBuilder builder = new SQLiteQueryBuilder();
+    String queryString;
+    boolean useAuthorityUri = false;
+    switch (URI_MATCHER.match(uri)) {
+    case WALK_LIST:
+        builder.setTables(DbSchema.TABLE_WALK);
+        if (TextUtils.isEmpty(sortOrder)) {
+            sortOrder = WhiteRockContract.Walk.SORT_ORDER_DEFAULT;
+        }
+        break;
+    case WALK_ID:
+        builder.setTables(DbSchema.TABLE_WALK);
+        builder.appendWhere(WhiteRockContract.Walk._ID + " = " + uri.getLastPathSegment());
+        break;
+        // rest of code omitted
+    }
+    Log.d(TAG, builder.getTables());
+    Cursor cursor = builder.query(db, projection, selection, selectionArgs, null, null, sortOrder);
+    if (useAuthorityUri) {
+        cursor.setNotificationUri(getContext().getContentResolver(), WhiteRockContract.CONTENT_URI);
+    } else {
+        cursor.setNotificationUri(getContext().getContentResolver(), uri);
+    }
+    return cursor;
+}
+
+@Override
+public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
+
+    SQLiteDatabase db = mDbHandler.getWritableDatabase();
+    int updateCount = 0;
+    String idStr;
+    String where;
+
+    switch(URI_MATCHER.match(uri)) {
+    case WALK_LIST:
+        updateCount = db.update(DbSchema.TABLE_WALK, values, selection, selectionArgs);
+        break;
+    case WALK_ID:
+        idStr = uri.getLastPathSegment();
+        where = WhiteRockContract.Walk._ID + " = " + idStr;
+        if (!TextUtils.isEmpty(selection)) {
+            where += " AND " + selection;
+        }
+        updateCount = db.update(DbSchema.TABLE_WALK, values, where, selectionArgs);
+        break;
+        // rest of code omitted.
+    }
+    return updateCount;
+}
 	
 \end{lstlisting}
 
