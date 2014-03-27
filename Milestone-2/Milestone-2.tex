@@ -96,18 +96,24 @@ The document aims to inform the reader of all progress made on the project since
 %- Outline of Document (what we cover in the document).
 
 \section{Technology Choices}
+
+This section will discuss the technologies that were chosen to develop the software for this project. Section \ref{sec:web-portal-tech-choices} discusses the technologies chosen to implement the web portal's user interface and the underlying JavaScript framework. Section \ref{sec:android-tech-choices} discusses the technologies chosen for the Android application, in particular, the IDE (Integrated Development Environment) and test hardware.
+
 \subsection{Web Portal}
+\label{sec:web-portal-tech-choices}
 There are many technologies available for web development. It was important that we picked the best tools and frameworks to help with the development.
 
 \subsubsection{UI Framework}
+\label{sec:ui-framework}
 There are a large number of UI Frameworks available for developing on the web. These generally provide a coherent theme, responsive layout positioning and extra controls that are not available as standard in HTML. The most popular framework in this market is Bootstrap\cite{bootstrap}, which was developed by Twitter. Bootstrap provides a modern and highly customisable theme and many additional controls such a modals. Alternatives include Foundation\cite{foundation}, and Zimit\cite{zimit} all of which provides many similar features to Bootstrap but lack in user and plugin support.
 
 Due to its popularity and un-paralleled support we chose bootstrap for the UI Framework. This will build the basis of the UI for the entire web portal and should drastically reduce the workload for creating a responsive and clear UI.
 
-\subsubsection{Javascript Framework}
+\subsubsection{JavaScript Framework}
 For the backend of the web portal a large amount of JavaScript is required to connect with the API. There are several frameworks that can reduce the amount of code needed and improve the performance of the website. The three main competitors in this market are AngularJS\cite{angular}, Backbone\cite{backbone} and Ember\cite{ember}. The generally provide bindings between views and code. Allowing for single page applications that will dynamically change their views based upon user actions. AngularJS is the most popular and fully featured of these and is maintained by Google. Backbone, while popular, lacks proper View binding which makes it unsuitable for this project. Ember does have all the required features but it has a much smaller user base and so there is less support available. Because of these reasons AngularJS was chosen to drive the web portal.
 
 \subsection{Android}
+\label{sec:android-tech-choices}
 As the project includes an Android application, it has been important to choose effective software and technology for development, this ranges from the Integrated Development Environment (IDE) used by the development team to the hardware devices used for testing.
 
 \subsubsection{IDE}
@@ -558,7 +564,7 @@ Prototyping is an important aspect of software development. Creating prototype d
 
 \subsubsection{Prototype 1}
 
-The first prototype began as a series hand drawn template designs. These basic mock-ups were adapted to create a more impressive prototype design using Evolus Pencil, an open source user interface design tool that allows for professional prototype designs to be produced~\cite{pencil}}.
+The first prototype began as a series hand drawn template designs. These basic mock-ups were adapted to create a more impressive prototype design using Evolus Pencil, an open source user interface design tool that allows for professional prototype designs to be produced~\cite{pencil}.
 
 \begin{figure}[H]
 \begin{center}
@@ -1073,7 +1079,7 @@ The welcome view shown in Figure \ref{fig:home} provides visitors with a link to
 
 \subsection{Responsive View}
 
-Figure \ref{fig:home-responsive} demonstrates a responsive review of the web portal. This is the view that users will see when visiting the web portal on mobile devices such as smart phones and tablets. The responsive design minimizes the menu bar which can be expanded by clicking the button shown in the top right of the figure. In addition, web page content reduces in width and elements become stacked allowing for easier scrolling on mobile devices. The responsive design of the web portal is facilitated by the Bootstrap (see section XXXXXX) CSS and JavaScript library.
+Figure \ref{fig:home-responsive} demonstrates a responsive review of the web portal. This is the view that users will see when visiting the web portal on mobile devices such as smart phones and tablets. The responsive design minimizes the menu bar which can be expanded by clicking the button shown in the top right of the figure. In addition, web page content reduces in width and elements become stacked allowing for easier scrolling on mobile devices. The responsive design of the web portal is facilitated by the Bootstrap (see section \ref{sec:ui-framework}) CSS and JavaScript library.
 
 \begin{figure}[H]
 \centering
@@ -1301,7 +1307,7 @@ The team has also encountered unforeseen risks, detailed below:
 \begin{itemize}
 \item\textbf{Hudl Support} The Hudl is not seen as a developer device by Tesco, as a result they do not provide a USB driver. A workaround was discovered by forcing the development machine to install the generic Google USB driver to the device.
 \item\textbf{Work Environment} The Swansea University Project Lab has been in a contentious state since the beginning of this academic year, with some staff claiming it is a common room whilst other claim it is for group project work. This left developers without a peaceful place to work, as a group, whilst on campus. This has, hopefully, since been rectified after the status of the room was confirmed with members of staff as a room to be used as a working environment.
-\item\textbf{Bugs in Libraries} The validation library being used for the website (Bootstrap Validator (TODO:CITE)) contained a number of bugs, delaying development of the website by a number of days whilst a bug report was processed by the library developer.
+\item\textbf{Bugs in Libraries} The validation library being used for the website (Bootstrap Validator\cite{bootstrapValidator}) contained a number of bugs, delaying development of the website by a number of days whilst a bug report was processed by the library developer.
 \item\textbf{AJAX Cross Origin Resource Sharing} TODO: Tom, write about this.
 \item\textbf{Git User Error} Whilst not a risk which has yet caused a fatal incident, there have been times where user error has caused a delay whilst the local and remote Git repositories are restored to a working state.
 \item\textbf{Lab Computers Have Restrictive Permissions} As the lab computers are so restrictive, the development team has not been able to implement the previously mentioned workaround for the Hudl device on one of the Swansea University computers. This prevents developers from using these systems for development. It is also not possible to install new software as required, which includes libraries, thus further increasing the difficulty in which these machines can be used.
