@@ -93,9 +93,10 @@ This document, White Rock Digital Trails: Interim Document, shall guide the read
 \subsection{Purpose}
 The document aims to inform the reader of all progress made on the project since the last document. It was originally created as part of an MEng Computing degree at Swansea University, under the supervision of Parisa Eslambolchilar, for the White Rock team~\cite{whiterock}. The document is also suitable for third parties interested in the development of White Rock Digital Trails, subject to permission from the authors. The document acts a follow-up document to the previously written Milestone 1~\cite{initialDoc}.
 \subsection{Overview}
-%- Outline of Document (what we cover in the document).
+The document provides a comprehensive look at the progress that has been made and the current state of the project. In section~\ref{sec:techChoice} the technology choices that have been made are described and justified. After stating the tools used in development sections~\ref{sec:dbProgress} -~\ref{sec:web-portal} detail the progress made in each area of the project, the database, API, user interface design, Android application and web portal. The coding guidelines used during development are detailed in section~\ref{sec:codingguidelines}. The management of the project is discussed in sections~\ref{sec:risks} and~\ref{sec:schedule}, these sections describe the risks that have affected the project, which requirements have been completed and whether the project remains on-time and feature-filled. Finally, in section~\ref{sec:summary}, the future of the project is discussed.
 
 \section{Technology Choices}
+\label{sec:techChoice}
 \subsection{Web Portal}
 There are many technologies available for web development. It was important that we picked the best tools and frameworks to help with the development.
 
@@ -113,7 +114,7 @@ As the project includes an Android application, it has been important to choose 
 \subsubsection{IDE}
 There were three potential IDE choices for Android development, Eclipse, Android Studio and NVIDIA Nsight Tegra, a Visual Studio plugin for Android.
 
-For this project the choice was straightforward, the team has experience with Android and it has been around the longest, providing a stable and familiar programming environment helping keep efficiency levels high. Whilst Android Studio is now the supported IDE by Google, it is still relatively new software and offers a big change compared to Eclipse. NVIDIA Nsight Tegra, whilst a powerful IDE, would have provided a drastic change in environment for developers without Visual Studio familiarity. It is also more likely to take valuable development hours away to configure for every developer.
+For this project the choice was straightforward, the team has experience with Android and it has been around the longest, providing a stable and familiar programming environment helping keep efficiency levels high. Whilst Android Studio is now the supported IDE by Google, it is still relatively new software and offers a big change compared to Eclipse. NVIDIA Nsight Tegra, whilst a powerful IDE, would have provided a drastic change in environment for developers without Visual Studio familiarity. Configuring a new IDE can also be an arduous process, especially for a large team, helping to cement our decision.
 
 \subsubsection{Devices}
 A number of devices are being used during development of the application. They range in size, power and operating system to ensure that we have a reasonable set of possible configurations to test our application.
@@ -146,12 +147,17 @@ Asus Transformer & \begin{itemize}
 	\item HDD: 32GB
 	\item Android Version: 4.2
 \end{itemize} \\ \hline
-
+Samsung Galaxy S3 Mini & \begin{itemize}
+\item Dual Core @1GHz
+\item RAM: 1GB
+\item HDD: 8GB
+\item Android Version: 4.1
+\end{itemize} \\ \hline
 \end{tabular}
 \end{center}
 
 \subsubsection{Minimum Supported OS}
-To ensure the widest user base possible can access the application, the application will support Android devices running on Android 2.3 or higher. This is over 90\% of all Android phones https://developer.android.com/about/dashboards/index.html TODO: ADD TO BIB.
+To ensure the widest user base possible can access the application, the application will support Android devices running on Android 2.3 or higher. This is over 90\% of all Android phones, as seen on the Android website: \url{https://developer.android.com/about/dashboards/index.html}.
 
 \subsection{The API}
 \label{sec:techAPI}
@@ -211,7 +217,7 @@ The project is currently hosted on an Amazon EC2 server owned by a group member.
 
 
 \section{Database Progress}
-
+\label{sec:dbProgress}
 %- Why do we need a database, what data will it store?
 This section will discuss the progress made towards the development of the White Rock Digital Trails database.
 Overall, a substantial amount of progress has been made.
@@ -558,7 +564,7 @@ Prototyping is an important aspect of software development. Creating prototype d
 
 \subsubsection{Prototype 1}
 
-The first prototype began as a series hand drawn template designs. These basic mock-ups were adapted to create a more impressive prototype design using Evolus Pencil, an open source user interface design tool that allows for professional prototype designs to be produced~\cite{pencil}}.
+The first prototype began as a series hand drawn template designs. These basic mock-ups were adapted to create a more impressive prototype design using Evolus Pencil, an open source user interface design tool that allows for professional prototype designs to be produced~\cite{pencil}.
 
 \begin{figure}[H]
 \begin{center}
@@ -665,7 +671,7 @@ From the above evaluation, it is evident that the application is still at the la
 keywordstyle=\color{Maroon},
 commentstyle=\color{OliveGreen},
 showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyle=\color{Blue}}
-The development of the Android application is progressing well and has been minimally affected by risks, both expected and unexpected. To achieve the goals of the project, the application has to be capable of saving and loading data to and from a local database, which will then synchronise with the remote database - this is achieved via a ContentProvider, seen in Section~\ref{sec:contentprovier}; the client also requested Google Maps be implemented, the progress of which can be seen in Section~\ref{sec:googlemaps}; as the application allows users to log-in and personalise their experience an authentication system has been created, seen in Section~\ref{sec:authorisation}. Tying all of these features together is the SyncAdapter, seen in Section~\ref{sec:syncAdapter}, which will allow for efficient synchronisation of data to and from the server. Finally, fragments and activities have been created to control the flow of the program, along with relevant layouts and graphics, which can be seen in Section~\ref{sec:fragments}. All of these systems, when completed, will meet the requirements shown in Section 4.1.2 of the Milestone 1 document~\cite{initialDoc}. It should be noted that all code samples seen in the following sections are still under development and do not represent the final quality of the code, especially in terms of documentation, that have been laid out in Section~\ref{sec:codingguidelines}.
+The development of the Android application is progressing well and has been minimally affected by risks, both expected and unexpected. To achieve the goals of the project, the application has to be capable of saving and loading data to and from a local database, which will then synchronise with the remote database - this is achieved via a ContentProvider, seen in Section~\ref{sec:contentprovier}; the client also requested Google Maps be implemented, the progress of which can be seen in Section~\ref{sec:googlemaps}; as the application allows users to log-in and personalise their experience an authentication system has been created, seen in Section~\ref{sec:authorisation}. Tying all of these features together is the SyncAdapter, seen in Section~\ref{sec:syncAdapter}, which will allow for efficient synchronisation of data to and from the server. Finally, fragments and activities have been created to control the flow of the program, along with relevant layouts and graphics, which can be seen in Section~\ref{sec:fragments}. All of these systems, when completed, will meet the requirements shown in Section 4.1.2 of the Milestone 1 document~\cite{initialDoc}. It should be noted that all code samples seen in the following sections have been modified for this document and do not represent the quality of production code nor adhere to all of the guidelines stated in Section~\ref{sec:codingguidelines}.
 
 \subsection{ContentProvider}
 \label{sec:contentprovier}
@@ -1009,6 +1015,20 @@ The application needs to interface with the API using the correct authentication
 
 This class uses several cryptography libraries to ensure that it correctly mimics the action of the web portal and works with the API. The methods are provided as static so they can be used throughout the project wherever a secure API method is needed.
 
+\subsection{SyncAdapter}
+\label{sec:syncAdapter}
+Whilst the SyncAdaper is not currently implemented, the ContentProvider and Authentication systems are a vital part of this system and it is the foremost reason the ContentProvider was created. The SyncAdapter handles background synchronisation of data from the Android application to the tablet and vice-versa. It is triggered when needed, scheduled or requested. It is the preferred system compared to using Services and IntentServices as it provides an implementation which is:
+\begin{itemize}
+\item \textbf{Battery Efficient} By being scheduled to run when other synchronisations run, the application is conserving battery power by leaving the device sleeping for as long as possible.
+\item \textbf{User Friendly} The SyncAdapter may be accessed by the user from the Android Settings screen, allowing for customisation of the SyncAdapter's settings and even the ability to disable it.
+\item \textbf{Content Aware} The ContentProvider which has been written will allow the SyncAdapter to monitor the data and only synchronise with the remote server when the data has been updated.
+\item \textbf{Capable of Retrying} The implementation of a SyncAdapter provides it with a retry mechanism, allowing for data to be synchronised as soon as possible.
+\end{itemize}
+
+Further information can be found at \url{http://developer.android.com/training/sync-adapters/index.html}.
+
+\subsection{Fragments}
+\label{sec:fragments}
 Fragments were introduced to several interface views. A fragment can be thought of as a section or portion of an interface view of an activity. Multiple fragments can be used for any given activity. These fragments can then be used across multiple activities, making them efficient and more suitable to use over standard custom views. Having its own life-cycle, a fragment receives its own input events, making it a form of ``sub-activity''. The main advantage of using fragments is that it allows for applications to be written that can scale across multiple screen sizes. Below is a snippet of fragment code used to create the search interface view. It contains two fragments, each with its own layout held in separate XML file.
 
 \lstset{language=xml,
@@ -1032,23 +1052,7 @@ showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyl
 </LinearLayout>
 \end{lstlisting}
 
-
-\subsection{SyncAdapter}
-\label{sec:syncAdapter}
-Whilst the SyncAdaper is not currently implemented, the ContentProvider and Authentication systems are a vital part of this system and it is the foremost reason the ContentProvider was created. The SyncAdapter handles background synchronisation of data from the Android application to the tablet and vice-versa. It is triggered when needed, scheduled or requested. It is the preferred system compared to using Services and IntentServices as it provides an implementation which is:
-\begin{itemize}
-\item \textbf{Battery Efficient} By being scheduled to run when other synchronisations run, the application is conserving battery power by leaving the device sleeping for as long as possible.
-\item \textbf{User Friendly} The SyncAdapter may be accessed by the user from the Android Settings screen, allowing for customisation of the SyncAdapter's settings and even the ability to disable it.
-\item \textbf{Content Aware} The ContentProvider which has been written will allow the SyncAdapter to monitor the data and only synchronise with the remote server when the data has been updated.
-\item \textbf{Capable of Retrying} The implementation of a SyncAdapter provides it with a retry mechanism, allowing for data to be synchronised as soon as possible.
-\end{itemize}
-
-Further information can be found at \url{http://developer.android.com/training/sync-adapters/index.html}.
-
-\subsection{Fragments}
-\label{sec:fragments}
-
-\section{Web Portal}
+\section{Web Portal Progress}
 \label{sec:web-portal}
 
 %- What progress has been made on the web portal?
@@ -1310,7 +1314,7 @@ The team has also encountered unforeseen risks, detailed below:
 \end{itemize}
 
 \section{Project Schedule Review}
-
+\label{sec:schedule}
 %Introduce section
 This section will review the project schedule outlined in the initial document of this project. Currently, it is too difficult to assess precisely whether the project is on schedule. The user interfaces and business logic of the Android application are being developed in parallel by two different developers. At the time of writing, the merging process of these two subsystems has only recently begun. Therefore, a time frame is too difficult to predict as the complexity of this process is not yet known. In addition, the complexity of a synchronisation solution for the database and Android application is yet to be completed and forms a major milestone in the development process. Progress on the web portal however, is on schedule and is discussed in section \ref{sec:web-portal}.
 
@@ -1490,6 +1494,7 @@ NFREQ11 & In Progress & The application is being developed to be bandwidth effic
 The majority of sprints have been completed within schedule as defined in the timetable presented in Figure \ref{fig:software-dev-table}. Some sprints however, took longer than anticipated and exceeded the time box they were assigned. For example, the sprint containing the web portal login and registration features was delayed due to technical issues with a third party validation library. More specifically, the library contained bugs which were overlooked by the developer and slowed down the development of these features as a bug fix was required. The time lost during this sprint was recovered in the next sprint as more resources were invested into developing the required features.
 
 \section{Summary}
+\label{sec:summary}
 As can be seen throughout this document, the project is progressing to a high standard on all fronts. Whilst initial work on the Android application looks to have been slow, in terms of requirements met, the more flexible and higher quality backend of the application will allow for the remaining requirements to be completed at a faster pace than before. This increase in productivity during the latter stages of the project will make up the time spent dealing with the risks detailed in section~\ref{sec:risks}
 
 The development of the web portal has also seen hard times during the first half of development, but like the Android application development can now become more efficient with a solid backend to build upon.

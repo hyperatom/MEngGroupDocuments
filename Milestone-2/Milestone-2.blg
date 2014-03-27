@@ -9,6 +9,8 @@ Warning--entry type for "angular" isn't style-file defined
 --line 169 of file bibliography.bib
 Warning--entry type for "ember" isn't style-file defined
 --line 174 of file bibliography.bib
+Too many commas in name 1 of "Adam Barrell, Lewis Hancock, Thomas Milner, Chris Lewis" for entry initialDoc
+while executing---line 1049 of file plain.bst
 Warning--to sort, need author or key in bootstrap
 Warning--to sort, need author or key in foundation
 Warning--to sort, need author or key in zimit
@@ -17,8 +19,7 @@ Warning--to sort, need author or key in backbone
 Warning--to sort, need author or key in ember
 Warning--to sort, need author or key in slim
 Warning--to sort, need author or key in paris
-Too many commas in name 1 of "Adam Barrell, Lewis Hancock, Thomas Milner, Chris Lewis" for entry initialDoc
-while executing---line 1049 of file plain.bst
+Warning--to sort, need author or key in pencil
 Too many commas in name 1 of "Adam Barrell, Lewis Hancock, Thomas Milner, Chris Lewis" for entry initialDoc
 while executing---line 1090 of file plain.bst
 (There were 2 error messages)
