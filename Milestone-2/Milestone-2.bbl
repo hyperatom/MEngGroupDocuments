@@ -68,6 +68,14 @@ Jakob Nielsen and Rolf Molich.
 \newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
   Computing Systems}, CHI '90, pages 249--256, New York, NY, USA, 1990. ACM.
 
+<<<<<<< HEAD
+=======
+\bibitem{bootstrapValidator}
+Nguyen~Huu Phuoc.
+\newblock Bootstrap validator git repository.
+\newblock \url{https://github.com/nghuuphuoc/bootstrapvalidator}.
+
+>>>>>>> d28d2373f2d45c8c2eee6776b039faa47e467a24
 \bibitem{whiterock}
 White~Rock Swansea.
 \newblock White rock org website.
