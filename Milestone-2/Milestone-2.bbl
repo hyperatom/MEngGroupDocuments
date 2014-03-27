@@ -15,6 +15,11 @@ Bootstrap css framework.
 \newblock \url{http://getbootstrap.com/}.
 \newblock Accessed: 25-03-2014.
 
+\bibitem{eclipse}
+Eclipse adt plugin.
+\newblock \url{http://developer.android.com/tools/sdk/eclipse-adt.html}.
+\newblock Accessed: 27/03/2014.
+
 \bibitem{ember}
 Emberjs.
 \newblock \url{http://emberjs.com}.
@@ -30,6 +35,15 @@ Paris orm.
 \newblock \url{http://j4mie.github.io/idiormandparis/}.
 \newblock Accessed: 29-01-2014.
 
+<<<<<<< HEAD
+=======
+\bibitem{xml}
+Parsing xml data.
+\newblock \url{http://developer.android.com/training/basics/network-ops/xml.
+  html}.
+\newblock Accessed: 23/03/2014.
+
+>>>>>>> Fixig
 \bibitem{pencil}
 Pencil prototyping software.
 \newblock \url{http://pencil.evolus.vn}.
@@ -39,6 +53,17 @@ Pencil prototyping software.
 Slim framework.
 \newblock \url{http://www.slimframework.com}.
 \newblock Accessed: 29-01-2014.
+
+\bibitem{outdoor}
+Trimble outdoor navigator.
+\newblock
+  \url{https://play.google.com/store/apps/details?id=com.trimble.outdoors.navapple.android}.
+\newblock Accessed: 27/03/2014.
+
+\bibitem{viewRanger}
+View ranger.
+\newblock \url{http://www.viewranger.com/en-gb}.
+\newblock Accessed: 27/03/2014.
 
 \bibitem{zimit}
 Zimit css framework.
@@ -68,11 +93,14 @@ Jakob Nielsen and Rolf Molich.
 \newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
   Computing Systems}, CHI '90, pages 249--256, New York, NY, USA, 1990. ACM.
 
+<<<<<<< HEAD
 \bibitem{bootstrapValidator}
 Nguyen~Huu Phuoc.
 \newblock Bootstrap validator git repository.
 \newblock \url{https://github.com/nghuuphuoc/bootstrapvalidator}.
 
+=======
+>>>>>>> Fixig
 \bibitem{whiterock}
 White~Rock Swansea.
 \newblock White rock org website.

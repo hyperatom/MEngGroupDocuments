@@ -397,7 +397,7 @@ Below is a list of ten tasks a typical user of the application may wish to carry
 \end{enumerate}
 
 \subsubsection{Similar Products}
-As part of the heuristic evaluation, two similar products were analysed and tested. The first product being TimbleOutdoors !!! and the second ViewRanger GPS CITE!!!
+As part of the heuristic evaluation, two similar products were analysed and tested. The first product being TimbleOutdoors \cite{outdoor} and the second ViewRanger GPS \cite{viewRanger}.
 
 \subsubsection{TimbleOutdoors}
 
@@ -569,6 +569,7 @@ This section documents the usability problems discovered during the ViewRanger G
 Prototyping is an important aspect of software development. Creating prototype designs allows developers to produce a simplified version of a potential product. This means feedback can be gathered from users early in the project. It also allows developers to assess their prototype product, ensuring it meets the requirements set out by a client. This section of the document will analyse two prototype stages. First, a low level design that includes basic application layout and simple features. The second prototype design shows the application during the development stage and includes additional features. A heuristic evaluation of the second prototype will also be provided.
 
 \subsubsection{Prototype 1}
+\label{sec:prototype1}
 
 The first prototype began as a series hand drawn template designs. These basic mock-ups were adapted to create a more impressive prototype design using Evolus Pencil, an open source user interface design tool that allows for professional prototype designs to be produced~\cite{pencil}.
 
@@ -598,7 +599,7 @@ Figure~\ref{fig:handDrawn} illustrates an original mock-up design for a typical 
 \end{center}
 \end{figure}
 
-Similar to ``Walk View``, the ``Choose A Walk View''(Figure~\ref{chooseWalk}) includes of a side bar, header bar. This interface view allows the user to scroll through a list of walks and be presented with information about each walk, such as walk name, description, map location, length of walk and the number of walk points of interests (way-points). This interface view also includes a button, allowing the user to begin a chosen walk. For additional prototype 1 designs, see Appendix x.
+Similar to ``Walk View``, the ``Choose A Walk View''(Figure~\ref{fig:chooseWalk}) includes of a side bar, header bar. This interface view allows the user to scroll through a list of walks and be presented with information about each walk, such as walk name, description, map location, length of walk and the number of walk points of interests (way-points). This interface view also includes a button, allowing the user to begin a chosen walk. For additional prototype 1 designs, see Appendix x.
 
 \subsubsection{Prototype 2}
 
@@ -606,6 +607,7 @@ Similar to ``Walk View``, the ``Choose A Walk View''(Figure~\ref{chooseWalk}) in
 \begin{center}
 \includegraphics[width=12cm]{./img/app_choose_walk.png}
 \caption{Choose A Walk View - Android Application Design}
+\label{fig:appChoose}
 \end{center}
 \end{figure}
 
@@ -614,10 +616,11 @@ Similar to ``Walk View``, the ``Choose A Walk View''(Figure~\ref{chooseWalk}) in
 \begin{center}
 \includegraphics[width=12cm]{./img/app_walk_view.png}
 \caption{Walk View - Android Application Design}
+\label{fig:appWalk}
 \end{center}
 \end{figure}
 
-Prototype 2 was created using Eclipse ADT CITE!!!!!!!!. Through the use of XML CITE!!!, a series of application interface designs were produced. Figure x and y are both improvements of interfaces described in section X, prototype 1. When minor functionality was added to prototype 2, a heuristic evaluation was carried out. The following section documents the usability problems discovered during the White Rock evaluation.
+Prototype 2 was created using Eclipse ADT \cite{eclipse}. Through the use of XML \cite{xml}, a series of application interface designs were produced. Figure~\ref{fig:appChoose} and figure~\ref{fig:appWalk} are both improvements of interfaces described in section~\ref{sec:prototype1}, prototype 1. When minor functionality was added to prototype 2, a heuristic evaluation was carried out. The following section documents the usability problems discovered during the White Rock evaluation. 
 
 \begin{itemize}
 	\item\textbf{Usability problem:}\\
@@ -668,7 +671,7 @@ Prototype 2 was created using Eclipse ADT CITE!!!!!!!!. Through the use of XML C
 
 \end{itemize}
 
-From the above evaluation, it is evident that the application is still at the latter prototype stages. Minor functionality, such as toast notifications and dialogue fragments, are to be added at a later date, ensuring the application conforms to Neilsen's heuristics.
+From the above evaluation, it is evident that the application is still at the latter prototype stages. Minor functionality, such as toast notifications and dialogue fragments, are to be added at a later date, ensuring the application conforms to Nielsen's heuristics.
 
 
 
@@ -1058,7 +1061,51 @@ showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyl
 </LinearLayout>
 \end{lstlisting}
 
+<<<<<<< HEAD
 \section{Web Portal Progress}
+=======
+
+\subsection{SyncAdapter}
+\label{sec:syncAdapter}
+Whilst the SyncAdaper is not currently implemented, the ContentProvider and Authentication systems are a vital part of this system and it is the foremost reason the ContentProvider was created. The SyncAdapter handles background synchronisation of data from the Android application to the tablet and vice-versa. It is triggered when needed, scheduled or requested. It is the preferred system compared to using Services and IntentServices as it provides an implementation which is:
+\begin{itemize}
+\item \textbf{Battery Efficient} By being scheduled to run when other synchronisations run, the application is conserving battery power by leaving the device sleeping for as long as possible.
+\item \textbf{User Friendly} The SyncAdapter may be accessed by the user from the Android Settings screen, allowing for customisation of the SyncAdapter's settings and even the ability to disable it.
+\item \textbf{Content Aware} The ContentProvider which has been written will allow the SyncAdapter to monitor the data and only synchronise with the remote server when the data has been updated.
+\item \textbf{Capable of Retrying} The implementation of a SyncAdapter provides it with a retry mechanism, allowing for data to be synchronised as soon as possible.
+\end{itemize}
+
+Further information can be found at \url{http://developer.android.com/training/sync-adapters/index.html}.
+
+\subsection{Fragments}
+\label{sec:fragments}
+
+Fragments were introduced to several interface views. A fragment can be thought of as a section or portion of an interface view of an activity. Multiple fragments can be used for any given activity. These fragments can then be used across multiple activities, making them efficient and more suitable to use over standard custom views. Having its own life-cycle, a fragment receives its own input events, making it a form of ``sub-activity''. The main advantage of using fragments is that it allows for applications to be written that can scale across multiple screen sizes. Below is a snippet of fragment code used to create the search interface view. It contains two fragments, each with its own layout held in separate XML file.\\
+
+\lstset{language=xml,
+keywordstyle=\color{Maroon},
+commentstyle=\color{OliveGreen},
+showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyle=\color{Blue}}
+\begin{lstlisting}[captionpos=b, caption=Fragment Code Snippet, label=lst:Fragment Code Snippet, frame=single]
+<LinearLayout 
+    android:orientation="horizontal" >
+ 
+    <fragment
+        android:id="@+id/listFragment"
+        class="uk.co.tmilner.whiterock.SearchListFragment" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        class="uk.co.tmilner.whiterock.SearchDetailFragment" >
+    </fragment>
+    
+</LinearLayout>
+\end{lstlisting}
+
+
+\section{Web Portal}
+>>>>>>> Fixig
 \label{sec:web-portal}
 
 %- What progress has been made on the web portal?
