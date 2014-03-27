@@ -93,7 +93,7 @@ This document, White Rock Digital Trails: Interim Document, shall guide the read
 \subsection{Purpose}
 The document aims to inform the reader of all progress made on the project since the last document. It was originally created as part of an MEng Computing degree at Swansea University, under the supervision of Parisa Eslambolchilar, for the White Rock team~\cite{whiterock}. The document is also suitable for third parties interested in the development of White Rock Digital Trails, subject to permission from the authors. The document acts a follow-up document to the previously written Milestone 1~\cite{initialDoc}.
 \subsection{Overview}
-The document provides a comprehensive look at the progress that has been made and the current state of the project. In section~\ref{sec:techChoice} the technology choices that have been made are described and justified. After stating the tools used in development sections~\ref{sec:dbProgress} -~\ref{sec:web-portal} detail the progress made in each area of the project, the database, API, user interface design, Android application and web portal. The coding guidelines used during development are detailed in section~\ref{sec:codingguidelines}. The management of the project is discussed in sections~\ref{sec:risks} and~\ref{sec:schedule}, these sections describe the risks that have affected the project, which requirements have been completed and whether the project remains on-time and feature-filled. Finally, in section~\ref{sec:summary}, the future of the project is discussed.
+The document provides a comprehensive look at the progress that has been made and the current state of the project. In section~\ref{sec:techChoice} the technology choices that have been made are described and justified. After stating the tools used in development, sections~\ref{sec:dbProgress} -~\ref{sec:web-portal} detail the progress made in each area of the project, the database, API, user interface design, Android application and web portal. The coding guidelines used during development are detailed in section~\ref{sec:codingguidelines}. The management of the project is discussed in sections~\ref{sec:risks} and~\ref{sec:schedule}, these sections describe the risks that have affected the project, which requirements have been completed and whether the project remains on-time and feature-filled. Finally, in section~\ref{sec:summary}, the future of the project is discussed.
 
 \section{Technology Choices}
 \label{sec:techChoice}
@@ -106,12 +106,12 @@ There are many technologies available for web development. It was important that
 
 \subsubsection{UI Framework}
 \label{sec:ui-framework}
-There are a large number of UI Frameworks available for developing on the web. These generally provide a coherent theme, responsive layout positioning and extra controls that are not available as standard in HTML. The most popular framework in this market is Bootstrap\cite{bootstrap}, which was developed by Twitter. Bootstrap provides a modern and highly customisable theme and many additional controls such a modals. Alternatives include Foundation\cite{foundation}, and Zimit\cite{zimit} all of which provides many similar features to Bootstrap but lack in user and plugin support.
+There are a large number of UI Frameworks available for developing on the web. These generally provide a coherent theme, responsive layout positioning and extra controls that are not available as standard in HTML. The most popular framework in this market is Bootstrap\cite{bootstrap}, which was developed by Twitter. Bootstrap provides a modern and highly customisable theme and many additional components such a modals. Alternatives include Foundation\cite{foundation}, and Zimit\cite{zimit} all of which provides many similar features to Bootstrap but lack in user and plugin support.
 
 Due to its popularity and un-paralleled support we chose bootstrap for the UI Framework. This will build the basis of the UI for the entire web portal and should drastically reduce the workload for creating a responsive and clear UI.
 
 \subsubsection{JavaScript Framework}
-For the backend of the web portal a large amount of JavaScript is required to connect with the API. There are several frameworks that can reduce the amount of code needed and improve the performance of the website. The three main competitors in this market are AngularJS\cite{angular}, Backbone\cite{backbone} and Ember\cite{ember}. The generally provide bindings between views and code. Allowing for single page applications that will dynamically change their views based upon user actions. AngularJS is the most popular and fully featured of these and is maintained by Google. Backbone, while popular, lacks proper View binding which makes it unsuitable for this project. Ember does have all the required features but it has a much smaller user base and so there is less support available. Because of these reasons AngularJS was chosen to drive the web portal.
+For the backend of the web portal a large amount of JavaScript is required to connect with the API. There are several frameworks that can reduce the amount of code needed and improve the performance of the website. The three main competitors in this market are AngularJS\cite{angular}, Backbone\cite{backbone} and Ember\cite{ember}. The generally provide bindings between views and code. Allowing for single page applications that will dynamically change their views based upon user actions. AngularJS is the most popular and fully featured of these and is maintained by Google. Backbone, while popular, lacks proper View binding which makes it unsuitable for this project. Ember does have all the required features but it has a much smaller user base and so there is less support available. Because of these reasons AngularJS was chosen to develop the web portal.
 
 \subsection{Android}
 \label{sec:android-tech-choices}
@@ -202,19 +202,19 @@ $documents = $user->documents()->find_many();
 The API will use JSON objects to respond to requests, it will also expect these objects when data is passed to the server. This format is well supported and is built into most web browsers allowing for easy processing of the data.
 
 \begin{description}
-\item[JSON] JavaScript Object Notation. A way of describing a JavaScript object in plain text. The language has now been expanded to work in multiple languages not just JavaScript and it allows for easy parseing of objects.
+\item[JSON] JavaScript Object Notation. A way of describing a JavaScript object in plain text. The language has now been expanded to work in multiple languages not just JavaScript and it allows for easy parsing of objects.
 \end{description}
 
 \subsection{The Server}
 \label{sec:techServer}
-The project is currently hosted on an Amazon EC2 server owned by a group member. Having a private server like this has allowed us to configure it as we require. The server is currently running Ubuntu Linux Server Edition with Apache Webserver, PHP and MySQL database installed. Git is used to push documents up to the server which are then automatically copied into the correct folder for the webserver. Each part of the project can then be given a unique subdomain for testing purposes. Currently the API is hosted at \url{http://whiterockapi.tmilner.co.uk/} and the Web Portal is at \url{http://whiterock.tmilner.co.uk}.
+The project is currently hosted on an Amazon EC2 server owned by a group member. Having a private server like this has allowed us to configure it as we require. The server is currently running Ubuntu Linux Server Edition with Apache Web Server, PHP and MySQL database installed. Git is used to push documents up to the server which are then automatically copied into the correct folder for the web server. Each part of the project can then be given a unique sub domain for testing purposes. Currently the API is hosted at \url{http://whiterockapi.tmilner.co.uk/} and the Web Portal is at \url{http://whiterock.tmilner.co.uk}.
 
 \begin{description}
 \item[Ubuntu Linux Server Edition] An open source operating system based upon the Linux kernel. Free to use and modify, and developed specifically for use of servers.
 
 \item[Apache Webserver] An highly popular open source web server. Free to use and installed as default in Ubuntu Linux Server Edition.
 
-\item[PHP] The programming language that is being used to develop the web service. It requires a runtime which is installed as an addon to Apache Webserver.
+\item[PHP] The programming language that is being used to develop the web service. It requires a runtime which is installed as an add-on to Apache Webserver.
 
 \item[MySQL] A popular SQL (Structured Query Language) database system. Developed by Sun Enterprises and free to use.
 
@@ -285,11 +285,11 @@ For example, the \emph{Walk} entity can have many \emph{WalkReviews}, one \emph{
 
 \section{API Progress}
 
-A RESTful API has been created using the technologies discused in section \ref{sec:techAPI}. There are several important parts to the API, first it must have a coherent set of routes/urls for acces to all if its functionality, secondly it must provide a method of authenticating users and finaly it must adhear to to principles of REST as closely as possible.
+A RESTful API has been created using the technologies discussed in section \ref{sec:techAPI}. There are several important parts to the API, first it must have a coherent set of routes/urls for access to all if its functionality, secondly it must provide a method of authenticating users and finally it must adhere to to principles of REST as closely as possible.
 
 \subsection{Routes}
 
-The API is called through a series of routes, it was important to make these routes as simple and coherant as possible.
+The API is called through a series of routes, it was important to make these routes as simple and coherent as possible.
 
 \begin{longtable}{m{0.45\textwidth}|m{0.35\textwidth}|C{0.11\textwidth}}
     \textbf{Route} & \textbf{Return value} & \textbf{Methods} \\\hline
@@ -342,7 +342,7 @@ showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyl
 \end{lstlisting}
 
 \subsubsection{CORS}
-CORS, Cross-Origin Resource Sharing, limits requests to external domains unless the explicitly allow it to the same domain only. As the API is on a separate sub-domain the CORS settings of a web browser will block requests from being sent. To fix this a special OPTIONS route had to be added. It respons with a set of headers which specify which domains should be able to access the API, what methods they can use and what headers they can pass. These headers need to be passed with every request as well as the OPTIONS so they were initialised before the routes are processed meaning all requests will provide them. The API has been configured with all CORS headers and requests are allowed from any domain during the testing process.
+CORS, Cross-Origin Resource Sharing, limits requests to external domains unless the explicitly allow it to the same domain only. As the API is on a separate sub-domain the CORS settings of a web browser will block requests from being sent. To fix this a special OPTIONS route had to be added. It responds with a set of headers which specify which domains should be able to access the API, what methods they can use and what headers they can pass. These headers need to be passed with every request as well as the OPTIONS so they were initialised before the routes are processed meaning all requests will provide them. The API has been configured with all CORS headers and requests are allowed from any domain during the testing process.
 
 \subsection{Authentication}
 
@@ -988,7 +988,7 @@ All of the code (and more) in the above sections results in the screens and inte
 
 \subsection{Google Maps}
 \label{sec:googlemaps}
-Currently the Google Maps API has been integrated at a basic level. The user can select a walk and the correct data will be displayed on the Map, with tappable waypoint markers. After tapping a marker a small information area (InfoWindow) will appear, this gives the waypoint title and the short description of it. Tapping on this area will display a large dialog, displaying all the information available for that waypoint. These interactions can be seen in Figures~\ref{fig:googleContentLoader} and~\ref{fig:wpInfoDialog}.
+Currently the Google Maps API has been integrated at a basic level. The user can select a walk and the correct data will be displayed on the Map, with waypoint markers that can be tapped. After tapping a marker a small information area (InfoWindow) will appear, this gives the waypoint title and the short description of it. Tapping on this area will display a large dialogue, displaying all the information available for that waypoint. These interactions can be seen in Figures~\ref{fig:googleContentLoader} and~\ref{fig:wpInfoDialog}.
 
 \begin{figure}[H]
 \centering
@@ -1312,11 +1312,11 @@ The team has also encountered unforeseen risks, detailed below:
 \item\textbf{Hudl Support} The Hudl is not seen as a developer device by Tesco, as a result they do not provide a USB driver. A workaround was discovered by forcing the development machine to install the generic Google USB driver to the device.
 \item\textbf{Work Environment} The Swansea University Project Lab has been in a contentious state since the beginning of this academic year, with some staff claiming it is a common room whilst other claim it is for group project work. This left developers without a peaceful place to work, as a group, whilst on campus. This has, hopefully, since been rectified after the status of the room was confirmed with members of staff as a room to be used as a working environment.
 \item\textbf{Bugs in Libraries} The validation library being used for the website (Bootstrap Validator\cite{bootstrapValidator}) contained a number of bugs, delaying development of the website by a number of days whilst a bug report was processed by the library developer.
-\item\textbf{AJAX Cross Origin Resource Sharing} CORS is part of the security infustructure on the web. It caused several issues where it blocked communication with the API. This has since been fixed as the correct headers have been setup. 
+\item\textbf{AJAX Cross Origin Resource Sharing} CORS is part of the security infrastructure on the web. It caused several issues where it blocked communication with the API. This has since been fixed as the correct headers have been set-up. 
 \item\textbf{Git User Error} Whilst not a risk which has yet caused a fatal incident, there have been times where user error has caused a delay whilst the local and remote Git repositories are restored to a working state.
 \item\textbf{Lab Computers Have Restrictive Permissions} As the lab computers are so restrictive, the development team has not been able to implement the previously mentioned workaround for the Hudl device on one of the Swansea University computers. This prevents developers from using these systems for development. It is also not possible to install new software as required, which includes libraries, thus further increasing the difficulty in which these machines can be used.
 \item\textbf{Communication Between Server and Android} This feature has shown itself to require more time than initially expected, to be efficient in both battery and data usage a ContentProvider and SyncAdapter have to be implemented. This adds extra layers of abstraction between the database and the application.
-\item\textbf{Initial Code} The initial code the team was given to build upon was not sufficient to continue development, all the data had been hard-coded and strongly died to the OpenStreetMaps implementation. After analysing, commenting and reviewing the code it was deemed faster to begin with a new codebase, capable of using a ContentProvider and SyncAdapter to handle data.
+\item\textbf{Initial Code} The initial code the team was given to build upon was not sufficient to continue development, all the data had been hard-coded and strongly died to the OpenStreetMaps implementation. After analysing, commenting and reviewing the code it was deemed faster to begin with a new code base, capable of using a ContentProvider and SyncAdapter to handle data.
 \end{itemize}
 
 \section{Project Schedule Review}
@@ -1488,22 +1488,21 @@ NFREQ3 & In Progress & The application is being designed to be usable for visual
 NFREQ4 & In Progress & The application code is being written to be maintainable for future developers. \\ \hline
 NFREQ5 & In Progress & The application code is being fully documented as it is written. \\ \hline
 NFREQ6 & Completed & The application currently runs efficiently on lower end GPS-enabled android tablets. \\ \hline
-NFREQ7 & Completed & The application currently runs efficiently on android smartphones. \\ \hline
+NFREQ7 & Completed & The application currently runs efficiently on android smart phones. \\ \hline
 NFREQ8 & Completed & The application is compatible with typical tablet screen sizes. \\ \hline
 NFREQ9 & Completed & The application scales well when using typical smart phone screen sizes. \\ \hline
 NFREQ10 & In Progress & The application is being developed to be battery efficient by sampling GPS locations based on the user's mode of transport. \\ \hline
 NFREQ11 & In Progress & The application is being developed to be bandwidth efficient. \\ \hline
 \end{longtable}
 
-%TODO: What sprints we have completed?
 \subsection{Sprint Progress}
 The majority of sprints have been completed within schedule as defined in the timetable presented in Figure \ref{fig:software-dev-table}. Some sprints however, took longer than anticipated and exceeded the time box they were assigned. For example, the sprint containing the web portal login and registration features was delayed due to technical issues with a third party validation library. More specifically, the library contained bugs which were overlooked by the developer and slowed down the development of these features as a bug fix was required. The time lost during this sprint was recovered in the next sprint as more resources were invested into developing the required features.
 
 \section{Summary}
 \label{sec:summary}
-As can be seen throughout this document, the project is progressing to a high standard on all fronts. Whilst initial work on the Android application looks to have been slow, in terms of requirements met, the more flexible and higher quality backend of the application will allow for the remaining requirements to be completed at a faster pace than before. This increase in productivity during the latter stages of the project will make up the time spent dealing with the risks detailed in section~\ref{sec:risks}
+As can be seen throughout this document, the project is progressing to a high standard on all fronts. Whilst initial work on the Android application looks to have been slow, in terms of requirements met, the more flexible and higher quality back end of the application will allow for the remaining requirements to be completed at a faster pace than before. This increase in productivity during the latter stages of the project will make up the time spent dealing with the risks detailed in section~\ref{sec:risks}
 
-The development of the web portal has also seen hard times during the first half of development, but like the Android application development can now become more efficient with a solid backend to build upon.
+The development of the web portal has also seen hard times during the first half of development, but like the Android application development can now become more efficient with a solid back end to build upon.
 
 The final release date is May 9th 2014, which the development team still feels is achievable without sacrificing features on either the web portal or Android application.
 
