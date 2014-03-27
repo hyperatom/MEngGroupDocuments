@@ -321,15 +321,17 @@ To generate the Private Key the PBKDF2 (Password-Based Key Derivation Function 2
 
 \section{User Interface Design}
 
+
 \subsubsection{Heuristic Evaluation}
 %-- Explain how we are doing the evaluation blahblah nielsen etc.
 
-A heuristic evaluation can be thought of as an inspection upon a product's user interface. Inspectors act as potential users, carrying out typical, everyday tasks on the product, documenting any problem they expect a user will have. Performing systematic inspections can uncover numerous issues with a product's user interface. Detecting these issues allows developers to evaluate and then make improvements to their product. A small set of evaluators carry out the inspection, judging how well the user interface meets a set of heuristic design rules. An initial set of heuristics were proposed by Neilsen and Molich in 1990 CITE!!!!. These heuristics were then refined by Neilsen and are as follows:
+A heuristic evaluation can be thought of as an inspection on a product's user interface. Inspectors act as potential users, carrying out typical, everyday tasks on the product, documenting any problems they expect a user will have. Performing systematic inspections can uncover numerous issues with a product's user interface. Detecting these issues allows developers to evaluate and then make improvements to their product. A small set of evaluators carry out the inspection, judging how well the user interface meets a set of heuristic design rules. An initial set of heuristics were proposed by Neilsen and Molich in 1990 CITE!!!!. These heuristics were then refined by Neilsen and are as follows:
 
 \begin{itemize}
   \item \textbf{Visibility of system feedback}\\ The system should always keep users informed about what is going on, through
   appropriate feedback within reasonable time.
-  \item \textbf{Complexity of application}\\ The system should always keep users informed about what is going on, through  appropriate feedback within reasonable time.
+  \item \textbf{Complexity of application}\\ The system should speak the users' language, with words, phrases and concepts
+  familiar to the user, rather than system-oriented terms. Follow real-world conventions, making information appear in a natural and logical order.
   \item \textbf{Task navigation and user controls}\\ Users often choose system functions by mistake and will need a clearly marked
   ``emergency exit'' to leave the unwanted state without having to go through an extended dialogue. Support undo and redo.
   \item \textbf{Consistency and standards}\\ Users should not have to wonder whether different words, situations, or actions mean the same thing. Follow platform conventions.
@@ -339,15 +341,14 @@ A heuristic evaluation can be thought of as an inspection upon a product's user 
   \item \textbf{Simplicity and appeal}\\ Dialogues should not contain information which is irrelevant or rarely needed. Every extra unit of information in a dialogue competes with the relevant units of information and diminishes their relative visibility.
   \item \textbf{Be tolerant and reduce cost of errors}\\ Error messages should be expressed in plain language (no codes), precisely indicate the problem, and constructively suggest a solution.
   \item \textbf{Help Support}\\ Even though it is better if the system can be used without documentation, it may be necessary to provide help and documentation. Any such information should be easy to search, focused on the user's task, list concrete steps to be carried out, and not be too large.
-  
 \end{itemize}
 
 \subsubsection{List of tasks}
 
-Below is a list of ten tasks a typical user of the application may wish to carry out. The below tasks are to be completed during the heuristic evaluation:\\
+Below is a list of ten tasks a typical user of the application may wish to carry out. The tasks are to be completed during the heuristic evaluation:
 
 \begin{enumerate}
-  \item Log in using a verified account
+  \item Register an account
   \item Log out of an account
   \item Create a walk
   \item Search a walk
@@ -367,13 +368,65 @@ As part of the heuristic evaluation, two similar products were analysed and test
 This section documents the usability problems discovered during the TimbleOutdoors evaluation. 
 
 \begin{itemize}
-	\item\textbf{Usability problem:}\\
+	\item\textbf{Usability problem: }\\
+	 Visibility of system feedback heuristic violated. No indication that user has logged out.
 	
 	\item\textbf{Task attempted when problem occurred?}\\
+	Task 2.
 	
 	\item\textbf{Where did the problem occur?}\\
+	Settings side bar.
 	
 	\item\textbf{What suitable solution will solve the problem?}\\
+	Provide a simple toast to notify a user that he/she has logged out successfully.
+\end{itemize}
+
+\line(1,0){400}
+
+\begin{itemize}
+	\item\textbf{Usability problem:}\\
+	Consistency and standards. No indication of how to create a walk unless the ``Track off'' button was pressed. 
+	
+	\item\textbf{Task attempted when problem occurred?}\\
+	Task 3.
+	
+	\item\textbf{Where did the problem occur?}\\
+	Main window.
+	
+	\item\textbf{What suitable solution will solve the problem?}\\
+	Provide a standard ``Add'' icon at the top of the map view.
+\end{itemize}
+
+\line(1,0){400}
+
+\begin{itemize}
+	\item\textbf{Usability problem:}\\
+	Visibility of system feedback. No indication that deletion was successful.
+	
+	\item\textbf{Task attempted when problem occurred?}\\
+	Task 6.
+	
+	\item\textbf{Where did the problem occur?}\\
+	My walks view.
+	
+	\item\textbf{What suitable solution will solve the problem?}\\
+	Provide a simple toast to notify users that the walk has been deleted.
+\end{itemize}
+
+\line(1,0){400}
+
+\begin{itemize}
+	\item\textbf{Usability problem:}\\
+	Visibility of system feedback. No indication that editing attempts were saved.
+	
+	\item\textbf{Task attempted when problem occurred?}\\
+	Task 8, 9, 10.
+	
+	\item\textbf{Where did the problem occur?}\\
+	Edit walk description, edit way-point location and edit account details.
+	
+	\item\textbf{What suitable solution will solve the problem?}\\
+	Provide a simple toast to notify users that changes were successfully made. 
 \end{itemize}
 
 \subsubsection{ViewRanger GPS}
@@ -382,17 +435,102 @@ This section documents the usability problems discovered during the ViewRanger G
 
 \begin{itemize}
 	\item\textbf{Usability problem:}\\
+	Error prevention. No indication whether first and last name should both be entered into first text box or separate.
 	
 	\item\textbf{Task attempted when problem occurred?}\\
+	Task 1.
 	
 	\item\textbf{Where did the problem occur?}\\
+	Register account window
 	
 	\item\textbf{What suitable solution will solve the problem?}\\
+	Place ``First name'' and ``Last name'' above separate text boxes to avoid confusion. 
 \end{itemize}
+
+\line(1,0){400}
+
+\begin{itemize}
+	\item\textbf{Usability problem:}\\
+	User control and freedom. The application has no log out feature. 
+	
+	\item\textbf{Task attempted when problem occurred?}\\
+	Task 2.
+	
+	\item\textbf{Where did the problem occur?}\\
+	Settings window.
+	
+	\item\textbf{What suitable solution will solve the problem?}\\
+	Provide a button, allowing the user to log out of their account.
+\end{itemize}
+
+\line(1,0){400}
+
+\begin{itemize}
+	\item\textbf{Usability problem:}\\
+	Visibility of system status. No indication that walk was successfully deleted.
+	
+	\item\textbf{Task attempted when problem occurred?}\\
+	Task 6.
+	
+	\item\textbf{Where did the problem occur?}\\
+	Delete walk window
+	
+	\item\textbf{What suitable solution will solve the problem?}\\
+	Provide a simple toast informing the user that a walk has been deleted.
+\end{itemize}
+
+\line(1,0){400}
+
+\begin{itemize}
+	\item\textbf{Usability problem:}\\
+	Match between system and the real world. ``Extend walk'' used to imply ``add a way-point''
+	
+	\item\textbf{Task attempted when problem occurred?}\\
+	Task 7.
+	
+	\item\textbf{Where did the problem occur?}\\
+	Main window.
+	
+	\item\textbf{What suitable solution will solve the problem?}\\
+	Correct the terminology used in order to prevent confusion.
+\end{itemize}
+
+\line(1,0){400}
+
+\begin{itemize}
+	\item\textbf{Usability problem:}\\
+	Visibility of system status. No indication that alterations were successful. 
+	
+	\item\textbf{Task attempted when problem occurred?}\\
+	Task 8 and 9.
+	
+	\item\textbf{Where did the problem occur?}\\
+	Edit walk description window and edit way-point location window.
+	
+	\item\textbf{What suitable solution will solve the problem?}\\
+	Provide simple toast to inform the user his/her update was successful.
+\end{itemize}
+
+\line(1,0){400}
+
+\begin{itemize}
+	\item\textbf{Usability problem:}\\
+	User control and freedom. No ability to edit account details, but user may sign in or register (whilst already signed in).
+	
+	\item\textbf{Task attempted when problem occurred?}\\
+	Task 10.
+	
+	\item\textbf{Where did the problem occur?}\\
+	Account activation window.
+	
+	\item\textbf{What suitable solution will solve the problem?}\\
+	Provide a feature allowing users to edit their account.
+\end{itemize}
+
 
 \subsubsection{Prototype Designs}
 
-Prototyping is an important aspect of software development. Creating prototype designs allows developers to produce a simplified version of a potential product. This means feedback can be gathered from users early in the project. It also allows developers to assess their prototype product, ensuring it meets the requirements set out by a client. This section of the document will analyse two prototype stages. First, a low level design that includes basic application layout and simple features. The second prototype design shows the application during the development stage and includes additional features.
+Prototyping is an important aspect of software development. Creating prototype designs allows developers to produce a simplified version of a potential product. This means feedback can be gathered from users early in the project. It also allows developers to assess their prototype product, ensuring it meets the requirements set out by a client. This section of the document will analyse two prototype stages. First, a low level design that includes basic application layout and simple features. The second prototype design shows the application during the development stage and includes additional features. A heuristic evaluation of the second prototype will also be provided.
 
 \subsubsection{Prototype 1}
 
@@ -407,14 +545,14 @@ The first prototype began as a series hand drawn template designs. These basic m
 
 Figure x illustrates an original mock-up design for a typical walk interface. The majority of the interface is made up of a map, displaying the user's current location. A side view will include a menu option and a list of way-points relevant to a specific walk trail. A footer bar will include information about distance and time expected to next point of interest. This simple design was used to create the second stage of prototype 1.\\
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=12cm]{./img/pencil_proto1.jpg}
 \caption{Walk View - Evolus Pencil Design} 
 \end{center}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=12cm]{./img/pencil_choose_walk.jpg}
 \caption{Choose A Walk View - Evolus Pencil Design} 
@@ -422,7 +560,7 @@ Figure x illustrates an original mock-up design for a typical walk interface. Th
 \end{figure}
 
 
-Similar to ``Walk View``, the ``Choose A Walk View''(figure x) includes of a side bar, header bar. This interface view allows the user to scroll through a list of walks and be presented with information about each walk, such as walk name, description, map location, length of walk and the number of walk points of interests (way-points). This interface view also includes a button, allowing the user to begin a chosen walk. For additional prototype 1 designs, see Appendix x. 
+Similar to ``Walk View``, the ``Choose A Walk View''(figure x) includes a side bar, header bar and a main window. This interface view allows the user to scroll through a list of walks and be presented with information about each walk, such as walk name, description, map location, length of walk and the number of points of interests (way-points). This interface view also includes a button, allowing the user to begin a chosen walk. For additional prototype 1 designs, see Appendix x. 
 
 \subsubsection{Prototype 2}
 
@@ -441,7 +579,59 @@ Similar to ``Walk View``, the ``Choose A Walk View''(figure x) includes of a sid
 \end{center}
 \end{figure}
 
-Prototype 2 was created using Eclipse ADT CITE!!!!!!!!. Through the use of XML CITE!!!, a series of application interface designs were produced. Figure x and y are both improvements of interfaces described in section X, prototype 1. Alterations were made, ensuring the issues that arose during the heuristic evaluation of prototype 1 were overcome. STATE ISSUES THAT WERE OVERCOME
+Prototype 2 was created using Eclipse ADT CITE!!!!!!!!. Through the use of XML CITE!!!, a series of application interface designs were produced. Figure x and y are both improvements of interfaces described in section X, prototype 1. When minor functionality was added to prototype 2, a heuristic evaluation was carried out. The following section documents the usability problems discovered during the White Rock evaluation.
+
+\begin{itemize}
+	\item\textbf{Usability problem:}\\
+	Visibility of system status. Log out doesn't have a confirmation feature.
+	
+	\item\textbf{Task attempted when problem occurred?}\\
+	Task 2.
+	
+	\item\textbf{Where did the problem occur?}\\
+	At the application action bar when signed in.
+	
+	\item\textbf{What suitable solution will solve the problem?}\\
+	Simply apply a confirmation dialogue fragment when the "log out" icon is pressed.
+	
+\end{itemize}
+
+\line(1,0){400}
+
+\begin{itemize}
+	\item\textbf{Usability problem:}\\
+	Visibility of system status. No confirmation that a walk was successfully created. 
+	
+	\item\textbf{Task attempted when problem occurred?}\\
+	Task 3.
+	
+	\item\textbf{Where did the problem occur?}\\
+	Create walk window.
+	
+	\item\textbf{What suitable solution will solve the problem?}\\
+	Add a toast to notify the user that a walk was successfully created.
+	
+\end{itemize}
+
+\line(1,0){400}
+
+\begin{itemize}
+	\item\textbf{Usability problem:}\\
+	Visibility of system status. No confirmation edit was successful.
+	
+	\item\textbf{Task attempted when problem occurred?}\\
+	Task 8, 9 and 10.
+	
+	\item\textbf{Where did the problem occur?}\\
+	Edit description of existing walk, edit way-point description of existing walk and edit account details. 
+	
+	\item\textbf{What suitable solution will solve the problem?}\\
+	Add a toast to notify user that their changes were accepted and successful.
+	
+\end{itemize}
+
+From the above evaluation, it is evident that the application is still at the latter prototype stages. Minor functionality, such as toast notifications and dialogue fragments, are to be added at a later date, ensuring the application conforms to Neilsen's heuristics.
+
 
 
 \section{Android Application Progress}
@@ -796,6 +986,30 @@ This class uses several cryptography libraries to ensure that it correctly mimic
 
 \subsection{Fragments}
 \label{sec:fragments}
+
+Fragments were introduced to several interface views. A fragment can be thought of as a section or portion of an interface view of an activity. Multiple fragments can be used for any given activity. These fragments can then be used across multiple activities, making them efficient and more suitable to use over standard custom views. Having its own life-cycle, a fragment receives its own input events, making it a form of ``sub-activity''. The main advantage of using fragments is that it allows for applications to be written that can scale across multiple screen sizes. Below is a snippet of fragment code used to create the search interface view. It contains two fragments, each with its own layout held in separate XML file.
+
+\lstset{language=xml,
+keywordstyle=\color{Maroon},
+commentstyle=\color{OliveGreen},
+showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyle=\color{Blue}}
+\begin{lstlisting}[captionpos=b, caption=Fragment Code Snippet, label=lst:Fragment Code Snippet, frame=single]
+<LinearLayout 
+    android:orientation="horizontal" >
+ 
+    <fragment
+        android:id="@+id/listFragment"
+        class="uk.co.tmilner.whiterock.SearchListFragment" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        class="uk.co.tmilner.whiterock.SearchDetailFragment" >
+    </fragment>
+    
+</LinearLayout>
+\end{lstlisting}
+
 
 \subsection{SyncAdapter}
 \label{sec:syncAdapter}
