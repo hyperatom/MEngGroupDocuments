@@ -35,15 +35,12 @@ Paris orm.
 \newblock \url{http://j4mie.github.io/idiormandparis/}.
 \newblock Accessed: 29-01-2014.
 
-<<<<<<< HEAD
-=======
 \bibitem{xml}
 Parsing xml data.
 \newblock \url{http://developer.android.com/training/basics/network-ops/xml.
   html}.
 \newblock Accessed: 23/03/2014.
 
->>>>>>> Fixig
 \bibitem{pencil}
 Pencil prototyping software.
 \newblock \url{http://pencil.evolus.vn}.
@@ -93,14 +90,11 @@ Jakob Nielsen and Rolf Molich.
 \newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
   Computing Systems}, CHI '90, pages 249--256, New York, NY, USA, 1990. ACM.
 
-<<<<<<< HEAD
 \bibitem{bootstrapValidator}
 Nguyen~Huu Phuoc.
 \newblock Bootstrap validator git repository.
 \newblock \url{https://github.com/nghuuphuoc/bootstrapvalidator}.
 
-=======
->>>>>>> Fixig
 \bibitem{whiterock}
 White~Rock Swansea.
 \newblock White rock org website.
