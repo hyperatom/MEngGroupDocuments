@@ -342,7 +342,7 @@ showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyl
 \end{lstlisting}
 
 \subsubsection{CORS}
-CORS, Cross-Origin Resource Sharing, limits requests to external domains unless the explicitly allow it to the same domain only. As the API is on a separate sub-domain the CORS settings of a web browser will block requests from being sent. To fix this a special OPTIONS route had to be added. It respons with a set of headers which specify which domains should be able to access the API, what methods they can use and what headers they can pass. These headers need to be passed with every request as well as the OPTIONS so they were initialised before the routes are processed meaning all requests will provide them. The API has been configured with all CORS headers and requests are allowed from any domain during the testing process.
+CORS, Cross-Origin Resource Sharing, limits requests to external domains unless the explicitly allow it to the same domain only. As the API is on a separate sub-domain the CORS settings of a web browser will block requests from being sent. To fix this a special OPTIONS route had to be added. It responds with a set of headers which specify which domains should be able to access the API, what methods they can use and what headers they can pass. These headers need to be passed with every request as well as the OPTIONS so they were initialised before the routes are processed meaning all requests will provide them. The API has been configured with all CORS headers and requests are allowed from any domain during the testing process.
 
 \subsection{Authentication}
 
