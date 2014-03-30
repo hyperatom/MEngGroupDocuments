@@ -1,14 +1,76 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{angular}
+Angularjs.
+\newblock \url{http://angularjs.org}.
+\newblock Accessed: 25-03-2014.
+
+\bibitem{backbone}
+Backbone js.
+\newblock \url{http://backbonejs.org}.
+\newblock Accessed: 25-03-2014.
+
+\bibitem{bootstrap}
+Bootstrap css framework.
+\newblock \url{http://getbootstrap.com/}.
+\newblock Accessed: 25-03-2014.
+
+\bibitem{eclipse}
+Eclipse adt plugin.
+\newblock \url{http://developer.android.com/tools/sdk/eclipse-adt.html}.
+\newblock Accessed: 27/03/2014.
+
+\bibitem{ember}
+Emberjs.
+\newblock \url{http://emberjs.com}.
+\newblock Accessed: 25-03-2014.
+
+\bibitem{foundation}
+Foundation css framework.
+\newblock \url{http://foundation.zurb.com}.
+\newblock Accessed: 25-03-2014.
 
 \bibitem{paris}
 Paris orm.
 \newblock \url{http://j4mie.github.io/idiormandparis/}.
 \newblock Accessed: 29-01-2014.
 
+\bibitem{xml}
+Parsing xml data.
+\newblock \url{http://developer.android.com/training/basics/network-ops/xml.
+  html}.
+\newblock Accessed: 23/03/2014.
+
+\bibitem{pencil}
+Pencil prototyping software.
+\newblock \url{http://pencil.evolus.vn}.
+\newblock Accessed: 20-02-2014.
+
 \bibitem{slim}
 Slim framework.
 \newblock \url{http://www.slimframework.com}.
 \newblock Accessed: 29-01-2014.
+
+\bibitem{outdoor}
+Trimble outdoor navigator.
+\newblock
+  \url{https://play.google.com/store/apps/details?id=com.trimble.outdoors.navapple.android}.
+\newblock Accessed: 27/03/2014.
+
+\bibitem{viewRanger}
+View ranger.
+\newblock \url{http://www.viewranger.com/en-gb}.
+\newblock Accessed: 27/03/2014.
+
+\bibitem{zimit}
+Zimit css framework.
+\newblock \url{http://firezenk.github.io/zimit/}.
+\newblock Accessed: 25-03-2014.
+
+\bibitem{initialDoc}
+Adam Barrell, Lewis Hancock, Thomas Milner, and Chris Lewis.
+\newblock White rock digital trails: Team structure, methodology, requirements
+  and specifications.
 
 \bibitem{auth}
 Riyad Kalla.
@@ -21,5 +83,21 @@ Riyad Kalla.
 Thomas Milner.
 \newblock Milestone 2.
 \newblock Technical report, Swansea University, Febuary 2014.
+
+\bibitem{nielsen1990}
+Jakob Nielsen and Rolf Molich.
+\newblock Heuristic evaluation of user interfaces.
+\newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, CHI '90, pages 249--256, New York, NY, USA, 1990. ACM.
+
+\bibitem{bootstrapValidator}
+Nguyen~Huu Phuoc.
+\newblock Bootstrap validator git repository.
+\newblock \url{https://github.com/nghuuphuoc/bootstrapvalidator}.
+
+\bibitem{whiterock}
+White~Rock Swansea.
+\newblock White rock org website.
+\newblock \url{http://www.whiterocktrails.org}.
 
 \end{thebibliography}
