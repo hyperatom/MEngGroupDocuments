@@ -1,6 +1,27 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Milestone-2.aux
 The style file: plain.bst
 Database file #1: bibliography.bib
+Warning--entry type for "bootstrapValidator" isn't style-file defined
+--line 22 of file bibliography.bib
+Warning--entry type for "initialDoc" isn't style-file defined
+--line 52 of file bibliography.bib
+Warning--entry type for "backbone" isn't style-file defined
+--line 170 of file bibliography.bib
+Warning--entry type for "angular" isn't style-file defined
+--line 176 of file bibliography.bib
+Warning--entry type for "ember" isn't style-file defined
+--line 181 of file bibliography.bib
+Warning--to sort, need author or key in bootstrap
+Warning--to sort, need author or key in foundation
+Warning--to sort, need author or key in zimit
+Warning--to sort, need author or key in angular
+Warning--to sort, need author or key in backbone
+Warning--to sort, need author or key in ember
 Warning--to sort, need author or key in slim
 Warning--to sort, need author or key in paris
-(There were 2 warnings)
+Warning--to sort, need author or key in outdoor
+Warning--to sort, need author or key in viewRanger
+Warning--to sort, need author or key in pencil
+Warning--to sort, need author or key in eclipse
+Warning--to sort, need author or key in xml
+(There were 18 warnings)
