@@ -80,7 +80,7 @@
 
 \linespread{1.2} % Line spacing
 
-\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+\graphicspath{{img/}} % Specifies the directory where pictures are stored
 
 \lstset{ %
 	basicstyle=\normalfont\ttfamily,
@@ -170,16 +170,85 @@
 
 \section{API}
 \label{sec:api-design}
-% UML Diagrams
-% Descriptions of each class
-% Technology Choices
 
-\subsection{Rejected Designs}
-\label{sec:rejected-designs}
+The API is the crucial link between the Website, Application and Database. It was important that the correct design and technology was selected to make that link as seamless as possible. 
 
-\subsection{Chosen Design}
-\label{sec:chosen-designs}
+\subsection{Possible Designs}
+\label{sec:api:rejected-designs} %Phalcon Framework. SOAP API's.
+When work started on the API the first descision that needed to be made was on the protocal for the API. There are several popular API protocals including;
 
+\begin{itemize}
+\item SOAP
+\item REST
+\item JSON-RPC 
+\item XML-RPC \ldots
+\end{itemize}
+
+The most popular two are SOAP and REST. SOAP was originally defined as `Simple Object Access Protocol' and is the sucssesor to XML-RPC (XML Remote Procedure Call). It uses a XML document for its message which is sent over either the HTTP or SMTP application protocals. The XML document which is transmitted with a SOAP request has several parts. The document will start with an `Envelope' which contains all of the data. Inside the `Envelope' there is an optional `Header', a compolsary `Body' which contains request data, and an optional `Fault' which contains any errors which have occured. Listing \ref{lst:soap} shows an example of a SOAP request.
+
+\lstset{language=xml,
+keywordstyle=\color{Maroon},
+commentstyle=\color{OliveGreen},
+showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyle=\color{Blue}}
+
+\begin{lstlisting}[captionpos=b, caption=An example SOAP request., label=lst:soap, frame=single]
+POST /InStock HTTP/1.1
+Host: www.example.org
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: 299
+SOAPAction: "http://www.w3.org/203/05/soap-envelope"
+ 
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/203/05/soap-envelope">
+  <soap:Header>
+  </soap:Header>
+  <soap:Body>
+    <m:GetStockPrice xmlns:m="http://www.example.org/stock">
+      <m:StockName>IBM</m:StockName>
+    </m:GetStockPrice>
+  </soap:Body>
+</soap:Envelope>
+\end{lstlisting}
+
+REST, on the other hand, is a stateless system which comunicates via URI's, any media (such as JSON or XML) and HTTP Methods. REST stands for Representational State Transfer, which implys a representation of the current state must be transfered to the API with reach request. A REST request to retrive an object can be as simple as \lstinline$GET http:\\example.com\api\users$. The simplicity of REST lends its self to many situations and makes it easy to adapt to specific cases. 
+
+\subsection{Chosen Desgin}
+For the API it was decided to harness the REST protocal. The decision was made after analysing both SOAP and REST and the advantages and disadvantages of both. In the end the overly veribose nature of SOAP led to the decision of a REST api.  The ability to use JSON with REST requests was also a deciding factor as this gretly reduced the workload when comunicating with the API from JavaScript. 
+
+\subsection{UML Diagrams}
+\label{sec:api:uml}
+
+\subsection{Classes}
+\label{sec:api:class}
+The API has several `Model' classes to represent the Database tables and the objects that are stored within them. The objects are related through the database and can retrieve the related models through method calls. The relations between the models is shown in Figure \ref{fig:datamodels}, where every model is a possible entry point. Using these models it is possible to, for example, use an `English Walk Description' to return all related 'Waypoint Images'. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{DataModels}
+    \caption{The Data Model and their relations.}
+    \label{fig:datamodels}
+\end{figure}
+
+The API has several main object collections, which are `Walks', `Waypoints', `Users', `Waypoint Images', `Waypoint Audio', `Waypoint Video', `Walk Reviews' and `Sessions'. Each collection has a specific route in the API which maps to a collection controller. When a route is called a method in the revelvent controller is called. The method is passed a variable called \$app. This contains the requets and response objects. When the controller has completed its work it writes the response to the \$app object and returns to the index file which initally handled the request. If there is no more work to be done the \$app object sends the response. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{ControllerRoutes}
+    \caption{The connection between routes and controllers.}
+    \label{fig:controllerroutes}
+\end{figure}
+
+\subsection{Technology Choices}
+\label{sec:api:techChoices}
+
+\begin{description}
+\item[Paris] - Paris is an ORM (Object Relation Mapper) which provided a layer of abstraction between the database and the API. Rather than writing SQL queries to retrieve an object it makes it possible to use model objects to and methods to retrieve the objects.  
+\item[Slim Framework] - The slim framework was chosen as the underlying framework of the API. Slim provides many low-level function which are critical to the production of a reliable API in a small and efficient package. Before it was settled on an alternative framework called Phalcon was trialed, but it proved to be overly complex and overwhelming compared to the relative simplicity of Slim. 
+\item[PHP] - This is the language on which Slim runs. It is a popular free and open source web programming langauage. It has great support and is widly used through the world. Alternatives included C\#.NET which is a closed source and closed platform product from Microsoft. Due to the licensing fees and extra costs involved PHP quickly came to light as the best choice. 
+\item[Apache] - This is the web server which handles request and responses for the API. It recieves requests and passes them on to the PHP runtime for the API. Apache is the best known and most widely used web server in the world. The alternatives were Nginx and IIS. IIS is limited to Microsfts platforms and Nginx, while well respected, is still an emerging presence in the market. 
+\item[Linux] - Linux is the operating system which powers the API server. Linux is free and open source and is the most popular platfrom for operating a server.
+\item[JSON] - JavaScript Object Notation (JSON) is a media format which is used to represent JavaScript objects as plain text. It can be used to represent far more than just JavaScript objects however. 
+\end{description}
 
 \section{Database}
 \label{sec:database-design}
@@ -201,6 +270,12 @@
 
 \chapter{User Manual}
 \label{sec:user-manual}
+
+\section{API}
+
+\section{Web Portal}
+
+\section{Android Application}
 
 \chapter{Reflective Account}
 \label{sec:reflective-account}
