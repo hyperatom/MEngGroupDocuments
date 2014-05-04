@@ -140,6 +140,15 @@
 \chapter{Design}
 \label{sec:design}
 
+\section{Development Tools}
+
+This section presents a list of the tools used to develop the Digital Trails applications including the web portal, Android application and API. The purpose of each tool's usage in the context of this project is also discussed.
+
+\begin{itemize}
+\item \textbf{Amazon EC2} - The Amazon Elastic Compute Cloud is a service which manages virtual servers in the cloud. An EC2 server was used to host the web portal temporarily during development before it was moved to a permanent web host.
+\item \textbf{GIT} - A version control system designed to track changes to source code files. This was used to share code between team members so that their work could be synchronised when working on the same files.
+\end{itemize}
+
 \section{Web Portal}
 \label{sec:web-portal-design}
 % User Interface Design
@@ -148,11 +157,112 @@
 % Technology Choices
 
 \subsection{Rejected Designs}
-\label{sec:rejected-designs}
+\label{sec:portal-rejected-designs}
 
 \subsection{Chosen Design}
-\label{sec:chosen-designs}
+\label{sec:portal-chosen-designs}
 
+\subsubsection{Technology Choices}
+\label{sec:portal-technology-choices}
+
+This section will discuss the choices of technology that were used to implement the web portal. These technologies were chosen for this project because each proved to be essential or beneficial to the development of the web portal. The following list will give the names of each technology and describe their purpose within the project.
+
+\begin{itemize}
+\item \textbf{AngularJS} - A JavaScript web application framework which includes features for the creation of data bindings, controller modules and other concepts that make web applications easier to manage. AngularJS provided a framework to develop the client side web application.
+\item \textbf{HTML5} - A modern browser technology that extends the tags and attributes available from the HTML4 standard. This technology allowed the use of customised HTML attributes for AngularJS data bindings.
+\item \textbf{JavaScript} - A programming language designed to be executed in the web browser. JavaScript allows the manipulation of view elements and calling of resources from the API.
+\item \textbf{CSS3} - A modern browser language used to apply visual styling to elements of an HTML page. This was used to apply custom visual effects to view layouts and page elements such as buttons and navigation bars.
+\item \textbf{Twitter Bootstrap} - A CSS framework that provides out-of-the-box styling for HTML elements. This was used to style the web portal to save time that otherwise would have been spent on graphic designing.
+\item \textbf{jQuery} - Extends the JavaScript language and is designed for the manipulation of HTML page elements. This is used to change page elements on the web portal in response to user interface events such as button clicks.
+\end{itemize}
+
+\subsubsection{User Interfaces}
+\label{sec:portal-user-interfaces}
+This section presents and discusses the final user interfaces that were chosen for use in the web portal. These designs were the result of an iterative development process whereby the designs were shown to the client and revised according to suggested changes. They are also the result of interface enhancements designed to make the views more intuitive to users. The following sections will present a screen capture of each web portal view and discuss their functionality. The discussion for many of the interfaces remain the same as defined in the interim document and are cited as such.
+
+\paragraph{Welcome View}\mbox{}\\
+The welcome view shown in Figure \ref{fig:home} provides visitors with a link to download the Android application and instructs them to login or register account in order to use the portal. A footer has also been added to provide users with navigation links to important resources such as the Android application and \emph{About} page\cite{milestone2}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{./img/webportal/home}
+\caption{Home view of the web portal.}
+\label{fig:home}
+\end{figure}
+
+\paragraph{Responsive View}\mbox{}\\
+Figure \ref{fig:home-responsive} demonstrates a responsive view of the web portal. This is the view that users will see when visiting the web portal on mobile devices such as smart phones and tablets. The responsive design minimizes the menu bar which can be expanded by clicking the button shown in the top right of the figure. In addition, web page content reduces in width and elements become stacked allowing for easier scrolling on mobile devices. The responsive design of the web portal is facilitated by the Bootstrap CSS and JavaScript library\cite{milestone2}. The items shown in the list feature navigational links to the associated pages. The \emph{Walks} item expands further child links which navigate to views that are associated with walks.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{./img/webportal/home-responsive}
+\caption{Web portal responsive menu view.}
+\label{fig:home-responsive}
+\end{figure}
+
+\paragraph{Login View}\mbox{}\\
+Figure \ref{fig:login} shows the login view that users will see when they click on the \emph{Login} button in the top navigation bar. The login view displays as a modal in front of the web page. This will ensure that users do not have to navigate between pages in order to log in, thus enhancing usability. The login view requires users to input their email address and password followed by clicking the \emph{Login} button. The \emph{Login} button will display a spinner icon whilst the fields are validated to ensure the user is aware that the page is loading. An external validation library is used to validate the fields and display an error or success status. The library uses pre-defined validators to validate the structure of the email address and that the email and password pair is valid when checked against the White Rock Trails API. The validator changes the display of erroneous fields to feature red or green borders and tick or cross icons for invalid and valid fields respectively. A specific error message will also be displayed underneath erroneous fields to inform the reason for the error and allow users to amend it. When users successfully log in, the modal will close and the \emph{Login} and \emph{Registration} buttons shown in the top navigation bar are replaced with the user's full name\cite{milestone2}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{./img/webportal/login}
+\caption{Web portal login modal demonstrating validation.}
+\label{fig:login}
+\end{figure}
+
+\paragraph{Registration View}\mbox{}\\
+Figure \ref{fig:registration} shows the registration view that users will see when the \emph{Register} button is clicked in the top navigation bar. This view is also implemented as a modal for the same reasons as the login view and to maintain consistency throughout the application. The same validator is also used to validate the registration fields. However, inputs such as \emph{Email Address} and the two password fields require different validators. The former uses a validator that checks whether the provided email address has already been registered by another user. The latter checks whether the two passwords are identical. This will prevent users from registering using a mistyped password and subsequently not being able to log in. Clicking the \emph{Register} button will display a loading spinner inside as described for the login view. When users successfully register, they will be presented with a new confirmation modal instructing them to log in with their new account\cite{milestone2}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{./img/webportal/registration}
+\caption{Web portal registration modal demonstrating validation.}
+\label{fig:registration}
+\end{figure}
+
+\paragraph{All Walks View}\mbox{}\\
+Figure \ref{fig:all-walks} shows the view users will see when they click on the \emph{Walks} button in the top menu bar and select the \emph{All Walks} option. This view displays a list of tiles, each representing a walk in the database. The background of each tile is an image selected from the collection of each walks way point images. Clicking a tile will navigate the user to a walk information view as presented in Figure \ref{fig:walk-info}\cite{milestone2}. 
+
+Functionality for the \emph{Add Walk} button and search bar have been fully implemented since they were discussed in Milestone 2. Clicking the \emph{Add Walk} button navigates the user to a view where a new walk can be created. Entering text into the search box will perform a full text search of all walks held in the database. The search box also provides instantaneous results such that a request is sent to the server after a set time has expired after a user finishes typing. This allows for much faster and intuitive searching since the user is not required to press a button to execute the search. Finally, pagination has been implemented which allows users to view specific pages of search results that have overflowed the current view. A pagination control is present at the top and bottom of the \emph{All Walks} view for convenience to the user. Users can access specific results pages by clicking the relevant button index. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{./img/webportal/all-walks}
+\caption{All walks view of the web portal.}
+\label{fig:all-walks}
+\end{figure}
+
+\paragraph{Walk Information View}\mbox{}\\
+Figure \ref{fig:walk-info} shows the view that a walk owner will see when they click on a walk owned by them from the \emph{All Walks} view. As shown in the figure, walk information will be displayed in this view such a title, description, duration, distance, difficulty rating and author. Navigation tabs above this information allow users to navigate between the \emph{Waypoints}, \emph{Reviews} and \emph{Walk} views. If any waypoint contributions have been submitted to the walk by other users, a \emph{Contributions} tab will appear. The number of pending contributions is also shown adjacent to the tab name. 
+
+The interface also features \emph{Edit} and \emph{Delete} walk buttons which are only visible to the owner of the walk. Clicking the \emph{Edit} button will navigate the user to a view where the walk can be edited, whilst the \emph{delete} will prompt the user to confirm walk deletion. Walk data is asynchronously loaded from the database through the API. The Google Maps API is used to display the map shown in the right of the figure. The Google Maps API allows markers to be placed at specific GPS locations contained within the walk data. The map allows users to scroll and zoom around the walk area to gain an understanding of its location.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{./img/webportal/walk-info}
+\caption{Walk information view of the web portal.}
+\label{fig:walk-info}
+\end{figure}
+
+\paragraph{Walk Waypoints View}\mbox{}\\
+Figure \ref{fig:walk-waypoints} shows the view that users will see when they click on the \emph{Waypoints} tab of the walk information view. The view shows the list of waypoints that are represented by markers on the map. Markers on the map can be identified by their letter index which references a waypoint shown in the leftmost list list. Clicking a list item or its corresponding map marker will display a modal containing media uploaded to the way point such as images, videos and audio. This feature has been fully implemented since Milestone 2. Finally, a visual fading effect has been applied to the waypoints list where an overflow is present. This indiciates to the user that the list panel can be scrolled to display further waypoints.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{./img/webportal/walk-waypoints}
+\caption{Walk way points view of the web portal.}
+\label{fig:walk-waypoints}
+\end{figure}
+
+\paragraph{Walk Reviews View}\mbox{}\\
+Figure \ref{fig:walk-reviews} shows the view that users will see when they click the \emph{Reviews} tab from the navigation tabs bar. This view loads user reviews from the walk data and displays them in a list view as shown in the figure. A library called \emph{Raty} was used to generate the star rating system seen below the title of the review. It takes a review rating integer between 1-5 and generates a star representation.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{./img/webportal/walk-reviews}
+\caption{Walk reviews view of the web portal.}
+\label{fig:walk-reviews}
+\end{figure}
 
 \section{Android Application}
 \label{sec:android-design}
