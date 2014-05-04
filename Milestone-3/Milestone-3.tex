@@ -80,7 +80,7 @@
 
 \linespread{1.2} % Line spacing
 
-\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+\graphicspath{{img/}} % Specifies the directory where pictures are stored
 
 \lstset{ %
 	basicstyle=\normalfont\ttfamily,
@@ -274,9 +274,47 @@ Figure \ref{fig:walk-reviews} shows the view that users will see when they click
 \subsection{Rejected Designs}
 \label{sec:rejected-designs}
 
+Through-out the course of the project, many design iterations were carried out. As a result, numerous interface designs were modified, while several designs were made redundant for a variety of reasons. This section of the document will analyse rejected designs, highlighting the issues that led to their redundancy. Below is an example of how the interface designs have progressed through several stages of iteration.\\
+
+\textbf{Choose a walk} - This example is the walk selection interface ``Saved Walks''. The first iteration took the form of a simple interface design (\ref{fig:view_walk}). Created using Evolus Pencil - An open-source GUI prototyping tool [CITE], the interface included the majority of features set out by Milestone 1 requirements. Here, the user may select from a list of available walks. The main interface window presents the selected walk's name, geological location, description, length (miles) and number of walk waypoints. The interface also included a start button, allowing users to begin the walk in current view.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/pencil_choose_walk}
+    \caption{Walk selection interface}
+    \label{fig:view_walk}
+\end{figure}
+
+Based on the initial design, the interface was then created using Eclipse IDE [Cite]. This allowed for a more professional prototype design to be produced, illustrating how the final product may look. It was then possible to carry out improvements on the initial design. The combo-box and search features situated above the list of walks were removed. This was due to the fact they were better suited else where in the application, in a separate search interface. The removal of these two features now allowed for the list of walks to fill the entire side bar fragment. The final stage of this iteration was to add colour to the design. The chosen colour scheme for this iteration was a light shade of green to compliment the application logo. A small amount of shading was applied to the background colour of buttons and other features. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/app_choose_walk}
+    \caption{Walk selection interface}
+    \label{fig:view_walk}
+\end{figure}
+
+ADD FINAL SECTION WHEN APP IS CREATED!!!!!!\\
+
+As previously documented, many interface designs were altered during the iteration stages of development. However, a small number of interface designs were fully rejected and re-designed. Below are two similar examples of complete interface re-designs.\\
+
+\textbf{My Walks Interface} - The second design iteration saw the ``My Walks'' interface (Figure~\ref{fig:app_my_walks_view}) present each walk create by the user in list form. Each walk included an ID, title, edit and delete button. The user also had the ability to create a new walk from this interface. During evaluation, it was decided that the proposed interface was not suitably designed. It's inappropriate layout meant that the only information available about each walk was in fact its ID and title. Before selecting the edit or delete button, the user may have to view a walk if they were unable to recall by name. The list format also led to a poor use of layout positioning. A vast amount of empty space was visible, especially when using the application on a large tablet.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/app_my_walks_view}
+    \caption{Walk selection interface}
+    \label{fig:app_my_walks_view}
+\end{figure}
+
+With the above negative aspects of this design taken into consideration, a new interface design was produced. The interface now presents each walk in a side-bar style list fragment, reading each walk from a database. The edit and delete buttons are included in the main fragment. Additional features to the interface now include the walk's geological location, description, length(miles), number of walk waypoints, difficulty rating and average user rating. Providing this level of information allows users to view a basic summary of each walk created by the user.\\
+
+INSERT THE BETTER IMAGE HERE!!!\\
+
+\textbf{Walk Waypoints Interface} - 
+
 \subsection{Chosen Design}
 \label{sec:chosen-designs}
-
 
 \section{API}
 \label{sec:api-design}
