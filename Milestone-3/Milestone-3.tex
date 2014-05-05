@@ -142,11 +142,7 @@
 
 \section{Development Tools}
 
-
-
 This section presents a list of the tools used to develop the Digital Trails applications including the web portal, Android application and API. The purpose of each tool's usage in the context of this project is also discussed.
-
-
 
 \begin{itemize}
 
@@ -199,12 +195,8 @@ This section will discuss the choices of technology that were used to implement 
 
 This section presents and discusses the final user interfaces that were chosen for use in the web portal. These designs were the result of an iterative development process whereby the designs were shown to the client and revised according to suggested changes. They are also the result of interface enhancements designed to make the views more intuitive to users. The following sections will present a screen capture of each web portal view and discuss their functionality. The discussion for many of the interfaces remain the same as defined in the interim document and are cited as such.
 
-
-
 \paragraph{Welcome View}\mbox{}\\
 The welcome view shown in Figure \ref{fig:home} provides visitors with a link to download the Android application and instructs them to login or register account in order to use the portal. A footer has also been added to provide users with navigation links to important resources such as the Android application and \emph{About} page\cite{milestone2}.
-
-
 
 \begin{figure}[H]
 
@@ -258,7 +250,7 @@ Figure \ref{fig:login} shows the login view that users will see when they click 
 
 
 
-\paragraph{Registration View}\mbox{}\\
+\paragraph{Registration View}\mbox{}
 Figure \ref{fig:registration} shows the registration view that users will see when the \emph{Register} button is clicked in the top navigation bar. This view is also implemented as a modal for the same reasons as the login view and to maintain consistency throughout the application. The same validator is also used to validate the registration fields. However, inputs such as \emph{Email Address} and the two password fields require different validators. The former uses a validator that checks whether the provided email address has already been registered by another user. The latter checks whether the two passwords are identical. This will prevent users from registering using a mistyped password and subsequently not being able to log in. Clicking the \emph{Register} button will display a loading spinner inside as described for the login view. When users successfully register, they will be presented with a new confirmation modal instructing them to log in with their new account\cite{milestone2}.
 
 
@@ -365,8 +357,6 @@ This section will discuss the choices of technology that were used to implement 
 
 \subsection{User Interfaces}
 
-
-
 \subsubsection{Rejected Designs}
 \label{sec:rejected-designs}
 
@@ -377,36 +367,48 @@ Through-out the course of the project, many design iterations were carried out. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{chris/pencil_choose_walk}
-    \caption{Walk selection interface}
-    \label{fig:view_walk}
+    \caption{Walk selection interface - 1st iteration}
+    \label{fig:choose_walk1}
 \end{figure}
 
-Based on the initial design, the interface was then created using Eclipse IDE [Cite]. This allowed for a more professional prototype design to be produced, illustrating how the final product may look. It was then possible to carry out improvements on the initial design. The combo-box and search features situated above the list of walks were removed. This was due to the fact they were better suited else where in the application, in a separate search interface. The removal of these two features now allowed for the list of walks to fill the entire side bar fragment. The final stage of this iteration was to add colour to the design. The chosen colour scheme for this iteration was a light shade of green to compliment the application logo. A small amount of shading was applied to the background colour of buttons and other features. 
+Based on the initial design, the interface was then created using Eclipse IDE [Cite]. This allowed for a more professional prototype design to be produced, illustrating how the final product may look. It was then possible to carry out improvements on the initial design. The \emph{combo-box} and \emph{search} features situated above the list of walks were removed. This was due to the fact they were better suited else where in the application, in a separate search interface. The removal of these two features now allowed for the list of walks to fill the entire side bar fragment. The final stage of this iteration was to add colour to the design. The chosen colour scheme for this iteration was a light shade of green to compliment the application logo. A small amount of shading was applied to the background colour of buttons and other features. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{chris/app_choose_walk}
-    \caption{Walk selection interface}
-    \label{fig:view_walk}
+    \caption{Walk selection interface - 2nd iteration}
+    \label{fig:choose_walk2}
 \end{figure}
 
-ADD FINAL SECTION WHEN APP IS CREATED!!!!!\\
+The final iteration involved several layout alterations (Figure \ref*{fig:choose_walk3}). First, the list of walks fragment button style was removed. This was replaced by a walk list that was read from a database. The \emph{walk title} and \emph{description} are also now read from the database, and provide prompt text when the interface is first inflated. The \emph{start walk} button was raised to be aligned with the bottom of the walk map. Two additional features were also implemented. An \emph{average rating} star system was introduced along with a \emph{difficulty rating}. Both rating features are based on user feedback.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/final_choose_walk}
+    \caption{Walk selection interface - 3rd iteration EDIT THIS FOR WORKING MAP}
+    \label{fig:choose_walk3}
+\end{figure}
+
 
 As previously documented, many interface designs were altered during the iteration stages of development. However, a small number of interface designs were fully rejected and re-designed. Below is a similar example of complete interface re-designs.\\
 
-\textbf{My Walks interface} - The second design iteration saw the ``My Walks'' interface (Figure~\ref{fig:app_my_walks_view}) present each walk create by the user in list form. Each walk included an ID, title, edit and delete button. The user also had the ability to create a new walk from this interface. During evaluation, it was decided that the proposed interface was not suitably designed. It's inappropriate layout meant that the only information available about each walk was in fact its ID and title. Before selecting the edit or delete button, the user may have to view a walk if they were unable to recall by name. The list format also led to a poor use of layout positioning. A vast amount of empty space was visible, especially when using the application on a large tablet.
+\textbf{My Walks interface} - The second design iteration saw the ``My Walks'' interface (Figure~\ref{fig:app_my_walks_view1}) present each walk create by the user in list form. Each walk included an \emph{ID}, \emph{title}, \emph{edit} and \emph{delete} button. The user also had the ability to create a new walk from this interface. During evaluation, it was decided that the proposed interface was not suitably designed. It's inappropriate layout meant that the only information available about each walk was in fact its ID and title. Before selecting the edit or delete button, the user may have to view a walk if they were unable to recall by name. The list format also led to a poor use of layout positioning. A vast amount of empty space was visible, especially when using the application on a large tablet.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{chris/app_my_walks_view}
-    \caption{Walk selection interface}
-    \label{fig:app_my_walks_view}
+    \caption{My Walks interface - 2nd iteration}
+    \label{fig:app_my_walks_view1}
 \end{figure}
 
-With the above negative aspects of this design taken into consideration, a new interface design was produced. The interface now presents each walk in a side-bar style list fragment, reading each walk from a database. The edit and delete buttons are included in the main fragment. Additional features to the interface now include the walk's geological location, description, length(miles), number of walk waypoints, difficulty rating and average user rating. Providing this level of information allows users to view a basic summary of each walk created by the user.\\
+With the above negative aspects of this design taken into consideration, a new interface design was produced (Figure \ref{fig:app_my walks_view2}). The interface now presents each walk in a side-bar style list fragment, reading each walk from a database. The \emph{edit} and \emph{delete} buttons are included in the main fragment. Additional features to the interface now include the walk's \emph{geological location}, \emph{description}, \emph{length(in miles)}, \emph{number of walk waypoints}, \emph{difficulty rating} and \emph{average user rating}. Providing this level of information allows users to view a basic summary of each walk created by the user.\\
 
-INSERT THE BETTER IMAGE HERE!!!\\
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/final_walk_view}
+    \caption{My Walks interface - 3rd iteration}
+    \label{fig:app_my walks_view2}
+\end{figure}
 % User Interface Design
 % UML Diagrams
 % Descriptions of each class
@@ -414,6 +416,23 @@ INSERT THE BETTER IMAGE HERE!!!\\
 
 \subsubsection{Chosen Design}
 \label{sec:chosen-designs}
+
+This section presents and discusses the final user interfaces that were chosen for use in the application. These designs were the result of an iterative development process whereby the designs were shown to the client and revised according to suggested changes. They are also the result of interface enhancements, designed to make each interface more intuitive to users. The following sections will present a screen capture of each interface application and discuss their functionality.
+
+\paragraph{Splash Screen interface}\mbox{}\\ 
+INSERT IMAGE\\
+
+The \emph{splash screen} is the first interface inflated when the application is opened. It includes the company logo, company name and a loading feature. After a short period of time, the \emph{launch} interface will inflate.
+
+\paragraph{Launch interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{launch} interface presents the user with an aesthetically pleasing layout. An edited image of the local beach is used as the background. At the top of the interface is a \emph{Text View} welcoming the user to the application. At the centre of the interface is a \emph{Log In} and \emph{Register} button. Pressing the \emph{Log in} button will navigate to the \emph{Log In} interface. Pressing the \emph{Register} button will navigate to the \emph{Register} interface. A \emph{Continue as guest} button is also situated at the bottom right corner. Pressing this button will by-pass the log in feature and take the user directly to the \emph{Home} interface but with limited privileges.
+
+\paragraph{Log In interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Log In} interface presents the user with a welcome message fixed to the top, along with prompt text directly below. The focus of this interface is the \emph{email} and \emph{password} text boxes. Selecting either text box will inflate a keypad, where the user may enter log in details. At the bottom of the interface is a \emph{Cancel} and \emph{Log In} button. Pressing the \emph{Cancel} button will return to the previous interface. If valid details are entered, pressing the \emph{Log In} button will navigate to the \emph{Home} interface. If invalid details are entered, a pop-up dialogue will notify users that the log in attempt has failed.
 
 \section{API}
 \label{sec:api-design}
