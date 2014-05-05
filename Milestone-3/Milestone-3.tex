@@ -142,11 +142,7 @@
 
 \section{Development Tools}
 
-
-
 This section presents a list of the tools used to develop the Digital Trails applications including the web portal, Android application and API. The purpose of each tool's usage in the context of this project is also discussed.
-
-
 
 \begin{itemize}
 
@@ -224,12 +220,8 @@ This section will discuss the architecture of each subsystem and the classes con
 
 This section presents and discusses the final user interfaces that were chosen for use in the web portal. These designs were the result of an iterative development process whereby the designs were shown to the client and revised according to suggested changes. They are also the result of interface enhancements designed to make the views more intuitive to users. The following sections will present a screen capture of each web portal view and discuss their functionality. The discussion for many of the interfaces remain the same as defined in the interim document and are cited as such.
 
-
-
 \paragraph{Welcome View}\mbox{}\\
 The welcome view shown in Figure \ref{fig:home} provides visitors with a link to download the Android application and instructs them to login or register account in order to use the portal. A footer has also been added to provide users with navigation links to important resources such as the Android application and \emph{About} page\cite{milestone2}.
-
-
 
 \begin{figure}[H]
 
@@ -283,7 +275,7 @@ Figure \ref{fig:login} shows the login view that users will see when they click 
 
 
 
-\paragraph{Registration View}\mbox{}\\
+\paragraph{Registration View}\mbox{}
 Figure \ref{fig:registration} shows the registration view that users will see when the \emph{Register} button is clicked in the top navigation bar. This view is also implemented as a modal for the same reasons as the login view and to maintain consistency throughout the application. The same validator is also used to validate the registration fields. However, inputs such as \emph{Email Address} and the two password fields require different validators. The former uses a validator that checks whether the provided email address has already been registered by another user. The latter checks whether the two passwords are identical. This will prevent users from registering using a mistyped password and subsequently not being able to log in. Clicking the \emph{Register} button will display a loading spinner inside as described for the login view. When users successfully register, they will be presented with a new confirmation modal instructing them to log in with their new account\cite{milestone2}.
 
 
@@ -453,8 +445,6 @@ This section will discuss the choices of technology that were used to implement 
 
 \subsection{User Interfaces}
 
-
-
 \subsubsection{Rejected Designs}
 \label{sec:rejected-designs}
 
@@ -465,36 +455,48 @@ Through-out the course of the project, many design iterations were carried out. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{chris/pencil_choose_walk}
-    \caption{Walk selection interface}
-    \label{fig:view_walk}
+    \caption{Walk selection interface - 1st iteration}
+    \label{fig:choose_walk1}
 \end{figure}
 
-Based on the initial design, the interface was then created using Eclipse IDE [Cite]. This allowed for a more professional prototype design to be produced, illustrating how the final product may look. It was then possible to carry out improvements on the initial design. The combo-box and search features situated above the list of walks were removed. This was due to the fact they were better suited else where in the application, in a separate search interface. The removal of these two features now allowed for the list of walks to fill the entire side bar fragment. The final stage of this iteration was to add colour to the design. The chosen colour scheme for this iteration was a light shade of green to compliment the application logo. A small amount of shading was applied to the background colour of buttons and other features. 
+Based on the initial design, the interface was then created using Eclipse IDE [Cite]. This allowed for a more professional prototype design to be produced, illustrating how the final product may look. It was then possible to carry out improvements on the initial design. The \emph{combo-box} and \emph{search} features situated above the list of walks were removed. This was due to the fact they were better suited else where in the application, in a separate search interface. The removal of these two features now allowed for the list of walks to fill the entire side bar fragment. The final stage of this iteration was to add colour to the design. The chosen colour scheme for this iteration was a light shade of green to compliment the application logo. A small amount of shading was applied to the background colour of buttons and other features. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{chris/app_choose_walk}
-    \caption{Walk selection interface}
-    \label{fig:view_walk}
+    \caption{Walk selection interface - 2nd iteration}
+    \label{fig:choose_walk2}
 \end{figure}
 
-ADD FINAL SECTION WHEN APP IS CREATED!!!!!\\
+The final iteration involved several layout alterations (Figure \ref*{fig:choose_walk3}). First, the list of walks fragment button style was removed. This was replaced by a walk list that was read from a database. The \emph{walk title} and \emph{description} are also now read from the database, and provide prompt text when the interface is first inflated. The \emph{start walk} button was raised to be aligned with the bottom of the walk map. Two additional features were also implemented. An \emph{average rating} star system was introduced along with a \emph{difficulty rating}. Both rating features are based on user feedback.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/final_choose_walk}
+    \caption{Walk selection interface - 3rd iteration EDIT THIS FOR WORKING MAP}
+    \label{fig:choose_walk3}
+\end{figure}
+
 
 As previously documented, many interface designs were altered during the iteration stages of development. However, a small number of interface designs were fully rejected and re-designed. Below is a similar example of complete interface re-designs.\\
 
-\textbf{My Walks interface} - The second design iteration saw the ``My Walks'' interface (Figure~\ref{fig:app_my_walks_view}) present each walk create by the user in list form. Each walk included an ID, title, edit and delete button. The user also had the ability to create a new walk from this interface. During evaluation, it was decided that the proposed interface was not suitably designed. It's inappropriate layout meant that the only information available about each walk was in fact its ID and title. Before selecting the edit or delete button, the user may have to view a walk if they were unable to recall by name. The list format also led to a poor use of layout positioning. A vast amount of empty space was visible, especially when using the application on a large tablet.
+\textbf{My Walks interface} - The second design iteration saw the ``My Walks'' interface (Figure~\ref{fig:app_my_walks_view1}) present each walk create by the user in list form. Each walk included an \emph{ID}, \emph{title}, \emph{edit} and \emph{delete} button. The user also had the ability to create a new walk from this interface. During evaluation, it was decided that the proposed interface was not suitably designed. It's inappropriate layout meant that the only information available about each walk was in fact its ID and title. Before selecting the edit or delete button, the user may have to view a walk if they were unable to recall by name. The list format also led to a poor use of layout positioning. A vast amount of empty space was visible, especially when using the application on a large tablet.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{chris/app_my_walks_view}
-    \caption{Walk selection interface}
-    \label{fig:app_my_walks_view}
+    \caption{My Walks interface - 2nd iteration}
+    \label{fig:app_my_walks_view1}
 \end{figure}
 
-With the above negative aspects of this design taken into consideration, a new interface design was produced. The interface now presents each walk in a side-bar style list fragment, reading each walk from a database. The edit and delete buttons are included in the main fragment. Additional features to the interface now include the walk's geological location, description, length(miles), number of walk waypoints, difficulty rating and average user rating. Providing this level of information allows users to view a basic summary of each walk created by the user.\\
+With the above negative aspects of this design taken into consideration, a new interface design was produced (Figure \ref{fig:app_my walks_view2}). The interface now presents each walk in a side-bar style list fragment, reading each walk from a database. The \emph{edit} and \emph{delete} buttons are included in the main fragment. Additional features to the interface now include the walk's \emph{geological location}, \emph{description}, \emph{length(in miles)}, \emph{number of walk waypoints}, \emph{difficulty rating} and \emph{average user rating}. Providing this level of information allows users to view a basic summary of each walk created by the user.\\
 
-INSERT THE BETTER IMAGE HERE!!!\\
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/final_walk_view}
+    \caption{My Walks interface - 3rd iteration}
+    \label{fig:app_my walks_view2}
+\end{figure}
 % User Interface Design
 % UML Diagrams
 % Descriptions of each class
@@ -503,7 +505,39 @@ INSERT THE BETTER IMAGE HERE!!!\\
 \subsubsection{Chosen Design}
 \label{sec:chosen-designs}
 
-\section{API}
+This section presents and discusses the final user interfaces that were chosen for use in the application. These designs were the result of an iterative development process whereby the designs were shown to the client and revised according to suggested changes. They are also the result of interface enhancements, designed to make each interface more intuitive to users. The following sections will present a screen capture of each interface application and discuss their functionality.
+
+\paragraph{Splash Screen interface}\mbox{}\\ 
+INSERT IMAGE\\
+
+The \emph{splash screen} is the first interface inflated when the application is opened. It includes the company logo, company name and a loading feature. After a short period of time, the \emph{launch} interface will inflate.
+
+\paragraph{Launch interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{launch} interface presents the user with an aesthetically pleasing layout. An edited image of the local beach is used as the background. At the top of the interface is a \emph{Text View} welcoming the user to the application. At the centre of the interface is a \emph{Log In}. Pressing the \emph{Log in} button will navigate to the \emph{Log In} interface. A \emph{Continue as guest} button is also situated at the bottom right corner. Pressing this button will by-pass the log in feature and take the user directly to the \emph{Home} interface but with limited privileges.
+
+\paragraph{Log In interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Log In} interface presents the user with a welcome message fixed to the top, along with prompt text directly below. The focus of this interface is the \emph{email} and \emph{password} text boxes. Selecting either text box will inflate a keypad, where the user may enter log in details. Below is a \emph{Sign In} button and a \emph{New user?} text view. If valid details are entered, pressing the \emph{Sign In} button will navigate to the \emph{Home} interface. If invalid details are entered, a pop-up dialogue will notify users that the log in attempt has failed. Pressing the \emph{New user?} text view will navigate to the \emph{Register} interface, where the user may register a new account.
+
+\paragraph{Register interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Register} interface presents the user with a series of edit text boxes, where details such as \emph{first name, last name, email address} and \emph{password} can be entered in order to create a new account. Below this is a \emph{Create Account} button and an \emph{Already a member?} text view. If suitable details are entered, pressing the \emph{Create Account} button will create a user account and navigate to the \emph{Home} interface. If unsuitable, the account creation will be rejected.
+
+\paragraph{Home interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Home} interface is the central focus point of the application. This interface includes a title and a grid of four navigation buttons; a \emph{Saved Walks}, a \emph{Download Walks}, a \emph{My Walks} and an \emph{Explore} button. Pressing on any button will navigate to the respective interface.
+
+\paragraph{Saved Walks interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Saved Walks} interface presents a list of all saved walks on the left hand side. The main interface window displays the \emph{walk title, description, geological location} map and a \emph{start} button. Pressing the \emph{start} button will inflate a map interface and begin the walk trail.
+
+\section{API} 
 \label{sec:api-design}
 
 The API is the crucial link between the Website, Application and Database. It was important that the correct design and technology was selected to make that link as seamless as possible. 
@@ -601,7 +635,57 @@ Each controller has methods to respond to diffrent requests, a generic controlle
     \label{fig:databaseschema}
 \end{figure}
 
-The database is shown in Figure \ref{fig:databaseschema}. It was designed in 3rd Normal Form to reduce data duplication and ensure that integrity through keys. Tables are related by their primary key, called id. If a table is dependent on another table it can use a forign key column which referances the primary key of the secondary table. This design was chosen becouse it allows for the expansion of the database and it ensures the integrity and stability of the data. There was the possibility of progressing the database to a higher normal form, however the work to achive this would out weight any perfomance benifits and the database in 3rdNF nicely matches the structure of the API. 
+The database is shown in Figure \ref{fig:databaseschema}. It was designed in 3rd Normal Form to reduce data duplication and ensure that integrity through keys. Tables are related by their primary key, called id. If a table is dependent on another table it can use a forign key column which referances the primary key of the secondary table. This design was chosen becouse it allows for the expansion of the database and it ensures the integrity and stability of the data. There was the possibility of progressing the database to a higher normal form, however the work to achive this would out weight any perfomance benifits and the database in 3rdNF nicely matches the structure of the API.
+
+\subsection{Tables}
+
+\subsubsection{walk}
+The walk table holds all of the data directly related to a walk. It has a primary key \textit{id}, and a foreign key \textit{user\_id} which relates the walk to the user who owns it by the user's \textit{id} feild. 
+
+\subsubsection{waypoint}
+The waypoint table stores all waypoints. Each waypoint has a unique \textit{id} as its primary key, a foreign key \textit{user\_id} which links it to the creater via there own \textit{id} and a foreign key \textit{walk\_id} which relates the waypoint to a specifc walk by the walks unique \textit{id} field. 
+
+\subsubsection{user}
+The user table holds all registered users. Every user is assigned a unique \textit{id} as its primary key for relations. The `email' field is designated a `Unique Index' meaning that no two users can have the same email address. 
+
+\subsubsection{walk\_review}
+The walk reviews table hold users reviews of a walk. As normal each review gets a unique \textit{id} as its primary key. Reviews then have foriegn keys for \textit{user\_id} and \textit{walk\_id} which relate it to the correct walk and user. 
+
+\subsubsection{walk\_brand}
+The walk brand holds some style information for a walk. It has a primary key \textit{id} and is linked to the walk by the foriegn key \textit{walk\_id}. 
+
+\subsubsection{english\_walk\_description}
+The english walk description table holds the english version of the walk description. Its mapped to a particular walk through the foriegn key \textit{walk\_id}. It has its own priamry key \textit{id} which is unique to that english walk description. 
+
+\subsubsection{welsh\_walk\_description}
+The welsh walk description table holds the welsh version of the walk description. Its mapped to a particular walk through the foriegn key \textit{walk\_id}. It has its own priamry key \textit{id} which is unique to that welsh walk description. 
+
+\subsubsection{english\_waypoint\_description}
+The english waypoint description table holds the english version of the waypoint description. Its mapped to a particular walk through the foriegn key \textit{waypoint\_id}. It has its own priamry key \textit{id} which is unique to that english waypoint description. 
+
+\subsubsection{welsh\_waypoint\_description}
+The welsh waypoint description table holds the welsh version of the waypoint description. Its mapped to a particular walk through the foriegn key \textit{waypoint\_id}. It has its own priamry key \textit{id} which is unique to that welsh waypoint description. 
+
+\subsubsection{waypoint\_audio}
+The waypoint audio table holds information about audio files. They are mapped to the waypoints which they belong to via the foriegn key \textit{waypoint\_id} and have their own primary key \textit{id}.
+
+\subsubsection{waypoint\_image}
+The waypoint image table holds information about image files. They are mapped to the waypoints which they belong to via the foriegn key \textit{waypoint\_id} and have their own primary key \textit{id}.
+
+\subsubsection{waypoint\_video}
+The waypoint video table holds information about video files. They are mapped to the waypoints which they belong to via the foriegn key \textit{waypoint\_id} and have their own primary key \textit{id}.
+
+\subsubsection{user\_setting}
+The users settings table hold the value of each setting for each user. Each row is a specific settings values mapped to a setting type by \textit{setting\_type\_id} and to the user by \textit{user\_id}. Each row has a unique id given by the primary key field \textit{id}.
+
+\subsubsection{setting\_type}
+The setting type table stores all the settings a user can have. Each one has a unique \textit{id} as its primary key which is used by user\_settings to assign settings to users.
+
+\subsubsection{content\_report}
+The Content Report table stores any reports users have filed about a waypoint. The reports have a unique priary key field \textit{id} and are related to the reported waypoint via a foriegn key \textit{waypoint\_id}. 
+
+\subsubsection{bug\_report}
+The Bug report table is used to store bugs in the program that are reported by users. They have a unique priary key field \textit{id} and are related to the user who reported it via a foriegn key \textit{user\_id}
 
 \chapter{Testing}
 \label{sec:testing}
@@ -614,6 +698,275 @@ The database is shown in Figure \ref{fig:databaseschema}. It was designed in 3rd
 \label{sec:user-manual}
 
 \section{API}
+
+\subsection{Walks}
+
+Routes on walks effect walks and all related content, such as waypoints and reviews but not media, which requires a seperate multipart media request. 
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The walk with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of all walks.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The walk object to add to the database.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised walk object with its assigned id.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Updating}
+\textbf{\textcolor{Maroon}{Method:}} PUT\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The updated walk object (With the id=\bfurl{id}).\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The updaeted walk object from the server.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Searching}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/search/}\bfurl{query}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of walks where the a field in a descriptio matches the search query.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Waypoints}
+
+Routes for waypoints effect the waypoint and its descriptions, but not any attached media. 
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The waypoint with the id = \bfurl{wid}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the waypoints for the walk with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The waypoint object to add to the walk with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised waypoint object with its assigned id.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Updating}
+\textbf{\textcolor{Maroon}{Method:}} PUT\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The updated waypoint object (With the id=\bfurl{wid}).\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The updaeted waypoint object from the server.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Walk Review}
+
+Walk reviews can be added and deleted, but they cannot be modified once they have been added to the database. 
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/reviews/}\bfurl{rid}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The review with the id = \bfurl{rid}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/reviews}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the reviews for the walk with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/reviews}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The review object to add to the walk with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised review object with its assigned id.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/reviews/}\bfurl{rid}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Waypoint Image}
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The image with the id = \bfurl{img_id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the images for the waypoint with the id = \bfurl{wid}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The image object and the image file in a mult-part upload which will be added to the walk with the walk\_id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised image object with its assigned id and url of the image.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+
+\subsubsection{Waypoint Audio Controller}
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/audio/}\bfurl{aud_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The image with the id = \bfurl{aud_id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/audio}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the images for the waypoint with the id = \bfurl{wid}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/audio}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The image object and the image file in a mult-part upload which will be added to the walk with the walk\_id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised image object with its assigned id and url of the image.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/audio/}\bfurl{aud_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Waypoint Video Controller}
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/videos/}\bfurl{vid_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The image with the id = \bfurl{img_id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/videos}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the images for the waypoint with the id = \bfurl{wid}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/videos}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The image object and the image file in a mult-part upload which will be added to the walk with the walk\_id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised image object with its assigned id and url of the image.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/videos/}\bfurl{vid_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{User Controller}
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The user with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of all users.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The users object to add to the database. With a password feild, un-encrypted.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised user object with its assigned id and an authorisation token.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Updating}
+\textbf{\textcolor{Maroon}{Method:}} PUT\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The updated user object (With the id=\bfurl{id}). Include a password field if you wish to change the password, and a settings array to change a setting.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The updaeted user object from the server.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Searching}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users/search/}\bfurl{query}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of user where the a field in a username matches the search query.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Session Controller}
+
+\subsubsection{Login}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/sessions}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The user object with username and password set.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An autherntication token.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Logout}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/sessions}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} YES.
+
 
 \section{Web Portal}
 
