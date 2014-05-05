@@ -443,6 +443,18 @@ INSERT THE BETTER IMAGE HERE!!!\\
 
 The API is the crucial link between the Website, Application and Database. It was important that the correct design and technology was selected to make that link as seamless as possible. 
 
+\subsection{Technology Choices}
+\label{sec:api:techChoices}
+
+\begin{description}
+\item[Paris] - Paris is an ORM (Object Relation Mapper) which provided a layer of abstraction between the database and the API. Rather than writing SQL queries to retrieve an object it makes it possible to use model objects to and methods to retrieve the objects.  
+\item[Slim Framework] - The slim framework was chosen as the underlying framework of the API. Slim provides many low-level function which are critical to the production of a reliable API in a small and efficient package. Before it was settled on an alternative framework called Phalcon was trialed, but it proved to be overly complex and overwhelming compared to the relative simplicity of Slim. 
+\item[PHP] - This is the language on which Slim runs. It is a popular free and open source web programming langauage. It has great support and is widly used through the world. Alternatives included C\#.NET which is a closed source and closed platform product from Microsoft. Due to the licensing fees and extra costs involved PHP quickly came to light as the best choice. 
+\item[Apache] - This is the web server which handles request and responses for the API. It recieves requests and passes them on to the PHP runtime for the API. Apache is the best known and most widely used web server in the world. The alternatives were Nginx and IIS. IIS is limited to Microsfts platforms and Nginx, while well respected, is still an emerging presence in the market. 
+\item[Linux] - Linux is the operating system which powers the API server. Linux is free and open source and is the most popular platfrom for operating a server.
+\item[JSON] - JavaScript Object Notation (JSON) is a media format which is used to represent JavaScript objects as plain text. It can be used to represent far more than just JavaScript objects however. 
+\end{description}
+
 \subsection{Possible Designs}
 \label{sec:api:rejected-designs} %Phalcon Framework. SOAP API's.
 When work started on the API the first descision that needed to be made was on the protocal for the API. There are several popular API protocals including;
@@ -485,9 +497,6 @@ REST, on the other hand, is a stateless system which comunicates via URI's, any 
 \subsection{Chosen Desgin}
 For the API it was decided to harness the REST protocal. The decision was made after analysing both SOAP and REST and the advantages and disadvantages of both. In the end the overly veribose nature of SOAP led to the decision of a REST api.  The ability to use JSON with REST requests was also a deciding factor as this gretly reduced the workload when comunicating with the API from JavaScript. 
 
-\subsection{UML Diagrams}
-\label{sec:api:uml}
-
 \subsection{Classes}
 \label{sec:api:class}
 The API has several `Model' classes to represent the Database tables and the objects that are stored within them. The objects are related through the database and can retrieve the related models through method calls. The relations between the models is shown in Figure \ref{fig:datamodels}, where every model is a possible entry point. Using these models it is possible to, for example, use an `English Walk Description' to return all related 'Waypoint Images'. 
@@ -508,28 +517,26 @@ The API has several main object collections, which are `Walks', `Waypoints', `Us
     \label{fig:controllerroutes}
 \end{figure}
 
-\subsection{Technology Choices}
-\label{sec:api:techChoices}
+Each controller has methods to respond to diffrent requests, a generic controller will have `getOne', `getAll', `add', `update', `remove' and `search'. The methods match up to specific routes. For example `getOne' normally matches to \textbf{GET} \url{/resources/id} and `add' matches \textbf{POST} \url{/resources}. 
 
-\begin{description}
-\item[Paris] - Paris is an ORM (Object Relation Mapper) which provided a layer of abstraction between the database and the API. Rather than writing SQL queries to retrieve an object it makes it possible to use model objects to and methods to retrieve the objects.  
-\item[Slim Framework] - The slim framework was chosen as the underlying framework of the API. Slim provides many low-level function which are critical to the production of a reliable API in a small and efficient package. Before it was settled on an alternative framework called Phalcon was trialed, but it proved to be overly complex and overwhelming compared to the relative simplicity of Slim. 
-\item[PHP] - This is the language on which Slim runs. It is a popular free and open source web programming langauage. It has great support and is widly used through the world. Alternatives included C\#.NET which is a closed source and closed platform product from Microsoft. Due to the licensing fees and extra costs involved PHP quickly came to light as the best choice. 
-\item[Apache] - This is the web server which handles request and responses for the API. It recieves requests and passes them on to the PHP runtime for the API. Apache is the best known and most widely used web server in the world. The alternatives were Nginx and IIS. IIS is limited to Microsfts platforms and Nginx, while well respected, is still an emerging presence in the market. 
-\item[Linux] - Linux is the operating system which powers the API server. Linux is free and open source and is the most popular platfrom for operating a server.
-\item[JSON] - JavaScript Object Notation (JSON) is a media format which is used to represent JavaScript objects as plain text. It can be used to represent far more than just JavaScript objects however. 
-\end{description}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.2\textwidth]{ControllerMethods}
+    \caption{The methods in a controller.}
+    \label{fig:controllermethods}
+\end{figure}
 
-\section{Database}
+\section{The Database}
 \label{sec:database-design}
-% UML Diagrams
-% Descriptions of each entity
 
-\subsection{Rejected Designs}
-\label{sec:rejected-designs}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{DatabaseSchema}
+    \caption{The Database Schema}
+    \label{fig:databaseschema}
+\end{figure}
 
-\subsection{Chosen Design}
-\label{sec:chosen-designs}
+The database is shown in Figure \ref{fig:databaseschema}. It was designed in 3rd Normal Form to reduce data duplication and ensure that integrity through keys. Tables are related by their primary key, called id. If a table is dependent on another table it can use a forign key column which referances the primary key of the secondary table. This design was chosen becouse it allows for the expansion of the database and it ensures the integrity and stability of the data. There was the possibility of progressing the database to a higher normal form, however the work to achive this would out weight any perfomance benifits and the database in 3rdNF nicely matches the structure of the API. 
 
 \chapter{Testing}
 \label{sec:testing}
