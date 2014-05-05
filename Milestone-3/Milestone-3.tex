@@ -747,12 +747,16 @@ The waypoint image table holds information about image files. They are mapped to
 The waypoint video table holds information about video files. They are mapped to the waypoints which they belong to via the foriegn key \textit{waypoint\_id} and have their own primary key \textit{id}.
 
 \subsubsection{user\_setting}
+The users settings table hold the value of each setting for each user. Each row is a specific settings values mapped to a setting type by \textit{setting\_type\_id} and to the user by \textit{user\_id}. Each row has a unique id given by the primary key field \textit{id}.
 
 \subsubsection{setting\_type}
+The setting type table stores all the settings a user can have. Each one has a unique \textit{id} as its primary key which is used by user\_settings to assign settings to users.
 
 \subsubsection{content\_report}
+The Content Report table stores any reports users have filed about a waypoint. The reports have a unique priary key field \textit{id} and are related to the reported waypoint via a foriegn key \textit{waypoint\_id}. 
 
 \subsubsection{bug\_report}
+The Bug report table is used to store bugs in the program that are reported by users. They have a unique priary key field \textit{id} and are related to the user who reported it via a foriegn key \textit{user\_id}
 
 \chapter{Testing}
 \label{sec:testing}
@@ -765,6 +769,275 @@ The waypoint video table holds information about video files. They are mapped to
 \label{sec:user-manual}
 
 \section{API}
+
+\subsection{Walks}
+
+Routes on walks effect walks and all related content, such as waypoints and reviews but not media, which requires a seperate multipart media request. 
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The walk with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of all walks.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The walk object to add to the database.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised walk object with its assigned id.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Updating}
+\textbf{\textcolor{Maroon}{Method:}} PUT\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The updated walk object (With the id=\bfurl{id}).\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The updaeted walk object from the server.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Searching}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/search/}\bfurl{query}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of walks where the a field in a descriptio matches the search query.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Waypoints}
+
+Routes for waypoints effect the waypoint and its descriptions, but not any attached media. 
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The waypoint with the id = \bfurl{wid}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the waypoints for the walk with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The waypoint object to add to the walk with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised waypoint object with its assigned id.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Updating}
+\textbf{\textcolor{Maroon}{Method:}} PUT\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The updated waypoint object (With the id=\bfurl{wid}).\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The updaeted waypoint object from the server.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Walk Review}
+
+Walk reviews can be added and deleted, but they cannot be modified once they have been added to the database. 
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/reviews/}\bfurl{rid}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The review with the id = \bfurl{rid}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/reviews}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the reviews for the walk with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/reviews}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The review object to add to the walk with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised review object with its assigned id.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/reviews/}\bfurl{rid}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Waypoint Image}
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The image with the id = \bfurl{img_id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the images for the waypoint with the id = \bfurl{wid}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The image object and the image file in a mult-part upload which will be added to the walk with the walk\_id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised image object with its assigned id and url of the image.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+
+\subsubsection{Waypoint Audio Controller}
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/audio/}\bfurl{aud_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The image with the id = \bfurl{aud_id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/audio}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the images for the waypoint with the id = \bfurl{wid}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/audio}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The image object and the image file in a mult-part upload which will be added to the walk with the walk\_id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised image object with its assigned id and url of the image.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/audio/}\bfurl{aud_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Waypoint Video Controller}
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/videos/}\bfurl{vid_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The image with the id = \bfurl{img_id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/videos}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the images for the waypoint with the id = \bfurl{wid}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/videos}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The image object and the image file in a mult-part upload which will be added to the walk with the walk\_id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised image object with its assigned id and url of the image.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/videos/}\bfurl{vid_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{User Controller}
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The user with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of all users.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The users object to add to the database. With a password feild, un-encrypted.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised user object with its assigned id and an authorisation token.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Updating}
+\textbf{\textcolor{Maroon}{Method:}} PUT\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The updated user object (With the id=\bfurl{id}). Include a password field if you wish to change the password, and a settings array to change a setting.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The updaeted user object from the server.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Searching}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users/search/}\bfurl{query}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of user where the a field in a username matches the search query.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Session Controller}
+
+\subsubsection{Login}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/sessions}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The user object with username and password set.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An autherntication token.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Logout}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/sessions}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} YES.
+
 
 \section{Web Portal}
 
