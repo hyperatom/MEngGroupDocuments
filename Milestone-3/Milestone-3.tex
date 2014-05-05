@@ -1,0 +1,1047 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{pifont}
+\usepackage{ifsym}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[toc,page]{appendix}
+\usepackage{etoolbox}
+\usepackage{morefloats}
+\usepackage{multirow}
+\usepackage[hidelinks]{hyperref}
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{verbatim}
+\usepackage{listings}
+
+\usepackage{fullpage}
+
+\definecolor{green}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{orange}{RGB}{255,127,0}
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\definecolor{Blue}{HTML}{1589FF}
+\definecolor{OliveGreen}{HTML}{6CC417}
+\definecolor{Maroon}{HTML}{810541}
+\colorlet{numb}{magenta!60!black}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{green},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\lstset{language=PHP,
+    basicstyle=\ttfamily,
+    keywordstyle=\bfseries\color{blue},
+    showstringspaces=false,
+    morekeywords={}
+} 
+
+\renewcommand{\ttdefault}{pcr}
+
+
+\DeclareUrlCommand{\bfurl}{\def\UrlFont{\bfseries\ttfamily}}
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{etoolbox}
+\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
+
+\linespread{1.2} % Line spacing
+
+\graphicspath{{img/}} % Specifies the directory where pictures are stored
+
+\lstset{ %
+	basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=single,
+    xleftmargin=1em,
+    framexleftmargin=1.5em,
+    backgroundcolor=\color{background}
+}
+
+\lstdefinelanguage{json}{
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+
+\begin{document}
+
+\input{./Title-Page.tex}
+
+\newpage
+\setcounter{page}{1}
+\pagenumbering{roman}
+\tableofcontents
+
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+\label{sec:introduction}
+\section{Term Definitions}
+\label{sec:term-definitions}
+\section{Project Overview}
+\label{sec:project-overview}
+
+\chapter{Design}
+\label{sec:design}
+
+\section{Development Tools}
+
+This section presents a list of the tools used to develop the Digital Trails applications including the web portal, Android application and API. The purpose of each tool's usage in the context of this project is also discussed.
+
+\begin{itemize}
+
+\item \textbf{Amazon EC2} - The Amazon Elastic Compute Cloud is a service which manages virtual servers in the cloud. An EC2 server was used to host the web portal temporarily during development before it was moved to a permanent web host.
+
+\item \textbf{GIT} - A version control system designed to track changes to source code files. This was used to share code between team members so that their work could be synchronised when working on the same files.
+
+\end{itemize}
+
+\section{Web Portal}
+\label{sec:web-portal-design}
+% User Inteportal-rface Design
+% UML Diagrams
+\subsection{Technology Choices}
+
+\label{sec:portal-technology-choices}
+
+
+
+This section will discuss the choices of technology that were used to implement the web portal. These technologies were chosen for this project because each proved to be essential or beneficial to the development of the web portal. The following list will give the names of each technology and describe their purpose within the project.
+
+
+
+\begin{itemize}
+
+\item \textbf{AngularJS} - A JavaScript web application framework which includes features for the creation of data bindings, controller modules and other concepts that make web applications easier to manage. AngularJS provided a framework to develop the client side web application.
+
+\item \textbf{HTML5} - A modern browser technology that extends the tags and attributes available from the HTML4 standard. This technology allowed the use of customised HTML attributes for AngularJS data bindings.
+
+\item \textbf{JavaScript} - A programming language designed to be executed in the web browser. JavaScript allows the manipulation of view elements and calling of resources from the API.
+
+\item \textbf{CSS3} - A modern browser language used to apply visual styling to elements of an HTML page. This was used to apply custom visual effects to view layouts and page elements such as buttons and navigation bars.
+
+\item \textbf{Twitter Bootstrap} - A CSS framework that provides out-of-the-box styling for HTML elements. This was used to style the web portal to save time that otherwise would have been spent on graphic designing.
+
+\item \textbf{jQuery} - Extends the JavaScript language and is designed for the manipulation of HTML page elements. This is used to change page elements on the web portal in response to user interface events such as button clicks.
+
+\end{itemize}
+
+\subsection{Rejected Design}
+\label{sec:portal-rejected-design}
+
+\subsection{Chosen Design}
+\label{sec:portal-chosen-design}
+
+\subsubsection{UML Diagrams}
+
+This section will discuss the architecture of each subsystem and the classes contained within them. Figure \ref{fig:subsystem-diagram} shows a subsystem diagram for the Digital Trails web application. The following table discusses the responsibilities of each subsystem in the diagram. Directional arrows between packages and classes represent dependencies. That is, the element at the end of the arrow is required by the element at the start in order to function. Rectangular boxes represent a single component where boxes featuring a header represent a collection of related components, know as a package.
+
+\begin{center}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline \textbf{Subsystem} & \textbf{Responsibility} \\ 
+\hline Controllers & This subsystem acts as the code-behind for views and contains JavaScript modules. Views are bound to controllers and access public properties and functions that are exposed from their interfaces. Controller and view data is kept in sync such that changes to data entities are reflected in both the controller and view. This behaviour is facilitated by the usage of a MVVM (Model-View-ViewModel) pattern. Controllers contain much of the application's business logic and is depended on by the \emph{Index Page} where all application modules are wired together. \\ 
+\hline Views & This subsystem contains the HTML views that are shown on the web portal. The views define interfaces that users can interact with to access walks that are stored by the database. Views depend on their respective controllers which contain the business logic for the interface. This logic defines what happens user interface events occur such as button clicks. Views are bound to their respective controllers using specific AngularJS attributes which define the values of properties to be displayed of functions to be called. \\ 
+\hline Services & This subsystem contains JavaScript modules which provide helper methods to controller modules. Therefore, this package is depended upon by the controllers package, since many controllers use functions defined by service modules. \\ 
+\hline Directives & This subsystem contains JavaScript modules that are used to manipulate view elements. A directive can be attached directly to any view element to manipulate its appearance when specific events occur such as mouse clicks or hover overs. \\ 
+\hline Vendor & This subsystem contains JavaScript modules which are created by third party libraries used by the web application. These modules are used by other packages to perform specific functionality. The vendor modules include libraries for view styling, encryption mechanisms, jQuery and various others that the application relies upon.  \\ 
+\hline Index Page & The index page is a single HTML view which wires up all packages shown in Figure \ref{fig:subsystem-diagram}. This allows packages to reference every other package in the application. In addition, this page serves as a canvas which other views are loaded into at run time. \\ 
+\hline App & This JavaScript file is responsible for bundling \emph{controllers}, \emph{views}, \emph{services}, \emph{directives} into their respective packages and acts as the start up module for the application. Routes are also specified in this file which map requested URL's to views including which controller should be used. \\ 
+\hline 
+\end{tabularx} 
+\end{center}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/web-client-uml/subsystem-diagram}
+\caption{Web client subsystem diagram.}
+\label{fig:subsystem-diagram}
+\end{figure}
+
+
+
+\subsubsection{User Interfaces}
+\label{sec:portal-user-interfaces}
+
+This section presents and discusses the final user interfaces that were chosen for use in the web portal. These designs were the result of an iterative development process whereby the designs were shown to the client and revised according to suggested changes. They are also the result of interface enhancements designed to make the views more intuitive to users. The following sections will present a screen capture of each web portal view and discuss their functionality. The discussion for many of the interfaces remain the same as defined in the interim document and are cited as such.
+
+\paragraph{Welcome View}\mbox{}\\
+The welcome view shown in Figure \ref{fig:home} provides visitors with a link to download the Android application and instructs them to login or register account in order to use the portal. A footer has also been added to provide users with navigation links to important resources such as the Android application and \emph{About} page\cite{milestone2}.
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[width=1\linewidth]{./img/webportal/home}
+
+\caption{Home view of the web portal.}
+
+\label{fig:home}
+
+\end{figure}
+
+
+
+\paragraph{Responsive View}\mbox{}\\
+Figure \ref{fig:home-responsive} demonstrates a responsive view of the web portal. This is the view that users will see when visiting the web portal on mobile devices such as smart phones and tablets. The responsive design minimizes the menu bar which can be expanded by clicking the button shown in the top right of the figure. In addition, web page content reduces in width and elements become stacked allowing for easier scrolling on mobile devices. The responsive design of the web portal is facilitated by the Bootstrap CSS and JavaScript library\cite{milestone2}. The items shown in the list feature navigational links to the associated pages. The \emph{Walks} item expands further child links which navigate to views that are associated with walks.
+
+
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[width=1\linewidth]{./img/webportal/home-responsive}
+
+\caption{Web portal responsive menu view.}
+
+\label{fig:home-responsive}
+
+\end{figure}
+
+
+
+\paragraph{Login View}\mbox{}\\
+Figure \ref{fig:login} shows the login view that users will see when they click on the \emph{Login} button in the top navigation bar. The login view displays as a modal in front of the web page. This will ensure that users do not have to navigate between pages in order to log in, thus enhancing usability. The login view requires users to input their email address and password followed by clicking the \emph{Login} button. The \emph{Login} button will display a spinner icon whilst the fields are validated to ensure the user is aware that the page is loading. An external validation library is used to validate the fields and display an error or success status. The library uses pre-defined validators to validate the structure of the email address and that the email and password pair is valid when checked against the White Rock Trails API. The validator changes the display of erroneous fields to feature red or green borders and tick or cross icons for invalid and valid fields respectively. A specific error message will also be displayed underneath erroneous fields to inform the reason for the error and allow users to amend it. When users successfully log in, the modal will close and the \emph{Login} and \emph{Registration} buttons shown in the top navigation bar are replaced with the user's full name\cite{milestone2}.
+
+
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[width=0.7\linewidth]{./img/webportal/login}
+
+\caption{Web portal login modal demonstrating validation.}
+
+\label{fig:login}
+
+\end{figure}
+
+
+
+\paragraph{Registration View}\mbox{}
+Figure \ref{fig:registration} shows the registration view that users will see when the \emph{Register} button is clicked in the top navigation bar. This view is also implemented as a modal for the same reasons as the login view and to maintain consistency throughout the application. The same validator is also used to validate the registration fields. However, inputs such as \emph{Email Address} and the two password fields require different validators. The former uses a validator that checks whether the provided email address has already been registered by another user. The latter checks whether the two passwords are identical. This will prevent users from registering using a mistyped password and subsequently not being able to log in. Clicking the \emph{Register} button will display a loading spinner inside as described for the login view. When users successfully register, they will be presented with a new confirmation modal instructing them to log in with their new account\cite{milestone2}.
+
+
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[width=0.7\linewidth]{./img/webportal/registration}
+
+\caption{Web portal registration modal demonstrating validation.}
+
+\label{fig:registration}
+
+\end{figure}
+
+
+
+\paragraph{All Walks View}\mbox{}\\
+Figure \ref{fig:all-walks} shows the view users will see when they click on the \emph{Walks} button in the top menu bar and select the \emph{All Walks} option. This view displays a list of tiles, each representing a walk in the database. The background of each tile is an image selected from the collection of each walks way point images. Clicking a tile will navigate the user to a walk information view as presented in Figure \ref{fig:walk-info}\cite{milestone2}. 
+
+Functionality for the \emph{Add Walk} button and search bar have been fully implemented since they were discussed in Milestone 2. Clicking the \emph{Add Walk} button navigates the user to a view where a new walk can be created. Entering text into the search box will perform a full text search of all walks held in the database. The search box also provides instantaneous results such that a request is sent to the server after a set time has expired after a user finishes typing. This allows for much faster and intuitive searching since the user is not required to press a button to execute the search. Finally, pagination has been implemented which allows users to view specific pages of search results that have overflowed the current view. A pagination control is present at the top and bottom of the \emph{All Walks} view for convenience to the user. Users can access specific results pages by clicking the relevant button index. 
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[width=1\linewidth]{./img/webportal/all-walks}
+
+\caption{All walks view of the web portal.}
+
+\label{fig:all-walks}
+
+\end{figure}
+
+\paragraph{Walk Information View}\mbox{}\\
+Figure \ref{fig:walk-info} shows the view that a walk owner will see when they click on a walk owned by them from the \emph{All Walks} view. As shown in the figure, walk information will be displayed in this view such a title, description, duration, distance, difficulty rating and author. Navigation tabs above this information allow users to navigate between the \emph{Waypoints}, \emph{Reviews} and \emph{Walk} views. If any waypoint contributions have been submitted to the walk by other users, a \emph{Contributions} tab will appear. The number of pending contributions is also shown adjacent to the tab name. 
+
+The interface also features \emph{Edit} and \emph{Delete} walk buttons which are only visible to the owner of the walk. Clicking the \emph{Edit} button will navigate the user to a view where the walk can be edited, whilst the \emph{delete} will prompt the user to confirm walk deletion. Walk data is asynchronously loaded from the database through the API. The Google Maps API is used to display the map shown in the right of the figure. The Google Maps API allows markers to be placed at specific GPS locations contained within the walk data. The map allows users to scroll and zoom around the walk area to gain an understanding of its location.
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[width=1\linewidth]{./img/webportal/walk-info}
+
+\caption{Walk information view of the web portal.}
+
+\label{fig:walk-info}
+
+\end{figure}
+
+\paragraph{Walk Waypoints View}\mbox{}\\
+Figure \ref{fig:walk-waypoints} shows the view that users will see when they click on the \emph{Waypoints} tab of the walk information view. The view shows the list of waypoints that are represented by markers on the map. Markers on the map can be identified by their letter index which references a waypoint shown in the leftmost list list. Clicking a list item or its corresponding map marker will display a modal containing media uploaded to the way point such as images, videos and audio. This feature has been fully implemented since Milestone 2. Finally, a visual fading effect has been applied to the waypoints list where an overflow is present. This indicates to the user that the list panel can be scrolled to display further waypoints.
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[width=1\linewidth]{./img/webportal/walk-waypoints}
+
+\caption{Walk way points view of the web portal.}
+
+\label{fig:walk-waypoints}
+
+\end{figure}
+
+\paragraph{Waypoint View}\mbox{}\\
+The waypoint view shown in Figure \ref{fig:waypoint} is displayed when a list item or map marker is clicked from the walk waypoints view discussed in the previous paragraph. This view shows a read only representation of waypoint information such as its title, description and uploaded media. If the walk author is viewing this modal, an \emph{edit} and \emph{delete} button will be shown at the bottom which allows them to modify the waypoint. 
+
+Clicking the \emph{edit} button will hide the current modal and display the waypoint in edit mode. Clicking the \emph{delete} button will prompt the user before permanently removing the waypoint from the walk. Clicking the final \emph{add image, audio or video} square in the gallery will allow the user to choose a file from their computer to be uploaded. Once chosen, the user will be required to enter a caption for the media. Upon specifying a caption, the media will be uploaded and added to the waypoint. 
+
+Image and video media items are represented by a thumbnail image of their content. Since audio files do not have any visual representation, they have been given a gradient background featuring the caption above. The types of media displayed can be easily identified by an icon in the top left of each square. Clicking any media item will display a larger view the content and allow users to navigate backwards and forwards to previous and next media items respectively. This media viewer is presented in Figure \ref{fig:media-viewer}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/waypoint}
+\caption{Walk waypoint view.}
+\label{fig:waypoint}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/media-viewer}
+\caption{Waypoint media viewer.}
+\label{fig:media-viewer}
+\end{figure}
+
+
+\paragraph{Walk Reviews View}\mbox{}\\
+Figure \ref{fig:walk-reviews} shows the view that users will see when they click the \emph{Reviews} tab from the navigation tabs bar. This view loads user reviews from the walk data and displays them in a list view as shown in the figure. A library called \emph{Raty} was used to generate the star rating system seen below the title of the review. It takes a review rating integer between 1-5 and generates a star representation\cite{milestone2}. Since Milestone 2, the review authors name now appears below the title so other users know who has created the review. In addition, authors of reviews will see a \emph{delete} button which can be clicked to remove their review. Walk owners will see the delete button on all reviews so to allow moderation.
+
+Clicking the \emph{Add Review} button will hide the walk reviews and display a form which can be used to add a new one. When the user has submitted the new review, the list will re-appear and the form hidden.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{./img/webportal/walk-reviews}
+\caption{Walk reviews view of the web portal.}
+\label{fig:walk-reviews}
+\end{figure}
+
+\paragraph{Waypoint Contributions View}\mbox{}\\
+Since Milestone 2, an additional view has been added to allow walk authors to moderate waypoint contributions from other users. These will be displayed in a list as shown in Figure \ref{fig:waypoint-contributions}. Clicking a list item will present a modal displaying information about the waypoint that has been contributed. Each item has an \emph{accept} and \emph{reject} button to add the waypoint to the walk, or discard it respectively. Clicking either of these buttons will remove the contribution from the list and add a marker to the map representing its location.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{./img/webportal/waypoint-contributions}
+\caption{Waypoint contributions view.}
+\label{fig:waypoint-contributions}
+\end{figure}
+
+\paragraph{Add Walk View}\mbox{}\\
+The add walk view presented in Figure \ref{fig:add-walk} allows any user to create a new walk with associated waypoints. This view can be accessed from a link in the top navigation bar. Walk attributes can be entered and saved in the leftmost panel by clicking the \emph{save} button. The form can also be reset by clicking the \emph{undo} button. The \emph{cancel} button will discard the new walk and navigate back to the all walks view. The form also features client side error checking on saving, whereby erroneous fields are highlighted with a red border before the walk can be created. Waypoints can be added to the new walk by clicking on a map location. This will display the \emph{Add Waypoint} view discussed in the next paragraph.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{./img/webportal/add-walk}
+\caption{Add walk view.}
+\label{fig:add-walk}
+\end{figure}
+
+\paragraph{Add Waypoint View}\mbox{}\\
+The add waypoint view is presented in Figure \ref{fig:add-waypoint} and allows users to specify attributes of the waypoint to be created, including its \emph{title}, \emph{description}, \emph{latitude}, \emph{longitude}, \emph{visit order} and media. Clicking the \emph{Create} button will validate all fields and close the modal if successful. The waypoint will then be added to the new walk and a marker will appear on the map featured in the add walk view. Clicking the \emph{Manage} button will display an additional modal where media such as images, audio and videos can be added to the waypoint.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/add-waypoint}
+\caption{Add waypoint view.}
+\label{fig:add-waypoint}
+\end{figure}
+
+
+\paragraph{Waypoint Media Gallery}\mbox{}\\
+The waypoint media gallery shown in Figure \ref{fig:media-gallery} allows walk authors to manage the media which has been added to waypoints along their walks. Walk authors can select individual media items and click the \emph{delete selected} button to remove them in batch. Items selected for deletion are highlighted by a red border. The \emph{delete selected} button is only enabled when one or more media items are selected. On deleting media, they will be removed from the list and the \emph{delete selected} button disabled.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/media-gallery}
+\caption{Waypoint media gallery.}
+\label{fig:media-gallery}
+\end{figure}
+
+\paragraph{Account Settings View}\mbox{}\\
+The account settings view presented in Figure \ref{fig:user-account} allows registered users to modify their account details such as their \emph{first name}, \emph{last name}, \emph{email} and \emph{password}. All inputs are validated when the \emph{save} button is clicked. If any fields are invalid, they are given a red border to indicate this. Otherwise, a confirmation message is displayed above the account details to show the save has been successful.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/user-account}
+\caption{User account settings view.}
+\label{fig:user-account}
+\end{figure}
+
+
+\section{Android Application}
+\label{sec:android-design}
+
+\subsection{Technology Choices}
+This section will discuss the choices of technology that were used to implement the application. These technologies were chosen for this project because both proved to be beneficial or essential to the development of the application. The following list will give the names of each technology and describe their purpose within the project.
+
+\begin{itemize}
+
+\item \textbf{Evolus Pencil} - Evolus Pencil is an open-source GUI prototyping tool that allows for mockups to be easily created. Pencil was used to create the initial prototype interface designs.
+
+\item \textbf{Eclipse} - Eclipse is an integrated development environment that allows for the creation and development of applications. Eclipse was used to create the prototype designs for numerous interface iterations and the development of application functionality.
+
+\end{itemize}
+
+\subsection{User Interfaces}
+
+\subsubsection{Rejected Designs}
+\label{sec:rejected-designs}
+
+Through-out the course of the project, many design iterations were carried out. As a result, numerous interface designs were modified, while several designs were made redundant for a variety of reasons. This section of the document will analyse rejected designs, highlighting the issues that led to their redundancy. Below is an example of how the interface designs have progressed through several stages of iteration.\\
+
+\textbf{Choose a walk interface} - This example is the walk selection interface ``Saved Walks''. The first iteration took the form of a simple interface design (Figure \ref{fig:view_walk}). Created using Evolus Pencil, the interface included the majority of features set out by Milestone 1 requirements. Here, the user may select from a list of available walks. The main interface window presents the selected walk's name, geological location, description, length (miles) and number of walk waypoints. The interface also included a start button, allowing users to begin the walk in current view.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/pencil_choose_walk}
+    \caption{Walk selection interface - 1st iteration}
+    \label{fig:choose_walk1}
+\end{figure}
+
+Based on the initial design, the interface was then created using Eclipse IDE [Cite]. This allowed for a more professional prototype design to be produced, illustrating how the final product may look. It was then possible to carry out improvements on the initial design. The \emph{combo-box} and \emph{search} features situated above the list of walks were removed. This was due to the fact they were better suited else where in the application, in a separate search interface. The removal of these two features now allowed for the list of walks to fill the entire side bar fragment. The final stage of this iteration was to add colour to the design. The chosen colour scheme for this iteration was a light shade of green to compliment the application logo. A small amount of shading was applied to the background colour of buttons and other features. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/app_choose_walk}
+    \caption{Walk selection interface - 2nd iteration}
+    \label{fig:choose_walk2}
+\end{figure}
+
+The final iteration involved several layout alterations (Figure \ref*{fig:choose_walk3}). First, the list of walks fragment button style was removed. This was replaced by a walk list that was read from a database. The \emph{walk title} and \emph{description} are also now read from the database, and provide prompt text when the interface is first inflated. The \emph{start walk} button was raised to be aligned with the bottom of the walk map. Two additional features were also implemented. An \emph{average rating} star system was introduced along with a \emph{difficulty rating}. Both rating features are based on user feedback.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/final_choose_walk}
+    \caption{Walk selection interface - 3rd iteration EDIT THIS FOR WORKING MAP}
+    \label{fig:choose_walk3}
+\end{figure}
+
+
+As previously documented, many interface designs were altered during the iteration stages of development. However, a small number of interface designs were fully rejected and re-designed. Below is a similar example of complete interface re-designs.\\
+
+\textbf{My Walks interface} - The second design iteration saw the ``My Walks'' interface (Figure~\ref{fig:app_my_walks_view1}) present each walk create by the user in list form. Each walk included an \emph{ID}, \emph{title}, \emph{edit} and \emph{delete} button. The user also had the ability to create a new walk from this interface. During evaluation, it was decided that the proposed interface was not suitably designed. It's inappropriate layout meant that the only information available about each walk was in fact its ID and title. Before selecting the edit or delete button, the user may have to view a walk if they were unable to recall by name. The list format also led to a poor use of layout positioning. A vast amount of empty space was visible, especially when using the application on a large tablet.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/app_my_walks_view}
+    \caption{My Walks interface - 2nd iteration}
+    \label{fig:app_my_walks_view1}
+\end{figure}
+
+With the above negative aspects of this design taken into consideration, a new interface design was produced (Figure \ref{fig:app_my walks_view2}). The interface now presents each walk in a side-bar style list fragment, reading each walk from a database. The \emph{edit} and \emph{delete} buttons are included in the main fragment. Additional features to the interface now include the walk's \emph{geological location}, \emph{description}, \emph{length(in miles)}, \emph{number of walk waypoints}, \emph{difficulty rating} and \emph{average user rating}. Providing this level of information allows users to view a basic summary of each walk created by the user.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/final_walk_view}
+    \caption{My Walks interface - 3rd iteration}
+    \label{fig:app_my walks_view2}
+\end{figure}
+% User Interface Design
+% UML Diagrams
+% Descriptions of each class
+% Technology Choices
+
+\subsubsection{Chosen Design}
+\label{sec:chosen-designs}
+
+This section presents and discusses the final user interfaces that were chosen for use in the application. These designs were the result of an iterative development process whereby the designs were shown to the client and revised according to suggested changes. They are also the result of interface enhancements, designed to make each interface more intuitive to users. The following sections will present a screen capture of each interface application and discuss their functionality.
+
+\paragraph{Splash Screen interface}\mbox{}\\ 
+INSERT IMAGE\\
+
+The \emph{splash screen} is the first interface inflated when the application is opened. It includes the company logo, company name and a loading feature. After a short period of time, the \emph{launch} interface will inflate.
+
+\paragraph{Launch interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{launch} interface presents the user with an aesthetically pleasing layout. An edited image of the local beach is used as the background. At the top of the interface is a \emph{Text View} welcoming the user to the application. At the centre of the interface is a \emph{Log In}. Pressing the \emph{Log in} button will navigate to the \emph{Log In} interface. A \emph{Continue as guest} button is also situated at the bottom right corner. Pressing this button will by-pass the log in feature and take the user directly to the \emph{Home} interface but with limited privileges.
+
+\paragraph{Log In interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Log In} interface presents the user with a welcome message fixed to the top, along with prompt text directly below. The focus of this interface is the \emph{email} and \emph{password} text boxes. Selecting either text box will inflate a keypad, where the user may enter log in details. Below is a \emph{Sign In} button and a \emph{New user?} text view. If valid details are entered, pressing the \emph{Sign In} button will navigate to the \emph{Home} interface. If invalid details are entered, a pop-up dialogue will notify users that the log in attempt has failed. Pressing the \emph{New user?} text view will navigate to the \emph{Register} interface, where the user may register a new account.
+
+\paragraph{Register interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Register} interface presents the user with a series of edit text boxes, where details such as \emph{first name, last name, email address} and \emph{password} can be entered in order to create a new account. Below this is a \emph{Create Account} button and an \emph{Already a member?} text view. If suitable details are entered, pressing the \emph{Create Account} button will create a user account and navigate to the \emph{Home} interface. If unsuitable, the account creation will be rejected.
+
+\paragraph{Home interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Home} interface is the central focus point of the application. This interface includes a title and a grid of four navigation buttons; a \emph{Saved Walks}, a \emph{Download Walks}, a \emph{My Walks} and an \emph{Explore} button. Pressing on any button will navigate to the respective interface.
+
+\paragraph{Saved Walks interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Saved Walks} interface presents a list of all saved walks on the left hand side. The main interface window displays the \emph{walk title, description, geological location} map and a \emph{start} button. Pressing the \emph{start} button will inflate a map interface and begin the walk trail.
+
+\paragraph{My Walks interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{My Walks} interface is similar to that of the \emph{Saved Walks} layout with a few additional features. The left-hand side list of walks fragment now includes a \emph{Create Walk} button. Pressing this button will inflate a \emph{Create Walk} interface. Instead of the \emph{start} button, the interface now includes an \emph{edit} and \emph{delete} button. Pressing the \emph{edit} button will navigate to the \emph{Edit Waypoint} interface. Pressing the \emph{delete} button will inflate a pop-up dialogue, requiring the user to confirm or cancel the walk deletion. If \emph{confirm} is selected, the walk is deleted. If \emph{cancel} is selected, the pop-up dialogue will close.
+
+\paragraph{Download Walks interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Download Walks} interface allows users to search for walks and download them. The interface takes the layout form previously seen in \emph{My Walks} interface. The list of walks now consists of all possible walks taken from the database. A search text box at the top of the interface allows users to search for a particular walk or area. Selecting a walk from the list will present all walk details in the main interface window. Here the user may save that particular walk by pressing the \emph{Download walk} button.
+
+\paragraph{Explore interface}\mbox{}\\
+INSERTT IMAGE\\
+
+Unlike the majority of interface designs previously documented, the \emph{Explore} interface has a single purpose. It presents a world map, allowing users to move freely across the map, zooming in and out as desired. The explore interface acts as a form of ``location search''. This provides users with additional freedom to view any location and potentially discover new walk trails that could be created.
+
+\paragraph{Create Walk interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Create Walk} interface has a basic layout. An title is positioned at the top of the interface. This is followed by a \emph{walk name} and a \emph{walk description} editable text box. Selecting either text box will allow for the respective walk information to be entered. The interface also includes an \emph{Add a waypoint} button, \emph{cancel} button and a \emph{create} button. Pressing the \emph{Add a waypoint} button will navigate to an \emph{Add Waypoint} interface. Pressing the cancel button will return to the previous interface, while the \emph{Create} button will create a new walk using the details entered by the user.
+
+\paragraph{View Walk interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{View Walk} interface is inflated when the user wishes to view a walk and its waypoints. Similar to the explore view, the user may move around the map, zooming in and out as desired. When the user is within close proximity of a waypoint, a pop-u dialogue will appear on-screen. This dialogue will include the waypoint name, a short description and any relative media that has been attached to that waypoint. 
+
+\paragraph{Edit Walk interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Edit Walk} interface allows users to make changes to walks they created. The presented interface provides users with the ability to update main information such as walk name and description. Below this is an \emph{Add a waypoint} button and a \emph{edit waypoints} button. The user may add numerous waypoints and make changes to current waypoints. If no changes are to be made or saved, pressing the \emph{cancel} button will return to the previous interface. Pressing the \emph{save} button will save all changes and return to the \emph{My Walks} interface.
+
+\paragraph{Add Waypoint interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Add Waypoint} interface allows users to add a waypoint to a walk simply by selecting and holding on a position on the map provided. A text prompt is also included, providing users with instructions.
+
+\paragraph{Edit Waypoint interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Edit Waypoint} interface allows users to edit a waypoint of an existing walk. The user may edit the waypoint name, description and multimedia attached. When complete, pressing the \emph{save} button will save changes made and return to the \emph{edit walk} interface. Pressing the \emph{cancel} button will return to the \emph{edit walk} interface without saving any changes to that particular waypoint.
+
+\section{API} 
+\label{sec:api-design}
+
+The API is the crucial link between the Website, Application and Database. It was important that the correct design and technology was selected to make that link as seamless as possible. 
+
+\subsection{Technology Choices}
+\label{sec:api:techChoices}
+
+\begin{description}
+\item[Paris] - Paris is an ORM (Object Relation Mapper) which provided a layer of abstraction between the database and the API. Rather than writing SQL queries to retrieve an object it makes it possible to use model objects to and methods to retrieve the objects.  
+\item[Slim Framework] - The slim framework was chosen as the underlying framework of the API. Slim provides many low-level function which are critical to the production of a reliable API in a small and efficient package. Before it was settled on an alternative framework called Phalcon was trialed, but it proved to be overly complex and overwhelming compared to the relative simplicity of Slim. 
+\item[PHP] - This is the language on which Slim runs. It is a popular free and open source web programming langauage. It has great support and is widly used through the world. Alternatives included C\#.NET which is a closed source and closed platform product from Microsoft. Due to the licensing fees and extra costs involved PHP quickly came to light as the best choice. 
+\item[Apache] - This is the web server which handles request and responses for the API. It recieves requests and passes them on to the PHP runtime for the API. Apache is the best known and most widely used web server in the world. The alternatives were Nginx and IIS. IIS is limited to Microsfts platforms and Nginx, while well respected, is still an emerging presence in the market. 
+\item[Linux] - Linux is the operating system which powers the API server. Linux is free and open source and is the most popular platfrom for operating a server.
+\item[JSON] - JavaScript Object Notation (JSON) is a media format which is used to represent JavaScript objects as plain text. It can be used to represent far more than just JavaScript objects however. 
+\end{description}
+
+\subsection{Possible Designs}
+\label{sec:api:rejected-designs} %Phalcon Framework. SOAP API's.
+When work started on the API the first descision that needed to be made was on the protocal for the API. There are several popular API protocals including;
+
+\begin{itemize}
+\item SOAP
+\item REST
+\item JSON-RPC 
+\item XML-RPC \ldots
+\end{itemize}
+
+The most popular two are SOAP and REST. SOAP was originally defined as `Simple Object Access Protocol' and is the sucssesor to XML-RPC (XML Remote Procedure Call). It uses a XML document for its message which is sent over either the HTTP or SMTP application protocals. The XML document which is transmitted with a SOAP request has several parts. The document will start with an `Envelope' which contains all of the data. Inside the `Envelope' there is an optional `Header', a compolsary `Body' which contains request data, and an optional `Fault' which contains any errors which have occured. Listing \ref{lst:soap} shows an example of a SOAP request.
+
+\lstset{language=xml,
+keywordstyle=\color{Maroon},
+commentstyle=\color{OliveGreen},
+showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyle=\color{Blue}}
+
+\begin{lstlisting}[captionpos=b, caption=An example SOAP request., label=lst:soap, frame=single]
+POST /InStock HTTP/1.1
+Host: www.example.org
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: 299
+SOAPAction: "http://www.w3.org/203/05/soap-envelope"
+ 
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/203/05/soap-envelope">
+  <soap:Header>
+  </soap:Header>
+  <soap:Body>
+    <m:GetStockPrice xmlns:m="http://www.example.org/stock">
+      <m:StockName>IBM</m:StockName>
+    </m:GetStockPrice>
+  </soap:Body>
+</soap:Envelope>
+\end{lstlisting}
+
+REST, on the other hand, is a stateless system which comunicates via URI's, any media (such as JSON or XML) and HTTP Methods. REST stands for Representational State Transfer, which implys a representation of the current state must be transfered to the API with reach request. A REST request to retrive an object can be as simple as \lstinline$GET http:\\example.com\api\users$. The simplicity of REST lends its self to many situations and makes it easy to adapt to specific cases. 
+
+\subsection{Chosen Desgin}
+For the API it was decided to harness the REST protocal. The decision was made after analysing both SOAP and REST and the advantages and disadvantages of both. In the end the overly veribose nature of SOAP led to the decision of a REST api.  The ability to use JSON with REST requests was also a deciding factor as this gretly reduced the workload when comunicating with the API from JavaScript. 
+
+\subsection{Classes}
+\label{sec:api:class}
+The API has several `Model' classes to represent the Database tables and the objects that are stored within them. The objects are related through the database and can retrieve the related models through method calls. The relations between the models is shown in Figure \ref{fig:datamodels}, where every model is a possible entry point. Using these models it is possible to, for example, use an `English Walk Description' to return all related 'Waypoint Images'. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{DataModels}
+    \caption{The Data Model and their relations.}
+    \label{fig:datamodels}
+\end{figure}
+
+The API has several main object collections, which are `Walks', `Waypoints', `Users', `Waypoint Images', `Waypoint Audio', `Waypoint Video', `Walk Reviews' and `Sessions'. Each collection has a specific route in the API which maps to a collection controller. When a route is called a method in the revelvent controller is called. The method is passed a variable called \$app. This contains the requets and response objects. When the controller has completed its work it writes the response to the \$app object and returns to the index file which initally handled the request. If there is no more work to be done the \$app object sends the response. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{ControllerRoutes}
+    \caption{The connection between routes and controllers.}
+    \label{fig:controllerroutes}
+\end{figure}
+
+Each controller has methods to respond to diffrent requests, a generic controller will have `getOne', `getAll', `add', `update', `remove' and `search'. The methods match up to specific routes. For example `getOne' normally matches to \textbf{GET} \url{/resources/id} and `add' matches \textbf{POST} \url{/resources}. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.2\textwidth]{ControllerMethods}
+    \caption{The methods in a controller.}
+    \label{fig:controllermethods}
+\end{figure}
+
+\section{The Database}
+\label{sec:database-design}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{DatabaseSchema}
+    \caption{The Database Schema}
+    \label{fig:databaseschema}
+\end{figure}
+
+The database is shown in Figure \ref{fig:databaseschema}. It was designed in 3rd Normal Form to reduce data duplication and ensure that integrity through keys. Tables are related by their primary key, called id. If a table is dependent on another table it can use a forign key column which referances the primary key of the secondary table. This design was chosen becouse it allows for the expansion of the database and it ensures the integrity and stability of the data. There was the possibility of progressing the database to a higher normal form, however the work to achive this would out weight any perfomance benifits and the database in 3rdNF nicely matches the structure of the API.
+
+\subsection{Tables}
+
+\subsubsection{walk}
+The walk table holds all of the data directly related to a walk. It has a primary key \textit{id}, and a foreign key \textit{user\_id} which relates the walk to the user who owns it by the user's \textit{id} feild. 
+
+\subsubsection{waypoint}
+The waypoint table stores all waypoints. Each waypoint has a unique \textit{id} as its primary key, a foreign key \textit{user\_id} which links it to the creater via there own \textit{id} and a foreign key \textit{walk\_id} which relates the waypoint to a specifc walk by the walks unique \textit{id} field. 
+
+\subsubsection{user}
+The user table holds all registered users. Every user is assigned a unique \textit{id} as its primary key for relations. The `email' field is designated a `Unique Index' meaning that no two users can have the same email address. 
+
+\subsubsection{walk\_review}
+The walk reviews table hold users reviews of a walk. As normal each review gets a unique \textit{id} as its primary key. Reviews then have foriegn keys for \textit{user\_id} and \textit{walk\_id} which relate it to the correct walk and user. 
+
+\subsubsection{walk\_brand}
+The walk brand holds some style information for a walk. It has a primary key \textit{id} and is linked to the walk by the foriegn key \textit{walk\_id}. 
+
+\subsubsection{english\_walk\_description}
+The english walk description table holds the english version of the walk description. Its mapped to a particular walk through the foriegn key \textit{walk\_id}. It has its own priamry key \textit{id} which is unique to that english walk description. 
+
+\subsubsection{welsh\_walk\_description}
+The welsh walk description table holds the welsh version of the walk description. Its mapped to a particular walk through the foriegn key \textit{walk\_id}. It has its own priamry key \textit{id} which is unique to that welsh walk description. 
+
+\subsubsection{english\_waypoint\_description}
+The english waypoint description table holds the english version of the waypoint description. Its mapped to a particular walk through the foriegn key \textit{waypoint\_id}. It has its own priamry key \textit{id} which is unique to that english waypoint description. 
+
+\subsubsection{welsh\_waypoint\_description}
+The welsh waypoint description table holds the welsh version of the waypoint description. Its mapped to a particular walk through the foriegn key \textit{waypoint\_id}. It has its own priamry key \textit{id} which is unique to that welsh waypoint description. 
+
+\subsubsection{waypoint\_audio}
+The waypoint audio table holds information about audio files. They are mapped to the waypoints which they belong to via the foriegn key \textit{waypoint\_id} and have their own primary key \textit{id}.
+
+\subsubsection{waypoint\_image}
+The waypoint image table holds information about image files. They are mapped to the waypoints which they belong to via the foriegn key \textit{waypoint\_id} and have their own primary key \textit{id}.
+
+\subsubsection{waypoint\_video}
+The waypoint video table holds information about video files. They are mapped to the waypoints which they belong to via the foriegn key \textit{waypoint\_id} and have their own primary key \textit{id}.
+
+\subsubsection{user\_setting}
+The users settings table hold the value of each setting for each user. Each row is a specific settings values mapped to a setting type by \textit{setting\_type\_id} and to the user by \textit{user\_id}. Each row has a unique id given by the primary key field \textit{id}.
+
+\subsubsection{setting\_type}
+The setting type table stores all the settings a user can have. Each one has a unique \textit{id} as its primary key which is used by user\_settings to assign settings to users.
+
+\subsubsection{content\_report}
+The Content Report table stores any reports users have filed about a waypoint. The reports have a unique priary key field \textit{id} and are related to the reported waypoint via a foriegn key \textit{waypoint\_id}. 
+
+\subsubsection{bug\_report}
+The Bug report table is used to store bugs in the program that are reported by users. They have a unique priary key field \textit{id} and are related to the user who reported it via a foriegn key \textit{user\_id}
+
+\chapter{Testing}
+\label{sec:testing}
+\section{Unit Testing}
+\label{sec:unit-testint}
+\section{Acceptance Testing}
+\label{sec:acceptance-testint}
+
+\chapter{User Manual}
+\label{sec:user-manual}
+
+\section{API}
+
+\subsection{Walks}
+
+Routes on walks effect walks and all related content, such as waypoints and reviews but not media, which requires a seperate multipart media request. 
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The walk with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of all walks.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The walk object to add to the database.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised walk object with its assigned id.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Updating}
+\textbf{\textcolor{Maroon}{Method:}} PUT\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The updated walk object (With the id=\bfurl{id}).\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The updaeted walk object from the server.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Searching}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/search/}\bfurl{query}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of walks where the a field in a descriptio matches the search query.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Waypoints}
+
+Routes for waypoints effect the waypoint and its descriptions, but not any attached media. 
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The waypoint with the id = \bfurl{wid}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the waypoints for the walk with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The waypoint object to add to the walk with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised waypoint object with its assigned id.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Updating}
+\textbf{\textcolor{Maroon}{Method:}} PUT\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The updated waypoint object (With the id=\bfurl{wid}).\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The updaeted waypoint object from the server.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Walk Review}
+
+Walk reviews can be added and deleted, but they cannot be modified once they have been added to the database. 
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/reviews/}\bfurl{rid}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The review with the id = \bfurl{rid}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/reviews}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the reviews for the walk with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/reviews}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The review object to add to the walk with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised review object with its assigned id.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/reviews/}\bfurl{rid}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Waypoint Image}
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The image with the id = \bfurl{img_id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the images for the waypoint with the id = \bfurl{wid}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The image object and the image file in a mult-part upload which will be added to the walk with the walk\_id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised image object with its assigned id and url of the image.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+
+\subsubsection{Waypoint Audio Controller}
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/audio/}\bfurl{aud_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The image with the id = \bfurl{aud_id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/audio}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the images for the waypoint with the id = \bfurl{wid}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/audio}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The image object and the image file in a mult-part upload which will be added to the walk with the walk\_id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised image object with its assigned id and url of the image.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/audio/}\bfurl{aud_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Waypoint Video Controller}
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/videos/}\bfurl{vid_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The image with the id = \bfurl{img_id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/videos}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the images for the waypoint with the id = \bfurl{wid}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/videos}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The image object and the image file in a mult-part upload which will be added to the walk with the walk\_id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised image object with its assigned id and url of the image.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/videos/}\bfurl{vid_id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{User Controller}
+
+\subsubsection{Getting by id}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The user with the id = \bfurl{id}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Getting Many}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of all users.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Adding}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The users object to add to the database. With a password feild, un-encrypted.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An initialised user object with its assigned id and an authorisation token.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Updating}
+\textbf{\textcolor{Maroon}{Method:}} PUT\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The updated user object (With the id=\bfurl{id}). Include a password field if you wish to change the password, and a settings array to change a setting.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} The updaeted user object from the server.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Deleting}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users/}\bfurl{id}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Searching}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users/search/}\bfurl{query}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of user where the a field in a username matches the search query.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Session Controller}
+
+\subsubsection{Login}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/sessions}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} The user object with username and password set.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An autherntication token.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Logout}
+\textbf{\textcolor{Maroon}{Method:}} DELETE\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/sessions}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} YES.
+
+
+\section{Web Portal}
+
+\section{Android Application}
+
+\chapter{Reflective Account}
+\label{sec:reflective-account}
+\section{Problem Solving}
+\label{sec:problem-solving}
+\section{Learning Experience}
+\label{sec:learning-experience}
+\section{Risk Analysis Review}
+\label{sec:risk-analysis-review}
+\subsection{Anticipated Risks}
+\label{sec:anticipated-risks}
+\subsection{Un-Anticipated Risks}
+\label{sec:unanticipated-risks}
+\section{Schedule Review}
+\label{sec:schedule-review}
+\section{Methodology Review}
+\label{sec:methodology-review}
+\section{Goals Achieved}
+\label{sec:goals-achieved}
+\section{Improvements}
+\label{sec:improvements}
+
+\chapter*{Summary}
+\label{sec:summary}
+\addcontentsline{toc}{chapter}{Summary}
+
+%References as subsection
+\newpage
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\appendix
+
+\end{document}
