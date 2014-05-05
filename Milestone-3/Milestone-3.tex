@@ -156,8 +156,6 @@ This section presents a list of the tools used to develop the Digital Trails app
 
 \end{itemize}
 
-
-           portal-
 \section{Web Portal}
 \label{sec:web-portal-design}
 % User Inteportal-rface Design
@@ -248,7 +246,7 @@ Figure \ref{fig:login} shows the login view that users will see when they click 
 
 \centering
 
-\includegraphics[width=1\linewidth]{./img/webportal/login}
+\includegraphics[width=0.7\linewidth]{./img/webportal/login}
 
 \caption{Web portal login modal demonstrating validation.}
 
@@ -267,7 +265,7 @@ Figure \ref{fig:registration} shows the registration view that users will see wh
 
 \centering
 
-\includegraphics[width=1\linewidth]{./img/webportal/registration}
+\includegraphics[width=0.7\linewidth]{./img/webportal/registration}
 
 \caption{Web portal registration modal demonstrating validation.}
 
@@ -326,6 +324,28 @@ Figure \ref{fig:walk-waypoints} shows the view that users will see when they cli
 
 \end{figure}
 
+\paragraph{Waypoint View}\mbox{}\\
+The waypoint view shown in Figure \ref{fig:waypoint} is displayed when a list item or map marker is clicked from the walk waypoints view discussed in the previous paragraph. This view shows a read only representation of waypoint information such as its title, description and uploaded media. If the walk author is viewing this modal, an \emph{edit} and \emph{delete} button will be shown at the bottom which allows them to modify the waypoint. 
+
+Clicking the \emph{edit} button will hide the current modal and display the waypoint in edit mode. Clicking the \emph{delete} button will prompt the user before permanently removing the waypoint from the walk. Clicking the final \emph{add image, audio or video} square in the gallery will allow the user to choose a file from their computer to be uploaded. Once chosen, the user will be required to enter a caption for the media. Upon specifying a caption, the media will be uploaded and added to the waypoint. 
+
+Image and video media items are represented by a thumbnail image of their content. Since audio files do not have any visual representation, they have been given a gradient background featuring the caption above. The types of media displayed can be easily identified by an icon in the top left of each square. Clicking any media item will display a larger view the content and allow users to navigate backwards and forwards to previous and next media items respectively. This media viewer is presented in Figure \ref{fig:media-viewer}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/waypoint}
+\caption{Walk waypoint view.}
+\label{fig:waypoint}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/media-viewer}
+\caption{Waypoint media viewer.}
+\label{fig:media-viewer}
+\end{figure}
+
+
 \paragraph{Walk Reviews View}\mbox{}\\
 Figure \ref{fig:walk-reviews} shows the view that users will see when they click the \emph{Reviews} tab from the navigation tabs bar. This view loads user reviews from the walk data and displays them in a list view as shown in the figure. A library called \emph{Raty} was used to generate the star rating system seen below the title of the review. It takes a review rating integer between 1-5 and generates a star representation\cite{milestone2}. Since Milestone 2, the review authors name now appears below the title so other users know who has created the review. In addition, authors of reviews will see a \emph{delete} button which can be clicked to remove their review. Walk owners will see the delete button on all reviews so to allow moderation.
 
@@ -339,13 +359,54 @@ Clicking the \emph{Add Review} button will hide the walk reviews and display a f
 \end{figure}
 
 \paragraph{Waypoint Contributions View}\mbox{}\\
-Since Milestone 2, an additional view has been added to allow walk authors to moderate waypoint contributions from other users. These will be displayed in a list as shown in Figure \ref{fig:waypoint-contributions}. Each item has an \emph{accept} and \emph{reject} button to add the waypoint to the walk, or discard it respectively. Clicking either of these buttons will remove the contribution from the list and add a marker to the map representing its location.
+Since Milestone 2, an additional view has been added to allow walk authors to moderate waypoint contributions from other users. These will be displayed in a list as shown in Figure \ref{fig:waypoint-contributions}. Clicking a list item will present a modal displaying information about the waypoint that has been contributed. Each item has an \emph{accept} and \emph{reject} button to add the waypoint to the walk, or discard it respectively. Clicking either of these buttons will remove the contribution from the list and add a marker to the map representing its location.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{./img/webportal/waypoint-contributions}
 \caption{Waypoint contributions view.}
 \label{fig:waypoint-contributions}
+\end{figure}
+
+\paragraph{Add Walk View}\mbox{}\\
+The add walk view presented in Figure \ref{fig:add-walk} allows any user to create a new walk with associated waypoints. This view can be accessed from a link in the top navigation bar. Walk attributes can be entered and saved in the leftmost panel by clicking the \emph{save} button. The form can also be reset by clicking the \emph{undo} button. The \emph{cancel} button will discard the new walk and navigate back to the all walks view. The form also features client side error checking on saving, whereby erroneous fields are highlighted with a red border before the walk can be created. Waypoints can be added to the new walk by clicking on a map location. This will display the \emph{Add Waypoint} view discussed in the next paragraph.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{./img/webportal/add-walk}
+\caption{Add walk view.}
+\label{fig:add-walk}
+\end{figure}
+
+\paragraph{Add Waypoint View}\mbox{}\\
+The add waypoint view is presented in Figure \ref{fig:add-waypoint} and allows users to specify attributes of the waypoint to be created, including its \emph{title}, \emph{description}, \emph{latitude}, \emph{longitude}, \emph{visit order} and media. Clicking the \emph{Create} button will validate all fields and close the modal if successful. The waypoint will then be added to the new walk and a marker will appear on the map featured in the add walk view. Clicking the \emph{Manage} button will display an additional modal where media such as images, audio and videos can be added to the waypoint.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/add-waypoint}
+\caption{Add waypoint view.}
+\label{fig:add-waypoint}
+\end{figure}
+
+
+\paragraph{Waypoint Media Gallery}\mbox{}\\
+The waypoint media gallery shown in Figure \ref{fig:media-gallery} allows walk authors to manage the media which has been added to waypoints along their walks. Walk authors can select individual media items and click the \emph{delete selected} button to remove them in batch. Items selected for deletion are highlighted by a red border. The \emph{delete selected} button is only enabled when one or more media items are selected. On deleting media, they will be removed from the list and the \emph{delete selected} button disabled.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/media-gallery}
+\caption{Waypoint media gallery.}
+\label{fig:media-gallery}
+\end{figure}
+
+\paragraph{Account Settings View}\mbox{}\\
+The account settings view presented in Figure \ref{fig:user-account} allows registered users to modify their account details such as their \emph{first name}, \emph{last name}, \emph{email} and \emph{password}. All inputs are validated when the \emph{save} button is clicked. If any fields are invalid, they are given a red border to indicate this. Otherwise, a confirmation message is displayed above the account details to show the save has been successful.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/user-account}
+\caption{User account settings view.}
+\label{fig:user-account}
 \end{figure}
 
 
