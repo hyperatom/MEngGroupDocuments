@@ -1,0 +1,144 @@
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator}{\section{uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Account\+Authenticator Class Reference}
+\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator}\index{uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Account\+Authenticator@{uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Account\+Authenticator}}
+}
+
+
+Class to handle a White\+Rock account.  
+
+
+
+
+Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Account\+Authenticator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Account\+Authenticator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_a1c28ced91dd2f8a2079ba29e87eaed33}{Account\+Authenticator} (Context context)
+\begin{DoxyCompactList}\small\item\em The context being given to the app.\+yyyy. \end{DoxyCompactList}\item 
+Bundle \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_a62d040eea7e079506fbf38faf8a10910}{add\+Account} (Account\+Authenticator\+Response response, String account\+Type, String auth\+Token\+Type, String\mbox{[}$\,$\mbox{]} required\+Features, Bundle options)  throws Network\+Error\+Exception 
+\item 
+Bundle \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_accf8b092de90a407d819f2e725caa435}{get\+Auth\+Token} (Account\+Authenticator\+Response response, \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_account}{Account} account, String auth\+Token\+Type, Bundle options)  throws Network\+Error\+Exception 
+\item 
+String \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_aed5266720e65fd505ae9e1b49e770321}{get\+Auth\+Token\+Label} (String auth\+Token\+Type)
+\item 
+Bundle \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_a5d57d1e4676178d3301498ab3f3f4878}{has\+Features} (Account\+Authenticator\+Response response, \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_account}{Account} account, String\mbox{[}$\,$\mbox{]} features)  throws Network\+Error\+Exception 
+\item 
+Bundle \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_a89fd74d24bd17c1e4b491a1e6cb472cb}{confirm\+Credentials} (Account\+Authenticator\+Response response, \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_account}{Account} account, Bundle options)  throws Network\+Error\+Exception 
+\item 
+Bundle \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_ad0fb9e2c65c901e2c60591943b25a0a4}{edit\+Properties} (Account\+Authenticator\+Response response, String account\+Type)
+\item 
+Bundle \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_a2b9b07cf976fa45eda1380afe84c3b84}{update\+Credentials} (Account\+Authenticator\+Response response, \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_account}{Account} account, String auth\+Token\+Type, Bundle options)  throws Network\+Error\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to handle a White\+Rock account. 
+
+Talks to the account manager to perform all available actions. \begin{DoxyAuthor}{Author}
+Lewis Hancock 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_a1c28ced91dd2f8a2079ba29e87eaed33}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}!Account\+Authenticator@{Account\+Authenticator}}
+\index{Account\+Authenticator@{Account\+Authenticator}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}}
+\subsubsection[{Account\+Authenticator}]{\setlength{\rightskip}{0pt plus 5cm}uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Account\+Authenticator.\+Account\+Authenticator (
+\begin{DoxyParamCaption}
+\item[{Context}]{context}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_a1c28ced91dd2f8a2079ba29e87eaed33}
+
+
+The context being given to the app.\+yyyy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_a62d040eea7e079506fbf38faf8a10910}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}!add\+Account@{add\+Account}}
+\index{add\+Account@{add\+Account}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}}
+\subsubsection[{add\+Account}]{\setlength{\rightskip}{0pt plus 5cm}Bundle uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Account\+Authenticator.\+add\+Account (
+\begin{DoxyParamCaption}
+\item[{Account\+Authenticator\+Response}]{response, }
+\item[{String}]{account\+Type, }
+\item[{String}]{auth\+Token\+Type, }
+\item[{String\mbox{[}$\,$\mbox{]}}]{required\+Features, }
+\item[{Bundle}]{options}
+\end{DoxyParamCaption}
+) throws Network\+Error\+Exception}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_a62d040eea7e079506fbf38faf8a10910}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_a89fd74d24bd17c1e4b491a1e6cb472cb}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}!confirm\+Credentials@{confirm\+Credentials}}
+\index{confirm\+Credentials@{confirm\+Credentials}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}}
+\subsubsection[{confirm\+Credentials}]{\setlength{\rightskip}{0pt plus 5cm}Bundle uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Account\+Authenticator.\+confirm\+Credentials (
+\begin{DoxyParamCaption}
+\item[{Account\+Authenticator\+Response}]{response, }
+\item[{{\bf Account}}]{account, }
+\item[{Bundle}]{options}
+\end{DoxyParamCaption}
+) throws Network\+Error\+Exception}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_a89fd74d24bd17c1e4b491a1e6cb472cb}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_ad0fb9e2c65c901e2c60591943b25a0a4}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}!edit\+Properties@{edit\+Properties}}
+\index{edit\+Properties@{edit\+Properties}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}}
+\subsubsection[{edit\+Properties}]{\setlength{\rightskip}{0pt plus 5cm}Bundle uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Account\+Authenticator.\+edit\+Properties (
+\begin{DoxyParamCaption}
+\item[{Account\+Authenticator\+Response}]{response, }
+\item[{String}]{account\+Type}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_ad0fb9e2c65c901e2c60591943b25a0a4}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_accf8b092de90a407d819f2e725caa435}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}!get\+Auth\+Token@{get\+Auth\+Token}}
+\index{get\+Auth\+Token@{get\+Auth\+Token}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}}
+\subsubsection[{get\+Auth\+Token}]{\setlength{\rightskip}{0pt plus 5cm}Bundle uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Account\+Authenticator.\+get\+Auth\+Token (
+\begin{DoxyParamCaption}
+\item[{Account\+Authenticator\+Response}]{response, }
+\item[{{\bf Account}}]{account, }
+\item[{String}]{auth\+Token\+Type, }
+\item[{Bundle}]{options}
+\end{DoxyParamCaption}
+) throws Network\+Error\+Exception}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_accf8b092de90a407d819f2e725caa435}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_aed5266720e65fd505ae9e1b49e770321}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}!get\+Auth\+Token\+Label@{get\+Auth\+Token\+Label}}
+\index{get\+Auth\+Token\+Label@{get\+Auth\+Token\+Label}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}}
+\subsubsection[{get\+Auth\+Token\+Label}]{\setlength{\rightskip}{0pt plus 5cm}String uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Account\+Authenticator.\+get\+Auth\+Token\+Label (
+\begin{DoxyParamCaption}
+\item[{String}]{auth\+Token\+Type}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_aed5266720e65fd505ae9e1b49e770321}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_a5d57d1e4676178d3301498ab3f3f4878}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}!has\+Features@{has\+Features}}
+\index{has\+Features@{has\+Features}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}}
+\subsubsection[{has\+Features}]{\setlength{\rightskip}{0pt plus 5cm}Bundle uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Account\+Authenticator.\+has\+Features (
+\begin{DoxyParamCaption}
+\item[{Account\+Authenticator\+Response}]{response, }
+\item[{{\bf Account}}]{account, }
+\item[{String\mbox{[}$\,$\mbox{]}}]{features}
+\end{DoxyParamCaption}
+) throws Network\+Error\+Exception}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_a5d57d1e4676178d3301498ab3f3f4878}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_a2b9b07cf976fa45eda1380afe84c3b84}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}!update\+Credentials@{update\+Credentials}}
+\index{update\+Credentials@{update\+Credentials}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Account\+Authenticator}}
+\subsubsection[{update\+Credentials}]{\setlength{\rightskip}{0pt plus 5cm}Bundle uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Account\+Authenticator.\+update\+Credentials (
+\begin{DoxyParamCaption}
+\item[{Account\+Authenticator\+Response}]{response, }
+\item[{{\bf Account}}]{account, }
+\item[{String}]{auth\+Token\+Type, }
+\item[{Bundle}]{options}
+\end{DoxyParamCaption}
+) throws Network\+Error\+Exception}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator_a2b9b07cf976fa45eda1380afe84c3b84}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/uk/ac/swan/digitaltrails/accounts/\hyperlink{_account_authenticator_8java}{Account\+Authenticator.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="uk.ac.swan.digitaltrails.components.Waypoint.getLatitude" name="uk.ac.swan.digitaltrails.components.Waypoint.getLatitude">
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity.html#ab61b2dcee297cc8bff9caac74f1233d1" title="onClick for edit save button " alt="" coords="324,5,580,47"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_map_fragment.html#a510b75748b076b65fa40024960699386" title="uk.ac.swan.digitaltrails.fragments.\lAddWaypointMapFragment.onEditDialogPositiveClick" alt="" coords="287,71,617,112"/>
+</map>

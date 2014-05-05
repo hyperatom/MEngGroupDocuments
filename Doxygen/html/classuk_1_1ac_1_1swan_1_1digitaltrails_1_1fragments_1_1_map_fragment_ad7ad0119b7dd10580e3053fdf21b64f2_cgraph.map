@@ -1,0 +1,4 @@
+<map id="uk.ac.swan.digitaltrails.fragments.MapFragment.defaultMapConfig" name="uk.ac.swan.digitaltrails.fragments.MapFragment.defaultMapConfig">
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#af458f2c1b3e5c9cc817ac1403e04de41" title="uk.ac.swan.digitaltrails.fragments.\lMapFragment.showAddDialog" alt="" coords="272,5,491,47"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#a48c1510176cd4f173b5750d9dec68f52" title="uk.ac.swan.digitaltrails.fragments.\lMapFragment.setInfoClickListener" alt="" coords="272,71,491,112"/>
+</map>

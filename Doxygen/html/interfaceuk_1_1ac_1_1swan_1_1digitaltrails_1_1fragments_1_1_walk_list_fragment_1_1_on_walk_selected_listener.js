@@ -1,0 +1,4 @@
+var interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment_1_1_on_walk_selected_listener =
+[
+    [ "onWalkSelected", "interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment_1_1_on_walk_selected_listener.html#af19cd80980e138911b94ea2dec0fd889", null ]
+];

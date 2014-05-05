@@ -1,0 +1,28 @@
+var classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk =
+[
+    [ "Walk", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#ae7daf6a8692296bf65be0a3eb065a4c9", null ],
+    [ "Walk", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a87c01f8fd4faf953bf8f822fae4559cd", null ],
+    [ "describeContents", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a23a833257c737cda8cf0feb2c1c791e7", null ],
+    [ "getDifficultyRating", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#abaf7135cd2be3fb2724d5b10a11334d8", null ],
+    [ "getDistance", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a3652d6a41300005c0084bbd94ccd06ad", null ],
+    [ "getDownloadCount", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#aa7e76a66244c3f5ad3c4ceccf0d078a7", null ],
+    [ "getDuration", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a7f3529dd9a44a3222ded5899c591d93d", null ],
+    [ "getEnglishDescriptions", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a91177b7c934099081bcb3bd30fb4661d", null ],
+    [ "getId", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a01491cb2ef01618947ba840f2226e45c", null ],
+    [ "getOwner", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a35821636e7e663c6bad691dc7f541a6c", null ],
+    [ "getWaypoints", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a8fc355ae7b253b6e9fa6633f455f207d", null ],
+    [ "getWelshDescriptions", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#ad5fb40f13dcc9398a47dfd3006a98b95", null ],
+    [ "setDifficultyRating", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a0de0f63c1788da4c64db214782da18dc", null ],
+    [ "setDistance", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#ade69ef46a5dad1fec92e5db59fe2ea5e", null ],
+    [ "setDownloadCount", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#ab2ce244627930db6c602d9e93d541131", null ],
+    [ "setDuration", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a685bbc650733996587057b8b7b58a2ef", null ],
+    [ "setEnglishDescription", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a4a52f3ce8b9d5add613aac1fd101398d", null ],
+    [ "setEnglishDescriptions", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a846eeaec775dda6a17c9394e89fa5f4b", null ],
+    [ "setId", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a8420e81579a4a93cd8194c51ed759655", null ],
+    [ "setOwnerId", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#af248a6e640e79b4afdd938f9de734c40", null ],
+    [ "setWaypoints", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a1bff1940449a07439fa3036717ad2ff5", null ],
+    [ "setWelshDescription", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a56413ef1e04ca02448ff6c807894a082", null ],
+    [ "setWelshDescriptions", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a8f35d6cea1989aa3ffc0072c63b7da02", null ],
+    [ "toString", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a1c0e9d2fd3a2334532bfd6d68b620990", null ],
+    [ "writeToParcel", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#ae4413ee874cba88f42ca1bc5d423bed3", null ]
+];

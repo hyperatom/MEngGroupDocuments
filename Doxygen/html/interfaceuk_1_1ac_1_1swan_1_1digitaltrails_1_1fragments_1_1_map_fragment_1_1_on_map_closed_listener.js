@@ -1,0 +1,4 @@
+var interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_1_1_on_map_closed_listener =
+[
+    [ "onMapClosed", "interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_1_1_on_map_closed_listener.html#a4b2827a25346b184795b308b3e682fd2", null ]
+];

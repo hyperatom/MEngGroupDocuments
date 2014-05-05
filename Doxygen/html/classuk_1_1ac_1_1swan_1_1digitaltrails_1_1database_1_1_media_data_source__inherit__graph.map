@@ -1,0 +1,6 @@
+<map id="uk.ac.swan.digitaltrails.database.MediaDataSource" name="uk.ac.swan.digitaltrails.database.MediaDataSource">
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source.html" title="uk.ac.swan.digitaltrails.database.\lAudioDataSource" alt="" coords="531,5,745,47"/>
+<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_photo_data_source.html" title="uk.ac.swan.digitaltrails.database.\lPhotoDataSource" alt="" coords="531,71,745,112"/>
+<area shape="rect" id="node5" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_video_data_source.html" title="uk.ac.swan.digitaltrails.database.\lVideoDataSource" alt="" coords="531,136,745,177"/>
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html" title="Class to define methods for DataSources. " alt="" coords="5,71,220,112"/>
+</map>

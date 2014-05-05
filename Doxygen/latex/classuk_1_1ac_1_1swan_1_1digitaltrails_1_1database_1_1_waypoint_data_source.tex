@@ -1,0 +1,257 @@
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source}{\section{uk.\+ac.\+swan.\+digitaltrails.\+database.\+Waypoint\+Data\+Source Class Reference}
+\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source}\index{uk.\+ac.\+swan.\+digitaltrails.\+database.\+Waypoint\+Data\+Source@{uk.\+ac.\+swan.\+digitaltrails.\+database.\+Waypoint\+Data\+Source}}
+}
+
+
+Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Waypoint\+Data\+Source\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Waypoint\+Data\+Source\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_ab011743a187bc9402a8e3ee4ff06ed58}{Waypoint\+Data\+Source} (Context context)
+\item 
+long \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_a0a5edeabdc390f34355fbca009a00310}{add\+Waypoint} (double latitude, double longitude, int is\+Request, long visit\+Order, long walk\+Id, long user\+Id)
+\item 
+long \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_af845370be817cbc70306ce869178a7a6}{add\+Waypoint} (\hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint}{Waypoint} wp)
+\item 
+int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_ad555d4800c0b0006cf19a7aa0a655661}{update\+Waypoint} (long id, Double latitude, Double longitude, Integer is\+Request, Long visit\+Order, Long walk\+Id, Long user\+Id)
+\item 
+void \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_a1e05eaf5ffeb15c7d0cd86efc57c842b}{delete\+Waypoint} (long id)
+\begin{DoxyCompactList}\small\item\em Delete waypoint from database. \end{DoxyCompactList}\item 
+void \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_af0b817a0e56b59a39fef0774c351aa1f}{delete\+All\+Waypoints\+In\+Walk} (long walk\+Id)
+\begin{DoxyCompactList}\small\item\em Delete all waypoints on a walk. \end{DoxyCompactList}\item 
+Cursor \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_af8fc0c67b3637ed3a369cf5589b377a7}{get\+All\+Waypoints\+In\+Walk} (long walk\+Id)
+\begin{DoxyCompactList}\small\item\em Get all waypoints from a walk. \end{DoxyCompactList}\item 
+Cursor \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_ae00810c200b0586cfd02c80a053024c3}{get\+All\+Waypoints\+In\+Walk} (long walk\+Id, boolean get\+Latitude, boolean get\+Longitude, boolean get\+Is\+Request, boolean get\+Visit\+Order, boolean get\+User\+Id)
+\begin{DoxyCompactList}\small\item\em Get all waypoints from walk, only returning items set to true, waypoint\+Id and walk\+Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Lewis Hancock 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_ab011743a187bc9402a8e3ee4ff06ed58}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}!Waypoint\+Data\+Source@{Waypoint\+Data\+Source}}
+\index{Waypoint\+Data\+Source@{Waypoint\+Data\+Source}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}}
+\subsubsection[{Waypoint\+Data\+Source}]{\setlength{\rightskip}{0pt plus 5cm}uk.\+ac.\+swan.\+digitaltrails.\+database.\+Waypoint\+Data\+Source.\+Waypoint\+Data\+Source (
+\begin{DoxyParamCaption}
+\item[{Context}]{context}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_ab011743a187bc9402a8e3ee4ff06ed58}
+
+\begin{DoxyParams}{Parameters}
+{\em context} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_a0a5edeabdc390f34355fbca009a00310}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}!add\+Waypoint@{add\+Waypoint}}
+\index{add\+Waypoint@{add\+Waypoint}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}}
+\subsubsection[{add\+Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}long uk.\+ac.\+swan.\+digitaltrails.\+database.\+Waypoint\+Data\+Source.\+add\+Waypoint (
+\begin{DoxyParamCaption}
+\item[{double}]{latitude, }
+\item[{double}]{longitude, }
+\item[{int}]{is\+Request, }
+\item[{long}]{visit\+Order, }
+\item[{long}]{walk\+Id, }
+\item[{long}]{user\+Id}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_a0a5edeabdc390f34355fbca009a00310}
+
+\begin{DoxyParams}{Parameters}
+{\em latitude} & \\
+\hline
+{\em longitude} & \\
+\hline
+{\em is\+Request} & \\
+\hline
+{\em visit\+Order} & \\
+\hline
+{\em walk\+Id} & \\
+\hline
+{\em user\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_af845370be817cbc70306ce869178a7a6}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}!add\+Waypoint@{add\+Waypoint}}
+\index{add\+Waypoint@{add\+Waypoint}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}}
+\subsubsection[{add\+Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}long uk.\+ac.\+swan.\+digitaltrails.\+database.\+Waypoint\+Data\+Source.\+add\+Waypoint (
+\begin{DoxyParamCaption}
+\item[{{\bf Waypoint}}]{wp}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_af845370be817cbc70306ce869178a7a6}
+
+\begin{DoxyParams}{Parameters}
+{\em wp} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_af0b817a0e56b59a39fef0774c351aa1f}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}!delete\+All\+Waypoints\+In\+Walk@{delete\+All\+Waypoints\+In\+Walk}}
+\index{delete\+All\+Waypoints\+In\+Walk@{delete\+All\+Waypoints\+In\+Walk}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}}
+\subsubsection[{delete\+All\+Waypoints\+In\+Walk}]{\setlength{\rightskip}{0pt plus 5cm}void uk.\+ac.\+swan.\+digitaltrails.\+database.\+Waypoint\+Data\+Source.\+delete\+All\+Waypoints\+In\+Walk (
+\begin{DoxyParamCaption}
+\item[{long}]{walk\+Id}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_af0b817a0e56b59a39fef0774c351aa1f}
+
+
+Delete all waypoints on a walk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em walk\+Id} & the walk to delete from \\
+\hline
+{\em walk\+Id} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_a1e05eaf5ffeb15c7d0cd86efc57c842b}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}!delete\+Waypoint@{delete\+Waypoint}}
+\index{delete\+Waypoint@{delete\+Waypoint}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}}
+\subsubsection[{delete\+Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}void uk.\+ac.\+swan.\+digitaltrails.\+database.\+Waypoint\+Data\+Source.\+delete\+Waypoint (
+\begin{DoxyParamCaption}
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_a1e05eaf5ffeb15c7d0cd86efc57c842b}
+
+
+Delete waypoint from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the id of the waypoint to delete \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_af8fc0c67b3637ed3a369cf5589b377a7}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}!get\+All\+Waypoints\+In\+Walk@{get\+All\+Waypoints\+In\+Walk}}
+\index{get\+All\+Waypoints\+In\+Walk@{get\+All\+Waypoints\+In\+Walk}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}}
+\subsubsection[{get\+All\+Waypoints\+In\+Walk}]{\setlength{\rightskip}{0pt plus 5cm}Cursor uk.\+ac.\+swan.\+digitaltrails.\+database.\+Waypoint\+Data\+Source.\+get\+All\+Waypoints\+In\+Walk (
+\begin{DoxyParamCaption}
+\item[{long}]{walk\+Id}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_af8fc0c67b3637ed3a369cf5589b377a7}
+
+
+Get all waypoints from a walk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em walk\+Id} & the walk to get waypoints from \\
+\hline
+{\em walk\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_ae00810c200b0586cfd02c80a053024c3}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}!get\+All\+Waypoints\+In\+Walk@{get\+All\+Waypoints\+In\+Walk}}
+\index{get\+All\+Waypoints\+In\+Walk@{get\+All\+Waypoints\+In\+Walk}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}}
+\subsubsection[{get\+All\+Waypoints\+In\+Walk}]{\setlength{\rightskip}{0pt plus 5cm}Cursor uk.\+ac.\+swan.\+digitaltrails.\+database.\+Waypoint\+Data\+Source.\+get\+All\+Waypoints\+In\+Walk (
+\begin{DoxyParamCaption}
+\item[{long}]{walk\+Id, }
+\item[{boolean}]{get\+Latitude, }
+\item[{boolean}]{get\+Longitude, }
+\item[{boolean}]{get\+Is\+Request, }
+\item[{boolean}]{get\+Visit\+Order, }
+\item[{boolean}]{get\+User\+Id}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_ae00810c200b0586cfd02c80a053024c3}
+
+
+Get all waypoints from walk, only returning items set to true, waypoint\+Id and walk\+Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em walk\+Id} & \\
+\hline
+{\em get\+Latitude} & \\
+\hline
+{\em get\+Longitude} & \\
+\hline
+{\em get\+Is\+Request} & \\
+\hline
+{\em get\+Visit\+Order} & \\
+\hline
+{\em get\+User\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em walk\+Id} & \\
+\hline
+{\em get\+Latitude} & \\
+\hline
+{\em get\+Longitude} & \\
+\hline
+{\em get\+Is\+Request} & \\
+\hline
+{\em get\+Visit\+Order} & \\
+\hline
+{\em get\+User\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_ad555d4800c0b0006cf19a7aa0a655661}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}!update\+Waypoint@{update\+Waypoint}}
+\index{update\+Waypoint@{update\+Waypoint}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Waypoint\+Data\+Source}}
+\subsubsection[{update\+Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}int uk.\+ac.\+swan.\+digitaltrails.\+database.\+Waypoint\+Data\+Source.\+update\+Waypoint (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{Double}]{latitude, }
+\item[{Double}]{longitude, }
+\item[{Integer}]{is\+Request, }
+\item[{Long}]{visit\+Order, }
+\item[{Long}]{walk\+Id, }
+\item[{Long}]{user\+Id}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source_ad555d4800c0b0006cf19a7aa0a655661}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em latitude} & \\
+\hline
+{\em longitude} & \\
+\hline
+{\em is\+Request} & \\
+\hline
+{\em visit\+Order} & \\
+\hline
+{\em walk\+Id} & \\
+\hline
+{\em user\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/uk/ac/swan/digitaltrails/database/\hyperlink{_waypoint_data_source_8java}{Waypoint\+Data\+Source.\+java}\end{DoxyCompactItemize}

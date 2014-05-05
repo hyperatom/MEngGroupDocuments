@@ -1,0 +1,6 @@
+<map id="uk.ac.swan.digitaltrails.activities.MyWalksActivity.editSaveButtonOnClick" name="uk.ac.swan.digitaltrails.activities.MyWalksActivity.editSaveButtonOnClick">
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_edit_walk_fragment.html#a5d529fb60421b2e55446ff158ff3988f" title="uk.ac.swan.digitaltrails.fragments.\lEditWalkFragment.getDescriptionId" alt="" coords="313,5,539,47"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a974b98165eec5b3d35a6e89a9955e5ed" title="uk.ac.swan.digitaltrails.components.\lWaypoint.getLatitude" alt="" coords="309,71,543,112"/>
+<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a302266a14205eb24a5ef3d2e94ccd140" title="uk.ac.swan.digitaltrails.components.\lWaypoint.getEnglishDescription" alt="" coords="309,136,543,177"/>
+<area shape="rect" id="node5" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_description.html#a9293240f3e8fef27692a4823684bf09a" title="Getter for id. " alt="" coords="309,201,543,243"/>
+</map>

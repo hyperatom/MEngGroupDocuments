@@ -1,0 +1,8 @@
+<map id="uk.ac.swan.digitaltrails.components.Waypoint.Waypoint" name="uk.ac.swan.digitaltrails.components.Waypoint.Waypoint">
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#ad59dbf85147b88698c2e64aff81e71af" title="uk.ac.swan.digitaltrails.components.\lWaypoint.setId" alt="" coords="287,5,520,47"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a1d06c9915322c91ef4097ccfc66a41f5" title="uk.ac.swan.digitaltrails.components.\lWaypoint.setEnglishDescription" alt="" coords="287,71,520,112"/>
+<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a302266a14205eb24a5ef3d2e94ccd140" title="uk.ac.swan.digitaltrails.components.\lWaypoint.getEnglishDescription" alt="" coords="287,136,520,177"/>
+<area shape="rect" id="node5" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a6d990b5da843b533358eb3bc46cf8345" title="uk.ac.swan.digitaltrails.components.\lWaypoint.setLatitude" alt="" coords="287,201,520,243"/>
+<area shape="rect" id="node6" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a31ddb3a7285734c9f0a7c003a2a7c6fc" title="uk.ac.swan.digitaltrails.components.\lWaypoint.setLongitude" alt="" coords="287,267,520,308"/>
+<area shape="rect" id="node7" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#ab825615fd2b9394595467256c6c82e82" title="uk.ac.swan.digitaltrails.components.\lWaypoint.setLatLng" alt="" coords="287,332,520,373"/>
+</map>

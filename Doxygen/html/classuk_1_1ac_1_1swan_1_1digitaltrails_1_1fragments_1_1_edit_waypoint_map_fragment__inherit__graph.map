@@ -1,0 +1,5 @@
+<map id="uk.ac.swan.digitaltrails.fragments.EditWaypointMapFragment" name="uk.ac.swan.digitaltrails.fragments.EditWaypointMapFragment">
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html" title="Base class which all instances of Google Maps should be using, apart from when the User &quot;goes on a wa..." alt="" coords="354,122,573,163"/>
+<area shape="rect" id="node7" href="$interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_dialog_fragment_1_1_add_waypoint_dialog_listener.html" title="uk.ac.swan.digitaltrails.fragments.\lAddWaypointDialogFragment.AddWaypoint\lDialogListener" alt="" coords="5,268,279,324"/>
+<area shape="rect" id="node8" href="$interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_edit_waypoint_dialog_fragment_1_1_edit_waypoint_dialog_listener.html" title="uk.ac.swan.digitaltrails.fragments.\lEditWaypointDialogFragment.EditWaypoint\lDialogListener" alt="" coords="327,188,600,244"/>
+</map>

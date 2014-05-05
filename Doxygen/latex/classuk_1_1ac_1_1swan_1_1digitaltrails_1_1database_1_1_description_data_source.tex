@@ -1,0 +1,263 @@
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source}{\section{uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source Class Reference}
+\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source}\index{uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source@{uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source}}
+}
+
+
+Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a38ab06958fd70330e566d3883f4bf130}{Description\+Data\+Source} (Context context)
+\item 
+long \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_aefe52e0afdee53f7a300c48e19299ecc}{add\+Description} (String title, String short\+Descr, String long\+Descr, long foreign\+Id)
+\item 
+long \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a523009d78ef9c5f1144f41908da8b35e}{add\+Description} (\hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_description}{Description} d)
+\begin{DoxyCompactList}\small\item\em Add a Description. \end{DoxyCompactList}\item 
+long \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_aed125b32a571fdd698630a23c268014e}{add\+Description} (\hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk_description}{Walk\+Description} d)
+\begin{DoxyCompactList}\small\item\em Add a Walk\+Description. \end{DoxyCompactList}\item 
+long \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a98a11820f32487aa46ae29aea11cecd2}{add\+Description} (\hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint_description}{Waypoint\+Description} d)
+\begin{DoxyCompactList}\small\item\em Add a Waypoint\+Description. \end{DoxyCompactList}\item 
+void \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_af0c27ec463f89e831d2e8a0d4550cc1d}{delete\+Description} (long id)
+\begin{DoxyCompactList}\small\item\em Delete desired description. \end{DoxyCompactList}\item 
+void \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a5e81b67e1ed20a346146d36e1e94e664}{delete\+All\+Descriptions} (long parent\+Id)
+\begin{DoxyCompactList}\small\item\em Delete all descriptions with the same parent\+Id. \end{DoxyCompactList}\item 
+void \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a007f26b485f79cc640f41afe780eebc3}{update\+Description} (long id, String title, String short\+Descr, String long\+Descr)
+\begin{DoxyCompactList}\small\item\em Update the values of a description in the database. \end{DoxyCompactList}\item 
+abstract List$<$ \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_description}{Description} $>$ \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a134b9b153811548f205493e00481464f}{get\+All\+Descriptions} ()
+\begin{DoxyCompactList}\small\item\em Return all descriptions of this type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_description}{Description} \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a3f5bcdc69a14876f36a0849e957b6b60}{cursor\+To\+Description} (Cursor cursor)
+\begin{DoxyCompactList}\small\item\em Create Description from the cursor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Uri \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_ad5ab4f6ae6c94d72a77bd53a914aa8fa}{uri}
+\item 
+String\mbox{[}$\,$\mbox{]} \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_aa80b002da9e2cf4b83d25f13ca7843c0}{all\+Columns}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Lewis Hancock Abstract base class for all Description\+Data\+Sources to manage Descriptions in the database. 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a38ab06958fd70330e566d3883f4bf130}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}!Description\+Data\+Source@{Description\+Data\+Source}}
+\index{Description\+Data\+Source@{Description\+Data\+Source}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}}
+\subsubsection[{Description\+Data\+Source}]{\setlength{\rightskip}{0pt plus 5cm}uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source.\+Description\+Data\+Source (
+\begin{DoxyParamCaption}
+\item[{Context}]{context}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a38ab06958fd70330e566d3883f4bf130}
+
+\begin{DoxyParams}{Parameters}
+{\em context} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_aefe52e0afdee53f7a300c48e19299ecc}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}!add\+Description@{add\+Description}}
+\index{add\+Description@{add\+Description}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}}
+\subsubsection[{add\+Description}]{\setlength{\rightskip}{0pt plus 5cm}long uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source.\+add\+Description (
+\begin{DoxyParamCaption}
+\item[{String}]{title, }
+\item[{String}]{short\+Descr, }
+\item[{String}]{long\+Descr, }
+\item[{long}]{foreign\+Id}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_aefe52e0afdee53f7a300c48e19299ecc}
+
+\begin{DoxyParams}{Parameters}
+{\em title} & \\
+\hline
+{\em short\+Descr} & \\
+\hline
+{\em long\+Descr} & \\
+\hline
+{\em foreign\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a523009d78ef9c5f1144f41908da8b35e}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}!add\+Description@{add\+Description}}
+\index{add\+Description@{add\+Description}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}}
+\subsubsection[{add\+Description}]{\setlength{\rightskip}{0pt plus 5cm}long uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source.\+add\+Description (
+\begin{DoxyParamCaption}
+\item[{{\bf Description}}]{d}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a523009d78ef9c5f1144f41908da8b35e}
+
+
+Add a Description. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_aed125b32a571fdd698630a23c268014e}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}!add\+Description@{add\+Description}}
+\index{add\+Description@{add\+Description}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}}
+\subsubsection[{add\+Description}]{\setlength{\rightskip}{0pt plus 5cm}long uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source.\+add\+Description (
+\begin{DoxyParamCaption}
+\item[{{\bf Walk\+Description}}]{d}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_aed125b32a571fdd698630a23c268014e}
+
+
+Add a Walk\+Description. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a98a11820f32487aa46ae29aea11cecd2}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}!add\+Description@{add\+Description}}
+\index{add\+Description@{add\+Description}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}}
+\subsubsection[{add\+Description}]{\setlength{\rightskip}{0pt plus 5cm}long uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source.\+add\+Description (
+\begin{DoxyParamCaption}
+\item[{{\bf Waypoint\+Description}}]{d}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a98a11820f32487aa46ae29aea11cecd2}
+
+
+Add a Waypoint\+Description. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a3f5bcdc69a14876f36a0849e957b6b60}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}!cursor\+To\+Description@{cursor\+To\+Description}}
+\index{cursor\+To\+Description@{cursor\+To\+Description}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}}
+\subsubsection[{cursor\+To\+Description}]{\setlength{\rightskip}{0pt plus 5cm}abstract {\bf Description} uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source.\+cursor\+To\+Description (
+\begin{DoxyParamCaption}
+\item[{Cursor}]{cursor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a3f5bcdc69a14876f36a0849e957b6b60}
+
+
+Create Description from the cursor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cursor} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New Description 
+\end{DoxyReturn}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a5e81b67e1ed20a346146d36e1e94e664}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}!delete\+All\+Descriptions@{delete\+All\+Descriptions}}
+\index{delete\+All\+Descriptions@{delete\+All\+Descriptions}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}}
+\subsubsection[{delete\+All\+Descriptions}]{\setlength{\rightskip}{0pt plus 5cm}void uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source.\+delete\+All\+Descriptions (
+\begin{DoxyParamCaption}
+\item[{long}]{parent\+Id}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a5e81b67e1ed20a346146d36e1e94e664}
+
+
+Delete all descriptions with the same parent\+Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent\+Id} & the parent which will have descriptions deleted \\
+\hline
+\end{DoxyParams}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_af0c27ec463f89e831d2e8a0d4550cc1d}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}!delete\+Description@{delete\+Description}}
+\index{delete\+Description@{delete\+Description}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}}
+\subsubsection[{delete\+Description}]{\setlength{\rightskip}{0pt plus 5cm}void uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source.\+delete\+Description (
+\begin{DoxyParamCaption}
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_af0c27ec463f89e831d2e8a0d4550cc1d}
+
+
+Delete desired description. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id of description \\
+\hline
+\end{DoxyParams}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a134b9b153811548f205493e00481464f}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}!get\+All\+Descriptions@{get\+All\+Descriptions}}
+\index{get\+All\+Descriptions@{get\+All\+Descriptions}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}}
+\subsubsection[{get\+All\+Descriptions}]{\setlength{\rightskip}{0pt plus 5cm}abstract List$<${\bf Description}$>$ uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source.\+get\+All\+Descriptions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [abstract]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a134b9b153811548f205493e00481464f}
+
+
+Return all descriptions of this type. 
+
+\begin{DoxyReturn}{Returns}
+All descriptions of this type. 
+\end{DoxyReturn}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a007f26b485f79cc640f41afe780eebc3}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}!update\+Description@{update\+Description}}
+\index{update\+Description@{update\+Description}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}}
+\subsubsection[{update\+Description}]{\setlength{\rightskip}{0pt plus 5cm}void uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source.\+update\+Description (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{String}]{title, }
+\item[{String}]{short\+Descr, }
+\item[{String}]{long\+Descr}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_a007f26b485f79cc640f41afe780eebc3}
+
+
+Update the values of a description in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em title} & \\
+\hline
+{\em short\+Descr} & \\
+\hline
+{\em long\+Descr} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_aa80b002da9e2cf4b83d25f13ca7843c0}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}!all\+Columns@{all\+Columns}}
+\index{all\+Columns@{all\+Columns}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}}
+\subsubsection[{all\+Columns}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source.\+all\+Columns\hspace{0.3cm}{\ttfamily [protected]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_aa80b002da9e2cf4b83d25f13ca7843c0}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_ad5ab4f6ae6c94d72a77bd53a914aa8fa}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}!uri@{uri}}
+\index{uri@{uri}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Description\+Data\+Source}}
+\subsubsection[{uri}]{\setlength{\rightskip}{0pt plus 5cm}Uri uk.\+ac.\+swan.\+digitaltrails.\+database.\+Description\+Data\+Source.\+uri\hspace{0.3cm}{\ttfamily [protected]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source_ad5ab4f6ae6c94d72a77bd53a914aa8fa}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/uk/ac/swan/digitaltrails/database/\hyperlink{_description_data_source_8java}{Description\+Data\+Source.\+java}\end{DoxyCompactItemize}
