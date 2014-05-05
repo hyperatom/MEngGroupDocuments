@@ -152,8 +152,6 @@ This section presents a list of the tools used to develop the Digital Trails app
 
 \end{itemize}
 
-
-           portal-
 \section{Web Portal}
 \label{sec:web-portal-design}
 % User Inteportal-rface Design
@@ -189,6 +187,19 @@ This section will discuss the choices of technology that were used to implement 
 
 \subsection{Chosen Design}
 \label{sec:portal-chosen-design}
+
+\subsubsection{UML Diagrams}
+
+Figure \ref{fig:subsystem-diagram} shows a subsystem diagram for the Digital Trails web application.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/web-client-uml/subsystem-diagram}
+\caption{Web client subsystem diagram.}
+\label{fig:subsystem-diagram}
+\end{figure}
+
+
 
 \subsubsection{User Interfaces}
 \label{sec:portal-user-interfaces}
@@ -240,7 +251,7 @@ Figure \ref{fig:login} shows the login view that users will see when they click 
 
 \centering
 
-\includegraphics[width=1\linewidth]{./img/webportal/login}
+\includegraphics[width=0.7\linewidth]{./img/webportal/login}
 
 \caption{Web portal login modal demonstrating validation.}
 
@@ -259,7 +270,7 @@ Figure \ref{fig:registration} shows the registration view that users will see wh
 
 \centering
 
-\includegraphics[width=1\linewidth]{./img/webportal/registration}
+\includegraphics[width=0.7\linewidth]{./img/webportal/registration}
 
 \caption{Web portal registration modal demonstrating validation.}
 
@@ -318,6 +329,28 @@ Figure \ref{fig:walk-waypoints} shows the view that users will see when they cli
 
 \end{figure}
 
+\paragraph{Waypoint View}\mbox{}\\
+The waypoint view shown in Figure \ref{fig:waypoint} is displayed when a list item or map marker is clicked from the walk waypoints view discussed in the previous paragraph. This view shows a read only representation of waypoint information such as its title, description and uploaded media. If the walk author is viewing this modal, an \emph{edit} and \emph{delete} button will be shown at the bottom which allows them to modify the waypoint. 
+
+Clicking the \emph{edit} button will hide the current modal and display the waypoint in edit mode. Clicking the \emph{delete} button will prompt the user before permanently removing the waypoint from the walk. Clicking the final \emph{add image, audio or video} square in the gallery will allow the user to choose a file from their computer to be uploaded. Once chosen, the user will be required to enter a caption for the media. Upon specifying a caption, the media will be uploaded and added to the waypoint. 
+
+Image and video media items are represented by a thumbnail image of their content. Since audio files do not have any visual representation, they have been given a gradient background featuring the caption above. The types of media displayed can be easily identified by an icon in the top left of each square. Clicking any media item will display a larger view the content and allow users to navigate backwards and forwards to previous and next media items respectively. This media viewer is presented in Figure \ref{fig:media-viewer}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/waypoint}
+\caption{Walk waypoint view.}
+\label{fig:waypoint}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/media-viewer}
+\caption{Waypoint media viewer.}
+\label{fig:media-viewer}
+\end{figure}
+
+
 \paragraph{Walk Reviews View}\mbox{}\\
 Figure \ref{fig:walk-reviews} shows the view that users will see when they click the \emph{Reviews} tab from the navigation tabs bar. This view loads user reviews from the walk data and displays them in a list view as shown in the figure. A library called \emph{Raty} was used to generate the star rating system seen below the title of the review. It takes a review rating integer between 1-5 and generates a star representation\cite{milestone2}. Since Milestone 2, the review authors name now appears below the title so other users know who has created the review. In addition, authors of reviews will see a \emph{delete} button which can be clicked to remove their review. Walk owners will see the delete button on all reviews so to allow moderation.
 
@@ -331,13 +364,54 @@ Clicking the \emph{Add Review} button will hide the walk reviews and display a f
 \end{figure}
 
 \paragraph{Waypoint Contributions View}\mbox{}\\
-Since Milestone 2, an additional view has been added to allow walk authors to moderate waypoint contributions from other users. These will be displayed in a list as shown in Figure \ref{fig:waypoint-contributions}. Each item has an \emph{accept} and \emph{reject} button to add the waypoint to the walk, or discard it respectively. Clicking either of these buttons will remove the contribution from the list and add a marker to the map representing its location.
+Since Milestone 2, an additional view has been added to allow walk authors to moderate waypoint contributions from other users. These will be displayed in a list as shown in Figure \ref{fig:waypoint-contributions}. Clicking a list item will present a modal displaying information about the waypoint that has been contributed. Each item has an \emph{accept} and \emph{reject} button to add the waypoint to the walk, or discard it respectively. Clicking either of these buttons will remove the contribution from the list and add a marker to the map representing its location.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{./img/webportal/waypoint-contributions}
 \caption{Waypoint contributions view.}
 \label{fig:waypoint-contributions}
+\end{figure}
+
+\paragraph{Add Walk View}\mbox{}\\
+The add walk view presented in Figure \ref{fig:add-walk} allows any user to create a new walk with associated waypoints. This view can be accessed from a link in the top navigation bar. Walk attributes can be entered and saved in the leftmost panel by clicking the \emph{save} button. The form can also be reset by clicking the \emph{undo} button. The \emph{cancel} button will discard the new walk and navigate back to the all walks view. The form also features client side error checking on saving, whereby erroneous fields are highlighted with a red border before the walk can be created. Waypoints can be added to the new walk by clicking on a map location. This will display the \emph{Add Waypoint} view discussed in the next paragraph.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{./img/webportal/add-walk}
+\caption{Add walk view.}
+\label{fig:add-walk}
+\end{figure}
+
+\paragraph{Add Waypoint View}\mbox{}\\
+The add waypoint view is presented in Figure \ref{fig:add-waypoint} and allows users to specify attributes of the waypoint to be created, including its \emph{title}, \emph{description}, \emph{latitude}, \emph{longitude}, \emph{visit order} and media. Clicking the \emph{Create} button will validate all fields and close the modal if successful. The waypoint will then be added to the new walk and a marker will appear on the map featured in the add walk view. Clicking the \emph{Manage} button will display an additional modal where media such as images, audio and videos can be added to the waypoint.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/add-waypoint}
+\caption{Add waypoint view.}
+\label{fig:add-waypoint}
+\end{figure}
+
+
+\paragraph{Waypoint Media Gallery}\mbox{}\\
+The waypoint media gallery shown in Figure \ref{fig:media-gallery} allows walk authors to manage the media which has been added to waypoints along their walks. Walk authors can select individual media items and click the \emph{delete selected} button to remove them in batch. Items selected for deletion are highlighted by a red border. The \emph{delete selected} button is only enabled when one or more media items are selected. On deleting media, they will be removed from the list and the \emph{delete selected} button disabled.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/media-gallery}
+\caption{Waypoint media gallery.}
+\label{fig:media-gallery}
+\end{figure}
+
+\paragraph{Account Settings View}\mbox{}\\
+The account settings view presented in Figure \ref{fig:user-account} allows registered users to modify their account details such as their \emph{first name}, \emph{last name}, \emph{email} and \emph{password}. All inputs are validated when the \emph{save} button is clicked. If any fields are invalid, they are given a red border to indicate this. Otherwise, a confirmation message is displayed above the account details to show the save has been successful.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/user-account}
+\caption{User account settings view.}
+\label{fig:user-account}
 \end{figure}
 
 
@@ -439,6 +513,18 @@ The \emph{Log In} interface presents the user with a welcome message fixed to th
 
 The API is the crucial link between the Website, Application and Database. It was important that the correct design and technology was selected to make that link as seamless as possible. 
 
+\subsection{Technology Choices}
+\label{sec:api:techChoices}
+
+\begin{description}
+\item[Paris] - Paris is an ORM (Object Relation Mapper) which provided a layer of abstraction between the database and the API. Rather than writing SQL queries to retrieve an object it makes it possible to use model objects to and methods to retrieve the objects.  
+\item[Slim Framework] - The slim framework was chosen as the underlying framework of the API. Slim provides many low-level function which are critical to the production of a reliable API in a small and efficient package. Before it was settled on an alternative framework called Phalcon was trialed, but it proved to be overly complex and overwhelming compared to the relative simplicity of Slim. 
+\item[PHP] - This is the language on which Slim runs. It is a popular free and open source web programming langauage. It has great support and is widly used through the world. Alternatives included C\#.NET which is a closed source and closed platform product from Microsoft. Due to the licensing fees and extra costs involved PHP quickly came to light as the best choice. 
+\item[Apache] - This is the web server which handles request and responses for the API. It recieves requests and passes them on to the PHP runtime for the API. Apache is the best known and most widely used web server in the world. The alternatives were Nginx and IIS. IIS is limited to Microsfts platforms and Nginx, while well respected, is still an emerging presence in the market. 
+\item[Linux] - Linux is the operating system which powers the API server. Linux is free and open source and is the most popular platfrom for operating a server.
+\item[JSON] - JavaScript Object Notation (JSON) is a media format which is used to represent JavaScript objects as plain text. It can be used to represent far more than just JavaScript objects however. 
+\end{description}
+
 \subsection{Possible Designs}
 \label{sec:api:rejected-designs} %Phalcon Framework. SOAP API's.
 When work started on the API the first descision that needed to be made was on the protocal for the API. There are several popular API protocals including;
@@ -481,9 +567,6 @@ REST, on the other hand, is a stateless system which comunicates via URI's, any 
 \subsection{Chosen Desgin}
 For the API it was decided to harness the REST protocal. The decision was made after analysing both SOAP and REST and the advantages and disadvantages of both. In the end the overly veribose nature of SOAP led to the decision of a REST api.  The ability to use JSON with REST requests was also a deciding factor as this gretly reduced the workload when comunicating with the API from JavaScript. 
 
-\subsection{UML Diagrams}
-\label{sec:api:uml}
-
 \subsection{Classes}
 \label{sec:api:class}
 The API has several `Model' classes to represent the Database tables and the objects that are stored within them. The objects are related through the database and can retrieve the related models through method calls. The relations between the models is shown in Figure \ref{fig:datamodels}, where every model is a possible entry point. Using these models it is possible to, for example, use an `English Walk Description' to return all related 'Waypoint Images'. 
@@ -504,28 +587,204 @@ The API has several main object collections, which are `Walks', `Waypoints', `Us
     \label{fig:controllerroutes}
 \end{figure}
 
-\subsection{Technology Choices}
-\label{sec:api:techChoices}
+Each controller has methods to respond to diffrent requests, a generic controller will have `getOne', `getAll', `add', `update', `remove' and `search'. The methods match up to specific routes. For example `getOne' normally matches to \textbf{GET} \url{/resources/id} and `add' matches \textbf{POST} \url{/resources}. 
 
-\begin{description}
-\item[Paris] - Paris is an ORM (Object Relation Mapper) which provided a layer of abstraction between the database and the API. Rather than writing SQL queries to retrieve an object it makes it possible to use model objects to and methods to retrieve the objects.  
-\item[Slim Framework] - The slim framework was chosen as the underlying framework of the API. Slim provides many low-level function which are critical to the production of a reliable API in a small and efficient package. Before it was settled on an alternative framework called Phalcon was trialed, but it proved to be overly complex and overwhelming compared to the relative simplicity of Slim. 
-\item[PHP] - This is the language on which Slim runs. It is a popular free and open source web programming langauage. It has great support and is widly used through the world. Alternatives included C\#.NET which is a closed source and closed platform product from Microsoft. Due to the licensing fees and extra costs involved PHP quickly came to light as the best choice. 
-\item[Apache] - This is the web server which handles request and responses for the API. It recieves requests and passes them on to the PHP runtime for the API. Apache is the best known and most widely used web server in the world. The alternatives were Nginx and IIS. IIS is limited to Microsfts platforms and Nginx, while well respected, is still an emerging presence in the market. 
-\item[Linux] - Linux is the operating system which powers the API server. Linux is free and open source and is the most popular platfrom for operating a server.
-\item[JSON] - JavaScript Object Notation (JSON) is a media format which is used to represent JavaScript objects as plain text. It can be used to represent far more than just JavaScript objects however. 
-\end{description}
+\subsubsection{Walk Controller}
 
-\section{Database}
+The walk controller process request for several diffrent functions. It provides the most functionality allowing not just for traditional CRUD operations but also for searching. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l | l | l}
+HTTP Method & Route & Contorller Method\\ \hline
+\textbf{\textcolor{Maroon}{GET}} & \url{/walks} & \lstinline$getAll()$ \\
+\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id} & \lstinline$getOne(id)$\\
+\textbf{\textcolor{Maroon}{POST}} & \url{/walks} & \lstinline$add()$\\
+\textbf{\textcolor{Maroon}{PUT}} & \url{/walks/}\bfurl{id} & \lstinline$update(id)$\\
+\textbf{\textcolor{Maroon}{DELETE}} & \url{/walks/}\bfurl{id} & \lstinline$delete(id)$\\
+\textbf{\textcolor{Maroon}{GET}} & \url{/walks/search/}\bfurl{query} & \lstinline$search(query)$\\
+\end{tabular}
+\caption{Routes and Methods in the Walks Controller}
+\label{tab:walksController}
+\end{table}
+
+\subsubsection{Waypoint Controller}
+
+The waypoint contorller provides the basic CRUD operations. When adding or getting all waypoints it requires the id of the walk they should belong to. When acting upon an individual waypoint it needs the waypoints id, called \bfurl{wid} in the table. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l | l | l}
+HTTP Method & Route & Contorller Method\\ \hline
+\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints} & \lstinline$getAll(id)$ \\
+\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid} & \lstinline$getOne(wid)$\\
+\textbf{\textcolor{Maroon}{POST}} & \url{/walks/}\bfurl{id}\url{/waypoints} & \lstinline$add(id)$\\
+\textbf{\textcolor{Maroon}{PUT}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid} & \lstinline$update(wid)$\\
+\textbf{\textcolor{Maroon}{DELETE}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid} & \lstinline$delete(wid)$\\
+\end{tabular}
+\caption{Routes and Methods in the Waypoint Controller}
+\label{tab:waypointController}
+\end{table}
+
+\subsubsection{Walk Review Controller}
+
+The walk review controller allows the user to get all reivews for a walk, get an idividual review, add a review to a walk and delete a review. Users are prohibited from updating a review once it has been submitted. Users are expected to pass a valid walk object in JSON when they add and will recieve back valid objects with every request. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l | l | l}
+HTTP Method & Route & Contorller Method\\ \hline
+\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/reviews} & \lstinline$getAll(id)$ \\
+\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/reviews/}\bfurl{rid} & \lstinline$getOne(rid)$\\
+\textbf{\textcolor{Maroon}{POST}} & \url{/walks/}\bfurl{id}\url{/reviews} & \lstinline$add(id)$\\
+\textbf{\textcolor{Maroon}{DELETE}} & \url{/walks/}\bfurl{id}\url{/reviews/}\bfurl{rid} & \lstinline$delete(rid)$\\
+\end{tabular}
+\caption{Routes and Methods in the Walk Revew Controller}
+\label{tab:waypointController}
+\end{table}
+
+\subsubsection{Waypoint Image Controller}
+
+Waypoint Image Controller allows users to upload images for waypoints. Users are able to add, remove and get images (Either all of them or jsut one). When uploading a file the request should contain the file, which is then moved within the server and stored and a thumbnail is generated. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l | l | l}
+HTTP Method & Route & Contorller Method\\ \hline
+\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images} & \lstinline$getAll(wid)$ \\
+\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id} & \lstinline$getOne(img_id)$\\
+\textbf{\textcolor{Maroon}{POST}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images} & \lstinline$add(wid)$\\
+\textbf{\textcolor{Maroon}{DELETE}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id} & \lstinline$delete(wid)$\\
+\end{tabular}
+\caption{Routes and Methods in the Waypoint Image Controller}
+\label{tab:waypointImageController}
+\end{table}
+
+\subsubsection{Waypoint Audio Controller}
+
+Waypoint Audio Controller is similar to the image controller, it allows users to upload audio for waypoints. Users are able to add, remove and get audio samples (Either all of them or jsut one). When uploading a file the request should contain the file, which is then moved within the server and stored. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l | l | l}
+HTTP Method & Route & Contorller Method\\ \hline
+\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images} & \lstinline$getAll(wid)$ \\
+\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id} & \lstinline$getOne(img_id)$\\
+\textbf{\textcolor{Maroon}{POST}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images} & \lstinline$add(wid)$\\
+\textbf{\textcolor{Maroon}{DELETE}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id} & \lstinline$delete(wid)$\\
+\end{tabular}
+\caption{Routes and Methods in the Waypoint Audio Controller}
+\label{tab:waypointAudioController}
+\end{table}
+
+\subsubsection{Waypoint Video Controller}
+
+Waypoint Video Controller is very similar to the image controller. Users are able to add, remove and get videos (Either all of them or jsut one). When uploading a file the request should contain the file, which is then moved within the server and stored and a thumbnail is generated. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l | l | l}
+HTTP Method & Route & Contorller Method\\ \hline
+\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images} & \lstinline$getAll(wid)$ \\
+\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id} & \lstinline$getOne(img_id)$\\
+\textbf{\textcolor{Maroon}{POST}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images} & \lstinline$add(wid)$\\
+\textbf{\textcolor{Maroon}{DELETE}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id} & \lstinline$delete(wid)$\\
+\end{tabular}
+\caption{Routes and Methods in the Waypoint Video Controller}
+\label{tab:waypointVideoController}
+\end{table}
+
+\subsubsection{User Controller}
+
+The User Controller allows users to get users (Either all or just one), allows user to be added (Registration), allows users to be searched for and lets uses update or delete their own account. If a user trys to modify or delete an account that is no their own the controller will block the request and return a 403 Forbiden error. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l | l | l}
+HTTP Method & Route & Contorller Method\\ \hline
+\textbf{\textcolor{Maroon}{GET}} & \url{/users} & \lstinline$getAll()$ \\
+\textbf{\textcolor{Maroon}{GET}} & \url{/users/}\bfurl{id} & \lstinline$getOne(id)$\\
+\textbf{\textcolor{Maroon}{POST}} & \url{/users} & \lstinline$add()$\\
+\textbf{\textcolor{Maroon}{PUT}} & \url{/users/}\bfurl{id} & \lstinline$update(id)$\\
+\textbf{\textcolor{Maroon}{DELETE}} & \url{/users/}\bfurl{id} & \lstinline$delete(id)$\\
+\textbf{\textcolor{Maroon}{GET}} & \url{/users/search/}\bfurl{query} & \lstinline$search(query)$\\
+\end{tabular}
+\caption{Routes and Methods in the User Controller}
+\label{tab:usersController}
+\end{table}
+
+\subsubsection{Session Controller}
+
+The session controller provides only two features, login and logout. Login will assign the user an authorisation token to authenticate their requests and logout will remove that auth token from the user. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l | l | l}
+HTTP Method & Route & Contorller Method\\ \hline
+\textbf{\textcolor{Maroon}{POST}} & \url{/sessions} & \lstinline$login()$\\
+\textbf{\textcolor{Maroon}{DELETE}} & \url{/sessions} & \lstinline$logout()$\\
+\end{tabular}
+\caption{Routes and Methods in the Session}
+\label{tab:SessionController}
+\end{table}
+
+\section{The Database}
 \label{sec:database-design}
-% UML Diagrams
-% Descriptions of each entity
 
-\subsection{Rejected Designs}
-\label{sec:rejected-designs}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{DatabaseSchema}
+    \caption{The Database Schema}
+    \label{fig:databaseschema}
+\end{figure}
 
-\subsection{Chosen Design}
-\label{sec:chosen-designs}
+The database is shown in Figure \ref{fig:databaseschema}. It was designed in 3rd Normal Form to reduce data duplication and ensure that integrity through keys. Tables are related by their primary key, called id. If a table is dependent on another table it can use a forign key column which referances the primary key of the secondary table. This design was chosen becouse it allows for the expansion of the database and it ensures the integrity and stability of the data. There was the possibility of progressing the database to a higher normal form, however the work to achive this would out weight any perfomance benifits and the database in 3rdNF nicely matches the structure of the API.
+
+\subsection{Tables}
+
+\subsubsection{walk}
+The walk table holds all of the data directly related to a walk. It has a primary key \textit{id}, and a foreign key \textit{user\_id} which relates the walk to the user who owns it by the user's \textit{id} feild. 
+
+\subsubsection{waypoint}
+The waypoint table stores all waypoints. Each waypoint has a unique \textit{id} as its primary key, a foreign key \textit{user\_id} which links it to the creater via there own \textit{id} and a foreign key \textit{walk\_id} which relates the waypoint to a specifc walk by the walks unique \textit{id} field. 
+
+\subsubsection{user}
+The user table holds all registered users. Every user is assigned a unique \textit{id} as its primary key for relations. The `email' field is designated a `Unique Index' meaning that no two users can have the same email address. 
+
+\subsubsection{walk\_review}
+The walk reviews table hold users reviews of a walk. As normal each review gets a unique \textit{id} as its primary key. Reviews then have foriegn keys for \textit{user\_id} and \textit{walk\_id} which relate it to the correct walk and user. 
+
+\subsubsection{walk\_brand}
+The walk brand holds some style information for a walk. It has a primary key \textit{id} and is linked to the walk by the foriegn key \textit{walk\_id}. 
+
+\subsubsection{english\_walk\_description}
+The english walk description table holds the english version of the walk description. Its mapped to a particular walk through the foriegn key \textit{walk\_id}. It has its own priamry key \textit{id} which is unique to that english walk description. 
+
+\subsubsection{welsh\_walk\_description}
+The welsh walk description table holds the welsh version of the walk description. Its mapped to a particular walk through the foriegn key \textit{walk\_id}. It has its own priamry key \textit{id} which is unique to that welsh walk description. 
+
+\subsubsection{english\_waypoint\_description}
+The english waypoint description table holds the english version of the waypoint description. Its mapped to a particular walk through the foriegn key \textit{waypoint\_id}. It has its own priamry key \textit{id} which is unique to that english waypoint description. 
+
+\subsubsection{welsh\_waypoint\_description}
+The welsh waypoint description table holds the welsh version of the waypoint description. Its mapped to a particular walk through the foriegn key \textit{waypoint\_id}. It has its own priamry key \textit{id} which is unique to that welsh waypoint description. 
+
+\subsubsection{waypoint\_audio}
+The waypoint audio table holds information about audio files. They are mapped to the waypoints which they belong to via the foriegn key \textit{waypoint\_id} and have their own primary key \textit{id}.
+
+\subsubsection{waypoint\_image}
+The waypoint image table holds information about image files. They are mapped to the waypoints which they belong to via the foriegn key \textit{waypoint\_id} and have their own primary key \textit{id}.
+
+\subsubsection{waypoint\_video}
+The waypoint video table holds information about video files. They are mapped to the waypoints which they belong to via the foriegn key \textit{waypoint\_id} and have their own primary key \textit{id}.
+
+\subsubsection{user\_setting}
+
+\subsubsection{setting\_type}
+
+\subsubsection{content\_report}
+
+\subsubsection{bug\_report}
 
 \chapter{Testing}
 \label{sec:testing}
