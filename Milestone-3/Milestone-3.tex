@@ -812,14 +812,267 @@ The Bug report table is used to store bugs in the program that are reported by u
 \section{Acceptance Testing}
 \label{sec:acceptance-testint}
 
+
+\subsection{API}
+
+While there were never any inital specifications for an API acceptance testing for the API was still carried out using the design documents as a guide. This ensured the API not only has all required features, but also acted as an aditonal round of unit testing to prove that all the functions of the API were working correctly. The API was tested using a program called CoocaRestClient which is an OSX program designed specifically for testing REST API's. The program allows the user to enter a URL, select the HTTP method, set the request payload and set any headers that are required. With this it is possible to access every property of the API and test situations which may not occure through normal useage. \\
+
+\label{test:API-T01}
+\noindent\textbf{Test Code:} API-T01\\
+\textbf{Asserts Specification:} N/A \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item The API must allow for the creation of a new user.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} A \textbf{POST} request was sent to \url{/users} with a valid JSON object representing a user. The user was created in the database and the API returned a JSON user object including a uninque \textit{ID}. If an invalid user object is passed the API returns a \textit{400} status code and the JSON object \lstinline${"error":"Invalid User Object"}$.\\ 
+
+\label{test:API-T02}
+\noindent\textbf{Test Code:} API-T02\\
+\textbf{Asserts Specification:} N/A \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item It must be possible to authenticate with the API to prove the user is a valid user. 
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} Sending a \textbf{POST} request to \url{/sessions} with a JSON object holding a valid username and password will make the API return a full user object with an Authentication Token. If incorrect details are passed a 403 Forbidden error occurs. The auth token can then be used with every request to generate a secure hash. Sending the hash along with a timestamp and the users email in a series of headers will authenticate the user for that particular request. If the hash dosent match what is required the API will return a 403 Forbiden error. \\ 
+
+\label{test:API-T03}
+\noindent\textbf{Test Code:} API-T03\\
+\textbf{Asserts Specification:} N/A \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item It should be possible to request all walks.
+                     \item It should be possible to request a walk by its id.
+                     \item It should be possible to limit and offset the number of walks requested when selecting all.
+                     \item A user shouldnt have to be authenticated to request a walk.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} Sending a \textbf{GET} request to \url{/walks} returns an array of all of the walk objects. Adding a \textit{`limit'} paramater to the URL restricts the number of results returned and ensure it cannot be over the limit. Adding a \textit{`offset'} parameter in conjunction with a \textit{`limit'}, such as \url{/walks?limit=10&offset=5}, will ensure that the results are both limited and offset. To retrieve a single walk by its ID a request was sent to the route \url{/walks/}\bfurl{id}. This returned a single walk object with the id equal to \bfurl{id}. \\ 
+
+\label{test:API-T04}
+\noindent\textbf{Test Code:} API-T04\\
+\textbf{Asserts Specification:} N/A \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item It should be possible to add a walks with serveral waypoints in one request.
+                     \item It should be possible to update a walk and its waypoints in one request.
+                     \item It should be possible to remove a walk and all attached data in one request.
+                     \item A user is required to be authenticated for all of these requests.
+                     \item A user should only be able to update and delete walks they own. 
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} A \textbf{POST} request was sent to \url{/walks} with a JSON walk object containing several waypoints. The API responded with a fully initalised walk object will all unique id's set. It was then possible to request the walk using the returned id. To update the walk a modified version of the inital walk object was sent via a \textbf{PUT} request to \url{/walks/}\bfurl{id}. The API responded with an updated vesion of the walk object from the database. Again the walk can be requested to show the changes. To delete the walk a \textbf{DELETE} request was sent to \url{/walks/}\bfurl{id}. The API resonded with \lstinline${"deleted":true}$. Every request was initally tried with no authentication headers, which in every case casued a 403 Forbidden error from the API. Updating and deleting was then attempted with valid authentication headers, but for a user other than the one who created the walk. This also returned a 403 Forbidden error. Only with correct authentication headers, for the correct user, were the requests accepted and processed by the API.\\
+
+\label{test:API-T05}
+\noindent\textbf{Test Code:} API-T05\\
+\textbf{Asserts Specification:} N/A \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item It should be possible to add a waypoint to a walk you created if you are authenticated. 
+                     \item Anyone should be able to request an array of waypoints for a walk, or a specifica waypoint by its id.
+                     \item An authenticated user should be able to update a waypoint they created.
+                     \item An authenticated user should be able to delete a waypoint they created.                   
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} To add a walk a \textbf{PSOT} request was sent to \url{/walks/}\bfurl{id}\url{/waypoints} with a JSON waypoint object. The API responded with a completed waypoint object with its unique id. This request was attempted with no authentication headers and then when authenticated as the owner of the walk. When no authentications were present the request caused a 403 Forbidden error. The waypoint could then be requested back from the API using the returned id and a \textbf{GET} request to the route \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}.  It can also be requested as part of an array of all waypoints for a walk using a \textbf{GET} request to the route \url{/walks/}\bfurl{id}\url{/waypoints}. To update a waypoint a modified waypoint object was sent as a \textbf{PUT} request to \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}. If the user had the authentication headers of the owner of the waypoint or walk then they the request was processed correctly and returned the updated waypoint object. If they authentication headers were missing or the user dosent own the walk or waypoint then a 403 Forbidden error is triggered. To delete the waypoint a \textbf{DELETE} request was sent to \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}. Again this required the authentication headers of the walk or waypoint owner or it would cause a 403 Forbidden error. \\
+
+\label{test:API-T06}
+\noindent\textbf{Test Code:} API-T06\\
+\textbf{Asserts Specification:} N/A \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item It should be possible to add a waypoint to a walk you havent created if you are authenticated. 
+                     \item The waypoint should be added as a request.
+                     \item The owner of the walk should be able to approve the request.
+                     \item The owner of the walk should be able to reject the request.
+                     \item A user should be able to see all pending requests on their walks.
+                   \end{itemize}  
+                   
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} A waypoint as added to a walk by sending a \textbf{POST} request containg a waypoint object to \url{/walks/}\bfurl{id}\url{/waypoints}. When the user has valid authentication headers but is not the owner of the walk the API responds with a completed waypoint object, however the `is\_request' property is set to true. This means that the waypoint is not shown in normal \textbf{GET} request to the API. Using the owners authorisation token it was possible to see all requests to their walks by sending a \textbf{GET} request to \url{/users/}\bfurl{id}\url{/pending-requests}. To appove a request the owners authorisation token was used to send a \textbf{POST} request to \url{/walks/}\bfurl{id}\url{/wapoints/}\bfurl{wid}\url{/approve} with the JSON object \lstinline${"approve":true}$. The waypoint now appears in all \textbf{GET} requests it would normally appear in. To reject a request the JSON object \lstinline${"approve":false}$ was used. This returned the object \lstinline${"deleted":true}$ and the waypoint was removed.\\
+
+\label{test:API-T07}
+\noindent\textbf{Test Code:} API-T07\\
+\textbf{Asserts Specification:} N/A \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item An authenticated user should be able to delete only their own account.
+                     \item An authenticated user should be able to modify only their own account. 
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} To test the updating of users a \textbf{PUT} request was sent to \url{/users/}\bfurl{id} with an updated user object. When the authentication headers match the user to update the request was processed correctly and returned an updated version of the user object. Whent the authentication headers were missing or incorrect a 403 Forbidden error was raised and the request failed. To test deletion a \textbf{DELETE} request was sent to \url{/users/}\bfurl{id} with the correct headers for the user with the id = \bfurl{id}. The server responded with a \lstinline${"deleted":true}$ object. When the request was repeated using headers for a user other than the one being deleted the request retuned a 403 Forbidden error. \\
+
+\label{test:API-T08}
+\noindent\textbf{Test Code:} API-T08\\
+\textbf{Asserts Specification:} N/A \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item It should be possible to return a user based on an id.
+                     \item It should be possible to reutrn an array of all users.
+                     \item It should be possible to search to a user by their email or name.
+                     \item Users must be authenticated to return any users. 
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} To get a user based on their id a \textbf{GET} request was sent to \url{/users/}\bfurl{id}, this returned the user whos id matched \bfurl{id}. To get all users a \textbf{GET} request was sent to \url{/users}, this returned an array of all of the user accounts. To search by user name a \textbf{GET} request was sent to \url{/users/search/}\bfurl{query} where \bfurl{query} is the email or name to search for. This returned an array of all users that match the query string. All of these requests were carried out both with and without valid authentication headers. Only when the headers are present were they accepted by the API. When they were missing they API returned a 403 error. \\
+
+\label{test:API-T09}
+\noindent\textbf{Test Code:} API-T09\\
+\textbf{Asserts Specification:} N/A \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item Users should be able to add reviews to walks. 
+                     \item Anyone should be able to get a review by its id.
+                     \item Users should be able to delete a review.
+                     \item Anyone should be able to get all reviews for a walk.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} For this test first a \textbf{POST} request with a review object is sent to \url{/walks/}\bfurl{id}\url{/reviews}. The API responded to this request with a completed review object. The id from this reiview object was then used to request it back from the server using a \textbf{GET} request to \url{/walks/}\bfurl{id}\url{/reviews/}\bfurl{rid}. The API returned the correct review. To delete the review a \textbf{DELETE} request was sent to \url{/walks/}\bfurl{id}\url{/reviews/}\bfurl{rid}, the server responded with a \lstinline${"deleted":true}$ object. To ensure it was deleted a \textbf{GET} request was sent to \url{/walks/}\bfurl{id}\url{/reviews}. This got all the rewviews for the walk with the id = \bfurl{id}. The new review was missing from the array which proves it was successfully deleted. Each request was attempted with both valid and invalid authentication headers. Adding and deleting reviews retunred a 403 Forbidden error if they were attempted without authentication headers, however getting reviews worked correctly without. \\
+
+\label{test:API-T10}
+\noindent\textbf{Test Code:} API-T10\\
+\textbf{Asserts Specification:} N/A \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item Users should be able to add Images to a waypoint.
+                     \item Users should be able to add Videos to a waypoint.
+                     \item Users should be able to add Audio to a waypoint.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:}To test adding media an image, a video and some audio were sent via a \textbf{POST} request to \url{/walks/}\bfurl{id}\url{/wapoints/}\bfurl{wid}\url{/images}, \url{/walks/}\bfurl{id}\url{/wapoints/}\bfurl{wid}\url{/videos} and \url{/walks/}\bfurl{id}\url{/wapoints/}\bfurl{wid}\url{/audio}. When the images route recieved the image it processed the request and returned an image object with a url to the file. How ever the other files caused the API to produce a 415 error. Similar things happened with the video and audio routes, where they accepted media of the correct type (eg Videos for the videos route and audio for the audio route) but rejected other types with a 415 error. Attempting to upload a file to any route without the correct authorisation resulted in a 403 Forbidden error message. 
+
+
+\label{test:API-T11}
+\noindent\textbf{Test Code:} API-T11\\
+\textbf{Asserts Specification:} N/A \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item Anyone should be able to get all Images for a waypoint.
+                     \item Anyone should be able to get all Videos for a waypoint.
+                     \item Anyone should be able to get all Audio for a waypoint.
+                     \item Anyone should be able to get an Image by its id.
+                     \item Anyone should be able to get a Video by its id.
+                     \item Anyone should be able to get Audio by its id.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} This test was run 3 times, once for images, once for videos and once for audio. It is only listed for images for berevity, however the result was the same for all routes. Sending a \textbf{GET} request to \url{/walks/}\bfurl{id}\url{/wapoints/}\bfurl{wid}\url{/images} returned an array of all images object for the waypoint with the id = \bfurl{wid}}.
+To get an image by its id a \textbf{GET} request was sent to \url{/walks/}\bfurl{id}\url{/wapoints/}\bfurl{wid}\url{/images/}\bfurl{img_id} where \bfurl{img_id} is the id of the image to return. The API responded to the request and returned the image object with the url to the actual file. This worked without any authentication headers, as was required.
+
+\label{test:API-T12}
+\noindent\textbf{Test Code:} API-T12\\
+\textbf{Asserts Specification:} N/A \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item Users should be able to delete an Image from a waypoint.
+                     \item Users should be able to delete a Video from a waypoint.
+                     \item Users should be able to delete Audio from a waypoint.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} Deleting images, videos and audio reuires the same test to be run for 3 diffrent routes. Only the image test is listed here, but the otheres all produced the same result. A \textbf{DELETE} request was sent to \url{/walks/}\bfurl{id}\url{/wapoints/}\bfurl{wid}\url{/images/}\bfurl{img_id} and the API responded with \lstinline${"deleted":true}$ object. This required authetication headers for a user or the request would respond with a 403 Forbidden error. 
+
 \chapter{User Manual}
 \label{sec:user-manual}
 
 \section{API}
 
+\subsection{JSON Data Objects}
+
+When communicating with the API objects are represented in JSON. Each object is listed below. Bare in mind that the `\textit{id}' field and other keys like `\textit{walk\_id}' are set by the API automatically and it will ignore any changes you attempt to make to them. Fields which are set by the API are marked with the comment \lstinline$\\Set by API$. These will not be effected if you try an set them yourself. 
+
+\subsubsection{Walks}
+\lstset{language=json,
+keywordstyle=\color{Maroon},
+commentstyle=\color{OliveGreen},
+showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyle=\color{Blue}}
+
+\begin{lstlisting}[captionpos=b, caption=An example JSON Walk Object., label=lst:walk]
+{
+  "id" : "45", \\Set by API
+  "english_description" : {},
+  "distance_miles" : "12",
+  "cover_url" : "",
+  "waypoints" : [],
+  "brand" : "",
+  "user_id" : "106", \\Set by API
+  "welsh_description" : {},
+  "duration_minutes" : "2",
+  "user" : {}, \\Set by API
+  "difficulty_rating" : "4",
+  "download_count" : "0" \\Set by API
+}
+\end{lstlisting}
+
+\subsubsection{Waypoints}
+
+\begin{lstlisting}[captionpos=b, caption=An example JSON Waypoint Object., label=lst:walk]
+{
+  "id" : "5", \\Set by API
+  "english_description" : {},
+  "longitude" : "-3.93372000",
+  "latitude" : "51.63581500",
+  "visit_order" : "1",
+  "audio" : [],
+  "user_id" : "1", \\Set by API
+  "is_request" : "0", \\Set by API
+  "walk_id" : "1", \\Set by API
+  "images" : [],
+  "welsh_description" : {},
+  "user" : {}, \\Set by API
+  "videos" : []
+}
+\end{lstlisting}
+
+\subsubsection{Users}
+
+\begin{lstlisting}[captionpos=b, caption=An example JSON Waypoint Object., label=lst:walk]
+{
+    "id" : "1", \\Set by API
+    "last_name" : "Barrell",
+    "email" : "a.j.3barrell@gmail.com",
+    "first_name" : "Adam"
+ }
+\end{lstlisting}
+
+\subsubsection{Reviews}
+
+\begin{lstlisting}[captionpos=b, caption=An example JSON Waypoint Object., label=lst:walk]
+{
+    "rating" : "3",
+    "id" : "1", \\Set by API
+    "title" : "Amazing!",
+    "added" : "2014-04-13 12:45:34", \\Set by API
+    "description" : "This walk was great fo...r a change.",
+    "user_id" : "1", \\Set by API
+    "walk_id" : "1" \\Set by API
+}
+\end{lstlisting}
+
+\subsubsection{Images}
+
+\begin{lstlisting}[captionpos=b, caption=An example JSON Waypoint Object., label=lst:walk]
+{
+    "waypoint_id" : "5", \\Set by API
+    "id" : "1", \\Set by API
+    "caption" : "Some caption.",
+    "url" : "site_landscape.jpg",
+    "thumbnail_url" : "some_thumbnail.jpg"  \\Set by API
+}
+\end{lstlisting}
+
+\subsubsection{Audio}
+
+\begin{lstlisting}[captionpos=b, caption=An example JSON Waypoint Object., label=lst:walk]
+{
+    "waypoint_id" : "5", \\Set by API
+    "id" : "1", \\Set by API
+    "caption" : "The fat cat jumped over the lazy fox. The fat cat jumped over the lazy fox.",
+    "url" : "cat.mp3"
+}
+\end{lstlisting}
+
+\subsubsection{Videos}
+
+\begin{lstlisting}[captionpos=b, caption=An example JSON Waypoint Object., label=lst:walk]
+{
+    "waypoint_id" : "5", \\Set by API
+    "thumbnail_url" : "some_waypoint_thumb.jpg", \\Set by API
+    "id" : "1", \\Set by API
+    "caption" : "Some caption.",
+    "url" : "whiterock.mp4"
+}
+\end{lstlisting}
+
 \subsection{Walks}
 
-Routes on walks effect walks and all related content, such as waypoints and reviews but not media, which requires a seperate multipart media request. 
+Routes on walks effect walks and all related content, such as waypoints and reviews but not media, which requires a seperate multipart media request. \bfurl{id} represents the walks unique id.
 
 \subsubsection{Getting by id}
 \textbf{\textcolor{Maroon}{Method:}} GET\\
@@ -853,7 +1106,7 @@ Routes on walks effect walks and all related content, such as waypoints and revi
 \textbf{\textcolor{Maroon}{Method:}} DELETE\\
 \textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\\
 \textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
-\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion \{``success'':true\}.\\
 \textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
 
 \subsubsection{Searching}
@@ -865,7 +1118,7 @@ Routes on walks effect walks and all related content, such as waypoints and revi
 
 \subsubsection{Waypoints}
 
-Routes for waypoints effect the waypoint and its descriptions, but not any attached media. 
+Routes for waypoints effect the waypoint and its descriptions, but not any attached media. \bfurl{id} represents the walks unique id, and \bfurl{wid} represents the waypoints unique id. If a waypoint is added by a user who is not the owner of the walk then it is a added a request which must be approved by the owner of the walk.
 
 \subsubsection{Getting by id}
 \textbf{\textcolor{Maroon}{Method:}} GET\\
@@ -880,6 +1133,13 @@ Routes for waypoints effect the waypoint and its descriptions, but not any attac
 \textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
 \textbf{\textcolor{Maroon}{Response Payload:}} An array of the waypoints for the walk with the id = \bfurl{id}.\\
 \textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+
+\subsubsection{Approving a Request}
+\textbf{\textcolor{Maroon}{Method:}} POST\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/approve}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} \lstinline${"approve":true}$ or \lstinline${"approve":false}$\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A waypoint object\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
 
 \subsubsection{Adding}
 \textbf{\textcolor{Maroon}{Method:}} POST\\
@@ -899,12 +1159,12 @@ Routes for waypoints effect the waypoint and its descriptions, but not any attac
 \textbf{\textcolor{Maroon}{Method:}} DELETE\\
 \textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\\
 \textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
-\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion \{``success'':true\}.\\
 \textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
 
 \subsubsection{Walk Review}
 
-Walk reviews can be added and deleted, but they cannot be modified once they have been added to the database. 
+Walk reviews can be added and deleted, but they cannot be modified once they have been added to the database. \bfurl{id} represents the walks unique id, and \bfurl{rid} represents the reviews unique id.
 
 \subsubsection{Getting by id}
 \textbf{\textcolor{Maroon}{Method:}} GET\\
@@ -931,10 +1191,11 @@ Walk reviews can be added and deleted, but they cannot be modified once they hav
 \textbf{\textcolor{Maroon}{Method:}} DELETE\\
 \textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/reviews/}\bfurl{rid}\\
 \textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
-\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion \{``success'':true\}.\\
 \textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
 
 \subsubsection{Waypoint Image}
+Waypoint images can be added and deleted, but they cannot be modified once they have been added to the database. \bfurl{id} represents the walks unique id, \bfurl{wid} represents the waypoints unique id and \bfurl{img_id} represents the images unique id. 
 
 \subsubsection{Getting by id}
 \textbf{\textcolor{Maroon}{Method:}} GET\\
@@ -961,11 +1222,12 @@ Walk reviews can be added and deleted, but they cannot be modified once they hav
 \textbf{\textcolor{Maroon}{Method:}} DELETE\\
 \textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id}\\
 \textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
-\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion \{``success'':true\}.\\
 \textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
 
 
 \subsubsection{Waypoint Audio Controller}
+Waypoint audio can be added and deleted, but they cannot be modified once they have been added to the database. \bfurl{id} represents the walks unique id, \bfurl{wid} represents the waypoints unique id and \bfurl{aud_id} represents the audios unique id. 
 
 \subsubsection{Getting by id}
 \textbf{\textcolor{Maroon}{Method:}} GET\\
@@ -992,11 +1254,12 @@ Walk reviews can be added and deleted, but they cannot be modified once they hav
 \textbf{\textcolor{Maroon}{Method:}} DELETE\\
 \textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/audio/}\bfurl{aud_id}\\
 \textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
-\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion \{``success'':true\}.\\
 \textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
 
 \subsubsection{Waypoint Video Controller}
-
+Waypoint video can be added and deleted, but they cannot be modified once they have been added to the database. \bfurl{id} represents the walks unique id, \bfurl{wid} represents the waypoints unique id and \bfurl{vid_id} represents the videos unique id. 
+ 
 \subsubsection{Getting by id}
 \textbf{\textcolor{Maroon}{Method:}} GET\\
 \textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/videos/}\bfurl{vid_id}\\
@@ -1022,31 +1285,46 @@ Walk reviews can be added and deleted, but they cannot be modified once they hav
 \textbf{\textcolor{Maroon}{Method:}} DELETE\\
 \textbf{\textcolor{Maroon}{URL:}} \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/videos/}\bfurl{vid_id}\\
 \textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
-\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion \{``success'':true\}.\\
 \textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
 
 \subsubsection{User Controller}
+Users can be added, which is registration, and retrieve and searched by anyone. However updating and deleting can only be done by the user on their own account.
 
 \subsubsection{Getting by id}
 \textbf{\textcolor{Maroon}{Method:}} GET\\
 \textbf{\textcolor{Maroon}{URL:}} \url{/users/}\bfurl{id}\\
 \textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
 \textbf{\textcolor{Maroon}{Response Payload:}} The user with the id = \bfurl{id}.\\
-\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
 
 \subsubsection{Getting Many}
 \textbf{\textcolor{Maroon}{Method:}} GET\\
 \textbf{\textcolor{Maroon}{URL:}} \url{/users}\\
 \textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
 \textbf{\textcolor{Maroon}{Response Payload:}} An array of all users.\\
-\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Getting Pending Requests}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users/}\bfurl{id}\url{/pending-request}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of waypoints the user needs to approve.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+
+\subsubsection{Getting Accepted Requests}
+\textbf{\textcolor{Maroon}{Method:}} GET\\
+\textbf{\textcolor{Maroon}{URL:}} \url{/users/}\bfurl{id}\url{/request}\\
+\textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
+\textbf{\textcolor{Maroon}{Response Payload:}} An array of the waypoints the user has contributed.\\
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
 
 \subsubsection{Adding}
 \textbf{\textcolor{Maroon}{Method:}} POST\\
 \textbf{\textcolor{Maroon}{URL:}} \url{/users}\\
 \textbf{\textcolor{Maroon}{Request Payload:}} The users object to add to the database. With a password feild, un-encrypted.\\
 \textbf{\textcolor{Maroon}{Response Payload:}} An initialised user object with its assigned id and an authorisation token.\\
-\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
 
 \subsubsection{Updating}
 \textbf{\textcolor{Maroon}{Method:}} PUT\\
@@ -1059,7 +1337,7 @@ Walk reviews can be added and deleted, but they cannot be modified once they hav
 \textbf{\textcolor{Maroon}{Method:}} DELETE\\
 \textbf{\textcolor{Maroon}{URL:}} \url{/users/}\bfurl{id}\\
 \textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
-\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion {"success":true}.\\
+\textbf{\textcolor{Maroon}{Response Payload:}} A confirmation of the deletion \{``success'':true\}.\\
 \textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
 
 \subsubsection{Searching}
@@ -1067,9 +1345,11 @@ Walk reviews can be added and deleted, but they cannot be modified once they hav
 \textbf{\textcolor{Maroon}{URL:}} \url{/users/search/}\bfurl{query}\\
 \textbf{\textcolor{Maroon}{Request Payload:}} N/A\\
 \textbf{\textcolor{Maroon}{Response Payload:}} An array of user where the a field in a username matches the search query.\\
-\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} No.
+\textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} Yes.
 
 \subsubsection{Session Controller}
+
+The session controller checks passwords and maps authorisation tokesn to user. Login grants the user a token, logout revokes that token. 
 
 \subsubsection{Login}
 \textbf{\textcolor{Maroon}{Method:}} POST\\
