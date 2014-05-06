@@ -186,6 +186,8 @@ This section will discuss the choices of technology that were used to implement 
 \subsection{Rejected Design}
 \label{sec:portal-rejected-design}
 
+No rejected designs can be discussed for the web portal since an iterative development process has taken place from the start. This involved sprints of feature implementations in according with the Agile Scrum methodology used for this project. Since this methodology does not promote the rejection of potential designs, none exist to be presented in this section. Instead, views were created to comply with specifications and happened to be acceptable when shown to the client during feedback meetings.
+
 \subsection{Chosen Design}
 \label{sec:portal-chosen-design}
 
@@ -214,7 +216,80 @@ This section will discuss the architecture of each subsystem and the classes con
 \label{fig:subsystem-diagram}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/web-client-uml/services-subsystem-diagram}
+\caption{Services subsystem of the web client.}
+\label{fig:services-subsystem-diagram}
+\end{figure}
 
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}
+\hline \multicolumn{2}{|c|}{\textbf{Services Subsystem}} \\
+\hline \textbf{Module} & \textbf{Responsibility} \\ 
+\hline httpInterceptor & Intercepts calls to the web service allowing for additional properties such as authentication tokens to be appended. Also sets the specific protocol that should be used to communicate with the web server. \\
+\hline sessionUser & Stores a session user object that represents the user which is logged into the application. This module is used by controller modules to gain information about the current session user. This allows different views to be presented or different API methods to be called. \\
+\hline
+\end{tabular} 
+\end{center}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/web-client-uml/directives-subsystem-diagram}
+\caption{Directives subsystem of the web client.}
+\label{fig:directives-subsystem-diagram}
+\end{figure}
+
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}
+\hline \multicolumn{2}{|c|}{\textbf{Directives Subsystem}} \\
+\hline \textbf{Module} & \textbf{Responsibility} \\ 
+\hline backImg & Displays the background image of walks shown in the \emph{all walks} view. \\
+\hline hoverActive & Highlights the background of elements which are hovered over by the mouse. \\
+\hline imageGallery & Applied to a DIV element to make nested image elements part of a carousel image gallery. \\
+\hline imgSelector & Used in the image gallery view to give red outlines to selected media items. \\
+\hline ladda & Applies loading spinners to buttons when an asynchronous request is taking place. \\
+\hline loginValidator & Validates all input elements associated with the login form. Red or green borders are applied to elements if they are invalid or valid respectively. \\
+\hline raty & Displays a star rating system for walk reviews. Takes an integer and represents it as the corresponding number of stars. \\
+\hline regValidator & Validates all input elements associated with the registration form. Red or green borders are applied to elements if they are invalid or valid respectively. \\
+\hline scroller & Applies a custom scroll bar to DIV elements that have overflowed. Overrides the default scroll bar style. \\
+\hline userValidator & Validates fields associated with the user settings view. Red and green borders are given to inputs that are invalid or valid respectively. \\
+\hline waypointValidator & Validates fields on the waypoint edit and add views. Gives input elements green or red borders if they are valid or invalid respectively. \\
+\hline
+\end{tabular} 
+\end{center}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/web-client-uml/controllers-subsystem-diagram}
+\caption{Controllers subsystem of the web client.}
+\label{fig:controllers-subsystem-diagram}
+\end{figure}
+
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}
+\hline \multicolumn{2}{|c|}{\textbf{Controllers Subsystem}} \\
+\hline \textbf{Module} & \textbf{Responsibility} \\ 
+\hline accountSettings & Retrieving the logged in user's current account settings and saving any new changes. \\
+\hline addWalk & Adding a new walk including any associated waypoints to the database and validating walk attributes provided by the user. \\
+\hline addWaypoint & Adding new waypoints to an existing walk including the uploading of any additional media such as images, audio or videos. \\
+\hline alertModal & Provides a re-usable and customisable alert modal for use by any view controller. Controllers can inject custom messages and responses into this modal.\\
+\hline allWalks & Retrieves all walks stored in the database for display on the \emph{all walks} view. \\
+\hline editWalk & Updates existing walks with data provided by the user. \\
+\hline editWaypoint & Updates existing waypoint information provided by the user including media modifications to images, videos and audio. \\
+\hline editWaypointMedia & Manages media for both existing and new waypoints. Performs functions such as batch media removal and the uploading of new media items. \\
+\hline login & Validates a user's log in credentials and creates a new user session if successful. \\
+\hline myContributions & Accepts or rejects contributions made to the user's walks. Such contributions include the addition of new waypoints. \\
+\hline myWalks & Retrieves a user's created walks for display on the \emph{my walks} view. \\
+\hline navBar & Provides navigation to other views in the application such as \emph{all walks}, \emph{my walks}, the login modal and logout function. \\
+\hline registerConfirm & Confirms the user's registration by displaying a modal displaying a success message. \\
+\hline registerCtrl & Registers a new user account if the user has entered a valid set of account details. \\
+\hline walkInfo & Retrieves walk information such as basic walk attributes, associated reviews, waypoints and media. \\
+\hline waypointModal & Retrieves waypoint data for display within the waypoint modal when a map marker or waypoint list item is clicked. \\
+
+\hline
+\end{tabular} 
+\end{center}
 
 \subsubsection{User Interfaces}
 \label{sec:portal-user-interfaces}
@@ -228,7 +303,7 @@ The welcome view shown in Figure \ref{fig:home} provides visitors with a link to
 
 \centering
 
-\includegraphics[width=1\linewidth]{./img/webportal/home}
+\includegraphics[width=0.8\linewidth]{./img/webportal/home}
 
 \caption{Home view of the web portal.}
 
@@ -247,7 +322,7 @@ Figure \ref{fig:home-responsive} demonstrates a responsive view of the web porta
 
 \centering
 
-\includegraphics[width=1\linewidth]{./img/webportal/home-responsive}
+\includegraphics[width=0.6\linewidth]{./img/webportal/home-responsive}
 
 \caption{Web portal responsive menu view.}
 
