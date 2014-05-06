@@ -866,7 +866,7 @@ While there were never any inital specifications for an API acceptance testing f
                      \item Anyone should be able to get Audio by its id.
                    \end{itemize}  
 \textbf{Result:} \textcolor{green}{PASS}\\ 
-\textbf{Description:} This test was run 3 times, once for images, once for videos and once for audio. It is only listed for images for berevity, however the result was the same for all routes. Sending a \textbf{GET} request to \url{/walks/}\bfurl{id}\url{/wapoints/}\bfurl{wid}\url{/images} returned an array of all images object for the waypoint with the id = \bfurl{wid}}.
+\textbf{Description:} This test was run 3 times, once for images, once for videos and once for audio. It is only listed for images for berevity, however the result was the same for all routes. Sending a \textbf{GET} request to \url{/walks/}\bfurl{id}\url{/wapoints/}\bfurl{wid}\url{/images} returned an array of all images object for the waypoint with the id = \bfurl{wid}.
 To get an image by its id a \textbf{GET} request was sent to \url{/walks/}\bfurl{id}\url{/wapoints/}\bfurl{wid}\url{/images/}\bfurl{img_id} where \bfurl{img_id} is the id of the image to return. The API responded to the request and returned the image object with the url to the actual file. This worked without any authentication headers, as was required.
 
 \label{test:API-T12}
