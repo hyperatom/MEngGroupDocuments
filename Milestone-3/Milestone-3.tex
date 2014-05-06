@@ -444,9 +444,7 @@ This section will discuss the choices of technology that were used to implement 
 
 \end{itemize}
 
-\subsection{User Interfaces}
-
-\subsubsection{Rejected Designs}
+\subsection{Rejected Designs}
 \label{sec:rejected-designs}
 
 Through-out the course of the project, many design iterations were carried out. As a result, numerous interface designs were modified, while several designs were made redundant for a variety of reasons. This section of the document will analyse rejected designs, highlighting the issues that led to their redundancy. Below is an example of how the interface designs have progressed through several stages of iteration.\\
@@ -503,23 +501,35 @@ With the above negative aspects of this design taken into consideration, a new i
 % Descriptions of each class
 % Technology Choices
 
-\subsubsection{Chosen Design}
+\subsection{Chosen Design}
 \label{sec:chosen-designs}
 
 This section presents and discusses the final user interfaces that were chosen for use in the application. These designs were the result of an iterative development process whereby the designs were shown to the client and revised according to suggested changes. They are also the result of interface enhancements, designed to make each interface more intuitive to users. The following sections will present a screen capture of each interface application and discuss their functionality.
 
-\paragraph{Splash Screen interface}\mbox{}\\ 
-INSERT IMAGE\\
+\paragraph*{Splash Screen interface}\mbox{}\\ 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/splash_screen}
+    \caption{Splash Screen interface}
+    \label{fig:splash_screen}
+\end{figure}
 
 The \emph{splash screen} is the first interface inflated when the application is opened. It includes the company logo, company name and a loading feature. After a short period of time, the \emph{launch} interface will inflate.
 
-\paragraph{Launch interface}\mbox{}\\
-INSERTT IMAGE\\
+\paragraph*{Launch interface}\mbox{}\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/launch_view}
+    \caption{Launch interface}
+    \label{fig:launch_view}
+\end{figure}
 
 The \emph{launch} interface presents the user with an aesthetically pleasing layout. An edited image of the local beach is used as the background. At the top of the interface is a \emph{Text View} welcoming the user to the application. At the centre of the interface is a \emph{Log In}. Pressing the \emph{Log in} button will navigate to the \emph{Log In} interface. A \emph{Continue as guest} button is also situated at the bottom right corner. Pressing this button will by-pass the log in feature and take the user directly to the \emph{Home} interface but with limited privileges.
 
-\paragraph{Log In interface}\mbox{}\\
-INSERTT IMAGE\\
+\paragraph*{Log In interface}\mbox{}\\
+
+GET IMSGE \\
 
 The \emph{Log In} interface presents the user with a welcome message fixed to the top, along with prompt text directly below. The focus of this interface is the \emph{email} and \emph{password} text boxes. Selecting either text box will inflate a keypad, where the user may enter log in details. Below is a \emph{Sign In} button and a \emph{New user?} text view. If valid details are entered, pressing the \emph{Sign In} button will navigate to the \emph{Home} interface. If invalid details are entered, a pop-up dialogue will notify users that the log in attempt has failed. Pressing the \emph{New user?} text view will navigate to the \emph{Register} interface, where the user may register a new account.
 
@@ -528,55 +538,104 @@ INSERTT IMAGE\\
 
 The \emph{Register} interface presents the user with a series of edit text boxes, where details such as \emph{first name, last name, email address} and \emph{password} can be entered in order to create a new account. Below this is a \emph{Create Account} button and an \emph{Already a member?} text view. If suitable details are entered, pressing the \emph{Create Account} button will create a user account and navigate to the \emph{Home} interface. If unsuitable, the account creation will be rejected.
 
-\paragraph{Home interface}\mbox{}\\
-INSERTT IMAGE\\
+\paragraph*{Home interface}\mbox{}\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/home}
+    \caption{Home interface}
+    \label{fig:home}
+\end{figure}
 
 The \emph{Home} interface is the central focus point of the application. This interface includes a title and a grid of four navigation buttons; a \emph{Saved Walks}, a \emph{Download Walks}, a \emph{My Walks} and an \emph{Explore} button. Pressing on any button will navigate to the respective interface.
 
-\paragraph{Saved Walks interface}\mbox{}\\
-INSERTT IMAGE\\
+\paragraph*{Saved Walks interface}\mbox{}\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/saved_walks}
+    \caption{Saved Walks interface}
+    \label{fig:saved_walks}
+\end{figure}
 
 The \emph{Saved Walks} interface presents a list of all saved walks on the left hand side. The main interface window displays the \emph{walk title, description, geological location} map and a \emph{start} button. Pressing the \emph{start} button will inflate a map interface and begin the walk trail.
 
-\paragraph{My Walks interface}\mbox{}\\
-INSERTT IMAGE\\
+\paragraph*{My Walks interface}\mbox{}\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/my_walks}
+    \caption{My Walks interface}
+    \label{fig:my_walks}
+\end{figure}
 
 The \emph{My Walks} interface is similar to that of the \emph{Saved Walks} layout with a few additional features. The left-hand side list of walks fragment now includes a \emph{Create Walk} button. Pressing this button will inflate a \emph{Create Walk} interface. Instead of the \emph{start} button, the interface now includes an \emph{edit} and \emph{delete} button. Pressing the \emph{edit} button will navigate to the \emph{Edit Waypoint} interface. Pressing the \emph{delete} button will inflate a pop-up dialogue, requiring the user to confirm or cancel the walk deletion. If \emph{confirm} is selected, the walk is deleted. If \emph{cancel} is selected, the pop-up dialogue will close.
 
-\paragraph{Download Walks interface}\mbox{}\\
-INSERTT IMAGE\\
+\paragraph*{Download Walks interface}\mbox{}\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/download_walk}
+    \caption{Download Walks interface}
+    \label{fig:download_walk}
+\end{figure}
 
 The \emph{Download Walks} interface allows users to search for walks and download them. The interface takes the layout form previously seen in \emph{My Walks} interface. The list of walks now consists of all possible walks taken from the database. A search text box at the top of the interface allows users to search for a particular walk or area. Selecting a walk from the list will present all walk details in the main interface window. Here the user may save that particular walk by pressing the \emph{Download walk} button.
 
-\paragraph{Explore interface}\mbox{}\\
-INSERTT IMAGE\\
+\paragraph*{Explore interface}\mbox{}\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/explore}
+    \caption{Explore interface}
+    \label{fig:explore_view}
+\end{figure}
 
 Unlike the majority of interface designs previously documented, the \emph{Explore} interface has a single purpose. It presents a world map, allowing users to move freely across the map, zooming in and out as desired. The explore interface acts as a form of ``location search''. This provides users with additional freedom to view any location and potentially discover new walk trails that could be created.
 
-\paragraph{Create Walk interface}\mbox{}\\
-INSERTT IMAGE\\
+\paragraph*{Create Walk interface}\mbox{}\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/create_walk}
+    \caption{Create Walk interface}
+    \label{fig:create_walk}
+\end{figure}
 
 The \emph{Create Walk} interface has a basic layout. An title is positioned at the top of the interface. This is followed by a \emph{walk name} and a \emph{walk description} editable text box. Selecting either text box will allow for the respective walk information to be entered. The interface also includes an \emph{Add a waypoint} button, \emph{cancel} button and a \emph{create} button. Pressing the \emph{Add a waypoint} button will navigate to an \emph{Add Waypoint} interface. Pressing the cancel button will return to the previous interface, while the \emph{Create} button will create a new walk using the details entered by the user.
 
-\paragraph{View Walk interface}\mbox{}\\
+\paragraph*{View Walk interface}\mbox{}\\
+
 INSERTT IMAGE\\
 
 The \emph{View Walk} interface is inflated when the user wishes to view a walk and its waypoints. Similar to the explore view, the user may move around the map, zooming in and out as desired. When the user is within close proximity of a waypoint, a pop-u dialogue will appear on-screen. This dialogue will include the waypoint name, a short description and any relative media that has been attached to that waypoint. 
 
-\paragraph{Edit Walk interface}\mbox{}\\
+\paragraph*{Edit Walk interface}\mbox{}\\
 INSERTT IMAGE\\
 
 The \emph{Edit Walk} interface allows users to make changes to walks they created. The presented interface provides users with the ability to update main information such as walk name and description. Below this is an \emph{Add a waypoint} button and a \emph{edit waypoints} button. The user may add numerous waypoints and make changes to current waypoints. If no changes are to be made or saved, pressing the \emph{cancel} button will return to the previous interface. Pressing the \emph{save} button will save all changes and return to the \emph{My Walks} interface.
 
 \paragraph{Add Waypoint interface}\mbox{}\\
-INSERTT IMAGE\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/add_waypoint}
+    \caption{Add Waypoint interface}
+    \label{fig:edit_waypoint}
+\end{figure}
 
 The \emph{Add Waypoint} interface allows users to add a waypoint to a walk simply by selecting and holding on a position on the map provided. A text prompt is also included, providing users with instructions.
 
 \paragraph{Edit Waypoint interface}\mbox{}\\
-INSERTT IMAGE\\
+
 
 The \emph{Edit Waypoint} interface allows users to edit a waypoint of an existing walk. The user may edit the waypoint name, description and multimedia attached. When complete, pressing the \emph{save} button will save changes made and return to the \emph{edit walk} interface. Pressing the \emph{cancel} button will return to the \emph{edit walk} interface without saving any changes to that particular waypoint.
+
+\paragraph*{Application Flow Diagram}\mbox{}\\
+
+This section will present a flow diagram of the interface designs discussed previously. The figure \ref{fig:flow} helps illustrate the flow of the application and allows us to visualise how interfaces may depend on one another.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/flow}
+    \caption{Application flow diagram}
+    \label{fig:flow}
+\end{figure}
 
 \section{API} 
 \label{sec:api-design}
@@ -984,7 +1043,6 @@ While there were never any inital specifications for an API acceptance testing f
                    \end{itemize}  
 \textbf{Result:} \textcolor{green}{PASS}\\ 
 \textbf{Description:}To test adding media an image, a video and some audio were sent via a \textbf{POST} request to \url{/walks/}\bfurl{id}\url{/wapoints/}\bfurl{wid}\url{/images}, \url{/walks/}\bfurl{id}\url{/wapoints/}\bfurl{wid}\url{/videos} and \url{/walks/}\bfurl{id}\url{/wapoints/}\bfurl{wid}\url{/audio}. When the images route recieved the image it processed the request and returned an image object with a url to the file. How ever the other files caused the API to produce a 415 error. Similar things happened with the video and audio routes, where they accepted media of the correct type (eg Videos for the videos route and audio for the audio route) but rejected other types with a 415 error. Attempting to upload a file to any route without the correct authorisation resulted in a 403 Forbidden error message. 
-
 
 \label{test:API-T11}
 \noindent\textbf{Test Code:} API-T11\\
