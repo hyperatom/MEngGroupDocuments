@@ -1,0 +1,11 @@
+<map id="uk.ac.swan.digitaltrails.database.DataSource" name="uk.ac.swan.digitaltrails.database.DataSource">
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html" title="uk.ac.swan.digitaltrails.database.\lDescriptionDataSource" alt="" coords="268,71,483,112"/>
+<area shape="rect" id="node5" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_media_data_source.html" title="uk.ac.swan.digitaltrails.database.\lMediaDataSource" alt="" coords="268,168,483,209"/>
+<area shape="rect" id="node9" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source.html" title="uk.ac.swan.digitaltrails.database.\lWalkDataSource" alt="" coords="268,233,483,275"/>
+<area shape="rect" id="node10" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source.html" title="uk.ac.swan.digitaltrails.database.\lWaypointDataSource" alt="" coords="268,299,483,340"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_english_walk_description_data_source.html" title="uk.ac.swan.digitaltrails.database.\lEnglishWalkDescriptionDataSource" alt="" coords="543,5,771,47"/>
+<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_english_waypoint_description_data_source.html" title="uk.ac.swan.digitaltrails.database.\lEnglishWaypointDescriptionDataSource" alt="" coords="531,71,784,112"/>
+<area shape="rect" id="node6" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source.html" title="uk.ac.swan.digitaltrails.database.\lAudioDataSource" alt="" coords="550,136,765,177"/>
+<area shape="rect" id="node7" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_photo_data_source.html" title="uk.ac.swan.digitaltrails.database.\lPhotoDataSource" alt="" coords="550,201,765,243"/>
+<area shape="rect" id="node8" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_video_data_source.html" title="uk.ac.swan.digitaltrails.database.\lVideoDataSource" alt="" coords="550,267,765,308"/>
+</map>

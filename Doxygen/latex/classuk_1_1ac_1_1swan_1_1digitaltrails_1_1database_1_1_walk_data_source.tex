@@ -1,0 +1,187 @@
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source}{\section{uk.\+ac.\+swan.\+digitaltrails.\+database.\+Walk\+Data\+Source Class Reference}
+\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source}\index{uk.\+ac.\+swan.\+digitaltrails.\+database.\+Walk\+Data\+Source@{uk.\+ac.\+swan.\+digitaltrails.\+database.\+Walk\+Data\+Source}}
+}
+
+
+Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Walk\+Data\+Source\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Walk\+Data\+Source\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_a60301a5dc7794307ade6df34bd239eb2}{Walk\+Data\+Source} (Context context)
+\item 
+long \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_a404fe1da8769d8d3fc50e8c43c52bbf2}{add\+Walk} (int duration, double distance, int download\+Count, int difficulty\+Rating, long owner\+Id)
+\begin{DoxyCompactList}\small\item\em Add walk to Db. \end{DoxyCompactList}\item 
+long \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_a9b1ff0450785979c68e1668c4aec17ce}{add\+Walk} (\hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk}{Walk} walk)
+\item 
+void \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_ac568c3ebb851069f4b1d0b74204d933c}{delete\+Walk} (long id)
+\begin{DoxyCompactList}\small\item\em Delete walk from database. \end{DoxyCompactList}\item 
+int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_a737d975ddc892d0202d0c9c70f47ea42}{update\+Walk} (long id, Integer duration, Double distance, Integer download\+Count, Integer difficulty\+Rating)
+\item 
+List$<$ \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk}{Walk} $>$ \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_a0d66b2a623c0e8e11a995a5c4060a30f}{get\+All\+Walk} ()
+\begin{DoxyCompactList}\small\item\em Look up all walks in the database and add them to a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Lewis Hancock 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_a60301a5dc7794307ade6df34bd239eb2}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source}!Walk\+Data\+Source@{Walk\+Data\+Source}}
+\index{Walk\+Data\+Source@{Walk\+Data\+Source}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source}}
+\subsubsection[{Walk\+Data\+Source}]{\setlength{\rightskip}{0pt plus 5cm}uk.\+ac.\+swan.\+digitaltrails.\+database.\+Walk\+Data\+Source.\+Walk\+Data\+Source (
+\begin{DoxyParamCaption}
+\item[{Context}]{context}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_a60301a5dc7794307ade6df34bd239eb2}
+
+\begin{DoxyParams}{Parameters}
+{\em context} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_a404fe1da8769d8d3fc50e8c43c52bbf2}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source}!add\+Walk@{add\+Walk}}
+\index{add\+Walk@{add\+Walk}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source}}
+\subsubsection[{add\+Walk}]{\setlength{\rightskip}{0pt plus 5cm}long uk.\+ac.\+swan.\+digitaltrails.\+database.\+Walk\+Data\+Source.\+add\+Walk (
+\begin{DoxyParamCaption}
+\item[{int}]{duration, }
+\item[{double}]{distance, }
+\item[{int}]{download\+Count, }
+\item[{int}]{difficulty\+Rating, }
+\item[{long}]{owner\+Id}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_a404fe1da8769d8d3fc50e8c43c52bbf2}
+
+
+Add walk to Db. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & \\
+\hline
+{\em distance} & \\
+\hline
+{\em download\+Count} & \\
+\hline
+{\em difficulty\+Rating} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & \\
+\hline
+{\em distance} & \\
+\hline
+{\em download\+Count} & \\
+\hline
+{\em difficulty\+Rating} & \\
+\hline
+{\em owner\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_a9b1ff0450785979c68e1668c4aec17ce}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source}!add\+Walk@{add\+Walk}}
+\index{add\+Walk@{add\+Walk}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source}}
+\subsubsection[{add\+Walk}]{\setlength{\rightskip}{0pt plus 5cm}long uk.\+ac.\+swan.\+digitaltrails.\+database.\+Walk\+Data\+Source.\+add\+Walk (
+\begin{DoxyParamCaption}
+\item[{{\bf Walk}}]{walk}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_a9b1ff0450785979c68e1668c4aec17ce}
+
+\begin{DoxyParams}{Parameters}
+{\em walk} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_ac568c3ebb851069f4b1d0b74204d933c}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source}!delete\+Walk@{delete\+Walk}}
+\index{delete\+Walk@{delete\+Walk}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source}}
+\subsubsection[{delete\+Walk}]{\setlength{\rightskip}{0pt plus 5cm}void uk.\+ac.\+swan.\+digitaltrails.\+database.\+Walk\+Data\+Source.\+delete\+Walk (
+\begin{DoxyParamCaption}
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_ac568c3ebb851069f4b1d0b74204d933c}
+
+
+Delete walk from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the id of the walk to delete \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_a0d66b2a623c0e8e11a995a5c4060a30f}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source}!get\+All\+Walk@{get\+All\+Walk}}
+\index{get\+All\+Walk@{get\+All\+Walk}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source}}
+\subsubsection[{get\+All\+Walk}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Walk}$>$ uk.\+ac.\+swan.\+digitaltrails.\+database.\+Walk\+Data\+Source.\+get\+All\+Walk (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_a0d66b2a623c0e8e11a995a5c4060a30f}
+
+
+Look up all walks in the database and add them to a list. 
+
+\begin{DoxyReturn}{Returns}
+
+
+
+\end{DoxyReturn}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_a737d975ddc892d0202d0c9c70f47ea42}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source}!update\+Walk@{update\+Walk}}
+\index{update\+Walk@{update\+Walk}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Walk\+Data\+Source}}
+\subsubsection[{update\+Walk}]{\setlength{\rightskip}{0pt plus 5cm}int uk.\+ac.\+swan.\+digitaltrails.\+database.\+Walk\+Data\+Source.\+update\+Walk (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{Integer}]{duration, }
+\item[{Double}]{distance, }
+\item[{Integer}]{download\+Count, }
+\item[{Integer}]{difficulty\+Rating}
+\end{DoxyParamCaption}
+)}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source_a737d975ddc892d0202d0c9c70f47ea42}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em duration} & \\
+\hline
+{\em distance} & \\
+\hline
+{\em download\+Count} & \\
+\hline
+{\em difficulty\+Rating} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/uk/ac/swan/digitaltrails/database/\hyperlink{_walk_data_source_8java}{Walk\+Data\+Source.\+java}\end{DoxyCompactItemize}

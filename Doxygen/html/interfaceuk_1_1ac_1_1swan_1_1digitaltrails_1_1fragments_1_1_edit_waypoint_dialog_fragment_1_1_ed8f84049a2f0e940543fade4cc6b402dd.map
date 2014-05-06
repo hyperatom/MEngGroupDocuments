@@ -1,0 +1,4 @@
+<map id="uk.ac.swan.digitaltrails.fragments.EditWaypointDialogFragment.EditWaypointDialogListener" name="uk.ac.swan.digitaltrails.fragments.EditWaypointDialogFragment.EditWaypointDialogListener">
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_map_fragment.html" title="uk.ac.swan.digitaltrails.fragments.\lAddWaypointMapFragment" alt="" coords="327,5,545,47"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_edit_waypoint_map_fragment.html" title="uk.ac.swan.digitaltrails.fragments.\lEditWaypointMapFragment" alt="" coords="327,71,545,112"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="uk.ac.swan.digitaltrails.components.Walk.Walk" name="uk.ac.swan.digitaltrails.components.Walk.Walk">
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a8420e81579a4a93cd8194c51ed759655" title="Setter for id. " alt="" coords="287,5,520,47"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a685bbc650733996587057b8b7b58a2ef" title="Setter for duration. " alt="" coords="287,71,520,112"/>
+<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#ade69ef46a5dad1fec92e5db59fe2ea5e" title="Setter for distance. " alt="" coords="287,136,520,177"/>
+<area shape="rect" id="node5" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#af248a6e640e79b4afdd938f9de734c40" title="uk.ac.swan.digitaltrails.components.\lWalk.setOwnerId" alt="" coords="287,201,520,243"/>
+<area shape="rect" id="node6" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#ab2ce244627930db6c602d9e93d541131" title="uk.ac.swan.digitaltrails.components.\lWalk.setDownloadCount" alt="" coords="287,267,520,308"/>
+<area shape="rect" id="node7" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a0de0f63c1788da4c64db214782da18dc" title="uk.ac.swan.digitaltrails.components.\lWalk.setDifficultyRating" alt="" coords="287,332,520,373"/>
+</map>

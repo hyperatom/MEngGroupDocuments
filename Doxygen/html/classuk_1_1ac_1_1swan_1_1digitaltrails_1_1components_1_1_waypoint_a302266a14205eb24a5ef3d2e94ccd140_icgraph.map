@@ -1,0 +1,7 @@
+<map id="uk.ac.swan.digitaltrails.components.Waypoint.getEnglishDescription" name="uk.ac.swan.digitaltrails.components.Waypoint.getEnglishDescription">
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity.html#ab61b2dcee297cc8bff9caac74f1233d1" title="onClick for edit save button " alt="" coords="324,5,580,47"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a80e9f795a05d55926e40172754d25345" title="Default Constructor. " alt="" coords="335,71,569,112"/>
+<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#ac0e7d4601761a9ebc20941b07a713df3" title="uk.ac.swan.digitaltrails.components.\lWaypoint.toString" alt="" coords="335,136,569,177"/>
+<area shape="rect" id="node5" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_map_fragment.html#a510b75748b076b65fa40024960699386" title="uk.ac.swan.digitaltrails.fragments.\lAddWaypointMapFragment.onEditDialogPositiveClick" alt="" coords="287,201,617,243"/>
+<area shape="rect" id="node6" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_edit_waypoint_map_fragment.html#a22db35994fe05c0010ff3a0a6a5bb0a2" title="uk.ac.swan.digitaltrails.fragments.\lEditWaypointMapFragment.onEditDialog\lPositiveClick" alt="" coords="323,267,581,323"/>
+</map>

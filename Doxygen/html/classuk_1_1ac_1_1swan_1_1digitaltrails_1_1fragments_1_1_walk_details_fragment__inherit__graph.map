@@ -1,0 +1,5 @@
+<map id="uk.ac.swan.digitaltrails.fragments.WalkDetailsFragment" name="uk.ac.swan.digitaltrails.fragments.WalkDetailsFragment">
+<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_edit_walk_fragment.html" title="Child of WalkDetailsFragment for displaying details of a walk when we want to edit said walk..." alt="" coords="508,5,727,47"/>
+<area shape="rect" id="node5" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_my_walk_details_fragment.html" title="uk.ac.swan.digitaltrails.fragments.\lMyWalkDetailsFragment" alt="" coords="508,71,727,112"/>
+<area shape="rect" id="node6" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_details_fragment.html" title="uk.ac.swan.digitaltrails.fragments.\lSearchDetailsFragment" alt="" coords="508,136,727,177"/>
+</map>

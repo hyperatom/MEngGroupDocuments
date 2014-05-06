@@ -190,7 +190,21 @@ This section will discuss the choices of technology that were used to implement 
 
 \subsubsection{UML Diagrams}
 
-Figure \ref{fig:subsystem-diagram} shows a subsystem diagram for the Digital Trails web application.
+This section will discuss the architecture of each subsystem and the classes contained within them. Figure \ref{fig:subsystem-diagram} shows a subsystem diagram for the Digital Trails web application. The following table discusses the responsibilities of each subsystem in the diagram. Directional arrows between packages and classes represent dependencies. That is, the element at the end of the arrow is required by the element at the start in order to function. Rectangular boxes represent a single component where boxes featuring a header represent a collection of related components, know as a package.
+
+\begin{center}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline \textbf{Subsystem} & \textbf{Responsibility} \\ 
+\hline Controllers & This subsystem acts as the code-behind for views and contains JavaScript modules. Views are bound to controllers and access public properties and functions that are exposed from their interfaces. Controller and view data is kept in sync such that changes to data entities are reflected in both the controller and view. This behaviour is facilitated by the usage of a MVVM (Model-View-ViewModel) pattern. Controllers contain much of the application's business logic and is depended on by the \emph{Index Page} where all application modules are wired together. \\ 
+\hline Views & This subsystem contains the HTML views that are shown on the web portal. The views define interfaces that users can interact with to access walks that are stored by the database. Views depend on their respective controllers which contain the business logic for the interface. This logic defines what happens user interface events occur such as button clicks. Views are bound to their respective controllers using specific AngularJS attributes which define the values of properties to be displayed of functions to be called. \\ 
+\hline Services & This subsystem contains JavaScript modules which provide helper methods to controller modules. Therefore, this package is depended upon by the controllers package, since many controllers use functions defined by service modules. \\ 
+\hline Directives & This subsystem contains JavaScript modules that are used to manipulate view elements. A directive can be attached directly to any view element to manipulate its appearance when specific events occur such as mouse clicks or hover overs. \\ 
+\hline Vendor & This subsystem contains JavaScript modules which are created by third party libraries used by the web application. These modules are used by other packages to perform specific functionality. The vendor modules include libraries for view styling, encryption mechanisms, jQuery and various others that the application relies upon.  \\ 
+\hline Index Page & The index page is a single HTML view which wires up all packages shown in Figure \ref{fig:subsystem-diagram}. This allows packages to reference every other package in the application. In addition, this page serves as a canvas which other views are loaded into at run time. \\ 
+\hline App & This JavaScript file is responsible for bundling \emph{controllers}, \emph{views}, \emph{services}, \emph{directives} into their respective packages and acts as the start up module for the application. Routes are also specified in this file which map requested URL's to views including which controller should be used. \\ 
+\hline 
+\end{tabularx} 
+\end{center}
 
 \begin{figure}[H]
 \centering
@@ -523,6 +537,46 @@ INSERTT IMAGE\\
 
 The \emph{Saved Walks} interface presents a list of all saved walks on the left hand side. The main interface window displays the \emph{walk title, description, geological location} map and a \emph{start} button. Pressing the \emph{start} button will inflate a map interface and begin the walk trail.
 
+\paragraph{My Walks interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{My Walks} interface is similar to that of the \emph{Saved Walks} layout with a few additional features. The left-hand side list of walks fragment now includes a \emph{Create Walk} button. Pressing this button will inflate a \emph{Create Walk} interface. Instead of the \emph{start} button, the interface now includes an \emph{edit} and \emph{delete} button. Pressing the \emph{edit} button will navigate to the \emph{Edit Waypoint} interface. Pressing the \emph{delete} button will inflate a pop-up dialogue, requiring the user to confirm or cancel the walk deletion. If \emph{confirm} is selected, the walk is deleted. If \emph{cancel} is selected, the pop-up dialogue will close.
+
+\paragraph{Download Walks interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Download Walks} interface allows users to search for walks and download them. The interface takes the layout form previously seen in \emph{My Walks} interface. The list of walks now consists of all possible walks taken from the database. A search text box at the top of the interface allows users to search for a particular walk or area. Selecting a walk from the list will present all walk details in the main interface window. Here the user may save that particular walk by pressing the \emph{Download walk} button.
+
+\paragraph{Explore interface}\mbox{}\\
+INSERTT IMAGE\\
+
+Unlike the majority of interface designs previously documented, the \emph{Explore} interface has a single purpose. It presents a world map, allowing users to move freely across the map, zooming in and out as desired. The explore interface acts as a form of ``location search''. This provides users with additional freedom to view any location and potentially discover new walk trails that could be created.
+
+\paragraph{Create Walk interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Create Walk} interface has a basic layout. An title is positioned at the top of the interface. This is followed by a \emph{walk name} and a \emph{walk description} editable text box. Selecting either text box will allow for the respective walk information to be entered. The interface also includes an \emph{Add a waypoint} button, \emph{cancel} button and a \emph{create} button. Pressing the \emph{Add a waypoint} button will navigate to an \emph{Add Waypoint} interface. Pressing the cancel button will return to the previous interface, while the \emph{Create} button will create a new walk using the details entered by the user.
+
+\paragraph{View Walk interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{View Walk} interface is inflated when the user wishes to view a walk and its waypoints. Similar to the explore view, the user may move around the map, zooming in and out as desired. When the user is within close proximity of a waypoint, a pop-u dialogue will appear on-screen. This dialogue will include the waypoint name, a short description and any relative media that has been attached to that waypoint. 
+
+\paragraph{Edit Walk interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Edit Walk} interface allows users to make changes to walks they created. The presented interface provides users with the ability to update main information such as walk name and description. Below this is an \emph{Add a waypoint} button and a \emph{edit waypoints} button. The user may add numerous waypoints and make changes to current waypoints. If no changes are to be made or saved, pressing the \emph{cancel} button will return to the previous interface. Pressing the \emph{save} button will save all changes and return to the \emph{My Walks} interface.
+
+\paragraph{Add Waypoint interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Add Waypoint} interface allows users to add a waypoint to a walk simply by selecting and holding on a position on the map provided. A text prompt is also included, providing users with instructions.
+
+\paragraph{Edit Waypoint interface}\mbox{}\\
+INSERTT IMAGE\\
+
+The \emph{Edit Waypoint} interface allows users to edit a waypoint of an existing walk. The user may edit the waypoint name, description and multimedia attached. When complete, pressing the \emph{save} button will save changes made and return to the \emph{edit walk} interface. Pressing the \emph{cancel} button will return to the \emph{edit walk} interface without saving any changes to that particular waypoint.
+
 \section{API} 
 \label{sec:api-design}
 
@@ -604,144 +658,12 @@ The API has several main object collections, which are `Walks', `Waypoints', `Us
 
 Each controller has methods to respond to diffrent requests, a generic controller will have `getOne', `getAll', `add', `update', `remove' and `search'. The methods match up to specific routes. For example `getOne' normally matches to \textbf{GET} \url{/resources/id} and `add' matches \textbf{POST} \url{/resources}. 
 
-\subsubsection{Walk Controller}
-
-The walk controller process request for several diffrent functions. It provides the most functionality allowing not just for traditional CRUD operations but also for searching. 
-
-\begin{table}[H]
-\centering
-\begin{tabular}{l | l | l}
-HTTP Method & Route & Contorller Method\\ \hline
-\textbf{\textcolor{Maroon}{GET}} & \url{/walks} & \lstinline$getAll()$ \\
-\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id} & \lstinline$getOne(id)$\\
-\textbf{\textcolor{Maroon}{POST}} & \url{/walks} & \lstinline$add()$\\
-\textbf{\textcolor{Maroon}{PUT}} & \url{/walks/}\bfurl{id} & \lstinline$update(id)$\\
-\textbf{\textcolor{Maroon}{DELETE}} & \url{/walks/}\bfurl{id} & \lstinline$delete(id)$\\
-\textbf{\textcolor{Maroon}{GET}} & \url{/walks/search/}\bfurl{query} & \lstinline$search(query)$\\
-\end{tabular}
-\caption{Routes and Methods in the Walks Controller}
-\label{tab:walksController}
-\end{table}
-
-\subsubsection{Waypoint Controller}
-
-The waypoint contorller provides the basic CRUD operations. When adding or getting all waypoints it requires the id of the walk they should belong to. When acting upon an individual waypoint it needs the waypoints id, called \bfurl{wid} in the table. 
-
-\begin{table}[H]
-\centering
-\begin{tabular}{l | l | l}
-HTTP Method & Route & Contorller Method\\ \hline
-\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints} & \lstinline$getAll(id)$ \\
-\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid} & \lstinline$getOne(wid)$\\
-\textbf{\textcolor{Maroon}{POST}} & \url{/walks/}\bfurl{id}\url{/waypoints} & \lstinline$add(id)$\\
-\textbf{\textcolor{Maroon}{PUT}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid} & \lstinline$update(wid)$\\
-\textbf{\textcolor{Maroon}{DELETE}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid} & \lstinline$delete(wid)$\\
-\end{tabular}
-\caption{Routes and Methods in the Waypoint Controller}
-\label{tab:waypointController}
-\end{table}
-
-\subsubsection{Walk Review Controller}
-
-The walk review controller allows the user to get all reivews for a walk, get an idividual review, add a review to a walk and delete a review. Users are prohibited from updating a review once it has been submitted. Users are expected to pass a valid walk object in JSON when they add and will recieve back valid objects with every request. 
-
-\begin{table}[H]
-\centering
-\begin{tabular}{l | l | l}
-HTTP Method & Route & Contorller Method\\ \hline
-\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/reviews} & \lstinline$getAll(id)$ \\
-\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/reviews/}\bfurl{rid} & \lstinline$getOne(rid)$\\
-\textbf{\textcolor{Maroon}{POST}} & \url{/walks/}\bfurl{id}\url{/reviews} & \lstinline$add(id)$\\
-\textbf{\textcolor{Maroon}{DELETE}} & \url{/walks/}\bfurl{id}\url{/reviews/}\bfurl{rid} & \lstinline$delete(rid)$\\
-\end{tabular}
-\caption{Routes and Methods in the Walk Revew Controller}
-\label{tab:waypointController}
-\end{table}
-
-\subsubsection{Waypoint Image Controller}
-
-Waypoint Image Controller allows users to upload images for waypoints. Users are able to add, remove and get images (Either all of them or jsut one). When uploading a file the request should contain the file, which is then moved within the server and stored and a thumbnail is generated. 
-
-\begin{table}[H]
-\centering
-\begin{tabular}{l | l | l}
-HTTP Method & Route & Contorller Method\\ \hline
-\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images} & \lstinline$getAll(wid)$ \\
-\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id} & \lstinline$getOne(img_id)$\\
-\textbf{\textcolor{Maroon}{POST}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images} & \lstinline$add(wid)$\\
-\textbf{\textcolor{Maroon}{DELETE}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id} & \lstinline$delete(wid)$\\
-\end{tabular}
-\caption{Routes and Methods in the Waypoint Image Controller}
-\label{tab:waypointImageController}
-\end{table}
-
-\subsubsection{Waypoint Audio Controller}
-
-Waypoint Audio Controller is similar to the image controller, it allows users to upload audio for waypoints. Users are able to add, remove and get audio samples (Either all of them or jsut one). When uploading a file the request should contain the file, which is then moved within the server and stored. 
-
-\begin{table}[H]
-\centering
-\begin{tabular}{l | l | l}
-HTTP Method & Route & Contorller Method\\ \hline
-\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images} & \lstinline$getAll(wid)$ \\
-\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id} & \lstinline$getOne(img_id)$\\
-\textbf{\textcolor{Maroon}{POST}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images} & \lstinline$add(wid)$\\
-\textbf{\textcolor{Maroon}{DELETE}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id} & \lstinline$delete(wid)$\\
-\end{tabular}
-\caption{Routes and Methods in the Waypoint Audio Controller}
-\label{tab:waypointAudioController}
-\end{table}
-
-\subsubsection{Waypoint Video Controller}
-
-Waypoint Video Controller is very similar to the image controller. Users are able to add, remove and get videos (Either all of them or jsut one). When uploading a file the request should contain the file, which is then moved within the server and stored and a thumbnail is generated. 
-
-\begin{table}[H]
-\centering
-\begin{tabular}{l | l | l}
-HTTP Method & Route & Contorller Method\\ \hline
-\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images} & \lstinline$getAll(wid)$ \\
-\textbf{\textcolor{Maroon}{GET}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id} & \lstinline$getOne(img_id)$\\
-\textbf{\textcolor{Maroon}{POST}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images} & \lstinline$add(wid)$\\
-\textbf{\textcolor{Maroon}{DELETE}} & \url{/walks/}\bfurl{id}\url{/waypoints/}\bfurl{wid}\url{/images/}\bfurl{img_id} & \lstinline$delete(wid)$\\
-\end{tabular}
-\caption{Routes and Methods in the Waypoint Video Controller}
-\label{tab:waypointVideoController}
-\end{table}
-
-\subsubsection{User Controller}
-
-The User Controller allows users to get users (Either all or just one), allows user to be added (Registration), allows users to be searched for and lets uses update or delete their own account. If a user trys to modify or delete an account that is no their own the controller will block the request and return a 403 Forbiden error. 
-
-\begin{table}[H]
-\centering
-\begin{tabular}{l | l | l}
-HTTP Method & Route & Contorller Method\\ \hline
-\textbf{\textcolor{Maroon}{GET}} & \url{/users} & \lstinline$getAll()$ \\
-\textbf{\textcolor{Maroon}{GET}} & \url{/users/}\bfurl{id} & \lstinline$getOne(id)$\\
-\textbf{\textcolor{Maroon}{POST}} & \url{/users} & \lstinline$add()$\\
-\textbf{\textcolor{Maroon}{PUT}} & \url{/users/}\bfurl{id} & \lstinline$update(id)$\\
-\textbf{\textcolor{Maroon}{DELETE}} & \url{/users/}\bfurl{id} & \lstinline$delete(id)$\\
-\textbf{\textcolor{Maroon}{GET}} & \url{/users/search/}\bfurl{query} & \lstinline$search(query)$\\
-\end{tabular}
-\caption{Routes and Methods in the User Controller}
-\label{tab:usersController}
-\end{table}
-
-\subsubsection{Session Controller}
-
-The session controller provides only two features, login and logout. Login will assign the user an authorisation token to authenticate their requests and logout will remove that auth token from the user. 
-
-\begin{table}[H]
-\centering
-\begin{tabular}{l | l | l}
-HTTP Method & Route & Contorller Method\\ \hline
-\textbf{\textcolor{Maroon}{POST}} & \url{/sessions} & \lstinline$login()$\\
-\textbf{\textcolor{Maroon}{DELETE}} & \url{/sessions} & \lstinline$logout()$\\
-\end{tabular}
-\caption{Routes and Methods in the Session}
-\label{tab:SessionController}
-\end{table}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.2\textwidth]{ControllerMethods}
+    \caption{The methods in a controller.}
+    \label{fig:controllermethods}
+\end{figure}
 
 \section{The Database}
 \label{sec:database-design}

@@ -1,0 +1,5 @@
+var interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_dialog_fragment_1_1_add_waypoint_dialog_listener =
+[
+    [ "onDialogNegativeClick", "interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_dialog_fragment_1_1_add_waypoint_dialog_listener.html#a8cbf919c183c0e8048a90e6bd30fdf04", null ],
+    [ "onDialogPositiveClick", "interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_dialog_fragment_1_1_add_waypoint_dialog_listener.html#a3bd6666341faffa16f688119d97753f3", null ]
+];
