@@ -1,0 +1,5 @@
+<map id="uk.ac.swan.digitaltrails.accounts.AuthenticatorActivity.finishLogin" name="uk.ac.swan.digitaltrails.accounts.AuthenticatorActivity.finishLogin">
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity.html#aebc59fcc6d318607ab2866e5ce81859a" title="uk.ac.swan.digitaltrails.accounts.\lAuthenticatorActivity.onActivityResult" alt="" coords="268,5,507,47"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity.html#a771eb6c281eece044fa2884364472850" title="Submit login request. " alt="" coords="280,71,495,112"/>
+<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity.html#a552d0ee1b418814c3a97cf21ca1c038c" title="Called when activity created. " alt="" coords="555,71,769,112"/>
+</map>

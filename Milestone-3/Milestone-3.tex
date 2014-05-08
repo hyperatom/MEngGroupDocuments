@@ -131,7 +131,7 @@
 \pagenumbering{arabic}
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
-
+\newpage
 \label{sec:introduction}
 \section{Term Definitions}
 \label{sec:term-definitions}
@@ -139,6 +139,7 @@
 \label{sec:project-overview}
 
 \chapter{Design}
+\newpage
 \label{sec:design}
 
 \section{Development Tools}
@@ -548,7 +549,7 @@ The final iteration involved several layout alterations (Figure \ref*{fig:choose
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{chris/final_choose_walk}
-    \caption{Walk selection interface - 3rd iteration EDIT THIS FOR WORKING MAP}
+    \caption{Walk selection interface - 3rd iteration }
     \label{fig:choose_walk3}
 \end{figure}
 
@@ -605,12 +606,9 @@ The \emph{launch} interface presents the user with an aesthetically pleasing lay
 
 \paragraph*{Log In interface}\mbox{}\\
 
-GET IMSGE \\
-
 The \emph{Log In} interface presents the user with a welcome message fixed to the top, along with prompt text directly below. The focus of this interface is the \emph{email} and \emph{password} text boxes. Selecting either text box will inflate a keypad, where the user may enter log in details. Below is a \emph{Sign In} button and a \emph{New user?} text view. If valid details are entered, pressing the \emph{Sign In} button will navigate to the \emph{Home} interface. If invalid details are entered, a pop-up dialogue will notify users that the log in attempt has failed. Pressing the \emph{New user?} text view will navigate to the \emph{Register} interface, where the user may register a new account.
 
 \paragraph{Register interface}\mbox{}\\
-INSERTT IMAGE\\
 
 The \emph{Register} interface presents the user with a series of edit text boxes, where details such as \emph{first name, last name, email address} and \emph{password} can be entered in order to create a new account. Below this is a \emph{Create Account} button and an \emph{Already a member?} text view. If suitable details are entered, pressing the \emph{Create Account} button will create a user account and navigate to the \emph{Home} interface. If unsuitable, the account creation will be rejected.
 
@@ -678,12 +676,16 @@ The \emph{Create Walk} interface has a basic layout. An title is positioned at t
 
 \paragraph*{View Walk interface}\mbox{}\\
 
-INSERTT IMAGE\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/view_walk}
+    \caption{View Walk interface}
+    \label{fig:view_walk}
+\end{figure}
 
-The \emph{View Walk} interface is inflated when the user wishes to view a walk and its waypoints. Similar to the explore view, the user may move around the map, zooming in and out as desired. When the user is within close proximity of a waypoint, a pop-u dialogue will appear on-screen. This dialogue will include the waypoint name, a short description and any relative media that has been attached to that waypoint. 
+The \emph{View Walk} interface is inflated when the user wishes to view a walk and its waypoints. Similar to the explore view, the user may move around the map, zooming in and out as desired. When the user is within close proximity of a waypoint, a pop-up dialogue will appear on-screen. This dialogue will include the waypoint name, a short description and any relative media that has been attached to that waypoint. 
 
 \paragraph*{Edit Walk interface}\mbox{}\\
-INSERTT IMAGE\\
 
 The \emph{Edit Walk} interface allows users to make changes to walks they created. The presented interface provides users with the ability to update main information such as walk name and description. Below this is an \emph{Add a waypoint} button and a \emph{edit waypoints} button. The user may add numerous waypoints and make changes to current waypoints. If no changes are to be made or saved, pressing the \emph{cancel} button will return to the previous interface. Pressing the \emph{save} button will save all changes and return to the \emph{My Walks} interface.
 
@@ -717,7 +719,15 @@ This section will present a flow diagram of the interface designs discussed prev
 This section details the implementation of the Android Application. Table~\ref{tab:androidsystems} lists each subsystem within the application and outlines their purpose, this is expanded upon in sections~\ref{sec:accounts} -~\ref{sec:walkexplore}. Definitions for terms used can be seen in Table~\ref{tab:androidDefs}.
 
 \begin{longtable}{|p{2cm}|p{8cm}|}
+\hline \caption{Android Definitions - Cont. on Next Page.} \endfoot
 \hline \caption{Android Definitions} \label{tab:androidDefs} \endlastfoot
+\textbf{Term} & \textbf{Definition} \\ \hline
+Components & A set of Java Objects used to represent the data which is in the application. These consist of Walk, Waypoint, Description, EnglishWalkDescription, EnglishWaypointDescription, WelshWalkDescription, WelshWaypointDescription, Media, Photo, Video, Audio and Account. \\ \hline
+Data Sources & A set of Java Objects used to manage CRUD operations for their respective components. \\ \hline
+Auth Token & The key used to generate a signature for a request to the API. \\ \hline
+Geolocation & An area on a map represented by Latitude and Longitude. \\ \hline
+Geofence & An area around a specific geolocation which acts as a boundary for the geolocation. It allows the application to be aware of when a user approaches the geolocation. \\ \hline
+
 \end{longtable}
 
 \begin{longtable}{|p{5cm}|p{10cm}|}
@@ -742,11 +752,11 @@ The Account Authenticator system is composed of the classes found in Table~\ref{
 \hline \caption{Account Authenticator Classes} \label{tab:accountauth} \endlastfoot
 \hline
 \textbf{Class} & \textbf{Purpose} \\ \hline
-AccountAuthenticator & Communicates with the native Android Account Manager to complete all operations possible for a White Rock account. These operations include getting the auth-token, presenting the log-in screen and handling authentication with the server. \\ \hline
+AccountAuthenticator & Communicates with the native Android Account Manager to complete all operations possible for a White Rock account. These operations include getting the auth token, presenting the log-in screen and handling authentication with the server. \\ \hline
 AccountGeneral & A class which contains static variables for easy access in other classes. \\ \hline
 AuthenticatorActivity & The Activity which allows a user to log in to an existing, it communicates with the Account Manager and DigitalTrailsComServerAuthenticate classes to achieve this. This is the class which has direct interaction with the user. \\ \hline
 DigitalTrailsComServerAuthenticate & Communicates with the White Rock API to create user accounts and receive authentication tokens for the current user. Achieved via HTTP calls.  \\ \hline
-ServerAuthentciate & An interface to be implemented by the DigitalTrailsComServerAuthenticate class, details the possible actions an account may take. \\ \hline
+ServerAuthenticate & An interface to be implemented by the DigitalTrailsComServerAuthenticate class, details the possible actions an account may take. \\ \hline
 SignUpActivity & Similar to the AuthenticatorActivity, this class is responsible for signing a new user up to the White Rock service. \\ \hline
 WhiteRockAuthenticatorService & An Android service which allow for communication with the authenticator. Extending the AbstractAccountAuthenticator class in the AccountAuthenticator method allows for the service to be connected to via an IBinder.  \\ \hline
 \end{longtable}
@@ -1263,6 +1273,8 @@ The Bug report table is used to store bugs in the program that are reported by u
 
 \chapter{Testing}
 \label{sec:testing}
+\newpage
+
 \section{Unit Testing}
 \label{sec:unit-testint}
 \section{Acceptance Testing}
@@ -1773,6 +1785,7 @@ To get an image by its id a \textbf{GET} request was sent to \url{/walks/}\bfurl
 
 \chapter{User Manual}
 \label{sec:user-manual}
+\newpage
 
 \section{API}
 
@@ -2675,9 +2688,16 @@ Now that you've downloaded a walk, you may view it. At the \emph{Home} interface
 In this section, a quick start tutorial will present all necessary steps required to carry out the basic application features. The tutorial will document the following features:-
 
  \begin{itemize}
-   \item Create an account
-   \item Create a walk
-   \item View a walk
+   \item Create an account (section \ref{sec:create_account})
+   \item Create a walk (section \ref{sec:create_walk})
+   \item Download a walk (section \ref{sec:download_a_walk})
+   \item View a walk (section \ref{sec:view_walk})
+   \item Edit a walk
+   \item Delete a walk
+   \item Add a waypoint
+   \item Explore mode
+   \item Log Out
+   
  \end{itemize}
  
 \subsection{Create an account}
@@ -2712,11 +2732,129 @@ Now that you have a registered account, you may create a new walk. To do so, sel
     \label{fig:create_walkUM}
 \end{figure}
 
+\subsection{Download a walk}
+\label{sec:download_a_walk}
+
+To download a walk, first select the \emph{Download Walks} button at the \emph{Home} interface. This loads the \emph{Download Walks} interface. Here, you may either select from the list of walks provided or use the search feature to filter the available list of walks. The selected walk's details will load into the main interface. To download, simply select the \emph{Download} button. This will download and save the walk.
+ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/chris/download_walk}
+\caption{Download Walks interface}
+\label{fig:download_a_walk}
+\end{figure}
+
+\subsection{View a walk}
+\label{sec:view_walk}
+
+Now that you've downloaded a walk, you may view it. At the \emph{Home} interface, select the \emph{Saved Walks} button. Your newly downloaded walk will now appear in the list on the left hand side. To view a walk, select the walk name from the list so that the walk details appear in view, then press the \emph{Start walk} button. This inflates the \emph{Walk View} interface, presenting a full-screen map with walk waypoints. Pressing a waypoint will inflate a pop-up that presents the waypoint name and description. To hide the waypoint details, simply press a different part of the map.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/chris/saved_walks}
+\caption{Saved Walks interface}
+\label{fig:saved_walks}
+\end{figure}
+
+\subsection{Edit a walk}
+\label{sec:edit_a_walk}
+
+To edit a walk, select the \emph{My Walks} button, which will load the \emph{My Walks} interface. Next, select the walk you wish to edit from the walk list. This will enable both \emph{Edit} and \emph{Delete} buttons and populate the main window with walk details. When enabled, select the \emph{Edit}
+button. This will load the \emph{Edit walk} interface. Here, you may edit the name and description of the walk. To add a waypoint, proceed to section \ref{sec:add_a_waypoint}).
+
+\subsection{Delete a walk}
+\label{sec:delete_a_walk}
+
+To delete a walk, select the \emph{My Walks} button, which will load the \emph{My Walks} interface. Next, select the walk you wish to delete from the walk list. This will enable both \emph{Edit} and \emph{Delete} buttons and populate the main window with walk details. When enabled, select the \emph{Delete} button. This will inflate a dialogue alert requesting you to confirm the walk deletion. Pressing the \emph{Delete} button will delete the walk and return to the \emph{Home Page}. Pressing \emph{Cancel} will close the dialogue fragment.
+
+\subsection{Add a waypoint}
+\label{sec:add_a_waypoint}
+
+To add a waypoint, select the desired walk from the walk list within the \emph{My Walks} interface. This loads the \emph{Edit Waypoint} interface. Here, select the \emph{Add a waypoint} button. This will load the waypoint map (figure \ref{fig:add_wayp}). To add, simply follow the on-screen prompt text, by pressing and holding on the desired location. This will inflate a waypoint details dialogue alert, where you may name and describe the waypoint.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/chris/add_waypoint}
+\caption{Add waypoint interface}
+\label{fig:add_wayp}
+\end{figure}
+
+\subsection{Explore mode}
+\label{explore_mode}
+
+To explore a global map, select the \emph{Explore} button of the \emph{Home} interface. This loads the \emph{Explore} interface. You may now interact with the interface.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/explore}
+    \caption{Explore interface}
+    \label{fig:expore_um}
+\end{figure}
+
+\subsection{Log Out}
+\label{log_out}
+
+To log out of the application, select the menu button located in the action bar. Next select the \emph{Log Out} tab. This will log you out of the application and return to the \emph{Launch} interface.
+
+
+
 \chapter{Reflective Account}
 \label{sec:reflective-account}
+\newpage
+
+\section{Development Process}
+\subsection{Lewis Hancock - Android Application}
+The development of the Android application began with generating the requirements and specifications for the project. Multiple meetings with John Ashley saw the creation of the System Requirements Specification document in January. 
+
+These requirements were then used to focus the research portion of the project. The first port of call was the code handed down to us by the Aberystwyth team. The code was not in the state which we expected it to be, all of the data available in the application had been hard coded - it was not stored in the database. This meant that as well as replacing Google Maps we had to write the database subsystem from scratch.
+
+Having not developed an Android application on such a scale before, it was important that the team found the correct solutions to the most difficult features, namely the Account Authenticator and Synchronisation systems. 
+
+Having found a sensible development path the first SCRUM sprint focused on the development of the ContentProvider system, the backbone for the application. There were no challenges with this part of the application, although it was a very time consuming feature to implement - creating a Data Access Object for each Component class, as well as a public facing contract, was an arduous task.
+
+The next sprint saw the backbone of the Account and Synchronisation systems, however due to the parallel development of the API it was not possible to finish implementing them until the final stages of the application.
+
+Without the ability to sync files or log in to the account, the next sprint saw the development of the Google Maps interface, to better understand the limitations it would present to us. Fortunately, the Google Maps API was mostly a pleasure to use, the one difficulty was overcoming the developer's decision to make Marker a final class, preventing me from extending it for better control over what content would be displayed when a marker was selected.
+
+With the Map system created, it was time to let the user access a walk and go exploring. The ChooseWalkActivity was developed, including the WalkListFragment and WalkDetailsFragment. By using the Loader Manager, the application was successfully retrieving walks from the already written ContentProvider. Since the process to load the walk data is the same in any Android Activity or Fragment, it was straightforward to enter the waypoints into the map. 
+
+The next step was to allow a walk to be created, locally, and edited. Having created dummy walks for the ChooseWalkActivity, this feature was mostly a matter of plugging the code into the Layouts which Chris Lewis had created. Some miscommunication issues arose, as the layouts grew more numerous and the application updated the fragments based on the screen orientation and size it became more and more difficult to keep track of which layouts needed modifying to meet the current design. This led to a number of frustrating bugs which were not possible to recreate across all the development devices.
+
+As the API was still in development, I returned to the development of Google Maps features. Adding in geofences and making the application location aware.
+
+The final stage of development brought together the Account Authenticator and Synchronisation systems with the rest of the application. With the help of Thomas Milner, the communication between server and device was under way. As it became clearer how GSON manipulates JSON to create Java Objects the application had to undergo a minor redevelopment. The component classes had to become both Parcelable and Serializable, attaching a SerializedName to each variable in the Component classes.
+
 \section{Problem Solving}
 \label{sec:problem-solving}
+
 \subsection{Tom Milner - API Development}
+During the development of the API several problems occurred, the main and most important of these are listed below.
+
+\subsubsection{CORS}
+CORS stands for `Cross-Origin Resource Sharing'. CORS is a mechanism for allowing resources across multiple domains, normally through AJAX requests which would otherwise be forbidden by web browsers by the same origin security policy. The security policy is in place to prevent malicious attacks such as cross site scripting (XSS). As standard the website and application were blocked from accessing the API. To enable CORS on the API and allow access to its resources special headers have to be passed with every request, and a special \textbf{OPTIONS} http route had to be defined. 
+
+The headers that were required are shown in listing \ref{lst:corsheaders}. Each one plays a part in allowing access to the API. \lstinline$Access-Control-Allow-Origin$ dictates what domains are allowed access to the API, by specifying `*' the API allows all domains access. \lstinline$Access-Control-Allow-Methods$ tells the browser the API will POST, GET, OPTIONS, DELETE and PUT methods and only those methods. Requests containing any other types will be rejected. Finally \lstinline$Access-Control-Allow-Headers$ tells the browser that the API accepts the headers `x-requested-with', `x-hash', `accept', `x-timestamp', `x-username', `content-type' and `origin'. This is an absolute list of headers, including the authentication headers, any other headers will be rejected by the API. 
+
+\begin{lstlisting}[captionpos=b, caption=The CORS headers, label=lst:corsheaders]
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+Access-Control-Allow-Headers: x-requested-with, x-hash, accept, x-timestamp, x-username, content-type, origin
+\end{lstlisting}
+
+This section also appears in Thomas Milner's Industrial Project Milestone 3. 
+
+\subsubsection{Authentication}
+
+Authentication with the API proved to be an issue that arose time and time again. The system needed to be secure but also fast and easy to implement in both the android application and the web portal. Several possible solutions to this were researched. First we researched using the OAuth 2.0 Library. This is a common authentication system in use on the web, however it was overly complicated and confusing to implement. To achieve a satisfactory result with the OAuth system would have taken a long period of time and increased the work load for all developers. Instead of the OAuth system I decided, to implement a custom authentication system. 
+
+The system is based on the Amazon's AWS API and is intact close to the original specification for OAuth. There were however numerous advantages to the custom system. Primarily we were able to customise it to work precisely as we required. The initial iteration of this system had an authorisation token being generated on the client using a secure hashing algorithm. Whilst this iteration worked well on modern desktop computers it proved to intensive for use on a mobile phone or tablet. This was a major problem so the authorisation token generation was moved to the API. The downside of this iteration is that the user has to pass their password to the API in plain text if HTTPS is not available. This is a security risk but is one that it shares with almost all websites. 
+
+The solution to this problem was not an easy one, however it has ended up performing well and providing a well secured method for authenticating with the API which works in a similar manor to the rest of the API. 
+
+\subsubsection{Debugging} 
+
+While developing the API many small bugs occurred. Normally it is easy to debug these bugs because PHP produces error messages. With the API however the output was being redirected and many of the smaller errors would stop the application from functioning without causing an exception.  This made it very difficult to analyse the problems and discover the cause. To stop this \lstinline$try{ }catch(Exception e){}$ blocks where used around potential problems. Unfortunately in a few cases this still didn't catch the exceptions. These issues were only solved through a painstaking process of trail and error, using pervious experience to trace the error to its cause. Any issues caused by user input were made to throw exceptions which could be caught in the try and catch blocks and the small code bugs were fixed. The only errors which can occur cause exceptions which are handled by the try/catch code added during the debugging process.
+
 \subsection{Adam Barrell - Web Portal Development}
 
 \subsubsection{Third Party Library Bugs}
@@ -2727,7 +2865,7 @@ The first bug encountered was that the form did not validate when two or more re
 The second bug encountered was more technical and meant that the login form submission method could not be overridden. The presence of this bug however had not been discussed on the project forum. Therefore, I submitted my own bug report specifying the scenario that could be taken to reproduce the problem. Since I has already implemented a solution to this bug, I also specified the code needed to fix it. The project developer quickly replied to the report and the feature was fixed the next day.
 
 \subsubsection{Parallel API Development}
-The API and web portal were both developed in parallel, however this brought about some problems during development. The API was being developed separately by Tom Milner and the web portal by Adam Barrell. Nealy all features of the web portal depended entirely upon the API working properly.
+The API and web portal were both developed in parallel, however this brought about some problems during development. The API was being developed separately by Tom Milner and the web portal by Adam Barrell. Nearly all features of the web portal depended entirely upon the API working properly.
 
 Whilst developing the web portal, it was discovered that the API was not functioning correctly when retrieving and manipulating data. One particular example, was when media was uploaded to the server but a thumbnail wasn't generated. This thumbnail was required to allow the media to be previewed in a waypoint media gallery. Therefore, Tom Milner had to fix the problem on the API which in turn, prevented any more development taking place on the media upload feature.
 
@@ -2739,7 +2877,41 @@ The web portal login mechanism required passwords to be hashed using a slow hash
 A solution was implemented which involved moving the hashing process to the server. This meant that the login process took exactly the same amount of time across devices of varying power.
 
 \subsection{Lewis Hancock - Android Development}
+A number of problems arose during the development of the Android application, which are detailed within this section.
+
+\subsubsection{SQLite}
+With Thomas and Adam in charge of the web development and API, they designed and created an SQL database. This is incompatible with the Android platform, meaning the database had to be parsed and converted into a legal SQLite format for the Android device. A simple problem to overcome, although a time consuming one when all the available tools were outputting incorrect results, seeing me convert the database by hand.
+
+\subsubsection{File Sharing}
+Due to a poor set up of the Git repository sharing code become a chore. Every time the code was pulled from a repository which another team member had modified it became necessary to update the Android project properties to find the correct versions of the support libraries. This was not a huge problem, only taking 30 seconds of time each time the error occurred. The solution to this would have been to make Git ignore the culprit files.
+
+Eclipse also has a number of issues importing code from another workspace, frequently causing R.java to become corrupted or the Java classes were not found by Eclipse. The first time this occurred it took a number of hours to solve the problem, but taking notes of the solution allowed us to solve it swiftly each time afterwards.
+
+\subsubsection{Learning Curve}
+The research process of development took longer than initially expected, the poor documentation of the Account Manager and SyncAdapter implementations meant doing a lot of extra reading around the topic to fully understand what was happening and how to implement it. Research began early, however, so the research time didn't take more than a day's worth of planned development.
+
+\subsubsection{Development Tablet Breaking}
+The Hudl development tablet, provided by John Ashley, suffered from a number of problems in its short lifetime. Firstly, the tablet was not intended for use as a development tablet - Tesco do not provide drivers for USB debugging. We managed to find a solution to this by forcing Windows to install the driver of another generic 
+Midway through development the Hudl tablet stopped working, reducing the number of tablets available for development. Fortunately, we were able to acquire another tablet from Dr. Eslambolchilar.
+
+\subsubsection{Google Maps Online Only}
+During the investigation into how to deal with the device not being connected to the internet, it became apparent that we were not able to provide Google Maps when the device was offline. This is stated in the Google Terms of Use. A solution was found, but as it breaches Google's Terms of Use it was avoided.
+
+\subsubsection{Scrapping Previous Code}
+The code initially presented to us, which came from Aberystwyth University, was not suitable to build upon. There was no functional database, poor user interfaces and an Open Street Map implementation. A day was spent analysing the code, trying to see if anything could be salvaged, but it was either redundant or poorly documented. A decision was made at the next team meeting, after everyone had a chance to review the comments and analysis, that development could progress faster if we started from scratch.
+
 \subsection{Chris Lewis - Android Interface Development}
+
+\subsubsection{Build system configuration}
+
+For this project, the development team did not employ a good build system. Git hub was not configured early on in project development and as a result, build path errors arose after each and every Git pull. This often slowed down development during team work sessions. Delaying overall progress. A solution to this issue would have been to tell Git to ignore the project properties, reducing the likelihood of problems occurring after each Git pull.
+
+\subsubsection{Android Screen Sizes}
+
+The application was developed to be available on multiple mobile and tablet screen sizes. This meant that numerous layout folders were required to house the individual layout files. Each folder contained up to 30 layout files. This created problems when a single layout was modified. The addition of a feature to a layout meant that all other screen sizes for the same layout also required modification. Apart from the obvious time consuming issues related to this problem, it also created further issues. If a single id of a feature was modified, again, so would all relevant layouts for individual screen sizes. This created programming conflicts between Lewis Hancock and myself. The modification of layout files meant that several merge conflicts arose during each git commit.\\
+
+After a short discussion, it was decided that the application development team would hold regular meetings to discuss each layout, while informing one another of any file modifications that took place. This ensured the team were using the same naming conventions for both features and layout files.
+
 \section{Learning Experience}
 \label{sec:learning-experience}
 \subsection{Tom Milner - API Development}
@@ -2761,11 +2933,24 @@ Tom and I often partook in pair programming which is promoted by our chosen Agil
 \subsubsection{User Interface Design}
 Another major learning outcome was learning how to develop intuitive interfaces that would be usable by a range of users with varying abilities. Many design principles and patterns were learned from a website called UI-Patterns\cite{uipatterns}. This website listed the most commonly used interface designs to overcome various problems. Such problems included how to display high quantities of data on a page. This was a problem encountered during the design of the \emph{all walks} and \emph{my walks} views. UI-Patterns suggested that a `load on scroll' or pagination technique should be used to prevent too much data being displayed at once. The pagination solution was adopted for use in the mentioned views which allowed users to select a page index to display a subset of the walks returned from the database.
 
-Since the web portal had to be designed for users with varying abilities, a concious effort had to be made to make the interface intuitive enough. The skills learned through doing this can be transferred to any other application that I develop in the future. Therefore, this was a good learning outcome from this project.
+Since the web portal had to be designed for users with varying abilities, a conscious effort had to be made to make the interface intuitive enough. The skills learned through doing this can be transferred to any other application that I develop in the future. Therefore, this was a good learning outcome from this project.
 
 \subsection{Lewis Hancock - Android Development}
+
 \subsection{Chris Lewis - Android Interface Development}
 
+\subsubsection{Time management}
+
+Due to a lack of industrial group project experience, time management created problems during the initial stages of this project. A shortage of available work sessions meant that the application fell behind the original time plan set out in Milestone 1. During the second half of the project, a team meeting was held to discuss all possible solutions. The team agreed that the current time-plan was not achievable based on the weekly development work day. The team learnt from this time management issue, by assigning an addition development work day to the weekly timetable.
+
+\subsubsection{User Interface Design}
+
+A second lesson learnt from conducting such a project was understanding how to design and develop both intuitive and aesthetically pleasing interfaces. These interfaces were also required to be usable by a broad range of users, with varying abilities. To ensure these requirements were met, several books and articles were studied. A notable set of interface design principles were \emph{Ben Shneiderman's eight gold rules of interaction design}. The design rules were used throughout the development of the application, as a form of benchmark. The design rules also ensured the application was developed to be intuitive. Gaining a sound understanding of user interface design rules and principles has allowed me to develop a second professional and intuitive Android application.   
+
+\subsubsection{Working in parallel}
+Similar to the first lesson learnt, learning to work in parallel with another team member proved to be challenging. Lewis Hancock was in charge of the majority of application programming while the majority of interface design was assigned to myself. This required constant communication to ensure the correct naming conventions, etc were used. This initially proved to be a problem during the initial stages of development. However during the latter stages of development, both group members adapted to this method of programming, and were able to efficiently work in parallel.
+
+>>>>>>> 2503dee5e6e7ab49dfa7feb60e79e7da95f1e456
 \section{Risk Analysis Review}
 \label{sec:risk-analysis-review}
 This section reviews the strategy that was adopted for risk management throughout the project. Firstly, a list of potential risks was discussed in Milestone 1. These risks were assigned likelihood and severity ratings to represent how likely the risk was to occur and how much impact it would have on the project respectively. In addition, a mitigation strategy was defined which aimed to minimize the effect of the risk on the project. Milestone 2 reviewed these risks, indicating those that had occurred and how they were overcome. New risks that were previously overlooked were also added to a revised risk analysis.
@@ -3022,6 +3207,10 @@ PERRSK17 was a risk that warned of team members going on vacation and leaving mo
 \subsection{Lewis Hancock - Android Development}
 \subsection{Chris Lewis - Android Interface Development}
 
+The main goals achieved during this project was the creation of presentable and intuitive user interfaces. Each interface received multiple stages of iteration and modification. When deemed complete, an interface was compared against Ben Shneiderman's golden rules, ensuring it conformed to all eight rules.\\
+
+The application uses user friendly text and button styles, allowing the application to be used be a wide range of users, with a variety of ability. The application's design ensures it appeals to both young and old users, allowing users to carry out tests efficiently. When presenting the application to a group of potential users, the feedback received was positive and enthusiastic.
+
 \section{Improvements}
 \label{sec:improvements}
 
@@ -3047,6 +3236,7 @@ Finally, since Adam was responsible for developing the web portal, he wrote all 
 \chapter*{Summary}
 \label{sec:summary}
 \addcontentsline{toc}{chapter}{Summary}
+\newpage
 
 %References as subsection
 \newpage

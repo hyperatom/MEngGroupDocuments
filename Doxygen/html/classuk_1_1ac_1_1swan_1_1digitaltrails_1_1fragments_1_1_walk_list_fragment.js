@@ -15,9 +15,12 @@ var classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment =
     [ "onStart", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment.html#ad30ec8ae4f8d54e6a8095fff4db011b1", null ],
     [ "setWalkList", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment.html#ad968cb36880ab53cdc99e690e09fc210", null ],
     [ "mAdapter", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment.html#aa092b25e6fad559ef03d2f7f0be6f691", null ],
+    [ "mCallback", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment.html#af887289d564f12d33172a0c0622f7f1d", null ],
     [ "mCurFilter", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment.html#a5acf4ef61210cc0c2ca02379621e1e75", null ],
     [ "mLayout", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment.html#ab3ae62a7e2ebef8610bf8dcffe8bca1a", null ],
     [ "mSearchView", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment.html#ae85be36590c4c79cdb464539678ddf72", null ],
     [ "mWalkIds", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment.html#ad139fcdf5608a476e92466b389229931", null ],
-    [ "mWalkList", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment.html#a922fb05349e2afdb386f5ce03fdf6a7e", null ]
+    [ "mWalkList", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment.html#a922fb05349e2afdb386f5ce03fdf6a7e", null ],
+    [ "TAG", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment.html#a285ffbedf11ff73fd8f3798770076a69", null ],
+    [ "WALK_SUMMARY_PROJECTION", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment.html#a457173fbe4c810b68c502aa91dab8960", null ]
 ];

@@ -3,20 +3,22 @@
 }
 
 
-Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider\+:\nopagebreak
+Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=241pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider__inherit__graph}
+\includegraphics[height=550pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider\+:\nopagebreak
+Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=241pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider__coll__graph}
+\includegraphics[height=550pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -38,12 +40,116 @@ Content\+Provider\+Result\mbox{[}$\,$\mbox{]} \hyperlink{classuk_1_1ac_1_1swan_1
 \item 
 Parcel\+File\+Descriptor \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aad1175ecf9f106554ff8f7a2f0f5df26}{open\+File} (Uri uri, String mode)  throws File\+Not\+Found\+Exception 
 \end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aab17572cc338694e91e0052e65e3883b}{log\+Query} (S\+Q\+Lite\+Query\+Builder builder, String\mbox{[}$\,$\mbox{]} projection, String selection, String sort\+Order)
+\begin{DoxyCompactList}\small\item\em Log queries in Honeycomb and higher. \end{DoxyCompactList}\item 
+Uri \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abac163f5ac9b99878de796e5ccba7bbf}{get\+Uri\+For\+Id} (long id, Uri uri)
+\begin{DoxyCompactList}\small\item\em Log queries in anything below honeycomb. \end{DoxyCompactList}\item 
+boolean \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aabe3f5a30aba3a8f738adde614c06acf}{is\+In\+Batch\+Mode} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Uri\+Matcher \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_afd9d77e8923413814d030dd003de4694}{build\+Uri\+Matcher} ()
+\begin{DoxyCompactList}\small\item\em Create Uri\+Matcher. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_database_handler}{Database\+Handler} \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a1bb18cdc9de00fe8911b455ded3b1dd8}{m\+Db\+Handler}
+\begin{DoxyCompactList}\small\item\em Handler for database. \end{DoxyCompactList}\item 
+final Thread\+Local$<$ Boolean $>$ \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a157bdfbd418ec0dcf1e2949cacb634d2}{m\+Is\+In\+Batch\+Mode} = new Thread\+Local$<$Boolean$>$()
+\begin{DoxyCompactList}\small\item\em Thread\+Local storage for batch processing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final Uri\+Matcher \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aae5896ef2dd052622382cd0675c4e6a9}{U\+R\+I\+\_\+\+M\+A\+T\+C\+H\+E\+R} = \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_afd9d77e8923413814d030dd003de4694}{build\+Uri\+Matcher}()
+\item 
+static final String \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ab837b138ec86184a611bee0ffb3b146e}{T\+A\+G} = \char`\"{}White\+Rock\+Content\+Provider\char`\"{}
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a612500111621e8629467a397ad1cc5b5}{W\+A\+L\+K\+\_\+\+L\+I\+S\+T} = 1
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aa54903f53f725f527d8149f32f0b8292}{W\+A\+L\+K\+\_\+\+I\+D} = 2
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a71e880d976f210c2b8f510afe82909c8}{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+L\+I\+S\+T} = 5
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a9c78851dd10751a0da78aaaab02769c1}{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+D} = 6
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a9a0a5b6ec087f4fbfd7cac265b5ad76e}{W\+E\+L\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T} = 10
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a75ae70eecce5937877d507dec5fc55bf}{W\+E\+L\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D} = 11
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a999f5ed7dc0f9c9238d2e3db9893fb71}{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T} = 15
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a559b5c5fa81fcf459bee57d6e8f2e410}{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D} = 16
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a3136aba0088be1e1d45c62211f44a0dc}{W\+E\+L\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T} = 20
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_afd9078666dbddb252f5dee69b65ef474}{W\+E\+L\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D} = 21
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a4d3e1134b06221174a35f25f9990b742}{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T} = 25
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a845e8091ba6fb7aa10d16e9e20457b61}{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D} = 26
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a0ee6192005b6c23f93ed38eec4208dcb}{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+L\+I\+S\+T} = 30
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a732ab2abae9784a35981aa3756c49a5c}{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+I\+D} = 31
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ad3bb5f6897eebb90b124907bda067738}{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+I\+S\+T} = 35
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ae965f98c33bfb673608befecc706146e}{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+I\+D} = 36
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a68614e903632646ad477995662528ce0}{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+M\+A\+G\+E\+\_\+\+L\+I\+S\+T} = 40
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a75690c85eb00311e582b1d7a6398c1b7}{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+M\+A\+G\+E\+\_\+\+I\+D} = 41
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aa2196c98c95653c1feff9189bc087c0b}{B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+L\+I\+S\+T} = 45
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a0c9d73ead8fa3e8a459398ef49f7e5a9}{B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+I\+D} = 46
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a5f0d54d19e3af999ebaa1973c229438e}{C\+O\+N\+T\+E\+N\+T\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+L\+I\+S\+T} = 50
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a4cf12c78e7d5b571b67f3f0ad86c256c}{C\+O\+N\+T\+E\+N\+T\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+I\+D} = 51
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abc90e2c396d119d0b14de1a5d897a823}{U\+S\+E\+R\+\_\+\+L\+I\+S\+T} = 55
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a6ee8c508cbee0e42aa763843a8042c4e}{U\+S\+E\+R\+\_\+\+I\+D} = 56
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_adf95750260c445fc06b6803b9e7f0790}{U\+S\+E\+R\+\_\+\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+L\+I\+S\+T} = 60
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a9f8c969ba8e543e8f265bad0a5780f16}{U\+S\+E\+R\+\_\+\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+I\+D} = 61
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a381eb074875f554185cc3492947ff03e}{S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+I\+S\+T} = 65
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a0e735f2f76d7e42dfb3381bff86d54e3}{S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+D} = 66
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a7fa836afaf048defaa6d1c4fc43cdef7}{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T} = 70
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a4f698a807b873cb5f9e177c45d8f8625}{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D} = 71
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ade0c53c0073f048dab64cb43b6c0fb8d}{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+L\+I\+S\+T} = 75
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aa87220999a3c0ec3eba1aa7daf3c4bf8}{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+I\+D} = 76
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ac1485aa99035bd990dfe5c51724387d5}{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+L\+I\+S\+T} = 80
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ae341a1383201b7d499a33d26aca9a0a7}{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+I\+D} = 81
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a8f3993ad6021196aad2866d0707b43e2}{W\+A\+L\+K\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+L\+I\+S\+T} = 85
+\item 
+static final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a861a3dfaefbc5249d86d1992764f4317}{W\+A\+L\+K\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+I\+D} = 86
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 \begin{DoxyAuthor}{Author}
 Lewis Hancock 
 \end{DoxyAuthor}
+
+
+Definition at line 30 of file White\+Rock\+Content\+Provider.\+java.
+
 
 
 \subsection{Member Function Documentation}
@@ -54,6 +160,30 @@ Lewis Hancock
 \item[{Array\+List$<$ Content\+Provider\+Operation $>$}]{operations}
 \end{DoxyParamCaption}
 ) throws Operation\+Application\+Exception}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ab573bd8caeb367dde2e4c95a6214ae1e}
+
+
+Definition at line 1052 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_afd9d77e8923413814d030dd003de4694}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!build\+Uri\+Matcher@{build\+Uri\+Matcher}}
+\index{build\+Uri\+Matcher@{build\+Uri\+Matcher}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{build\+Uri\+Matcher}]{\setlength{\rightskip}{0pt plus 5cm}static Uri\+Matcher uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+build\+Uri\+Matcher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_afd9d77e8923413814d030dd003de4694}
+
+
+Create Uri\+Matcher. 
+
+\begin{DoxyReturn}{Returns}
+the Uri\+Matcher to use. 
+
+
+\end{DoxyReturn}
+
+
+Definition at line 205 of file White\+Rock\+Content\+Provider.\+java.
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ada4e83c84f3ff3c81306424f411ee717}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!delete@{delete}}
 \index{delete@{delete}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
 \subsubsection[{delete}]{\setlength{\rightskip}{0pt plus 5cm}int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+delete (
@@ -63,6 +193,22 @@ Lewis Hancock
 \item[{String\mbox{[}$\,$\mbox{]}}]{selection\+Args}
 \end{DoxyParamCaption}
 )}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ada4e83c84f3ff3c81306424f411ee717}
+
+
+Definition at line 266 of file White\+Rock\+Content\+Provider.\+java.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ada4e83c84f3ff3c81306424f411ee717_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ac7cd4beaf0b759ae3cf75d053ab8994d}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!get\+Type@{get\+Type}}
 \index{get\+Type@{get\+Type}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
 \subsubsection[{get\+Type}]{\setlength{\rightskip}{0pt plus 5cm}String uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+get\+Type (
@@ -70,6 +216,70 @@ Lewis Hancock
 \item[{Uri}]{uri}
 \end{DoxyParamCaption}
 )}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ac7cd4beaf0b759ae3cf75d053ab8994d}
+
+
+Definition at line 443 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abac163f5ac9b99878de796e5ccba7bbf}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!get\+Uri\+For\+Id@{get\+Uri\+For\+Id}}
+\index{get\+Uri\+For\+Id@{get\+Uri\+For\+Id}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{get\+Uri\+For\+Id}]{\setlength{\rightskip}{0pt plus 5cm}Uri uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+get\+Uri\+For\+Id (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{Uri}]{uri}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abac163f5ac9b99878de796e5ccba7bbf}
+
+
+Log queries in anything below honeycomb. 
+
+Get the I\+D where we are inserting into 
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em uri} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em uri} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 1138 of file White\+Rock\+Content\+Provider.\+java.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abac163f5ac9b99878de796e5ccba7bbf_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abac163f5ac9b99878de796e5ccba7bbf_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abd025abd5279cb2b52f5bdd0aec026cb}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!insert@{insert}}
 \index{insert@{insert}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
 \subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}Uri uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+insert (
@@ -78,6 +288,85 @@ Lewis Hancock
 \item[{Content\+Values}]{values}
 \end{DoxyParamCaption}
 )}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abd025abd5279cb2b52f5bdd0aec026cb}
+
+
+Definition at line 527 of file White\+Rock\+Content\+Provider.\+java.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abd025abd5279cb2b52f5bdd0aec026cb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aabe3f5a30aba3a8f738adde614c06acf}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!is\+In\+Batch\+Mode@{is\+In\+Batch\+Mode}}
+\index{is\+In\+Batch\+Mode@{is\+In\+Batch\+Mode}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{is\+In\+Batch\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}boolean uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+is\+In\+Batch\+Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aabe3f5a30aba3a8f738adde614c06acf}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 1154 of file White\+Rock\+Content\+Provider.\+java.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aabe3f5a30aba3a8f738adde614c06acf_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aab17572cc338694e91e0052e65e3883b}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!log\+Query@{log\+Query}}
+\index{log\+Query@{log\+Query}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{log\+Query}]{\setlength{\rightskip}{0pt plus 5cm}void uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+log\+Query (
+\begin{DoxyParamCaption}
+\item[{S\+Q\+Lite\+Query\+Builder}]{builder, }
+\item[{String\mbox{[}$\,$\mbox{]}}]{projection, }
+\item[{String}]{selection, }
+\item[{String}]{sort\+Order}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aab17572cc338694e91e0052e65e3883b}
+
+
+Log queries in Honeycomb and higher. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em builder} & \\
+\hline
+{\em projection} & \\
+\hline
+{\em selection} & \\
+\hline
+{\em sort\+Order} & \\
+\hline
+{\em builder} & \\
+\hline
+{\em projection} & \\
+\hline
+{\em selection} & \\
+\hline
+{\em sort\+Order} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1098 of file White\+Rock\+Content\+Provider.\+java.
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_acd2f75ed715d567cdfd10a85f1d5cde4}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!on\+Create@{on\+Create}}
 \index{on\+Create@{on\+Create}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
 \subsubsection[{on\+Create}]{\setlength{\rightskip}{0pt plus 5cm}boolean uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+on\+Create (
@@ -85,6 +374,10 @@ Lewis Hancock
 {}
 \end{DoxyParamCaption}
 )}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_acd2f75ed715d567cdfd10a85f1d5cde4}
+
+
+Definition at line 256 of file White\+Rock\+Content\+Provider.\+java.
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aad1175ecf9f106554ff8f7a2f0f5df26}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!open\+File@{open\+File}}
 \index{open\+File@{open\+File}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
 \subsubsection[{open\+File}]{\setlength{\rightskip}{0pt plus 5cm}Parcel\+File\+Descriptor uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+open\+File (
@@ -93,6 +386,10 @@ Lewis Hancock
 \item[{String}]{mode}
 \end{DoxyParamCaption}
 ) throws File\+Not\+Found\+Exception}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aad1175ecf9f106554ff8f7a2f0f5df26}
+
+
+Definition at line 1074 of file White\+Rock\+Content\+Provider.\+java.
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ae88373574109e457a29ffd6f0bca6be2}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!query@{query}}
 \index{query@{query}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
 \subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}Cursor uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+query (
@@ -104,6 +401,10 @@ Lewis Hancock
 \item[{String}]{sort\+Order}
 \end{DoxyParamCaption}
 )}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ae88373574109e457a29ffd6f0bca6be2}
+
+
+Definition at line 640 of file White\+Rock\+Content\+Provider.\+java.
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a27b0a0434512cc107c55c205b244c086}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!update@{update}}
 \index{update@{update}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
 \subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+update (
@@ -116,6 +417,313 @@ Lewis Hancock
 )}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a27b0a0434512cc107c55c205b244c086}
 
 
+Definition at line 870 of file White\+Rock\+Content\+Provider.\+java.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a27b0a0434512cc107c55c205b244c086_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a0c9d73ead8fa3e8a459398ef49f7e5a9}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+I\+D@{B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+I\+D}}
+\index{B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+I\+D@{B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+I\+D = 46\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a0c9d73ead8fa3e8a459398ef49f7e5a9}
+
+
+Definition at line 121 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aa2196c98c95653c1feff9189bc087c0b}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+L\+I\+S\+T@{B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+L\+I\+S\+T}}
+\index{B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+L\+I\+S\+T@{B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+B\+U\+G\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+L\+I\+S\+T = 45\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aa2196c98c95653c1feff9189bc087c0b}
+
+
+Definition at line 117 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a4cf12c78e7d5b571b67f3f0ad86c256c}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!C\+O\+N\+T\+E\+N\+T\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+I\+D@{C\+O\+N\+T\+E\+N\+T\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+I\+D}}
+\index{C\+O\+N\+T\+E\+N\+T\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+I\+D@{C\+O\+N\+T\+E\+N\+T\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{C\+O\+N\+T\+E\+N\+T\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+C\+O\+N\+T\+E\+N\+T\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+I\+D = 51\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a4cf12c78e7d5b571b67f3f0ad86c256c}
+
+
+Definition at line 129 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a5f0d54d19e3af999ebaa1973c229438e}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!C\+O\+N\+T\+E\+N\+T\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+L\+I\+S\+T@{C\+O\+N\+T\+E\+N\+T\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+L\+I\+S\+T}}
+\index{C\+O\+N\+T\+E\+N\+T\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+L\+I\+S\+T@{C\+O\+N\+T\+E\+N\+T\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{C\+O\+N\+T\+E\+N\+T\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+C\+O\+N\+T\+E\+N\+T\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+L\+I\+S\+T = 50\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a5f0d54d19e3af999ebaa1973c229438e}
+
+
+Definition at line 125 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a559b5c5fa81fcf459bee57d6e8f2e410}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D@{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D}}
+\index{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D@{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D = 16\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a559b5c5fa81fcf459bee57d6e8f2e410}
+
+
+Definition at line 73 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a999f5ed7dc0f9c9238d2e3db9893fb71}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T@{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T}}
+\index{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T@{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T = 15\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a999f5ed7dc0f9c9238d2e3db9893fb71}
+
+
+Definition at line 69 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a845e8091ba6fb7aa10d16e9e20457b61}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D@{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D}}
+\index{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D@{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D = 26\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a845e8091ba6fb7aa10d16e9e20457b61}
+
+
+Definition at line 89 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a4d3e1134b06221174a35f25f9990b742}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T@{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T}}
+\index{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T@{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+E\+N\+G\+L\+I\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T = 25\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a4d3e1134b06221174a35f25f9990b742}
+
+
+Definition at line 85 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a1bb18cdc9de00fe8911b455ded3b1dd8}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!m\+Db\+Handler@{m\+Db\+Handler}}
+\index{m\+Db\+Handler@{m\+Db\+Handler}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{m\+Db\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Database\+Handler} uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+m\+Db\+Handler\hspace{0.3cm}{\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a1bb18cdc9de00fe8911b455ded3b1dd8}
+
+
+Handler for database. 
+
+
+
+Definition at line 191 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a157bdfbd418ec0dcf1e2949cacb634d2}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!m\+Is\+In\+Batch\+Mode@{m\+Is\+In\+Batch\+Mode}}
+\index{m\+Is\+In\+Batch\+Mode@{m\+Is\+In\+Batch\+Mode}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{m\+Is\+In\+Batch\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}final Thread\+Local$<$Boolean$>$ uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+m\+Is\+In\+Batch\+Mode = new Thread\+Local$<$Boolean$>$()\hspace{0.3cm}{\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a157bdfbd418ec0dcf1e2949cacb634d2}
+
+
+Thread\+Local storage for batch processing. 
+
+
+
+Definition at line 196 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a0e735f2f76d7e42dfb3381bff86d54e3}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+D@{S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+D}}
+\index{S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+D@{S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+D = 66\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a0e735f2f76d7e42dfb3381bff86d54e3}
+
+
+Definition at line 153 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a381eb074875f554185cc3492947ff03e}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+I\+S\+T@{S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+I\+S\+T}}
+\index{S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+I\+S\+T@{S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+I\+S\+T = 65\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a381eb074875f554185cc3492947ff03e}
+
+
+Definition at line 149 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ab837b138ec86184a611bee0ffb3b146e}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!T\+A\+G@{T\+A\+G}}
+\index{T\+A\+G@{T\+A\+G}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{T\+A\+G}]{\setlength{\rightskip}{0pt plus 5cm}final String uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+T\+A\+G = \char`\"{}White\+Rock\+Content\+Provider\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ab837b138ec86184a611bee0ffb3b146e}
+
+
+Definition at line 39 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aae5896ef2dd052622382cd0675c4e6a9}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!U\+R\+I\+\_\+\+M\+A\+T\+C\+H\+E\+R@{U\+R\+I\+\_\+\+M\+A\+T\+C\+H\+E\+R}}
+\index{U\+R\+I\+\_\+\+M\+A\+T\+C\+H\+E\+R@{U\+R\+I\+\_\+\+M\+A\+T\+C\+H\+E\+R}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{U\+R\+I\+\_\+\+M\+A\+T\+C\+H\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}final Uri\+Matcher uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+U\+R\+I\+\_\+\+M\+A\+T\+C\+H\+E\+R = {\bf build\+Uri\+Matcher}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aae5896ef2dd052622382cd0675c4e6a9}
+
+
+Definition at line 35 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a6ee8c508cbee0e42aa763843a8042c4e}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!U\+S\+E\+R\+\_\+\+I\+D@{U\+S\+E\+R\+\_\+\+I\+D}}
+\index{U\+S\+E\+R\+\_\+\+I\+D@{U\+S\+E\+R\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{U\+S\+E\+R\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+U\+S\+E\+R\+\_\+\+I\+D = 56\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a6ee8c508cbee0e42aa763843a8042c4e}
+
+
+Definition at line 137 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abc90e2c396d119d0b14de1a5d897a823}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!U\+S\+E\+R\+\_\+\+L\+I\+S\+T@{U\+S\+E\+R\+\_\+\+L\+I\+S\+T}}
+\index{U\+S\+E\+R\+\_\+\+L\+I\+S\+T@{U\+S\+E\+R\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{U\+S\+E\+R\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+U\+S\+E\+R\+\_\+\+L\+I\+S\+T = 55\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abc90e2c396d119d0b14de1a5d897a823}
+
+
+Definition at line 133 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a9f8c969ba8e543e8f265bad0a5780f16}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!U\+S\+E\+R\+\_\+\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+I\+D@{U\+S\+E\+R\+\_\+\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+I\+D}}
+\index{U\+S\+E\+R\+\_\+\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+I\+D@{U\+S\+E\+R\+\_\+\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{U\+S\+E\+R\+\_\+\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+U\+S\+E\+R\+\_\+\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+I\+D = 61\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a9f8c969ba8e543e8f265bad0a5780f16}
+
+
+Definition at line 145 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_adf95750260c445fc06b6803b9e7f0790}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!U\+S\+E\+R\+\_\+\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+L\+I\+S\+T@{U\+S\+E\+R\+\_\+\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+L\+I\+S\+T}}
+\index{U\+S\+E\+R\+\_\+\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+L\+I\+S\+T@{U\+S\+E\+R\+\_\+\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{U\+S\+E\+R\+\_\+\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+U\+S\+E\+R\+\_\+\+S\+E\+T\+T\+I\+N\+G\+S\+\_\+\+L\+I\+S\+T = 60\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_adf95750260c445fc06b6803b9e7f0790}
+
+
+Definition at line 141 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aa54903f53f725f527d8149f32f0b8292}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+L\+K\+\_\+\+I\+D@{W\+A\+L\+K\+\_\+\+I\+D}}
+\index{W\+A\+L\+K\+\_\+\+I\+D@{W\+A\+L\+K\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+L\+K\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+L\+K\+\_\+\+I\+D = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aa54903f53f725f527d8149f32f0b8292}
+
+
+Definition at line 49 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a612500111621e8629467a397ad1cc5b5}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+L\+K\+\_\+\+L\+I\+S\+T@{W\+A\+L\+K\+\_\+\+L\+I\+S\+T}}
+\index{W\+A\+L\+K\+\_\+\+L\+I\+S\+T@{W\+A\+L\+K\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+L\+K\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+L\+K\+\_\+\+L\+I\+S\+T = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a612500111621e8629467a397ad1cc5b5}
+
+
+Definition at line 45 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a861a3dfaefbc5249d86d1992764f4317}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+L\+K\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+I\+D@{W\+A\+L\+K\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+I\+D}}
+\index{W\+A\+L\+K\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+I\+D@{W\+A\+L\+K\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+L\+K\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+L\+K\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+I\+D = 86\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a861a3dfaefbc5249d86d1992764f4317}
+
+
+Definition at line 185 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a8f3993ad6021196aad2866d0707b43e2}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+L\+K\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+L\+I\+S\+T@{W\+A\+L\+K\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+L\+I\+S\+T}}
+\index{W\+A\+L\+K\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+L\+I\+S\+T@{W\+A\+L\+K\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+L\+K\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+L\+K\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+L\+I\+S\+T = 85\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a8f3993ad6021196aad2866d0707b43e2}
+
+
+Definition at line 181 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a732ab2abae9784a35981aa3756c49a5c}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+I\+D@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+I\+D}}
+\index{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+I\+D@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+I\+D = 31\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a732ab2abae9784a35981aa3756c49a5c}
+
+
+Definition at line 97 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a0ee6192005b6c23f93ed38eec4208dcb}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+L\+I\+S\+T@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+L\+I\+S\+T}}
+\index{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+L\+I\+S\+T@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+L\+I\+S\+T = 30\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a0ee6192005b6c23f93ed38eec4208dcb}
+
+
+Definition at line 93 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a9c78851dd10751a0da78aaaab02769c1}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+D@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+D}}
+\index{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+D@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+D = 6\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a9c78851dd10751a0da78aaaab02769c1}
+
+
+Definition at line 57 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a75690c85eb00311e582b1d7a6398c1b7}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+M\+A\+G\+E\+\_\+\+I\+D@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+M\+A\+G\+E\+\_\+\+I\+D}}
+\index{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+M\+A\+G\+E\+\_\+\+I\+D@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+M\+A\+G\+E\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+M\+A\+G\+E\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+M\+A\+G\+E\+\_\+\+I\+D = 41\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a75690c85eb00311e582b1d7a6398c1b7}
+
+
+Definition at line 113 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a68614e903632646ad477995662528ce0}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+M\+A\+G\+E\+\_\+\+L\+I\+S\+T@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+M\+A\+G\+E\+\_\+\+L\+I\+S\+T}}
+\index{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+M\+A\+G\+E\+\_\+\+L\+I\+S\+T@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+M\+A\+G\+E\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+M\+A\+G\+E\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+I\+M\+A\+G\+E\+\_\+\+L\+I\+S\+T = 40\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a68614e903632646ad477995662528ce0}
+
+
+Definition at line 109 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a71e880d976f210c2b8f510afe82909c8}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+L\+I\+S\+T@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+L\+I\+S\+T}}
+\index{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+L\+I\+S\+T@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+L\+I\+S\+T = 5\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a71e880d976f210c2b8f510afe82909c8}
+
+
+Definition at line 53 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ae965f98c33bfb673608befecc706146e}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+I\+D@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+I\+D}}
+\index{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+I\+D@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+I\+D = 36\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ae965f98c33bfb673608befecc706146e}
+
+
+Definition at line 105 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ad3bb5f6897eebb90b124907bda067738}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+I\+S\+T@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+I\+S\+T}}
+\index{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+I\+S\+T@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+I\+S\+T = 35\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ad3bb5f6897eebb90b124907bda067738}
+
+
+Definition at line 101 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a4f698a807b873cb5f9e177c45d8f8625}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D}}
+\index{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D = 71\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a4f698a807b873cb5f9e177c45d8f8625}
+
+
+Definition at line 161 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a7fa836afaf048defaa6d1c4fc43cdef7}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T}}
+\index{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T = 70\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a7fa836afaf048defaa6d1c4fc43cdef7}
+
+
+Definition at line 157 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aa87220999a3c0ec3eba1aa7daf3c4bf8}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+I\+D@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+I\+D}}
+\index{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+I\+D@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+I\+D = 76\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aa87220999a3c0ec3eba1aa7daf3c4bf8}
+
+
+Definition at line 169 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ade0c53c0073f048dab64cb43b6c0fb8d}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+L\+I\+S\+T@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+L\+I\+S\+T}}
+\index{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+L\+I\+S\+T@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+L\+I\+S\+T = 75\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ade0c53c0073f048dab64cb43b6c0fb8d}
+
+
+Definition at line 165 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ae341a1383201b7d499a33d26aca9a0a7}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+I\+D@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+I\+D}}
+\index{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+I\+D@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+I\+D = 81\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ae341a1383201b7d499a33d26aca9a0a7}
+
+
+Definition at line 177 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ac1485aa99035bd990dfe5c51724387d5}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+L\+I\+S\+T@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+L\+I\+S\+T}}
+\index{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+L\+I\+S\+T@{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+E\+D\+I\+A\+\_\+\+W\+I\+T\+H\+\_\+\+E\+N\+G\+L\+I\+S\+H\+\_\+\+L\+I\+S\+T = 80\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ac1485aa99035bd990dfe5c51724387d5}
+
+
+Definition at line 173 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a75ae70eecce5937877d507dec5fc55bf}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+E\+L\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D@{W\+E\+L\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D}}
+\index{W\+E\+L\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D@{W\+E\+L\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+E\+L\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+E\+L\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D = 11\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a75ae70eecce5937877d507dec5fc55bf}
+
+
+Definition at line 65 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a9a0a5b6ec087f4fbfd7cac265b5ad76e}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+E\+L\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T@{W\+E\+L\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T}}
+\index{W\+E\+L\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T@{W\+E\+L\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+E\+L\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+E\+L\+S\+H\+\_\+\+W\+A\+L\+K\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a9a0a5b6ec087f4fbfd7cac265b5ad76e}
+
+
+Definition at line 61 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_afd9078666dbddb252f5dee69b65ef474}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+E\+L\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D@{W\+E\+L\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D}}
+\index{W\+E\+L\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D@{W\+E\+L\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+E\+L\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+E\+L\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+I\+D = 21\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_afd9078666dbddb252f5dee69b65ef474}
+
+
+Definition at line 81 of file White\+Rock\+Content\+Provider.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a3136aba0088be1e1d45c62211f44a0dc}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}!W\+E\+L\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T@{W\+E\+L\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T}}
+\index{W\+E\+L\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T@{W\+E\+L\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+White\+Rock\+Content\+Provider}}
+\subsubsection[{W\+E\+L\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+database.\+White\+Rock\+Content\+Provider.\+W\+E\+L\+S\+H\+\_\+\+W\+A\+Y\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+R\+\_\+\+L\+I\+S\+T = 20\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a3136aba0088be1e1d45c62211f44a0dc}
+
+
+Definition at line 77 of file White\+Rock\+Content\+Provider.\+java.
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/uk/ac/swan/digitaltrails/database/\hyperlink{_white_rock_content_provider_8java}{White\+Rock\+Content\+Provider.\+java}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Admin/\+Documents/\+Work/\+Digital\+Trails/src/uk/ac/swan/digitaltrails/database/\hyperlink{_white_rock_content_provider_8java}{White\+Rock\+Content\+Provider.\+java}\end{DoxyCompactItemize}

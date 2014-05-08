@@ -12,5 +12,5 @@ var namespaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1database =
     [ "WalkDataSource", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source" ],
     [ "WaypointDataSource", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source" ],
     [ "WhiteRockContentProvider", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider" ],
-    [ "WhiteRockContract", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract.html", null ]
+    [ "WhiteRockContract", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract" ]
 ];

@@ -1,0 +1,4 @@
+<map id="uk.ac.swan.digitaltrails.fragments.MapFragment.defaultMapConfig" name="uk.ac.swan.digitaltrails.fragments.MapFragment.defaultMapConfig">
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#a251d8dcb6c046e55460b9074fb71666f" title="Initialise the map. " alt="" coords="272,5,491,47"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#acf60cc97f0903a4f54364d0ed20ded0a" title="uk.ac.swan.digitaltrails.fragments.\lMapFragment.onStart" alt="" coords="539,5,757,47"/>
+</map>

@@ -1,7 +1,6 @@
 var searchData=
 [
   ['walk_2ejava',['Walk.java',['../_walk_8java.html',1,'']]],
-  ['walkactivity_2ejava',['WalkActivity.java',['../_walk_activity_8java.html',1,'']]],
   ['walkdatasource_2ejava',['WalkDataSource.java',['../_walk_data_source_8java.html',1,'']]],
   ['walkdescription_2ejava',['WalkDescription.java',['../_walk_description_8java.html',1,'']]],
   ['walkdetailsfragment_2ejava',['WalkDetailsFragment.java',['../_walk_details_fragment_8java.html',1,'']]],
@@ -11,7 +10,6 @@ var searchData=
   ['waypoint_2ejava',['Waypoint.java',['../_waypoint_8java.html',1,'']]],
   ['waypointdatasource_2ejava',['WaypointDataSource.java',['../_waypoint_data_source_8java.html',1,'']]],
   ['waypointdescription_2ejava',['WaypointDescription.java',['../_waypoint_description_8java.html',1,'']]],
-  ['waypointlistactivity_2ejava',['WaypointListActivity.java',['../_waypoint_list_activity_8java.html',1,'']]],
   ['welshwalkdescription_2ejava',['WelshWalkDescription.java',['../_welsh_walk_description_8java.html',1,'']]],
   ['welshwaypointdescription_2ejava',['WelshWaypointDescription.java',['../_welsh_waypoint_description_8java.html',1,'']]],
   ['whiterockapp_2ejava',['WhiteRockApp.java',['../_white_rock_app_8java.html',1,'']]],

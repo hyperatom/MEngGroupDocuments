@@ -1,5 +1,5 @@
 <map id="uk.ac.swan.digitaltrails.components.Media" name="uk.ac.swan.digitaltrails.components.Media">
-<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_audio.html" title="uk.ac.swan.digitaltrails.components.\lAudio" alt="" coords="287,5,520,47"/>
-<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_photo.html" title="uk.ac.swan.digitaltrails.components.\lPhoto" alt="" coords="287,71,520,112"/>
-<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_video.html" title="uk.ac.swan.digitaltrails.components.\lVideo" alt="" coords="287,136,520,177"/>
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_audio.html" title="{uk.ac.swan.digitaltrails.components.\lAudio\n||+ Audio()\l+ Audio()\l}" alt="" coords="5,307,239,413"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_photo.html" title="{uk.ac.swan.digitaltrails.components.\lPhoto\n||+ Photo()\l+ Photo()\l}" alt="" coords="263,307,496,413"/>
+<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_video.html" title="{uk.ac.swan.digitaltrails.components.\lVideo\n||+ Video()\l+ Video()\l}" alt="" coords="520,307,753,413"/>
 </map>

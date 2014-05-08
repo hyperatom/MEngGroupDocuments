@@ -7,6 +7,7 @@ var classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_account =
     [ "toString", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_account.html#a830add867df07a50538ee11994108c8d", null ],
     [ "writeToParcel", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_account.html#aebcfc94a0fca6f7bf11f0e154c240054", null ],
     [ "authToken", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_account.html#a608621dcce2a26a28bf7cff4898700a7", null ],
+    [ "CREATOR", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_account.html#a6de506f36d5240760bcd36208be882ed", null ],
     [ "email", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_account.html#abd57b618dc4da21e752c066057b4d58a", null ],
     [ "first_name", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_account.html#a358d1327772c4154bac4cfaa1b3df8b4", null ],
     [ "id", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_account.html#aebe5ad9be12a09ad6d182cabaf964862", null ],

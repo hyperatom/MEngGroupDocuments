@@ -3,7 +3,8 @@
 }
 
 
-Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Audio\+Data\+Source\+:\nopagebreak
+Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Audio\+Data\+Source\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,11 +13,12 @@ Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Audio\+Data\
 \end{figure}
 
 
-Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Audio\+Data\+Source\+:\nopagebreak
+Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Audio\+Data\+Source\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=253pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source__coll__graph}
+\includegraphics[width=259pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -35,6 +37,16 @@ List$<$ \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_audi
 \item 
 \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source_ad1eb044c2825de59cf817a1bc5475242}{Audio\+Data\+Source} (Context context)
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_audio}{Audio} \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source_a863754d0b9b837003d7138467952b1cb}{cursor\+To\+Audio} (Cursor cursor)
+\begin{DoxyCompactList}\small\item\em Create Audio from the cursor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source_aba39b0e1f15dae42786a0094543efc05}{T\+A\+G} = \char`\"{}Audio\+Data\+Source\char`\"{}
+\begin{DoxyCompactList}\small\item\em static constant tag for the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
@@ -42,6 +54,10 @@ List$<$ \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_audi
 \begin{DoxyAuthor}{Author}
 Lewis Hancock Data Access Object for the Audio component. 
 \end{DoxyAuthor}
+
+
+Definition at line 16 of file Audio\+Data\+Source.\+java.
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -63,6 +79,10 @@ Constructor.
 \end{DoxyParams}
 
 
+Definition at line 26 of file Audio\+Data\+Source.\+java.
+
+
+
 \subsection{Member Function Documentation}
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source_ad6b609ca12667a0b84ca29980bc009bf}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source}!create\+Audio@{create\+Audio}}
 \index{create\+Audio@{create\+Audio}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source}}
@@ -79,6 +99,57 @@ Constructor.
 \begin{DoxyReturn}{Returns}
 Audio component which is created 
 \end{DoxyReturn}
+
+
+Definition at line 35 of file Audio\+Data\+Source.\+java.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source_ad6b609ca12667a0b84ca29980bc009bf_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source_a863754d0b9b837003d7138467952b1cb}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source}!cursor\+To\+Audio@{cursor\+To\+Audio}}
+\index{cursor\+To\+Audio@{cursor\+To\+Audio}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source}}
+\subsubsection[{cursor\+To\+Audio}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Audio} uk.\+ac.\+swan.\+digitaltrails.\+database.\+Audio\+Data\+Source.\+cursor\+To\+Audio (
+\begin{DoxyParamCaption}
+\item[{Cursor}]{cursor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source_a863754d0b9b837003d7138467952b1cb}
+
+
+Create Audio from the cursor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cursor} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New Audio. 
+\end{DoxyReturn}
+
+
+Definition at line 100 of file Audio\+Data\+Source.\+java.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source_a863754d0b9b837003d7138467952b1cb_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source_aa68823a501806f868b17856d5c3da570}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source}!delete\+Audio@{delete\+Audio}}
 \index{delete\+Audio@{delete\+Audio}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source}}
 \subsubsection[{delete\+Audio}]{\setlength{\rightskip}{0pt plus 5cm}void uk.\+ac.\+swan.\+digitaltrails.\+database.\+Audio\+Data\+Source.\+delete\+Audio (
@@ -95,6 +166,10 @@ Deletes an audio file from the database.
 {\em audio} & The audio file to delete \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 50 of file Audio\+Data\+Source.\+java.
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source_acf590b5524ba0406a589bbad130efb4e}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source}!get\+All\+Audio@{get\+All\+Audio}}
 \index{get\+All\+Audio@{get\+All\+Audio}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source}}
 \subsubsection[{get\+All\+Audio}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Audio}$>$ uk.\+ac.\+swan.\+digitaltrails.\+database.\+Audio\+Data\+Source.\+get\+All\+Audio (
@@ -109,6 +184,22 @@ Get all audio files in the database.
 \begin{DoxyReturn}{Returns}
 A List of all audio files 
 \end{DoxyReturn}
+
+
+Definition at line 60 of file Audio\+Data\+Source.\+java.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source_acf590b5524ba0406a589bbad130efb4e_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source_a7ac8e452785120556a7007da429203ed}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source}!get\+All\+Audio\+At\+Waypoint@{get\+All\+Audio\+At\+Waypoint}}
 \index{get\+All\+Audio\+At\+Waypoint@{get\+All\+Audio\+At\+Waypoint}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source}}
 \subsubsection[{get\+All\+Audio\+At\+Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Audio}$>$ uk.\+ac.\+swan.\+digitaltrails.\+database.\+Audio\+Data\+Source.\+get\+All\+Audio\+At\+Waypoint (
@@ -130,6 +221,36 @@ List of Audio objects
 \end{DoxyReturn}
 
 
+Definition at line 81 of file Audio\+Data\+Source.\+java.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source_a7ac8e452785120556a7007da429203ed_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source_aba39b0e1f15dae42786a0094543efc05}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source}!T\+A\+G@{T\+A\+G}}
+\index{T\+A\+G@{T\+A\+G}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Audio\+Data\+Source}}
+\subsubsection[{T\+A\+G}]{\setlength{\rightskip}{0pt plus 5cm}final String uk.\+ac.\+swan.\+digitaltrails.\+database.\+Audio\+Data\+Source.\+T\+A\+G = \char`\"{}Audio\+Data\+Source\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source_aba39b0e1f15dae42786a0094543efc05}
+
+
+static constant tag for the class. 
+
+
+
+Definition at line 21 of file Audio\+Data\+Source.\+java.
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/uk/ac/swan/digitaltrails/database/\hyperlink{_audio_data_source_8java}{Audio\+Data\+Source.\+java}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Admin/\+Documents/\+Work/\+Digital\+Trails/src/uk/ac/swan/digitaltrails/database/\hyperlink{_audio_data_source_8java}{Audio\+Data\+Source.\+java}\end{DoxyCompactItemize}

@@ -4,7 +4,7 @@ var dir_d277bc7844c45ac1e9bb023199ae6319 =
       [ "AccountAuthenticator", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator" ]
     ] ],
     [ "AccountGeneral.java", "_account_general_8java.html", [
-      [ "AccountGeneral", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_general.html", null ]
+      [ "AccountGeneral", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_general.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_general" ]
     ] ],
     [ "AuthenticatorActivity.java", "_authenticator_activity_8java.html", [
       [ "AuthenticatorActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity" ]

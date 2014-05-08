@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('classuk_1_1ac_1_1swan_1_1digitaltrails
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">uk.ac.swan.digitaltrails.database.DescriptionDataSource Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -118,21 +119,23 @@ Inheritance diagram for uk.ac.swan.digitaltrails.database.DescriptionDataSource:
 <div class="dyncontent">
 <div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source__inherit__graph.png" border="0" usemap="#uk_8ac_8swan_8digitaltrails_8database_8_description_data_source_inherit__map" alt="Inheritance graph"/></div>
 <map name="uk_8ac_8swan_8digitaltrails_8database_8_description_data_source_inherit__map" id="uk_8ac_8swan_8digitaltrails_8database_8_description_data_source_inherit__map">
-<area shape="rect" id="node3" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_english_walk_description_data_source.html" title="uk.ac.swan.digitaltrails.database.\lEnglishWalkDescriptionDataSource" alt="" coords="543,5,771,47"/><area shape="rect" id="node4" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_english_waypoint_description_data_source.html" title="uk.ac.swan.digitaltrails.database.\lEnglishWaypointDescriptionDataSource" alt="" coords="531,71,784,112"/><area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html" title="Class to define methods for DataSources. " alt="" coords="5,39,220,80"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<area shape="rect" id="node3" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_english_walk_description_data_source.html" title="{uk.ac.swan.digitaltrails.database.\lEnglishWalkDescriptionDataSource\n|&#45; TAG\l|+ EnglishWalkDescriptionData\lSource()\l+ getAllDescriptions()\l# cursorToDescription()\l}" alt="" coords="5,476,233,612"/><area shape="rect" id="node4" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_english_waypoint_description_data_source.html" title="{uk.ac.swan.digitaltrails.database.\lEnglishWaypointDescriptionDataSource\n||+ EnglishWaypointDescription\lDataSource()\l+ getAllDescriptions()\l# cursorToDescription()\l}" alt="" coords="258,476,511,612"/><area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html" title="Abstract class to define methods for DataSources. " alt="" coords="144,5,359,127"/></map>
+</div>
 <div class="dynheader">
 Collaboration diagram for uk.ac.swan.digitaltrails.database.DescriptionDataSource:</div>
 <div class="dyncontent">
 <div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source__coll__graph.png" border="0" usemap="#uk_8ac_8swan_8digitaltrails_8database_8_description_data_source_coll__map" alt="Collaboration graph"/></div>
 <map name="uk_8ac_8swan_8digitaltrails_8database_8_description_data_source_coll__map" id="uk_8ac_8swan_8digitaltrails_8database_8_description_data_source_coll__map">
-<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html" title="Class to define methods for DataSources. " alt="" coords="21,95,235,136"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html" title="Abstract class to define methods for DataSources. " alt="" coords="25,145,239,237"/></map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a38ab06958fd70330e566d3883f4bf130"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html#a38ab06958fd70330e566d3883f4bf130">DescriptionDataSource</a> (Context context)</td></tr>
+<tr class="memdesc:a38ab06958fd70330e566d3883f4bf130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a38ab06958fd70330e566d3883f4bf130">More...</a><br /></td></tr>
 <tr class="separator:a38ab06958fd70330e566d3883f4bf130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefe52e0afdee53f7a300c48e19299ecc"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html#aefe52e0afdee53f7a300c48e19299ecc">addDescription</a> (String title, String shortDescr, String longDescr, long foreignId)</td></tr>
+<tr class="memdesc:aefe52e0afdee53f7a300c48e19299ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the description to the database.  <a href="#aefe52e0afdee53f7a300c48e19299ecc">More...</a><br /></td></tr>
 <tr class="separator:aefe52e0afdee53f7a300c48e19299ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a523009d78ef9c5f1144f41908da8b35e"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html#a523009d78ef9c5f1144f41908da8b35e">addDescription</a> (<a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_description.html">Description</a> d)</td></tr>
 <tr class="memdesc:a523009d78ef9c5f1144f41908da8b35e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a Description.  <a href="#a523009d78ef9c5f1144f41908da8b35e">More...</a><br /></td></tr>
@@ -157,6 +160,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a134b9b153811548f205493e00481464f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html">uk.ac.swan.digitaltrails.database.DataSource</a></td></tr>
 <tr class="memitem:aafb301a6dac3a3c63068a9798ceebff2 inherit pub_methods_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html#aafb301a6dac3a3c63068a9798ceebff2">DataSource</a> (Context context)</td></tr>
+<tr class="memdesc:aafb301a6dac3a3c63068a9798ceebff2 inherit pub_methods_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aafb301a6dac3a3c63068a9798ceebff2">More...</a><br /></td></tr>
 <tr class="separator:aafb301a6dac3a3c63068a9798ceebff2 inherit pub_methods_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -168,19 +172,32 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ad5ab4f6ae6c94d72a77bd53a914aa8fa"><td class="memItemLeft" align="right" valign="top">Uri&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html#ad5ab4f6ae6c94d72a77bd53a914aa8fa">uri</a></td></tr>
+<tr class="memdesc:ad5ab4f6ae6c94d72a77bd53a914aa8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Uri of the table to access.  <a href="#ad5ab4f6ae6c94d72a77bd53a914aa8fa">More...</a><br /></td></tr>
 <tr class="separator:ad5ab4f6ae6c94d72a77bd53a914aa8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa80b002da9e2cf4b83d25f13ca7843c0"><td class="memItemLeft" align="right" valign="top">String[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html#aa80b002da9e2cf4b83d25f13ca7843c0">allColumns</a></td></tr>
+<tr class="memdesc:aa80b002da9e2cf4b83d25f13ca7843c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">All columns in the table.  <a href="#aa80b002da9e2cf4b83d25f13ca7843c0">More...</a><br /></td></tr>
 <tr class="separator:aa80b002da9e2cf4b83d25f13ca7843c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html">uk.ac.swan.digitaltrails.database.DataSource</a></td></tr>
 <tr class="memitem:a1daf2406165149f28205c4ac895ee858 inherit pro_attribs_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source"><td class="memItemLeft" align="right" valign="top">Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html#a1daf2406165149f28205c4ac895ee858">mContext</a></td></tr>
+<tr class="memdesc:a1daf2406165149f28205c4ac895ee858 inherit pro_attribs_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source"><td class="mdescLeft">&#160;</td><td class="mdescRight">The context to use.  <a href="#a1daf2406165149f28205c4ac895ee858">More...</a><br /></td></tr>
 <tr class="separator:a1daf2406165149f28205c4ac895ee858 inherit pro_attribs_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafb91ad4da9b6ea6520f1268f9a6771d inherit pro_attribs_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source"><td class="memItemLeft" align="right" valign="top">SQLiteDatabase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html#aafb91ad4da9b6ea6520f1268f9a6771d">mWhiteRockDB</a></td></tr>
+<tr class="memdesc:aafb91ad4da9b6ea6520f1268f9a6771d inherit pro_attribs_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source"><td class="mdescLeft">&#160;</td><td class="mdescRight">The database to use.  <a href="#aafb91ad4da9b6ea6520f1268f9a6771d">More...</a><br /></td></tr>
 <tr class="separator:aafb91ad4da9b6ea6520f1268f9a6771d inherit pro_attribs_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a038e9db6a268c1f8f70d74f0981e93 inherit pro_attribs_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html#a5a038e9db6a268c1f8f70d74f0981e93">mTable</a></td></tr>
+<tr class="memdesc:a5a038e9db6a268c1f8f70d74f0981e93 inherit pro_attribs_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Table to access.  <a href="#a5a038e9db6a268c1f8f70d74f0981e93">More...</a><br /></td></tr>
 <tr class="separator:a5a038e9db6a268c1f8f70d74f0981e93 inherit pro_attribs_classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ac579097c3dcdd5818889b5332d888c85"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html#ac579097c3dcdd5818889b5332d888c85">TAG</a> = &quot;DescriptionDataSource&quot;</td></tr>
+<tr class="memdesc:ac579097c3dcdd5818889b5332d888c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant TAG to identify the class.  <a href="#ac579097c3dcdd5818889b5332d888c85">More...</a><br /></td></tr>
+<tr class="separator:ac579097c3dcdd5818889b5332d888c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Lewis Hancock Abstract base class for all DescriptionDataSources to manage Descriptions in the database. </dd></dl>
+
+<p>Definition at line <a class="el" href="_description_data_source_8java_source.html#l00020">20</a> of file <a class="el" href="_description_data_source_8java_source.html">DescriptionDataSource.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a38ab06958fd70330e566d3883f4bf130"></a>
 <div class="memitem">
@@ -195,12 +212,16 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">context</td><td></td></tr>
+    <tr><td class="paramname">context</td><td>The context to use </td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="_description_data_source_8java_source.html#l00039">39</a> of file <a class="el" href="_description_data_source_8java_source.html">DescriptionDataSource.java</a>.</p>
 
 </div>
 </div>
@@ -240,16 +261,20 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Adds the description to the database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">title</td><td></td></tr>
-    <tr><td class="paramname">shortDescr</td><td></td></tr>
-    <tr><td class="paramname">longDescr</td><td></td></tr>
-    <tr><td class="paramname">foreignId</td><td></td></tr>
+    <tr><td class="paramname">title</td><td>Title of description </td></tr>
+    <tr><td class="paramname">shortDescr</td><td>Short description </td></tr>
+    <tr><td class="paramname">longDescr</td><td>Long Description </td></tr>
+    <tr><td class="paramname">foreignId</td><td>foreign id that the description belongs to </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The id of the newly added entry. </dd></dl>
+
+<p>Definition at line <a class="el" href="_description_data_source_8java_source.html#l00051">51</a> of file <a class="el" href="_description_data_source_8java_source.html">DescriptionDataSource.java</a>.</p>
 
 </div>
 </div>
@@ -270,11 +295,13 @@ Protected Attributes</h2></td></tr>
 <p>Add a Description. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">d</td><td></td></tr>
+    <tr><td class="paramname">d</td><td>the description to add </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the id of the description </dd></dl>
+
+<p>Definition at line <a class="el" href="_description_data_source_8java_source.html#l00067">67</a> of file <a class="el" href="_description_data_source_8java_source.html">DescriptionDataSource.java</a>.</p>
 
 </div>
 </div>
@@ -295,11 +322,13 @@ Protected Attributes</h2></td></tr>
 <p>Add a WalkDescription. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">d</td><td></td></tr>
+    <tr><td class="paramname">d</td><td>the walk description to add </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The ID of the newly added WalkDescription </dd></dl>
+
+<p>Definition at line <a class="el" href="_description_data_source_8java_source.html#l00082">82</a> of file <a class="el" href="_description_data_source_8java_source.html">DescriptionDataSource.java</a>.</p>
 
 </div>
 </div>
@@ -320,11 +349,13 @@ Protected Attributes</h2></td></tr>
 <p>Add a WaypointDescription. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">d</td><td></td></tr>
+    <tr><td class="paramname">d</td><td>the WaypointDescripiton to add </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the id of the newly added WaypointDescription </dd></dl>
+
+<p>Definition at line <a class="el" href="_description_data_source_8java_source.html#l00099">99</a> of file <a class="el" href="_description_data_source_8java_source.html">DescriptionDataSource.java</a>.</p>
 
 </div>
 </div>
@@ -383,6 +414,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="_description_data_source_8java_source.html#l00125">125</a> of file <a class="el" href="_description_data_source_8java_source.html">DescriptionDataSource.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="af0c27ec463f89e831d2e8a0d4550cc1d"></a>
@@ -406,6 +439,8 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="_description_data_source_8java_source.html#l00115">115</a> of file <a class="el" href="_description_data_source_8java_source.html">DescriptionDataSource.java</a>.</p>
 
 </div>
 </div>
@@ -482,6 +517,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="_description_data_source_8java_source.html#l00137">137</a> of file <a class="el" href="_description_data_source_8java_source.html">DescriptionDataSource.java</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -503,6 +540,34 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>All columns in the table. </p>
+
+<p>Definition at line <a class="el" href="_description_data_source_8java_source.html#l00033">33</a> of file <a class="el" href="_description_data_source_8java_source.html">DescriptionDataSource.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac579097c3dcdd5818889b5332d888c85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String uk.ac.swan.digitaltrails.database.DescriptionDataSource.TAG = &quot;DescriptionDataSource&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constant TAG to identify the class. </p>
+
+<p>Definition at line <a class="el" href="_description_data_source_8java_source.html#l00025">25</a> of file <a class="el" href="_description_data_source_8java_source.html">DescriptionDataSource.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad5ab4f6ae6c94d72a77bd53a914aa8fa"></a>
@@ -523,10 +588,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The Uri of the table to access. </p>
+
+<p>Definition at line <a class="el" href="_description_data_source_8java_source.html#l00029">29</a> of file <a class="el" href="_description_data_source_8java_source.html">DescriptionDataSource.java</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/uk/ac/swan/digitaltrails/database/<a class="el" href="_description_data_source_8java.html">DescriptionDataSource.java</a></li>
+<li>C:/Users/Admin/Documents/Work/DigitalTrails/src/uk/ac/swan/digitaltrails/database/<a class="el" href="_description_data_source_8java_source.html">DescriptionDataSource.java</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -534,7 +603,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceuk.html">uk</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac.html">ac</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac_1_1swan.html">swan</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac_1_1swan_1_1digitaltrails.html">digitaltrails</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1database.html">database</a></li><li class="navelem"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html">DescriptionDataSource</a></li>
-    <li class="footer">Generated on Mon May 5 2014 23:22:39 for White Rock Digital Trails by
+    <li class="footer">Generated on Thu May 8 2014 16:14:31 for White Rock Digital Trails by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

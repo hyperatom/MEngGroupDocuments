@@ -1,5 +1,5 @@
 <map id="uk.ac.swan.digitaltrails.database.DescriptionDataSource" name="uk.ac.swan.digitaltrails.database.DescriptionDataSource">
-<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_english_walk_description_data_source.html" title="uk.ac.swan.digitaltrails.database.\lEnglishWalkDescriptionDataSource" alt="" coords="543,5,771,47"/>
-<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_english_waypoint_description_data_source.html" title="uk.ac.swan.digitaltrails.database.\lEnglishWaypointDescriptionDataSource" alt="" coords="531,71,784,112"/>
-<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html" title="Class to define methods for DataSources. " alt="" coords="5,39,220,80"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_english_walk_description_data_source.html" title="{uk.ac.swan.digitaltrails.database.\lEnglishWalkDescriptionDataSource\n|&#45; TAG\l|+ EnglishWalkDescriptionData\lSource()\l+ getAllDescriptions()\l# cursorToDescription()\l}" alt="" coords="5,476,233,612"/>
+<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_english_waypoint_description_data_source.html" title="{uk.ac.swan.digitaltrails.database.\lEnglishWaypointDescriptionDataSource\n||+ EnglishWaypointDescription\lDataSource()\l+ getAllDescriptions()\l# cursorToDescription()\l}" alt="" coords="258,476,511,612"/>
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html" title="Abstract class to define methods for DataSources. " alt="" coords="144,5,359,127"/>
 </map>
