@@ -1,4 +1,4 @@
 <map id="uk.ac.swan.digitaltrails.components.WelshWalkDescription" name="uk.ac.swan.digitaltrails.components.WelshWalkDescription">
-<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk_description.html" title="uk.ac.swan.digitaltrails.components.\lWalkDescription" alt="" coords="5,169,239,211"/>
-<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_description.html" title="uk.ac.swan.digitaltrails.components.\lDescription" alt="" coords="5,80,239,121"/>
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk_description.html" title="{uk.ac.swan.digitaltrails.components.\lWalkDescription\n|# mForeignId\l|+ setForeignId()\l+ getForeignId()\l}" alt="" coords="5,535,239,641"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_description.html" title="{uk.ac.swan.digitaltrails.components.\lDescription\n|# mId\l# mTitle\l# mShortDescription\l# mLongDescription\l# mLanguage\l|+ setId()\l+ getId()\l+ setTitle()\l+ getTitle()\l+ setShortDescription()\l+ getShortDescription()\l+ setLongDescription()\l+ getLongDescription()\l+ setLanguage()\l+ getLanguage()\l+ Description()\l+ Description()\l+ toString()\l+ describeContents()\l+ writeToParcel()\l}" alt="" coords="5,131,239,487"/>
 </map>

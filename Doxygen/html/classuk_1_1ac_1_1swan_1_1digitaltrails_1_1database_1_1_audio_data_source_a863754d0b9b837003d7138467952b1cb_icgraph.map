@@ -1,0 +1,5 @@
+<map id="uk.ac.swan.digitaltrails.database.AudioDataSource.cursorToAudio" name="uk.ac.swan.digitaltrails.database.AudioDataSource.cursorToAudio">
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source.html#ad6b609ca12667a0b84ca29980bc009bf" title="uk.ac.swan.digitaltrails.database.\lAudioDataSource.createAudio" alt="" coords="291,5,506,47"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source.html#acf590b5524ba0406a589bbad130efb4e" title="Get all audio files in the database. " alt="" coords="291,71,506,112"/>
+<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source.html#a7ac8e452785120556a7007da429203ed" title="Get all audio objects at a certain waypoint. " alt="" coords="268,136,529,177"/>
+</map>

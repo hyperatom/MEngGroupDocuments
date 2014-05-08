@@ -3,7 +3,8 @@
 }
 
 
-Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticator\+Activity\+:\nopagebreak
+Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticator\+Activity\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,11 +13,12 @@ Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticato
 \end{figure}
 
 
-Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticator\+Activity\+:\nopagebreak
+Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticator\+Activity\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=241pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity__coll__graph}
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -46,6 +48,22 @@ static final String \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1account
 \item 
 void \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_aebc59fcc6d318607ab2866e5ce81859a}{on\+Activity\+Result} (int request\+Code, int result\+Code, Intent data)
 \end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_abde795ab2a039e573b08b7e26f028c3f}{finish\+Login} (Intent intent)
+\begin{DoxyCompactList}\small\item\em Finish logging in. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final int \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a579141e20f12908d216f31855b4b2d8e}{R\+E\+Q\+\_\+\+S\+I\+G\+N\+U\+P} = 1
+\begin{DoxyCompactList}\small\item\em 1 if user is trying to sign up. \end{DoxyCompactList}\item 
+final String \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a527c07643f84f2555652d817b36e3eb7}{T\+A\+G} = \char`\"{}Authenticator\+Activity\char`\"{}
+\begin{DoxyCompactList}\small\item\em Static tag variable for the class. \end{DoxyCompactList}\item 
+Account\+Manager \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_adbcc5034a326020bfab8155b451d04ff}{m\+Account\+Manager}
+\begin{DoxyCompactList}\small\item\em The account manager to auth with. \end{DoxyCompactList}\item 
+String \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a7717e101ad13a0c9ee7d6dd0cc8c325a}{m\+Auth\+Token\+Type}
+\begin{DoxyCompactList}\small\item\em The type of token to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -54,7 +72,43 @@ Lewis Hancock Authenticator activity. In charge of identifying a user.
 \end{DoxyAuthor}
 
 
+Definition at line 20 of file Authenticator\+Activity.\+java.
+
+
+
 \subsection{Member Function Documentation}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_abde795ab2a039e573b08b7e26f028c3f}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}!finish\+Login@{finish\+Login}}
+\index{finish\+Login@{finish\+Login}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}}
+\subsubsection[{finish\+Login}]{\setlength{\rightskip}{0pt plus 5cm}void uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticator\+Activity.\+finish\+Login (
+\begin{DoxyParamCaption}
+\item[{Intent}]{intent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_abde795ab2a039e573b08b7e26f028c3f}
+
+
+Finish logging in. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intent} & The intent requesting this. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 174 of file Authenticator\+Activity.\+java.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_abde795ab2a039e573b08b7e26f028c3f_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_aebc59fcc6d318607ab2866e5ce81859a}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}!on\+Activity\+Result@{on\+Activity\+Result}}
 \index{on\+Activity\+Result@{on\+Activity\+Result}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}}
 \subsubsection[{on\+Activity\+Result}]{\setlength{\rightskip}{0pt plus 5cm}void uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticator\+Activity.\+on\+Activity\+Result (
@@ -64,6 +118,22 @@ Lewis Hancock Authenticator activity. In charge of identifying a user.
 \item[{Intent}]{data}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [protected]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_aebc59fcc6d318607ab2866e5ce81859a}
+
+
+Definition at line 114 of file Authenticator\+Activity.\+java.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_aebc59fcc6d318607ab2866e5ce81859a_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a552d0ee1b418814c3a97cf21ca1c038c}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}!on\+Create@{on\+Create}}
 \index{on\+Create@{on\+Create}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}}
 \subsubsection[{on\+Create}]{\setlength{\rightskip}{0pt plus 5cm}void uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticator\+Activity.\+on\+Create (
@@ -77,7 +147,12 @@ Called when activity created.
 
 
 
-Here is the call graph for this function\+:\nopagebreak
+Definition at line 75 of file Authenticator\+Activity.\+java.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -96,6 +171,22 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 Submit login request. 
+
+
+
+Definition at line 126 of file Authenticator\+Activity.\+java.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a771eb6c281eece044fa2884364472850_cgraph}
+\end{center}
+\end{figure}
+
 
 
 
@@ -118,12 +209,20 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Static key for account name. 
 
+
+
+Definition at line 33 of file Authenticator\+Activity.\+java.
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a20939308ed832362d9f941dff0b19c58}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}!A\+C\+C\+O\+U\+N\+T\+\_\+\+T\+Y\+P\+E@{A\+C\+C\+O\+U\+N\+T\+\_\+\+T\+Y\+P\+E}}
 \index{A\+C\+C\+O\+U\+N\+T\+\_\+\+T\+Y\+P\+E@{A\+C\+C\+O\+U\+N\+T\+\_\+\+T\+Y\+P\+E}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}}
 \subsubsection[{A\+C\+C\+O\+U\+N\+T\+\_\+\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}final String uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticator\+Activity.\+A\+C\+C\+O\+U\+N\+T\+\_\+\+T\+Y\+P\+E = \char`\"{}A\+C\+C\+O\+U\+N\+T\+\_\+\+T\+Y\+P\+E\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a20939308ed832362d9f941dff0b19c58}
 
 
 Static key for account type arguments. 
+
+
+
+Definition at line 25 of file Authenticator\+Activity.\+java.
 
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_add2cd118ad3d0a42986b4db7dd74c7f9}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}!A\+U\+T\+H\+\_\+\+T\+Y\+P\+E@{A\+U\+T\+H\+\_\+\+T\+Y\+P\+E}}
 \index{A\+U\+T\+H\+\_\+\+T\+Y\+P\+E@{A\+U\+T\+H\+\_\+\+T\+Y\+P\+E}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}}
@@ -132,6 +231,10 @@ Static key for account type arguments.
 
 Static key for auth type. 
 
+
+
+Definition at line 29 of file Authenticator\+Activity.\+java.
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a7935a9bbbaea8cc88a666ac96ff5a6d5}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}!E\+R\+R\+O\+R\+\_\+\+M\+E\+S\+S\+A\+G\+E@{E\+R\+R\+O\+R\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
 \index{E\+R\+R\+O\+R\+\_\+\+M\+E\+S\+S\+A\+G\+E@{E\+R\+R\+O\+R\+\_\+\+M\+E\+S\+S\+A\+G\+E}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}}
 \subsubsection[{E\+R\+R\+O\+R\+\_\+\+M\+E\+S\+S\+A\+G\+E}]{\setlength{\rightskip}{0pt plus 5cm}final String uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticator\+Activity.\+E\+R\+R\+O\+R\+\_\+\+M\+E\+S\+S\+A\+G\+E = \char`\"{}E\+R\+R\+\_\+\+M\+S\+G\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a7935a9bbbaea8cc88a666ac96ff5a6d5}
@@ -139,9 +242,61 @@ Static key for auth type.
 
 Static key for Error Message. 
 
+
+
+Definition at line 42 of file Authenticator\+Activity.\+java.
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a38e8ab4c5aca243cf82cccffff9871a7}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}!I\+S\+\_\+\+A\+D\+D\+I\+N\+G\+\_\+\+N\+E\+W\+\_\+\+A\+C\+C\+O\+U\+N\+T@{I\+S\+\_\+\+A\+D\+D\+I\+N\+G\+\_\+\+N\+E\+W\+\_\+\+A\+C\+C\+O\+U\+N\+T}}
 \index{I\+S\+\_\+\+A\+D\+D\+I\+N\+G\+\_\+\+N\+E\+W\+\_\+\+A\+C\+C\+O\+U\+N\+T@{I\+S\+\_\+\+A\+D\+D\+I\+N\+G\+\_\+\+N\+E\+W\+\_\+\+A\+C\+C\+O\+U\+N\+T}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}}
 \subsubsection[{I\+S\+\_\+\+A\+D\+D\+I\+N\+G\+\_\+\+N\+E\+W\+\_\+\+A\+C\+C\+O\+U\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}final String uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticator\+Activity.\+I\+S\+\_\+\+A\+D\+D\+I\+N\+G\+\_\+\+N\+E\+W\+\_\+\+A\+C\+C\+O\+U\+N\+T = \char`\"{}I\+S\+\_\+\+A\+D\+D\+I\+N\+G\+\_\+\+A\+C\+C\+O\+U\+N\+T\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a38e8ab4c5aca243cf82cccffff9871a7}
+
+
+Definition at line 37 of file Authenticator\+Activity.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_adbcc5034a326020bfab8155b451d04ff}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}!m\+Account\+Manager@{m\+Account\+Manager}}
+\index{m\+Account\+Manager@{m\+Account\+Manager}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}}
+\subsubsection[{m\+Account\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Account\+Manager uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticator\+Activity.\+m\+Account\+Manager\hspace{0.3cm}{\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_adbcc5034a326020bfab8155b451d04ff}
+
+
+The account manager to auth with. 
+
+
+
+Definition at line 62 of file Authenticator\+Activity.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a7717e101ad13a0c9ee7d6dd0cc8c325a}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}!m\+Auth\+Token\+Type@{m\+Auth\+Token\+Type}}
+\index{m\+Auth\+Token\+Type@{m\+Auth\+Token\+Type}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}}
+\subsubsection[{m\+Auth\+Token\+Type}]{\setlength{\rightskip}{0pt plus 5cm}String uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticator\+Activity.\+m\+Auth\+Token\+Type\hspace{0.3cm}{\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a7717e101ad13a0c9ee7d6dd0cc8c325a}
+
+
+The type of token to use. 
+
+
+
+Definition at line 66 of file Authenticator\+Activity.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a579141e20f12908d216f31855b4b2d8e}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}!R\+E\+Q\+\_\+\+S\+I\+G\+N\+U\+P@{R\+E\+Q\+\_\+\+S\+I\+G\+N\+U\+P}}
+\index{R\+E\+Q\+\_\+\+S\+I\+G\+N\+U\+P@{R\+E\+Q\+\_\+\+S\+I\+G\+N\+U\+P}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}}
+\subsubsection[{R\+E\+Q\+\_\+\+S\+I\+G\+N\+U\+P}]{\setlength{\rightskip}{0pt plus 5cm}final int uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticator\+Activity.\+R\+E\+Q\+\_\+\+S\+I\+G\+N\+U\+P = 1\hspace{0.3cm}{\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a579141e20f12908d216f31855b4b2d8e}
+
+
+1 if user is trying to sign up. 
+
+
+
+Definition at line 52 of file Authenticator\+Activity.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a527c07643f84f2555652d817b36e3eb7}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}!T\+A\+G@{T\+A\+G}}
+\index{T\+A\+G@{T\+A\+G}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}}
+\subsubsection[{T\+A\+G}]{\setlength{\rightskip}{0pt plus 5cm}final String uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticator\+Activity.\+T\+A\+G = \char`\"{}Authenticator\+Activity\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a527c07643f84f2555652d817b36e3eb7}
+
+
+Static tag variable for the class. 
+
+
+
+Definition at line 57 of file Authenticator\+Activity.\+java.
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a8ea4980e7fab8bd02125c9a36bbe4b2d}{\index{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}!U\+S\+E\+R\+\_\+\+P\+A\+S\+S@{U\+S\+E\+R\+\_\+\+P\+A\+S\+S}}
 \index{U\+S\+E\+R\+\_\+\+P\+A\+S\+S@{U\+S\+E\+R\+\_\+\+P\+A\+S\+S}!uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity@{uk\+::ac\+::swan\+::digitaltrails\+::accounts\+::\+Authenticator\+Activity}}
 \subsubsection[{U\+S\+E\+R\+\_\+\+P\+A\+S\+S}]{\setlength{\rightskip}{0pt plus 5cm}final String uk.\+ac.\+swan.\+digitaltrails.\+accounts.\+Authenticator\+Activity.\+U\+S\+E\+R\+\_\+\+P\+A\+S\+S = \char`\"{}U\+S\+E\+R\+\_\+\+P\+A\+S\+S\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity_a8ea4980e7fab8bd02125c9a36bbe4b2d}
@@ -151,6 +306,10 @@ Static key for user password.
 
 
 
+Definition at line 47 of file Authenticator\+Activity.\+java.
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/uk/ac/swan/digitaltrails/accounts/\hyperlink{_authenticator_activity_8java}{Authenticator\+Activity.\+java}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Admin/\+Documents/\+Work/\+Digital\+Trails/src/uk/ac/swan/digitaltrails/accounts/\hyperlink{_authenticator_activity_8java}{Authenticator\+Activity.\+java}\end{DoxyCompactItemize}

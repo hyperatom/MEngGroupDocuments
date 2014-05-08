@@ -8,7 +8,5 @@ var namespaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities =
     [ "MyWalksActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity" ],
     [ "SearchActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_search_activity.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_search_activity" ],
     [ "SettingsActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_settings_activity.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_settings_activity" ],
-    [ "SplashActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_splash_activity.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_splash_activity" ],
-    [ "WalkActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_walk_activity.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_walk_activity" ],
-    [ "WaypointListActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_waypoint_list_activity.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_waypoint_list_activity" ]
+    [ "SplashActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_splash_activity.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_splash_activity" ]
 ];

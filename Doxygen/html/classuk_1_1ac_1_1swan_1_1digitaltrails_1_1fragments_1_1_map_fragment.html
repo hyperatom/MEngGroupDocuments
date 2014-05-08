@@ -110,6 +110,8 @@ $(document).ready(function(){initNavTree('classuk_1_1ac_1_1swan_1_1digitaltrails
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">uk.ac.swan.digitaltrails.fragments.MapFragment Class Reference</div>  </div>
@@ -123,15 +125,15 @@ Inheritance diagram for uk.ac.swan.digitaltrails.fragments.MapFragment:</div>
 <div class="dyncontent">
 <div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment__inherit__graph.png" border="0" usemap="#uk_8ac_8swan_8digitaltrails_8fragments_8_map_fragment_inherit__map" alt="Inheritance graph"/></div>
 <map name="uk_8ac_8swan_8digitaltrails_8fragments_8_map_fragment_inherit__map" id="uk_8ac_8swan_8digitaltrails_8fragments_8_map_fragment_inherit__map">
-<area shape="rect" id="node7" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_map_fragment.html" title="uk.ac.swan.digitaltrails.fragments.\lAddWaypointMapFragment" alt="" coords="593,89,812,130"/><area shape="rect" id="node8" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_edit_waypoint_map_fragment.html" title="uk.ac.swan.digitaltrails.fragments.\lEditWaypointMapFragment" alt="" coords="593,154,812,195"/><area shape="rect" id="node6" href="interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_dialog_fragment_1_1_add_waypoint_dialog_listener.html" title="uk.ac.swan.digitaltrails.fragments.\lAddWaypointDialogFragment.AddWaypoint\lDialogListener" alt="" coords="5,268,279,324"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<area shape="rect" id="node7" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_map_fragment.html" title="{uk.ac.swan.digitaltrails.fragments.\lAddWaypointMapFragment\n|+ ARG_POSITION\l&#45; mMarkers\l&#45; TAG\l|+ onCreate()\l+ onStart()\l+ onEditDialogPositiveClick()\l+ onEditDialogNegativeClick()\l# setInfoClickListener()\l}" alt="" coords="168,725,387,905"/><area shape="rect" id="node8" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_edit_waypoint_map_fragment.html" title="{uk.ac.swan.digitaltrails.fragments.\lEditWaypointMapFragment\n|&#45; TAG\l|+ onCreate()\l+ onStart()\l+ onEditDialogPositiveClick()\l+ onEditDialogNegativeClick()\l# setInfoClickListener()\l}" alt="" coords="411,740,629,891"/><area shape="rect" id="node6" href="interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_dialog_fragment_1_1_add_waypoint_dialog_listener.html" title="{uk.ac.swan.digitaltrails.fragments.\lAddWaypointDialogFragment.AddWaypoint\lDialogListener\n||+ onDialogPositiveClick()\l+ onDialogNegativeClick()\l}" alt="" coords="731,5,1005,127"/></map>
+</div>
 <div class="dynheader">
 Collaboration diagram for uk.ac.swan.digitaltrails.fragments.MapFragment:</div>
 <div class="dyncontent">
 <div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment__coll__graph.png" border="0" usemap="#uk_8ac_8swan_8digitaltrails_8fragments_8_map_fragment_coll__map" alt="Collaboration graph"/></div>
 <map name="uk_8ac_8swan_8digitaltrails_8fragments_8_map_fragment_coll__map" id="uk_8ac_8swan_8digitaltrails_8fragments_8_map_fragment_coll__map">
-<area shape="rect" id="node6" href="interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_dialog_fragment_1_1_add_waypoint_dialog_listener.html" title="uk.ac.swan.digitaltrails.fragments.\lAddWaypointDialogFragment.AddWaypoint\lDialogListener" alt="" coords="17,268,291,324"/><area shape="rect" id="node12" href="interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_1_1_on_map_closed_listener.html" title="uk.ac.swan.digitaltrails.fragments.\lMapFragment.OnMapClosedListener" alt="" coords="37,618,271,659"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<area shape="rect" id="node6" href="interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_dialog_fragment_1_1_add_waypoint_dialog_listener.html" title="{uk.ac.swan.digitaltrails.fragments.\lAddWaypointDialogFragment.AddWaypoint\lDialogListener\n||+ onDialogPositiveClick()\l+ onDialogNegativeClick()\l}" alt="" coords="731,5,1005,127"/><area shape="rect" id="node12" href="interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_1_1_on_map_closed_listener.html" title="{uk.ac.swan.digitaltrails.fragments.\lMapFragment.OnMapClosedListener\n||+ onMapClosed()\l}" alt="" coords="1925,20,2160,112"/></map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -212,12 +214,26 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a00d1c005124f882b1b83a6190a6df9b3"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; Marker &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#a00d1c005124f882b1b83a6190a6df9b3">mMarkers</a></td></tr>
 <tr class="memdesc:a00d1c005124f882b1b83a6190a6df9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArrayList of Markers currently on the map.  <a href="#a00d1c005124f882b1b83a6190a6df9b3">More...</a><br /></td></tr>
 <tr class="separator:a00d1c005124f882b1b83a6190a6df9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a251d8dcb6c046e55460b9074fb71666f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#a251d8dcb6c046e55460b9074fb71666f">initMap</a> ()</td></tr>
+<tr class="memdesc:a251d8dcb6c046e55460b9074fb71666f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the map.  <a href="#a251d8dcb6c046e55460b9074fb71666f">More...</a><br /></td></tr>
+<tr class="separator:a251d8dcb6c046e55460b9074fb71666f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ac5b7b42692d2662bfb1b02f3a9dfb797"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#ac5b7b42692d2662bfb1b02f3a9dfb797">TAG</a> = &quot;MapFragment&quot;</td></tr>
+<tr class="memdesc:ac5b7b42692d2662bfb1b02f3a9dfb797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debugging tag.  <a href="#ac5b7b42692d2662bfb1b02f3a9dfb797">More...</a><br /></td></tr>
+<tr class="separator:ac5b7b42692d2662bfb1b02f3a9dfb797"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class which all instances of Google Maps should be using, apart from when the User "goes on a walk". </p>
 <dl class="section author"><dt>Author</dt><dd>Lewis H </dd>
 <dd>
 Lewis Hancock </dd></dl>
+
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00052">52</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a0be39a91507123ee918a60e992b27951"></a>
 <div class="memitem">
@@ -248,6 +264,8 @@ Lewis Hancock </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00312">312</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a496a4efd2fbbf4e941a02f74b932b23c"></a>
@@ -277,6 +295,8 @@ Lewis Hancock </dd></dl>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00375">375</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -320,12 +340,68 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00198">198</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_ad7ad0119b7dd10580e3053fdf21b64f2_cgraph.png" border="0" usemap="#classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_ad7ad0119b7dd10580e3053fdf21b64f2_cgraph" alt=""/></div>
 <map name="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_ad7ad0119b7dd10580e3053fdf21b64f2_cgraph" id="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_ad7ad0119b7dd10580e3053fdf21b64f2_cgraph">
 <area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#af458f2c1b3e5c9cc817ac1403e04de41" title="uk.ac.swan.digitaltrails.fragments.\lMapFragment.showAddDialog" alt="" coords="272,5,491,47"/><area shape="rect" id="node3" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#a48c1510176cd4f173b5750d9dec68f52" title="uk.ac.swan.digitaltrails.fragments.\lMapFragment.setInfoClickListener" alt="" coords="272,71,491,112"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_ad7ad0119b7dd10580e3053fdf21b64f2_icgraph.png" border="0" usemap="#classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_ad7ad0119b7dd10580e3053fdf21b64f2_icgraph" alt=""/></div>
+<map name="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_ad7ad0119b7dd10580e3053fdf21b64f2_icgraph" id="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_ad7ad0119b7dd10580e3053fdf21b64f2_icgraph">
+<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#a251d8dcb6c046e55460b9074fb71666f" title="Initialise the map. " alt="" coords="272,5,491,47"/><area shape="rect" id="node3" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#acf60cc97f0903a4f54364d0ed20ded0a" title="uk.ac.swan.digitaltrails.fragments.\lMapFragment.onStart" alt="" coords="539,5,757,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a251d8dcb6c046e55460b9074fb71666f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uk.ac.swan.digitaltrails.fragments.MapFragment.initMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialise the map. </p>
+
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00297">297</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_a251d8dcb6c046e55460b9074fb71666f_cgraph.png" border="0" usemap="#classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_a251d8dcb6c046e55460b9074fb71666f_cgraph" alt=""/></div>
+<map name="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_a251d8dcb6c046e55460b9074fb71666f_cgraph" id="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_a251d8dcb6c046e55460b9074fb71666f_cgraph">
+<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#ad7ad0119b7dd10580e3053fdf21b64f2" title="Configure default settings for the GoogleMap map. " alt="" coords="272,39,491,80"/><area shape="rect" id="node3" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#af458f2c1b3e5c9cc817ac1403e04de41" title="uk.ac.swan.digitaltrails.fragments.\lMapFragment.showAddDialog" alt="" coords="539,5,757,47"/><area shape="rect" id="node4" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#a48c1510176cd4f173b5750d9dec68f52" title="uk.ac.swan.digitaltrails.fragments.\lMapFragment.setInfoClickListener" alt="" coords="539,71,757,112"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_a251d8dcb6c046e55460b9074fb71666f_icgraph.png" border="0" usemap="#classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_a251d8dcb6c046e55460b9074fb71666f_icgraph" alt=""/></div>
+<map name="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_a251d8dcb6c046e55460b9074fb71666f_icgraph" id="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_a251d8dcb6c046e55460b9074fb71666f_icgraph">
+<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#acf60cc97f0903a4f54364d0ed20ded0a" title="uk.ac.swan.digitaltrails.fragments.\lMapFragment.onStart" alt="" coords="272,5,491,47"/></map>
 </div>
 </p>
 
@@ -345,6 +421,8 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00120">120</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a6f50aaa1a3e7a2455c69f6f2d637c5b0"></a>
@@ -360,6 +438,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00357">357</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
 
 </div>
 </div>
@@ -377,6 +457,8 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00348">348</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a8f08a9164d00020e32e548275fb6adda"></a>
@@ -392,6 +474,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00135">135</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
 
 </div>
 </div>
@@ -418,6 +502,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00394">394</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
 
 </div>
 </div>
@@ -451,6 +537,8 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00110">110</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab43bdfbec6736493961b1d8e24edc57f"></a>
@@ -465,6 +553,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00186">186</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
 
 </div>
 </div>
@@ -494,6 +584,8 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_dialog_fragment_1_1_add_waypoint_dialog_listener.html#a8cbf919c183c0e8048a90e6bd30fdf04">uk.ac.swan.digitaltrails.fragments.AddWaypointDialogFragment.AddWaypointDialogListener</a>.</p>
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00264">264</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa25573f8e27a54fe101d91bd2d9e1132"></a>
@@ -522,6 +614,8 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_dialog_fragment_1_1_add_waypoint_dialog_listener.html#a3bd6666341faffa16f688119d97753f3">uk.ac.swan.digitaltrails.fragments.AddWaypointDialogFragment.AddWaypointDialogListener</a>.</p>
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00235">235</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a3a70b590f6805f4cf0a2fef78655dd7f"></a>
@@ -536,6 +630,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00367">367</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
 
 </div>
 </div>
@@ -552,6 +648,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00464">464</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
 
 </div>
 </div>
@@ -579,6 +677,8 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00408">408</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -603,6 +703,8 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00178">178</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="acf60cc97f0903a4f54364d0ed20ded0a"></a>
@@ -618,6 +720,17 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00157">157</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_acf60cc97f0903a4f54364d0ed20ded0a_cgraph.png" border="0" usemap="#classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_acf60cc97f0903a4f54364d0ed20ded0a_cgraph" alt=""/></div>
+<map name="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_acf60cc97f0903a4f54364d0ed20ded0a_cgraph" id="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_acf60cc97f0903a4f54364d0ed20ded0a_cgraph">
+<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#a251d8dcb6c046e55460b9074fb71666f" title="Initialise the map. " alt="" coords="272,39,491,80"/><area shape="rect" id="node3" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#ad7ad0119b7dd10580e3053fdf21b64f2" title="Configure default settings for the GoogleMap map. " alt="" coords="539,39,757,80"/><area shape="rect" id="node4" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#af458f2c1b3e5c9cc817ac1403e04de41" title="uk.ac.swan.digitaltrails.fragments.\lMapFragment.showAddDialog" alt="" coords="805,5,1024,47"/><area shape="rect" id="node5" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#a48c1510176cd4f173b5750d9dec68f52" title="uk.ac.swan.digitaltrails.fragments.\lMapFragment.setInfoClickListener" alt="" coords="805,71,1024,112"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="ae53e878189d7ffea07e78226f6fa3942"></a>
@@ -632,6 +745,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00169">169</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
 
 </div>
 </div>
@@ -663,12 +778,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00272">272</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_a48c1510176cd4f173b5750d9dec68f52_icgraph.png" border="0" usemap="#classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_a48c1510176cd4f173b5750d9dec68f52_icgraph" alt=""/></div>
 <map name="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_a48c1510176cd4f173b5750d9dec68f52_icgraph" id="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_a48c1510176cd4f173b5750d9dec68f52_icgraph">
-<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#ad7ad0119b7dd10580e3053fdf21b64f2" title="Configure default settings for the GoogleMap map. " alt="" coords="272,5,491,47"/></map>
+<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#ad7ad0119b7dd10580e3053fdf21b64f2" title="Configure default settings for the GoogleMap map. " alt="" coords="272,5,491,47"/><area shape="rect" id="node3" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#a251d8dcb6c046e55460b9074fb71666f" title="Initialise the map. " alt="" coords="539,5,757,47"/><area shape="rect" id="node4" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#acf60cc97f0903a4f54364d0ed20ded0a" title="uk.ac.swan.digitaltrails.fragments.\lMapFragment.onStart" alt="" coords="805,5,1024,47"/></map>
 </div>
 </p>
 
@@ -702,12 +819,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00221">221</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_af458f2c1b3e5c9cc817ac1403e04de41_icgraph.png" border="0" usemap="#classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_af458f2c1b3e5c9cc817ac1403e04de41_icgraph" alt=""/></div>
 <map name="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_af458f2c1b3e5c9cc817ac1403e04de41_icgraph" id="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_af458f2c1b3e5c9cc817ac1403e04de41_icgraph">
-<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#ad7ad0119b7dd10580e3053fdf21b64f2" title="Configure default settings for the GoogleMap map. " alt="" coords="272,5,491,47"/></map>
+<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#ad7ad0119b7dd10580e3053fdf21b64f2" title="Configure default settings for the GoogleMap map. " alt="" coords="272,5,491,47"/><area shape="rect" id="node3" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#a251d8dcb6c046e55460b9074fb71666f" title="Initialise the map. " alt="" coords="539,5,757,47"/><area shape="rect" id="node4" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#acf60cc97f0903a4f54364d0ed20ded0a" title="uk.ac.swan.digitaltrails.fragments.\lMapFragment.onStart" alt="" coords="805,5,1024,47"/></map>
 </div>
 </p>
 
@@ -741,6 +860,8 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00279">279</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -771,6 +892,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00096">96</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a18de48be0fcafe966225e7f95feace5a"></a>
@@ -792,6 +915,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Listen for when we close the map. </p>
+
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00086">86</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
 
 </div>
 </div>
@@ -815,6 +940,8 @@ Here is the caller graph for this function:</div>
 
 <p>SupportMapFragemnt to contain GoogleMap. </p>
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00071">71</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a906e60065eeb311eb30b372edb2f1447"></a>
@@ -836,6 +963,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>current LocationClient </p>
+
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00076">76</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
 
 </div>
 </div>
@@ -859,6 +988,8 @@ Here is the caller graph for this function:</div>
 
 <p>The current map. </p>
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00066">66</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a00d1c005124f882b1b83a6190a6df9b3"></a>
@@ -880,6 +1011,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>ArrayList of Markers currently on the map. </p>
+
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00091">91</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
 
 </div>
 </div>
@@ -903,10 +1036,36 @@ Here is the caller graph for this function:</div>
 
 <p>Waypoints for walk. </p>
 
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00081">81</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5b7b42692d2662bfb1b02f3a9dfb797"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String uk.ac.swan.digitaltrails.fragments.MapFragment.TAG = &quot;MapFragment&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Debugging tag. </p>
+
+<p>Definition at line <a class="el" href="_map_fragment_8java_source.html#l00061">61</a> of file <a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/uk/ac/swan/digitaltrails/fragments/<a class="el" href="_map_fragment_8java.html">MapFragment.java</a></li>
+<li>C:/Users/Admin/Documents/Work/DigitalTrails/src/uk/ac/swan/digitaltrails/fragments/<a class="el" href="_map_fragment_8java_source.html">MapFragment.java</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -914,7 +1073,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceuk.html">uk</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac.html">ac</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac_1_1swan.html">swan</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac_1_1swan_1_1digitaltrails.html">digitaltrails</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments.html">fragments</a></li><li class="navelem"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html">MapFragment</a></li>
-    <li class="footer">Generated on Mon May 5 2014 23:22:39 for White Rock Digital Trails by
+    <li class="footer">Generated on Thu May 8 2014 16:14:34 for White Rock Digital Trails by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

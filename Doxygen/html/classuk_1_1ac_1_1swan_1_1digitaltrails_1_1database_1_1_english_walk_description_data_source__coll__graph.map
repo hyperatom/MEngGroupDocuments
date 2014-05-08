@@ -1,4 +1,4 @@
 <map id="uk.ac.swan.digitaltrails.database.EnglishWalkDescriptionDataSource" name="uk.ac.swan.digitaltrails.database.EnglishWalkDescriptionDataSource">
-<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html" title="uk.ac.swan.digitaltrails.database.\lDescriptionDataSource" alt="" coords="133,199,347,240"/>
-<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html" title="Class to define methods for DataSources. " alt="" coords="21,95,235,136"/>
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html" title="{uk.ac.swan.digitaltrails.database.\lDescriptionDataSource\n|# allColumns\l&#45; TAG\l|+ DescriptionDataSource()\l+ addDescription()\l+ addDescription()\l+ addDescription()\l+ addDescription()\l+ deleteDescription()\l+ deleteAllDescriptions()\l+ updateDescription()\l+ getAllDescriptions()\l# cursorToDescription()\l}" alt="" coords="137,300,351,539"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html" title="Abstract class to define methods for DataSources. " alt="" coords="25,145,239,237"/>
 </map>

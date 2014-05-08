@@ -1,2 +1,4 @@
 <map id="uk.ac.swan.digitaltrails.activities.MapActivity" name="uk.ac.swan.digitaltrails.activities.MapActivity">
+<area shape="rect" id="node14" href="$enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1select_filter.html" title="Filter for the query to run. " alt="" coords="1959,5,2171,141"/>
+<area shape="rect" id="node16" href="$enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1_r_e_q_u_e_s_t___t_y_p_e.html" title="enum for the type of request for location client " alt="" coords="2372,27,2584,119"/>
 </map>

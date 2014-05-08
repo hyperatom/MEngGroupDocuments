@@ -32,9 +32,6 @@ var dir_10c078a735e53991723c0f408b7664f8 =
     [ "LaunchFragment.java", "_launch_fragment_8java.html", [
       [ "LaunchFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_launch_fragment.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_launch_fragment" ]
     ] ],
-    [ "LogInFragment.java", "_log_in_fragment_8java.html", [
-      [ "LogInFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_log_in_fragment.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_log_in_fragment" ]
-    ] ],
     [ "MapFragment.java", "_map_fragment_8java.html", [
       [ "MapFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment" ],
       [ "OnMapClosedListener", "interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_1_1_on_map_closed_listener.html", "interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment_1_1_on_map_closed_listener" ]
@@ -46,9 +43,6 @@ var dir_10c078a735e53991723c0f408b7664f8 =
       [ "MyWalkListFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_my_walk_list_fragment.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_my_walk_list_fragment" ]
     ] ],
     [ "package-info.java", "fragments_2package-info_8java.html", null ],
-    [ "RegisterFragment.java", "_register_fragment_8java.html", [
-      [ "RegisterFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_register_fragment.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_register_fragment" ]
-    ] ],
     [ "SearchDetailsFragment.java", "_search_details_fragment_8java.html", [
       [ "SearchDetailsFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_details_fragment.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_details_fragment" ]
     ] ],

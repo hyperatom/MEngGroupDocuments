@@ -84,9 +84,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
       <li class="current"><a href="functions_func.html#index_a"><span>a</span></a></li>
+      <li><a href="functions_func_b.html#index_b"><span>b</span></a></li>
       <li><a href="functions_func_c.html#index_c"><span>c</span></a></li>
       <li><a href="functions_func_d.html#index_d"><span>d</span></a></li>
       <li><a href="functions_func_e.html#index_e"><span>e</span></a></li>
+      <li><a href="functions_func_f.html#index_f"><span>f</span></a></li>
       <li><a href="functions_func_g.html#index_g"><span>g</span></a></li>
       <li><a href="functions_func_h.html#index_h"><span>h</span></a></li>
       <li><a href="functions_func_i.html#index_i"><span>i</span></a></li>
@@ -147,8 +149,6 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity.html#ad8d0ab6b77e7ea70287732deee0e7b72">uk.ac.swan.digitaltrails.activities.MyWalksActivity</a>
 , <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_search_activity.html#a5cabca269211687adbc5afab71910a46">uk.ac.swan.digitaltrails.activities.SearchActivity</a>
 , <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_settings_activity.html#ac2b1ab95450abe65a3d13103432cf123">uk.ac.swan.digitaltrails.activities.SettingsActivity</a>
-, <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_walk_activity.html#a5fe111f44c21a8141d8ea99253b5ad84">uk.ac.swan.digitaltrails.activities.WalkActivity</a>
-, <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_waypoint_list_activity.html#a3bead1ca441cc41ca81caba6705d4e56">uk.ac.swan.digitaltrails.activities.WaypointListActivity</a>
 </li>
 <li>accountChanges()
 : <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_edit_account_activity.html#a92b3451646d7405ac6940aa5fe9a4f60">uk.ac.swan.digitaltrails.activities.EditAccountActivity</a>
@@ -157,14 +157,17 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator.html#a62d040eea7e079506fbf38faf8a10910">uk.ac.swan.digitaltrails.accounts.AccountAuthenticator</a>
 </li>
 <li>addDescription()
-: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html#aed125b32a571fdd698630a23c268014e">uk.ac.swan.digitaltrails.database.DescriptionDataSource</a>
+: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html#aefe52e0afdee53f7a300c48e19299ecc">uk.ac.swan.digitaltrails.database.DescriptionDataSource</a>
+</li>
+<li>addGeofences()
+: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#af5854608b6078b8b77755b5bd8984b16">uk.ac.swan.digitaltrails.activities.MapActivity</a>
 </li>
 <li>addWalk()
 : <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source.html#a404fe1da8769d8d3fc50e8c43c52bbf2">uk.ac.swan.digitaltrails.database.WalkDataSource</a>
 , <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_white_rock_server_accessor.html#a1295558ae97a6f0109e836f6b3c63003">uk.ac.swan.digitaltrails.sync.WhiteRockServerAccessor</a>
 </li>
 <li>addWaypoint()
-: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source.html#a0a5edeabdc390f34355fbca009a00310">uk.ac.swan.digitaltrails.database.WaypointDataSource</a>
+: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source.html#af845370be817cbc70306ce869178a7a6">uk.ac.swan.digitaltrails.database.WaypointDataSource</a>
 </li>
 <li>AddWaypointDialogFragment()
 : <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_add_waypoint_dialog_fragment.html#aabec076e888d5f4a16e32e0099a1c468">uk.ac.swan.digitaltrails.fragments.AddWaypointDialogFragment</a>
@@ -173,7 +176,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#ab573bd8caeb367dde2e4c95a6214ae1e">uk.ac.swan.digitaltrails.database.WhiteRockContentProvider</a>
 </li>
 <li>Audio()
-: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_audio.html#ac9c310debb5cf121c99584adac0fb058">uk.ac.swan.digitaltrails.components.Audio</a>
+: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_audio.html#a186e80a5484032f86eba6b979313d8b3">uk.ac.swan.digitaltrails.components.Audio</a>
 </li>
 <li>AudioDataSource()
 : <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_audio_data_source.html#ad1eb044c2825de59cf817a1bc5475242">uk.ac.swan.digitaltrails.database.AudioDataSource</a>
@@ -184,7 +187,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon May 5 2014 23:22:40 for White Rock Digital Trails by
+    <li class="footer">Generated on Thu May 8 2014 16:14:37 for White Rock Digital Trails by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

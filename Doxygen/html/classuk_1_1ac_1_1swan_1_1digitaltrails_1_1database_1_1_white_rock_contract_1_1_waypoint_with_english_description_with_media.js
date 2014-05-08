@@ -1,0 +1,8 @@
+var classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_waypoint_with_english_description_with_media =
+[
+    [ "CONTENT_TYPE", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_waypoint_with_english_description_with_media.html#a42b173cb35f7a42233dde2e566b70c2b", null ],
+    [ "CONTENT_TYPE_DIR", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_waypoint_with_english_description_with_media.html#a5db7510f469f295f6dd76a8f64521cca", null ],
+    [ "CONTENT_URI", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_waypoint_with_english_description_with_media.html#ad64a59e3c9fca4bc703fc7e865e253ec", null ],
+    [ "PROJECTION_ALL", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_waypoint_with_english_description_with_media.html#a0d0c6a1b9cfafec45bf300d91ecd6c5e", null ],
+    [ "SORT_ORDER_DEFAULT", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_waypoint_with_english_description_with_media.html#af53e4a3e11149e792e4e3810be38e574", null ]
+];

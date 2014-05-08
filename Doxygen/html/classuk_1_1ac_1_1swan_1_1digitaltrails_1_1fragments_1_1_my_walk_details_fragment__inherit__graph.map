@@ -1,3 +1,3 @@
 <map id="uk.ac.swan.digitaltrails.fragments.MyWalkDetailsFragment" name="uk.ac.swan.digitaltrails.fragments.MyWalkDetailsFragment">
-<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_details_fragment.html" title="uk.ac.swan.digitaltrails.fragments.\lWalkDetailsFragment" alt="" coords="13,109,232,151"/>
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_details_fragment.html" title="{uk.ac.swan.digitaltrails.fragments.\lWalkDetailsFragment\n|+ ARG_POSITION\l# mCurrentPos\l# mTitleText\l# mLongDescrText\l&#45; TAG\l&#45; WALK_DESCRIPTION_PROJECTION\l|+ getCurrentPosition()\l+ onCreateView()\l+ onStart()\l+ onResume()\l+ onSaveInstanceState()\l+ updateDetailsView()\l+ onCreateLoader()\l+ onLoadFinished()\l+ onLoaderReset()\l}" alt="" coords="5,160,255,443"/>
 </map>

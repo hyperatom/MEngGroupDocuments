@@ -1,3 +1,3 @@
 <map id="uk.ac.swan.digitaltrails.activities.SearchActivity" name="uk.ac.swan.digitaltrails.activities.SearchActivity">
-<area shape="rect" id="node3" href="$interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment_1_1_on_walk_selected_listener.html" title="uk.ac.swan.digitaltrails.fragments.\lSearchListFragment.OnWalkSelectedListener" alt="" coords="5,57,292,98"/>
+<area shape="rect" id="node3" href="$interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment_1_1_on_walk_selected_listener.html" title="{uk.ac.swan.digitaltrails.fragments.\lSearchListFragment.OnWalkSelectedListener\n||+ onWalkSelected()\l}" alt="" coords="151,5,437,97"/>
 </map>

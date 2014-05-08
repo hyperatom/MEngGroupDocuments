@@ -3,12 +3,13 @@
 }
 
 
-Class to define methods for Data\+Sources.  
+Abstract class to define methods for Data\+Sources.  
 
 
 
 
-Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Data\+Source\+:\nopagebreak
+Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Data\+Source\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,35 +18,40 @@ Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Data\+Source
 \end{figure}
 
 
-Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Data\+Source\+:\nopagebreak
+Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+database.\+Data\+Source\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=253pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source__coll__graph}
+\includegraphics[width=259pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source_aafb301a6dac3a3c63068a9798ceebff2}{Data\+Source} (Context context)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Context \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source_a1daf2406165149f28205c4ac895ee858}{m\+Context}
-\item 
+\begin{DoxyCompactList}\small\item\em The context to use. \end{DoxyCompactList}\item 
 S\+Q\+Lite\+Database \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source_aafb91ad4da9b6ea6520f1268f9a6771d}{m\+White\+Rock\+D\+B}
-\item 
+\begin{DoxyCompactList}\small\item\em The database to use. \end{DoxyCompactList}\item 
 String \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source_a5a038e9db6a268c1f8f70d74f0981e93}{m\+Table}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The Table to access. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Class to define methods for Data\+Sources. 
+Abstract class to define methods for Data\+Sources. 
 
 Data\+Sources are to be used to add, update and delete from the database. \begin{DoxyAuthor}{Author}
 Lewis Hancock 
 \end{DoxyAuthor}
+
+
+Definition at line 12 of file Data\+Source.\+java.
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -57,24 +63,56 @@ Lewis Hancock
 \end{DoxyParamCaption}
 )}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source_aafb301a6dac3a3c63068a9798ceebff2}
 
+
+Constructor. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em context} & \\
 \hline
 \end{DoxyParams}
 
 
+Definition at line 31 of file Data\+Source.\+java.
+
+
+
 \subsection{Member Data Documentation}
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source_a1daf2406165149f28205c4ac895ee858}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Data\+Source}!m\+Context@{m\+Context}}
 \index{m\+Context@{m\+Context}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Data\+Source}}
 \subsubsection[{m\+Context}]{\setlength{\rightskip}{0pt plus 5cm}Context uk.\+ac.\+swan.\+digitaltrails.\+database.\+Data\+Source.\+m\+Context\hspace{0.3cm}{\ttfamily [protected]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source_a1daf2406165149f28205c4ac895ee858}
+
+
+The context to use. 
+
+
+
+Definition at line 17 of file Data\+Source.\+java.
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source_a5a038e9db6a268c1f8f70d74f0981e93}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Data\+Source}!m\+Table@{m\+Table}}
 \index{m\+Table@{m\+Table}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Data\+Source}}
 \subsubsection[{m\+Table}]{\setlength{\rightskip}{0pt plus 5cm}String uk.\+ac.\+swan.\+digitaltrails.\+database.\+Data\+Source.\+m\+Table\hspace{0.3cm}{\ttfamily [protected]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source_a5a038e9db6a268c1f8f70d74f0981e93}
+
+
+The Table to access. 
+
+
+
+Definition at line 25 of file Data\+Source.\+java.
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source_aafb91ad4da9b6ea6520f1268f9a6771d}{\index{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Data\+Source}!m\+White\+Rock\+D\+B@{m\+White\+Rock\+D\+B}}
 \index{m\+White\+Rock\+D\+B@{m\+White\+Rock\+D\+B}!uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Data\+Source@{uk\+::ac\+::swan\+::digitaltrails\+::database\+::\+Data\+Source}}
 \subsubsection[{m\+White\+Rock\+D\+B}]{\setlength{\rightskip}{0pt plus 5cm}S\+Q\+Lite\+Database uk.\+ac.\+swan.\+digitaltrails.\+database.\+Data\+Source.\+m\+White\+Rock\+D\+B\hspace{0.3cm}{\ttfamily [protected]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source_aafb91ad4da9b6ea6520f1268f9a6771d}
 
 
+The database to use. 
+
+
+
+Definition at line 21 of file Data\+Source.\+java.
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/uk/ac/swan/digitaltrails/database/\hyperlink{_data_source_8java}{Data\+Source.\+java}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Admin/\+Documents/\+Work/\+Digital\+Trails/src/uk/ac/swan/digitaltrails/database/\hyperlink{_data_source_8java}{Data\+Source.\+java}\end{DoxyCompactItemize}

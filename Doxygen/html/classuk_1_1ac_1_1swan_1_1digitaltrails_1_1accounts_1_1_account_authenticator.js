@@ -7,5 +7,7 @@ var classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator
     [ "getAuthToken", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator.html#accf8b092de90a407d819f2e725caa435", null ],
     [ "getAuthTokenLabel", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator.html#aed5266720e65fd505ae9e1b49e770321", null ],
     [ "hasFeatures", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator.html#a5d57d1e4676178d3301498ab3f3f4878", null ],
-    [ "updateCredentials", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator.html#a2b9b07cf976fa45eda1380afe84c3b84", null ]
+    [ "updateCredentials", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator.html#a2b9b07cf976fa45eda1380afe84c3b84", null ],
+    [ "mContext", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator.html#a468f731a73e2164afe2f81cc06240ad9", null ],
+    [ "TAG", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator.html#a39113e1c1faaa9b9629e1c07f56e1a83", null ]
 ];
