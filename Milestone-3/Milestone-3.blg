@@ -5,6 +5,7 @@ Warning--entry type for "bootstrapvalidator" isn't style-file defined
 --line 8 of file bibliography.bib
 Warning--entry type for "uipatterns" isn't style-file defined
 --line 15 of file bibliography.bib
+Warning--I didn't find a database entry for "jQuery"
 Too many commas in name 1 of "Adam Barrell, Christopher Lewis, Lewis Hancock, Thomas Milner" for entry milestone2
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Adam Barrell, Christopher Lewis, Lewis Hancock, Thomas Milner" for entry milestone2
