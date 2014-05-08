@@ -1275,6 +1275,132 @@ The Bug report table is used to store bugs in the program that are reported by u
 \textbf{Result:} \textcolor{red}{FAIL} - A user guide was implemented, but not according to the specifications. The implemented user guide exists as an external PDF presented by this document.\\
 \textbf{Description:} This set of test cases tests that a user guide is present and accessible from the application. \\
 
+\subsection{Android Application}
+
+\label{test:APP-T01}
+\noindent\textbf{Test Code:} APP-T01\\
+\textbf{Asserts Specification:} APPSPEC1, APPSPEC2, APPSPEC3, APPSPEC4, APPSPEC5, APPSPEC6, APPSPEC7, APPSPEC8, APPSPEC9, APPSPEC10.\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item  The application's login view will feature a `Register' button.
+                     \item Clicking the `Register' button will display a view featuring full name, email and password text boxes, `Register' and `Cancel' buttons.
+                     \item Clicking the `Register' button will validate the full name, email and password text boxes. If successful, the account will be created, user logged in and navigate the user to a personal home view.
+                   Clicking the `Cancel' button will cancel the registration process and navigate the user back to the launch view.
+                   \item The application's launch view will feature a `Login' button.
+                   \item Clicking the `Login' button will display a login view featuring email and password text boxes, `Sign In' and `Cancel' buttons.
+                   \item Clicking the `Sign In' button will validate the email and password text boxes, log the user in and navigate to a personal home view if successful.
+                   \item Clicking the `Cancel' button will cancel the sign in process and navigate the user back to the launch view.
+                   \item The personal home view and options menu will feature a `Log Out' button.
+                   \item Clicking the `Log Out' button will log the user out of the application and navigate to the launch view.
+                   \end{itemize} 
+                   
+\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Description:} This set of test cases tests if a user can create an account, log out of that account and then successfully log back in. \\
+
+\label{test:APP-T02}
+\noindent\textbf{Test Code:} APP-T02\\
+\textbf{Asserts Specification:} APPSPEC11, APPSPEC12, APPSPEC13, APPSPEC14\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item The personal home view and options menu will feature an `Account' button.
+                     \item Clicking the `Account' button will navigate the user to a view featuring full name, email, password text boxes and `Save', `Cancel' buttons.
+                     \item Clicking the `Save' button will validate the full name, email, password text boxes and save any changes to the user's account if successful. A notification will be displayed to inform the user of success or failure.
+                     \item Clicking the `Cancel' button will cancel the process of account modification and navigate the user to the personal home view. 
+                   \end{itemize}
+\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Description:} This set of test cases tests if the user can modify their account details and save the details.\\
+
+\label{test:APP-T03}
+\noindent\textbf{Test Code:} APP-T03\\
+\textbf{Asserts Specification:} APPSPEC16, APPSPEC17, APPSPEC18, APPSPEC19, APPSPEC20, APPSPEC21\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item Clicking the `Search' button will navigate the user to a view containing a search text box, `Go' button and list of walks.
+                     \item Clicking the `Go' button will filter the walk list to display only the walk names with a full or partial match to the search text.
+                     \item Walk list items will display the walk name, author, partial description, user rating, downloads and `Download' button.
+                     \item Clicking the `Download' button will download the walk to the user's device and replace the button with a `tick' icon.
+                     \item The application will group walk list items which are close in proximity together in a sublist with a heading name of the common local area.
+                     \item Walk list items grouped by local area will be displayed in descending order based on closest proximity to the application user.
+                   \end{itemize}
+\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Description:} This set of test cases tests the search feature and its functionality. \\
+
+\label{test:APP-T04}
+\noindent\textbf{Test Code:} APP-T04\\
+\textbf{Asserts Specification:} APPSPEC22, APPSPEC23, APPSPEC24, APPSPEC25.\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item An options menu will feature `Google Earth' and `Google Street' buttons which will be accessible whilst viewing a walk.
+                     \item Clicking the `Google Earth' button will change the current walk's map to the Google Earth view.
+                     \item Clicking the `Google Street' button will change the current walk's map to the Google Street view.
+                     \item Walk edit and add views will feature a default map drop down box containing
+                     the options `Google Earth' and `Google Street'.
+                   \end{itemize}
+\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Description:} This set of test cases test if the application allows users to alternate between Google Earth and Google Street views.\\
+
+\label{test:APP-T05}
+\noindent\textbf{Test Code:} APP-T05\\
+\textbf{Asserts Specification:} APPSPEC26, APPSPEC27, APPSPEC28\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item Application data will be downloaded through a web API, interfacing a remote database which will be hosted on a Linux server.
+                     \item Application data will be synchronised with a remote database when the application is launched and the device is connected to WiFi.
+                     \item The application will display a loading view whilst synchronising application data.
+                   \end{itemize}
+\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Description:} \\
+
+\label{test:APP-T06}
+\noindent\textbf{Test Code:} APP-T06\\
+\textbf{Asserts Specification:} APPSPEC29, APPSPEC30, APPSPEC31, APPSPEC32, APPSPEC33, APPSPEC34, APPSPEC35\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item The application will feature a settings view containing a toggle button to enable data download over the cellular data network.
+                     \item Clicking the toggle button will change its state to on or off accordingly and the setting will be saved.
+                     \item The settings view will feature a drop down box containing the storage options `Internal' and `SD Card'.
+                     \item Selecting an option from the storage drop down box will save the setting and move data to the chosen location if it has changed.
+                     \item The application will display a loading view whilst moving application data to a different location.
+                     \item A location strategy will be re-implemented using the Android location services API.
+                     \item The application's GPS accuracy will be tested on the target Hudl tablet and a low end Android 2.2 mobile device to ensure consistency. 
+                     \end{itemize}
+                   
+\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Description:} \\
+
+\label{test:APP-T07}
+\noindent\textbf{Test Code:} APP-T07\\
+\textbf{Asserts Specification:} APPSPEC36, APPSPEC37, APPSPEC38, APPSPEC39\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item  
+                     \item 
+                     \item
+                     \item
+                     \item 
+                   \end{itemize}
+\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Description:} \\
+
+\label{test:APP-T08}
+\noindent\textbf{Test Code:} APP-T08\\
+\textbf{Asserts Specification:} \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item  
+                     \item 
+                     \item
+                     \item
+                     \item 
+                   \end{itemize}
+\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Description:} \\
+
+\label{test:APP-T09}
+\noindent\textbf{Test Code:} APP-T09\\
+\textbf{Asserts Specification:} \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item  
+                     \item 
+                     \item
+                     \item
+                     \item 
+                   \end{itemize}
+\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Description:} \\
+
 \subsection{API}
 
 While there were never any initial specifications for an API acceptance testing for the API was still carried out using the design documents as a guide. This ensured the API not only has all required features, but also acted as an additional round of unit testing to prove that all the functions of the API were working correctly. The API was tested using a program called CoocaRestClient which is an OSX program designed specifically for testing REST API's. The program allows the user to enter a URL, select the HTTP method, set the request payload and set any headers that are required. With this it is possible to access every property of the API and test situations which may not occur through normal usage. \\
@@ -1917,6 +2043,7 @@ You must first be logged in to change your account details. You may change detai
 \label{fig:user-account-guide}
 \end{figure}
 
+\subsection{Walks}
 
 \subsubsection{Searching Walks}
 
@@ -1990,6 +2117,8 @@ Any walks that you have created can be deleted and subsequently removed from the
 \item Click \emph{view this walk} on any walk you have authored.
 \item Click the \emph{delete} button on the top right of the view shown in Figure \ref{fig:walk-info-guide}.
 \end{enumerate}
+
+\subsection{Waypoints}
 
 \subsubsection{Viewing Waypoints}
 
@@ -2115,6 +2244,8 @@ You can delete waypoints from walks that you have authored. This will permanentl
 \item The waypoint will be permanently deleted from the Digital Trails database and subsequently be removed from the map.
 \end{enumerate}
 
+\subsection{Walk Contributions}
+
 \subsubsection{Reviewing Waypoint Contributions}
 
 As a walk author, you will be required to accept or reject any waypoints that have been added to your walk by other users. Please note, the \emph{contributions} tab will only be visible if you have at least one contribution to moderate.
@@ -2169,6 +2300,64 @@ A walk review can be deleted if it is your own, or the review is associated with
 \end{enumerate}
 
 \section{Android Application}
+\label{user_manual_application}
+
+\subsection{Installation}
+
+Section about how to install the application onto your device.
+
+\subsection{Getting started}
+
+INSERT IMAGES\\
+
+To open the White Rock application, navigate to the `Apps' section of your Android device and select the `WhiteRockTrail' thumbnail. When selected, the application will launch and present the \emph{Splash Screen}, shortly followed by the \emph{Launch} interface. Here, you may log in to \emph{White Rock Trails} or continue as a guest. Note: Guest mode has restricted privileges that may prevent you from carrying out certain activities.\\
+
+You are now ready to start using the application. For a quick start tutorial, proceed to section GET SECTION NAME. For a complete tutorial, proceed to section GET SECTION NAME. 
+
+\subsection{Quick start - Create a walk}
+
+In this section, a quick start tutorial will present all necessary steps required to carry out the basic application features. The tutorial will document the following features:-
+
+ \begin{itemize}
+   \item Create an account
+   \item Create a walk
+   \item View a walk
+ \end{itemize}
+
+\paragraph*{Create an account}\mbox{}\\
+
+Signing up to White Rock Trails can bring numerous benefits including full access to all application features, monthly newsletters highlighting popular local walks etc. To create an account, select the \emph{Log In} button situated at the centre of the \emph{Launch} interface (figure \ref{fig:launch_viewUM}). This will navigate to the \emph{Log In} interface. If you don't already have an existing account, select the \emph{New user?} text below the \emph{Sign In} button. This will navigate to the \emph{Register} interface GET IMAGE. Here you are required to enter you first and last name, email address and asked to create a password. When you've finished filling in all four text fields, press the \emph{Create Account} button. This will validate the details you have entered, checking whether you may proceed or need to amend your information. If the details entered are valid, the application will create a new user account and navigate to the \emph{Home} interface.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/launch_view}
+    \caption{Launch interface}
+    \label{fig:launch_viewUM}
+\end{figure}
+
+\paragraph*{Create a walk}\mbox{}\\
+
+Now that you have a registered account, you may create a new walk. To do so, select the \emph{My Walks} button of the \emph{Home} interface. This will inflate the \emph{My Walks} interface. Next, select the \emph{Create Walk} button, that will navigate to the \emph{Create Walk} interface (figure \ref{fig:create_walkUM}). First, give your walk a name and then add a description as instructed. To create this walk, you must next add a waypoint. Selecting the \emph{Add A Waypoint} button will navigate to the \emph{Add Waypoint} interface, which displays an interaction map and prompt text. Press and holding on a location will create a waypoint at that position. A waypoint dialogue will inflate requesting a waypoint name and description. From this dialogue, the geological location of the waypoint can also be changed, however, this is discouraged and the `drag-and-drop' waypoint feature is preferred. When adding waypoints is complete, selecting the \emph{create} button will create and save the walk. This walk will now appear in the \emph{My Walks} interface, where it may be edited or deleted and also in the \emph{Save Walks} interface, where you may view the walk.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/home}
+    \caption{Home interface}
+    \label{fig:homeUM}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/create_walk}
+    \caption{Create Walk interface}
+    \label{fig:create_walkUM}
+\end{figure}
+
+\paragraph*{View a walk}
+
+Now that you've created a walk, you may view it. At the \emph{Home} interface, select the \emph{Saved Walks} button. Your newly created walk will now appear in the list on the left hand side. To view a walk, select the walk name from the list so that the walk details appear in view, then press the \emph{Start walk} button. This inflates the \emph{Walk View} interface, presenting a full-screen map with walk waypoints. Pressing a waypoint will inflate a pop-up that presents the waypoint name and description. To hide the waypoint details, simply press a different part of the map.
+
+\subsection{Complete application guide}
 
 \chapter{Reflective Account}
 \label{sec:reflective-account}
@@ -2180,6 +2369,10 @@ A walk review can be deleted if it is your own, or the review is associated with
 \subsection{Chris Lewis - Android Interface Development}
 \section{Learning Experience}
 \label{sec:learning-experience}
+\subsection{Tom Milner - API Development}
+\subsection{Adam Barrell - Web Portal Development}
+\subsection{Lewis Hancock - Android Development}
+\subsection{Chris Lewis - Android Interface Development}
 \section{Risk Analysis Review}
 \label{sec:risk-analysis-review}
 \subsection{Anticipated Risks}
@@ -2192,8 +2385,19 @@ A walk review can be deleted if it is your own, or the review is associated with
 \label{sec:methodology-review}
 \section{Goals Achieved}
 \label{sec:goals-achieved}
+
+\subsection{Tom Milner - API Development}
+\subsection{Adam Barrell - Web Portal Development}
+\subsection{Lewis Hancock - Android Development}
+\subsection{Chris Lewis - Android Interface Development}
+
 \section{Improvements}
 \label{sec:improvements}
+
+\subsection{Tom Milner - API Development}
+\subsection{Adam Barrell - Web Portal Development}
+\subsection{Lewis Hancock - Android Development}
+\subsection{Chris Lewis - Android Interface Development}
 
 \chapter*{Summary}
 \label{sec:summary}
