@@ -9,15 +9,12 @@ Warning--entry type for "milestone1" isn't style-file defined
 --line 15 of file bibliography.bib
 Warning--entry type for "uipatterns" isn't style-file defined
 --line 23 of file bibliography.bib
-<<<<<<< HEAD
-=======
 Warning--entry type for "googleAPI" isn't style-file defined
 --line 30 of file bibliography.bib
 Warning--entry type for "git" isn't style-file defined
 --line 37 of file bibliography.bib
 Warning--entry type for "android" isn't style-file defined
 --line 44 of file bibliography.bib
->>>>>>> 9a19771e3c92e43ee72d8a53045d98f2056ca3ca
 Warning--I didn't find a database entry for "jQuery"
 Too many commas in name 1 of "Adam Barrell, Christopher Lewis, Lewis Hancock, Thomas Milner" for entry milestone2
 while executing---line 1049 of file plain.bst
