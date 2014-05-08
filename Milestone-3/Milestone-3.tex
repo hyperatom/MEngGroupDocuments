@@ -603,7 +603,7 @@ As previously documented, many interface designs were altered during the iterati
     \label{fig:app_my_walks_view1}
 \end{figure}
 
-With the above negative aspects of this design taken into consideration, a new interface design was produced (Figure \ref{fig:app_my walks_view2}). The interface now presents each walk in a side-bar style list fragment, reading each walk from a database. The \emph{edit} and \emph{delete} buttons are included in the main fragment. Additional features to the interface now include the walk's \emph{geological location}, \emph{description}, \emph{length(in miles)}, \emph{number of walk waypoints}, \emph{difficulty rating} and \emph{average user rating}. Providing this level of information allows users to view a basic summary of each walk created by the user.\\
+With the above negative aspects of this design taken into consideration, a new interface design was produced (Figure \ref{fig:app_my walks_view2}). The interface now presents each walk in a side-bar style list fragment, reading each walk from a database. The \emph{edit} and \emph{delete} buttons are included in the main fragment. Additional features to the interface now include the walk's \emph{geological location}, \emph{description}, \emph{length(in miles)}, \emph{number of walk waypoints}, \emph{difficulty rating} and \emph{average user rating}. Providing this level of information allows users to view a basic summary of each walk created by the user.
 
 \begin{figure}[H]
     \centering
@@ -3001,6 +3001,22 @@ After a short discussion, it was decided that the application development team w
 \section{Learning Experience}
 \label{sec:learning-experience}
 \subsection{Tom Milner - API Development}
+
+\subsubsection{API Design}
+Before this project I had very little experience with web based API's and had never implemented one before. Designing the API required me to research and learn about technologies such as REST, HTTP and Slim, which are large, detailed frameworks and system that form the backbone of the API.
+
+After learning about the underlying principles of REST and HTTP I had to improve my previous PHP skills which were many years old and outdated. PHP is the language that the Slim Framework is based upon so a good understanding of this was crucial to understanding Slim and developing the API.
+
+Once I was up-to-date with PHP I started experimenting with Slim and developing basic API's which were built upon to form the foundation of the White Rock API. Through the development I learnt many new skills in the field of API development, many of which I picked up along the way as the demand arose.
+
+\subsubsection{Working in Parellel} 
+During the time I was developing the API Adam was developing the Web Portal and Lewis was working on the Android sync code. This caused numerous problems where they were requiring functionality that was undergoing development and constantly changing. Many problems occurred because of small changes to the API or client which then had to be replicated and reflected on the other side. 
+
+This forced us to improve our team work and ability to work in parallel. After adjusting to the development process we were able to keep each other informed of code changes and the sate of each development. This greatly reduced the problems that arose. Another key aspect was Pair Programming with Adam. Whenever a problem arose on either the API or Website we could sit down and work through the problem together using our collective experience with web development to find a solution. This was the way which most of the serious problems with the API were solved and helped improve code quality and our team work skills.
+
+\subsubsection{Authentication Systems}
+Developing the authentication system proved to be quite challenging. I previously had very little experience with security and so had to spend several days researching and testing different solutions to find the best answer. Primarily I had to learn about hashing and the methods of authentication that are currently in use. Only after this research was I able to devise the best possible solution to the authentication problem. 
+
 \subsection{Adam Barrell - Web Portal Development}
 
 \subsubsection{Web Technologies}
@@ -3295,12 +3311,35 @@ PERRSK17 was a risk that warned of team members going on vacation and leaving mo
 
 \section{Schedule Review}
 \label{sec:schedule-review}
+
+Throughout the project several problems arose which effected the schedule. These problems included PR days, holidays and illness. While these problems pushed the schedule back the Scrum methodology allowed us to adapt and recover. Throughout the project we were hoping to achieve one 10-6 workday a week on the project. This was designed to ensured that the project was on track and processing constantly throughout the year.
+
+The project saw sprints and workdays completed regularly and as expected, except for when events caused work to stop. However even with the workdays and sprints roughly on target we felt there was still lots to do and with around 2 months left updated the schedule to have 2 workdays a week. We hoped this would ensure the project was completed ahead of schedule. 
+
+Due to the shear volume of work we had to complete and the complexity of the project the project overran and several features were left partially implemented. Despite this we will continue the project after the deadline to ensure there is a polished and professional project to display at the Project Fair. 
+
+Every member of the group put in the maximum possible effort and struggled to find anymore time to dedicate to the project. Unfortunately there was little that could be done that would have improved this situation. Ideally there would have been an extra member of the group to relieve the workload or a smaller set of features to implement. 
+
+
 \section{Methodology Review}
 \label{sec:methodology-review}
+Throughout the project we have used the Scrum methodology. This methodology is allows us to develop the application in an agile and iterative manner. Development was broken down into a series of sprint which developed a small subset of features. At the end of each sprint a working iteration of the project was delivered. The next iteration would then build upon the the pervious implementing a new set of features and improving on previously implemented ones. 
+
+This methodology allowed us a large amount of freedom during the development. The flexibility to move work around and chose sprints as they arrive meant we were able to adapt to changing circumstances like illness, holidays and things such as promotional events with White Rocks. Sprints varied between 1 and 2 weeks in length and applied to individual developers. For example Tom Milner could be working on a 2 week sprint for the API while Adam Barrell spent a week on the Web Portal and Lewis Hancock and Chris Lewis were working on a 1 week sprint for the Application. 
+
+Tom Milner was designated Scrum manager, however during development the developers were able to take over management of their own sprints. This was due to the separation in roles and work. Occasionally the work would call for developers would work on a sprint together, this was another benefit of Scrum. 
+
+In future, if time allowed, the scrum methodology would be enforced more strictly by the scrum manager. This would ensure scrum timing was as efficient as possible and ensure that developers were constantly aware of what else was going on in the project. 
+
 \section{Goals Achieved}
 \label{sec:goals-achieved}
 
 \subsection{Tom Milner - API Development}
+
+Based on the original goals and requirements of the project the API has been able to achieve every one. All the required functionality has been implemented and it has been rigorously tested. Users are able to communicate with the API and access all of its functionality. 
+
+Specifically this meets requirement  \emph{APPREQ10}, however the main functionality has been abstracted from a wide variety of the requirements  for both there android application and website.These requirements were not specifically designed for the API but were used as a guideline to ensure it produces the correct output and all were made possible through the functionality of the API. This shows that the goals of the API were achieved. 
+
 \subsection{Adam Barrell - Web Portal Development}
 
 The primary goals of the web portal are as follows.
@@ -3340,6 +3379,21 @@ The application uses user friendly text and button styles, allowing the applicat
 \section{Improvements}
 \label{sec:improvements}
 \subsection{Tom Milner - API Development}
+
+If I was to start this project again there are a few points I would change. 
+
+\subsubsection{More time spent designing}
+During the development of the API and authentication system it was apparent that there were several things that could have been implemented in a more generic and suitable way. These improvements to design are minor but would potentially aid in the extension and continued development of the API. 
+
+\subsubsection{Better time management}
+Several events occurred during the development of the project which cost the team a days development time. This was not idea and while attempts were made to catch up they always resulted in the project slipping behind.
+
+\subsubsection{Use of more existing technology}
+The API is a very custom implementation. There are many new technologies which could have been applied to different parts of the project if they had been know of at the time of design. Systems like Basic HTTP Auth would have saved my time and others. 
+
+\subsubsection{Extra hypermedia types}
+The API currently only supports JSON objects. It  would be a nice if the API supported other media types such a JSON and plain text. This would make the API more accessible to users and open up new development possibilities. 
+
 \subsection{Adam Barrell - Web Portal Development}
 \subsection{Lewis Hancock - Android Development}
 A number of improvements to the development of the application could have been possible, these include both methodology and team-oriented improvements as well as ways to improve the application in future.
@@ -3368,6 +3422,14 @@ To help broaden the potential user base of the application a future project woul
 \label{sec:individual-contributions}
 
 \subsection{Tom Milner - API Development}
+From the start of the project we worked as a group to develop a series of designs and requirements. After numerous meetings with John we were able to devise a concise list of requirements and specifications which he approved. During this phase I carried out a small amount of work on the initial codebase supplied to us by John to tidy it up and develop a sense of the task at hand. 
+
+When work began on the development I was the main developer of the API. I developed the design and implemented the system from the ground up, Iterating through several designs until I settled on the final one. I also researched, designed and implemented a custom authentication system for the API. During the development process I guided Adam Barrell and Lewis Hancock with using the API form the website and android application. 
+
+Towards the end of the project I took over a small part of the android development to connect sync adapters, created by Lewis, to the API. This work required the development of a custom HTTP provider which processed requests and the implementation of GSON to convert the JSON from the API into Java objects. The phase also saw some minor redevelopment to the android app as GSON failed to automatically convert some JSON. This work was completed with the help of Lewis. 
+
+During the writing of this document I was mainly responsible for the API sections of the Design, User Manual and Testing and for my personal reflections on the project and a few other parts in the narrative section. 
+
 \subsection{Adam Barrell - Web Portal Development}
 Adam was the team leader for the group of three other developers working on the White Rock Trails software. He was responsible for interfacing directly with the client on behalf of the group. This involved organising meetings between the client and group, and specifying an agenda. Adam was also responsible for organising development days where the group met in one location to develop the software. This allowed team members to work together much more effectively rather than being in different locations.
 
