@@ -1274,10 +1274,10 @@ The Bug report table is used to store bugs in the program that are reported by u
 \noindent\textbf{Test Code:} POR-T01\\
 \textbf{Asserts Specification:} WEBSPEC1, WEBSPEC2, WEBSPEC3 \\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item The web portal must have a `Register' button for users that are not logged in.
+                     \item The web portal should have a `Register' button for users that are not logged in.
                      \item Clicking `Register' should display a view with `Name', `Email Address', `Password', `Password Confirmation' text fields and `Register' and `Cancel' buttons.
-                     \item Clicking `Cancel' will return the user to the index page.
-                     \item Clicking `Register' will create a user and log them in.
+                     \item Clicking `Cancel' should return the user to the index page.
+                     \item Clicking `Register' should create a user and log them in.
                    \end{itemize}  
 \textbf{Result:} \textcolor{green}{PASS}\\ 
 \textbf{Description:} This set of test cases tests that a user can register a new account with the Web Portal. It also tests that the correct fields are displayed on the form and that users are logged in after registration.\\
@@ -1290,8 +1290,8 @@ The Bug report table is used to store bugs in the program that are reported by u
                      \item Clicking `Login' should present a modal dialogue with `Username' and `Password' fields and `Login' and `Cancel' buttons.
                      \item Clicking `Login' should create an authenticated session for the user and store it in a temporary cookie.
                      \item Clicking `Cancel' should dismiss the modal dialogue.
-                     \item When users are logged in they will be presented with a `Logout' link.
-                     \item Clicking `Logout' will delete the session cookie and return the user to the index page as a guest.
+                     \item When users are logged in they should be presented with a `Logout' link.
+                     \item Clicking `Logout' should delete the session cookie and return the user to the index page as a guest.
                    \end{itemize}  
 \textbf{Result:} \textcolor{green}{PASS}\\ 
 \textbf{Description:} This set of test cases tests that a registered user can log in to the application. It also tests that the correct fields are on the login form and that users can also log out. Finally, it tests the technical requirement of session token storage. \\
@@ -1300,10 +1300,10 @@ The Bug report table is used to store bugs in the program that are reported by u
 \noindent\textbf{Test Code:} POR-T03\\
 \textbf{Asserts Specification:} WEBSPEC11, WEBSPEC12, WEBSPEC13, WEBSPEC14 \\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item The web portal will feature an `Edit Account' button.
-                     \item Clicking the `Edit Account' will display a view that allows the user to edit their `full name, email and password', a `Cancel' button and a `Save' button.
-                     \item Clicking the `Save' button will validate the full name, email and password text boxes. If successful, a notification will inform the user that changes were made to their details.
-                     \item Clicking the `Cancel' button will cancel current changes made to the user's details.
+                     \item The web portal should feature an `Edit Account' button.
+                     \item Clicking the `Edit Account' should display a view that allows the user to edit their `full name, email and password', a `Cancel' button and a `Save' button.
+                     \item Clicking the `Save' button should validate the full name, email and password text boxes. If successful, a notification will inform the user that changes were made to their details.
+                     \item Clicking the `Cancel' button should cancel current changes made to the user's details.
                    \end{itemize}  
 \textbf{Result:} \textcolor{green}{PASS}\\ 
 \textbf{Description:} This set of test cases tests that a registered user can change their account details such as their \emph{full name}, \emph{email} and \emph{password}. It also tests that the correct fields are present. \\
@@ -1312,9 +1312,9 @@ The Bug report table is used to store bugs in the program that are reported by u
 \noindent\textbf{Test Code:} POR-T04\\
 \textbf{Asserts Specification:} WEBSPEC15, WEBSPEC16, WEBSPEC17 \\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item All web portal views will feature the company logo and use a house colour scheme.
-                     \item The `user account settings' view will feature a company branding tab, allowing the user to attach their company logo to a walk.
-                     \item The company branding tab will feature a `Browse' button, allowing the user to browse their computer for a particular image and will feature a `Save' button, allowing the user to upload their image.
+                     \item All web portal views should feature the company logo and use a house colour scheme.
+                     \item The `user account settings' view should feature a company branding tab, allowing the user to attach their company logo to a walk.
+                     \item The company branding tab should feature a `Browse' button, allowing the user to browse their computer for a particular image and should feature a `Save' button, allowing the user to upload their image.
                    \end{itemize}  
 \textbf{Result:} \textcolor{green}{PASS} - It was decided that company branding would be added to a walk using a cover image rather than tied to a specific account.\\ 
 \textbf{Description:} This set of test cases tests that a registered user can change the branding of their walks using an image from their computer. The brand logo should then be visible on all the user's created walks. \\
@@ -1323,13 +1323,13 @@ The Bug report table is used to store bugs in the program that are reported by u
 \noindent\textbf{Test Code:} POR-T05\\
 \textbf{Asserts Specification:} WEBSPEC18, WEBSPEC19, WEBSPEC20, WEBSPEC21, WEBSPEC22, WEBSPEC23, WEBSPEC24\\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item Successfully logging in will take the user to a `Homepage' view featuring their own walks and contributions.
-                     \item The web portal will feature a `Walk' button on its side bar.
-                     \item Clicking the `Walk' button will navigate the user to a view featuring a list of walks and an `Add walk' button.
-                     \item Clicking the `Add walk' button will display a view featuring `Walk name, description' text boxes, `Cancel' and `Create' button.
-                     \item The `Walk name' and `Description' text boxes will include a profanity filter, preventing inappropriate words being used.
-                     \item Clicking the `Cancel' button will navigate the user back to the `Homepage' view.
-                     \item Clicking the `Create' button will create a new walk.
+                     \item Successfully logging in should take the user to a `Homepage' view featuring their own walks and contributions.
+                     \item The web portal should feature a `Walk' button on its side bar.
+                     \item Clicking the `Walk' button should navigate the user to a view featuring a list of walks and an `Add walk' button.
+                     \item Clicking the `Add walk' button should display a view featuring `Walk name, description' textboxes, `Cancel' and `Create' button.
+                     \item The `Walk name' and `Description' text boxes should include a profanity filter, preventing inappropriate words being used.
+                     \item Clicking the `Cancel' button should navigate the user back to the `Homepage' view.
+                     \item Clicking the `Create' button should create a new walk. 
                    \end{itemize}  
 \textbf{Result:} \textcolor{green}{PASS} - The behaviour of logging in was changed to keep the user on the same page. A profanity filter was also not implemented.\\ 
 \textbf{Description:} This set of test cases tests that a registered user can create a new walk with the prevention of profanity words. The correct view components are also tested for their presence. \\
@@ -1338,9 +1338,9 @@ The Bug report table is used to store bugs in the program that are reported by u
 \noindent\textbf{Test Code:} POR-T06\\
 \textbf{Asserts Specification:} WEBSPEC25, WEBSPEC26, WEBSPEC27\\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item The walk list view will feature an `Edit' button and `Delete' button adjacent to each walk.
-                     \item Clicking the `Edit' button will navigate to a view where the user can edit the `Walk name, description' text boxes.
-                     \item Clicking the `Delete' button will display a view, asking the user to confirm they wish to delete the walk.
+                     \item The walk list view should feature an `Edit' button and `Delete' button adjacent to each walk.
+                     \item Clicking the `Edit' button should navigate to a view where the user can edit the `Walk name, description' text boxes.
+                     \item Clicking the `Delete' button should display a view, asking the user to confirm they wish to delete the walk.
                    \end{itemize}  
 \textbf{Result:} \textcolor{green}{PASS}\\ 
 \textbf{Description:} This set of test cases tests that a registered user can edit and delete their own walk. \\
@@ -1349,15 +1349,15 @@ The Bug report table is used to store bugs in the program that are reported by u
 \noindent\textbf{Test Code:} POR-T07\\
 \textbf{Asserts Specification:} WEBSPEC28, WEBSPEC29, WEBSPEC30, WEBSPEC31, WEBSPEC32, WEBSPEC33, WEBSPEC34, WEBSPEC35, WEBSPEC36\\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item When in user-walk list view, clicking on a walk will display a view featuring a list of walk waypoints and an `Add waypoint' button.
-                     \item Clicking the `Add waypoint' button will display a view featuring `Waypoint name', `Waypoint description' text boxes, `Location Map', `Add image', `Add video' and `Add audio' buttons.
-                     \item Clicking the `Add image' button will display a `Browse', `Add' and `Cancel' button.
-                     \item Clicking the `Browse' button will allow the user to browse their computer for a suitable image of the waypoint.
-                     \item Clicking the `Save' button will upload the image to the waypoint.
-                     \item Clicking the `Cancel' button will navigate the user back to the waypoint view.
-                     \item Clicking the `Add video' button will display a `Browse', `Add' and `Cancel' button.
-                     \item Clicking the `Browse' button will allow the user to browse their computer for a suitable video of the waypoint.
-                     \item Clicking the `Save' button will upload the video to the waypoint.
+                     \item When in user-walk list view, clicking on a walk should display a view featuring a list of walk waypoints and an `Add waypoint' button.
+                     \item Clicking the `Add waypoint' button should display a view featuring `Waypoint name', `Waypoint description' text boxes, `Location Map', `Add image', `Add video' and `Add audio' buttons.
+                     \item Clicking the `Add image' button should display a `Browse', `Add' and `Cancel' button.
+                     \item Clicking the `Browse' button should allow the user to browse their computer for a suitable image of the waypoint.
+                     \item Clicking the `Save' button should upload the image to the waypoint.
+                     \item Clicking the `Cancel' button should navigate the user back to the waypoint view.
+                     \item Clicking the `Add video' button should display a `Browse', `Add' and `Cancel' button.
+                     \item Clicking the `Browse' button should allow the user to browse their computer for a suitable video of the waypoint.
+                     \item Clicking the `Save' button should upload the video to the waypoint.
                    \end{itemize}  
 \textbf{Result:} \textcolor{green}{PASS}\\ 
 \textbf{Description:} This set of test cases tests that a registered user can add new waypoints to their walk. It also tests that media including images, audio and video can be uploaded to the waypoint. \\
@@ -1366,8 +1366,8 @@ The Bug report table is used to store bugs in the program that are reported by u
 \noindent\textbf{Test Code:} POR-T08\\
 \textbf{Asserts Specification:} WEBSPEC37, WEBSPEC38\\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item Clicking a specific point on the `Location map' of the walk will place a waypoint based on its geological location.
-                     \item The longitude and latitude co-ordinates must be able to be set manually..
+                     \item Clicking a specific point on the `Location map' of the walk should place a waypoint based on its geological location.
+                     \item The longitude and latitude co-ordinates must be able to be set manually.
                    \end{itemize}  
 \textbf{Result:} \textcolor{green}{PASS}\\
 \textbf{Description:} This set of test cases tests that a waypoint location can be chosen and that its latitude and longitude can be manually specified. \\
@@ -1376,14 +1376,14 @@ The Bug report table is used to store bugs in the program that are reported by u
 \noindent\textbf{Test Code:} POR-T09\\
 \textbf{Asserts Specification:} WEBSPEC39, WEBSPEC40, WEBSPEC41, WEBSPEC42, WEBSPEC43, WEBSPEC44, WEBSPEC45, WEBSPEC46\\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item The waypoint list view will feature an `Edit' button and a `Delete' button adjacent to each waypoint.
-                     \item Clicking the `Edit waypoint' button will navigate to a view where the user can edit the `Waypoint name, description' text boxes, waypoint image, waypoint video, waypoint audio and waypoint geological location.
-                     \item Each feature of a waypoint will include a delete button adjacent to the feature.
-                     \item Clicking the `Delete' button of a waypoint feature will display a view asking the user if they wish to delete it. For example, clicking the delete button adjacent to the waypoint video will ask the user if they wish to delete the video.
-                     \item Clicking the `Delete waypoint' will display a view, asking the user to confirm they wish to delete the waypoint.
-                     \item The waypoints view will feature a `Change order' button.
-                     \item Clicking the `Change order' button will display a list view of the waypoints, an `Up' button and a `Down' button.
-                     \item When a waypoint is selected, clicking the `Up' button will move the waypoint up the list order, clicking the `Down' button will move the waypoint down the list order.
+                     \item The waypoint list view should feature an `Edit' button and a `Delete' button adjacent to each waypoint.
+                     \item Clicking the `Edit waypoint' button should navigate to a view where the user can edit the `Waypoint name, description' textboxes, waypoint image, waypoint video, waypoint audio and waypoint geological location.
+                     \item Each feature of a waypoint should include a delete button adjacent to the feature.
+                     \item Clicking the `Delete' button of a waypoint feature should display a view asking the user if they wish to delete it. For example, clicking the delete button adjacent to the waypoint video should ask the user if they wish to delete the video.
+                     \item Clicking the `Delete waypoint' should display a view, asking the user to confirm they wish to delete the waypoint.
+                     \item The waypoints view should feature a `Change order' button.
+                     \item Clicking the `Change order' button should display a list view of the waypoints, an `Up' button and a `Down' button.
+                     \item When a waypoint is selected, clicking the `Up' button should move the waypoint up the list order, clicking the `Down' button should move the waypoint down the list order.
                    \end{itemize}  
 \textbf{Result:} \textcolor{red}{FAIL} - The order of waypoints to be visited in a walk was not implemented as specified. Instead, users could manually enter the waypoint visit order on creation or modification.\\
 \textbf{Description:} This set of test cases tests that a waypoint can be successfully edited and deleted. \\
@@ -1392,9 +1392,9 @@ The Bug report table is used to store bugs in the program that are reported by u
 \noindent\textbf{Test Code:} POR-T10\\
 \textbf{Asserts Specification:} WEBSPEC47, WEBSPEC48, WEBSPEC49\\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item The web portal side bar will feature a `Translate' button that will display a view featuring `Welsh' and `English' buttons.
-                     \item Clicking the `English' button will translate the text into English.
-                     \item Clicking the `Welsh' button will translate the text into Welsh.
+                     \item The web portal side bar will feature a `Translate' button that should display a view featuring `Welsh' and `English' buttons.
+                     \item Clicking the `English' button should translate the text into English.
+                     \item Clicking the `Welsh' button should translate the text into Welsh.
                    \end{itemize}  
 \textbf{Result:} \textcolor{red}{FAIL} - A language translation feature has not been implemented.\\
 \textbf{Description:} This set of test cases tests that the language of walk descriptions is interchangeable between English and Welsh. \\
@@ -1403,12 +1403,12 @@ The Bug report table is used to store bugs in the program that are reported by u
 \noindent\textbf{Test Code:} POR-T11\\
 \textbf{Asserts Specification:} WEBSPEC50, WEBSPEC51, WEBSPEC52, WEBSPEC53, WEBSPEC54\\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item The web portal side bar will feature a `Statistics' button, a `Ratings' button, a `Review' button, a `Requests' and a `Report' button.
+                     \item The web portal side bar should feature a `Statistics' button, a `Ratings' button, a `Review' button, a `Requests' and a `Report' button.
                      \item Clicking the `Statistics' button navigates the user to a statistics view, displaying each of the user's walks and their download history.
                      \item Clicking the `Ratings' button navigates the user to a ratings view, displaying each of the user's walks and average ratings.
                      \item Clicking the `Reviews' button navigates the user to a review view, displaying each of the user's walks as a list of reviews.
                      \item Clicking on the `Request' button navigates the user to a request view, displaying pending waypoints to be added to one of their walks.
-                     \item Clicking on a pending waypoint will display a view featuring an `Accept' or `Reject' button.
+                     \item Clicking on a pending waypoint should display a view featuring an `Accept' or `Reject' button.
                    \end{itemize}  
 \textbf{Result:} \textcolor{green}{PASS}\\
 \textbf{Description:} This set of test cases tests that the navigation links are present to allow users to access all walk details. \\
@@ -1417,9 +1417,9 @@ The Bug report table is used to store bugs in the program that are reported by u
 \noindent\textbf{Test Code:} POR-T12\\
 \textbf{Asserts Specification:} WEBSPEC55, WEBSPEC56, WEBSPEC57\\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item Clicking on a pending waypoint will display a view featuring an `Accept' or `Reject' button.
-                     \item Clicking the `Accept' button will add the waypoint to the walk.
-                     \item Clicking the `Reject' button will delete the waypoint request.
+                     \item Clicking on a pending waypoint should display a view featuring an `Accept' or `Reject' button.
+                     \item Clicking the `Accept' button should add the waypoint to the walk.
+                     \item Clicking the `Reject' button should delete the waypoint request.
                    \end{itemize}  
 \textbf{Result:} \textcolor{green}{PASS}\\
 \textbf{Description:} This set of test cases tests that a walk author can successfully accept or reject waypoints added to their walks by other users. \\
@@ -1428,9 +1428,9 @@ The Bug report table is used to store bugs in the program that are reported by u
 \noindent\textbf{Test Code:} POR-T13\\
 \textbf{Asserts Specification:} WEBSPEC58, WEBSPEC59, WEBSPEC60\\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item Clicking the `Report' button will display a report view, featuring a report/bug `Name', `Description' text boxes, `Send' button and `Cancel' button.
+                     \item Clicking the `Report' button should display a report view, featuring a report/bug `Name', `Description' textboxes, `Send' button and `Cancel' button.
                      \item Clicking the `Send' button will file a report to the White Rock maintenance team.
-                     \item Clicking the `Cancel' button will navigate the user to the homepage.
+                     \item Clicking the `Cancel' button should navigate the user to the homepage.
                    \end{itemize}  
 \textbf{Result:} \textcolor{red}{FAIL} - A bug report feature was not implemented.\\
 \textbf{Description:} This set of test cases tests that a bug report feature allows users to submit reports of bugs they find in the application. \\
@@ -1439,12 +1439,12 @@ The Bug report table is used to store bugs in the program that are reported by u
 \noindent\textbf{Test Code:} POR-T14\\
 \textbf{Asserts Specification:} WEBSPEC61, WEBSPEC62, WEBSPEC63, WEBSPEC64, WEBSPEC65, WEBSPEC66\\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item  Clicking the `FAQ' button will navigate to the FAQ.
-                     \item The FAQ page will contain two panels, one for links to question, on the left, and one for answers, on the right.
-                     \item The web portal will have a `Guide' button which links to the User Guide.
-                     \item The User Guide page will contain two panels, one for the contents page, on the left, and one for the guide, on the right.
-                     \item The User Guide page will update the guide when the user clicks a link in the contents panel.
-                     \item The User Guide guide panel will contain a back and next button to change the content in the panel.
+                     \item  Clicking the `FAQ' button should navigate to the FAQ.
+                     \item The FAQ page should contain two panels, one for links to question, on the left, and one for answers, on the right.
+                     \item The web portal should have a `Guide' button which links to the User Guide.
+                     \item The User Guide page should contain two panels, one for the contents page, on the left, and one for the guide, on the right.
+                     \item The User Guide page should update the guide when the user clicks a link in the contents panel.
+                     \item The User Guide guide panel should contain a back and next button to change the content in the panel.
                    \end{itemize}  
 \textbf{Result:} \textcolor{red}{FAIL} - A user guide was implemented, but not according to the specifications. The implemented user guide exists as an external PDF presented by this document.\\
 \textbf{Description:} This set of test cases tests that a user guide is present and accessible from the application. \\
@@ -2546,14 +2546,54 @@ Now that you've created a walk, you may view it. At the \emph{Home} interface, s
 \label{sec:problem-solving}
 \subsection{Tom Milner - API Development}
 \subsection{Adam Barrell - Web Portal Development}
+
+\subsubsection{Third Party Library Bugs}
+Bugs were found in a third party library which helped validate user input fields. The library used was called the \emph{bootstrapvalidator}\cite{bootstrapvalidator} created by an open source project. The library utilises the Bootstrap user interface framework to provide styling for valid and invalid fields. Whilst using the library to validate fields in the web portal's login form, a number of bugs were encountered.
+
+The first bug encountered was that the form did not validate when two or more remote API calls were used to check a field's validity. The GIT Hub project discussion forum revealed that this was a known problem and was being fixed by the library's developer. Three days elapsed until the library was fixed and could be used in the web portal login form.
+
+The second bug encountered was more technical and meant that the login form submission method could not be overridden. The presence of this bug however had not been discussed on the project forum. Therefore, I submitted my own bug report specifying the scenario that could be taken to reproduce the problem. Since I has already implemented a solution to this bug, I also specified the code needed to fix it. The project developer quickly replied to the report and the feature was fixed the next day.
+
+\subsubsection{Parallel API Development}
+The API and web portal were both developed in parallel, however this brought about some problems during development. The API was being developed separately by Tom Milner and the web portal by Adam Barrell. Nealy all features of the web portal depended entirely upon the API working properly.
+
+Whilst developing the web portal, it was discovered that the API was not functioning correctly when retrieving and manipulating data. One particular example, was when media was uploaded to the server but a thumbnail wasn't generated. This thumbnail was required to allow the media to be previewed in a waypoint media gallery. Therefore, Tom Milner had to fix the problem on the API which in turn, prevented any more development taking place on the media upload feature.
+
+Many similar problems were encountered during development where the API wasn't capable of performing the functions required by the web portal. In addition, API methods were not tested until the system was fully implemented. This meant that many bugs were still present when methods were being consumed by the web portal.
+
+\subsubsection{Client Side Password Hashing}
+The web portal login mechanism required passwords to be hashed using a slow hashing algorithm before being sent to the server for account authentication. Slow hashing algorithms make it harder for attackers to decrypt passwords if they are retrieved from the database. When attempting to login with mobile devices, the process was extremely slow. This was because a hashing workload factor had been set such that more powerful desktop computers would hash the password much more quickly than less powerful mobile devices.
+
+A solution was implemented which involved moving the hashing process to the server. This meant that the login process took exactly the same amount of time across devices of varying power.
+
 \subsection{Lewis Hancock - Android Development}
 \subsection{Chris Lewis - Android Interface Development}
 \section{Learning Experience}
 \label{sec:learning-experience}
 \subsection{Tom Milner - API Development}
 \subsection{Adam Barrell - Web Portal Development}
+
+\subsubsection{Web Technologies}
+The main part of my learning experience has been learning new web technologies that I have previously had no experience using. Web applications utilise many different technologies and frameworks depending on the type of application being developed. Although their use is not essential, they make building web applications less time consuming since they provide solutions to many common problems.
+
+AngularJS was the framework that the web portal was built on top of. Learning how to use this framework was a steep learning curve but was significantly reduced by the wealth of documentation and community created tutorials present online. The best approach for the structure and modularisation of JavaScript files was also learned which made the application more maintainable. 
+
+Many technologies concerned with the web portal views such as Twitter Bootstrap and HTML5 were also learned alongside AngularJS. Twitter Bootstrap is a presentation library which contains out-of-the-box styles for HTML components. I learned that using these libraries allowed us to quickly prototype the structure of the web portal views without having to spend time creating custom component styles.
+
+\subsubsection{Working In Parallel}
+%reading other peoples code
+One of the biggest challenges has been learning to work in parallel with other members of the team. Since Tom Milner was responsible for developing the API, he was an essential asset to the development of the web portal. When I was developing features of the web application, I regularly communicated with Tom to discuss how we could implemented them in both the web portal and API. This was because the web portal needed to consume data from the API which acted as an interface to the database.
+
+Tom and I often partook in pair programming which is promoted by our chosen Agile Scrum methodology. Pair programming involved one of us programming whilst the other observed the code being written. The observers job was to notify the programmer of problems with the code and to suggest potential solutions. This method of programming was adopted when either myself or Tom had an error that we could not fix. With hindsight, it proved to be very effective since we were able to solve most of our programming errors this way.
+
+\subsubsection{User Interface Design}
+Another major learning outcome was learning how to develop intuitive interfaces that would be usable by a range of users with varying abilities. Many design principles and patterns were learned from a website called UI-Patterns\cite{uipatterns}. This website listed the most commonly used interface designs to overcome various problems. Such problems included how to display high quantities of data on a page. This was a problem encountered during the design of the \emph{all walks} and \emph{my walks} views. UI-Patterns suggested that a `load on scroll' or pagination technique should be used to prevent too much data being displayed at once. The pagination solution was adopted for use in the mentioned views which allowed users to select a page index to display a subset of the walks returned from the database.
+
+Since the web portal had to be designed for users with varying abilities, a concious effort had to be made to make the interface intuitive enough. The skills learned through doing this can be transferred to any other application that I develop in the future. Therefore, this was a good learning outcome from this project.
+
 \subsection{Lewis Hancock - Android Development}
 \subsection{Chris Lewis - Android Interface Development}
+
 \section{Risk Analysis Review}
 \label{sec:risk-analysis-review}
 \subsection{Anticipated Risks}
@@ -2574,6 +2614,14 @@ Now that you've created a walk, you may view it. At the \emph{Home} interface, s
 
 \section{Improvements}
 \label{sec:improvements}
+
+\subsection{Tom Milner - API Development}
+\subsection{Adam Barrell - Web Portal Development}
+\subsection{Lewis Hancock - Android Development}
+\subsection{Chris Lewis - Android Interface Development}
+
+\section{Individual Contributions}
+\label{sec:individual-contributions}
 
 \subsection{Tom Milner - API Development}
 \subsection{Adam Barrell - Web Portal Development}
