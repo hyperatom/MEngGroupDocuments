@@ -1253,7 +1253,7 @@ The Bug report table is used to store bugs in the program that are reported by u
                      \item The application will display a loading view whilst synchronising application data.
                    \end{itemize}
 \textbf{Result:} \textcolor{green}{PASS} - jj\\
-\textbf{Description:} \\
+\textbf{Description:} This set of test cases test if the application downloads data correctly and whether it can synchronise with the remote database.\\
 
 \label{test:APP-T06}
 \noindent\textbf{Test Code:} APP-T06\\
@@ -1269,46 +1269,90 @@ The Bug report table is used to store bugs in the program that are reported by u
                      \end{itemize}
                    
 \textbf{Result:} \textcolor{green}{PASS} - jj\\
-\textbf{Description:} \\
+\textbf{Description:} This set of test cases test if the application can download over a cellular data network and allows the user to select a data storage option. The application is also tested for its location services and accuracy.\\
 
 \label{test:APP-T07}
 \noindent\textbf{Test Code:} APP-T07\\
-\textbf{Asserts Specification:} APPSPEC36, APPSPEC37, APPSPEC38, APPSPEC39\\ 
+\textbf{Asserts Specification:} APPSPEC36, APPSPEC37, APPSPEC38\\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item  
-                     \item 
-                     \item
-                     \item
-                     \item 
+                     \item  The walk view will place a graphic over each waypoint on the map containing a number to represent it's preferred visit order.
+                     \item The walk view will highlight the next waypoint to visit using a different graphic colour.
+                     \item Waypoint information will be displayed to the user even if the waypoint has previously been visited since the walk view was opened. 
                    \end{itemize}
 \textbf{Result:} \textcolor{green}{PASS} - jj\\
-\textbf{Description:} \\
+\textbf{Description:} This set of test cases test if the application presents waypoints as graphics on a map, stating the waypoint order and highlighting the next waypoint in a separate colour. Waypoint information must be displayed regardless if it was previously viewed.\\
 
 \label{test:APP-T08}
 \noindent\textbf{Test Code:} APP-T08\\
-\textbf{Asserts Specification:} \\ 
+\textbf{Asserts Specification:} APPSPEC39, APPSPEC40, APPSPEC41, APPSPEC42, APPSPEC43, APPSPEC44, APPSPEC45, APPSPEC46, APPSPEC47, APPSPEC48, APPSPEC49, APPSPEC50\\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item  
-                     \item 
-                     \item
-                     \item
-                     \item 
+                     \item The application will feature a `Walk Options' button.
+                     \item Clicking on the `Walk Options' button will display a view with `Create Walk' button and a list of walks owned by the user.
+                     \item Each walk in the list will have an `Edit' and `Delete' button.
+                     \item Clicking the `Create Walk' button will display a view with `walk name, description' text boxes and `Add waypoints', `Create' and `Cancel' buttons.
+                     \item Pressing an `Edit' button on a walk will bring up the `Edit Walks' view where the user can edit the `Walk name' and `Description' text fields. There will be an `Add waypoint', `Edit Waypoints', `Create' and `Cancel' buttons.
+                     \item Pressing the `Delete' button will display a modal dialogue asking the user to confirm the deletion.
+                     \item Pressing the `Add waypoints' button will bring up a map view where users can zoom and navigate. Waypoints are positioned by pressing on a location for a couple of seconds.
+                     \item Waypoints are automatically assigned the order in which they were created.
+                     \item Once a location has been assigned the `Edit Waypoint' view is displayed.
+                     \item Pressing the `Edit Waypoints' button will display a list of current waypoints. Each waypoint will have a `Edit' and `Delete' button.
+                     \item Pressing the `Edit' button will display an `Edit Waypoint' view.
+                     \item Pressing the `Delete' button will display a model asking the user to confirm the deletion of the waypoint.
+                     
                    \end{itemize}
 \textbf{Result:} \textcolor{green}{PASS} - jj\\
-\textbf{Description:} \\
+\textbf{Description:} This set of test cases test if the user can create a walk, edit the walk, add a waypoint to the walk, edit a waypoint and finally delete the walk. \\
 
 \label{test:APP-T09}
 \noindent\textbf{Test Code:} APP-T09\\
-\textbf{Asserts Specification:} \\ 
+\textbf{Asserts Specification:} APPSPEC51, APPSPEC52, APPSPEC53, APPSPEC54\\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item  
-                     \item 
-                     \item
-                     \item
-                     \item 
+                     \item The `Edit Waypoints' view displays a map thumbnail of the location, `Name' and `Description' text boxes, an `Upload' button to add images, audio and video, and a gallery of uploaded media.
+                     \item Pressing on an item in the gallery of uploaded media will show a modal dialogue with a `Delete' button. Clicking `Delete' will present another model asking the user to confirm the deletion.
+                     \item When viewing a waypoint there will be tabs for `Descriptions', `Images', `Audio' and `Videos'.
+                     \item Pressing the map thumbnail will allow the user to change the position of the waypoint. It will show a map with a movable point and `Confirm' and `Cancel' buttons.
                    \end{itemize}
 \textbf{Result:} \textcolor{green}{PASS} - jj\\
-\textbf{Description:} \\
+\textbf{Description:} This set of test cases test if the application allows for media to be attached to a waypoint. The attached media should then be displayed when a waypoint is pressed at the view walk interface.\\
+
+\label{test:APP-T10}
+\noindent\textbf{Test Code:} APP-T10\\
+\textbf{Asserts Specification:} APPSPEC56, APPSPEC57, APPSPEC58\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item When a registered user is viewing a walk there will be an `Edit' button.
+                     \item Pressing the `Edit' button will display the `Edit Walks' view. The `walk name' and `description' fields will be greyed out to prevent editing.
+                     \item Any edits to walks created by people other than owner will require them to be confirmed by the owner before being published.
+                     
+                   \end{itemize}
+\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Description:} This set of test cases test if the application allows walk editing if a user attempts to edit a walk created by a different user.\\
+
+\label{test:APP-T11}
+\noindent\textbf{Test Code:} APP-T11\\
+\textbf{Asserts Specification:} APPSPEC59, APPSPEC60, APPSPEC61, APPSPEC62, APPSPEC63, APPSPEC64, APPSPEC65\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item When a user has visited every waypoint on a walk a model will appear asking the user if they have finished. It will have `Finished' and `Carry on' buttons.
+                     \item A user can force a walk to finish by pressing a `Finish' button in the options menu.
+                     \item Pressing `Finish' displays a view with a `Review' text box, `Submit review' button, 5 star rating system and `Report a bug' button.
+                     \item Submitting a review submits the data in the `Review' text box and displays it on the walks information page.
+                     \item Filling in the 5 star rating system will automatically send the result to the server.
+                     \item Pressing `Report a Bug' will launch the email client.
+                     \item The `to? address will be set as the email address of the owner, the `subject? field will be set in the format ``BUG REPORT - WALK `NAME' ''.
+                   \end{itemize}
+\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Description:} This set of test cases test if the application inflates a model when a walk is complete. The application allows users to finish a walk and submit a review. The user may report bugs in a walk.\\
+
+\label{test:APP-T11}
+\noindent\textbf{Test Code:} APP-T11\\
+\textbf{Asserts Specification:} APPSPEC66, APPSPEC67, APPSPEC68, APPSPEC69\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item The application will link to the White Rocks Twitter and Facebook page from the main page.
+                     \item The application provide an option in the settings view to display welsh text where available.
+                     \item On each waypoint and walk there will be a `Report' button which will flag the content as inappropriate.
+                     \item And content which has been flagged as inappropriate will appear to administrators, who can modify or delete it.
+                   \end{itemize}
+\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Description:} This set of test cases test if the application allows users to navigate to the White Rock Facebook and Twitter pages. The application allows for the application to be translated into Welsh. The application allows administrators to delete inappropriate content.\\
 
 \subsection{API}
 
@@ -2217,13 +2261,50 @@ Section about how to install the application onto your device.
 
 \subsection{Getting started}
 
-INSERT IMAGES\\
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/chris/app_thumb}
+\caption{Application Launch}
+\label{fig:app_thumb}
+\end{figure}
 
-To open the White Rock application, navigate to the `Apps' section of your Android device and select the `WhiteRockTrail' thumbnail. When selected, the application will launch and present the \emph{Splash Screen}, shortly followed by the \emph{Launch} interface. Here, you may log in to \emph{White Rock Trails} or continue as a guest. Note: Guest mode has restricted privileges that may prevent you from carrying out certain activities.\\
+To open the White Rock application, navigate to the `Apps' section of your Android device and select the `WhiteRockTrail' thumbnail highlighted by the blue arrow show in figure \ref{fig:app_thumb}. When selected, the application will launch and present the \emph{Splash Screen}, shortly followed by the \emph{Launch} interface. Here, you may log in to \emph{White Rock Trails} or continue as a guest. Note: Guest mode has restricted privileges that may prevent you from carrying out certain activities.\\
 
-You are now ready to start using the application. For a quick start tutorial, proceed to section GET SECTION NAME. For a complete tutorial, proceed to section GET SECTION NAME. 
+You are now ready to start using the application. For a quick start tutorial, proceed to section \ref{sec:app_quick_start}. For a complete tutorial, proceed to section \ref{sec:app_complete_guide}. 
 
 \subsection{Quick start - Create a walk}
+\label{sec:app_quick_start}
+In this section, a quick start tutorial will present all necessary steps required to carry out the basic application features. The tutorial will document the following features:-
+
+ \begin{itemize}
+   \item Download a walk
+   \item View a walk
+ \end{itemize}
+ 
+\paragraph*{Download a walk}\mbox{}\\
+
+To download a walk, first select the \emph{Download Walks} button at the \emph{Home} interface. This loads the \emph{Download Walks} interface. Here, you may either select from the list of walks provided or use the search feature to filter the available list of walks. The selected walk's details will load into the main interface. To download, simply select the \emph{Download} button. This will download and save the walk.
+ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/chris/download_walk}
+\caption{Download Walks interface}
+\label{fig:download_walk}
+\end{figure}
+
+\paragraph*{View a walk}
+
+Now that you've downloaded a walk, you may view it. At the \emph{Home} interface, select the \emph{Saved Walks} button. Your newly downloaded walk will now appear in the list on the left hand side. To view a walk, select the walk name from the list so that the walk details appear in view, then press the \emph{Start walk} button. This inflates the \emph{Walk View} interface, presenting a full-screen map with walk waypoints. Pressing a waypoint will inflate a pop-up that presents the waypoint name and description. To hide the waypoint details, simply press a different part of the map.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/chris/saved_walks}
+\caption{Saved Walks interface}
+\label{fig:saved_walks}
+\end{figure}
+
+\subsection{Complete application guide}
+\label{sec:app_complete_guide}
 
 In this section, a quick start tutorial will present all necessary steps required to carry out the basic application features. The tutorial will document the following features:-
 
@@ -2232,10 +2313,11 @@ In this section, a quick start tutorial will present all necessary steps require
    \item Create a walk
    \item View a walk
  \end{itemize}
+ 
+\subsection{Create an account}
+\label{sec:create_account}
 
-\paragraph*{Create an account}\mbox{}\\
-
-Signing up to White Rock Trails can bring numerous benefits including full access to all application features, monthly newsletters highlighting popular local walks etc. To create an account, select the \emph{Log In} button situated at the centre of the \emph{Launch} interface (figure \ref{fig:launch_viewUM}). This will navigate to the \emph{Log In} interface. If you don't already have an existing account, select the \emph{New user?} text below the \emph{Sign In} button. This will navigate to the \emph{Register} interface GET IMAGE. Here you are required to enter you first and last name, email address and asked to create a password. When you've finished filling in all four text fields, press the \emph{Create Account} button. This will validate the details you have entered, checking whether you may proceed or need to amend your information. If the details entered are valid, the application will create a new user account and navigate to the \emph{Home} interface.
+Signing up to White Rock Trails can bring numerous benefits including full access to all application features, monthly newsletters highlighting popular local walks etc. To create an account, select the \emph{Log In} button situated at the centre of the \emph{Launch} interface (figure \ref{fig:launch_viewUM}). This will navigate to the \emph{Log In} interface. If you don't already have an existing account, select the \emph{New user?} text below the \emph{Sign In} button. This will navigate to the \emph{Register} interface. Here you are required to enter you first and last name, email address and asked to create a password. When you've finished filling in all four text fields, press the \emph{Create Account} button. This will validate the details you have entered, checking whether you may proceed or need to amend your information. If the details entered are valid, the application will create a new user account and navigate to the \emph{Home} interface.
 
 \begin{figure}[H]
     \centering
@@ -2244,7 +2326,9 @@ Signing up to White Rock Trails can bring numerous benefits including full acces
     \label{fig:launch_viewUM}
 \end{figure}
 
-\paragraph*{Create a walk}\mbox{}\\
+
+\subsection{Create a walk}
+\label{sec:create_walk}
 
 Now that you have a registered account, you may create a new walk. To do so, select the \emph{My Walks} button of the \emph{Home} interface. This will inflate the \emph{My Walks} interface. Next, select the \emph{Create Walk} button, that will navigate to the \emph{Create Walk} interface (figure \ref{fig:create_walkUM}). First, give your walk a name and then add a description as instructed. To create this walk, you must next add a waypoint. Selecting the \emph{Add A Waypoint} button will navigate to the \emph{Add Waypoint} interface, which displays an interaction map and prompt text. Press and holding on a location will create a waypoint at that position. A waypoint dialogue will inflate requesting a waypoint name and description. From this dialogue, the geological location of the waypoint can also be changed, however, this is discouraged and the `drag-and-drop' waypoint feature is preferred. When adding waypoints is complete, selecting the \emph{create} button will create and save the walk. This walk will now appear in the \emph{My Walks} interface, where it may be edited or deleted and also in the \emph{Save Walks} interface, where you may view the walk.
 
@@ -2261,12 +2345,6 @@ Now that you have a registered account, you may create a new walk. To do so, sel
     \caption{Create Walk interface}
     \label{fig:create_walkUM}
 \end{figure}
-
-\paragraph*{View a walk}
-
-Now that you've created a walk, you may view it. At the \emph{Home} interface, select the \emph{Saved Walks} button. Your newly created walk will now appear in the list on the left hand side. To view a walk, select the walk name from the list so that the walk details appear in view, then press the \emph{Start walk} button. This inflates the \emph{Walk View} interface, presenting a full-screen map with walk waypoints. Pressing a waypoint will inflate a pop-up that presents the waypoint name and description. To hide the waypoint details, simply press a different part of the map.
-
-\subsection{Complete application guide}
 
 \chapter{Reflective Account}
 \label{sec:reflective-account}
