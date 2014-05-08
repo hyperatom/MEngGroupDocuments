@@ -1584,7 +1584,7 @@ The Bug report table is used to store bugs in the program that are reported by u
                      \item Clicking the `Save' button will validate the full name, email, password text boxes and save any changes to the user's account if successful. A notification will be displayed to inform the user of success or failure.
                      \item Clicking the `Cancel' button will cancel the process of account modification and navigate the user to the personal home view. 
                    \end{itemize}
-\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Result:} \textcolor{red}{FAIL} - jj\\
 \textbf{Description:} This set of test cases tests if the user can modify their account details and save the details.\\
 
 \label{test:APP-T03}
@@ -1598,7 +1598,7 @@ The Bug report table is used to store bugs in the program that are reported by u
                      \item The application will group walk list items which are close in proximity together in a sublist with a heading name of the common local area.
                      \item Walk list items grouped by local area will be displayed in descending order based on closest proximity to the application user.
                    \end{itemize}
-\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Result:} \textcolor{red}{FAIL} - jj\\
 \textbf{Description:} This set of test cases tests the search feature and its functionality. \\
 
 \label{test:APP-T04}
@@ -1627,19 +1627,14 @@ The Bug report table is used to store bugs in the program that are reported by u
 
 \label{test:APP-T06}
 \noindent\textbf{Test Code:} APP-T06\\
-\textbf{Asserts Specification:} APPSPEC29, APPSPEC30, APPSPEC31, APPSPEC32, APPSPEC33, APPSPEC34, APPSPEC35\\ 
+\textbf{Asserts Specification:} APPSPEC34, APPSPEC35\\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item The application will feature a settings view containing a toggle button to enable data download over the cellular data network.
-                     \item Clicking the toggle button will change its state to on or off accordingly and the setting will be saved.
-                     \item The settings view will feature a drop down box containing the storage options `Internal' and `SD Card'.
-                     \item Selecting an option from the storage drop down box will save the setting and move data to the chosen location if it has changed.
-                     \item The application will display a loading view whilst moving application data to a different location.
                      \item A location strategy will be re-implemented using the Android location services API.
                      \item The application's GPS accuracy will be tested on the target Hudl tablet and a low end Android 2.2 mobile device to ensure consistency. 
                      \end{itemize}
                    
 \textbf{Result:} \textcolor{green}{PASS} - jj\\
-\textbf{Description:} This set of test cases test if the application can download over a cellular data network and allows the user to select a data storage option. The application is also tested for its location services and accuracy.\\
+\textbf{Description:} This set of test cases test if the application uses the GPS data correctly.\\
 
 \label{test:APP-T07}
 \noindent\textbf{Test Code:} APP-T07\\
@@ -1682,7 +1677,7 @@ The Bug report table is used to store bugs in the program that are reported by u
                      \item When viewing a waypoint there will be tabs for `Descriptions', `Images', `Audio' and `Videos'.
                      \item Pressing the map thumbnail will allow the user to change the position of the waypoint. It will show a map with a movable point and `Confirm' and `Cancel' buttons.
                    \end{itemize}
-\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Result:} \textcolor{green}{FAIL} - jj\\
 \textbf{Description:} This set of test cases test if the application allows for media to be attached to a waypoint. The attached media should then be displayed when a waypoint is pressed at the view walk interface.\\
 
 \label{test:APP-T10}
@@ -1707,23 +1702,44 @@ The Bug report table is used to store bugs in the program that are reported by u
                      \item Submitting a review submits the data in the `Review' text box and displays it on the walks information page.
                      \item Filling in the 5 star rating system will automatically send the result to the server.
                      \item Pressing `Report a Bug' will launch the email client.
-                     \item The `to? address will be set as the email address of the owner, the `subject? field will be set in the format ``BUG REPORT - WALK `NAME' ''.
+                     \item The `to' address will be set as the email address of the owner, the `subject? field will be set in the format ``BUG REPORT - WALK `NAME' ''.
                    \end{itemize}
-\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Result:} \textcolor{red}{FAIL} - jj\\
 \textbf{Description:} This set of test cases test if the application inflates a model when a walk is complete. The application allows users to finish a walk and submit a review. The user may report bugs in a walk.\\
 
-\label{test:APP-T11}
-\noindent\textbf{Test Code:} APP-T11\\
-\textbf{Asserts Specification:} APPSPEC66, APPSPEC67, APPSPEC68, APPSPEC69\\ 
+\label{test:APP-T12}
+\noindent\textbf{Test Code:} APP-T12\\
+\textbf{Asserts Specification:} APPSPEC66, APPSPEC67\\ 
 \textbf{Criteria:} \begin{itemize}
                      \item The application will link to the White Rocks Twitter and Facebook page from the main page.
                      \item The application provide an option in the settings view to display welsh text where available.
+                   \end{itemize}
+\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Description:} This set of test cases test if the application allows users to navigate to the White Rock Facebook and Twitter pages. The application allows for the application has an option to translate into welsh.
+
+
+\label{test:APP-T13}
+\noindent\textbf{Test Code:} APP-T13\\
+\textbf{Asserts Specification:} APPSPEC29, APPSPEC30, APPSPEC31, APPSPEC32, APPSPEC33\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item The application will feature a settings view containing a toggle button to enable data download over the cellular data network.
+                     \item Clicking the toggle button will change its state to on or off accordingly and the setting will be saved.
+                     \item The settings view will feature a drop down box containing the storage options `Internal' and `SD Card'.
+                     \item Selecting an option from the storage drop down box will save the setting and move data to the chosen location if it has changed.
+                     \item The application will display a loading view whilst moving application data to a different location.
+                   \end{itemize}
+\textbf{Result:} \textcolor{green}{FALSE} - jj\\
+\textbf{Description:} This set of test cases test if the application allows users to modify their storage settings.\\
+
+\label{test:APP-T14}
+\noindent\textbf{Test Code:} APP-T14\\
+\textbf{Asserts Specification:} APPSPEC68, APPSPEC69\\ 
+\textbf{Criteria:} \begin{itemize}
                      \item On each waypoint and walk there will be a `Report' button which will flag the content as inappropriate.
                      \item And content which has been flagged as inappropriate will appear to administrators, who can modify or delete it.
                    \end{itemize}
-\textbf{Result:} \textcolor{green}{PASS} - jj\\
-\textbf{Description:} This set of test cases test if the application allows users to navigate to the White Rock Facebook and Twitter pages. The application allows for the application to be translated into Welsh. The application allows administrators to delete inappropriate content.\\
-
+\textbf{Result:} \textcolor{red}{FAIL} - jj\\
+\textbf{Description:} Tests if the application allows administrators to delete inappropriate content.\\
 \subsection{API}
 
 While there were never any initial specifications for an API acceptance testing for the API was still carried out using the design documents as a guide. This ensured the API not only has all required features, but also acted as an additional round of unit testing to prove that all the functions of the API were working correctly. The API was tested using a program called CoocaRestClient (Figure \ref{fig:coocaRest}) which is an OSX program designed specifically for testing REST API's. The program allows the user to enter a URL, select the HTTP method, set the request payload and set any headers that are required. With this it is possible to access every property of the API and test situations which may not occur through normal usage. \\
