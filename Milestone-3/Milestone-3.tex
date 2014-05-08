@@ -1802,6 +1802,7 @@ showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyl
 }
 \end{lstlisting}
 
+
 \subsubsection{Waypoints}
 
 \begin{lstlisting}[captionpos=b, caption=An example JSON Waypoint Object., label=lst:walk]
@@ -1880,6 +1881,76 @@ showstringspaces=false, tabsize=4, breaklines=true, showspaces=false, stringstyl
     "caption" : "Some caption.",
     "url" : "whiterock.mp4"
 }
+\end{lstlisting}
+
+\subsection{Quick Start}
+
+To get started with the API you can request a collection of walks. To do this in JQuery you can use the request in Listing \ref{lst:req}. This will get all the walks and display the JSON response in an alert dialog. Any processing you need to do on the JSON response can be done in the success function.
+
+\begin{lstlisting}[captionpos=b, caption=Basic request code., label=lst:req]
+$.ajax({
+    type: "GET",
+    url: "http://whiterockapi.tmilner.co.uk/walks",
+    success: function(data, textStatus, jqXHR){
+    	alert(data);
+    }
+});
+\end{lstlisting}
+
+If you then wanted to add a walk you first need to authenticate with the API then you can do so with the code in Listing \ref{lst:authCode}. You can the add the walk using the code in Listing \ref{lst:addingDoc}. For this you will need to include the CryptoJS HMAC SHA1 library, which can't be included with the code \lstinline$<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha1.js"></script>$.
+
+\begin{lstlisting}[captionpos=b, caption=Basic authorisation code., label=lst:authCode]
+$.ajax({
+	type: "POST",
+    	url: "http://whiterockapit.tmilner.co.uk/sessions",
+    	data: {"email":"tomas@themilners.net", "password":"password"}, 
+    	success: function(data, textStatus, jqXHR){
+    		authToken = data.authToken;
+    	}
+});
+\end{lstlisting}
+
+\begin{lstlisting}[captionpos=b, caption=Adding a walk., label=lst:addingDoc]
+var timestamp = new Date().getTime();
+var email = "tomas@themilners.net";
+
+var post =  {
+	"english_description" : {
+	  	"title":"Test Walk",
+		"short_description":"A short description",
+		"long_description":"A long description"
+	},
+	"distance_miles" : "12",
+	"cover_url" : "image.jpg",
+	"waypoints" : [{
+		"english_description" : {
+			"title":"Test Walk",
+			"short_description":"A short description",
+			"long_description":"A long description"
+		},
+		"longitude" : "-3.93372000",
+		"latitude" : "51.63581500",
+		"visit_order" : "1",
+		"welsh_description" : {},
+	}],
+	"welsh_description" : {},
+	"duration_minutes" : "2",
+	"difficulty_rating" : "4",
+};
+
+var hash = CryptoJS.HmacSHA1(post+email+timestamp, authToken).toString();
+
+$.ajax({
+    type: "POST",
+    url: "http://whiterockapi.tmilner.co.uk/walks",
+    dataType: "json",
+    contentType: "application/json",
+    data: post,
+    headers: {'X-TIMESTAMP': timestamp,
+        	  'X-EMAIL': email,
+        	  'X-HASH': hash},
+    success: function(data, textStatus, jqXHR){ alert("Document Added!");}
+});
 \end{lstlisting}
 
 \subsection{Walks}
@@ -2177,6 +2248,28 @@ The session controller checks passwords and maps authorisation tokens to user. L
 \textbf{\textcolor{Maroon}{Response Payload:}} N/A\\
 \textbf{\textcolor{Maroon}{Authorisation Headers Required?:}} YES.
 
+\subsection{Authentication}
+
+To authenticate requests the user must create a hash, using the HMAC SHA1 algorithm and pass it to the server. There are 3 headers which need to be passed, X-HASH, X-EMAIL and X-TIMESTAMP. The hash will use the data that is being passed, the email and the timestamp as the message. The API will try and replicate this hash and if it succeeds it will allow the request. If it fails it will return a 403 Forbidden error. Listing \ref{lst:authGuide} shows the JavaScript code used for authentication. It makes use of the JQuery\cite{jQuery} AJAX method, however it could also be implemented in pure JavaScript. The CyptoJS library is used to calculate the HMAC, this is available for free from \url{http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha1.js}.
+
+\begin{lstlisting}[captionpos=b, caption=JavaScript Authentication Code., label=lst:authGuide]
+var timestamp = new Date().getTime();
+
+var hash = CryptoJS.HmacSHA1(dataString+username+timestamp, auth).toString();
+
+$.ajax({
+    type: type,
+    url: url,
+    dataType: "json",
+    contentType: "application/json",
+    data: dataString,
+    headers: {'X-TIMESTAMP': timestamp,
+        	  'X-EMAIL': email,
+        	  'X-HASH': hash},
+    success: function(data, textStatus, jqXHR){},
+    error: function(jqXHR, textStatus, errorThrown){}
+});
+\end{lstlisting}
 
 \section{Web Portal}
 
