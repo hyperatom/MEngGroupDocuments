@@ -2814,6 +2814,17 @@ A solution was implemented which involved moving the hashing process to the serv
 
 \subsection{Lewis Hancock - Android Development}
 \subsection{Chris Lewis - Android Interface Development}
+
+\subsubsection{Build system configuration}
+
+For this project, the development team did not employ a good build system. Git hub was not configured early on in project development and as a result, build path errors arose after each and every Git pull. This often slowed down development during team work sessions. Delaying overall progress. A solution to this issue would have been to tell Git to ignore the project properties, reducing the likelihood of problems occurring after each Git pull.
+
+\subsubsection{Android Screen Sizes}
+
+The application was developed to be available on multiple mobile and tablet screen sizes. This meant that numerous layout folders were required to house the individual layout files. Each folder contained up to 30 layout files. This created problems when a single layout was modified. The addition of a feature to a layout meant that all other screen sizes for the same layout also required modification. Apart from the obvious time consuming issues related to this problem, it also created further issues. If a single id of a feature was modified, again, so would all relevant layouts for individual screen sizes. This created programming conflicts between Lewis Hancock and myself. The modification of layout files meant that several merge conflicts arose during each git commit.\\
+
+After a short discussion, it was decided that the application development team would hold regular meetings to discuss each layout, while informing one another of any file modifications that took place. This ensured the team were using the same naming conventions for both features and layout files.
+
 \section{Learning Experience}
 \label{sec:learning-experience}
 \subsection{Tom Milner - API Development}
@@ -2839,6 +2850,16 @@ Since the web portal had to be designed for users with varying abilities, a conc
 
 \subsection{Lewis Hancock - Android Development}
 \subsection{Chris Lewis - Android Interface Development}
+
+\subsubsection{Time management}
+
+Due to a lack of industrial group project experience, time management created problems during the initial stages of this project. A shortage of available work sessions meant that the application fell behind the original time plan set out in Milestone 1. During the second half of the project, a team meeting was held to discuss all possible solutions. The team agreed that the current time-plan was not achievable based on the weekly development work day. The team learnt from this time management issue, by assigning an addition development work day to the weekly timetable.
+
+\subsubsection{User Interface Design}
+
+A second lesson learnt from conducting such a project was understanding how to design and develop both intuitive and aesthetically pleasing interfaces. These interfaces were also required to be usable by a broad range of users, with varying abilities. To ensure these requirements were met, several books and articles were studied. A notable set of interface design principles were \emph{Ben Shneiderman's eight gold rules of interaction design}. The design rules were used throughout the development of the application, as a form of benchmark. The design rules also ensured the application was developed to be intuitive. Gaining a sound understanding of user interface design rules and principles has allowed me to develop a second professional and intuitive Android application.   
+
+\subsubsection{Working in parallel}
 
 \section{Risk Analysis Review}
 \label{sec:risk-analysis-review}
