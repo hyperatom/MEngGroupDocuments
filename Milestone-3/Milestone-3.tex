@@ -633,7 +633,7 @@ The \emph{Home} interface is the central focus point of the application. This in
     \label{fig:saved_walks}
 \end{figure}
 
-The \emph{Saved Walks} interface presents a list of all saved walks on the left hand side. The main interface window displays the \emph{walk title, description, geological location} map and a \emph{start} button. Pressing the \emph{start} button will inflate a map interface and begin the walk trail.
+The \emph{Saved Walks} interface presents a list of all saved walks on the left hand side. Pressing an element within the list will show the details of that walk. The main interface window displays the \emph{walk title, description, geological location} map and a \emph{start} button. Pressing the \emph{start} button will inflate a map interface and begin the walk trail.
 
 \paragraph*{My Walks interface}\mbox{}\\
 
@@ -712,6 +712,159 @@ This section will present a flow diagram of the interface designs discussed prev
     \caption{Application flow diagram}
     \label{fig:flow}
 \end{figure}
+
+\subsection{Implementation}
+This section details the implementation of the Android Application. Table~\ref{tab:androidsystems} lists each subsystem within the application and outlines their purpose, this is expanded upon in sections~\ref{sec:accounts} -~\ref{sec:walkexplore}. Definitions for terms used can be seen in Table~\ref{tab:androidDefs}.
+
+\begin{longtable}{|p{2cm}|p{8cm}|}
+\hline \caption{Android Definitions} \label{tab:androidDefs} \endlastfoot
+\end{longtable}
+
+\begin{longtable}{|p{5cm}|p{10cm}|}
+\hline \caption{Subsystem Responsibilities - Continued on Next Page} \endfoot
+\hline \caption{Subsystem Responsibilities} \label{tab:androidsystems} \endlastfoot
+\hline
+\textbf{Subsystem} & \textbf{Responsibility} \\ \hline
+Account Authenticator & The account authenticator is responsible for communicating with the White Rock server to create, edit and authenticate accounts. Once logged in a user is able to create their own walks to share with other users, or edit those which they have previously created. \\ \hline
+Database & The heart of the application, the database subsystem uses an SQLite database with a Content Provider. It is responsible for the CRUD (Create, Read, Update, Delete) operations over the data, communicating the changes in the data to the synchronisation system and presents an outward facing contract for other applications to use.  \\ \hline
+Synchronisation & Responsible for sharing data between the application and the White Rock server. It receives notifications from the Database subsystem informing it when to synchronise and it receives account information from the Account Authenticator to define the permissions available for the current user's data. \\ \hline
+Walk Maintenance & A series of interfaces which interface with the Database and Synchronisation subsystems to manage user created walks which can be used locally and shared with other users. \\ \hline
+Walk Exploration & A Google Maps implementation which allows the user to go on a walk, following the on-screen hints. It must communicate with the Database subsystem to read and display the correct data for the chosen walk. \\ \hline
+\end{longtable}
+
+\subsubsection{Account Authenticator Subsystem}
+\label{sec:accounts}
+
+The Account Authenticator system is composed of the classes found in Table~\ref{tab:accountauth}. 
+
+\begin{longtable}{|p{7cm}|p{10cm}|}
+\hline \caption{Account Authenticator Classes - Cont. on Next Page} \endfoot
+\hline \caption{Account Authenticator Classes} \label{tab:accountauth} \endlastfoot
+\hline
+\textbf{Class} & \textbf{Purpose} \\ \hline
+AccountAuthenticator & Communicates with the native Android Account Manager to complete all operations possible for a White Rock account. These operations include getting the auth-token, presenting the log-in screen and handling authentication with the server. \\ \hline
+AccountGeneral & A class which contains static variables for easy access in other classes. \\ \hline
+AuthenticatorActivity & The Activity which allows a user to log in to an existing, it communicates with the Account Manager and DigitalTrailsComServerAuthenticate classes to achieve this. This is the class which has direct interaction with the user. \\ \hline
+DigitalTrailsComServerAuthenticate & Communicates with the White Rock API to create user accounts and receive authentication tokens for the current user. Achieved via HTTP calls.  \\ \hline
+ServerAuthentciate & An interface to be implemented by the DigitalTrailsComServerAuthenticate class, details the possible actions an account may take. \\ \hline
+SignUpActivity & Similar to the AuthenticatorActivity, this class is responsible for signing a new user up to the White Rock service. \\ \hline
+WhiteRockAuthenticatorService & An Android service which allow for communication with the authenticator. Extending the AbstractAccountAuthenticator class in the AccountAuthenticator method allows for the service to be connected to via an IBinder.  \\ \hline
+\end{longtable}
+
+\paragraph*{Design Justification}\mbox{}\\ 
+The alternative to an Account Manager based authentication system would be to post the log in information manually to the server and return an auth token. Whilst this seems simpler on the outside, the reality is that a number of extra features, which deal with the vast majority of corner cases, are already implemented by the Account Manager. It allows the system to be aware of a user's passwords changing on other clients, dealing with expired auth tokens and provides the user with a convenient ``auto log in'' feature, much like Google's applications provide. An Account Authenticator is also necessary to implement a SyncAdapter, whilst a stub authenticator is usable this solution provides the potential for future enhancements. The application's account settings may also be found within the Android device's settings.
+
+Figure~\ref{fig:authenticator} demonstrates how the process of retrieving an auth token works for the AccountAuthenticator. The White Rock server's authentication protocol implementation can be seen at Section~\ref{sec:authDesign}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{authenticator}
+    \caption{Authenticator Flow Diagram}
+    \label{fig:authenticator}
+\end{figure}
+
+\subsubsection{Database Subsystem}
+\label{sec:database}
+The Database component is composed of the classes outlined in Table~\ref{tab:database}
+
+\begin{longtable}{|p{5cm}|p{10cm}|}
+\hline \caption{Database Subsystem Classes - Cont. on Next Page} \endfoot
+\hline \caption{Database Subsystem Classes} \label{tab:database} \endlastfoot
+\hline
+\textbf{Class} & \textbf{Responsibility} \\ \hline
+DatabseHandler & Responsible for checking the database exists, creating it if it does not, and providing the ContentProvider with access to the correct file. \\ \hline
+WhiteRockContentProvider & Allows for the relevant CRUD operations to be performed across the tables and views defined in WhiteRockContract. It communicates with the DatabaseHandler to complete these operations. The class is accessed locally via the getContentResolver() method.  \\ \hline
+WhiteRockContract & Defines the tables and views which can be operated upon via the ContentProvider. It is a public contract with clients trying to access data. It can be thought of as a public API. Since clients cannot join tables via the ContentProvider, plausible joins are also offered as well as the tables in the database. \\ \hline
+DbSchema & Defines the constants for the database, including table names and the SQL to construct the database. \\ \hline
+DataSource & The base class for the DataSources, a DataSource object is responsible for CRUD operations for their respective components (Walk, Waypoint, etc.) within the application, via the ContentProvider. See the attached digital Doxygen Documentation for a full list of these classes.  \\ \hline
+\end{longtable}
+
+\paragraph*{Design Justification}\mbox{}\\ 
+Similar to the Account Authenticator, the benefits of the Database implementation are not necessarily obvious at first. Whilst it would have been possible to use an SQLite database without a ContentProvider, which would have been a faster implementation in the short term, this solution allows for the application to be responsive to changes in the database; provides a strict set of rules for other developers to use in the future - via the contract; allows other applications to access the database, giving the potential for supporting applications to be created; Android manages the creation and destruction of the provider, ensuring that user's data is not lost and the ContentProvider can be shut down as necessary; finally a stub, at least, is required for the implementation of a SyncAdapter, therefore implementing it fully allows for a more complete set of features.
+
+\subsubsection{Synchronisation Subsystem}
+\label{sec:synch}
+
+The Synchronisation Subsystem consists of the classes detailed in Table~\ref{tab:sync}.
+
+\begin{longtable}{|p{5cm}|p{10cm}|}
+\hline \caption{Synchronisation Subsystem - Cont. on Next Page} \endfoot
+\hline \caption{Synchronisation Subsystem} \label{tab:sync} \endlastfoot
+\hline
+\textbf{Class} & \textbf{Responsibility} \\ \hline
+WhiteRockServerAccessor & Accesses the White Rock Server to retrieve data from, and send data to, the remote database. \\ \hline
+WhiteRockSyncAdapter & Performs a threaded synchronisation with the server using the operations in the WhiteRockServerAccessor.  \\ \hline
+WhiteRockSyncService & Android Service which instantiates the SyncAdapter upon creation.  \\ \hline
+HTTP & \\ \hline
+\end{longtable}
+
+\paragraph*{Design Justification}\mbox{}\\ 
+As is evident from the sections on the Account Authenticator (see section~\ref{sec:accounts}) and the Database Subsystem (see section~\ref{sec:database}), the SyncAdapter has been the primary cause of decisions made. 
+
+The alternative to a SyncAdapter would be to write a Service or ServiceIntent to do the intended task, but, like the Account Authenticator, multiple benefits are provided which would be incredibly demanding on the developers to implement.
+
+The benefits of the SyncAdapter are that it can handle background syncs between the device and the White Rock server. The adapter is registered with the platform's Sync Manager, which takes charge of triggering the SyncAdapter as needed, scheduled or requested. It manages this in a fashion which is:
+\begin{description}
+\item[Battery Efficient] - The system will schedule a sync when other syncs are running, or another network request has been made. This approach ensures that the device is not awoken for a single sync.
+\item[Interface] - The sync adapter can be accessed from the device's Settings screen, attached to the Account created by the Account Authenticator subsystem, allowing the user to modify sync settings as they desire, or disable synchronisation automatically.
+\item[Content Awareness] - Using the ContentProvider to manage the database ensures that the SyncAdapter can monitor any changes made to the data, ensuring it only performs a sync when there has been changes made to the data.
+\item[Retry Mechanism] - The Sync Manager has the ability to retry any failed syncs.
+\end{description}
+All of these features come at no extra cost, other than the time required to understand how to write the SyncAdapter. This has been a poorly documented feature until recently.
+
+\subsubsection{Walk Management}
+\label{sec:walkcreate}
+
+The walk management subsystem consists of the classes outlined in Table~\ref{tab:walkcreate}.
+
+\begin{longtable}{|p{5cm}|p{10cm}|}
+\hline \caption{Walk Management Subsystem - Cont. on Next Page.} \endfoot
+\hline \caption{Walk Management Subsystem} \label{tab:walkcreate} \endlastfoot
+\hline
+\textbf{Class} & \textbf{Responsibility} \\ \hline
+MyWalksActivity & The activity which allows the user to modify their created walks. Operations include creating a walk, updating a walk and deleting a walk. Initially it presents the user with the interfaces attached to MyWalkListFragment and MyWalkDetailsFragment. \\ \hline
+CreateWalkFragment & The fragment which presents the user with an interface to create a new walk. \\ \hline
+AddWaypointMapFragment & The GoogleMap Fragment which allows a user to add waypoints to a newly created walk. \\ \hline
+AddWaypointDialogFragment & The DialogFragment which allows the user to modify details such as the waypoint's title and description. \\ \hline
+EditWalkFragment & Allows the user to edit an existing walk. \\ \hline
+EditWaypointMapFragment & The GoogleMap Fragment which allows a user to edit the details of current waypoints, and add new ones, to an existing walk. \\ \hline
+\end{longtable}
+
+\paragraph*{Design Justification}\mbox{}\\ 
+The use of a single Activity for each aspect of the application (Register / Login, Walk Management, Walk Exploration, Walk Downloads) is a design choice which helps to keep all the relevant operations tied to a single class, the Activity. There are also performance benefits to using a single Activity with multiple, interchangeable, Fragment objects.
+
+\subsubsection{Walk Exploration}
+\label{sec:walkexplore}
+A walk can be ``explored'' by a user, this implies they are going to the start location of the walk and following the waypoints. The classes for this subsystem can be seen in Table~\ref{tab:walkexplore}.
+
+\begin{longtable}{|p{5cm}|p{10cm}|}
+\hline \caption{Walk Exploration Subsystem - Cont. on Next Page.} \endfoot
+\hline \caption{Walk Exploration Subsystem} \label{tab:walkexplore} \endlastfoot
+\hline
+\textbf{Class} & \textbf{Responsibility} \\ \hline
+ChooseWalkActivity & The Activity responsible for letting a user begin a walk. It also allows the user to delete a downloaded walk from the database. Initially presents the user with the two fragments WalkDetailsFragment and WalkListFragment. \\ \hline
+WalkDetailsFragment & Shows the details of the currently selected walk. \\ \hline
+WalkListFragment & Allows the user to select the walk they would like to see the details of. \\ \hline
+MapActivity & An Activity which contains a GoogleMap. This Activity allows the user to begin the walk, visit waypoints and view information at each one. A LocationListener and Geofences are used to keep track of the user's current location and present the relevant information as they progress. \\ \hline
+\end{longtable}
+
+\paragraph*{Design Justification}\mbox{}\\ 
+All screens which allow the user to interact with a walk in some fashion, whether is starting the walk, managing walks or downloading new walks from the White Rock server use the same design. A WalkListFragment and a WalkDetailsFragment are fragments within the main Activity, in this case the ChooseWalkActivity. 
+
+This area of the application breaks the paradigm of ``one activity for one feature'' for areas of user interaction, reimplementing multiple features of a MapFragment in the MapActivity class. The justification for this, usually poor, practice is in the added complexity of the MapActivity class as it implements Geofences, to be aware of when the user enters and exits the zone of a waypoint and the additional computational power necessary to function.
+
+\subsubsection{Utility Classes}
+There are a number of classes which are not directly linked to a subsystem but provided utility throughout the application, these classes range from custom Loaders and LoaderAdapters to container classes for the components of the system. These classes are outlined in Table~\ref{tab:utilityClasses}.
+
+\begin{longtable}{|p{5cm}|p{10cm}|}
+\hline \caption{Utility Classes - Cont. on Next Page} \endfoot
+\hline \caption{Utility Classes} \label{tab:utilityClasses} \endlastfoot 
+\hline
+\textbf{Class} & \textbf{Responsibility} \\ \hline
+WalkLoader & An AsyncTaskLoader which retrieves the List of all available Walk objects from the database, using the LoaderManager. It is used in the SearchActivity. \\ \hline
+WalkLoaderAdapter & An ArrayAdapter which places elements into a custom ListFragment layout. It receives data from the WalkLoader in SearchActivity. \\ \hline
+WhiteRockApp & A singleton class to retrieve the instance of the application. Used to get the Context of the application in non-Android classes. \\ \hline
+Component Classes & The set of classes inside the ``uk.ac.swan.digitaltrails.components'' package, these are responsible for containing the data necessary for a single entry in each table in the database. When retrieving data from the server, JSON results are converted into the corresponding classes. \\ \hline 
+\end{longtable}
 
 \section{API} 
 \label{sec:api-design}
