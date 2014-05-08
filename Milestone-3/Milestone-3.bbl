@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{milestone1}
 Chris Lewis Lewis~Hancock Adam~Barrell, Tom~Milner.
@@ -9,10 +9,40 @@ Lewis Hancock Thomas~Milner Adam~Barrell, Christopher~Lewis.
 \newblock Digital trails - milestone 2.
 \newblock Technical report, Swansea University, Febuary 2014.
 
+\bibitem{git}
+Git.
+\newblock Git website.
+\newblock \url{http://git-scm.com/about}.
+
+\bibitem{github}
+GitHub.
+\newblock Github website.
+\newblock \url{http://www.github.com}.
+
+\bibitem{android}
+Google.
+\newblock Android website.
+\newblock \url{http://www.google.com/mobile/android/}.
+
+\bibitem{googleAPI}
+Google.
+\newblock Google maps api.
+\newblock \url{https://developers.google.com/maps/}.
+
 \bibitem{bootstrapvalidator}
 Phuoc Nguyen.
 \newblock Bootstrapvalidator.
 \newblock \url{https://github.com/nghuuphuoc/bootstrapvalidator}.
+
+\bibitem{OSM}
+OpenStreetMap.
+\newblock Openstreetmap website.
+\newblock \url{http://www.openstreetmap.org/about}.
+
+\bibitem{whiterock}
+White~Rock Swansea.
+\newblock White rock org website.
+\newblock \url{http://www.whiterocktrails.org}.
 
 \bibitem{uipatterns}
 Anders Toxboe.
