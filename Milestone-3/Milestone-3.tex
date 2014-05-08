@@ -1586,7 +1586,7 @@ The purpose of unit testing is to examine the inner-workings of a software progr
                      \item Clicking the `Save' button will validate the full name, email, password text boxes and save any changes to the user's account if successful. A notification will be displayed to inform the user of success or failure.
                      \item Clicking the `Cancel' button will cancel the process of account modification and navigate the user to the personal home view. 
                    \end{itemize}
-\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Result:} \textcolor{red}{FAIL} - jj\\
 \textbf{Description:} This set of test cases tests if the user can modify their account details and save the details.\\
 
 \label{test:APP-T03}
@@ -1600,7 +1600,7 @@ The purpose of unit testing is to examine the inner-workings of a software progr
                      \item The application will group walk list items which are close in proximity together in a sublist with a heading name of the common local area.
                      \item Walk list items grouped by local area will be displayed in descending order based on closest proximity to the application user.
                    \end{itemize}
-\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Result:} \textcolor{red}{FAIL} - jj\\
 \textbf{Description:} This set of test cases tests the search feature and its functionality. \\
 
 \label{test:APP-T04}
@@ -1629,19 +1629,14 @@ The purpose of unit testing is to examine the inner-workings of a software progr
 
 \label{test:APP-T06}
 \noindent\textbf{Test Code:} APP-T06\\
-\textbf{Asserts Specification:} APPSPEC29, APPSPEC30, APPSPEC31, APPSPEC32, APPSPEC33, APPSPEC34, APPSPEC35\\ 
+\textbf{Asserts Specification:} APPSPEC34, APPSPEC35\\ 
 \textbf{Criteria:} \begin{itemize}
-                     \item The application will feature a settings view containing a toggle button to enable data download over the cellular data network.
-                     \item Clicking the toggle button will change its state to on or off accordingly and the setting will be saved.
-                     \item The settings view will feature a drop down box containing the storage options `Internal' and `SD Card'.
-                     \item Selecting an option from the storage drop down box will save the setting and move data to the chosen location if it has changed.
-                     \item The application will display a loading view whilst moving application data to a different location.
                      \item A location strategy will be re-implemented using the Android location services API.
                      \item The application's GPS accuracy will be tested on the target Hudl tablet and a low end Android 2.2 mobile device to ensure consistency. 
                      \end{itemize}
                    
 \textbf{Result:} \textcolor{green}{PASS} - jj\\
-\textbf{Description:} This set of test cases test if the application can download over a cellular data network and allows the user to select a data storage option. The application is also tested for its location services and accuracy.\\
+\textbf{Description:} This set of test cases test if the application uses the GPS data correctly.\\
 
 \label{test:APP-T07}
 \noindent\textbf{Test Code:} APP-T07\\
@@ -1684,7 +1679,7 @@ The purpose of unit testing is to examine the inner-workings of a software progr
                      \item When viewing a waypoint there will be tabs for `Descriptions', `Images', `Audio' and `Videos'.
                      \item Pressing the map thumbnail will allow the user to change the position of the waypoint. It will show a map with a movable point and `Confirm' and `Cancel' buttons.
                    \end{itemize}
-\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Result:} \textcolor{green}{FAIL} - jj\\
 \textbf{Description:} This set of test cases test if the application allows for media to be attached to a waypoint. The attached media should then be displayed when a waypoint is pressed at the view walk interface.\\
 
 \label{test:APP-T10}
@@ -1709,23 +1704,44 @@ The purpose of unit testing is to examine the inner-workings of a software progr
                      \item Submitting a review submits the data in the `Review' text box and displays it on the walks information page.
                      \item Filling in the 5 star rating system will automatically send the result to the server.
                      \item Pressing `Report a Bug' will launch the email client.
-                     \item The `to? address will be set as the email address of the owner, the `subject? field will be set in the format ``BUG REPORT - WALK `NAME' ''.
+                     \item The `to' address will be set as the email address of the owner, the `subject? field will be set in the format ``BUG REPORT - WALK `NAME' ''.
                    \end{itemize}
-\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Result:} \textcolor{red}{FAIL} - jj\\
 \textbf{Description:} This set of test cases test if the application inflates a model when a walk is complete. The application allows users to finish a walk and submit a review. The user may report bugs in a walk.\\
 
-\label{test:APP-T11}
-\noindent\textbf{Test Code:} APP-T11\\
-\textbf{Asserts Specification:} APPSPEC66, APPSPEC67, APPSPEC68, APPSPEC69\\ 
+\label{test:APP-T12}
+\noindent\textbf{Test Code:} APP-T12\\
+\textbf{Asserts Specification:} APPSPEC66, APPSPEC67\\ 
 \textbf{Criteria:} \begin{itemize}
                      \item The application will link to the White Rocks Twitter and Facebook page from the main page.
                      \item The application provide an option in the settings view to display welsh text where available.
+                   \end{itemize}
+\textbf{Result:} \textcolor{green}{PASS} - jj\\
+\textbf{Description:} This set of test cases test if the application allows users to navigate to the White Rock Facebook and Twitter pages. The application allows for the application has an option to translate into welsh.
+
+
+\label{test:APP-T13}
+\noindent\textbf{Test Code:} APP-T13\\
+\textbf{Asserts Specification:} APPSPEC29, APPSPEC30, APPSPEC31, APPSPEC32, APPSPEC33\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item The application will feature a settings view containing a toggle button to enable data download over the cellular data network.
+                     \item Clicking the toggle button will change its state to on or off accordingly and the setting will be saved.
+                     \item The settings view will feature a drop down box containing the storage options `Internal' and `SD Card'.
+                     \item Selecting an option from the storage drop down box will save the setting and move data to the chosen location if it has changed.
+                     \item The application will display a loading view whilst moving application data to a different location.
+                   \end{itemize}
+\textbf{Result:} \textcolor{green}{FALSE} - jj\\
+\textbf{Description:} This set of test cases test if the application allows users to modify their storage settings.\\
+
+\label{test:APP-T14}
+\noindent\textbf{Test Code:} APP-T14\\
+\textbf{Asserts Specification:} APPSPEC68, APPSPEC69\\ 
+\textbf{Criteria:} \begin{itemize}
                      \item On each waypoint and walk there will be a `Report' button which will flag the content as inappropriate.
                      \item And content which has been flagged as inappropriate will appear to administrators, who can modify or delete it.
                    \end{itemize}
-\textbf{Result:} \textcolor{green}{PASS} - jj\\
-\textbf{Description:} This set of test cases test if the application allows users to navigate to the White Rock Facebook and Twitter pages. The application allows for the application to be translated into Welsh. The application allows administrators to delete inappropriate content.\\
-
+\textbf{Result:} \textcolor{red}{FAIL} - jj\\
+\textbf{Description:} Tests if the application allows administrators to delete inappropriate content.\\
 \subsection{API}
 
 While there were never any initial specifications for an API acceptance testing for the API was still carried out using the design documents as a guide. This ensured the API not only has all required features, but also acted as an additional round of unit testing to prove that all the functions of the API were working correctly. The API was tested using a program called CoocaRestClient (Figure \ref{fig:coocaRest}) which is an OSX program designed specifically for testing REST API's. The program allows the user to enter a URL, select the HTTP method, set the request payload and set any headers that are required. With this it is possible to access every property of the API and test situations which may not occur through normal usage. \\
@@ -3298,6 +3314,14 @@ PERRSK17 was a risk that warned of team members going on vacation and leaving mo
 \section{Schedule Review}
 \label{sec:schedule-review}
 
+Throughout the project several problems arose which effected the schedule. These problems included PR days, holidays and illness. While these problems pushed the schedule back the Scrum methodology allowed us to adapt and recover. Throughout the project we were hoping to achieve one 10-6 workday a week on the project. This was designed to ensured that the project was on track and processing constantly throughout the year.
+
+The project saw sprints and workdays completed regularly and as expected, except for when events caused work to stop. However even with the workdays and sprints roughly on target we felt there was still lots to do and with around 2 months left updated the schedule to have 2 workdays a week. We hoped this would ensure the project was completed ahead of schedule. 
+
+Due to the shear volume of work we had to complete and the complexity of the project the project overran and several features were left partially implemented. Despite this we will continue the project after the deadline to ensure there is a polished and professional project to display at the Project Fair. 
+
+Every member of the group put in the maximum possible effort and struggled to find anymore time to dedicate to the project. Unfortunately there was little that could be done that would have improved this situation. Ideally there would have been an extra member of the group to relieve the workload or a smaller set of features to implement. 
+
 
 \section{Methodology Review}
 \label{sec:methodology-review}
@@ -3316,9 +3340,7 @@ In future, if time allowed, the scrum methodology would be enforced more strictl
 
 Based on the original goals and requirements of the project the API has been able to achieve every one. All the required functionality has been implemented and it has been rigorously tested. Users are able to communicate with the API and access all of its functionality. 
 
-Specifically this meets requirement  \emph{APPREQ10}, however the main functionality has been abstracted from a wide variety of the requirements including; APPREQ1, APPREQ2, APPREQ3, APPREQ4, APPREQ15, APPREQ17, APPREQ18, APPREQ20, APPREQ21,APPREQ22, APPREQ23, APPREQ24, APPREQ25, APPREQ26, APPREQ28, APPREQ29, WEBREQ1, WEBREQ2, WEBREQ3, WEBREQ4, WEBREQ6, WEBREQ8, WEBREQ9, WEBREQ12, WEBREQ13, WEBREQ14, WEBREQ15, WEBREQ16, WEBREQ17, WEBREQ18,  WEBREQ19.
-
-These requirements were not specifically designed for the API but were used as a guideline to ensure it produces the correct output and all were made possible by the functionality of the API. This shows that the goals of the API were achieved. 
+Specifically this meets requirement  \emph{APPREQ10}, however the main functionality has been abstracted from a wide variety of the requirements  for both there android application and website.These requirements were not specifically designed for the API but were used as a guideline to ensure it produces the correct output and all were made possible through the functionality of the API. This shows that the goals of the API were achieved. 
 
 \subsection{Adam Barrell - Web Portal Development}
 
@@ -3363,11 +3385,16 @@ The application uses user friendly text and button styles, allowing the applicat
 If I was to start this project again there are a few points I would change. 
 
 \subsubsection{More time spent designing}
+During the development of the API and authentication system it was apparent that there were several things that could have been implemented in a more generic and suitable way. These improvements to design are minor but would potentially aid in the extension and continued development of the API. 
 
-
-\subsubsection{Better use of time and resources}
+\subsubsection{Better time management}
+Several events occurred during the development of the project which cost the team a days development time. This was not idea and while attempts were made to catch up they always resulted in the project slipping behind.
 
 \subsubsection{Use of more existing technology}
+The API is a very custom implementation. There are many new technologies which could have been applied to different parts of the project if they had been know of at the time of design. Systems like Basic HTTP Auth would have saved my time and others. 
+
+\subsubsection{Extra hypermedia types}
+The API currently only supports JSON objects. It  would be a nice if the API supported other media types such a JSON and plain text. This would make the API more accessible to users and open up new development possibilities. 
 
 \subsection{Adam Barrell - Web Portal Development}
 \subsection{Lewis Hancock - Android Development}
@@ -3397,6 +3424,14 @@ To help broaden the potential user base of the application a future project woul
 \label{sec:individual-contributions}
 
 \subsection{Tom Milner - API Development}
+From the start of the project we worked as a group to develop a series of designs and requirements. After numerous meetings with John we were able to devise a concise list of requirements and specifications which he approved. During this phase I carried out a small amount of work on the initial codebase supplied to us by John to tidy it up and develop a sense of the task at hand. 
+
+When work began on the development I was the main developer of the API. I developed the design and implemented the system from the ground up, Iterating through several designs until I settled on the final one. I also researched, designed and implemented a custom authentication system for the API. During the development process I guided Adam Barrell and Lewis Hancock with using the API form the website and android application. 
+
+Towards the end of the project I took over a small part of the android development to connect sync adapters, created by Lewis, to the API. This work required the development of a custom HTTP provider which processed requests and the implementation of GSON to convert the JSON from the API into Java objects. The phase also saw some minor redevelopment to the android app as GSON failed to automatically convert some JSON. This work was completed with the help of Lewis. 
+
+During the writing of this document I was mainly responsible for the API sections of the Design, User Manual and Testing and for my personal reflections on the project and a few other parts in the narrative section. 
+
 \subsection{Adam Barrell - Web Portal Development}
 Adam was the team leader for the group of three other developers working on the White Rock Trails software. He was responsible for interfacing directly with the client on behalf of the group. This involved organising meetings between the client and group, and specifying an agenda. Adam was also responsible for organising development days where the group met in one location to develop the software. This allowed team members to work together much more effectively rather than being in different locations.
 
