@@ -2802,28 +2802,6 @@ To log out of the application, select the menu button located in the action bar.
 \label{sec:reflective-account}
 \newpage
 
-\section{Development Process}
-\subsection{Lewis Hancock - Android Application}
-The development of the Android application began with generating the requirements and specifications for the project. Multiple meetings with John Ashley saw the creation of the System Requirements Specification document in January. 
-
-These requirements were then used to focus the research portion of the project. The first port of call was the code handed down to us by the Aberystwyth team. The code was not in the state which we expected it to be, all of the data available in the application had been hard coded - it was not stored in the database. This meant that as well as replacing Google Maps we had to write the database subsystem from scratch.
-
-Having not developed an Android application on such a scale before, it was important that the team found the correct solutions to the most difficult features, namely the Account Authenticator and Synchronisation systems. 
-
-Having found a sensible development path the first SCRUM sprint focused on the development of the ContentProvider system, the backbone for the application. There were no challenges with this part of the application, although it was a very time consuming feature to implement - creating a Data Access Object for each Component class, as well as a public facing contract, was an arduous task.
-
-The next sprint saw the backbone of the Account and Synchronisation systems, however due to the parallel development of the API it was not possible to finish implementing them until the final stages of the application.
-
-Without the ability to sync files or log in to the account, the next sprint saw the development of the Google Maps interface, to better understand the limitations it would present to us. Fortunately, the Google Maps API was mostly a pleasure to use, the one difficulty was overcoming the developer's decision to make Marker a final class, preventing me from extending it for better control over what content would be displayed when a marker was selected.
-
-With the Map system created, it was time to let the user access a walk and go exploring. The ChooseWalkActivity was developed, including the WalkListFragment and WalkDetailsFragment. By using the Loader Manager, the application was successfully retrieving walks from the already written ContentProvider. Since the process to load the walk data is the same in any Android Activity or Fragment, it was straightforward to enter the waypoints into the map. 
-
-The next step was to allow a walk to be created, locally, and edited. Having created dummy walks for the ChooseWalkActivity, this feature was mostly a matter of plugging the code into the Layouts which Chris Lewis had created. Some miscommunication issues arose, as the layouts grew more numerous and the application updated the fragments based on the screen orientation and size it became more and more difficult to keep track of which layouts needed modifying to meet the current design. This led to a number of frustrating bugs which were not possible to recreate across all the development devices.
-
-As the API was still in development, I returned to the development of Google Maps features. Adding in geofences and making the application location aware.
-
-The final stage of development brought together the Account Authenticator and Synchronisation systems with the rest of the application. With the help of Thomas Milner, the communication between server and device was under way. As it became clearer how GSON manipulates JSON to create Java Objects the application had to undergo a minor redevelopment. The component classes had to become both Parcelable and Serializable, attaching a SerializedName to each variable in the Component classes.
-
 \section{Problem Solving}
 \label{sec:problem-solving}
 
@@ -2936,21 +2914,33 @@ Another major learning outcome was learning how to develop intuitive interfaces 
 Since the web portal had to be designed for users with varying abilities, a conscious effort had to be made to make the interface intuitive enough. The skills learned through doing this can be transferred to any other application that I develop in the future. Therefore, this was a good learning outcome from this project.
 
 \subsection{Lewis Hancock - Android Development}
+A number of important lessons can be taken away from this project, they can be found in this section.
+
+\subsubsection{Android}
+The most obvious learning outcome is the experience gained in Android development, having never written an application of such complexity before. Learning about the Account Manager, ContentProvider and SyncAdapter systems was an enlightening, albeit sometimes frustrating, experience. I feel reasonably confident in my abilities to produce a high quality Android application again in the future. The application uses a wide range of Android features including the LoaderManager, ListAdapters, ArrayAdapters, dynamic Fragments, the GSON library and the Android support libraries.
+
+\subsubsection{Google Maps API}
+Creating a location aware, interactive walk system has given me plenty of experience with the Google Maps API. The application uses features including Markers, LatLng, LocationListener, LocationClient, Services, Broadcast Receivers and the GooglePlayServicesClient to create the enjoyable experience of using the White Rock: Digital Trails application to explore your favourite areas.
+
+\subsubsection{Time Management}
+Balancing the schedule of this project with the schedules of other commitments demanded that I demonstrated a certain level of dedication, commitment and reliability. Sticking to the schedule of two days per week was often a struggle as other deadlines approached and scheduling conflicts arose, but a desire to not let the team down assured that two days of development would be completed each week, at a minimum. 
+
+\subsubsection{Not All Teams are Bad}
+In comparison to my atrocious experience as a second year student doing the Software Engineering module at Swansea University, this team has been a pleasure to work with. Issues were solved promptly and maturely, team members felt comfortable voicing their concerns at every stage of the project and the outcome is one everyone can be proud of. No one had to carry the other team members on their shoulders.
+
+
 
 \subsection{Chris Lewis - Android Interface Development}
 
 \subsubsection{Time management}
-
 Due to a lack of industrial group project experience, time management created problems during the initial stages of this project. A shortage of available work sessions meant that the application fell behind the original time plan set out in Milestone 1. During the second half of the project, a team meeting was held to discuss all possible solutions. The team agreed that the current time-plan was not achievable based on the weekly development work day. The team learnt from this time management issue, by assigning an addition development work day to the weekly timetable.
 
 \subsubsection{User Interface Design}
-
 A second lesson learnt from conducting such a project was understanding how to design and develop both intuitive and aesthetically pleasing interfaces. These interfaces were also required to be usable by a broad range of users, with varying abilities. To ensure these requirements were met, several books and articles were studied. A notable set of interface design principles were \emph{Ben Shneiderman's eight gold rules of interaction design}. The design rules were used throughout the development of the application, as a form of benchmark. The design rules also ensured the application was developed to be intuitive. Gaining a sound understanding of user interface design rules and principles has allowed me to develop a second professional and intuitive Android application.   
 
 \subsubsection{Working in parallel}
 Similar to the first lesson learnt, learning to work in parallel with another team member proved to be challenging. Lewis Hancock was in charge of the majority of application programming while the majority of interface design was assigned to myself. This required constant communication to ensure the correct naming conventions, etc were used. This initially proved to be a problem during the initial stages of development. However during the latter stages of development, both group members adapted to this method of programming, and were able to efficiently work in parallel.
 
->>>>>>> 2503dee5e6e7ab49dfa7feb60e79e7da95f1e456
 \section{Risk Analysis Review}
 \label{sec:risk-analysis-review}
 This section reviews the strategy that was adopted for risk management throughout the project. Firstly, a list of potential risks was discussed in Milestone 1. These risks were assigned likelihood and severity ratings to represent how likely the risk was to occur and how much impact it would have on the project respectively. In addition, a mitigation strategy was defined which aimed to minimize the effect of the risk on the project. Milestone 2 reviewed these risks, indicating those that had occurred and how they were overcome. New risks that were previously overlooked were also added to a revised risk analysis.
@@ -3222,6 +3212,17 @@ The second goal was also achieved as the web portal allows users to perform exac
 The third goal was also achieved through the usage of a third party user interface library called Twitter Bootstrap. Bootstrap provided out-of-the-box styling for user interface components that have been tried and tested on a wide range of users. This goal ensured that users will find the web portal intuitive to use after using the Android application. The web portal also imitated the interface design of the Android application also to facilitate the learning curve.
 
 \subsection{Lewis Hancock - Android Development}
+The initial goals set for the Android Application were defined in the scope of the project (Milestone 1) as:
+\begin{itemize}
+\item Replace OpenStreetMap with Google Maps.
+\item Improving the usability of the application.
+\item Allow real-time collection of GPS way points.
+\item Expand compatibility to a wide range of android tablets.
+\item Allow for the creation and modification of self-guided trails.
+\item Synchronise walks between server and client.
+\item Allow a client to log in to the White Rock server.
+\end{itemize}
+All of the above goals have been met. For a complete set of complete specification see section~\ref{sec:testing}.
 \subsection{Chris Lewis - Android Interface Development}
 
 The main goals achieved during this project was the creation of presentable and intuitive user interfaces. Each interface received multiple stages of iteration and modification. When deemed complete, an interface was compared against Ben Shneiderman's golden rules, ensuring it conformed to all eight rules.\\
@@ -3230,10 +3231,29 @@ The application uses user friendly text and button styles, allowing the applicat
 
 \section{Improvements}
 \label{sec:improvements}
-
 \subsection{Tom Milner - API Development}
 \subsection{Adam Barrell - Web Portal Development}
 \subsection{Lewis Hancock - Android Development}
+A number of improvements to the development of the application could have been possible, these include both methodology and team-oriented improvements as well as ways to improve the application in future.
+
+\subsubsection{More Sensible Targets}
+The initial goals of the project were arguably too far fetched. Whilst the application does achieve the vast majority of the goals set, it suffers from a lack of polish. If the application did not have to be concerned with accounts or synchronisation, for example, more time would have been available to improve the user experience in terms of interactions.
+
+\subsubsection{Better Use of Resources}
+The team was spread too thinly during development as a result of the optimistic goals, with four large systems being developed (Android application, web portal, API and User Experience design) it was difficult to find a way to spread the workload amongst the development team. Team members were often overworked - the result of challenging goals and varying experience levels.
+
+\subsubsection{Avoid the Public Relations Events}
+Two development days were lost to Public Relations events which, whilst good for drumming up interest and awareness for the White Rock organisation, saw us delaying the development of key features to apply polish to the user facing features, such as the Google Map implementation. 
+
+\subsubsection{Use a Different Maps Engine}
+Google Maps, whilst fantastic to use, suffers from the inability to use maps when not connected to the internet. Alternative such as the Ordinance Survey maps would have made the offline mode possible. It also would allow for better trails in non-urban areas.
+
+\subsubsection{Work With Existing APIs}
+The People's Collection Wales have an existing web portal which has a number of walks available for use. If offered access to the API earlier in development it would have been possible to incorporate it with the Account Authenticator and SyncAdapter.
+
+\subsubsection{Recreate the Application on iOS and Windows Phone}
+To help broaden the potential user base of the application a future project would be to develop applications for other mobile operating systems.
+
 \subsection{Chris Lewis - Android Interface Development}
 
 \section{Individual Contributions}
@@ -3247,7 +3267,29 @@ Adam was also responsible for the development of the web portal. He chose suitab
 
 Finally, since Adam was responsible for developing the web portal, he wrote all the sections of Milestone 3 that related to its development. This included writing a user manual allowing users to learn how to perform functions such as adding walks, waypoints and uploading media. Adam also performed all the acceptance tests for the web portal that were defined by the specifications which are documented in section \ref{sec:webportal-acceptance-testing}. He was also responsible for writing the design section where UML diagrams were created and user interfaces were described.
 
-\subsection{Lewis Hancock - Android Development}
+\subsection{Lewis Hancock - Android Application}
+The development of the Android application began with generating the requirements and specifications for the project. Multiple meetings with John Ashley saw the creation of the System Requirements Specification document in January. 
+
+These requirements were then used to focus the research portion of the project. The first port of call was the code handed down to us by the Aberystwyth team. The code was not in the state which we expected it to be, all of the data available in the application had been hard coded - it was not stored in the database. This meant that as well as replacing Google Maps we had to write the database subsystem from scratch.
+
+Having not developed an Android application on such a scale before, it was important that the team found the correct solutions to the most difficult features, namely the Account Authenticator and Synchronisation systems. 
+
+Having found a sensible development path the first SCRUM sprint focused on the development of the ContentProvider system, the backbone for the application. There were no challenges with this part of the application, although it was a very time consuming feature to implement - creating a Data Access Object for each Component class, as well as a public facing contract, was an arduous task.
+
+The next sprint saw the backbone of the Account and Synchronisation systems, however due to the parallel development of the API it was not possible to finish implementing them until the final stages of the application.
+
+Without the ability to sync files or log in to the account, the next sprint saw the development of the Google Maps interface, to better understand the limitations it would present to us. Fortunately, the Google Maps API was mostly a pleasure to use, the one difficulty was overcoming the developer's decision to make Marker a final class, preventing me from extending it for better control over what content would be displayed when a marker was selected.
+
+With the Map system created, it was time to let the user access a walk and go exploring. The ChooseWalkActivity was developed, including the WalkListFragment and WalkDetailsFragment. By using the Loader Manager, the application was successfully retrieving walks from the already written ContentProvider. Since the process to load the walk data is the same in any Android Activity or Fragment, it was straightforward to enter the waypoints into the map. 
+
+The next step was to allow a walk to be created, locally, and edited. Having created dummy walks for the ChooseWalkActivity, this feature was mostly a matter of plugging the code into the Layouts which Chris Lewis had created. Some miscommunication issues arose, as the layouts grew more numerous and the application updated the fragments based on the screen orientation and size it became more and more difficult to keep track of which layouts needed modifying to meet the current design. This led to a number of frustrating bugs which were not possible to recreate across all the development devices.
+
+As the API was still in development, I returned to the development of Google Maps features. Adding in geofences and making the application location aware.
+
+The final stage of development brought together the Account Authenticator and Synchronisation systems with the rest of the application. With the help of Thomas Milner, the communication between server and device was under way. As it became clearer how GSON manipulates JSON to create Java Objects the application had to undergo a minor redevelopment. The component classes had to become both Parcelable and Serializable, attaching a SerializedName to each variable in the Component classes.
+
+I was also responsible for completing my relevant sections within the Reflective Account chapter, as well as the Implementation Section for the Android Application.
+
 \subsection{Chris Lewis - Android Interface Development}
 
 \chapter*{Summary}
