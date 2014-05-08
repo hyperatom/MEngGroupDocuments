@@ -1,2 +1,4 @@
 <map id="uk.ac.swan.digitaltrails.fragments.SearchListFragment" name="uk.ac.swan.digitaltrails.fragments.SearchListFragment">
+<area shape="rect" id="node7" href="$interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment_1_1_on_walk_selected_listener.html" title="{uk.ac.swan.digitaltrails.fragments.\lSearchListFragment.OnWalkSelectedListener\n||+ onWalkSelected()\l}" alt="" coords="691,175,978,267"/>
+<area shape="rect" id="node10" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter.html" title="{uk.ac.swan.digitaltrails.sync.\lWalkLoaderAdapter\n|&#45; TAG\l|+ WalkLoaderAdapter()\l+ getView()\l+ setData()\l}" alt="" coords="1267,160,1458,281"/>
 </map>

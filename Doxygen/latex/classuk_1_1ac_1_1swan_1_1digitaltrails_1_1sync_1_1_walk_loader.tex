@@ -3,7 +3,8 @@
 }
 
 
-Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader\+:\nopagebreak
+Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,18 +13,19 @@ Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader\+:\
 \end{figure}
 
 
-Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader\+:\nopagebreak
+Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=223pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader__coll__graph}
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_a819510c5c7225df9050346b421a0875d}{Walk\+Loader} (Context context)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 List$<$ \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk}{Walk} $>$ \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_ab3d165cd6a205be4b4be3d0196f82a2f}{load\+In\+Background} ()
 \item 
 void \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_a8587e0e55cac69b0ea2b7c0e247c560a}{deliver\+Result} (List$<$ \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk}{Walk} $>$ walks)
@@ -41,12 +43,26 @@ void \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_a
 \item 
 void \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_a0ff848242b7ab72e395edd6b7f71bb6c}{on\+Release\+Resources} (List$<$ \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk}{Walk} $>$ walks)
 \end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk}{Walk} $>$ \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_ac5ec0db2ebe335c772002d7815c137f7}{m\+Walks}
+\begin{DoxyCompactList}\small\item\em The list of walks returned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_aa1258f0cd574d97f8f930ebd74afa4a6}{T\+A\+G} = \char`\"{}Walk\+Loader\char`\"{}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 \begin{DoxyAuthor}{Author}
-Lewis Hancock 
+Lewis Hancock Custom Async\+Task\+Loader to load a list of Walk objects from the Content\+Provider 
 \end{DoxyAuthor}
+
+
+Definition at line 16 of file Walk\+Loader.\+java.
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -58,10 +74,18 @@ Lewis Hancock
 \end{DoxyParamCaption}
 )}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_a819510c5c7225df9050346b421a0875d}
 
+
+Constructor. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em context} & \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 32 of file Walk\+Loader.\+java.
+
 
 
 \subsection{Member Function Documentation}
@@ -72,6 +96,10 @@ Lewis Hancock
 \item[{List$<$ {\bf Walk} $>$}]{walks}
 \end{DoxyParamCaption}
 )}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_a8587e0e55cac69b0ea2b7c0e247c560a}
+
+
+Definition at line 100 of file Walk\+Loader.\+java.
+
 
 
 Here is the call graph for this function\+:\nopagebreak
@@ -101,6 +129,10 @@ Here is the caller graph for this function\+:\nopagebreak
 {}
 \end{DoxyParamCaption}
 )}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_ab3d165cd6a205be4b4be3d0196f82a2f}
+
+
+Definition at line 78 of file Walk\+Loader.\+java.
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_add9c65d109a847025442f3a8d6c9c578}{\index{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader}!on\+Canceled@{on\+Canceled}}
 \index{on\+Canceled@{on\+Canceled}!uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader}}
 \subsubsection[{on\+Canceled}]{\setlength{\rightskip}{0pt plus 5cm}void uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader.\+on\+Canceled (
@@ -108,6 +140,10 @@ Here is the caller graph for this function\+:\nopagebreak
 \item[{List$<$ {\bf Walk} $>$}]{walks}
 \end{DoxyParamCaption}
 )}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_add9c65d109a847025442f3a8d6c9c578}
+
+
+Definition at line 123 of file Walk\+Loader.\+java.
+
 
 
 Here is the call graph for this function\+:\nopagebreak
@@ -133,6 +169,10 @@ Here is the call graph for this function\+:\nopagebreak
 \end{DoxyParams}
 
 
+Definition at line 92 of file Walk\+Loader.\+java.
+
+
+
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -149,6 +189,10 @@ Here is the caller graph for this function\+:\nopagebreak
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [protected]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_a4128676b76295beb82484cbb839650d4}
+
+
+Definition at line 62 of file Walk\+Loader.\+java.
+
 
 
 Here is the call graph for this function\+:\nopagebreak
@@ -169,6 +213,10 @@ Here is the call graph for this function\+:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [protected]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_aa45381e4d22f376794110d36e6255dbe}
 
 
+Definition at line 40 of file Walk\+Loader.\+java.
+
+
+
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -187,6 +235,10 @@ Here is the call graph for this function\+:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [protected]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_aa7af819c0f973cad6b08e4a8421559ea}
 
 
+Definition at line 54 of file Walk\+Loader.\+java.
+
+
+
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -198,6 +250,27 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
+\subsection{Member Data Documentation}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_ac5ec0db2ebe335c772002d7815c137f7}{\index{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader}!m\+Walks@{m\+Walks}}
+\index{m\+Walks@{m\+Walks}!uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader}}
+\subsubsection[{m\+Walks}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Walk}$>$ uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader.\+m\+Walks\hspace{0.3cm}{\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_ac5ec0db2ebe335c772002d7815c137f7}
+
+
+The list of walks returned. 
+
+
+
+Definition at line 26 of file Walk\+Loader.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_aa1258f0cd574d97f8f930ebd74afa4a6}{\index{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader}!T\+A\+G@{T\+A\+G}}
+\index{T\+A\+G@{T\+A\+G}!uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader}}
+\subsubsection[{T\+A\+G}]{\setlength{\rightskip}{0pt plus 5cm}final String uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader.\+T\+A\+G = \char`\"{}Walk\+Loader\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_aa1258f0cd574d97f8f930ebd74afa4a6}
+
+
+Definition at line 21 of file Walk\+Loader.\+java.
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/uk/ac/swan/digitaltrails/sync/\hyperlink{_walk_loader_8java}{Walk\+Loader.\+java}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Admin/\+Documents/\+Work/\+Digital\+Trails/src/uk/ac/swan/digitaltrails/sync/\hyperlink{_walk_loader_8java}{Walk\+Loader.\+java}\end{DoxyCompactItemize}

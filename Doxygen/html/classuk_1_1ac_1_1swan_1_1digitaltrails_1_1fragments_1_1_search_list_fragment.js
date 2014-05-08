@@ -11,5 +11,14 @@ var classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment
     [ "onQueryTextChange", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment.html#a07ed2e92f5eaac71811d577adf951946", null ],
     [ "onQueryTextSubmit", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment.html#a99427567325cd749e9db66ac5938fa0c", null ],
     [ "onStart", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment.html#a83b95e68e47d20ab3cd67629c7a2913e", null ],
-    [ "setConnectedAccount", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment.html#a651ae8e3989711305e05234001833c98", null ]
+    [ "setConnectedAccount", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment.html#a651ae8e3989711305e05234001833c98", null ],
+    [ "mAdapter", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment.html#ab6c14396713429e5f3dbb458157703b2", null ],
+    [ "mCallback", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment.html#a9183d49e6eca9c91b1d7badc98fd378e", null ],
+    [ "mConnectedAccount", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment.html#a63a6d344a9905dbd51216fa0cfc5bc3d", null ],
+    [ "mContext", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment.html#a882f5870b0f87062336e5c1db07dd210", null ],
+    [ "mCurFilter", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment.html#aa5d3ea5abb39571b401131763a3819d3", null ],
+    [ "mLayout", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment.html#a9c4f525036d95c59d348012f57a71f9b", null ],
+    [ "mSearchView", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment.html#abbd29caf686461a33977d73670656629", null ],
+    [ "mWalkIds", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment.html#aae987d2b5032758e78eeee5b5205f20a", null ],
+    [ "TAG", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_search_list_fragment.html#af51d70026ab750fd479cf77abfa91910", null ]
 ];

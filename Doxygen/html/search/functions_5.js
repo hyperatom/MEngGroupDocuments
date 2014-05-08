@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hasfeatures',['hasFeatures',['../classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator.html#a5d57d1e4676178d3301498ab3f3f4878',1,'uk::ac::swan::digitaltrails::accounts::AccountAuthenticator']]]
+  ['finishlogin',['finishLogin',['../classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity.html#abde795ab2a039e573b08b7e26f028c3f',1,'uk::ac::swan::digitaltrails::accounts::AuthenticatorActivity']]]
 ];

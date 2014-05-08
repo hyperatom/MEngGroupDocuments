@@ -9,5 +9,8 @@ var classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_search_activity =
     [ "onOptionsItemSelected", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_search_activity.html#af619c1fe31adeeccfc68137bde8d1e30", null ],
     [ "onWalkSelected", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_search_activity.html#a5d9e0e94d81c77f7615dfc12835cc313", null ],
     [ "returnButton", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_search_activity.html#a3e7b13bd7d42ec0820a25399d725437f", null ],
-    [ "settingsButton", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_search_activity.html#ad7228d41a7983d027ebabf006fe899db", null ]
+    [ "settingsButton", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_search_activity.html#ad7228d41a7983d027ebabf006fe899db", null ],
+    [ "mConnectedAccount", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_search_activity.html#a5bc7671bdb5422daff1b40e5d610742f", null ],
+    [ "mWalk", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_search_activity.html#a82ce8c4a076d6d9e1cb5595034be7c6b", null ],
+    [ "TAG", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_search_activity.html#a0c23cfe7dac0b9b46a17a05a96073bd7", null ]
 ];

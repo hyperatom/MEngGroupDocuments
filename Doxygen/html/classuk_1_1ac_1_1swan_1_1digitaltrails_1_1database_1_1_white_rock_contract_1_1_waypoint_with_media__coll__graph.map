@@ -1,0 +1,4 @@
+<map id="uk.ac.swan.digitaltrails.database.WhiteRockContract.WaypointWithMedia" name="uk.ac.swan.digitaltrails.database.WhiteRockContract.WaypointWithMedia">
+<area shape="rect" id="node3" title="Interface to define common columns to all tables. " alt="" coords="164,132,407,224"/>
+<area shape="rect" id="node5" title="Interface to define common columns in media tables. " alt="" coords="275,303,501,409"/>
+</map>

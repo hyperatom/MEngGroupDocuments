@@ -16,5 +16,7 @@ var classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity =
     [ "onCreateOptionsMenu", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity.html#ad0a1535fb7502d3954c565413a9d6e63", null ],
     [ "onMapClosed", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity.html#a9fb92abb2b5dc3417c1008a7b98c2334", null ],
     [ "onWalkSelected", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity.html#a5b28704bc8895e34d1130c06549bd003", null ],
-    [ "settingsButton", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity.html#a2de2661aae2d5adce5ac2fa3e9bd81db", null ]
+    [ "settingsButton", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity.html#a2de2661aae2d5adce5ac2fa3e9bd81db", null ],
+    [ "mWaypointList", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity.html#abaa9edf03870a21927df2f8ed65d6f09", null ],
+    [ "TAG", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity.html#a63ea670d898cba74fc44732325d9a738", null ]
 ];

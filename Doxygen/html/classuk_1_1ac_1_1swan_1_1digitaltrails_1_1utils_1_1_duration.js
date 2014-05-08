@@ -7,5 +7,7 @@ var classuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_duration =
     [ "getMinutes", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_duration.html#aa3990901c7030ecbc2f380c2aed52b64", null ],
     [ "setHours", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_duration.html#a98f0315c584688d9977c7741329f4324", null ],
     [ "setMinutes", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_duration.html#a44eba958b5ade57a5d04018dd54f3a8a", null ],
-    [ "toString", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_duration.html#a015090cd1cc306c68937a07e7c580951", null ]
+    [ "toString", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_duration.html#a015090cd1cc306c68937a07e7c580951", null ],
+    [ "mHours", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_duration.html#a2b0d005a4300fa51ca4502ab1254570b", null ],
+    [ "mMinutes", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_duration.html#a67f7e8b424281e32a8083113443222ef", null ]
 ];

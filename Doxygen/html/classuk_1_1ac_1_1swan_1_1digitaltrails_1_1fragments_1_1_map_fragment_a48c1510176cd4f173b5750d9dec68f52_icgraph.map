@@ -1,3 +1,5 @@
 <map id="uk.ac.swan.digitaltrails.fragments.MapFragment.setInfoClickListener" name="uk.ac.swan.digitaltrails.fragments.MapFragment.setInfoClickListener">
 <area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#ad7ad0119b7dd10580e3053fdf21b64f2" title="Configure default settings for the GoogleMap map. " alt="" coords="272,5,491,47"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#a251d8dcb6c046e55460b9074fb71666f" title="Initialise the map. " alt="" coords="539,5,757,47"/>
+<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#acf60cc97f0903a4f54364d0ed20ded0a" title="uk.ac.swan.digitaltrails.fragments.\lMapFragment.onStart" alt="" coords="805,5,1024,47"/>
 </map>

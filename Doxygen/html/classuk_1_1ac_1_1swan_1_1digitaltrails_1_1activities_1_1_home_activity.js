@@ -10,5 +10,7 @@ var classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_home_activity =
     [ "searchButton", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_home_activity.html#ad6885ca213194f4d14a2d061cfabd1d7", null ],
     [ "settingsButton", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_home_activity.html#a384bd7013fc6efa7e2b5ee6e64a230d0", null ],
     [ "viewWalkButton", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_home_activity.html#a73b4cadc71a2cec477bbb7196e6d7cbb", null ],
-    [ "walkOptionButton", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_home_activity.html#a77147b932dd66ecd0ff4d4140238477b", null ]
+    [ "walkOptionButton", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_home_activity.html#a77147b932dd66ecd0ff4d4140238477b", null ],
+    [ "mConnectedAccount", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_home_activity.html#a42bf8dfc43613b3d67f747722caf3b9f", null ],
+    [ "TAG", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_home_activity.html#af6892ecddd1df5453d1bb1a37a3769c3", null ]
 ];

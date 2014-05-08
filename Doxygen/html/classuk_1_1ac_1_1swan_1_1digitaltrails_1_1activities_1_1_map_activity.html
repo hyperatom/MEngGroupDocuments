@@ -109,6 +109,9 @@ $(document).ready(function(){initNavTree('classuk_1_1ac_1_1swan_1_1digitaltrails
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">uk.ac.swan.digitaltrails.activities.MapActivity Class Reference</div>  </div>
@@ -121,17 +124,24 @@ $(document).ready(function(){initNavTree('classuk_1_1ac_1_1swan_1_1digitaltrails
 Inheritance diagram for uk.ac.swan.digitaltrails.activities.MapActivity:</div>
 <div class="dyncontent">
 <div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity__inherit__graph.png" border="0" usemap="#uk_8ac_8swan_8digitaltrails_8activities_8_map_activity_inherit__map" alt="Inheritance graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<map name="uk_8ac_8swan_8digitaltrails_8activities_8_map_activity_inherit__map" id="uk_8ac_8swan_8digitaltrails_8activities_8_map_activity_inherit__map">
+</map>
+</div>
 <div class="dynheader">
 Collaboration diagram for uk.ac.swan.digitaltrails.activities.MapActivity:</div>
 <div class="dyncontent">
 <div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity__coll__graph.png" border="0" usemap="#uk_8ac_8swan_8digitaltrails_8activities_8_map_activity_coll__map" alt="Collaboration graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<map name="uk_8ac_8swan_8digitaltrails_8activities_8_map_activity_coll__map" id="uk_8ac_8swan_8digitaltrails_8activities_8_map_activity_coll__map">
+<area shape="rect" id="node14" href="enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1select_filter.html" title="Filter for the query to run. " alt="" coords="1959,5,2171,141"/><area shape="rect" id="node16" href="enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1_r_e_q_u_e_s_t___t_y_p_e.html" title="enum for the type of request for location client " alt="" coords="2372,27,2584,119"/></map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1_r_e_q_u_e_s_t___t_y_p_e.html">REQUEST_TYPE</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">enum for the type of request for location client  <a href="enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1_r_e_q_u_e_s_t___t_y_p_e.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1select_filter.html">selectFilter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter for the query to run.  <a href="enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1select_filter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -186,11 +196,374 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a9d4475e7cf73f417482bc6ba30dee6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade3334b7c3e082a4375b0751b0e2a953"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#ade3334b7c3e082a4375b0751b0e2a953">onActivityResult</a> (int reqCode, int resCode, Intent data)</td></tr>
 <tr class="separator:ade3334b7c3e082a4375b0751b0e2a953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a98659c22951ea2dd6dd7eef2745a7ee8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a98659c22951ea2dd6dd7eef2745a7ee8">geofenceEntered</a> (String[] triggeredIds)</td></tr>
+<tr class="memdesc:a98659c22951ea2dd6dd7eef2745a7ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls what happens when a geofence is entered.  <a href="#a98659c22951ea2dd6dd7eef2745a7ee8">More...</a><br /></td></tr>
+<tr class="separator:a98659c22951ea2dd6dd7eef2745a7ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb52643e73deb39b56a3c6cdbdc79c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#aaeb52643e73deb39b56a3c6cdbdc79c5">geofencesExited</a> (String[] triggeredIds)</td></tr>
+<tr class="memdesc:aaeb52643e73deb39b56a3c6cdbdc79c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls what happens when a geofence is exited.  <a href="#aaeb52643e73deb39b56a3c6cdbdc79c5">More...</a><br /></td></tr>
+<tr class="separator:aaeb52643e73deb39b56a3c6cdbdc79c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5854608b6078b8b77755b5bd8984b16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#af5854608b6078b8b77755b5bd8984b16">addGeofences</a> ()</td></tr>
+<tr class="memdesc:af5854608b6078b8b77755b5bd8984b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start a request to monitor geofences by connecting locationclient.  <a href="#af5854608b6078b8b77755b5bd8984b16">More...</a><br /></td></tr>
+<tr class="separator:af5854608b6078b8b77755b5bd8984b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2b7af825cb8f7d5de44ab574f12811"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#acd2b7af825cb8f7d5de44ab574f12811">showInfoViewDialog</a> (<a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html">Waypoint</a> wp)</td></tr>
+<tr class="memdesc:acd2b7af825cb8f7d5de44ab574f12811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the information DialogFragment for the chosen waypoint.  <a href="#acd2b7af825cb8f7d5de44ab574f12811">More...</a><br /></td></tr>
+<tr class="separator:acd2b7af825cb8f7d5de44ab574f12811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b097a9d5dbd1675d32c5aa2d7c1c99d"><td class="memItemLeft" align="right" valign="top">PendingIntent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a1b097a9d5dbd1675d32c5aa2d7c1c99d">getTransitionPendingIntent</a> ()</td></tr>
+<tr class="memdesc:a1b097a9d5dbd1675d32c5aa2d7c1c99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ReceiveTransitionIntentService.  <a href="#a1b097a9d5dbd1675d32c5aa2d7c1c99d">More...</a><br /></td></tr>
+<tr class="separator:a1b097a9d5dbd1675d32c5aa2d7c1c99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abce8f3f496dba8c6021c7a3bb474d30b"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#abce8f3f496dba8c6021c7a3bb474d30b">changeMap</a> (MenuItem item)</td></tr>
+<tr class="memdesc:abce8f3f496dba8c6021c7a3bb474d30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the type of the map.  <a href="#abce8f3f496dba8c6021c7a3bb474d30b">More...</a><br /></td></tr>
+<tr class="separator:abce8f3f496dba8c6021c7a3bb474d30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a306798cff2d5e91a7179ee13599992b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a306798cff2d5e91a7179ee13599992b9">initMap</a> ()</td></tr>
+<tr class="memdesc:a306798cff2d5e91a7179ee13599992b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the map.  <a href="#a306798cff2d5e91a7179ee13599992b9">More...</a><br /></td></tr>
+<tr class="separator:a306798cff2d5e91a7179ee13599992b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f06d07798f02e0c54d180affd49363"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a33f06d07798f02e0c54d180affd49363">setDefaultMapConfig</a> ()</td></tr>
+<tr class="memdesc:a33f06d07798f02e0c54d180affd49363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default map config.  <a href="#a33f06d07798f02e0c54d180affd49363">More...</a><br /></td></tr>
+<tr class="separator:a33f06d07798f02e0c54d180affd49363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac236d26f1c92c9d5a2e70867871128b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#ac236d26f1c92c9d5a2e70867871128b4">resumeMap</a> ()</td></tr>
+<tr class="memdesc:ac236d26f1c92c9d5a2e70867871128b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume the map.  <a href="#ac236d26f1c92c9d5a2e70867871128b4">More...</a><br /></td></tr>
+<tr class="separator:ac236d26f1c92c9d5a2e70867871128b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d49a3077eb36dc26503c523bb79266a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a2d49a3077eb36dc26503c523bb79266a">createMarkers</a> (ArrayList&lt; <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html">Waypoint</a> &gt; waypoints)</td></tr>
+<tr class="memdesc:a2d49a3077eb36dc26503c523bb79266a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a list of markers, stored in mMarkers.  <a href="#a2d49a3077eb36dc26503c523bb79266a">More...</a><br /></td></tr>
+<tr class="separator:a2d49a3077eb36dc26503c523bb79266a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91ce9508e98b08619d3433769f5caa81"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; Geofence &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a91ce9508e98b08619d3433769f5caa81">createGeofences</a> (ArrayList&lt; Marker &gt; markers)</td></tr>
+<tr class="memdesc:a91ce9508e98b08619d3433769f5caa81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a list of geofences from a list of markers.  <a href="#a91ce9508e98b08619d3433769f5caa81">More...</a><br /></td></tr>
+<tr class="separator:a91ce9508e98b08619d3433769f5caa81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13417bbaf308c102245f1770554a706b"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a13417bbaf308c102245f1770554a706b">servicesConnected</a> ()</td></tr>
+<tr class="memdesc:a13417bbaf308c102245f1770554a706b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run when connected to services.  <a href="#a13417bbaf308c102245f1770554a706b">More...</a><br /></td></tr>
+<tr class="separator:a13417bbaf308c102245f1770554a706b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ad896b1298670b4e3492d5dcfe27842b3"><td class="memItemLeft" align="right" valign="top">GoogleMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#ad896b1298670b4e3492d5dcfe27842b3">mMap</a></td></tr>
+<tr class="memdesc:ad896b1298670b4e3492d5dcfe27842b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current GoogleMap.  <a href="#ad896b1298670b4e3492d5dcfe27842b3">More...</a><br /></td></tr>
+<tr class="separator:ad896b1298670b4e3492d5dcfe27842b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8791c1ad2e01e21fa9315567585e9d58"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; Marker &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a8791c1ad2e01e21fa9315567585e9d58">mMarkers</a></td></tr>
+<tr class="memdesc:a8791c1ad2e01e21fa9315567585e9d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArrayList of markers currently on the map.  <a href="#a8791c1ad2e01e21fa9315567585e9d58">More...</a><br /></td></tr>
+<tr class="separator:a8791c1ad2e01e21fa9315567585e9d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae044f1c724b13a91aebfe131f341afe2"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html">Waypoint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#ae044f1c724b13a91aebfe131f341afe2">mWaypoints</a></td></tr>
+<tr class="memdesc:ae044f1c724b13a91aebfe131f341afe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArrayList of waypoints in the walk.  <a href="#ae044f1c724b13a91aebfe131f341afe2">More...</a><br /></td></tr>
+<tr class="separator:ae044f1c724b13a91aebfe131f341afe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a542ad132ee9f0492261930aca8164f"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; Geofence &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a4a542ad132ee9f0492261930aca8164f">mGeofences</a></td></tr>
+<tr class="memdesc:a4a542ad132ee9f0492261930aca8164f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ArrayList of Geofences in the walk.  <a href="#a4a542ad132ee9f0492261930aca8164f">More...</a><br /></td></tr>
+<tr class="separator:a4a542ad132ee9f0492261930aca8164f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a554023fa57db99ba95741de26b0ce17b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1select_filter.html">selectFilter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a554023fa57db99ba95741de26b0ce17b">mCurFilter</a></td></tr>
+<tr class="memdesc:a554023fa57db99ba95741de26b0ce17b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The filter to use when loading data.  <a href="#a554023fa57db99ba95741de26b0ce17b">More...</a><br /></td></tr>
+<tr class="separator:a554023fa57db99ba95741de26b0ce17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31da11ed7d3bdcbe56d3be36c4dc8014"><td class="memItemLeft" align="right" valign="top">Cursor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a31da11ed7d3bdcbe56d3be36c4dc8014">mLoaderCursor</a></td></tr>
+<tr class="memdesc:a31da11ed7d3bdcbe56d3be36c4dc8014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cursor returned from the loader.  <a href="#a31da11ed7d3bdcbe56d3be36c4dc8014">More...</a><br /></td></tr>
+<tr class="separator:a31da11ed7d3bdcbe56d3be36c4dc8014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad65b4445612c08eb8fe55fde76dc3a01"><td class="memItemLeft" align="right" valign="top">LocationClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#ad65b4445612c08eb8fe55fde76dc3a01">mLocationClient</a></td></tr>
+<tr class="memdesc:ad65b4445612c08eb8fe55fde76dc3a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">LocationClient for keeping track of user location.  <a href="#ad65b4445612c08eb8fe55fde76dc3a01">More...</a><br /></td></tr>
+<tr class="separator:ad65b4445612c08eb8fe55fde76dc3a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bee4f44af3d6931f7a9d418b59b6262"><td class="memItemLeft" align="right" valign="top">Location&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a6bee4f44af3d6931f7a9d418b59b6262">mCurrentLocation</a></td></tr>
+<tr class="memdesc:a6bee4f44af3d6931f7a9d418b59b6262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds current location.  <a href="#a6bee4f44af3d6931f7a9d418b59b6262">More...</a><br /></td></tr>
+<tr class="separator:a6bee4f44af3d6931f7a9d418b59b6262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a277671a16bab76f50d1fe79d675f4128"><td class="memItemLeft" align="right" valign="top">LocationRequest&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a277671a16bab76f50d1fe79d675f4128">mLocationRequest</a></td></tr>
+<tr class="memdesc:a277671a16bab76f50d1fe79d675f4128"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current location request.  <a href="#a277671a16bab76f50d1fe79d675f4128">More...</a><br /></td></tr>
+<tr class="separator:a277671a16bab76f50d1fe79d675f4128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed4860060db37b8cc7752265331b5ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1_r_e_q_u_e_s_t___t_y_p_e.html">REQUEST_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a7ed4860060db37b8cc7752265331b5ba">mRequestType</a></td></tr>
+<tr class="memdesc:a7ed4860060db37b8cc7752265331b5ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of request for LocationRequest.  <a href="#a7ed4860060db37b8cc7752265331b5ba">More...</a><br /></td></tr>
+<tr class="separator:a7ed4860060db37b8cc7752265331b5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a006890d3a00d0e4b64a0b8603de4b6df"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a006890d3a00d0e4b64a0b8603de4b6df">mInProgress</a></td></tr>
+<tr class="memdesc:a006890d3a00d0e4b64a0b8603de4b6df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is request in progress.  <a href="#a006890d3a00d0e4b64a0b8603de4b6df">More...</a><br /></td></tr>
+<tr class="separator:a006890d3a00d0e4b64a0b8603de4b6df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ae494241446e64b9d83b7aecc53855"><td class="memItemLeft" align="right" valign="top">PendingIntent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#ab9ae494241446e64b9d83b7aecc53855">mTransitionPendingIntent</a></td></tr>
+<tr class="memdesc:ab9ae494241446e64b9d83b7aecc53855"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current transition pending intent.  <a href="#ab9ae494241446e64b9d83b7aecc53855">More...</a><br /></td></tr>
+<tr class="separator:ab9ae494241446e64b9d83b7aecc53855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae020582911fb809909208122f56d13e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#ae020582911fb809909208122f56d13e2">numVisited</a> = 0</td></tr>
+<tr class="memdesc:ae020582911fb809909208122f56d13e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of waypoints visited.  <a href="#ae020582911fb809909208122f56d13e2">More...</a><br /></td></tr>
+<tr class="separator:ae020582911fb809909208122f56d13e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa47048b323cdbfc604d4405e9f9d33a"><td class="memItemLeft" align="right" valign="top">BroadcastReceiver&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#aaa47048b323cdbfc604d4405e9f9d33a">mBroadcastReceiver</a></td></tr>
+<tr class="memdesc:aaa47048b323cdbfc604d4405e9f9d33a"><td class="mdescLeft">&#160;</td><td class="mdescRight">BroadcastReceiver to listen for when a geofence is entered / left.  <a href="#aaa47048b323cdbfc604d4405e9f9d33a">More...</a><br /></td></tr>
+<tr class="separator:aaa47048b323cdbfc604d4405e9f9d33a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a602c8e98476fa0a148b49d61f62501dc"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a602c8e98476fa0a148b49d61f62501dc">TAG</a> = &quot;MapActivity&quot;</td></tr>
+<tr class="memdesc:a602c8e98476fa0a148b49d61f62501dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static tag string for the class.  <a href="#a602c8e98476fa0a148b49d61f62501dc">More...</a><br /></td></tr>
+<tr class="separator:a602c8e98476fa0a148b49d61f62501dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4817fced0cd0f1d8f8d5e6ba2c2d2414"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a4817fced0cd0f1d8f8d5e6ba2c2d2414">CONNECTION_FAILURE_RESOLUTION_REQUEST</a> = 9000</td></tr>
+<tr class="separator:a4817fced0cd0f1d8f8d5e6ba2c2d2414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91c817713b70954a38dd441d84c3e63c"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a91c817713b70954a38dd441d84c3e63c">MILLISECONDS_PER_SECOND</a> = 1000</td></tr>
+<tr class="memdesc:a91c817713b70954a38dd441d84c3e63c"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of milliseconds in a second  <a href="#a91c817713b70954a38dd441d84c3e63c">More...</a><br /></td></tr>
+<tr class="separator:a91c817713b70954a38dd441d84c3e63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54804664f1186e4588950140c98a7830"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a54804664f1186e4588950140c98a7830">UPDATE_INTERVAL_IN_SECONDS</a> = 10</td></tr>
+<tr class="memdesc:a54804664f1186e4588950140c98a7830"><td class="mdescLeft">&#160;</td><td class="mdescRight">How often to update, in seconds.  <a href="#a54804664f1186e4588950140c98a7830">More...</a><br /></td></tr>
+<tr class="separator:a54804664f1186e4588950140c98a7830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef4c6da45d48652634a6586356192fe3"><td class="memItemLeft" align="right" valign="top">static final long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#aef4c6da45d48652634a6586356192fe3">UPDATE_INTERVAL</a> = <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a91c817713b70954a38dd441d84c3e63c">MILLISECONDS_PER_SECOND</a> * <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a54804664f1186e4588950140c98a7830">UPDATE_INTERVAL_IN_SECONDS</a></td></tr>
+<tr class="memdesc:aef4c6da45d48652634a6586356192fe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">How often to update.  <a href="#aef4c6da45d48652634a6586356192fe3">More...</a><br /></td></tr>
+<tr class="separator:aef4c6da45d48652634a6586356192fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc6dab284cde100b271b4247c3ce99a"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#aecc6dab284cde100b271b4247c3ce99a">FASTEST_INTERVAL_IN_SECONDS</a> = 5</td></tr>
+<tr class="memdesc:aecc6dab284cde100b271b4247c3ce99a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fastest interval, in seconds.  <a href="#aecc6dab284cde100b271b4247c3ce99a">More...</a><br /></td></tr>
+<tr class="separator:aecc6dab284cde100b271b4247c3ce99a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76841fbf67877d014b59ce522302003d"><td class="memItemLeft" align="right" valign="top">static final long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a76841fbf67877d014b59ce522302003d">FASTEST_INTERVAL</a> = <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a91c817713b70954a38dd441d84c3e63c">MILLISECONDS_PER_SECOND</a> * <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#aecc6dab284cde100b271b4247c3ce99a">FASTEST_INTERVAL_IN_SECONDS</a></td></tr>
+<tr class="memdesc:a76841fbf67877d014b59ce522302003d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fastest interval.  <a href="#a76841fbf67877d014b59ce522302003d">More...</a><br /></td></tr>
+<tr class="separator:a76841fbf67877d014b59ce522302003d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Activity allowing the user to "go on a walk". </p>
 <p>Fully functional google map with geospaces etc. </p><dl class="section author"><dt>Author</dt><dd>Lewis Hancock </dd></dl>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00063">63</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af5854608b6078b8b77755b5bd8984b16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uk.ac.swan.digitaltrails.activities.MapActivity.addGeofences </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start a request to monitor geofences by connecting locationclient. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00268">268</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abce8f3f496dba8c6021c7a3bb474d30b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean uk.ac.swan.digitaltrails.activities.MapActivity.changeMap </td>
+          <td>(</td>
+          <td class="paramtype">MenuItem&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Change the type of the map. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td>The menu item </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if successful </dd></dl>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00333">333</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a91ce9508e98b08619d3433769f5caa81"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;Geofence&gt; uk.ac.swan.digitaltrails.activities.MapActivity.createGeofences </td>
+          <td>(</td>
+          <td class="paramtype">ArrayList&lt; Marker &gt;&#160;</td>
+          <td class="paramname"><em>markers</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a list of geofences from a list of markers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">markers</td><td>markers to create geofences from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the list of geofences </dd></dl>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00459">459</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d49a3077eb36dc26503c523bb79266a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uk.ac.swan.digitaltrails.activities.MapActivity.createMarkers </td>
+          <td>(</td>
+          <td class="paramtype">ArrayList&lt; <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html">Waypoint</a> &gt;&#160;</td>
+          <td class="paramname"><em>waypoints</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a list of markers, stored in mMarkers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">waypoints</td><td>The waypoints to create markers from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00443">443</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98659c22951ea2dd6dd7eef2745a7ee8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uk.ac.swan.digitaltrails.activities.MapActivity.geofenceEntered </td>
+          <td>(</td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>triggeredIds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Controls what happens when a geofence is entered. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">triggeredIds</td><td>All the geofences entered </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00213">213</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaeb52643e73deb39b56a3c6cdbdc79c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uk.ac.swan.digitaltrails.activities.MapActivity.geofencesExited </td>
+          <td>(</td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>triggeredIds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Controls what happens when a geofence is exited. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">triggeredIds</td><td>The list of geofences exited </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00244">244</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1b097a9d5dbd1675d32c5aa2d7c1c99d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PendingIntent uk.ac.swan.digitaltrails.activities.MapActivity.getTransitionPendingIntent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the ReceiveTransitionIntentService. </p>
+<dl class="section return"><dt>Returns</dt><dd>the ReceiveTransitionIntentService </dd></dl>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00322">322</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a306798cff2d5e91a7179ee13599992b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uk.ac.swan.digitaltrails.activities.MapActivity.initMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialise the map. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00391">391</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ade3334b7c3e082a4375b0751b0e2a953"></a>
 <div class="memitem">
 <div class="memproto">
@@ -229,6 +602,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00588">588</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="afeff948328c53e9ad80e19a7ef5bbb56"></a>
@@ -255,6 +630,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00687">687</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="abb991902396fdc60eb4a3f6fad8b1dc8"></a>
@@ -269,6 +646,8 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00578">578</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
 
 </div>
 </div>
@@ -286,6 +665,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00652">652</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a7d0b0bf6dbf9f32f89ea8a4fdd5813fd"></a>
@@ -301,6 +682,8 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00626">626</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
 
 </div>
 </div>
@@ -325,6 +708,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00181">181</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
 
 </div>
 </div>
@@ -352,6 +737,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00483">483</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a7b66e700cab5b974365c447fb367765a"></a>
@@ -368,6 +755,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00291">291</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ac40ceb283c44ad9e74f9e10824e76257"></a>
@@ -382,6 +771,8 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00669">669</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
 
 </div>
 </div>
@@ -398,6 +789,8 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00572">572</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
 
 </div>
 </div>
@@ -425,6 +818,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00512">512</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a05b9ef126f8ccc027b7f1922b6966ca0"></a>
@@ -441,6 +836,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00680">680</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a025f8bf6d684de3fcaaa95e876c986db"></a>
@@ -456,6 +853,8 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00300">300</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
 
 </div>
 </div>
@@ -480,6 +879,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00375">375</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a190bbbb4b068268fba6ae30cc34024dc"></a>
@@ -502,6 +903,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00366">366</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
 
 </div>
 </div>
@@ -526,6 +929,124 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00383">383</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac236d26f1c92c9d5a2e70867871128b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uk.ac.swan.digitaltrails.activities.MapActivity.resumeMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resume the map. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00435">435</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a13417bbaf308c102245f1770554a706b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean uk.ac.swan.digitaltrails.activities.MapActivity.servicesConnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Run when connected to services. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00603">603</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a33f06d07798f02e0c54d180affd49363"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uk.ac.swan.digitaltrails.activities.MapActivity.setDefaultMapConfig </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the default map config. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00405">405</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd2b7af825cb8f7d5de44ab574f12811"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uk.ac.swan.digitaltrails.activities.MapActivity.showInfoViewDialog </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html">Waypoint</a>&#160;</td>
+          <td class="paramname"><em>wp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Displays the information DialogFragment for the chosen waypoint. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wp</td><td>The waypoint to display information for </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00308">308</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -549,6 +1070,8 @@ Protected Member Functions</h2></td></tr>
 
 <p>Static constant for argument explore. </p>
 
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00101">101</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="af83f73ddb139f99dbdf40d4849b13bf9"></a>
@@ -570,6 +1093,451 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>static constant for argument geofences </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00105">105</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4817fced0cd0f1d8f8d5e6ba2c2d2414"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.activities.MapActivity.CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00076">76</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a76841fbf67877d014b59ce522302003d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final long uk.ac.swan.digitaltrails.activities.MapActivity.FASTEST_INTERVAL = <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a91c817713b70954a38dd441d84c3e63c">MILLISECONDS_PER_SECOND</a> * <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#aecc6dab284cde100b271b4247c3ce99a">FASTEST_INTERVAL_IN_SECONDS</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fastest interval. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00096">96</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aecc6dab284cde100b271b4247c3ce99a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.activities.MapActivity.FASTEST_INTERVAL_IN_SECONDS = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fastest interval, in seconds. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00092">92</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa47048b323cdbfc604d4405e9f9d33a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BroadcastReceiver uk.ac.swan.digitaltrails.activities.MapActivity.mBroadcastReceiver</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> BroadcastReceiver() {</div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">void</span> onReceive(Context context, Intent intent) {</div>
+<div class="line">            <span class="keywordflow">if</span>(intent.getAction().equals(<a class="code" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a7f2056604f7a13b22f2a9e5328448fba">RECEIVE_GEOFENCES_ENTERED</a>)) {</div>
+<div class="line">                Log.d(<a class="code" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a602c8e98476fa0a148b49d61f62501dc">TAG</a>, <span class="stringliteral">&quot;Receiving Geofences event&quot;</span>);</div>
+<div class="line">                <a class="code" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a98659c22951ea2dd6dd7eef2745a7ee8">geofenceEntered</a>(intent.getExtras().getStringArray(<a class="code" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#af83f73ddb139f99dbdf40d4849b13bf9">ARG_GEOFENCES</a>));</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">if</span> (intent.getAction().equals(<a class="code" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a8e2d03d80668ec761b99a7e48063327d">RECEIVE_GEOFENCES_EXITED</a>)) {</div>
+<div class="line">                <a class="code" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#aaeb52643e73deb39b56a3c6cdbdc79c5">geofencesExited</a>(intent.getExtras().getStringArray(<a class="code" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#af83f73ddb139f99dbdf40d4849b13bf9">ARG_GEOFENCES</a>));</div>
+<div class="line"></div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p>BroadcastReceiver to listen for when a geofence is entered / left. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00163">163</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a554023fa57db99ba95741de26b0ce17b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1select_filter.html">selectFilter</a> uk.ac.swan.digitaltrails.activities.MapActivity.mCurFilter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The filter to use when loading data. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00127">127</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6bee4f44af3d6931f7a9d418b59b6262"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Location uk.ac.swan.digitaltrails.activities.MapActivity.mCurrentLocation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Holds current location. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00133">133</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4a542ad132ee9f0492261930aca8164f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;Geofence&gt; uk.ac.swan.digitaltrails.activities.MapActivity.mGeofences</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ArrayList of Geofences in the walk. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00125">125</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a91c817713b70954a38dd441d84c3e63c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.activities.MapActivity.MILLISECONDS_PER_SECOND = 1000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>number of milliseconds in a second </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00080">80</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a006890d3a00d0e4b64a0b8603de4b6df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean uk.ac.swan.digitaltrails.activities.MapActivity.mInProgress</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is request in progress. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00146">146</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a31da11ed7d3bdcbe56d3be36c4dc8014"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Cursor uk.ac.swan.digitaltrails.activities.MapActivity.mLoaderCursor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cursor returned from the loader. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00129">129</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad65b4445612c08eb8fe55fde76dc3a01"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LocationClient uk.ac.swan.digitaltrails.activities.MapActivity.mLocationClient</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>LocationClient for keeping track of user location. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00131">131</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a277671a16bab76f50d1fe79d675f4128"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LocationRequest uk.ac.swan.digitaltrails.activities.MapActivity.mLocationRequest</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The current location request. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00137">137</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad896b1298670b4e3492d5dcfe27842b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GoogleMap uk.ac.swan.digitaltrails.activities.MapActivity.mMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The current GoogleMap. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00117">117</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8791c1ad2e01e21fa9315567585e9d58"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;Marker&gt; uk.ac.swan.digitaltrails.activities.MapActivity.mMarkers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ArrayList of markers currently on the map. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00121">121</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7ed4860060db37b8cc7752265331b5ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1_r_e_q_u_e_s_t___t_y_p_e.html">REQUEST_TYPE</a> uk.ac.swan.digitaltrails.activities.MapActivity.mRequestType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Type of request for LocationRequest. </p>
+<p>the current request type </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00142">142</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab9ae494241446e64b9d83b7aecc53855"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PendingIntent uk.ac.swan.digitaltrails.activities.MapActivity.mTransitionPendingIntent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The current transition pending intent. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00150">150</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae044f1c724b13a91aebfe131f341afe2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;<a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html">Waypoint</a>&gt; uk.ac.swan.digitaltrails.activities.MapActivity.mWaypoints</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ArrayList of waypoints in the walk. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00123">123</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae020582911fb809909208122f56d13e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int uk.ac.swan.digitaltrails.activities.MapActivity.numVisited = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The number of waypoints visited. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00154">154</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
 
 </div>
 </div>
@@ -593,6 +1561,8 @@ Protected Member Functions</h2></td></tr>
 
 <p>static constant for argument receive geofences entered </p>
 
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00109">109</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a8e2d03d80668ec761b99a7e48063327d"></a>
@@ -615,10 +1585,84 @@ Protected Member Functions</h2></td></tr>
 
 <p>static constant for argument receive geofences exited </p>
 
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00113">113</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a602c8e98476fa0a148b49d61f62501dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String uk.ac.swan.digitaltrails.activities.MapActivity.TAG = &quot;MapActivity&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Static tag string for the class. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00072">72</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aef4c6da45d48652634a6586356192fe3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final long uk.ac.swan.digitaltrails.activities.MapActivity.UPDATE_INTERVAL = <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a91c817713b70954a38dd441d84c3e63c">MILLISECONDS_PER_SECOND</a> * <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a54804664f1186e4588950140c98a7830">UPDATE_INTERVAL_IN_SECONDS</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>How often to update. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00088">88</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a54804664f1186e4588950140c98a7830"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.activities.MapActivity.UPDATE_INTERVAL_IN_SECONDS = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>How often to update, in seconds. </p>
+
+<p>Definition at line <a class="el" href="_map_activity_8java_source.html#l00084">84</a> of file <a class="el" href="_map_activity_8java_source.html">MapActivity.java</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/uk/ac/swan/digitaltrails/activities/<a class="el" href="_map_activity_8java.html">MapActivity.java</a></li>
+<li>C:/Users/Admin/Documents/Work/DigitalTrails/src/uk/ac/swan/digitaltrails/activities/<a class="el" href="_map_activity_8java_source.html">MapActivity.java</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -626,7 +1670,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceuk.html">uk</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac.html">ac</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac_1_1swan.html">swan</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac_1_1swan_1_1digitaltrails.html">digitaltrails</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities.html">activities</a></li><li class="navelem"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html">MapActivity</a></li>
-    <li class="footer">Generated on Mon May 5 2014 23:22:37 for White Rock Digital Trails by
+    <li class="footer">Generated on Thu May 8 2014 16:14:28 for White Rock Digital Trails by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

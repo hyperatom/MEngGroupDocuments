@@ -35,5 +35,20 @@ var classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint =
     [ "setWalkId", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a5f67fc690c1d3bb8c2f90c3be1ebce96", null ],
     [ "setWelshDescription", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a4afba29d4243bd1979a3ae6d0dd74c2e", null ],
     [ "toString", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#ac0e7d4601761a9ebc20941b07a713df3", null ],
-    [ "writeToParcel", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a332c1112134a76443e580c87db456e28", null ]
+    [ "writeToParcel", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a332c1112134a76443e580c87db456e28", null ],
+    [ "mAudioFiles", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#af5d8a14ef07f5fac6be0895741d7041c", null ],
+    [ "mEnglishDescr", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#adf5dc8bb9594c84ca2d279b48d268b9d", null ],
+    [ "mId", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a5cf332ec470f69a083b25514bb5a7b3f", null ],
+    [ "mIsRequest", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a0a3e49d149761e3eee23663d2b614602", null ],
+    [ "mLatitude", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a56d8f162b820ec3701151360ebf795be", null ],
+    [ "mLatLng", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a9ef9fab5658b853179b30801b978b2a0", null ],
+    [ "mLongitude", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#af687be1d3a7e681a0d9e61dd4361c6ab", null ],
+    [ "mMarker", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a90232a0d2fec40f5ae645534db1ad847", null ],
+    [ "mMedia", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#adc0e8bc4e7814896a0f7521118d5b9fd", null ],
+    [ "mPhotos", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a2e68c6b5cb4a52d561f354960c188d9b", null ],
+    [ "mUserId", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a37cfacc6c59ae4242cefc0dd7b4c0aaf", null ],
+    [ "mVideos", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a2360e4d46994f99256303bc779a9e47c", null ],
+    [ "mVisitOrder", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a2c9299a216e4c3534cef9d9f1786ffcb", null ],
+    [ "mWalkId", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a94192130dff765b69fa6cd31e3fd3357", null ],
+    [ "mWelshDescr", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a2f719ce0aad16f15f872cd786647eaca", null ]
 ];
