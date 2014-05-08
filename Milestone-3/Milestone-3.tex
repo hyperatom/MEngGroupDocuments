@@ -186,6 +186,8 @@ This section will discuss the choices of technology that were used to implement 
 \subsection{Rejected Design}
 \label{sec:portal-rejected-design}
 
+No rejected designs can be discussed for the web portal since an iterative development process has taken place from the start. This involved sprints of feature implementations in according with the Agile Scrum methodology used for this project. Since this methodology does not promote the rejection of potential designs, none exist to be presented in this section. Instead, views were created to comply with specifications and happened to be acceptable when shown to the client during feedback meetings.
+
 \subsection{Chosen Design}
 \label{sec:portal-chosen-design}
 
@@ -214,6 +216,80 @@ This section will discuss the architecture of each subsystem and the classes con
 \label{fig:subsystem-diagram}
 \end{figure}
 
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}
+\hline \multicolumn{2}{|c|}{\textbf{Services Subsystem}} \\
+\hline \textbf{Module} & \textbf{Responsibility} \\ 
+\hline httpInterceptor & Intercepts calls to the web service allowing for additional properties such as authentication tokens to be appended. Also sets the specific protocol that should be used to communicate with the web server. \\
+\hline sessionUser & Stores a session user object that represents the user which is logged into the application. This module is used by controller modules to gain information about the current session user. This allows different views to be presented or different API methods to be called. \\
+\hline
+\end{tabular} 
+\end{center}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/web-client-uml/services-subsystem-diagram}
+\caption{Services subsystem of the web client.}
+\label{fig:services-subsystem-diagram}
+\end{figure}
+
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}
+\hline \multicolumn{2}{|c|}{\textbf{Directives Subsystem}} \\
+\hline \textbf{Module} & \textbf{Responsibility} \\ 
+\hline backImg & Displays the background image of walks shown in the \emph{all walks} view. \\
+\hline hoverActive & Highlights the background of elements which are hovered over by the mouse. \\
+\hline imageGallery & Applied to a DIV element to make nested image elements part of a carousel image gallery. \\
+\hline imgSelector & Used in the image gallery view to give red outlines to selected media items. \\
+\hline ladda & Applies loading spinners to buttons when an asynchronous request is taking place. \\
+\hline loginValidator & Validates all input elements associated with the login form. Red or green borders are applied to elements if they are invalid or valid respectively. \\
+\hline raty & Displays a star rating system for walk reviews. Takes an integer and represents it as the corresponding number of stars. \\
+\hline regValidator & Validates all input elements associated with the registration form. Red or green borders are applied to elements if they are invalid or valid respectively. \\
+\hline scroller & Applies a custom scroll bar to DIV elements that have overflowed. Overrides the default scroll bar style. \\
+\hline userValidator & Validates fields associated with the user settings view. Red and green borders are given to inputs that are invalid or valid respectively. \\
+\hline waypointValidator & Validates fields on the waypoint edit and add views. Gives input elements green or red borders if they are valid or invalid respectively. \\
+\hline
+\end{tabular} 
+\end{center}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/web-client-uml/directives-subsystem-diagram}
+\caption{Directives subsystem of the web client.}
+\label{fig:directives-subsystem-diagram}
+\end{figure}
+
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}
+\hline \multicolumn{2}{|c|}{\textbf{Controllers Subsystem}} \\
+\hline \textbf{Module} & \textbf{Responsibility} \\ 
+\hline accountSettings & Retrieving the logged in user's current account settings and saving any new changes. \\
+\hline addWalk & Adding a new walk including any associated waypoints to the database and validating walk attributes provided by the user. \\
+\hline addWaypoint & Adding new waypoints to an existing walk including the uploading of any additional media such as images, audio or videos. \\
+\hline alertModal & Provides a re-usable and customisable alert modal for use by any view controller. Controllers can inject custom messages and responses into this modal.\\
+\hline allWalks & Retrieves all walks stored in the database for display on the \emph{all walks} view. \\
+\hline editWalk & Updates existing walks with data provided by the user. \\
+\hline editWaypoint & Updates existing waypoint information provided by the user including media modifications to images, videos and audio. \\
+\hline editWaypointMedia & Manages media for both existing and new waypoints. Performs functions such as batch media removal and the uploading of new media items. \\
+\hline login & Validates a user's log in credentials and creates a new user session if successful. \\
+\hline myContributions & Accepts or rejects contributions made to the user's walks. Such contributions include the addition of new waypoints. \\
+\hline myWalks & Retrieves a user's created walks for display on the \emph{my walks} view. \\
+\hline navBar & Provides navigation to other views in the application such as \emph{all walks}, \emph{my walks}, the login modal and logout function. \\
+\hline registerConfirm & Confirms the user's registration by displaying a modal displaying a success message. \\
+\hline registerCtrl & Registers a new user account if the user has entered a valid set of account details. \\
+\hline walkInfo & Retrieves walk information such as basic walk attributes, associated reviews, waypoints and media. \\
+\hline waypointModal & Retrieves waypoint data for display within the waypoint modal when a map marker or waypoint list item is clicked. \\
+
+\hline
+\end{tabular} 
+\end{center}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/web-client-uml/controllers-subsystem-diagram}
+\caption{Controllers subsystem of the web client.}
+\label{fig:controllers-subsystem-diagram}
+\end{figure}
 
 
 \subsubsection{User Interfaces}
@@ -228,7 +304,7 @@ The welcome view shown in Figure \ref{fig:home} provides visitors with a link to
 
 \centering
 
-\includegraphics[width=1\linewidth]{./img/webportal/home}
+\includegraphics[width=0.8\linewidth]{./img/webportal/home}
 
 \caption{Home view of the web portal.}
 
@@ -247,7 +323,7 @@ Figure \ref{fig:home-responsive} demonstrates a responsive view of the web porta
 
 \centering
 
-\includegraphics[width=1\linewidth]{./img/webportal/home-responsive}
+\includegraphics[width=0.6\linewidth]{./img/webportal/home-responsive}
 
 \caption{Web portal responsive menu view.}
 
@@ -856,6 +932,8 @@ HTTP Method & Route & Contorller Method\\ \hline
 \caption{Routes and Methods in the Session}
 \label{tab:SessionController}
 \end{table}
+
+
 \section{The Database}
 \label{sec:database-design}
 
@@ -925,6 +1003,186 @@ The Bug report table is used to store bugs in the program that are reported by u
 \section{Acceptance Testing}
 \label{sec:acceptance-testint}
 
+\subsection{Web Portal}
+
+\label{test:POR-T01}
+\noindent\textbf{Test Code:} POR-T01\\
+\textbf{Asserts Specification:} WEBSPEC1, WEBSPEC2, WEBSPEC3 \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item The web portal must have a `Register' button for users that are not logged in.
+                     \item Clicking `Register' should display a view with `Name', `Email Address', `Password', `Password Confirmation' text fields and `Register' and `Cancel' buttons.
+                     \item Clicking `Cancel' will return the user to the index page.
+                     \item Clicking `Register' will create a user and log them in.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} This set of test cases tests that a user can register a new account with the Web Portal. It also tests that the correct fields are displayed on the form and that users are logged in after registration.\\
+
+\label{test:POR-T02}
+\noindent\textbf{Test Code:} POR-T02\\
+\textbf{Asserts Specification:} WEBSPEC5, WEBSPEC6, WEBSPEC7, WEBSPEC8, WEBSPEC9, WEBSPEC10 \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item A `Login' button should be visible to users that are not logged in.
+                     \item Clicking `Login' should present a modal dialogue with `Username' and `Password' fields and `Login' and `Cancel' buttons.
+                     \item Clicking `Login' should create an authenticated session for the user and store it in a temporary cookie.
+                     \item Clicking `Cancel' should dismiss the modal dialogue.
+                     \item When users are logged in they will be presented with a `Logout' link.
+                     \item Clicking `Logout' will delete the session cookie and return the user to the index page as a guest.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} This set of test cases tests that a registered user can log in to the application. It also tests that the correct fields are on the login form and that users can also log out. Finally, it tests the technical requirement of session token storage. \\
+
+\label{test:POR-T03}
+\noindent\textbf{Test Code:} POR-T03\\
+\textbf{Asserts Specification:} WEBSPEC11, WEBSPEC12, WEBSPEC13, WEBSPEC14 \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item The web portal will feature an `Edit Account' button.
+                     \item Clicking the `Edit Account' will display a view that allows the user to edit their `full name, email and password', a `Cancel' button and a `Save' button.
+                     \item Clicking the `Save' button will validate the full name, email and password text boxes. If successful, a notification will inform the user that changes were made to their details.
+                     \item Clicking the `Cancel' button will cancel current changes made to the user's details.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} This set of test cases tests that a registered user can change their account details such as their \emph{full name}, \emph{email} and \emph{password}. It also tests that the correct fields are present. \\
+
+\label{test:POR-T04}
+\noindent\textbf{Test Code:} POR-T04\\
+\textbf{Asserts Specification:} WEBSPEC15, WEBSPEC16, WEBSPEC17 \\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item All web portal views will feature the company logo and use a house colour scheme.
+                     \item The `user account settings' view will feature a company branding tab, allowing the user to attach their company logo to a walk.
+                     \item The company branding tab will feature a `Browse' button, allowing the user to browse their computer for a particular image and will feature a `Save' button, allowing the user to upload their image.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS} - It was decided that company branding would be added to a walk using a cover image rather than tied to a specific account.\\ 
+\textbf{Description:} This set of test cases tests that a registered user can change the branding of their walks using an image from their computer. The brand logo should then be visible on all the user's created walks. \\
+
+\label{test:POR-T05}
+\noindent\textbf{Test Code:} POR-T05\\
+\textbf{Asserts Specification:} WEBSPEC18, WEBSPEC19, WEBSPEC20, WEBSPEC21, WEBSPEC22, WEBSPEC23, WEBSPEC24\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item Successfully logging in will take the user to a `Homepage' view featuring their own walks and contributions.
+                     \item The web portal will feature a `Walk' button on its side bar.
+                     \item Clicking the `Walk' button will navigate the user to a view featuring a list of walks and an `Add walk' button.
+                     \item Clicking the `Add walk' button will display a view featuring `Walk name, description' textboxes, `Cancel' and `Create' button.
+                     \item The `Walk name' and `Description' text boxes will include a profanity filter, preventing inappropriate words being used.
+                     \item Clicking the `Cancel' button will navigate the user back to the `Homepage' view.
+                     \item Clicking the `Create' button will create a new walk.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS} - The behaviour of logging in was changed to keep the user on the same page. A profanity filter was also not implemented.\\ 
+\textbf{Description:} This set of test cases tests that a registered user can create a new walk with the prevention of profanity words. The correct view components are also tested for their presence. \\
+
+\label{test:POR-T06}
+\noindent\textbf{Test Code:} POR-T06\\
+\textbf{Asserts Specification:} WEBSPEC25, WEBSPEC26, WEBSPEC27\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item The walk list view will feature an `Edit' button and `Delete' button adjacent to each walk.
+                     \item Clicking the `Edit' button will navigate to a view where the user can edit the `Walk name, description' text boxes.
+                     \item Clicking the `Delete' button will display a view, asking the user to confirm they wish to delete the walk.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} This set of test cases tests that a registered user can edit and delete their own walk. \\
+
+\label{test:POR-T07}
+\noindent\textbf{Test Code:} POR-T07\\
+\textbf{Asserts Specification:} WEBSPEC28, WEBSPEC29, WEBSPEC30, WEBSPEC31, WEBSPEC32, WEBSPEC33, WEBSPEC34, WEBSPEC35, WEBSPEC36\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item When in user-walk list view, clicking on a walk will display a view featuring a list of walk waypoints and an `Add waypoint' button.
+                     \item Clicking the `Add waypoint' button will display a view featuring `Waypoint name', `Waypoint description' text boxes, `Location Map', `Add image', `Add video' and `Add audio' buttons.
+                     \item Clicking the `Add image' button will display a `Browse', `Add' and `Cancel' button.
+                     \item Clicking the `Browse' button will allow the user to browse their computer for a suitable image of the waypoint.
+                     \item Clicking the `Save' button will upload the image to the waypoint.
+                     \item Clicking the `Cancel' button will navigate the user back to the waypoint view.
+                     \item Clicking the `Add video' button will display a `Browse', `Add' and `Cancel' button.
+                     \item Clicking the `Browse' button will allow the user to browse their computer for a suitable video of the waypoint.
+                     \item Clicking the `Save' button will upload the video to the waypoint.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\ 
+\textbf{Description:} This set of test cases tests that a registered user can add new waypoints to their walk. It also tests that media including images, audio and video can be uploaded to the waypoint. \\
+
+\label{test:POR-T08}
+\noindent\textbf{Test Code:} POR-T08\\
+\textbf{Asserts Specification:} WEBSPEC37, WEBSPEC38\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item Clicking a specific point on the `Location map' of the walk will place a waypoint based on its geological location.
+                     \item The longitude and latitude co-ordinates must be able to be set manually..
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\
+\textbf{Description:} This set of test cases tests that a waypoint location can be chosen and that its latitude and longitude can be manually specified. \\
+
+\label{test:POR-T09}
+\noindent\textbf{Test Code:} POR-T09\\
+\textbf{Asserts Specification:} WEBSPEC39, WEBSPEC40, WEBSPEC41, WEBSPEC42, WEBSPEC43, WEBSPEC44, WEBSPEC45, WEBSPEC46\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item The waypoint list view will feature an `Edit' button and a `Delete' button adjacent to each waypoint.
+                     \item Clicking the `Edit waypoint' button will navigate to a view where the user can edit the `Waypoint name, description' textboxes, waypoint image, waypoint video, waypoint audio and waypoint geological location.
+                     \item Each feature of a waypoint will include a delete button adjacent to the feature.
+                     \item Clicking the `Delete' button of a waypoint feature will display a view asking the user if they wish to delete it. For example, clicking the delete button adjacent to the waypoint video will ask the user if they wish to delete the video.
+                     \item Clicking the `Delete waypoint' will display a view, asking the user to confirm they wish to delete the waypoint.
+                     \item The waypoints view will feature a `Change order' button.
+                     \item Clicking the `Change order' button will display a list view of the waypoints, an `Up' button and a `Down' button.
+                     \item When a waypoint is selected, clicking the `Up' button will move the waypoint up the list order, clicking the `Down' button will move the waypoint down the list order.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{red}{FAIL} - The order of waypoints to be visited in a walk was not implemented as specified. Instead, users could manually enter the waypoint visit order on creation or modification.\\
+\textbf{Description:} This set of test cases tests that a waypoint can be successfully edited and deleted. \\
+
+\label{test:POR-T10}
+\noindent\textbf{Test Code:} POR-T10\\
+\textbf{Asserts Specification:} WEBSPEC47, WEBSPEC48, WEBSPEC49\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item The web portal side bar will feature a `Translate' button that will display a view featuring `Welsh' and `English' buttons.
+                     \item Clicking the `English' button will translate the text into English.
+                     \item Clicking the `Welsh' button will translate the text into Welsh.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{red}{FAIL} - A language translation feature has not been implemented.\\
+\textbf{Description:} This set of test cases tests that the language of walk descriptions is interchangeable between English and Welsh. \\
+
+\label{test:POR-T11}
+\noindent\textbf{Test Code:} POR-T11\\
+\textbf{Asserts Specification:} WEBSPEC50, WEBSPEC51, WEBSPEC52, WEBSPEC53, WEBSPEC54\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item The web portal side bar will feature a `Statistics' button, a `Ratings' button, a `Review' button, a `Requests' and a `Report' button.
+                     \item Clicking the `Statistics' button navigates the user to a statistics view, displaying each of the user's walks and their download history.
+                     \item Clicking the `Ratings' button navigates the user to a ratings view, displaying each of the user's walks and average ratings.
+                     \item Clicking the `Reviews' button navigates the user to a review view, displaying each of the user's walks as a list of reviews.
+                     \item Clicking on the `Request' button navigates the user to a request view, displaying pending waypoints to be added to one of their walks.
+                     \item Clicking on a pending waypoint will display a view featuring an `Accept' or `Reject' button.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\
+\textbf{Description:} This set of test cases tests that the navigation links are present to allow users to access all walk details. \\
+
+\label{test:POR-T12}
+\noindent\textbf{Test Code:} POR-T12\\
+\textbf{Asserts Specification:} WEBSPEC55, WEBSPEC56, WEBSPEC57\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item Clicking on a pending waypoint will display a view featuring an `Accept' or `Reject' button.
+                     \item Clicking the `Accept' button will add the waypoint to the walk.
+                     \item Clicking the `Reject' button will delete the waypoint request.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{green}{PASS}\\
+\textbf{Description:} This set of test cases tests that a walk author can successfully accept or reject waypoints added to their walks by other users. \\
+
+\label{test:POR-T13}
+\noindent\textbf{Test Code:} POR-T13\\
+\textbf{Asserts Specification:} WEBSPEC58, WEBSPEC59, WEBSPEC60\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item Clicking the `Report' button will display a report view, featuring a report/bug `Name', `Description' textboxes, `Send' button and `Cancel' button.
+                     \item Clicking the `Send' button will file a report to the White Rock maintenance team.
+                     \item Clicking the `Cancel' button will navigate the user to the homepage.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{red}{FAIL} - A bug report feature was not implemented.\\
+\textbf{Description:} This set of test cases tests that a bug report feature allows users to submit reports of bugs they find in the application. \\
+
+\label{test:POR-T14}
+\noindent\textbf{Test Code:} POR-T14\\
+\textbf{Asserts Specification:} WEBSPEC61, WEBSPEC62, WEBSPEC63, WEBSPEC64, WEBSPEC65, WEBSPEC66\\ 
+\textbf{Criteria:} \begin{itemize}
+                     \item  Clicking the `FAQ' button will navigate to the FAQ.
+                     \item The FAQ page will contain two panels, one for links to question, on the left, and one for answers, on the right.
+                     \item The web portal will have a `Guide' button which links to the User Guide.
+                     \item The User Guide page will contain two panels, one for the contents page, on the left, and one for the guide, on the right.
+                     \item The User Guide page will update the guide when the user clicks a link in the contents panel.
+                     \item The User Guide guide panel will contain a back and next button to change the content in the panel.
+                   \end{itemize}  
+\textbf{Result:} \textcolor{red}{FAIL} - A user guide was implemented, but not according to the specifications. The implemented user guide exists as an external PDF presented by this document.\\
+\textbf{Description:} This set of test cases tests that a user guide is present and accessible from the application. \\
 
 \subsection{API}
 
@@ -1480,6 +1738,350 @@ The session controller checks passwords and maps authorisation tokesn to user. L
 
 \section{Web Portal}
 
+This section presents a user manual for users wishing to learn how to perform various functions in the web portal.
+
+\subsection{Account Management}
+
+Your Digital Trails account can be managed via the web portal and any changes are reflected in the Android application. You must remember that if any details such as your email or password are changed, you must re-login on the Android application.
+
+\subsubsection{Logging In}
+
+The login feature allows you to access specific areas of the application reserved for registered users. Such areas include those where you can add, edit and delete walks.
+
+\begin{enumerate}
+\item First, visit the web portal in your web browser and you will see a navigation bar like the one shown in Figure \ref{fig:login-guide}.
+\item Click the \emph{login} button which will display the modal shown in Figure \ref{fig:login-modal}.
+\item Populate the \emph{email} and \emph{password} fields with the credentials you registered with.
+\item Click the \emph{login} button.
+\item You should now see your full name replace the \emph{login} and \emph{register} buttons meaning you have successfully logged in.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal-guide/login}
+\caption{Web portal top navigation bar.}
+\label{fig:login-guide}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth]{./img/webportal/login}
+\caption{Web portal login modal.}
+\label{fig:login-modal}
+\end{figure}
+
+\subsubsection{Logging Out}
+
+Log out if you want to prevent other users of your computer being able to access your Digital Trails account.
+
+\begin{enumerate}
+\item Click on your full name displayed on the right of the top navigation bar.
+\item Click the \emph{logout} button presented in the drop down menu.
+\item You are now logged out and the \emph{login} and \emph{register} buttons will replace your full name.
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\linewidth]{./img/webportal-guide/logout}
+\caption{Web portal logout feature.}
+\label{fig:logout}
+\end{figure}
+
+\subsubsection{Registering}
+
+Registering an account with the Digital Trails web portal will allow you to gain access to exclusive feature. Such features include the ability to add walks and waypoints.
+
+\begin{enumerate}
+\item Click the \emph{register button} from the top navigation bar as shown in Figure \ref{fig:login-guide}.
+\item A modal will be displayed which will look similar to that shown in Figure \ref{fig:registration-guide}.
+\item Enter your information into the fields on the modal. Your must remember to type your password the same, twice to prevent typing errors.
+\item Click the \emph{register} button.
+\item If successful, you will be presented with a confirmation dialogue and you will be automatically logged in.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth]{./img/webportal/registration}
+\caption{}
+\label{fig:registration-guide}
+\end{figure}
+
+
+\subsubsection{Changing Account Details}
+
+You must first be logged in to change your account details. You may change details such as your \emph{full name}, \emph{email} and \emph{password}.
+
+\begin{enumerate}
+\item Once logged in, click on your full name in the top navigation bar.
+\item Click the \emph{account settings} option from the drop down menu displayed.
+\item You will be navigated to the \emph{account settings} view shown in Figure \ref{fig:user-account-guide} where you should make changes to your account details.
+\item When you have made your changes, click the \emph{save} button.
+\item If successful, you will be presented with a success confirmation as shown beneath the \emph{save} button in Figure \ref{fig:user-account-guide}.
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/user-account}
+\caption{Web portal account settings view}
+\label{fig:user-account-guide}
+\end{figure}
+
+\subsection{Walks}
+
+\subsubsection{Searching Walks}
+
+You can search for walks stored in the Digital Trails database using the instant search feature on the \emph{all walks} or \emph{my walks} view. Use the page indexes shown above and below the walk tiles to change the current page of results.
+
+\begin{enumerate}
+\item Navigate to the \emph{all walks} view shown in Figure \ref{fig:all-walks-guide}.
+\item Type search criteria into the text box shown beneath the \emph{add walk} button. Your criteria should include text matching a walks title or description.
+\item The walk tiles should then change to show only those matching your search criteria.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/webportal/all-walks}
+\caption{Web portal's walk search feature.}
+\label{fig:all-walks-guide}
+\end{figure}
+
+\subsubsection{Viewing Walks}
+
+Walks can be viewed to display more information such as a full description, reviews and waypoints.
+
+\begin{enumerate}
+\item From the \emph{all walks} or \emph{my walks} views, click the \emph{view this walk} button on a tile of the walk you wish to view.
+\item You will be navigated to a walk information page where you can view all details about the walk.
+\end{enumerate}
+
+\subsubsection{Adding Walks}
+
+Walks can be added to the Digital Trails database if you have registered an account via the web portal.
+
+\begin{enumerate}
+\item Navigate to the \emph{all walks} or \emph{my walks} similar to that shown in Figure \ref{fig:all-walks-guide}.
+\item Click the \emph{add walk} button shown above the search box.
+\item You will be navigated to the view shown by Figure \ref{fig:add-walk-guide}.
+\item Populate the text boxes with the properties of your new walk.
+\item Optionally, click a point on the map to add new waypoints to your walk.
+\item Once you've finished, click the \emph{create} button to add your new walk to the Digital Trails database.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/webportal/add-walk}
+\caption{Web portal add walk view.}
+\label{fig:add-walk-guide}
+\end{figure}
+
+\subsubsection{Editing Walks}
+
+You can edit any of the walks you have previously created if you need to make changes to any information or waypoints associated.
+
+\begin{enumerate}
+\item Navigate to the \emph{all walks} or \emph{my walks} view.
+\item Click \emph{view this walk} on any walk you have authored.
+\item Click the \emph{edit} button on the top right of the view shown in Figure \ref{fig:walk-info-guide}.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/webportal/walk-info}
+\caption{Web portal walk owner perspective.}
+\label{fig:walk-info-guide}
+\end{figure}
+
+\subsubsection{Deleting Walks}
+
+Any walks that you have created can be deleted and subsequently removed from the Digital Trails database.
+
+\begin{enumerate}
+\item Navigate to the \emph{all walks} or \emph{my walks} view.
+\item Click \emph{view this walk} on any walk you have authored.
+\item Click the \emph{delete} button on the top right of the view shown in Figure \ref{fig:walk-info-guide}.
+\end{enumerate}
+
+\subsection{Waypoints}
+
+\subsubsection{Viewing Waypoints}
+
+Waypoints associated to any walk stored in the Digital Trails database can be viewed to display waypoint details and associated media.
+
+\begin{enumerate}
+\item Navigate to the \emph{all walks} or \emph{my walks} view.
+\item Click \emph{view this walk} on any walk you you wish to view.
+\item Click on the \emph{waypoints} tab shown below the walk title in Figure \ref{fig:walk-info-guide}.
+\item You will be navigated to the view shown in Figure \ref{fig:walk-waypoints-guide}.
+\item Click on a waypoint item from the list or its corresponding map marker.
+\item You will be presented with the waypoint modal shown in Figure \ref{fig:walk-waypoints-guide}.
+\item Media items can be viewed in full by clicking their preview under the \emph{media gallery} heading.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/webportal/walk-waypoints}
+\caption{Web portal waypoints list.}
+\label{fig:walk-waypoints-guide}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/waypoint}
+\caption{Web portal waypoint view.}
+\label{fig:waypoint-guide}
+\end{figure}
+
+\subsubsection{Adding Waypoint Media}
+
+Media can be added to waypoints for display in the media gallery. Media items that are allowed to be uploaded are MP4 videos, GIF/JPEG/PNG images and MP3 audio files.
+
+\begin{enumerate}
+\item Navigate to the \emph{all walks} or \emph{my walks} view.
+\item Click \emph{view this walk} on any walk you you wish to view.
+\item Click on the \emph{waypoints} tab shown below the walk title in Figure \ref{fig:walk-info-guide}.
+\item You will be navigated to the view shown in Figure \ref{fig:walk-waypoints-guide}.
+\item Click on a waypoint item from the list or its corresponding map marker.
+\item You will be presented with the waypoint modal shown in Figure \ref{fig:walk-waypoints-guide}.
+\item Click the \emph{add image, audio or video} box featuring a dashed border.
+\item Double click a media file from your computer using the dialogue shown in Figure \ref{fig:FileUpload}
+\item Enter a caption for your media into the modal which is displayed.
+\item Your file will be uploaded and added to the collection of waypoint media that already exists.
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal-guide/FileUpload}
+\caption{Web portal file upload dialogue.}
+\label{fig:FileUpload}
+\end{figure}
+
+\subsubsection{Deleting Waypoint Media}
+
+You must be the owner of a walk in order to delete media from it. Once the media has been deleted, it will be permanently removed from the Digital Trails database.
+
+\begin{enumerate}
+\item Navigate to the \emph{all walks} or \emph{my walks} view.
+\item Click \emph{view this walk} on any walk you you wish to view.
+\item Click on the \emph{waypoints} tab shown below the walk title in Figure \ref{fig:walk-info-guide}.
+\item You will be navigated to the view shown in Figure \ref{fig:walk-waypoints-guide}.
+\item Click on a waypoint item from the list or its corresponding map marker.
+\item You will be presented with the waypoint modal shown in Figure \ref{fig:walk-waypoints-guide}.
+\item Click the \emph{edit} button in the bottom left of the modal.
+\item An edit waypoint modal should appear, click the \emph{manage} button under the \emph{media manager} heading.
+\item A new modal should appear like the one shown in Figure \ref{fig:media-gallery-guide}.
+\item Select media items you wish to delete and click the \emph{delete selected} button.
+\item 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/media-gallery}
+\caption{Web portal media manager.}
+\label{fig:media-gallery-guide}
+\end{figure}
+
+
+\end{enumerate}
+
+\subsubsection{Adding Waypoints}
+
+Waypoints can be added to new or existing walks. If you add a waypoint to a walk created by someone else, it will be added to the walk upon approval by the walk author.
+
+\begin{enumerate}
+\item When adding a new walk or viewing an existing one, click on a point on the map where you wish to place the waypoint.
+\item The modal displayed in Figure \ref{fig:add-waypoint-guide} will be displayed where you can edit the attributes of your new waypoint.
+\item Click the \emph{manage} button to upload media items such as images, videos and audio to the waypoint.
+\item When you have finished editing, click the \emph{create} button.
+\item The modal will close and you will see your new waypoint added to the walk map.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./img/webportal/add-waypoint}
+\caption{Web portal adding a waypoint.}
+\label{fig:add-waypoint-guide}
+\end{figure}
+
+
+\subsubsection{Editing Waypoints}
+
+Existing waypoints can be edited on walks that you have authored. You can edit waypoints to change the information displayed or manage the media uploaded by other users.
+
+\begin{enumerate}
+\item When viewing a walk that you have authored, click on a waypoint marker from the map or item from the waypoints list.
+\item A waypoint modal will be displayed like the one shown in Figure \ref{fig:waypoint-guide}.
+\item Click the \emph{edit} button in the bottom right of the modal.
+\item An edit modal will appear similar to that shown in Figure \ref{fig:add-waypoint-guide}.
+\item Make any necessary changes to the waypoint attributes using the text fields.
+\item Media items uploaded to the waypoint can also be managed by clicking on the \emph{manage} button.
+\end{enumerate}
+
+\subsubsection{Deleting Waypoints}
+
+You can delete waypoints from walks that you have authored. This will permanently remove the waypoint from the Digital Trails database and any associated media items.
+
+\begin{enumerate}
+\item When viewing a walk that you have authored, click on a waypoint marker from the map or item from the waypoints list.
+\item A waypoint modal will be displayed like the one shown in Figure \ref{fig:waypoint-guide}.
+\item Click the \emph{delete} button at the bottom left of the modal.
+\item When prompted to delete the waypoint, click \emph{yes}.
+\item The waypoint will be permanently deleted from the Digital Trails database and subsequently be removed from the map.
+\end{enumerate}
+
+\subsection{Walk Contributions}
+
+\subsubsection{Reviewing Waypoint Contributions}
+
+As a walk author, you will be required to accept or reject any waypoints that have been added to your walk by other users. Please note, the \emph{contributions} tab will only be visible if you have at least one contribution to moderate.
+
+\begin{enumerate}
+\item Navigate to the \emph{all walks} or \emph{my walks} view.
+\item Click \emph{view this walk} on any walk you you wish to view.
+\item Click on the \emph{contributions} tab shown below the walk title in Figure \ref{fig:waypoint-contributions-guide}.
+\item Click the \emph{accept} or \emph{reject} button within the waypoint description to add or discard the waypoint from your walk respectively.
+\item The map will then update to either show or discard your change depending on your choice.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/webportal/waypoint-contributions}
+\caption{Web portal contributions view.}
+\label{fig:waypoint-contributions-guide}
+\end{figure}
+
+\subsubsection{Leaving Walk Reviews}
+
+Reviews can be left on your own or other user's walks which become visible to the public.
+
+\begin{enumerate}
+\item Navigate to the \emph{all walks} or \emph{my walks} view.
+\item Click \emph{view this walk} on any walk you you wish to view.
+\item Click on the \emph{reviews} tab shown below the walk title in Figure \ref{fig:walk-reviews-guide}.
+\item Click the \emph{add review} button below the tabs.
+\item The list of reviews will collapse and a form will appear.
+\item Give your review a title, star rating and description.
+\item Click the \emph{save} button below the form.
+\item The reviews list will reappear and your review will be added at the top.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/webportal/walk-reviews}
+\caption{Web portal walk reviews.}
+\label{fig:walk-reviews-guide}
+\end{figure}
+
+\subsubsection{Deleting Walk Reviews}
+
+A walk review can be deleted if it is your own, or the review is associated with your walk.
+
+\begin{enumerate}
+\item Navigate to the \emph{all walks} or \emph{my walks} view.
+\item Click \emph{view this walk} on any walk you you wish to view.
+\item Click on the \emph{reviews} tab shown below the walk title in Figure \ref{fig:walk-reviews-guide}.
+\item Click the \emph{delete} button inside the review box you wish to delete.
+\item Your chosen review will be permanently deleted from the Digital Trails database and it will subsequently be removed from the list.
+\end{enumerate}
+
 \section{Android Application}
 \label{user_manual_application}
 
@@ -1544,8 +2146,16 @@ Now that you've created a walk, you may view it. At the \emph{Home} interface, s
 \label{sec:reflective-account}
 \section{Problem Solving}
 \label{sec:problem-solving}
+\subsection{Tom Milner - API Development}
+\subsection{Adam Barrell - Web Portal Development}
+\subsection{Lewis Hancock - Android Development}
+\subsection{Chris Lewis - Android Interface Development}
 \section{Learning Experience}
 \label{sec:learning-experience}
+\subsection{Tom Milner - API Development}
+\subsection{Adam Barrell - Web Portal Development}
+\subsection{Lewis Hancock - Android Development}
+\subsection{Chris Lewis - Android Interface Development}
 \section{Risk Analysis Review}
 \label{sec:risk-analysis-review}
 \subsection{Anticipated Risks}
@@ -1558,8 +2168,19 @@ Now that you've created a walk, you may view it. At the \emph{Home} interface, s
 \label{sec:methodology-review}
 \section{Goals Achieved}
 \label{sec:goals-achieved}
+
+\subsection{Tom Milner - API Development}
+\subsection{Adam Barrell - Web Portal Development}
+\subsection{Lewis Hancock - Android Development}
+\subsection{Chris Lewis - Android Interface Development}
+
 \section{Improvements}
 \label{sec:improvements}
+
+\subsection{Tom Milner - API Development}
+\subsection{Adam Barrell - Web Portal Development}
+\subsection{Lewis Hancock - Android Development}
+\subsection{Chris Lewis - Android Interface Development}
 
 \chapter*{Summary}
 \label{sec:summary}
