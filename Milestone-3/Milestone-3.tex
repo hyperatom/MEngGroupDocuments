@@ -774,7 +774,18 @@ REST, on the other hand, is a stateless system which communicates via URI's, any
 \subsection{Chosen Design}
 For the API it was decided to harness the REST protocol. The decision was made after analysing both SOAP and REST and the advantages and disadvantages of both. In the end the overly verbose nature of SOAP led to the decision of a REST api.  The ability to use JSON with REST requests was also a deciding factor as this greatly reduced the workload when communicating with the API from JavaScript. This helped us design a modern and intuitive API with a clear structure and flow. 
 
-\subsection{Classes}
+\subsection{Authentication}
+\label{sec:authDesign}
+
+To authenticate with the API the user must first retrieve an authorisation token (auth token) from the API. This handled by the session controller which returns one to the user upon successful authentication. The auth token is currently a hashed version of the users password, however a randomly generated auth tokens could also be used.
+
+When making a secure request the user must then use the HMAC SHA1 algorithm to produce a request signature or hash. The hashing algorithm requires a message and a key. The key is the auth token, but and the message is a string comprising of a timestamp, the user's email and the request body. The request then needs 3 headers, \emph{X-HASH}, \emph{X-EMAIL} and \emph{X-TIMESTAMP}. \emph{X-HASH} contains the result of the hashing algorithm as a string and \emph{X-EMAIL} and \emph{X-TIMESTAMP} contain the users email address and the timestamp used for the hash.
+
+The API will use the email address passed in \emph{X-EMAIL} to retrieve the auth token for that user. It will then check the timestamp in \emph{X-TIMESTAMP} is within a reasonable time frame and attempt to build a new hash based on the data it received. If the hash it creates is equal to the hash it was passed in \emph{X-HASH} then the API knows the user has a valid auth token, the data hasn't be altered and that the request has happened within a valid timeframe. If this passes the API will process the request, if it fails it will cause a 403 Forbidden error. 
+
+This is all handled by the `Session Controller' in a method called `authCheck'. The index file then calls this method in an anonymous function called \lstinline{$authCheck} which can be passed with a request when authorisation is required.
+
+\subsection{Data Model}
 \label{sec:api:class}
 The API has several `Model' classes to represent the Database tables and the objects that are stored within them. The objects are related through the database and can retrieve the related models through method calls. The relations between the models is shown in Figure \ref{fig:datamodels}, where every model is a possible entry point. Using these models it is possible to, for example, use an `English Walk Description' to return all related 'Waypoint Images'. 
 
@@ -785,7 +796,17 @@ The API has several `Model' classes to represent the Database tables and the obj
     \label{fig:datamodels}
 \end{figure}
 
-The API has several main object collections, which are `Walks', `Waypoints', `Users', `Waypoint Images', `Waypoint Audio', `Waypoint Video', `Walk Reviews' and `Sessions'. Each collection has a specific route in the API which maps to a collection controller. When a route is called a method in the relavent controller is called. The method is passed a variable called \$app. This contains the requests and response objects. When the controller has completed its work it writes the response to the \$app object and returns to the index file which initially handled the request. If there is no more work to be done the \$app object sends the response. 
+
+\subsection{Controllers and Routes}
+The API starts in the index.php file. This instantiates all dependancies and builds a object of the Slim framework, \$app. \$app contains request and response objects, which in turn contain data such as headers, parameters and the body. It also defines the routes which the API should respond too. Each route calls a method in a controller, for example;
+
+\begin{lstlisting}[captionpos=b, caption=A basic route for /walks, label=lst:walks, frame=single]
+$app->get('/walks', function() use ($app, $walks){
+ 	$walks->getAll($app);
+});
+\end{lstlisting}
+
+The API has several main object collections, which are `Walks', `Waypoints', `Users', `Waypoint Images', `Waypoint Audio', `Waypoint Video', `Walk Reviews' and `Sessions'. Each collection has a specific route in the API which maps to the collections controller. Breaking the routes down into controllers like this ensures the API has a well structured codebase. The index.php file uses the \$app object to route requests to the correct controllers. The controller that matches the route is passed the \$app variable so it can access request data and process the response. When the controller is done it sends the response data to the \$app object which completes the requests and responds to the user. 
 
 \begin{figure}[H]
     \centering
@@ -1403,7 +1424,14 @@ The Bug report table is used to store bugs in the program that are reported by u
 
 \subsection{API}
 
-While there were never any initial specifications for an API acceptance testing for the API was still carried out using the design documents as a guide. This ensured the API not only has all required features, but also acted as an additional round of unit testing to prove that all the functions of the API were working correctly. The API was tested using a program called CoocaRestClient which is an OSX program designed specifically for testing REST API's. The program allows the user to enter a URL, select the HTTP method, set the request payload and set any headers that are required. With this it is possible to access every property of the API and test situations which may not occur through normal usage. \\
+While there were never any initial specifications for an API acceptance testing for the API was still carried out using the design documents as a guide. This ensured the API not only has all required features, but also acted as an additional round of unit testing to prove that all the functions of the API were working correctly. The API was tested using a program called CoocaRestClient (Figure \ref{fig:coocaRest}) which is an OSX program designed specifically for testing REST API's. The program allows the user to enter a URL, select the HTTP method, set the request payload and set any headers that are required. With this it is possible to access every property of the API and test situations which may not occur through normal usage. \\
+
+\begin{figure}[H]
+   \centering
+   \includegraphics{CoocaRestClient} % requires the graphicx package
+   \caption{The CoocaRestClient Application}
+   \label{fig:coocaRest}
+\end{figure}
 
 \label{test:API-T01}
 \noindent\textbf{Test Code:} API-T01\\
