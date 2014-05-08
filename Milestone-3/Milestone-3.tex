@@ -2818,7 +2818,7 @@ The solution to this problem was not an easy one, however it has ended up perfor
 
 \subsubsection{Debugging} 
 
-While developing the API many small bugs occurred. Normally it is easy to debug these bugs because PHP produces error messages. With the API however the output was being redirected and many of the smaller errors would stop the application from functioning without causing an exception.  This made it very difficult to analyse the problems and discover the cause. To stop this \lstinline$try{ }catch(Exception e){}$ blocks where used around potential problems. Unfortunately in a few cases this still didn't catch the exceptions. These issues were only solved. 
+While developing the API many small bugs occurred. Normally it is easy to debug these bugs because PHP produces error messages. With the API however the output was being redirected and many of the smaller errors would stop the application from functioning without causing an exception.  This made it very difficult to analyse the problems and discover the cause. To stop this \lstinline$try{ }catch(Exception e){}$ blocks where used around potential problems. Unfortunately in a few cases this still didn't catch the exceptions. These issues were only solved through a painstaking process of trail and error, using pervious experience to trace the error to its cause. Any issues caused by user input were made to throw exceptions which could be caught in the try and catch blocks and the small code bugs were fixed. The only errors which can occur cause exceptions which are handled by the try/catch code added during the debugging process.
 
 \subsection{Adam Barrell - Web Portal Development}
 
