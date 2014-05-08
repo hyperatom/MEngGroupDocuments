@@ -7,11 +7,12 @@ var hierarchy =
         [ "uk.ac.swan.digitaltrails.fragments.EditWaypointMapFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_edit_waypoint_map_fragment.html", null ]
       ] ]
     ] ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.BugReport", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_bug_report.html", null ],
     [ "ConnectionCallbacks", null, [
       [ "uk.ac.swan.digitaltrails.activities.MapActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html", null ],
       [ "uk.ac.swan.digitaltrails.fragments.MapFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html", null ]
     ] ],
-    [ "uk.ac.swan.digitaltrails.utils.Crypto", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_crypto.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.ContentReport", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_content_report.html", null ],
     [ "uk.ac.swan.digitaltrails.database.DataSource", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html", [
       [ "uk.ac.swan.digitaltrails.database.DescriptionDataSource", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html", [
         [ "uk.ac.swan.digitaltrails.database.EnglishWalkDescriptionDataSource", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_english_walk_description_data_source.html", null ],
@@ -31,6 +32,8 @@ var hierarchy =
       [ "uk.ac.swan.digitaltrails.fragments.EditWaypointMapFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_edit_waypoint_map_fragment.html", null ]
     ] ],
     [ "uk.ac.swan.digitaltrails.fragments.EditWaypointsFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_edit_waypoints_fragment.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.EnglishWalkDescriptions", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_english_walk_descriptions.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.EnglishWaypointDescriptions", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_english_waypoint_descriptions.html", null ],
     [ "uk.ac.swan.digitaltrails.utils.GlobalFlags", "interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_global_flags.html", null ],
     [ "uk.ac.swan.digitaltrails.utils.HTTP", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_h_t_t_p.html", null ],
     [ "uk.ac.swan.digitaltrails.components.Description.Languages", "enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_description_1_1_languages.html", null ],
@@ -60,9 +63,27 @@ var hierarchy =
       [ "uk.ac.swan.digitaltrails.activities.ChooseWalkActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_choose_walk_activity.html", null ]
     ] ],
     [ "uk.ac.swan.digitaltrails.activities.MapActivity.REQUEST_TYPE", "enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1_r_e_q_u_e_s_t___t_y_p_e.html", null ],
+    [ "uk.ac.swan.digitaltrails.activities.MapActivity.selectFilter", "enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1select_filter.html", null ],
     [ "uk.ac.swan.digitaltrails.accounts.ServerAuthenticate", "interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_server_authenticate.html", [
       [ "uk.ac.swan.digitaltrails.accounts.DigitalTrailsComServerAuthenticate", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_digital_trails_com_server_authenticate.html", null ]
     ] ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.SettingType", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_setting_type.html", null ],
+    [ "uk.ac.swan.digitaltrails.utils.HTTP.Type", "enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_h_t_t_p_1_1_type.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.User", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_user.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.UserSetting", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_user_setting.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.Walk", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_walk.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.WalkBrand", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_walk_brand.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.WalkReview", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_walk_review.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.WalkWithEnglishDescriptions", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_walk_with_english_descriptions.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.Waypoint", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_waypoint.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.WaypointAudio", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_waypoint_audio.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.WaypointImage", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_waypoint_image.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.WaypointVideo", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_waypoint_video.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.WaypointWithEnglishDescription", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_waypoint_with_english_description.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.WaypointWithEnglishDescriptionWithMedia", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_waypoint_with_english_description_with_media.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.WaypointWithMedia", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_waypoint_with_media.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.WelshWalkDescriptions", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_welsh_walk_descriptions.html", null ],
+    [ "uk.ac.swan.digitaltrails.database.WhiteRockContract.WelshWaypointDescriptions", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_welsh_waypoint_descriptions.html", null ],
     [ "uk.ac.swan.digitaltrails.database.WhiteRockContract", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract.html", null ],
     [ "uk.ac.swan.digitaltrails.sync.WhiteRockServerAccessor", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_white_rock_server_accessor.html", null ],
     [ "AbstractAccountAuthenticator", null, [
@@ -83,9 +104,7 @@ var hierarchy =
       [ "uk.ac.swan.digitaltrails.activities.MyWalksActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity.html", null ],
       [ "uk.ac.swan.digitaltrails.activities.SearchActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_search_activity.html", null ],
       [ "uk.ac.swan.digitaltrails.activities.SettingsActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_settings_activity.html", null ],
-      [ "uk.ac.swan.digitaltrails.activities.SplashActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_splash_activity.html", null ],
-      [ "uk.ac.swan.digitaltrails.activities.WalkActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_walk_activity.html", null ],
-      [ "uk.ac.swan.digitaltrails.activities.WaypointListActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_waypoint_list_activity.html", null ]
+      [ "uk.ac.swan.digitaltrails.activities.SplashActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_splash_activity.html", null ]
     ] ],
     [ "Activity", null, [
       [ "uk.ac.swan.digitaltrails.accounts.ShowSettingsActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_show_settings_activity.html", null ],
@@ -100,6 +119,7 @@ var hierarchy =
     [ "AsyncTaskLoader", null, [
       [ "uk.ac.swan.digitaltrails.sync.WalkLoader", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader.html", null ]
     ] ],
+    [ "BaseColumns", null, null ],
     [ "ContentProvider", null, [
       [ "uk.ac.swan.digitaltrails.database.WhiteRockContentProvider", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html", null ]
     ] ],
@@ -112,9 +132,7 @@ var hierarchy =
     [ "Fragment", null, [
       [ "uk.ac.swan.digitaltrails.fragments.CreateWalkFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_create_walk_fragment.html", null ],
       [ "uk.ac.swan.digitaltrails.fragments.LaunchFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_launch_fragment.html", null ],
-      [ "uk.ac.swan.digitaltrails.fragments.LogInFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_log_in_fragment.html", null ],
       [ "uk.ac.swan.digitaltrails.fragments.MapFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html", null ],
-      [ "uk.ac.swan.digitaltrails.fragments.RegisterFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_register_fragment.html", null ],
       [ "uk.ac.swan.digitaltrails.fragments.WalkDetailsFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_details_fragment.html", [
         [ "uk.ac.swan.digitaltrails.fragments.EditWalkFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_edit_walk_fragment.html", null ],
         [ "uk.ac.swan.digitaltrails.fragments.MyWalkDetailsFragment", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_my_walk_details_fragment.html", null ],

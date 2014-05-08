@@ -1,5 +1,6 @@
 <map id="uk.ac.swan.digitaltrails.components.Media.Media" name="uk.ac.swan.digitaltrails.components.Media.Media">
 <area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_media.html#ab475679e1c23df3d3aa9a2ee48ee6514" title="uk.ac.swan.digitaltrails.components.\lMedia.setId" alt="" coords="287,5,520,47"/>
 <area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_media.html#a0b20b6b4f2e330aee183de9f1fe97593" title="uk.ac.swan.digitaltrails.components.\lMedia.setFileLocation" alt="" coords="287,71,520,112"/>
-<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_media.html#a9b3053f2e7e85a4a7a738343adc1bf0b" title="uk.ac.swan.digitaltrails.components.\lMedia.setWaypoint" alt="" coords="287,136,520,177"/>
+<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_media.html#a0d7aa06e45bc7f3286a1152def061a97" title="Set waypoint id. " alt="" coords="287,136,520,177"/>
+<area shape="rect" id="node5" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint.html#a7528e52835d004bed859e863b2902247" title="uk.ac.swan.digitaltrails.components.\lWaypoint.getId" alt="" coords="287,201,520,243"/>
 </map>

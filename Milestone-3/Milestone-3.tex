@@ -131,7 +131,7 @@
 \pagenumbering{arabic}
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
-
+\newpage
 \label{sec:introduction}
 \section{Term Definitions}
 \label{sec:term-definitions}
@@ -139,6 +139,7 @@
 \label{sec:project-overview}
 
 \chapter{Design}
+\newpage
 \label{sec:design}
 
 \section{Development Tools}
@@ -718,7 +719,15 @@ This section will present a flow diagram of the interface designs discussed prev
 This section details the implementation of the Android Application. Table~\ref{tab:androidsystems} lists each subsystem within the application and outlines their purpose, this is expanded upon in sections~\ref{sec:accounts} -~\ref{sec:walkexplore}. Definitions for terms used can be seen in Table~\ref{tab:androidDefs}.
 
 \begin{longtable}{|p{2cm}|p{8cm}|}
+\hline \caption{Android Definitions - Cont. on Next Page.} \endfoot
 \hline \caption{Android Definitions} \label{tab:androidDefs} \endlastfoot
+\textbf{Term} & \textbf{Definition} \\ \hline
+Components & A set of Java Objects used to represent the data which is in the application. These consist of Walk, Waypoint, Description, EnglishWalkDescription, EnglishWaypointDescription, WelshWalkDescription, WelshWaypointDescription, Media, Photo, Video, Audio and Account. \\ \hline
+Data Sources & A set of Java Objects used to manage CRUD operations for their respective components. \\ \hline
+Auth Token & The key used to generate a signature for a request to the API. \\ \hline
+Geolocation & An area on a map represented by Latitude and Longitude. \\ \hline
+Geofence & An area around a specific geolocation which acts as a boundary for the geolocation. It allows the application to be aware of when a user approaches the geolocation. \\ \hline
+
 \end{longtable}
 
 \begin{longtable}{|p{5cm}|p{10cm}|}
@@ -743,11 +752,11 @@ The Account Authenticator system is composed of the classes found in Table~\ref{
 \hline \caption{Account Authenticator Classes} \label{tab:accountauth} \endlastfoot
 \hline
 \textbf{Class} & \textbf{Purpose} \\ \hline
-AccountAuthenticator & Communicates with the native Android Account Manager to complete all operations possible for a White Rock account. These operations include getting the auth-token, presenting the log-in screen and handling authentication with the server. \\ \hline
+AccountAuthenticator & Communicates with the native Android Account Manager to complete all operations possible for a White Rock account. These operations include getting the auth token, presenting the log-in screen and handling authentication with the server. \\ \hline
 AccountGeneral & A class which contains static variables for easy access in other classes. \\ \hline
 AuthenticatorActivity & The Activity which allows a user to log in to an existing, it communicates with the Account Manager and DigitalTrailsComServerAuthenticate classes to achieve this. This is the class which has direct interaction with the user. \\ \hline
 DigitalTrailsComServerAuthenticate & Communicates with the White Rock API to create user accounts and receive authentication tokens for the current user. Achieved via HTTP calls.  \\ \hline
-ServerAuthentciate & An interface to be implemented by the DigitalTrailsComServerAuthenticate class, details the possible actions an account may take. \\ \hline
+ServerAuthenticate & An interface to be implemented by the DigitalTrailsComServerAuthenticate class, details the possible actions an account may take. \\ \hline
 SignUpActivity & Similar to the AuthenticatorActivity, this class is responsible for signing a new user up to the White Rock service. \\ \hline
 WhiteRockAuthenticatorService & An Android service which allow for communication with the authenticator. Extending the AbstractAccountAuthenticator class in the AccountAuthenticator method allows for the service to be connected to via an IBinder.  \\ \hline
 \end{longtable}
@@ -1264,6 +1273,8 @@ The Bug report table is used to store bugs in the program that are reported by u
 
 \chapter{Testing}
 \label{sec:testing}
+\newpage
+
 \section{Unit Testing}
 \label{sec:unit-testint}
 \section{Acceptance Testing}
@@ -1774,6 +1785,7 @@ To get an image by its id a \textbf{GET} request was sent to \url{/walks/}\bfurl
 
 \chapter{User Manual}
 \label{sec:user-manual}
+\newpage
 
 \section{API}
 
@@ -2788,6 +2800,29 @@ To log out of the application, select the menu button located in the action bar.
 
 \chapter{Reflective Account}
 \label{sec:reflective-account}
+\newpage
+
+\section{Development Process}
+\subsection{Lewis Hancock - Android Application}
+The development of the Android application began with generating the requirements and specifications for the project. Multiple meetings with John Ashley saw the creation of the System Requirements Specification document in January. 
+
+These requirements were then used to focus the research portion of the project. The first port of call was the code handed down to us by the Aberystwyth team. The code was not in the state which we expected it to be, all of the data available in the application had been hard coded - it was not stored in the database. This meant that as well as replacing Google Maps we had to write the database subsystem from scratch.
+
+Having not developed an Android application on such a scale before, it was important that the team found the correct solutions to the most difficult features, namely the Account Authenticator and Synchronisation systems. 
+
+Having found a sensible development path the first SCRUM sprint focused on the development of the ContentProvider system, the backbone for the application. There were no challenges with this part of the application, although it was a very time consuming feature to implement - creating a Data Access Object for each Component class, as well as a public facing contract, was an arduous task.
+
+The next sprint saw the backbone of the Account and Synchronisation systems, however due to the parallel development of the API it was not possible to finish implementing them until the final stages of the application.
+
+Without the ability to sync files or log in to the account, the next sprint saw the development of the Google Maps interface, to better understand the limitations it would present to us. Fortunately, the Google Maps API was mostly a pleasure to use, the one difficulty was overcoming the developer's decision to make Marker a final class, preventing me from extending it for better control over what content would be displayed when a marker was selected.
+
+With the Map system created, it was time to let the user access a walk and go exploring. The ChooseWalkActivity was developed, including the WalkListFragment and WalkDetailsFragment. By using the Loader Manager, the application was successfully retrieving walks from the already written ContentProvider. Since the process to load the walk data is the same in any Android Activity or Fragment, it was straightforward to enter the waypoints into the map. 
+
+The next step was to allow a walk to be created, locally, and edited. Having created dummy walks for the ChooseWalkActivity, this feature was mostly a matter of plugging the code into the Layouts which Chris Lewis had created. Some miscommunication issues arose, as the layouts grew more numerous and the application updated the fragments based on the screen orientation and size it became more and more difficult to keep track of which layouts needed modifying to meet the current design. This led to a number of frustrating bugs which were not possible to recreate across all the development devices.
+
+As the API was still in development, I returned to the development of Google Maps features. Adding in geofences and making the application location aware.
+
+The final stage of development brought together the Account Authenticator and Synchronisation systems with the rest of the application. With the help of Thomas Milner, the communication between server and device was under way. As it became clearer how GSON manipulates JSON to create Java Objects the application had to undergo a minor redevelopment. The component classes had to become both Parcelable and Serializable, attaching a SerializedName to each variable in the Component classes.
 
 \section{Problem Solving}
 \label{sec:problem-solving}
@@ -2842,7 +2877,41 @@ The web portal login mechanism required passwords to be hashed using a slow hash
 A solution was implemented which involved moving the hashing process to the server. This meant that the login process took exactly the same amount of time across devices of varying power.
 
 \subsection{Lewis Hancock - Android Development}
+A number of problems arose during the development of the Android application, which are detailed within this section.
+
+\subsubsection{SQLite}
+With Thomas and Adam in charge of the web development and API, they designed and created an SQL database. This is incompatible with the Android platform, meaning the database had to be parsed and converted into a legal SQLite format for the Android device. A simple problem to overcome, although a time consuming one when all the available tools were outputting incorrect results, seeing me convert the database by hand.
+
+\subsubsection{File Sharing}
+Due to a poor set up of the Git repository sharing code become a chore. Every time the code was pulled from a repository which another team member had modified it became necessary to update the Android project properties to find the correct versions of the support libraries. This was not a huge problem, only taking 30 seconds of time each time the error occurred. The solution to this would have been to make Git ignore the culprit files.
+
+Eclipse also has a number of issues importing code from another workspace, frequently causing R.java to become corrupted or the Java classes were not found by Eclipse. The first time this occurred it took a number of hours to solve the problem, but taking notes of the solution allowed us to solve it swiftly each time afterwards.
+
+\subsubsection{Learning Curve}
+The research process of development took longer than initially expected, the poor documentation of the Account Manager and SyncAdapter implementations meant doing a lot of extra reading around the topic to fully understand what was happening and how to implement it. Research began early, however, so the research time didn't take more than a day's worth of planned development.
+
+\subsubsection{Development Tablet Breaking}
+The Hudl development tablet, provided by John Ashley, suffered from a number of problems in its short lifetime. Firstly, the tablet was not intended for use as a development tablet - Tesco do not provide drivers for USB debugging. We managed to find a solution to this by forcing Windows to install the driver of another generic 
+Midway through development the Hudl tablet stopped working, reducing the number of tablets available for development. Fortunately, we were able to acquire another tablet from Dr. Eslambolchilar.
+
+\subsubsection{Google Maps Online Only}
+During the investigation into how to deal with the device not being connected to the internet, it became apparent that we were not able to provide Google Maps when the device was offline. This is stated in the Google Terms of Use. A solution was found, but as it breaches Google's Terms of Use it was avoided.
+
+\subsubsection{Scrapping Previous Code}
+The code initially presented to us, which came from Aberystwyth University, was not suitable to build upon. There was no functional database, poor user interfaces and an Open Street Map implementation. A day was spent analysing the code, trying to see if anything could be salvaged, but it was either redundant or poorly documented. A decision was made at the next team meeting, after everyone had a chance to review the comments and analysis, that development could progress faster if we started from scratch.
+
 \subsection{Chris Lewis - Android Interface Development}
+
+\subsubsection{Build system configuration}
+
+For this project, the development team did not employ a good build system. Git hub was not configured early on in project development and as a result, build path errors arose after each and every Git pull. This often slowed down development during team work sessions. Delaying overall progress. A solution to this issue would have been to tell Git to ignore the project properties, reducing the likelihood of problems occurring after each Git pull.
+
+\subsubsection{Android Screen Sizes}
+
+The application was developed to be available on multiple mobile and tablet screen sizes. This meant that numerous layout folders were required to house the individual layout files. Each folder contained up to 30 layout files. This created problems when a single layout was modified. The addition of a feature to a layout meant that all other screen sizes for the same layout also required modification. Apart from the obvious time consuming issues related to this problem, it also created further issues. If a single id of a feature was modified, again, so would all relevant layouts for individual screen sizes. This created programming conflicts between Lewis Hancock and myself. The modification of layout files meant that several merge conflicts arose during each git commit.\\
+
+After a short discussion, it was decided that the application development team would hold regular meetings to discuss each layout, while informing one another of any file modifications that took place. This ensured the team were using the same naming conventions for both features and layout files.
+
 \section{Learning Experience}
 \label{sec:learning-experience}
 \subsection{Tom Milner - API Development}
@@ -2867,8 +2936,20 @@ Another major learning outcome was learning how to develop intuitive interfaces 
 Since the web portal had to be designed for users with varying abilities, a conscious effort had to be made to make the interface intuitive enough. The skills learned through doing this can be transferred to any other application that I develop in the future. Therefore, this was a good learning outcome from this project.
 
 \subsection{Lewis Hancock - Android Development}
+
 \subsection{Chris Lewis - Android Interface Development}
 
+\subsubsection{Time management}
+
+Due to a lack of industrial group project experience, time management created problems during the initial stages of this project. A shortage of available work sessions meant that the application fell behind the original time plan set out in Milestone 1. During the second half of the project, a team meeting was held to discuss all possible solutions. The team agreed that the current time-plan was not achievable based on the weekly development work day. The team learnt from this time management issue, by assigning an addition development work day to the weekly timetable.
+
+\subsubsection{User Interface Design}
+
+A second lesson learnt from conducting such a project was understanding how to design and develop both intuitive and aesthetically pleasing interfaces. These interfaces were also required to be usable by a broad range of users, with varying abilities. To ensure these requirements were met, several books and articles were studied. A notable set of interface design principles were \emph{Ben Shneiderman's eight gold rules of interaction design}. The design rules were used throughout the development of the application, as a form of benchmark. The design rules also ensured the application was developed to be intuitive. Gaining a sound understanding of user interface design rules and principles has allowed me to develop a second professional and intuitive Android application.   
+
+\subsubsection{Working in parallel}
+
+>>>>>>> 2503dee5e6e7ab49dfa7feb60e79e7da95f1e456
 \section{Risk Analysis Review}
 \label{sec:risk-analysis-review}
 \subsection{Anticipated Risks}
@@ -2912,6 +2993,7 @@ Finally, since Adam was responsible for developing the web portal, he wrote all 
 \chapter*{Summary}
 \label{sec:summary}
 \addcontentsline{toc}{chapter}{Summary}
+\newpage
 
 %References as subsection
 \newpage

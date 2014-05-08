@@ -1,3 +1,4 @@
 <map id="uk.ac.swan.digitaltrails.fragments.MyWalkListFragment" name="uk.ac.swan.digitaltrails.fragments.MyWalkListFragment">
-<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment.html" title="uk.ac.swan.digitaltrails.fragments.\lWalkListFragment" alt="" coords="436,179,655,221"/>
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment.html" title="{uk.ac.swan.digitaltrails.fragments.\lWalkListFragment\n|# mCurFilter\l# mLayout\l# WALK_SUMMARY_PROJECTION\l&#45; TAG\l|+ setWalkList()\l+ getWalkList()\l+ getWalkIds()\l+ onCreate()\l+ onAttach()\l+ onListItemClick()\l+ onStart()\l+ onActivityCreated()\l+ onCreateLoader()\l+ onLoadFinished()\l+ onLoaderReset()\l+ onQueryTextChange()\l+ onQueryTextSubmit()\l}" alt="" coords="646,175,879,487"/>
+<area shape="rect" id="node6" href="$interfaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_walk_list_fragment_1_1_on_walk_selected_listener.html" title="{uk.ac.swan.digitaltrails.fragments.\lWalkListFragment.OnWalkSelectedListener\n||+ onWalkSelected()\l}" alt="" coords="510,13,786,105"/>
 </map>

@@ -11,5 +11,6 @@ var classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_sour
     [ "getAllDescriptions", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html#a134b9b153811548f205493e00481464f", null ],
     [ "updateDescription", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html#a007f26b485f79cc640f41afe780eebc3", null ],
     [ "allColumns", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html#aa80b002da9e2cf4b83d25f13ca7843c0", null ],
+    [ "TAG", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html#ac579097c3dcdd5818889b5332d888c85", null ],
     [ "uri", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html#ad5ab4f6ae6c94d72a77bd53a914aa8fa", null ]
 ];

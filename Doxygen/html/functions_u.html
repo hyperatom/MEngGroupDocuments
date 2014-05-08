@@ -94,6 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_i.html#index_i"><span>i</span></a></li>
       <li><a href="functions_l.html#index_l"><span>l</span></a></li>
       <li><a href="functions_m.html#index_m"><span>m</span></a></li>
+      <li><a href="functions_n.html#index_n"><span>n</span></a></li>
       <li><a href="functions_o.html#index_o"><span>o</span></a></li>
       <li><a href="functions_p.html#index_p"><span>p</span></a></li>
       <li><a href="functions_q.html#index_q"><span>q</span></a></li>
@@ -141,6 +142,12 @@ $(document).ready(function(){initNavTree('functions_u.html','');});
 <li>update()
 : <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a27b0a0434512cc107c55c205b244c086">uk.ac.swan.digitaltrails.database.WhiteRockContentProvider</a>
 </li>
+<li>UPDATE_INTERVAL
+: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#aef4c6da45d48652634a6586356192fe3">uk.ac.swan.digitaltrails.activities.MapActivity</a>
+</li>
+<li>UPDATE_INTERVAL_IN_SECONDS
+: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a54804664f1186e4588950140c98a7830">uk.ac.swan.digitaltrails.activities.MapActivity</a>
+</li>
 <li>updateCredentials()
 : <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_account_authenticator.html#a2b9b07cf976fa45eda1380afe84c3b84">uk.ac.swan.digitaltrails.accounts.AccountAuthenticator</a>
 </li>
@@ -160,14 +167,30 @@ $(document).ready(function(){initNavTree('functions_u.html','');});
 <li>updateWaypoint()
 : <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source.html#ad555d4800c0b0006cf19a7aa0a655661">uk.ac.swan.digitaltrails.database.WaypointDataSource</a>
 </li>
-<li>uploadMedia()
-: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_white_rock_server_accessor.html#a88a3811db0392b0351833bfafeb98ac2">uk.ac.swan.digitaltrails.sync.WhiteRockServerAccessor</a>
-</li>
 <li>uri
 : <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_description_data_source.html#ad5ab4f6ae6c94d72a77bd53a914aa8fa">uk.ac.swan.digitaltrails.database.DescriptionDataSource</a>
 </li>
+<li>URI
+: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_walk_data_source.html#a25d2abfa8f1fd8a0339f40a83bd9fb89">uk.ac.swan.digitaltrails.database.WalkDataSource</a>
+, <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_waypoint_data_source.html#a5f8ecac9d7b948c37264b81ed8995911">uk.ac.swan.digitaltrails.database.WaypointDataSource</a>
+</li>
+<li>URI_MATCHER
+: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#aae5896ef2dd052622382cd0675c4e6a9">uk.ac.swan.digitaltrails.database.WhiteRockContentProvider</a>
+</li>
+<li>USER_ID
+: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a6ee8c508cbee0e42aa763843a8042c4e">uk.ac.swan.digitaltrails.database.WhiteRockContentProvider</a>
+</li>
+<li>USER_LIST
+: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#abc90e2c396d119d0b14de1a5d897a823">uk.ac.swan.digitaltrails.database.WhiteRockContentProvider</a>
+</li>
 <li>USER_PASS
 : <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_authenticator_activity.html#a8ea4980e7fab8bd02125c9a36bbe4b2d">uk.ac.swan.digitaltrails.accounts.AuthenticatorActivity</a>
+</li>
+<li>USER_SETTINGS_ID
+: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a9f8c969ba8e543e8f265bad0a5780f16">uk.ac.swan.digitaltrails.database.WhiteRockContentProvider</a>
+</li>
+<li>USER_SETTINGS_LIST
+: <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#adf95750260c445fc06b6803b9e7f0790">uk.ac.swan.digitaltrails.database.WhiteRockContentProvider</a>
 </li>
 <li>userSignIn()
 : <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_digital_trails_com_server_authenticate.html#af1155247d44e6014be313a575ca195a4">uk.ac.swan.digitaltrails.accounts.DigitalTrailsComServerAuthenticate</a>
@@ -183,7 +206,7 @@ $(document).ready(function(){initNavTree('functions_u.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon May 5 2014 23:22:40 for White Rock Digital Trails by
+    <li class="footer">Generated on Thu May 8 2014 16:14:37 for White Rock Digital Trails by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

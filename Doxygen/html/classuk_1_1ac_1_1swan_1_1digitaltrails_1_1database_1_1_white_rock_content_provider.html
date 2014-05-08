@@ -106,6 +106,10 @@ $(document).ready(function(){initNavTree('classuk_1_1ac_1_1swan_1_1digitaltrails
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">uk.ac.swan.digitaltrails.database.WhiteRockContentProvider Class Reference</div>  </div>
@@ -115,12 +119,16 @@ $(document).ready(function(){initNavTree('classuk_1_1ac_1_1swan_1_1digitaltrails
 Inheritance diagram for uk.ac.swan.digitaltrails.database.WhiteRockContentProvider:</div>
 <div class="dyncontent">
 <div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider__inherit__graph.png" border="0" usemap="#uk_8ac_8swan_8digitaltrails_8database_8_white_rock_content_provider_inherit__map" alt="Inheritance graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<map name="uk_8ac_8swan_8digitaltrails_8database_8_white_rock_content_provider_inherit__map" id="uk_8ac_8swan_8digitaltrails_8database_8_white_rock_content_provider_inherit__map">
+</map>
+</div>
 <div class="dynheader">
 Collaboration diagram for uk.ac.swan.digitaltrails.database.WhiteRockContentProvider:</div>
 <div class="dyncontent">
 <div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider__coll__graph.png" border="0" usemap="#uk_8ac_8swan_8digitaltrails_8database_8_white_rock_content_provider_coll__map" alt="Collaboration graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<map name="uk_8ac_8swan_8digitaltrails_8database_8_white_rock_content_provider_coll__map" id="uk_8ac_8swan_8digitaltrails_8database_8_white_rock_content_provider_coll__map">
+<area shape="rect" id="node4" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_database_handler.html" title="{uk.ac.swan.digitaltrails.database.\lDatabaseHandler\n|&#45; TAG\l&#45; DB_NAME\l&#45; DB_VERSION\l&#45; DB_PATH\l|+ DatabaseHandler()\l+ onCreate()\l+ onUpgrade()\l&#45; existsDatabase()\l&#45; copyDatabase()\l}" alt="" coords="253,145,468,340"/></map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -140,9 +148,116 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab573bd8caeb367dde2e4c95a6214ae1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad1175ecf9f106554ff8f7a2f0f5df26"><td class="memItemLeft" align="right" valign="top">ParcelFileDescriptor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#aad1175ecf9f106554ff8f7a2f0f5df26">openFile</a> (Uri uri, String mode)  throws FileNotFoundException </td></tr>
 <tr class="separator:aad1175ecf9f106554ff8f7a2f0f5df26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aab17572cc338694e91e0052e65e3883b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#aab17572cc338694e91e0052e65e3883b">logQuery</a> (SQLiteQueryBuilder builder, String[] projection, String selection, String sortOrder)</td></tr>
+<tr class="memdesc:aab17572cc338694e91e0052e65e3883b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log queries in Honeycomb and higher.  <a href="#aab17572cc338694e91e0052e65e3883b">More...</a><br /></td></tr>
+<tr class="separator:aab17572cc338694e91e0052e65e3883b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac163f5ac9b99878de796e5ccba7bbf"><td class="memItemLeft" align="right" valign="top">Uri&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#abac163f5ac9b99878de796e5ccba7bbf">getUriForId</a> (long id, Uri uri)</td></tr>
+<tr class="memdesc:abac163f5ac9b99878de796e5ccba7bbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log queries in anything below honeycomb.  <a href="#abac163f5ac9b99878de796e5ccba7bbf">More...</a><br /></td></tr>
+<tr class="separator:abac163f5ac9b99878de796e5ccba7bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabe3f5a30aba3a8f738adde614c06acf"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#aabe3f5a30aba3a8f738adde614c06acf">isInBatchMode</a> ()</td></tr>
+<tr class="separator:aabe3f5a30aba3a8f738adde614c06acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:afd9d77e8923413814d030dd003de4694"><td class="memItemLeft" align="right" valign="top">static UriMatcher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#afd9d77e8923413814d030dd003de4694">buildUriMatcher</a> ()</td></tr>
+<tr class="memdesc:afd9d77e8923413814d030dd003de4694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create UriMatcher.  <a href="#afd9d77e8923413814d030dd003de4694">More...</a><br /></td></tr>
+<tr class="separator:afd9d77e8923413814d030dd003de4694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a1bb18cdc9de00fe8911b455ded3b1dd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_database_handler.html">DatabaseHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a1bb18cdc9de00fe8911b455ded3b1dd8">mDbHandler</a></td></tr>
+<tr class="memdesc:a1bb18cdc9de00fe8911b455ded3b1dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handler for database.  <a href="#a1bb18cdc9de00fe8911b455ded3b1dd8">More...</a><br /></td></tr>
+<tr class="separator:a1bb18cdc9de00fe8911b455ded3b1dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a157bdfbd418ec0dcf1e2949cacb634d2"><td class="memItemLeft" align="right" valign="top">final ThreadLocal&lt; Boolean &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a157bdfbd418ec0dcf1e2949cacb634d2">mIsInBatchMode</a> = new ThreadLocal&lt;Boolean&gt;()</td></tr>
+<tr class="memdesc:a157bdfbd418ec0dcf1e2949cacb634d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ThreadLocal storage for batch processing.  <a href="#a157bdfbd418ec0dcf1e2949cacb634d2">More...</a><br /></td></tr>
+<tr class="separator:a157bdfbd418ec0dcf1e2949cacb634d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:aae5896ef2dd052622382cd0675c4e6a9"><td class="memItemLeft" align="right" valign="top">static final UriMatcher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#aae5896ef2dd052622382cd0675c4e6a9">URI_MATCHER</a> = <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#afd9d77e8923413814d030dd003de4694">buildUriMatcher</a>()</td></tr>
+<tr class="separator:aae5896ef2dd052622382cd0675c4e6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab837b138ec86184a611bee0ffb3b146e"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#ab837b138ec86184a611bee0ffb3b146e">TAG</a> = &quot;WhiteRockContentProvider&quot;</td></tr>
+<tr class="separator:ab837b138ec86184a611bee0ffb3b146e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a612500111621e8629467a397ad1cc5b5"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a612500111621e8629467a397ad1cc5b5">WALK_LIST</a> = 1</td></tr>
+<tr class="separator:a612500111621e8629467a397ad1cc5b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa54903f53f725f527d8149f32f0b8292"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#aa54903f53f725f527d8149f32f0b8292">WALK_ID</a> = 2</td></tr>
+<tr class="separator:aa54903f53f725f527d8149f32f0b8292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e880d976f210c2b8f510afe82909c8"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a71e880d976f210c2b8f510afe82909c8">WAYPOINT_LIST</a> = 5</td></tr>
+<tr class="separator:a71e880d976f210c2b8f510afe82909c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c78851dd10751a0da78aaaab02769c1"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a9c78851dd10751a0da78aaaab02769c1">WAYPOINT_ID</a> = 6</td></tr>
+<tr class="separator:a9c78851dd10751a0da78aaaab02769c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a0a5b6ec087f4fbfd7cac265b5ad76e"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a9a0a5b6ec087f4fbfd7cac265b5ad76e">WELSH_WALK_DESCR_LIST</a> = 10</td></tr>
+<tr class="separator:a9a0a5b6ec087f4fbfd7cac265b5ad76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75ae70eecce5937877d507dec5fc55bf"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a75ae70eecce5937877d507dec5fc55bf">WELSH_WALK_DESCR_ID</a> = 11</td></tr>
+<tr class="separator:a75ae70eecce5937877d507dec5fc55bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999f5ed7dc0f9c9238d2e3db9893fb71"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a999f5ed7dc0f9c9238d2e3db9893fb71">ENGLISH_WALK_DESCR_LIST</a> = 15</td></tr>
+<tr class="separator:a999f5ed7dc0f9c9238d2e3db9893fb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a559b5c5fa81fcf459bee57d6e8f2e410"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a559b5c5fa81fcf459bee57d6e8f2e410">ENGLISH_WALK_DESCR_ID</a> = 16</td></tr>
+<tr class="separator:a559b5c5fa81fcf459bee57d6e8f2e410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3136aba0088be1e1d45c62211f44a0dc"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a3136aba0088be1e1d45c62211f44a0dc">WELSH_WAYPOINT_DESCR_LIST</a> = 20</td></tr>
+<tr class="separator:a3136aba0088be1e1d45c62211f44a0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd9078666dbddb252f5dee69b65ef474"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#afd9078666dbddb252f5dee69b65ef474">WELSH_WAYPOINT_DESCR_ID</a> = 21</td></tr>
+<tr class="separator:afd9078666dbddb252f5dee69b65ef474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d3e1134b06221174a35f25f9990b742"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a4d3e1134b06221174a35f25f9990b742">ENGLISH_WAYPOINT_DESCR_LIST</a> = 25</td></tr>
+<tr class="separator:a4d3e1134b06221174a35f25f9990b742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a845e8091ba6fb7aa10d16e9e20457b61"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a845e8091ba6fb7aa10d16e9e20457b61">ENGLISH_WAYPOINT_DESCR_ID</a> = 26</td></tr>
+<tr class="separator:a845e8091ba6fb7aa10d16e9e20457b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ee6192005b6c23f93ed38eec4208dcb"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a0ee6192005b6c23f93ed38eec4208dcb">WAYPOINT_AUDIO_LIST</a> = 30</td></tr>
+<tr class="separator:a0ee6192005b6c23f93ed38eec4208dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a732ab2abae9784a35981aa3756c49a5c"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a732ab2abae9784a35981aa3756c49a5c">WAYPOINT_AUDIO_ID</a> = 31</td></tr>
+<tr class="separator:a732ab2abae9784a35981aa3756c49a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3bb5f6897eebb90b124907bda067738"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#ad3bb5f6897eebb90b124907bda067738">WAYPOINT_VIDEO_LIST</a> = 35</td></tr>
+<tr class="separator:ad3bb5f6897eebb90b124907bda067738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae965f98c33bfb673608befecc706146e"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#ae965f98c33bfb673608befecc706146e">WAYPOINT_VIDEO_ID</a> = 36</td></tr>
+<tr class="separator:ae965f98c33bfb673608befecc706146e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68614e903632646ad477995662528ce0"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a68614e903632646ad477995662528ce0">WAYPOINT_IMAGE_LIST</a> = 40</td></tr>
+<tr class="separator:a68614e903632646ad477995662528ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75690c85eb00311e582b1d7a6398c1b7"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a75690c85eb00311e582b1d7a6398c1b7">WAYPOINT_IMAGE_ID</a> = 41</td></tr>
+<tr class="separator:a75690c85eb00311e582b1d7a6398c1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2196c98c95653c1feff9189bc087c0b"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#aa2196c98c95653c1feff9189bc087c0b">BUG_REPORT_LIST</a> = 45</td></tr>
+<tr class="separator:aa2196c98c95653c1feff9189bc087c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c9d73ead8fa3e8a459398ef49f7e5a9"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a0c9d73ead8fa3e8a459398ef49f7e5a9">BUG_REPORT_ID</a> = 46</td></tr>
+<tr class="separator:a0c9d73ead8fa3e8a459398ef49f7e5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0d54d19e3af999ebaa1973c229438e"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a5f0d54d19e3af999ebaa1973c229438e">CONTENT_REPORT_LIST</a> = 50</td></tr>
+<tr class="separator:a5f0d54d19e3af999ebaa1973c229438e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cf12c78e7d5b571b67f3f0ad86c256c"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a4cf12c78e7d5b571b67f3f0ad86c256c">CONTENT_REPORT_ID</a> = 51</td></tr>
+<tr class="separator:a4cf12c78e7d5b571b67f3f0ad86c256c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc90e2c396d119d0b14de1a5d897a823"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#abc90e2c396d119d0b14de1a5d897a823">USER_LIST</a> = 55</td></tr>
+<tr class="separator:abc90e2c396d119d0b14de1a5d897a823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ee8c508cbee0e42aa763843a8042c4e"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a6ee8c508cbee0e42aa763843a8042c4e">USER_ID</a> = 56</td></tr>
+<tr class="separator:a6ee8c508cbee0e42aa763843a8042c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf95750260c445fc06b6803b9e7f0790"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#adf95750260c445fc06b6803b9e7f0790">USER_SETTINGS_LIST</a> = 60</td></tr>
+<tr class="separator:adf95750260c445fc06b6803b9e7f0790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8c969ba8e543e8f265bad0a5780f16"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a9f8c969ba8e543e8f265bad0a5780f16">USER_SETTINGS_ID</a> = 61</td></tr>
+<tr class="separator:a9f8c969ba8e543e8f265bad0a5780f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a381eb074875f554185cc3492947ff03e"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a381eb074875f554185cc3492947ff03e">SETTINGS_TYPE_LIST</a> = 65</td></tr>
+<tr class="separator:a381eb074875f554185cc3492947ff03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e735f2f76d7e42dfb3381bff86d54e3"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a0e735f2f76d7e42dfb3381bff86d54e3">SETTINGS_TYPE_ID</a> = 66</td></tr>
+<tr class="separator:a0e735f2f76d7e42dfb3381bff86d54e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fa836afaf048defaa6d1c4fc43cdef7"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a7fa836afaf048defaa6d1c4fc43cdef7">WAYPOINT_WITH_ENGLISH_DESCR_LIST</a> = 70</td></tr>
+<tr class="separator:a7fa836afaf048defaa6d1c4fc43cdef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f698a807b873cb5f9e177c45d8f8625"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a4f698a807b873cb5f9e177c45d8f8625">WAYPOINT_WITH_ENGLISH_DESCR_ID</a> = 71</td></tr>
+<tr class="separator:a4f698a807b873cb5f9e177c45d8f8625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade0c53c0073f048dab64cb43b6c0fb8d"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#ade0c53c0073f048dab64cb43b6c0fb8d">WAYPOINT_WITH_MEDIA_LIST</a> = 75</td></tr>
+<tr class="separator:ade0c53c0073f048dab64cb43b6c0fb8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa87220999a3c0ec3eba1aa7daf3c4bf8"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#aa87220999a3c0ec3eba1aa7daf3c4bf8">WAYPOINT_WITH_MEDIA_ID</a> = 76</td></tr>
+<tr class="separator:aa87220999a3c0ec3eba1aa7daf3c4bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1485aa99035bd990dfe5c51724387d5"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#ac1485aa99035bd990dfe5c51724387d5">WAYPOINT_WITH_MEDIA_WITH_ENGLISH_LIST</a> = 80</td></tr>
+<tr class="separator:ac1485aa99035bd990dfe5c51724387d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae341a1383201b7d499a33d26aca9a0a7"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#ae341a1383201b7d499a33d26aca9a0a7">WAYPOINT_WITH_MEDIA_WITH_ENGLISH_ID</a> = 81</td></tr>
+<tr class="separator:ae341a1383201b7d499a33d26aca9a0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f3993ad6021196aad2866d0707b43e2"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a8f3993ad6021196aad2866d0707b43e2">WALK_WITH_ENGLISH_LIST</a> = 85</td></tr>
+<tr class="separator:a8f3993ad6021196aad2866d0707b43e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a861a3dfaefbc5249d86d1992764f4317"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a861a3dfaefbc5249d86d1992764f4317">WALK_WITH_ENGLISH_ID</a> = 86</td></tr>
+<tr class="separator:a861a3dfaefbc5249d86d1992764f4317"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Lewis Hancock </dd></dl>
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00030">30</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ab573bd8caeb367dde2e4c95a6214ae1e"></a>
 <div class="memitem">
@@ -157,6 +272,38 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l01052">1052</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afd9d77e8923413814d030dd003de4694"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static UriMatcher uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.buildUriMatcher </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create UriMatcher. </p>
+<dl class="section return"><dt>Returns</dt><dd>the UriMatcher to use. </dd>
+<dd>
+</dd></dl>
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00205">205</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
 
 </div>
 </div>
@@ -190,6 +337,17 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00266">266</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ada4e83c84f3ff3c81306424f411ee717_cgraph.png" border="0" usemap="#classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ada4e83c84f3ff3c81306424f411ee717_cgraph" alt=""/></div>
+<map name="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ada4e83c84f3ff3c81306424f411ee717_cgraph" id="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_ada4e83c84f3ff3c81306424f411ee717_cgraph">
+<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#aabe3f5a30aba3a8f738adde614c06acf" title="uk.ac.swan.digitaltrails.database.\lWhiteRockContentProvider.isInBatchMode" alt="" coords="269,5,536,47"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="ac7cd4beaf0b759ae3cf75d053ab8994d"></a>
@@ -205,6 +363,80 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00443">443</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abac163f5ac9b99878de796e5ccba7bbf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Uri uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.getUriForId </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Uri&#160;</td>
+          <td class="paramname"><em>uri</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Log queries in anything below honeycomb. </p>
+<p>Get the ID where we are inserting into </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td></td></tr>
+    <tr><td class="paramname">uri</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td></td></tr>
+    <tr><td class="paramname">uri</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l01138">1138</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abac163f5ac9b99878de796e5ccba7bbf_cgraph.png" border="0" usemap="#classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abac163f5ac9b99878de796e5ccba7bbf_cgraph" alt=""/></div>
+<map name="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abac163f5ac9b99878de796e5ccba7bbf_cgraph" id="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abac163f5ac9b99878de796e5ccba7bbf_cgraph">
+<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#aabe3f5a30aba3a8f738adde614c06acf" title="uk.ac.swan.digitaltrails.database.\lWhiteRockContentProvider.isInBatchMode" alt="" coords="297,5,564,47"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abac163f5ac9b99878de796e5ccba7bbf_icgraph.png" border="0" usemap="#classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abac163f5ac9b99878de796e5ccba7bbf_icgraph" alt=""/></div>
+<map name="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abac163f5ac9b99878de796e5ccba7bbf_icgraph" id="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abac163f5ac9b99878de796e5ccba7bbf_icgraph">
+<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#abd025abd5279cb2b52f5bdd0aec026cb" title="uk.ac.swan.digitaltrails.database.\lWhiteRockContentProvider.insert" alt="" coords="297,5,512,47"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -232,6 +464,115 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00527">527</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abd025abd5279cb2b52f5bdd0aec026cb_cgraph.png" border="0" usemap="#classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abd025abd5279cb2b52f5bdd0aec026cb_cgraph" alt=""/></div>
+<map name="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abd025abd5279cb2b52f5bdd0aec026cb_cgraph" id="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_abd025abd5279cb2b52f5bdd0aec026cb_cgraph">
+<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#abac163f5ac9b99878de796e5ccba7bbf" title="Log queries in anything below honeycomb. " alt="" coords="268,5,512,47"/><area shape="rect" id="node3" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#aabe3f5a30aba3a8f738adde614c06acf" title="uk.ac.swan.digitaltrails.database.\lWhiteRockContentProvider.isInBatchMode" alt="" coords="560,5,827,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aabe3f5a30aba3a8f738adde614c06acf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.isInBatchMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l01154">1154</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aabe3f5a30aba3a8f738adde614c06acf_icgraph.png" border="0" usemap="#classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aabe3f5a30aba3a8f738adde614c06acf_icgraph" alt=""/></div>
+<map name="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aabe3f5a30aba3a8f738adde614c06acf_icgraph" id="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_aabe3f5a30aba3a8f738adde614c06acf_icgraph">
+<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#ada4e83c84f3ff3c81306424f411ee717" title="uk.ac.swan.digitaltrails.database.\lWhiteRockContentProvider.delete" alt="" coords="334,5,550,47"/><area shape="rect" id="node3" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#a27b0a0434512cc107c55c205b244c086" title="uk.ac.swan.digitaltrails.database.\lWhiteRockContentProvider.update" alt="" coords="332,71,552,112"/><area shape="rect" id="node4" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#abac163f5ac9b99878de796e5ccba7bbf" title="Log queries in anything below honeycomb. " alt="" coords="320,136,564,177"/><area shape="rect" id="node5" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#abd025abd5279cb2b52f5bdd0aec026cb" title="uk.ac.swan.digitaltrails.database.\lWhiteRockContentProvider.insert" alt="" coords="612,136,827,177"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aab17572cc338694e91e0052e65e3883b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.logQuery </td>
+          <td>(</td>
+          <td class="paramtype">SQLiteQueryBuilder&#160;</td>
+          <td class="paramname"><em>builder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String[]&#160;</td>
+          <td class="paramname"><em>projection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>selection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>sortOrder</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Log queries in Honeycomb and higher. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">builder</td><td></td></tr>
+    <tr><td class="paramname">projection</td><td></td></tr>
+    <tr><td class="paramname">selection</td><td></td></tr>
+    <tr><td class="paramname">sortOrder</td><td></td></tr>
+    <tr><td class="paramname">builder</td><td></td></tr>
+    <tr><td class="paramname">projection</td><td></td></tr>
+    <tr><td class="paramname">selection</td><td></td></tr>
+    <tr><td class="paramname">sortOrder</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l01098">1098</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="acd2f75ed715d567cdfd10a85f1d5cde4"></a>
@@ -246,6 +587,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00256">256</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
 
 </div>
 </div>
@@ -272,6 +615,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l01074">1074</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
 
 </div>
 </div>
@@ -317,6 +662,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00640">640</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a27b0a0434512cc107c55c205b244c086"></a>
@@ -355,10 +702,906 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00870">870</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a27b0a0434512cc107c55c205b244c086_cgraph.png" border="0" usemap="#classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a27b0a0434512cc107c55c205b244c086_cgraph" alt=""/></div>
+<map name="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a27b0a0434512cc107c55c205b244c086_cgraph" id="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider_a27b0a0434512cc107c55c205b244c086_cgraph">
+<area shape="rect" id="node2" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#aabe3f5a30aba3a8f738adde614c06acf" title="uk.ac.swan.digitaltrails.database.\lWhiteRockContentProvider.isInBatchMode" alt="" coords="273,5,540,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a0c9d73ead8fa3e8a459398ef49f7e5a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.BUG_REPORT_ID = 46</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00121">121</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa2196c98c95653c1feff9189bc087c0b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.BUG_REPORT_LIST = 45</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00117">117</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4cf12c78e7d5b571b67f3f0ad86c256c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.CONTENT_REPORT_ID = 51</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00129">129</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5f0d54d19e3af999ebaa1973c229438e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.CONTENT_REPORT_LIST = 50</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00125">125</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a559b5c5fa81fcf459bee57d6e8f2e410"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.ENGLISH_WALK_DESCR_ID = 16</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00073">73</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a999f5ed7dc0f9c9238d2e3db9893fb71"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.ENGLISH_WALK_DESCR_LIST = 15</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00069">69</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a845e8091ba6fb7aa10d16e9e20457b61"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.ENGLISH_WAYPOINT_DESCR_ID = 26</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00089">89</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4d3e1134b06221174a35f25f9990b742"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.ENGLISH_WAYPOINT_DESCR_LIST = 25</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00085">85</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1bb18cdc9de00fe8911b455ded3b1dd8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_database_handler.html">DatabaseHandler</a> uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.mDbHandler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handler for database. </p>
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00191">191</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a157bdfbd418ec0dcf1e2949cacb634d2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final ThreadLocal&lt;Boolean&gt; uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.mIsInBatchMode = new ThreadLocal&lt;Boolean&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ThreadLocal storage for batch processing. </p>
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00196">196</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e735f2f76d7e42dfb3381bff86d54e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.SETTINGS_TYPE_ID = 66</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00153">153</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a381eb074875f554185cc3492947ff03e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.SETTINGS_TYPE_LIST = 65</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00149">149</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab837b138ec86184a611bee0ffb3b146e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.TAG = &quot;WhiteRockContentProvider&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00039">39</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aae5896ef2dd052622382cd0675c4e6a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final UriMatcher uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.URI_MATCHER = <a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#afd9d77e8923413814d030dd003de4694">buildUriMatcher</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00035">35</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6ee8c508cbee0e42aa763843a8042c4e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.USER_ID = 56</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00137">137</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc90e2c396d119d0b14de1a5d897a823"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.USER_LIST = 55</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00133">133</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f8c969ba8e543e8f265bad0a5780f16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.USER_SETTINGS_ID = 61</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00145">145</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adf95750260c445fc06b6803b9e7f0790"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.USER_SETTINGS_LIST = 60</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00141">141</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa54903f53f725f527d8149f32f0b8292"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WALK_ID = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00049">49</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a612500111621e8629467a397ad1cc5b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WALK_LIST = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00045">45</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a861a3dfaefbc5249d86d1992764f4317"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WALK_WITH_ENGLISH_ID = 86</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00185">185</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8f3993ad6021196aad2866d0707b43e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WALK_WITH_ENGLISH_LIST = 85</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00181">181</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a732ab2abae9784a35981aa3756c49a5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WAYPOINT_AUDIO_ID = 31</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00097">97</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0ee6192005b6c23f93ed38eec4208dcb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WAYPOINT_AUDIO_LIST = 30</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00093">93</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9c78851dd10751a0da78aaaab02769c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WAYPOINT_ID = 6</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00057">57</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a75690c85eb00311e582b1d7a6398c1b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WAYPOINT_IMAGE_ID = 41</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00113">113</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a68614e903632646ad477995662528ce0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WAYPOINT_IMAGE_LIST = 40</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00109">109</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a71e880d976f210c2b8f510afe82909c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WAYPOINT_LIST = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00053">53</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae965f98c33bfb673608befecc706146e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WAYPOINT_VIDEO_ID = 36</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00105">105</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad3bb5f6897eebb90b124907bda067738"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WAYPOINT_VIDEO_LIST = 35</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00101">101</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f698a807b873cb5f9e177c45d8f8625"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WAYPOINT_WITH_ENGLISH_DESCR_ID = 71</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00161">161</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7fa836afaf048defaa6d1c4fc43cdef7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WAYPOINT_WITH_ENGLISH_DESCR_LIST = 70</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00157">157</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa87220999a3c0ec3eba1aa7daf3c4bf8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WAYPOINT_WITH_MEDIA_ID = 76</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00169">169</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ade0c53c0073f048dab64cb43b6c0fb8d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WAYPOINT_WITH_MEDIA_LIST = 75</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00165">165</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae341a1383201b7d499a33d26aca9a0a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WAYPOINT_WITH_MEDIA_WITH_ENGLISH_ID = 81</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00177">177</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac1485aa99035bd990dfe5c51724387d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WAYPOINT_WITH_MEDIA_WITH_ENGLISH_LIST = 80</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00173">173</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a75ae70eecce5937877d507dec5fc55bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WELSH_WALK_DESCR_ID = 11</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00065">65</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a0a5b6ec087f4fbfd7cac265b5ad76e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WELSH_WALK_DESCR_LIST = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00061">61</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afd9078666dbddb252f5dee69b65ef474"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WELSH_WAYPOINT_DESCR_ID = 21</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00081">81</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3136aba0088be1e1d45c62211f44a0dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int uk.ac.swan.digitaltrails.database.WhiteRockContentProvider.WELSH_WAYPOINT_DESCR_LIST = 20</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_white_rock_content_provider_8java_source.html#l00077">77</a> of file <a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/uk/ac/swan/digitaltrails/database/<a class="el" href="_white_rock_content_provider_8java.html">WhiteRockContentProvider.java</a></li>
+<li>C:/Users/Admin/Documents/Work/DigitalTrails/src/uk/ac/swan/digitaltrails/database/<a class="el" href="_white_rock_content_provider_8java_source.html">WhiteRockContentProvider.java</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -366,7 +1609,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceuk.html">uk</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac.html">ac</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac_1_1swan.html">swan</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac_1_1swan_1_1digitaltrails.html">digitaltrails</a></li><li class="navelem"><a class="el" href="namespaceuk_1_1ac_1_1swan_1_1digitaltrails_1_1database.html">database</a></li><li class="navelem"><a class="el" href="classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html">WhiteRockContentProvider</a></li>
-    <li class="footer">Generated on Mon May 5 2014 23:22:39 for White Rock Digital Trails by
+    <li class="footer">Generated on Thu May 8 2014 16:14:31 for White Rock Digital Trails by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

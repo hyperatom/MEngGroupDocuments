@@ -14,7 +14,8 @@ var dir_258b631643671a7b30139f804b2e5e2e =
     ] ],
     [ "MapActivity.java", "_map_activity_8java.html", [
       [ "MapActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity" ],
-      [ "REQUEST_TYPE", "enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1_r_e_q_u_e_s_t___t_y_p_e.html", "enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1_r_e_q_u_e_s_t___t_y_p_e" ]
+      [ "REQUEST_TYPE", "enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1_r_e_q_u_e_s_t___t_y_p_e.html", "enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1_r_e_q_u_e_s_t___t_y_p_e" ],
+      [ "selectFilter", "enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1select_filter.html", "enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1select_filter" ]
     ] ],
     [ "MyWalksActivity.java", "_my_walks_activity_8java.html", [
       [ "MyWalksActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_my_walks_activity" ]
@@ -28,11 +29,5 @@ var dir_258b631643671a7b30139f804b2e5e2e =
     ] ],
     [ "SplashActivity.java", "_splash_activity_8java.html", [
       [ "SplashActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_splash_activity.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_splash_activity" ]
-    ] ],
-    [ "WalkActivity.java", "_walk_activity_8java.html", [
-      [ "WalkActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_walk_activity.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_walk_activity" ]
-    ] ],
-    [ "WaypointListActivity.java", "_waypoint_list_activity_8java.html", [
-      [ "WaypointListActivity", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_waypoint_list_activity.html", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_waypoint_list_activity" ]
     ] ]
 ];

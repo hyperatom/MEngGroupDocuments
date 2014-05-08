@@ -1,0 +1,5 @@
+<map id="uk.ac.swan.digitaltrails.database.VideoDataSource.cursorToVideo" name="uk.ac.swan.digitaltrails.database.VideoDataSource.cursorToVideo">
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_video_data_source.html#ab76fb5bc9b8077fc94c252c6b32ba9ac" title="Create a video. " alt="" coords="295,5,509,47"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_video_data_source.html#a15bdc4035ed5280356768684b064a1f8" title="Get all videos. " alt="" coords="295,71,509,112"/>
+<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_video_data_source.html#af47b90bb88ad3b66bcb099a74ac6c973" title="Get all videos at a specified waypoint. " alt="" coords="268,136,536,177"/>
+</map>

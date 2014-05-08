@@ -1,0 +1,5 @@
+<map id="uk.ac.swan.digitaltrails.database.PhotoDataSource.cursorToPhoto" name="uk.ac.swan.digitaltrails.database.PhotoDataSource.cursorToPhoto">
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_photo_data_source.html#aefd684db05aee6268c1f3152a8aa7890" title="Create a photo. " alt="" coords="296,5,511,47"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_photo_data_source.html#a5212670aca30b72a4dc70d4b0f0d2b30" title="Get all photos in the database. " alt="" coords="296,71,511,112"/>
+<area shape="rect" id="node4" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_photo_data_source.html#ac4656becf989cd3547fd912d8151d77b" title="Get all photos at a certain waypoint. " alt="" coords="268,136,539,177"/>
+</map>

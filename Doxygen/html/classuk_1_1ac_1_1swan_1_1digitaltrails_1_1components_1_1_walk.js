@@ -24,5 +24,15 @@ var classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk =
     [ "setWelshDescription", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a56413ef1e04ca02448ff6c807894a082", null ],
     [ "setWelshDescriptions", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a8f35d6cea1989aa3ffc0072c63b7da02", null ],
     [ "toString", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a1c0e9d2fd3a2334532bfd6d68b620990", null ],
-    [ "writeToParcel", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#ae4413ee874cba88f42ca1bc5d423bed3", null ]
+    [ "writeToParcel", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#ae4413ee874cba88f42ca1bc5d423bed3", null ],
+    [ "CREATOR", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#ab469affd3e3855b4319e907c95387385", null ],
+    [ "mDifficultyRating", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a1a89c2b41426e60b5c42885297fa6846", null ],
+    [ "mDistance", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#ae9d7a2acfca54e3d73177d4c7678728b", null ],
+    [ "mDownloadCount", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#aed869e0fdf4f31945cbca56a13f29836", null ],
+    [ "mDuration", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#ad883348dd2fc478737c0efc880af0363", null ],
+    [ "mEnglishDescription", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a4279b72210d6b6b62fda226a9d1bdbbb", null ],
+    [ "mId", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a3f58853b9e42a36f131e04efcfafd63f", null ],
+    [ "mOwnerId", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a2f6232562dc0388422a492012b15f773", null ],
+    [ "mWaypoints", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a47504a4f93ca4091881314da0d29929d", null ],
+    [ "mWelshDescription", "classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk.html#a660b99698c634b548f4bbee778c36d33", null ]
 ];

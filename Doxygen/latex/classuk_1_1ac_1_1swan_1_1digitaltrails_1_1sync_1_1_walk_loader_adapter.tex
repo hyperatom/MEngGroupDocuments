@@ -3,7 +3,8 @@
 }
 
 
-Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader\+Adapter\+:\nopagebreak
+Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader\+Adapter\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,11 +13,12 @@ Inheritance diagram for uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader\+Ad
 \end{figure}
 
 
-Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader\+Adapter\+:\nopagebreak
+Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader\+Adapter\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=225pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter__coll__graph}
+\includegraphics[width=350pt]{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -27,13 +29,29 @@ Collaboration diagram for uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader\+
 View \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter_ac442affbd8305e34a5fe4ab99de99218}{get\+View} (int position, View convert\+View, View\+Group parent)
 \item 
 void \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter_a1a475da8a52475f4ad4ccbfa7925639e}{set\+Data} (List$<$ \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_walk}{Walk} $>$ walks)
+\begin{DoxyCompactList}\small\item\em Set this Array\+Adapter's data to a List$<$\+Walk$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final Context \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter_a7c6f05839f481abb7ca31c9f0803d7e0}{m\+Context}
+\item 
+final Layout\+Inflater \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter_a0c9b737acae2b1a1f92246d1d3fde68d}{m\+Inflater}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter_a2fd52aa3ac92edbca2c86250cb670a5f}{T\+A\+G} = \char`\"{}Walk\+Loader\+Adapater\char`\"{}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 \begin{DoxyAuthor}{Author}
-Lewis Hancock 
+Lewis Hancock Array\+Adapter which takes Walk objects and displays them on a custom List\+Fragment Layout 
 \end{DoxyAuthor}
+
+
+Definition at line 20 of file Walk\+Loader\+Adapter.\+java.
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -51,6 +69,10 @@ Lewis Hancock
 \end{DoxyParams}
 
 
+Definition at line 39 of file Walk\+Loader\+Adapter.\+java.
+
+
+
 \subsection{Member Function Documentation}
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter_ac442affbd8305e34a5fe4ab99de99218}{\index{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter}!get\+View@{get\+View}}
 \index{get\+View@{get\+View}!uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter}}
@@ -61,6 +83,10 @@ Lewis Hancock
 \item[{View\+Group}]{parent}
 \end{DoxyParamCaption}
 )}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter_ac442affbd8305e34a5fe4ab99de99218}
+
+
+Definition at line 53 of file Walk\+Loader\+Adapter.\+java.
+
 \hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter_a1a475da8a52475f4ad4ccbfa7925639e}{\index{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter}!set\+Data@{set\+Data}}
 \index{set\+Data@{set\+Data}!uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter}}
 \subsubsection[{set\+Data}]{\setlength{\rightskip}{0pt plus 5cm}void uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader\+Adapter.\+set\+Data (
@@ -69,12 +95,44 @@ Lewis Hancock
 \end{DoxyParamCaption}
 )}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter_a1a475da8a52475f4ad4ccbfa7925639e}
 
+
+Set this Array\+Adapter's data to a List$<$\+Walk$>$ 
+
+
 \begin{DoxyParams}{Parameters}
-{\em walks} & \\
+{\em walks} & the List to set the data to. \\
 \hline
 \end{DoxyParams}
 
 
+Definition at line 71 of file Walk\+Loader\+Adapter.\+java.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter_a7c6f05839f481abb7ca31c9f0803d7e0}{\index{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter}!m\+Context@{m\+Context}}
+\index{m\+Context@{m\+Context}!uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter}}
+\subsubsection[{m\+Context}]{\setlength{\rightskip}{0pt plus 5cm}final Context uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader\+Adapter.\+m\+Context\hspace{0.3cm}{\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter_a7c6f05839f481abb7ca31c9f0803d7e0}
+
+
+Definition at line 29 of file Walk\+Loader\+Adapter.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter_a0c9b737acae2b1a1f92246d1d3fde68d}{\index{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter}!m\+Inflater@{m\+Inflater}}
+\index{m\+Inflater@{m\+Inflater}!uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter}}
+\subsubsection[{m\+Inflater}]{\setlength{\rightskip}{0pt plus 5cm}final Layout\+Inflater uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader\+Adapter.\+m\+Inflater\hspace{0.3cm}{\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter_a0c9b737acae2b1a1f92246d1d3fde68d}
+
+
+Definition at line 33 of file Walk\+Loader\+Adapter.\+java.
+
+\hypertarget{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter_a2fd52aa3ac92edbca2c86250cb670a5f}{\index{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter}!T\+A\+G@{T\+A\+G}}
+\index{T\+A\+G@{T\+A\+G}!uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter@{uk\+::ac\+::swan\+::digitaltrails\+::sync\+::\+Walk\+Loader\+Adapter}}
+\subsubsection[{T\+A\+G}]{\setlength{\rightskip}{0pt plus 5cm}final String uk.\+ac.\+swan.\+digitaltrails.\+sync.\+Walk\+Loader\+Adapter.\+T\+A\+G = \char`\"{}Walk\+Loader\+Adapater\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classuk_1_1ac_1_1swan_1_1digitaltrails_1_1sync_1_1_walk_loader_adapter_a2fd52aa3ac92edbca2c86250cb670a5f}
+
+
+Definition at line 25 of file Walk\+Loader\+Adapter.\+java.
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/uk/ac/swan/digitaltrails/sync/\hyperlink{_walk_loader_adapter_8java}{Walk\+Loader\+Adapter.\+java}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Admin/\+Documents/\+Work/\+Digital\+Trails/src/uk/ac/swan/digitaltrails/sync/\hyperlink{_walk_loader_adapter_8java}{Walk\+Loader\+Adapter.\+java}\end{DoxyCompactItemize}

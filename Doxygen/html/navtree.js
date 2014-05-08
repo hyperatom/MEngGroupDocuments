@@ -11,7 +11,7 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "Variables", "functions_vars.html", "functions_vars" ]
       ] ]
     ] ],
     [ "Files", null, [
@@ -23,8 +23,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_account_8java.html",
-"classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_description.html#aaed5152012b15043c1edebf332269373",
-"classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_map_fragment.html#ab43bdfbec6736493961b1d8e24edc57f"
+"classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a277671a16bab76f50d1fe79d675f4128",
+"classuk_1_1ac_1_1swan_1_1digitaltrails_1_1components_1_1_waypoint_description.html#a948f17dcaac7371e474ca957856f674a",
+"classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_contract_1_1_waypoint_with_english_description_with_media.html",
+"classuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_h_t_t_p.html#a71175ca2eeb807eace9fb9b3ad904278"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

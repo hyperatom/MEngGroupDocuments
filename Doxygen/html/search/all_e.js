@@ -1,15 +1,6 @@
 var searchData=
 [
-  ['receive_5fgeofences_5fentered',['RECEIVE_GEOFENCES_ENTERED',['../classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a7f2056604f7a13b22f2a9e5328448fba',1,'uk::ac::swan::digitaltrails::activities::MapActivity']]],
-  ['receive_5fgeofences_5fexited',['RECEIVE_GEOFENCES_EXITED',['../classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity.html#a8e2d03d80668ec761b99a7e48063327d',1,'uk::ac::swan::digitaltrails::activities::MapActivity']]],
-  ['receivetransitionsintentservice',['ReceiveTransitionsIntentService',['../classuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_receive_transitions_intent_service.html#a3f8c82bfe917566a8545bd7dd693945d',1,'uk::ac::swan::digitaltrails::utils::ReceiveTransitionsIntentService']]],
-  ['receivetransitionsintentservice',['ReceiveTransitionsIntentService',['../classuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_receive_transitions_intent_service.html',1,'uk::ac::swan::digitaltrails::utils']]],
-  ['receivetransitionsintentservice_2ejava',['ReceiveTransitionsIntentService.java',['../_receive_transitions_intent_service_8java.html',1,'']]],
-  ['registerbutton',['registerButton',['../classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_launch_activity.html#a431ad1ad4b94a81e0ea680c4da542992',1,'uk::ac::swan::digitaltrails::activities::LaunchActivity']]],
-  ['registerbuttononclick',['registerButtonOnClick',['../classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_launch_activity.html#a2f01df12f126e5abe0461d204e647034',1,'uk::ac::swan::digitaltrails::activities::LaunchActivity']]],
-  ['registerfragment',['RegisterFragment',['../classuk_1_1ac_1_1swan_1_1digitaltrails_1_1fragments_1_1_register_fragment.html',1,'uk::ac::swan::digitaltrails::fragments']]],
-  ['registerfragment_2ejava',['RegisterFragment.java',['../_register_fragment_8java.html',1,'']]],
-  ['request',['request',['../classuk_1_1ac_1_1swan_1_1digitaltrails_1_1utils_1_1_h_t_t_p.html#a79f0ab16505475a762da051a74c24af0',1,'uk::ac::swan::digitaltrails::utils::HTTP']]],
-  ['request_5ftype',['REQUEST_TYPE',['../enumuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_map_activity_1_1_r_e_q_u_e_s_t___t_y_p_e.html',1,'uk::ac::swan::digitaltrails::activities::MapActivity']]],
-  ['returnbutton',['returnButton',['../classuk_1_1ac_1_1swan_1_1digitaltrails_1_1activities_1_1_search_activity.html#a3e7b13bd7d42ec0820a25399d725437f',1,'uk::ac::swan::digitaltrails::activities::SearchActivity']]]
+  ['query',['query',['../classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_white_rock_content_provider.html#ae88373574109e457a29ffd6f0bca6be2',1,'uk::ac::swan::digitaltrails::database::WhiteRockContentProvider']]],
+  ['quickprefsactivity',['QuickPrefsActivity',['../classuk_1_1ac_1_1swan_1_1digitaltrails_1_1accounts_1_1_quick_prefs_activity.html',1,'uk::ac::swan::digitaltrails::accounts']]],
+  ['quickprefsactivity_2ejava',['QuickPrefsActivity.java',['../_quick_prefs_activity_8java.html',1,'']]]
 ];

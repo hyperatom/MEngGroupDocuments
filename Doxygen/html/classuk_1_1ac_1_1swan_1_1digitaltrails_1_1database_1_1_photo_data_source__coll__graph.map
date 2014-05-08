@@ -1,4 +1,4 @@
 <map id="uk.ac.swan.digitaltrails.database.PhotoDataSource" name="uk.ac.swan.digitaltrails.database.PhotoDataSource">
-<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_media_data_source.html" title="uk.ac.swan.digitaltrails.database.\lMediaDataSource" alt="" coords="21,185,235,227"/>
-<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html" title="Class to define methods for DataSources. " alt="" coords="21,95,235,136"/>
+<area shape="rect" id="node2" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_media_data_source.html" title="{uk.ac.swan.digitaltrails.database.\lMediaDataSource\n|# ALL_COLUMNS\l|# MediaDataSource()\l}" alt="" coords="25,287,239,379"/>
+<area shape="rect" id="node3" href="$classuk_1_1ac_1_1swan_1_1digitaltrails_1_1database_1_1_data_source.html" title="Abstract class to define methods for DataSources. " alt="" coords="25,145,239,237"/>
 </map>
