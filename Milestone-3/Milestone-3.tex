@@ -548,7 +548,7 @@ The final iteration involved several layout alterations (Figure \ref*{fig:choose
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{chris/final_choose_walk}
-    \caption{Walk selection interface - 3rd iteration EDIT THIS FOR WORKING MAP}
+    \caption{Walk selection interface - 3rd iteration }
     \label{fig:choose_walk3}
 \end{figure}
 
@@ -605,12 +605,9 @@ The \emph{launch} interface presents the user with an aesthetically pleasing lay
 
 \paragraph*{Log In interface}\mbox{}\\
 
-GET IMSGE \\
-
 The \emph{Log In} interface presents the user with a welcome message fixed to the top, along with prompt text directly below. The focus of this interface is the \emph{email} and \emph{password} text boxes. Selecting either text box will inflate a keypad, where the user may enter log in details. Below is a \emph{Sign In} button and a \emph{New user?} text view. If valid details are entered, pressing the \emph{Sign In} button will navigate to the \emph{Home} interface. If invalid details are entered, a pop-up dialogue will notify users that the log in attempt has failed. Pressing the \emph{New user?} text view will navigate to the \emph{Register} interface, where the user may register a new account.
 
 \paragraph{Register interface}\mbox{}\\
-INSERTT IMAGE\\
 
 The \emph{Register} interface presents the user with a series of edit text boxes, where details such as \emph{first name, last name, email address} and \emph{password} can be entered in order to create a new account. Below this is a \emph{Create Account} button and an \emph{Already a member?} text view. If suitable details are entered, pressing the \emph{Create Account} button will create a user account and navigate to the \emph{Home} interface. If unsuitable, the account creation will be rejected.
 
@@ -678,12 +675,16 @@ The \emph{Create Walk} interface has a basic layout. An title is positioned at t
 
 \paragraph*{View Walk interface}\mbox{}\\
 
-INSERTT IMAGE\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/view_walk}
+    \caption{View Walk interface}
+    \label{fig:view_walk}
+\end{figure}
 
-The \emph{View Walk} interface is inflated when the user wishes to view a walk and its waypoints. Similar to the explore view, the user may move around the map, zooming in and out as desired. When the user is within close proximity of a waypoint, a pop-u dialogue will appear on-screen. This dialogue will include the waypoint name, a short description and any relative media that has been attached to that waypoint. 
+The \emph{View Walk} interface is inflated when the user wishes to view a walk and its waypoints. Similar to the explore view, the user may move around the map, zooming in and out as desired. When the user is within close proximity of a waypoint, a pop-up dialogue will appear on-screen. This dialogue will include the waypoint name, a short description and any relative media that has been attached to that waypoint. 
 
 \paragraph*{Edit Walk interface}\mbox{}\\
-INSERTT IMAGE\\
 
 The \emph{Edit Walk} interface allows users to make changes to walks they created. The presented interface provides users with the ability to update main information such as walk name and description. Below this is an \emph{Add a waypoint} button and a \emph{edit waypoints} button. The user may add numerous waypoints and make changes to current waypoints. If no changes are to be made or saved, pressing the \emph{cancel} button will return to the previous interface. Pressing the \emph{save} button will save all changes and return to the \emph{My Walks} interface.
 
@@ -1269,6 +1270,7 @@ The Bug report table is used to store bugs in the program that are reported by u
 \label{sec:acceptance-testint}
 
 \subsection{Web Portal}
+\label{sec:webportal-acceptance-testing}
 
 \label{test:POR-T01}
 \noindent\textbf{Test Code:} POR-T01\\
@@ -2674,9 +2676,16 @@ Now that you've downloaded a walk, you may view it. At the \emph{Home} interface
 In this section, a quick start tutorial will present all necessary steps required to carry out the basic application features. The tutorial will document the following features:-
 
  \begin{itemize}
-   \item Create an account
-   \item Create a walk
-   \item View a walk
+   \item Create an account (section \ref{sec:create_account})
+   \item Create a walk (section \ref{sec:create_walk})
+   \item Download a walk (section \ref{sec:download_a_walk})
+   \item View a walk (section \ref{sec:view_walk})
+   \item Edit a walk
+   \item Delete a walk
+   \item Add a waypoint
+   \item Explore mode
+   \item Log Out
+   
  \end{itemize}
  
 \subsection{Create an account}
@@ -2710,6 +2719,72 @@ Now that you have a registered account, you may create a new walk. To do so, sel
     \caption{Create Walk interface}
     \label{fig:create_walkUM}
 \end{figure}
+
+\subsection{Download a walk}
+\label{sec:download_a_walk}
+
+To download a walk, first select the \emph{Download Walks} button at the \emph{Home} interface. This loads the \emph{Download Walks} interface. Here, you may either select from the list of walks provided or use the search feature to filter the available list of walks. The selected walk's details will load into the main interface. To download, simply select the \emph{Download} button. This will download and save the walk.
+ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/chris/download_walk}
+\caption{Download Walks interface}
+\label{fig:download_a_walk}
+\end{figure}
+
+\subsection{View a walk}
+\label{sec:view_walk}
+
+Now that you've downloaded a walk, you may view it. At the \emph{Home} interface, select the \emph{Saved Walks} button. Your newly downloaded walk will now appear in the list on the left hand side. To view a walk, select the walk name from the list so that the walk details appear in view, then press the \emph{Start walk} button. This inflates the \emph{Walk View} interface, presenting a full-screen map with walk waypoints. Pressing a waypoint will inflate a pop-up that presents the waypoint name and description. To hide the waypoint details, simply press a different part of the map.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/chris/saved_walks}
+\caption{Saved Walks interface}
+\label{fig:saved_walks}
+\end{figure}
+
+\subsection{Edit a walk}
+\label{sec:edit_a_walk}
+
+To edit a walk, select the \emph{My Walks} button, which will load the \emph{My Walks} interface. Next, select the walk you wish to edit from the walk list. This will enable both \emph{Edit} and \emph{Delete} buttons and populate the main window with walk details. When enabled, select the \emph{Edit}
+button. This will load the \emph{Edit walk} interface. Here, you may edit the name and description of the walk. To add a waypoint, proceed to section \ref{sec:add_a_waypoint}).
+
+\subsection{Delete a walk}
+\label{sec:delete_a_walk}
+
+To delete a walk, select the \emph{My Walks} button, which will load the \emph{My Walks} interface. Next, select the walk you wish to delete from the walk list. This will enable both \emph{Edit} and \emph{Delete} buttons and populate the main window with walk details. When enabled, select the \emph{Delete} button. This will inflate a dialogue alert requesting you to confirm the walk deletion. Pressing the \emph{Delete} button will delete the walk and return to the \emph{Home Page}. Pressing \emph{Cancel} will close the dialogue fragment.
+
+\subsection{Add a waypoint}
+\label{sec:add_a_waypoint}
+
+To add a waypoint, select the desired walk from the walk list within the \emph{My Walks} interface. This loads the \emph{Edit Waypoint} interface. Here, select the \emph{Add a waypoint} button. This will load the waypoint map (figure \ref{fig:add_wayp}). To add, simply follow the on-screen prompt text, by pressing and holding on the desired location. This will inflate a waypoint details dialogue alert, where you may name and describe the waypoint.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{./img/chris/add_waypoint}
+\caption{Add waypoint interface}
+\label{fig:add_wayp}
+\end{figure}
+
+\subsection{Explore mode}
+\label{explore_mode}
+
+To explore a global map, select the \emph{Explore} button of the \emph{Home} interface. This loads the \emph{Explore} interface. You may now interact with the interface.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chris/explore}
+    \caption{Explore interface}
+    \label{fig:expore_um}
+\end{figure}
+
+\subsection{Log Out}
+\label{log_out}
+
+To log out of the application, select the menu button located in the action bar. Next select the \emph{Log Out} tab. This will log you out of the application and return to the \emph{Launch} interface.
+
+
 
 \chapter{Reflective Account}
 \label{sec:reflective-account}
@@ -2825,6 +2900,12 @@ Since the web portal had to be designed for users with varying abilities, a cons
 
 \subsection{Tom Milner - API Development}
 \subsection{Adam Barrell - Web Portal Development}
+Adam was the team leader for the group of three other developers working on the White Rock Trails software. He was responsible for interfacing directly with the client on behalf of the group. This involved organising meetings between the client and group, and specifying an agenda. Adam was also responsible for organising development days where the group met in one location to develop the software. This allowed team members to work together much more effectively rather than being in different locations.
+
+Adam was also responsible for the development of the web portal. He chose suitable frameworks and libraries such as AngularJS and Twitter Bootstrap to implement the web application. Adam also designed the architecture for the web application based on the best practices of the AngularJS framework. He also worked closely with Tom Milner who was  working separately on the API. The web portal relied heavily on methods exposed via the API. This required Adam to work with Tom in order to fix problems that were encountered during development.
+
+Finally, since Adam was responsible for developing the web portal, he wrote all the sections of Milestone 3 that related to its development. This included writing a user manual allowing users to learn how to perform functions such as adding walks, waypoints and uploading media. Adam also performed all the acceptance tests for the web portal that were defined by the specifications which are documented in section \ref{sec:webportal-acceptance-testing}. He was also responsible for writing the design section where UML diagrams were created and user interfaces were described.
+
 \subsection{Lewis Hancock - Android Development}
 \subsection{Chris Lewis - Android Interface Development}
 
