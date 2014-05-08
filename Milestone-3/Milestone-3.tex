@@ -3296,6 +3296,14 @@ PERRSK17 was a risk that warned of team members going on vacation and leaving mo
 \section{Schedule Review}
 \label{sec:schedule-review}
 
+Throughout the project several problems arose which effected the schedule. These problems included PR days, holidays and illness. While these problems pushed the schedule back the Scrum methodology allowed us to adapt and recover. Throughout the project we were hoping to achieve one 10-6 workday a week on the project. This was designed to ensured that the project was on track and processing constantly throughout the year.
+
+The project saw sprints and workdays completed regularly and as expected, except for when events caused work to stop. However even with the workdays and sprints roughly on target we felt there was still lots to do and with around 2 months left updated the schedule to have 2 workdays a week. We hoped this would ensure the project was completed ahead of schedule. 
+
+Due to the shear volume of work we had to complete and the complexity of the project the project overran and several features were left partially implemented. Despite this we will continue the project after the deadline to ensure there is a polished and professional project to display at the Project Fair. 
+
+Every member of the group put in the maximum possible effort and struggled to find anymore time to dedicate to the project. Unfortunately there was little that could be done that would have improved this situation. Ideally there would have been an extra member of the group to relieve the workload or a smaller set of features to implement. 
+
 
 \section{Methodology Review}
 \label{sec:methodology-review}
@@ -3314,9 +3322,7 @@ In future, if time allowed, the scrum methodology would be enforced more strictl
 
 Based on the original goals and requirements of the project the API has been able to achieve every one. All the required functionality has been implemented and it has been rigorously tested. Users are able to communicate with the API and access all of its functionality. 
 
-Specifically this meets requirement  \emph{APPREQ10}, however the main functionality has been abstracted from a wide variety of the requirements including; APPREQ1, APPREQ2, APPREQ3, APPREQ4, APPREQ15, APPREQ17, APPREQ18, APPREQ20, APPREQ21,APPREQ22, APPREQ23, APPREQ24, APPREQ25, APPREQ26, APPREQ28, APPREQ29, WEBREQ1, WEBREQ2, WEBREQ3, WEBREQ4, WEBREQ6, WEBREQ8, WEBREQ9, WEBREQ12, WEBREQ13, WEBREQ14, WEBREQ15, WEBREQ16, WEBREQ17, WEBREQ18,  WEBREQ19.
-
-These requirements were not specifically designed for the API but were used as a guideline to ensure it produces the correct output and all were made possible by the functionality of the API. This shows that the goals of the API were achieved. 
+Specifically this meets requirement  \emph{APPREQ10}, however the main functionality has been abstracted from a wide variety of the requirements  for both there android application and website.These requirements were not specifically designed for the API but were used as a guideline to ensure it produces the correct output and all were made possible through the functionality of the API. This shows that the goals of the API were achieved. 
 
 \subsection{Adam Barrell - Web Portal Development}
 
@@ -3361,11 +3367,16 @@ The application uses user friendly text and button styles, allowing the applicat
 If I was to start this project again there are a few points I would change. 
 
 \subsubsection{More time spent designing}
+During the development of the API and authentication system it was apparent that there were several things that could have been implemented in a more generic and suitable way. These improvements to design are minor but would potentially aid in the extension and continued development of the API. 
 
-
-\subsubsection{Better use of time and resources}
+\subsubsection{Better time management}
+Several events occurred during the development of the project which cost the team a days development time. This was not idea and while attempts were made to catch up they always resulted in the project slipping behind.
 
 \subsubsection{Use of more existing technology}
+The API is a very custom implementation. There are many new technologies which could have been applied to different parts of the project if they had been know of at the time of design. Systems like Basic HTTP Auth would have saved my time and others. 
+
+\subsubsection{Extra hypermedia types}
+The API currently only supports JSON objects. It  would be a nice if the API supported other media types such a JSON and plain text. This would make the API more accessible to users and open up new development possibilities. 
 
 \subsection{Adam Barrell - Web Portal Development}
 \subsection{Lewis Hancock - Android Development}
@@ -3395,6 +3406,14 @@ To help broaden the potential user base of the application a future project woul
 \label{sec:individual-contributions}
 
 \subsection{Tom Milner - API Development}
+From the start of the project we worked as a group to develop a series of designs and requirements. After numerous meetings with John we were able to devise a concise list of requirements and specifications which he approved. During this phase I carried out a small amount of work on the initial codebase supplied to us by John to tidy it up and develop a sense of the task at hand. 
+
+When work began on the development I was the main developer of the API. I developed the design and implemented the system from the ground up, Iterating through several designs until I settled on the final one. I also researched, designed and implemented a custom authentication system for the API. During the development process I guided Adam Barrell and Lewis Hancock with using the API form the website and android application. 
+
+Towards the end of the project I took over a small part of the android development to connect sync adapters, created by Lewis, to the API. This work required the development of a custom HTTP provider which processed requests and the implementation of GSON to convert the JSON from the API into Java objects. The phase also saw some minor redevelopment to the android app as GSON failed to automatically convert some JSON. This work was completed with the help of Lewis. 
+
+During the writing of this document I was mainly responsible for the API sections of the Design, User Manual and Testing and for my personal reflections on the project and a few other parts in the narrative section. 
+
 \subsection{Adam Barrell - Web Portal Development}
 Adam was the team leader for the group of three other developers working on the White Rock Trails software. He was responsible for interfacing directly with the client on behalf of the group. This involved organising meetings between the client and group, and specifying an agenda. Adam was also responsible for organising development days where the group met in one location to develop the software. This allowed team members to work together much more effectively rather than being in different locations.
 
