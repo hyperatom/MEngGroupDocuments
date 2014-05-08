@@ -2713,9 +2713,38 @@ Now that you have a registered account, you may create a new walk. To do so, sel
 
 \chapter{Reflective Account}
 \label{sec:reflective-account}
+
 \section{Problem Solving}
 \label{sec:problem-solving}
+
 \subsection{Tom Milner - API Development}
+During the development of the API several problems occurred, the main and most important of these are listed below.
+
+\subsubsection{CORS}
+CORS stands for `Cross-Origin Resource Sharing'. CORS is a mechanism for allowing resources across multiple domains, normally through AJAX requests which would otherwise be forbidden by web browsers by the same origin security policy. The security policy is in place to prevent malicious attacks such as cross site scripting (XSS). As standard the website and application were blocked from accessing the API. To enable CORS on the API and allow access to its resources special headers have to be passed with every request, and a special \textbf{OPTIONS} http route had to be defined. 
+
+The headers that were required are shown in listing \ref{lst:corsheaders}. Each one plays a part in allowing access to the API. \lstinline$Access-Control-Allow-Origin$ dictates what domains are allowed access to the API, by specifying `*' the API allows all domains access. \lstinline$Access-Control-Allow-Methods$ tells the browser the API will POST, GET, OPTIONS, DELETE and PUT methods and only those methods. Requests containing any other types will be rejected. Finally \lstinline$Access-Control-Allow-Headers$ tells the browser that the API accepts the headers `x-requested-with', `x-hash', `accept', `x-timestamp', `x-username', `content-type' and `origin'. This is an absolute list of headers, including the authentication headers, any other headers will be rejected by the API. 
+
+\begin{lstlisting}[captionpos=b, caption=The CORS headers, label=lst:corsheaders]
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+Access-Control-Allow-Headers: x-requested-with, x-hash, accept, x-timestamp, x-username, content-type, origin
+\end{lstlisting}
+
+This section also appears in Thomas Milner's Industrial Project Milestone 3. 
+
+\subsubsection{Authentication}
+
+Authentication with the API proved to be an issue that arose time and time again. The system needed to be secure but also fast and easy to implement in both the android application and the web portal. Several possible solutions to this were researched. First we researched using the OAuth 2.0 Library. This is a common authentication system in use on the web, however it was overly complicated and confusing to implement. To achieve a satisfactory result with the OAuth system would have taken a long period of time and increased the work load for all developers. Instead of the OAuth system I decided, to implement a custom authentication system. 
+
+The system is based on the Amazon's AWS API and is intact close to the original specification for OAuth. There were however numerous advantages to the custom system. Primarily we were able to customise it to work precisely as we required. The initial iteration of this system had an authorisation token being generated on the client using a secure hashing algorithm. Whilst this iteration worked well on modern desktop computers it proved to intensive for use on a mobile phone or tablet. This was a major problem so the authorisation token generation was moved to the API. The downside of this iteration is that the user has to pass their password to the API in plain text if HTTPS is not available. This is a security risk but is one that it shares with almost all websites. 
+
+The solution to this problem was not an easy one, however it has ended up performing well and providing a well secured method for authenticating with the API which works in a similar manor to the rest of the API. 
+
+\subsubsection{Debugging} 
+
+While developing the API many small bugs occurred. Normally it is easy to debug these bugs because PHP produces error messages. With the API however the output was being redirected and many of the smaller errors would stop the application from functioning without causing an exception.  This made it very difficult to analyse the problems and discover the cause. To stop this \lstinline$try{ }catch(Exception e){}$ blocks where used around potential problems. Unfortunately in a few cases this still didn't catch the exceptions. These issues were only solved. 
+
 \subsection{Adam Barrell - Web Portal Development}
 
 \subsubsection{Third Party Library Bugs}
@@ -2726,7 +2755,7 @@ The first bug encountered was that the form did not validate when two or more re
 The second bug encountered was more technical and meant that the login form submission method could not be overridden. The presence of this bug however had not been discussed on the project forum. Therefore, I submitted my own bug report specifying the scenario that could be taken to reproduce the problem. Since I has already implemented a solution to this bug, I also specified the code needed to fix it. The project developer quickly replied to the report and the feature was fixed the next day.
 
 \subsubsection{Parallel API Development}
-The API and web portal were both developed in parallel, however this brought about some problems during development. The API was being developed separately by Tom Milner and the web portal by Adam Barrell. Nealy all features of the web portal depended entirely upon the API working properly.
+The API and web portal were both developed in parallel, however this brought about some problems during development. The API was being developed separately by Tom Milner and the web portal by Adam Barrell. Nearly all features of the web portal depended entirely upon the API working properly.
 
 Whilst developing the web portal, it was discovered that the API was not functioning correctly when retrieving and manipulating data. One particular example, was when media was uploaded to the server but a thumbnail wasn't generated. This thumbnail was required to allow the media to be previewed in a waypoint media gallery. Therefore, Tom Milner had to fix the problem on the API which in turn, prevented any more development taking place on the media upload feature.
 
@@ -2760,7 +2789,7 @@ Tom and I often partook in pair programming which is promoted by our chosen Agil
 \subsubsection{User Interface Design}
 Another major learning outcome was learning how to develop intuitive interfaces that would be usable by a range of users with varying abilities. Many design principles and patterns were learned from a website called UI-Patterns\cite{uipatterns}. This website listed the most commonly used interface designs to overcome various problems. Such problems included how to display high quantities of data on a page. This was a problem encountered during the design of the \emph{all walks} and \emph{my walks} views. UI-Patterns suggested that a `load on scroll' or pagination technique should be used to prevent too much data being displayed at once. The pagination solution was adopted for use in the mentioned views which allowed users to select a page index to display a subset of the walks returned from the database.
 
-Since the web portal had to be designed for users with varying abilities, a concious effort had to be made to make the interface intuitive enough. The skills learned through doing this can be transferred to any other application that I develop in the future. Therefore, this was a good learning outcome from this project.
+Since the web portal had to be designed for users with varying abilities, a conscious effort had to be made to make the interface intuitive enough. The skills learned through doing this can be transferred to any other application that I develop in the future. Therefore, this was a good learning outcome from this project.
 
 \subsection{Lewis Hancock - Android Development}
 \subsection{Chris Lewis - Android Interface Development}
