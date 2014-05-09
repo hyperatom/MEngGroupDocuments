@@ -191,8 +191,10 @@ Throughout this document the user shall first see the Design chapter, this chapt
 
 
 \chapter{Design}
-\newpage
 \label{sec:design}
+This chapter details the design of the Project. The design of the Web Portal, API and Application are listed in the sections below. For each section the design process is described and the chosen designs outlines. The reasoning behind the chosen design are listed along with the reasoning for rejecting other possible designs. 
+
+\newpage
 
 \section{Development Tools}
 
@@ -210,6 +212,9 @@ This section presents a list of the tools used to develop the Digital Trails app
 \label{sec:web-portal-design}
 % User Inteportal-rface Design
 % UML Diagrams
+
+There were several important design choices that had to be made when developing the Web Portal. This section describes the final design and the process through which it was arrived it. Alternative designs are outlines and the reasoning behind their rejection is given. 
+
 \subsection{Technology Choices}
 
 \label{sec:portal-technology-choices}
@@ -561,6 +566,7 @@ The account settings view presented in Figure \ref{fig:user-account} allows regi
 
 \section{Android Application}
 \label{sec:android-design}
+The Android Application has a detailed and intricate design which is described and detailed below. First the technology choices are outlined, followed by a section on rejected designs. Finally the final chosen design is detailed in depth and the choices are justified and explained.
 
 \subsection{Technology Choices}
 This section will discuss the choices of technology that were used to implement the application. These technologies were chosen for this project because both proved to be beneficial or essential to the development of the application. The following list will give the names of each technology and describe their purpose within the project.
@@ -741,7 +747,7 @@ The \emph{View Walk} interface is inflated when the user wishes to view a walk a
 
 The \emph{Edit Walk} interface allows users to make changes to walks they created. The presented interface provides users with the ability to update main information such as walk name and description. Below this is an \emph{Add a waypoint} button and a \emph{edit waypoints} button. The user may add numerous waypoints and make changes to current waypoints. If no changes are to be made or saved, pressing the \emph{cancel} button will return to the previous interface. Pressing the \emph{save} button will save all changes and return to the \emph{My Walks} interface.
 
-\paragraph{Add Waypoint interface}\mbox{}\\
+\paragraph*{Add Waypoint interface}\mbox{}\\
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{chris/add_waypoint}
@@ -751,7 +757,7 @@ The \emph{Edit Walk} interface allows users to make changes to walks they create
 
 The \emph{Add Waypoint} interface allows users to add a waypoint to a walk simply by selecting and holding on a position on the map provided. A text prompt is also included, providing users with instructions.
 
-\paragraph{Edit Waypoint interface}\mbox{}\\
+\paragraph*{Edit Waypoint interface}\mbox{}\\
 
 
 The \emph{Edit Waypoint} interface allows users to edit a waypoint of an existing walk. The user may edit the waypoint name, description and multimedia attached. When complete, pressing the \emph{save} button will save changes made and return to the \emph{edit walk} interface. Pressing the \emph{cancel} button will return to the \emph{edit walk} interface without saving any changes to that particular waypoint.
