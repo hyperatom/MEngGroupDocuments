@@ -121,7 +121,7 @@
 \input{./Title-Page.tex}
 
 \newpage
-\setcounter{secnumdepth}{4}
+\setcounter{secnumdepth}{0}
 \setcounter{page}{1}
 \pagenumbering{roman}
 \tableofcontents
@@ -133,6 +133,10 @@
 \addcontentsline{toc}{chapter}{Introduction}
 \newpage
 \label{sec:introduction}
+
+\section{Document Purpose}
+The document aims to detail the complete progress of the White Rock: Digital Trails project, from design and implementation through to testing and the user manual. It was originally created as part of an MEng Computing degree at Swansea University, under the supervision of Dr. Eslambolchilar, for the White Rock team~\cite{whiterock}. The document is also suitable for third parties interested in the development of White Rock Digital Trails, subject to permission from the authors, Swansea University and the White Rock team.
+
 \section{Term Definitions}
 \label{sec:term-definitions}
 Definitions which are vital to all aspects of the document can be found here, more specialised definitions can be found where necessary, throughout the document. 
@@ -170,11 +174,21 @@ User Experience is a subset of HCI, looking at a person's behaviour and emotions
 \subsubsection{API}
 Application Programming Interface. Defines how multiple pieces of software shall interact with each other.
 
-\section{Document Purpose}
-The document aims to detail the complete progress of the White Rock: Digital Trails project, from design and implementation through to testing and the user manual. It was originally created as part of an MEng Computing degree at Swansea University, under the supervision of Dr. Eslambolchilar, for the White Rock team~\cite{whiterock}. The document is also suitable for third parties interested in the development of White Rock Digital Trails, subject to permission from the authors, Swansea University and the White Rock team.
-
 \section{Project Overview}
 \label{sec:project-overview}
+Digital Trails is a combination of an Android application, web portal and API  allowing for the creation, modification and exploration of self-guided digital trails.
+
+The Android application allows the user to engage with the waypoints within a trail at their own leisure. There are no directions or tour guides, the user can decide their own fate and visit only what interests them the most.
+
+The web portal provides users the ability to create trails more easily than would be feasible on a mobile interface. It is primarily intended for the management of user created trails.
+
+The API is the glue holding the two systems together, it provides access to the database via a web service. This database is updated by, and provides updates to, both the web portal and the Android application to keep them synchronised.
+
+\section{Document Overview}
+Throughout this document the user shall first see the Design chapter, this chapter explains in great detail the design of the project, including interface and implementation designs for applicable systems. The Testing chapter outlines the testing strategy used throughout development and shows the results of acceptance testing, demonstrating that the project has met the requirements set out for it. The Reflective Account chapter provides an insight into the development team's thoughts on how successful the project was, ways in which to improve it and key components in making the project successful. 
+
+\setcounter{secnumdepth}{4}
+
 
 \chapter{Design}
 \newpage
@@ -913,26 +927,28 @@ EditWaypointMapFragment & The GoogleMap Fragment which allows a user to edit the
 Collaboration graphs can be seen in Figures~\ref{fig:mywalklistcollab} -~\ref{fig:mywalksactcollab} .
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{mywalklistcollab}
+    \includegraphics[width=0.8\textheight, angle=90]{mywalklistcollab}
     \caption{MyWalkList Collaboration Diagram}
     \label{fig:mywalklistcollab}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{addwaypointcollab}
-    \caption{AddWaypointMapFragment Collaboration Diagram}
-    \label{fig:addwaypointcollab}
+    \includegraphics[width=0.65\textwidth]{mywalksactcollab}
+    \caption{MyWalksActivity Collaboration Diagram}
+    \label{fig:mywalksactcollab}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{mywalksactcollab}
-    \caption{MyWalksActivity Collaboration Diagram}
-    \label{fig:mywalksactcollab}
+    \includegraphics[width=.96\textheight, angle=90]{addwaypointcollab}
+    \caption{AddWaypointMapFragment Collaboration Diagram}
+    \label{fig:addwaypointcollab}
 \end{figure}
+
+
 \paragraph*{Design Justification}\mbox{}\\ 
-The use of a single Activity for each aspect of the application (Register / Login, Walk Management, Walk Exploration, Walk Downloads) is a design choice which helps to keep all the relevant operations tied to a single class, the Activity. There are also performance benefits to using a single Activity with multiple, interchangeable, Fragment objects.
+The use of a single Activity for each aspect of the application (Register / Login, Walk Management, Walk Exploration, Walk Downloads) is a design choice which helps to keep all the relevant operations tied to a single class, the Activity. There are also performance benefits to using a single Activity with multiple, interchangeable, Fragment objects. 
 
 \subsubsection{Walk Exploration}
 \label{sec:walkexplore}
